@@ -1,0 +1,57 @@
+/* eslint-disable */
+import {
+    type IA5String
+} from "@wildboar/asn1";
+import * as $ from "@wildboar/asn1/functional";
+import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
+import { userApplications /* IMPORTED_SHORT_ENUMERATION_ITEM */ } from "../InformationFramework/AttributeUsage.ta.mjs";
+import { id_at_productcode } from "../LdapIspenv/id-at-productcode.va.mjs";
+import { caseIgnoreMatch } from "../SelectedAttributeTypes/caseIgnoreMatch.oa.mjs";
+import { ia5String } from "../SelectedAttributeTypes/ia5String.oa.mjs";
+
+
+/**
+ * @summary productcode
+ * @description
+ * 
+ * ### ASN.1 Definition:
+ * 
+ * ```asn1
+ * productcode ATTRIBUTE ::= {
+ *   WITH SYNTAX               IA5String
+ *   EQUALITY MATCHING RULE    caseIgnoreMatch
+ *   SINGLE VALUE              TRUE
+ *   LDAP-SYNTAX               ia5String.&id
+ *   LDAP-NAME                 {"productcode"}
+ *   LDAP-DESC                 "Articlegroup identifier"
+ *   ID                        id-at-productcode }
+ * ```
+ * 
+ * @constant
+ * @type {ATTRIBUTE<IA5String>}
+ * @implements {ATTRIBUTE<IA5String>}
+ */
+export
+const productcode: ATTRIBUTE<IA5String> = {
+    class: "ATTRIBUTE",
+    decoderFor: {
+        "&Type": $._decodeIA5String,
+    },
+    encoderFor: {
+        "&Type": $._encodeIA5String,
+    },
+    "&equality-match": caseIgnoreMatch /* OBJECT_FIELD_SETTING */,
+    "&single-valued": true /* OBJECT_FIELD_SETTING */,
+    "&ldapSyntax": ia5String["&id"] /* OBJECT_FIELD_SETTING */,
+    "&ldapName": [ "productcode" ] /* OBJECT_FIELD_SETTING */,
+    "&ldapDesc": "Articlegroup identifier" /* OBJECT_FIELD_SETTING */,
+    "&id": id_at_productcode /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,
+    "&Type": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
+    "&collective": false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
+    "&dummy": false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
+    "&no-user-modification": false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
+    "&usage": userApplications /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
+    "&obsolete": false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
+};
+
+/* eslint-enable */

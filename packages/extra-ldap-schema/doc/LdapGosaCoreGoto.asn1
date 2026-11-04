@@ -1,0 +1,372 @@
+-- Derived from data/ldap-schema/gosa-core/goto.schema
+-- This module is a container for LDAP schema. It has no module identifier.
+-- X- extension fields from the LDAP schema are comments. USAGE userApplications and structural KIND are omitted because they are the defaults.
+LdapGosaCoreGoto DEFINITIONS ::=
+BEGIN
+
+IMPORTS
+
+  ATTRIBUTE, DistinguishedName, distinguishedNameMatch, OBJECT-CLASS, top
+    FROM InformationFramework
+      {joint-iso-itu-t ds(5) module(1) informationFramework(1) 9} WITH SUCCESSORS
+
+  caseIgnoreIA5Match, caseIgnoreIA5SubstringsMatch, caseIgnoreMatch,
+    caseIgnoreSubstringsMatch, commonName, description, directoryString, dn,
+    ia5String, localityName, UnboundedDirectoryString
+    FROM SelectedAttributeTypes
+      {joint-iso-itu-t ds(5) module(1) selectedAttributeTypes(5) 9} WITH SUCCESSORS
+
+  ipHostNumber, macAddress
+    FROM NIS
+      {iso(1) identified-organization(3) dod(6) internet(1) private(4) enterprise(1) wildboar(56490) module(1) nis(7)} WITH SUCCESSORS
+
+  labeledURI
+    FROM OpenLDAPCoreSchema
+      {iso(1) identified-organization(3) dod(6) internet(1) private(4) enterprise(1) wildboar(56490) module(1) openldap-core(6)} WITH SUCCESSORS
+
+  goFonHardware
+    FROM LdapGosaCoreGofon
+
+  ghCpuType, ghGfxAdapter, ghIdeDev, ghInventoryNumber, ghMemSize, ghNetNic,
+    ghScsiDev, ghSoundAdapter, ghUsbSupport, gotoAdaptPath, gotoAutoFs,
+    gotoBootKernel, gotoCdromEnable, gotoFilesystem, gotoFloppyEnable,
+    gotoFontPath, gotoKernelParameters, gotoLastUser, gotoLdapServer,
+    gotoLpdEnable, gotoLpdServer, gotoMode, gotoModules, gotoNtpServer,
+    gotoRootPasswd, gotoScannerClients, gotoScannerEnable, gotoScannerModel,
+    gotoSndModule, gotoSwapServer, gotoSyslogServer, gotoTerminalPath,
+    gotoXColordepth, gotoXdmcpServer, gotoXDriver, gotoXHsync, gotoXKbLayout,
+    gotoXKbModel, gotoXKbVariant, gotoXMethod, gotoXMonitor, gotoXMouseButtons,
+    gotoXMouseport, gotoXMouseType, gotoXResolution, gotoXVsync
+    FROM LdapGosaCoreGosystem ;
+
+-- Object identifiers
+
+id-at-gotoPrinterPPD OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 10098 1 1 11 6 }
+id-at-gotoProfileFlags OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 10098 1 1 11 7 }
+id-at-gotoProfileServer OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 10098 1 1 11 8 }
+id-at-gotoShare OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 10098 1 1 11 9 }
+id-at-gotoLogonScript OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 10098 1 1 11 10 }
+id-at-gotoKioskProfile OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 10098 1 1 11 11 }
+id-at-gotoUserPrinter OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 10098 1 1 11 12 }
+id-at-gotoUserAdminPrinter OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 10098 1 1 11 13 }
+id-at-gotoGroupPrinter OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 10098 1 1 11 16 }
+id-at-gotoGroupAdminPrinter OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 10098 1 1 11 17 }
+id-at-gotoHotplugDevice OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 10098 1 1 11 14 }
+id-at-gotoProfileQuota OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 10098 1 1 11 15 }
+id-at-gotoHotplugDeviceDN OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 10098 1 1 11 18 }
+id-oc-gotoTerminal OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 10098 1 2 1 1 }
+id-oc-gotoWorkstation OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 10098 1 2 1 30 }
+id-oc-gotoPrinter OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 10098 1 2 1 31 }
+id-oc-gotoEnvironment OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 10098 1 2 1 32 }
+id-oc-gotoWorkstationTemplate OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 10098 1 2 1 34 }
+id-oc-gotoTerminalTemplate OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 10098 1 2 1 35 }
+id-oc-gotoDevice OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 10098 1 2 1 42 }
+
+-- Attribute types
+
+gotoPrinterPPD ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  EQUALITY MATCHING RULE    caseIgnoreIA5Match
+  SUBSTRINGS MATCHING RULE  caseIgnoreIA5SubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"gotoPrinterPPD"}
+  LDAP-DESC                 "GOto - Gonicus Terminal Concept, PPD data"
+  ID                        id-at-gotoPrinterPPD }
+
+gotoProfileFlags ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  EQUALITY MATCHING RULE    caseIgnoreIA5Match
+  SUBSTRINGS MATCHING RULE  caseIgnoreIA5SubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"gotoProfileFlags"}
+  LDAP-DESC                 "GOto - Flags for Profile handling - C is for caching"
+  ID                        id-at-gotoProfileFlags }
+
+gotoProfileServer ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  EQUALITY MATCHING RULE    caseIgnoreIA5Match
+  SUBSTRINGS MATCHING RULE  caseIgnoreIA5SubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"gotoProfileServer"}
+  LDAP-DESC                 "GOto - specifies the profile server"
+  ID                        id-at-gotoProfileServer }
+
+gotoShare ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  EQUALITY MATCHING RULE    caseIgnoreIA5Match
+  SUBSTRINGS MATCHING RULE  caseIgnoreIA5SubstringsMatch
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"gotoShare"}
+  LDAP-DESC                 "GOto - specifies a share"
+  ID                        id-at-gotoShare }
+
+gotoLogonScript ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseIgnoreMatch
+  SUBSTRINGS MATCHING RULE  caseIgnoreSubstringsMatch
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"gotoLogonScript"}
+  LDAP-DESC                 "GOto - specifies a LogonScript"
+  ID                        id-at-gotoLogonScript }
+
+gotoKioskProfile ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  EQUALITY MATCHING RULE    caseIgnoreIA5Match
+  SUBSTRINGS MATCHING RULE  caseIgnoreIA5SubstringsMatch
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"gotoKioskProfile"}
+  LDAP-DESC                 "GOto - specifies a kiosk profile"
+  ID                        id-at-gotoKioskProfile }
+
+gotoUserPrinter ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  EQUALITY MATCHING RULE    caseIgnoreIA5Match
+  SUBSTRINGS MATCHING RULE  caseIgnoreIA5SubstringsMatch
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"gotoUserPrinter"}
+  LDAP-DESC                 "GOto - keeps printers shown for this user"
+  ID                        id-at-gotoUserPrinter }
+
+gotoUserAdminPrinter ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  EQUALITY MATCHING RULE    caseIgnoreIA5Match
+  SUBSTRINGS MATCHING RULE  caseIgnoreIA5SubstringsMatch
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"gotoUserAdminPrinter"}
+  LDAP-DESC                 "GOto - keeps printers we are admin for"
+  ID                        id-at-gotoUserAdminPrinter }
+
+gotoGroupPrinter ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  EQUALITY MATCHING RULE    caseIgnoreIA5Match
+  SUBSTRINGS MATCHING RULE  caseIgnoreIA5SubstringsMatch
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"gotoGroupPrinter"}
+  LDAP-DESC                 "GOto - keeps printers shown for this user"
+  ID                        id-at-gotoGroupPrinter }
+
+gotoGroupAdminPrinter ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  EQUALITY MATCHING RULE    caseIgnoreIA5Match
+  SUBSTRINGS MATCHING RULE  caseIgnoreIA5SubstringsMatch
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"gotoGroupAdminPrinter"}
+  LDAP-DESC                 "GOto - keeps printers we are admin for"
+  ID                        id-at-gotoGroupAdminPrinter }
+
+gotoHotplugDevice ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  EQUALITY MATCHING RULE    caseIgnoreIA5Match
+  SUBSTRINGS MATCHING RULE  caseIgnoreIA5SubstringsMatch
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"gotoHotplugDevice"}
+  LDAP-DESC                 "GOto - keeps hotplug devices"
+  ID                        id-at-gotoHotplugDevice }
+
+gotoProfileQuota ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  EQUALITY MATCHING RULE    caseIgnoreIA5Match
+  SUBSTRINGS MATCHING RULE  caseIgnoreIA5SubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"gotoProfileQuota"}
+  LDAP-DESC                 "GOto - save quota for home"
+  ID                        id-at-gotoProfileQuota }
+
+gotoHotplugDeviceDN ATTRIBUTE ::= {
+  WITH SYNTAX               DistinguishedName
+  EQUALITY MATCHING RULE    distinguishedNameMatch
+  LDAP-SYNTAX               dn.&id
+  LDAP-NAME                 {"gotoHotplugDeviceDN"}
+  LDAP-DESC                 "GOto - points to hotplug devices"
+  ID                        id-at-gotoHotplugDeviceDN }
+
+-- Object classes
+
+gotoTerminal OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  KIND                      auxiliary
+  MUST CONTAIN              { commonName }
+  MAY CONTAIN               { description
+                              | macAddress
+                              | ipHostNumber
+                              | gotoShare
+                              | goFonHardware }
+  LDAP-NAME                 {"gotoTerminal"}
+  LDAP-DESC                 "GOto - Gonicus Terminal Concept, objectclass (v2.7)"
+  ID                        id-oc-gotoTerminal }
+
+gotoWorkstation OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  KIND                      auxiliary
+  MUST CONTAIN              { commonName }
+  MAY CONTAIN               { description
+                              | macAddress
+                              | ipHostNumber
+                              | gotoShare
+                              | goFonHardware }
+  LDAP-NAME                 {"gotoWorkstation"}
+  LDAP-DESC                 "GOto - Gonicus Terminal Concept, objectclass (v2.7)"
+  ID                        id-oc-gotoWorkstation }
+
+gotoPrinter OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  MUST CONTAIN              { commonName }
+  MAY CONTAIN               { labeledURI
+                              | description
+                              | localityName
+                              | gotoPrinterPPD
+                              | macAddress
+                              | ipHostNumber
+                              | gotoUserPrinter
+                              | gotoUserAdminPrinter
+                              | gotoGroupPrinter
+                              | gotoGroupAdminPrinter }
+  LDAP-NAME                 {"gotoPrinter"}
+  LDAP-DESC                 "GOto - Gonicus Terminal Concept, objectclass (v2.7)"
+  ID                        id-oc-gotoPrinter }
+
+gotoEnvironment OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  KIND                      auxiliary
+  MAY CONTAIN               { gotoProfileServer
+                              | gotoProfileFlags
+                              | gotoXResolution
+                              | gotoShare
+                              | gotoLogonScript
+                              | gotoKioskProfile
+                              | gotoHotplugDevice
+                              | gotoProfileQuota
+                              | gotoHotplugDeviceDN }
+  LDAP-NAME                 {"gotoEnvironment"}
+  LDAP-DESC                 "GOto - contains environment settings (v2.7)"
+  ID                        id-oc-gotoEnvironment }
+
+gotoWorkstationTemplate OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  KIND                      auxiliary
+  MUST CONTAIN              { commonName }
+  MAY CONTAIN               { description
+                              | gotoShare
+                              | goFonHardware
+                              | ghGfxAdapter
+                              | ghNetNic
+                              | ghSoundAdapter
+                              | ghIdeDev
+                              | ghScsiDev
+                              | ghUsbSupport
+                              | ghMemSize
+                              | ghCpuType
+                              | ghInventoryNumber
+                              | gotoSyslogServer
+                              | gotoNtpServer
+                              | gotoSwapServer
+                              | gotoLpdServer
+                              | gotoFontPath
+                              | gotoFilesystem
+                              | gotoFloppyEnable
+                              | gotoCdromEnable
+                              | gotoLpdEnable
+                              | gotoScannerEnable
+                              | gotoScannerClients
+                              | gotoRootPasswd
+                              | gotoXdmcpServer
+                              | gotoXMethod
+                              | gotoSndModule
+                              | gotoLastUser
+                              | gotoXMonitor
+                              | gotoXHsync
+                              | gotoXVsync
+                              | gotoXResolution
+                              | gotoXColordepth
+                              | gotoXMouseport
+                              | gotoXMouseButtons
+                              | gotoMode
+                              | gotoXKbModel
+                              | gotoXKbLayout
+                              | gotoXKbVariant
+                              | gotoXDriver
+                              | gotoXMouseType
+                              | macAddress
+                              | gotoAutoFs
+                              | gotoModules
+                              | gotoAdaptPath
+                              | gotoKernelParameters
+                              | gotoBootKernel
+                              | gotoTerminalPath
+                              | gotoLdapServer
+                              | gotoScannerModel }
+  LDAP-NAME                 {"gotoWorkstationTemplate"}
+  LDAP-DESC                 "GOto - Gonicus Terminal Concept, objectclass (v2.7)"
+  ID                        id-oc-gotoWorkstationTemplate }
+
+gotoTerminalTemplate OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  KIND                      auxiliary
+  MUST CONTAIN              { commonName }
+  MAY CONTAIN               { description
+                              | gotoShare
+                              | goFonHardware
+                              | ghGfxAdapter
+                              | ghNetNic
+                              | ghSoundAdapter
+                              | ghIdeDev
+                              | ghScsiDev
+                              | ghUsbSupport
+                              | ghMemSize
+                              | ghCpuType
+                              | ghInventoryNumber
+                              | gotoSyslogServer
+                              | gotoNtpServer
+                              | gotoSwapServer
+                              | gotoLpdServer
+                              | gotoFontPath
+                              | gotoFilesystem
+                              | gotoFloppyEnable
+                              | gotoCdromEnable
+                              | gotoLpdEnable
+                              | gotoScannerEnable
+                              | gotoScannerClients
+                              | gotoRootPasswd
+                              | gotoXdmcpServer
+                              | gotoXMethod
+                              | gotoSndModule
+                              | gotoLastUser
+                              | gotoXMonitor
+                              | gotoXHsync
+                              | gotoXVsync
+                              | gotoXResolution
+                              | gotoXColordepth
+                              | gotoXMouseport
+                              | gotoXMouseButtons
+                              | gotoMode
+                              | gotoXKbModel
+                              | gotoXKbLayout
+                              | gotoXKbVariant
+                              | gotoXDriver
+                              | gotoXMouseType
+                              | macAddress
+                              | gotoAutoFs
+                              | gotoModules
+                              | gotoAdaptPath
+                              | gotoKernelParameters
+                              | gotoBootKernel
+                              | gotoTerminalPath
+                              | gotoLdapServer
+                              | gotoScannerModel }
+  LDAP-NAME                 {"gotoTerminalTemplate"}
+  LDAP-DESC                 "GOto - Gonicus Terminal Concept, objectclass (v2.7)"
+  ID                        id-oc-gotoTerminalTemplate }
+
+gotoDevice OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  MUST CONTAIN              { commonName }
+  MAY CONTAIN               { gotoHotplugDevice
+                              | description }
+  LDAP-NAME                 {"gotoDevice"}
+  LDAP-DESC                 "GOto - contains environment settings (v2.7)"
+  ID                        id-oc-gotoDevice }
+END

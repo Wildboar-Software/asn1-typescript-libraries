@@ -1,0 +1,52 @@
+/* eslint-disable */
+import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
+import { structural /* IMPORTED_SHORT_ENUMERATION_ITEM */ } from "../InformationFramework/ObjectClassKind.ta.mjs";
+import { top } from "../InformationFramework/top.oa.mjs";
+import { id_oc_nFSv4RemoteGroup } from "../LdapNfsv4/id-oc-nFSv4RemoteGroup.va.mjs";
+import { nFSv4Name } from "../LdapNfsv4/nFSv4Name.oa.mjs";
+import { gidNumber } from "../NIS/gidNumber.oa.mjs";
+import { memberUid } from "../NIS/memberUid.oa.mjs";
+import { commonName } from "../SelectedAttributeTypes/commonName.oa.mjs";
+import { description } from "../SelectedAttributeTypes/description.oa.mjs";
+
+
+/**
+ * @summary nFSv4RemoteGroup
+ * @description
+ * 
+ * ### ASN.1 Definition:
+ * 
+ * ```asn1
+ * nFSv4RemoteGroup OBJECT-CLASS ::= {
+ *   SUBCLASS OF               { top }
+ *   MUST CONTAIN              { gidNumber
+ *                               | nFSv4Name }
+ *   MAY CONTAIN               { commonName
+ *                               | memberUid
+ *                               | description }
+ *   LDAP-NAME                 {"NFSv4RemoteGroup"}
+ *   LDAP-DESC                 "NFS version4 group from remote NFSv4 Domain"
+ *   ID                        id-oc-nFSv4RemoteGroup }
+ * ```
+ * 
+ * @constant
+ * @type {OBJECT_CLASS}
+ * @implements {OBJECT_CLASS}
+ */
+export
+const nFSv4RemoteGroup: OBJECT_CLASS = {
+    class: "OBJECT-CLASS",
+    decoderFor: {
+    },
+    encoderFor: {
+    },
+    "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
+    "&MandatoryAttributes": [ gidNumber, nFSv4Name, ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ commonName, memberUid, description, ] /* OBJECT_FIELD_SETTING */,
+    "&ldapName": [ "NFSv4RemoteGroup" ] /* OBJECT_FIELD_SETTING */,
+    "&ldapDesc": "NFS version4 group from remote NFSv4 Domain" /* OBJECT_FIELD_SETTING */,
+    "&id": id_oc_nFSv4RemoteGroup /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,
+    "&kind": structural /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
+};
+
+/* eslint-enable */

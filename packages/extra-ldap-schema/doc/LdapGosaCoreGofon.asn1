@@ -1,0 +1,667 @@
+-- Derived from data/ldap-schema/gosa-core/gofon.schema
+-- This module is a container for LDAP schema. It has no module identifier.
+-- X- extension fields from the LDAP schema are comments. USAGE userApplications and structural KIND are omitted because they are the defaults.
+-- LDAP {length} bounds on directory strings are DirectoryString{n}. Bounds on IA5String, PrintableString, NumericString, and OCTET STRING are SIZE (1..n). Other bounds stay comments because the LDAP figure is an encoded-length hint.
+LdapGosaCoreGofon DEFINITIONS ::=
+BEGIN
+
+IMPORTS
+
+  ATTRIBUTE, OBJECT-CLASS, top
+    FROM InformationFramework
+      {joint-iso-itu-t ds(5) module(1) informationFramework(1) 9} WITH SUCCESSORS
+
+  caseExactIA5Match, caseExactMatch, caseExactSubstringsMatch, caseIgnoreMatch,
+    caseIgnoreSubstringsMatch, commonName, description, directoryString,
+    DirectoryString, ia5String, integer, integerMatch, telephoneNr,
+    telephoneNumber, TelephoneNumber, telephoneNumberMatch,
+    telephoneNumberSubstringsMatch, uid, UnboundedDirectoryString
+    FROM SelectedAttributeTypes
+      {joint-iso-itu-t ds(5) module(1) selectedAttributeTypes(5) 9} WITH SUCCESSORS
+
+  displayName
+    FROM InetOrgPerson
+      {iso(1) identified-organization(3) dod(6) internet(1) private(4) enterprise(1) wildboar(56490) module(1) inetorgperson(5)} WITH SUCCESSORS
+
+  gidNumber, ipHostNumber, macAddress
+    FROM NIS
+      {iso(1) identified-organization(3) dod(6) internet(1) private(4) enterprise(1) wildboar(56490) module(1) nis(7)} WITH SUCCESSORS
+
+  caseExactIA5SubstringsMatch
+    FROM OpenLDAP
+      {iso(1) identified-organization(3) dod(6) internet(1) private(4) enterprise(1) wildboar(56490) module(1) openldap(28)} WITH SUCCESSORS ;
+
+-- Object identifiers
+
+id-at-goFonDeliveryMode OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 10098 1 1 13 1 }
+id-at-goFonForwarding OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 10098 1 1 13 2 }
+id-at-goFonFormat OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 10098 1 1 13 3 }
+id-at-goFonHardware OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 10098 1 1 13 4 }
+id-at-goFonPIN OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 10098 1 1 13 5 }
+id-at-goFonType OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 10098 1 1 13 6 }
+id-at-goFonDmtfMode OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 10098 1 1 13 7 }
+id-at-goFonHost OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 10098 1 1 13 8 }
+id-at-goFonDefaultIP OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 10098 1 1 13 9 }
+id-at-goFonQualify OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 10098 1 1 13 10 }
+id-at-goFonAuth OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 10098 1 1 13 11 }
+id-at-goFonSecret OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 10098 1 1 13 12 }
+id-at-goFonInkeys OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 10098 1 1 13 13 }
+id-at-goFonOutkey OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 10098 1 1 13 14 }
+id-at-goFonTrunk OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 10098 1 1 13 15 }
+id-at-goFonAccountCode OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 10098 1 1 13 16 }
+id-at-goFonMSN OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 10098 1 1 13 17 }
+id-at-goFonPermit OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 10098 1 1 13 18 }
+id-at-goFonDeny OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 10098 1 1 13 19 }
+id-at-goFonMacroVisible OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 10098 1 1 13 20 }
+id-at-goFonMacroContent OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 10098 1 1 13 21 }
+id-at-goFonMacroParameter OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 10098 1 1 13 22 }
+id-at-goFonMacro OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 10098 1 1 13 23 }
+id-at-goFonTimeOut OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 10098 1 1 13 24 }
+id-at-goFonMaxLen OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 10098 1 1 13 25 }
+id-at-goFonAnnounceFrequency OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 10098 1 1 13 26 }
+id-at-goFonDialOption OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 10098 1 1 13 27 }
+id-at-goFonMusiconHold OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 10098 1 1 13 28 }
+id-at-goFonWelcomeMusic OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 10098 1 1 13 29 }
+id-at-goFonQueueReportHold OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 10098 1 1 13 30 }
+id-at-goFonQueueYouAreNext OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 10098 1 1 13 31 }
+id-at-goFonQueueThereAre OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 10098 1 1 13 32 }
+id-at-goFonQueueCallsWaiting OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 10098 1 1 13 33 }
+id-at-goFonQueueThankYou OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 10098 1 1 13 34 }
+id-at-goFonQueueMinutes OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 10098 1 1 13 35 }
+id-at-goFonQueueSeconds OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 10098 1 1 13 36 }
+id-at-goFonQueueLanguage OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 10098 1 1 13 37 }
+id-at-goFonQueueStrategy OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 10098 1 1 13 38 }
+id-at-goFonQueueAnnounceHoldtime OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 10098 1 1 13 39 }
+id-at-goFonQueueAnnounce OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 10098 1 1 13 40 }
+id-at-goFonQueueRetry OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 10098 1 1 13 41 }
+id-at-goFonQueueLessThan OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 10098 1 1 13 42 }
+id-at-goFonConferenceOption OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 10098 1 1 13 43 }
+id-at-goFonConferenceTimeOut OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 10098 1 1 13 44 }
+id-at-goFonConferenceOwner OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 10098 1 1 13 45 }
+id-at-goFonVoicemailPIN OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 10098 1 1 13 46 }
+id-at-goFonHomeServer OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 10098 1 1 13 47 }
+id-oc-goFonAccount OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 10098 1 2 3 11 }
+id-oc-goFonHardware-2 OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 10098 1 2 3 12 }
+id-oc-goFonPickupGroup OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 10098 1 2 3 13 }
+id-oc-goFonMacro-2 OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 10098 1 2 3 14 }
+id-oc-goFonQueue OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 10098 1 2 3 15 }
+id-oc-goFonConference OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 10098 1 2 3 16 }
+
+-- Attribute types
+
+goFonDeliveryMode ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  EQUALITY MATCHING RULE    caseExactIA5Match
+  SUBSTRINGS MATCHING RULE  caseExactIA5SubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"goFonDeliveryMode"}
+  LDAP-DESC                 "GOFon delivery mode is defined here"
+  ID                        id-at-goFonDeliveryMode }
+
+goFonForwarding ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  EQUALITY MATCHING RULE    caseExactIA5Match
+  SUBSTRINGS MATCHING RULE  caseExactIA5SubstringsMatch
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"goFonForwarding"}
+  LDAP-DESC                 "defines which phone numbers get the next call"
+  ID                        id-at-goFonForwarding }
+
+goFonFormat ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  EQUALITY MATCHING RULE    caseExactIA5Match
+  SUBSTRINGS MATCHING RULE  caseExactIA5SubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"goFonFormat"}
+  LDAP-DESC                 "defines voicemail delivery format"
+  ID                        id-at-goFonFormat }
+
+goFonHardware ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  EQUALITY MATCHING RULE    caseExactIA5Match
+  SUBSTRINGS MATCHING RULE  caseExactIA5SubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"goFonHardware"}
+  LDAP-DESC                 "defines voicemail delivery format"
+  ID                        id-at-goFonHardware }
+
+goFonPIN ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  EQUALITY MATCHING RULE    caseExactIA5Match
+  SUBSTRINGS MATCHING RULE  caseExactIA5SubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"goFonPIN"}
+  LDAP-DESC                 "defines voicemail delivery format"
+  ID                        id-at-goFonPIN }
+
+goFonType ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  EQUALITY MATCHING RULE    caseExactIA5Match
+  SUBSTRINGS MATCHING RULE  caseExactIA5SubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"goFonType"}
+  LDAP-DESC                 "sets the sip.conf type parameter"
+  ID                        id-at-goFonType }
+
+goFonDmtfMode ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  EQUALITY MATCHING RULE    caseExactIA5Match
+  SUBSTRINGS MATCHING RULE  caseExactIA5SubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"goFonDmtfMode"}
+  LDAP-DESC                 "sets the sip.conf dmtfmode parameter"
+  ID                        id-at-goFonDmtfMode }
+
+goFonHost ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  EQUALITY MATCHING RULE    caseExactIA5Match
+  SUBSTRINGS MATCHING RULE  caseExactIA5SubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"goFonHost"}
+  LDAP-DESC                 "sets the sip.conf host parameter"
+  ID                        id-at-goFonHost }
+
+goFonDefaultIP ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  EQUALITY MATCHING RULE    caseExactIA5Match
+  SUBSTRINGS MATCHING RULE  caseExactIA5SubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"goFonDefaultIP"}
+  LDAP-DESC                 "sets the sip.conf defaultip parameter"
+  ID                        id-at-goFonDefaultIP }
+
+goFonQualify ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  EQUALITY MATCHING RULE    caseExactIA5Match
+  SUBSTRINGS MATCHING RULE  caseExactIA5SubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"goFonQualify"}
+  LDAP-DESC                 "sets the sip.conf qualify parameter"
+  ID                        id-at-goFonQualify }
+
+-- LDAP syntax length {32} rendered as DirectoryString{32}.
+goFonAuth ATTRIBUTE ::= {
+  WITH SYNTAX               DirectoryString{32}
+  EQUALITY MATCHING RULE    caseExactMatch
+  SUBSTRINGS MATCHING RULE  caseExactSubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"goFonAuth"}
+  LDAP-DESC                 "sets the sip.conf auth parameter"
+  ID                        id-at-goFonAuth }
+
+goFonSecret ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  EQUALITY MATCHING RULE    caseExactIA5Match
+  SUBSTRINGS MATCHING RULE  caseExactIA5SubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"goFonSecret"}
+  LDAP-DESC                 "sets the sip.conf secret parameter"
+  ID                        id-at-goFonSecret }
+
+goFonInkeys ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  EQUALITY MATCHING RULE    caseExactIA5Match
+  SUBSTRINGS MATCHING RULE  caseExactIA5SubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"goFonInkeys"}
+  LDAP-DESC                 "sets the sip.conf inkeys parameter"
+  ID                        id-at-goFonInkeys }
+
+goFonOutkey ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  EQUALITY MATCHING RULE    caseExactIA5Match
+  SUBSTRINGS MATCHING RULE  caseExactIA5SubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"goFonOutkey"}
+  LDAP-DESC                 "sets the sip.conf outkey parameter"
+  ID                        id-at-goFonOutkey }
+
+goFonTrunk ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  EQUALITY MATCHING RULE    caseExactIA5Match
+  SUBSTRINGS MATCHING RULE  caseExactIA5SubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"goFonTrunk"}
+  LDAP-DESC                 "sets the sip.conf trunk parameter"
+  ID                        id-at-goFonTrunk }
+
+goFonAccountCode ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  EQUALITY MATCHING RULE    caseExactIA5Match
+  SUBSTRINGS MATCHING RULE  caseExactIA5SubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"goFonAccountCode"}
+  LDAP-DESC                 "sets the sip.conf accountcode parameter"
+  ID                        id-at-goFonAccountCode }
+
+-- LDAP syntax length {32} kept as a comment only; it is an encoded-length hint, not a value constraint.
+goFonMSN ATTRIBUTE ::= {
+  WITH SYNTAX               TelephoneNumber
+  EQUALITY MATCHING RULE    telephoneNumberMatch
+  SUBSTRINGS MATCHING RULE  telephoneNumberSubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               telephoneNr.&id
+  LDAP-NAME                 {"goFonMSN"}
+  LDAP-DESC                 "sets the sip.conf msn parameter"
+  ID                        id-at-goFonMSN }
+
+goFonPermit ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  EQUALITY MATCHING RULE    caseExactIA5Match
+  SUBSTRINGS MATCHING RULE  caseExactIA5SubstringsMatch
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"goFonPermit"}
+  LDAP-DESC                 "sets the sip.conf permit parameter"
+  ID                        id-at-goFonPermit }
+
+goFonDeny ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  EQUALITY MATCHING RULE    caseExactIA5Match
+  SUBSTRINGS MATCHING RULE  caseExactIA5SubstringsMatch
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"goFonDeny"}
+  LDAP-DESC                 "sets the sip.conf deny parameter"
+  ID                        id-at-goFonDeny }
+
+goFonMacroVisible ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  EQUALITY MATCHING RULE    caseExactIA5Match
+  SUBSTRINGS MATCHING RULE  caseExactIA5SubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"goFonMacroVisible"}
+  LDAP-DESC                 "Triggers if the macro is visible for users"
+  ID                        id-at-goFonMacroVisible }
+
+goFonMacroContent ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  EQUALITY MATCHING RULE    caseExactIA5Match
+  SUBSTRINGS MATCHING RULE  caseExactIA5SubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"goFonMacroContent"}
+  LDAP-DESC                 "Holds the macro"
+  ID                        id-at-goFonMacroContent }
+
+goFonMacroParameter ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  EQUALITY MATCHING RULE    caseExactIA5Match
+  SUBSTRINGS MATCHING RULE  caseExactIA5SubstringsMatch
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"goFonMacroParameter"}
+  LDAP-DESC                 "Holds the macro parameter definitions"
+  ID                        id-at-goFonMacroParameter }
+
+goFonMacro ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseExactMatch
+  SUBSTRINGS MATCHING RULE  caseExactSubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"goFonMacro"}
+  LDAP-DESC                 "Holds the macro parameter definitions"
+  ID                        id-at-goFonMacro }
+
+goFonTimeOut ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  EQUALITY MATCHING RULE    integerMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"goFonTimeOut"}
+  LDAP-DESC                 "Holds the queue goFonTimeOut definitions"
+  ID                        id-at-goFonTimeOut }
+
+goFonMaxLen ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  EQUALITY MATCHING RULE    integerMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"goFonMaxLen"}
+  LDAP-DESC                 "Holds the queue goFonMaxLen definitions"
+  ID                        id-at-goFonMaxLen }
+
+goFonAnnounceFrequency ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  EQUALITY MATCHING RULE    integerMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"goFonAnnounceFrequency"}
+  LDAP-DESC                 "Holds the queue goFonAnnounceFrequency definitions"
+  ID                        id-at-goFonAnnounceFrequency }
+
+-- LDAP syntax length {16} rendered as DirectoryString{16}.
+goFonDialOption ATTRIBUTE ::= {
+  WITH SYNTAX               DirectoryString{16}
+  EQUALITY MATCHING RULE    caseExactMatch
+  SUBSTRINGS MATCHING RULE  caseExactSubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"goFonDialOption"}
+  LDAP-DESC                 "Holds the queue goFonDialOption definitions"
+  ID                        id-at-goFonDialOption }
+
+goFonMusiconHold ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  EQUALITY MATCHING RULE    caseExactIA5Match
+  SUBSTRINGS MATCHING RULE  caseExactIA5SubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"goFonMusiconHold"}
+  LDAP-DESC                 "Holds the queue goFonMusiconHold definitions"
+  ID                        id-at-goFonMusiconHold }
+
+goFonWelcomeMusic ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  EQUALITY MATCHING RULE    caseExactIA5Match
+  SUBSTRINGS MATCHING RULE  caseExactIA5SubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"goFonWelcomeMusic"}
+  LDAP-DESC                 "Holds the queue goFonWelcomeMusic definitions"
+  ID                        id-at-goFonWelcomeMusic }
+
+goFonQueueReportHold ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  EQUALITY MATCHING RULE    caseExactIA5Match
+  SUBSTRINGS MATCHING RULE  caseExactIA5SubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"goFonQueueReportHold"}
+  LDAP-DESC                 "Holds the queue goFonQueueReportHold definitions"
+  ID                        id-at-goFonQueueReportHold }
+
+goFonQueueYouAreNext ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  EQUALITY MATCHING RULE    caseExactIA5Match
+  SUBSTRINGS MATCHING RULE  caseExactIA5SubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"goFonQueueYouAreNext"}
+  LDAP-DESC                 "Holds the queue goFonQueueYouAreNext definitions"
+  ID                        id-at-goFonQueueYouAreNext }
+
+goFonQueueThereAre ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  EQUALITY MATCHING RULE    caseExactIA5Match
+  SUBSTRINGS MATCHING RULE  caseExactIA5SubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"goFonQueueThereAre"}
+  LDAP-DESC                 "Holds the queue goFonQueueThereAre definitions"
+  ID                        id-at-goFonQueueThereAre }
+
+goFonQueueCallsWaiting ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  EQUALITY MATCHING RULE    caseExactIA5Match
+  SUBSTRINGS MATCHING RULE  caseExactIA5SubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"goFonQueueCallsWaiting"}
+  LDAP-DESC                 "Holds the queue goFonQueueCallsWaiting definitions"
+  ID                        id-at-goFonQueueCallsWaiting }
+
+goFonQueueThankYou ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  EQUALITY MATCHING RULE    caseExactIA5Match
+  SUBSTRINGS MATCHING RULE  caseExactIA5SubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"goFonQueueThankYou"}
+  LDAP-DESC                 "Holds the queue goFonQueueThankYou definitions"
+  ID                        id-at-goFonQueueThankYou }
+
+goFonQueueMinutes ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  EQUALITY MATCHING RULE    caseExactIA5Match
+  SUBSTRINGS MATCHING RULE  caseExactIA5SubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"goFonQueueMinutes"}
+  LDAP-DESC                 "Holds the queue goFonQueueMinutes definitions"
+  ID                        id-at-goFonQueueMinutes }
+
+goFonQueueSeconds ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  EQUALITY MATCHING RULE    caseExactIA5Match
+  SUBSTRINGS MATCHING RULE  caseExactIA5SubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"goFonQueueSeconds"}
+  LDAP-DESC                 "Holds the queue goFonQueueSeconds definitions"
+  ID                        id-at-goFonQueueSeconds }
+
+goFonQueueLanguage ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  EQUALITY MATCHING RULE    caseExactIA5Match
+  SUBSTRINGS MATCHING RULE  caseExactIA5SubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"goFonQueueLanguage"}
+  LDAP-DESC                 "Holds the queue goFonLanguage definitions"
+  ID                        id-at-goFonQueueLanguage }
+
+goFonQueueStrategy ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  EQUALITY MATCHING RULE    caseExactIA5Match
+  SUBSTRINGS MATCHING RULE  caseExactIA5SubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"goFonQueueStrategy"}
+  LDAP-DESC                 "Holds the queue goFonStrategy definitions"
+  ID                        id-at-goFonQueueStrategy }
+
+-- LDAP syntax length {4} rendered as DirectoryString{4}.
+goFonQueueAnnounceHoldtime ATTRIBUTE ::= {
+  WITH SYNTAX               DirectoryString{4}
+  EQUALITY MATCHING RULE    caseExactMatch
+  SUBSTRINGS MATCHING RULE  caseExactSubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"goFonQueueAnnounceHoldtime"}
+  LDAP-DESC                 "Holds the queue goFonAnnounceHoldtime definitions"
+  ID                        id-at-goFonQueueAnnounceHoldtime }
+
+goFonQueueAnnounce ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  EQUALITY MATCHING RULE    caseExactIA5Match
+  SUBSTRINGS MATCHING RULE  caseExactIA5SubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"goFonQueueAnnounce"}
+  LDAP-DESC                 "Holds the queue goFonAnnounce definitions"
+  ID                        id-at-goFonQueueAnnounce }
+
+goFonQueueRetry ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  EQUALITY MATCHING RULE    integerMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"goFonQueueRetry"}
+  LDAP-DESC                 "Holds the queue goFonRetry definitions"
+  ID                        id-at-goFonQueueRetry }
+
+goFonQueueLessThan ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  EQUALITY MATCHING RULE    caseExactIA5Match
+  SUBSTRINGS MATCHING RULE  caseExactIA5SubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"goFonQueueLessThan"}
+  LDAP-DESC                 "Holds the queue goFonQueueLessThan definitions"
+  ID                        id-at-goFonQueueLessThan }
+
+-- LDAP syntax length {16} rendered as DirectoryString{16}.
+goFonConferenceOption ATTRIBUTE ::= {
+  WITH SYNTAX               DirectoryString{16}
+  EQUALITY MATCHING RULE    caseExactMatch
+  SUBSTRINGS MATCHING RULE  caseExactSubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"goFonConferenceOption"}
+  LDAP-DESC                 "Holds the queue goFonConferenceOptions definitions"
+  ID                        id-at-goFonConferenceOption }
+
+goFonConferenceTimeOut ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  EQUALITY MATCHING RULE    integerMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"goFonConferenceTimeOut"}
+  LDAP-DESC                 "Holds the queue goFonConferenceTimeOut definitions"
+  ID                        id-at-goFonConferenceTimeOut }
+
+-- LDAP syntax length {256} rendered as DirectoryString{256}.
+goFonConferenceOwner ATTRIBUTE ::= {
+  WITH SYNTAX               DirectoryString{256}
+  EQUALITY MATCHING RULE    caseIgnoreMatch
+  SUBSTRINGS MATCHING RULE  caseIgnoreSubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"goFonConferenceOwner"}
+  LDAP-DESC                 "Holds the queue goFonConferenceOwner definitions"
+  ID                        id-at-goFonConferenceOwner }
+
+goFonVoicemailPIN ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  EQUALITY MATCHING RULE    caseExactIA5Match
+  SUBSTRINGS MATCHING RULE  caseExactIA5SubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"goFonVoicemailPIN"}
+  LDAP-DESC                 "defines voicemail delivery format"
+  ID                        id-at-goFonVoicemailPIN }
+
+goFonHomeServer ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseExactMatch
+  SUBSTRINGS MATCHING RULE  caseExactSubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"goFonHomeServer"}
+  LDAP-DESC                 "defines voicemail delivery format"
+  ID                        id-at-goFonHomeServer }
+
+-- Object classes
+
+goFonAccount OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  KIND                      auxiliary
+  MUST CONTAIN              { goFonDeliveryMode
+                              | telephoneNumber
+                              | uid }
+  MAY CONTAIN               { goFonFormat
+                              | goFonForwarding
+                              | goFonHardware
+                              | goFonPIN
+                              | goFonVoicemailPIN
+                              | goFonMacro
+                              | goFonHomeServer }
+  LDAP-NAME                 {"goFonAccount"}
+  LDAP-DESC                 "GOFon Account objectclass (v2.7)"
+  ID                        id-oc-goFonAccount }
+
+-- disambiguated goFonHardware to goFonHardware-2 inside LdapGosaCoreGofon.
+goFonHardware-2 OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  MUST CONTAIN              { commonName
+                              | macAddress
+                              | ipHostNumber }
+  MAY CONTAIN               { description
+                              | goFonType
+                              | goFonDmtfMode
+                              | goFonHost
+                              | goFonDefaultIP
+                              | goFonQualify
+                              | goFonAuth
+                              | goFonSecret
+                              | goFonInkeys
+                              | goFonOutkey
+                              | goFonTrunk
+                              | goFonAccountCode
+                              | goFonMSN
+                              | goFonPermit
+                              | goFonDeny }
+  LDAP-NAME                 {"goFonHardware"}
+  LDAP-DESC                 "defines a telephone (v2.7)"
+  ID                        id-oc-goFonHardware-2 }
+
+goFonPickupGroup OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  KIND                      auxiliary
+  MUST CONTAIN              { commonName
+                              | gidNumber }
+  LDAP-NAME                 {"goFonPickupGroup"}
+  LDAP-DESC                 "Additive for posixGroups (v2.7)"
+  ID                        id-oc-goFonPickupGroup }
+
+-- disambiguated goFonMacro to goFonMacro-2 inside LdapGosaCoreGofon.
+goFonMacro-2 OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  MUST CONTAIN              { commonName }
+  MAY CONTAIN               { goFonMacroVisible
+                              | displayName
+                              | goFonMacroContent
+                              | description
+                              | goFonMacroParameter }
+  LDAP-NAME                 {"goFonMacro"}
+  LDAP-DESC                 "Macro definitions for asterisk machines (v2.7)"
+  ID                        id-oc-goFonMacro-2 }
+
+goFonQueue OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  KIND                      auxiliary
+  MUST CONTAIN              { commonName }
+  MAY CONTAIN               { goFonTimeOut
+                              | goFonMaxLen
+                              | goFonAnnounceFrequency
+                              | goFonDialOption
+                              | goFonMusiconHold
+                              | goFonWelcomeMusic
+                              | goFonQueueReportHold
+                              | goFonQueueYouAreNext
+                              | goFonQueueThereAre
+                              | goFonQueueCallsWaiting
+                              | goFonQueueThankYou
+                              | goFonQueueMinutes
+                              | goFonQueueSeconds
+                              | telephoneNumber
+                              | goFonQueueLanguage
+                              | goFonQueueStrategy
+                              | goFonQueueAnnounceHoldtime
+                              | goFonQueueAnnounce
+                              | goFonQueueRetry
+                              | goFonQueueLessThan
+                              | goFonHomeServer }
+  LDAP-NAME                 {"goFonQueue"}
+  LDAP-DESC                 "Queue definitions for asterisk machines (v2.7)"
+  ID                        id-oc-goFonQueue }
+
+goFonConference OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  MUST CONTAIN              { commonName }
+  MAY CONTAIN               { description
+                              | goFonConferenceOption
+                              | goFonConferenceTimeOut
+                              | goFonPIN
+                              | goFonConferenceOwner
+                              | telephoneNumber
+                              | goFonHomeServer }
+  LDAP-NAME                 {"goFonConference"}
+  LDAP-DESC                 "Conference definitions for asterisk machines (v2.7)"
+  ID                        id-oc-goFonConference }
+END

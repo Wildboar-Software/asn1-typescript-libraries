@@ -1,0 +1,126 @@
+-- Derived from data/ldap-schema/glue/7-06-StorageShareCapacity.schema
+-- Upstream: http://redmine.ogf.org/projects/glue-wg
+-- This module is a container for LDAP schema. It has no module identifier.
+-- X- extension fields from the LDAP schema are comments. USAGE userApplications and structural KIND are omitted because they are the defaults.
+LdapGlue706StorageShareCapacity DEFINITIONS ::=
+BEGIN
+
+IMPORTS
+
+  ATTRIBUTE, OBJECT-CLASS
+    FROM InformationFramework
+      {joint-iso-itu-t ds(5) module(1) informationFramework(1) 9} WITH SUCCESSORS
+
+  caseExactMatch, caseExactSubstringsMatch, directoryString, integer,
+    integerMatch, integerOrderingMatch, UnboundedDirectoryString
+    FROM SelectedAttributeTypes
+      {joint-iso-itu-t ds(5) module(1) selectedAttributeTypes(5) 9} WITH SUCCESSORS
+
+  gLUE2Entity
+    FROM LdapGlue501Entity ;
+
+-- Object identifiers
+
+id-at-gLUE2StorageShareCapacityID OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 6757 100 1 1 32 1 }
+id-at-gLUE2StorageShareCapacityType OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 6757 100 1 1 32 2 }
+id-at-gLUE2StorageShareCapacityTotalSize OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 6757 100 1 1 32 3 }
+id-at-gLUE2StorageShareCapacityFreeSize OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 6757 100 1 1 32 4 }
+id-at-gLUE2StorageShareCapacityUsedSize OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 6757 100 1 1 32 5 }
+id-at-gLUE2StorageShareCapacityReservedSize OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 6757 100 1 1 32 6 }
+id-at-gLUE2StorageShareCapacityStorageShareForeignKey OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 6757 100 1 1 32 7 }
+id-oc-gLUE2StorageShareCapacity OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 6757 100 1 1 32 }
+
+-- Attribute types
+
+-- initial capital of "GLUE2StorageShareCapacityID" lowercased so the assignment is a valuereference.
+gLUE2StorageShareCapacityID ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseExactMatch
+  SUBSTRINGS MATCHING RULE  caseExactSubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"GLUE2StorageShareCapacityID"}
+  LDAP-DESC                 "Globally unique ID"
+  ID                        id-at-gLUE2StorageShareCapacityID }
+
+-- initial capital of "GLUE2StorageShareCapacityType" lowercased so the assignment is a valuereference.
+gLUE2StorageShareCapacityType ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseExactMatch
+  SUBSTRINGS MATCHING RULE  caseExactSubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"GLUE2StorageShareCapacityType"}
+  LDAP-DESC                 "Type of storage capacity"
+  ID                        id-at-gLUE2StorageShareCapacityType }
+
+-- initial capital of "GLUE2StorageShareCapacityTotalSize" lowercased so the assignment is a valuereference.
+gLUE2StorageShareCapacityTotalSize ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  EQUALITY MATCHING RULE    integerMatch
+  ORDERING MATCHING RULE    integerOrderingMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"GLUE2StorageShareCapacityTotalSize"}
+  LDAP-DESC                 "Size of dedicated storage extent"
+  ID                        id-at-gLUE2StorageShareCapacityTotalSize }
+
+-- initial capital of "GLUE2StorageShareCapacityFreeSize" lowercased so the assignment is a valuereference.
+gLUE2StorageShareCapacityFreeSize ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  EQUALITY MATCHING RULE    integerMatch
+  ORDERING MATCHING RULE    integerOrderingMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"GLUE2StorageShareCapacityFreeSize"}
+  LDAP-DESC                 "Size of free storage extent"
+  ID                        id-at-gLUE2StorageShareCapacityFreeSize }
+
+-- initial capital of "GLUE2StorageShareCapacityUsedSize" lowercased so the assignment is a valuereference.
+gLUE2StorageShareCapacityUsedSize ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  EQUALITY MATCHING RULE    integerMatch
+  ORDERING MATCHING RULE    integerOrderingMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"GLUE2StorageShareCapacityUsedSize"}
+  LDAP-DESC                 "Size of used storage extent"
+  ID                        id-at-gLUE2StorageShareCapacityUsedSize }
+
+-- initial capital of "GLUE2StorageShareCapacityReservedSize" lowercased so the assignment is a valuereference.
+gLUE2StorageShareCapacityReservedSize ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  EQUALITY MATCHING RULE    integerMatch
+  ORDERING MATCHING RULE    integerOrderingMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"GLUE2StorageShareCapacityReservedSize"}
+  LDAP-DESC                 "Size of reserved storage extent"
+  ID                        id-at-gLUE2StorageShareCapacityReservedSize }
+
+-- initial capital of "GLUE2StorageShareCapacityStorageShareForeignKey" lowercased so the assignment is a valuereference.
+gLUE2StorageShareCapacityStorageShareForeignKey ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseExactMatch
+  SUBSTRINGS MATCHING RULE  caseExactSubstringsMatch
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"GLUE2StorageShareCapacityStorageShareForeignKey"}
+  LDAP-DESC                 "ForeignKey"
+  ID                        id-at-gLUE2StorageShareCapacityStorageShareForeignKey }
+
+-- Object classes
+
+-- initial capital of "GLUE2StorageShareCapacity" lowercased so the assignment is a valuereference.
+gLUE2StorageShareCapacity OBJECT-CLASS ::= {
+  SUBCLASS OF               { gLUE2Entity }
+  MUST CONTAIN              { gLUE2StorageShareCapacityID
+                              | gLUE2StorageShareCapacityType
+                              | gLUE2StorageShareCapacityStorageShareForeignKey }
+  MAY CONTAIN               { gLUE2StorageShareCapacityTotalSize
+                              | gLUE2StorageShareCapacityFreeSize
+                              | gLUE2StorageShareCapacityUsedSize
+                              | gLUE2StorageShareCapacityReservedSize }
+  LDAP-NAME                 {"GLUE2StorageShareCapacity"}
+  LDAP-DESC                 "Description of the size and state of an homogeneous storage extent"
+  ID                        id-oc-gLUE2StorageShareCapacity }
+END

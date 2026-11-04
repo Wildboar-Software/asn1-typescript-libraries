@@ -1,0 +1,47 @@
+-- Derived from data/ldap-schema/posix-winsync.ldif
+-- Upstream: https://github.com/389ds/389-ds-base/blob/main/ldap/schema/60posix-winsync-plugin.ldif
+-- This module is a container for LDAP schema. It has no module identifier.
+-- X- extension fields from the LDAP schema are comments. USAGE userApplications and structural KIND are omitted because they are the defaults.
+LdapPosixWinsync DEFINITIONS ::=
+BEGIN
+
+IMPORTS
+
+  ATTRIBUTE, OBJECT-CLASS
+    FROM InformationFramework
+      {joint-iso-itu-t ds(5) module(1) informationFramework(1) 9} WITH SUCCESSORS
+
+  ia5String
+    FROM SelectedAttributeTypes
+      {joint-iso-itu-t ds(5) module(1) selectedAttributeTypes(5) 9} WITH SUCCESSORS
+
+  posixGroup
+    FROM NIS
+      {iso(1) identified-organization(3) dod(6) internet(1) private(4) enterprise(1) wildboar(56490) module(1) nis(7)} WITH SUCCESSORS ;
+
+-- Object identifiers
+
+id-at-dsOnlyMemberUid OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 2141 }
+id-oc-dynamicGroup OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 2 326 }
+
+-- Attribute types
+
+-- X-ORIGIN: "Red Hat Directory Server"
+dsOnlyMemberUid ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"dsOnlyMemberUid"}
+  LDAP-DESC                 "Elements from a memberuid attribute created to reflect dynamic group membership"
+  ID                        id-at-dsOnlyMemberUid }
+
+-- Object classes
+
+-- X-ORIGIN: "Red Hat Directory Server"
+dynamicGroup OBJECT-CLASS ::= {
+  SUBCLASS OF               { posixGroup }
+  KIND                      auxiliary
+  MAY CONTAIN               { dsOnlyMemberUid }
+  LDAP-NAME                 {"dynamicGroup"}
+  LDAP-DESC                 "Group containing internal dynamically-generated members"
+  ID                        id-oc-dynamicGroup }
+END

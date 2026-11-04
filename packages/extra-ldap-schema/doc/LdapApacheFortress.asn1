@@ -1,0 +1,689 @@
+-- Derived from data/ldap-schema/apache-fortress.schema
+-- Upstream: https://www.apache.org/licenses/LICENSE-2.0
+-- This module is a container for LDAP schema. It has no module identifier.
+-- X- extension fields from the LDAP schema are comments. USAGE userApplications and structural KIND are omitted because they are the defaults.
+-- Object classes with no SUP were subclassed from top, the LDAP default (RFC 4512).
+LdapApacheFortress DEFINITIONS ::=
+BEGIN
+
+IMPORTS
+
+  ATTRIBUTE, OBJECT-CLASS, top
+    FROM InformationFramework
+      {joint-iso-itu-t ds(5) module(1) informationFramework(1) 9} WITH SUCCESSORS
+
+  boolean, booleanMatch, caseIgnoreMatch, caseIgnoreSubstringsMatch,
+    commonName, description, directoryString, integer, integerMatch,
+    integerOrderingMatch, UnboundedDirectoryString
+    FROM SelectedAttributeTypes
+      {joint-iso-itu-t ds(5) module(1) selectedAttributeTypes(5) 9} WITH SUCCESSORS
+
+  groupOfNames, organizationalRole, organizationalUnit
+    FROM SelectedObjectClasses
+      {joint-iso-itu-t ds(5) module(1) selectedObjectClasses(6) 9} WITH SUCCESSORS ;
+
+-- Object identifiers
+
+id-at-ftPermName OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 18060 17 1 1 }
+id-at-ftOpNm OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 18060 17 1 2 }
+id-at-ftObjNm OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 18060 17 1 3 }
+id-at-ftObjId OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 18060 17 1 4 }
+id-at-ftRoleName OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 18060 17 1 5 }
+id-at-ftTimeOut OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 18060 17 1 6 }
+id-at-ftGroups OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 18060 17 1 7 }
+id-at-ftRoles OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 18060 17 1 8 }
+id-at-ftUsers OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 18060 17 1 9 }
+id-at-ftProps OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 18060 17 1 10 }
+id-at-ftType OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 18060 17 1 11 }
+id-at-ftId OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 18060 17 1 12 }
+id-at-ftCstr OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 18060 17 1 13 }
+id-at-ftRA OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 18060 17 1 14 }
+id-at-ftRC OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 18060 17 1 15 }
+id-at-ftSetName OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 18060 17 1 16 }
+id-at-ftSetCardinality OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 18060 17 1 17 }
+id-at-ftRels OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 18060 17 1 18 }
+id-at-ftOSU OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 18060 17 1 19 }
+id-at-ftOSP OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 18060 17 1 20 }
+id-at-ftARC OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 18060 17 1 21 }
+id-at-ftARA OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 18060 17 1 22 }
+id-at-ftRange OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 18060 17 1 23 }
+id-at-ftModifier OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 18060 17 1 24 }
+id-at-ftModCode OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 18060 17 1 25 }
+id-at-ftModId OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 18060 17 1 26 }
+id-at-ftSystem OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 18060 17 1 27 }
+id-at-ftParents OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 18060 17 1 28 }
+id-at-configProtocol OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 18060 17 1 29 }
+id-at-configParameter OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 18060 17 1 30 }
+id-at-ftPA OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 18060 17 1 31 }
+id-at-ftPASet OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 18060 17 1 32 }
+id-at-ftPADefaultOperator OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 18060 17 1 33 }
+id-at-ftPASetType OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 18060 17 1 34 }
+id-at-ftPADataType OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 18060 17 1 35 }
+id-at-ftPADefaultValue OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 18060 17 1 36 }
+id-at-ftPADefaultStrategy OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 18060 17 1 37 }
+id-at-ftPAValidVals OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 18060 17 1 38 }
+id-at-ftUidNumber OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 18060 17 1 39 }
+id-at-ftGidNumber OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 18060 17 1 40 }
+id-oc-ftRls OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 18060 17 2 1 }
+id-oc-ftObject OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 18060 17 2 2 }
+id-oc-ftOperation OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 18060 17 2 3 }
+id-oc-ftSSDSet OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 18060 17 2 4 }
+id-oc-ftDSDSet OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 18060 17 2 5 }
+id-oc-ftOrgUnit OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 18060 17 2 6 }
+id-oc-ftHier OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 18060 17 2 7 }
+id-oc-configGroup OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 18060 17 2 8 }
+id-oc-ftAttributeSet OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 18060 17 2 9 }
+id-oc-ftAttribute OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 18060 17 2 10 }
+id-oc-ftUserAttrs OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 18060 17 3 1 }
+id-oc-ftProperties OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 18060 17 3 2 }
+id-oc-ftPools OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 18060 17 3 3 }
+id-oc-ftMods OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 18060 17 3 4 }
+id-oc-ftConfig OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 18060 17 3 5 }
+
+-- Attribute types
+
+-- OID written as ftAtId:1 and expanded with this file's objectidentifier macros.
+ftPermName ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseIgnoreMatch
+  SUBSTRINGS MATCHING RULE  caseIgnoreSubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"ftPermName"}
+  LDAP-DESC                 "Fortress Permission Name"
+  ID                        id-at-ftPermName }
+
+-- OID written as ftAtId:2 and expanded with this file's objectidentifier macros.
+ftOpNm ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseIgnoreMatch
+  SUBSTRINGS MATCHING RULE  caseIgnoreSubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"ftOpNm"}
+  LDAP-DESC                 "Fortress Permission Operation Name"
+  ID                        id-at-ftOpNm }
+
+-- OID written as ftAtId:3 and expanded with this file's objectidentifier macros.
+ftObjNm ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseIgnoreMatch
+  SUBSTRINGS MATCHING RULE  caseIgnoreSubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"ftObjNm"}
+  LDAP-DESC                 "Fortress Permission Object Name"
+  ID                        id-at-ftObjNm }
+
+-- OID written as ftAtId:4 and expanded with this file's objectidentifier macros.
+ftObjId ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseIgnoreMatch
+  SUBSTRINGS MATCHING RULE  caseIgnoreSubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"ftObjId"}
+  LDAP-DESC                 "Fortress Permission Object ID"
+  ID                        id-at-ftObjId }
+
+-- OID written as ftAtId:5 and expanded with this file's objectidentifier macros.
+ftRoleName ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseIgnoreMatch
+  SUBSTRINGS MATCHING RULE  caseIgnoreSubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"ftRoleName"}
+  LDAP-DESC                 "Fortress Role Name"
+  ID                        id-at-ftRoleName }
+
+-- OID written as ftAtId:6 and expanded with this file's objectidentifier macros.
+ftTimeOut ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  EQUALITY MATCHING RULE    integerMatch
+  ORDERING MATCHING RULE    integerOrderingMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"ftTimeOut"}
+  LDAP-DESC                 "Fortress TimeOut"
+  ID                        id-at-ftTimeOut }
+
+-- OID written as ftAtId:7 and expanded with this file's objectidentifier macros.
+ftGroups ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseIgnoreMatch
+  SUBSTRINGS MATCHING RULE  caseIgnoreSubstringsMatch
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"ftGroups"}
+  LDAP-DESC                 "Fortress Group Names"
+  ID                        id-at-ftGroups }
+
+-- OID written as ftAtId:8 and expanded with this file's objectidentifier macros.
+ftRoles ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseIgnoreMatch
+  SUBSTRINGS MATCHING RULE  caseIgnoreSubstringsMatch
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"ftRoles"}
+  LDAP-DESC                 "Fortress Role Names"
+  ID                        id-at-ftRoles }
+
+-- OID written as ftAtId:9 and expanded with this file's objectidentifier macros.
+ftUsers ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseIgnoreMatch
+  SUBSTRINGS MATCHING RULE  caseIgnoreSubstringsMatch
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"ftUsers"}
+  LDAP-DESC                 "Fortress User IDs"
+  ID                        id-at-ftUsers }
+
+-- OID written as ftAtId:10 and expanded with this file's objectidentifier macros.
+ftProps ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseIgnoreMatch
+  SUBSTRINGS MATCHING RULE  caseIgnoreSubstringsMatch
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"ftProps"}
+  LDAP-DESC                 "Fortress Properties"
+  ID                        id-at-ftProps }
+
+-- OID written as ftAtId:11 and expanded with this file's objectidentifier macros.
+ftType ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseIgnoreMatch
+  SUBSTRINGS MATCHING RULE  caseIgnoreSubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"ftType"}
+  LDAP-DESC                 "Fortress Type Name"
+  ID                        id-at-ftType }
+
+-- OID written as ftAtId:12 and expanded with this file's objectidentifier macros.
+ftId ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseIgnoreMatch
+  SUBSTRINGS MATCHING RULE  caseIgnoreSubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"ftId"}
+  LDAP-DESC                 "Fortress Entity Unique ID"
+  ID                        id-at-ftId }
+
+-- OID written as ftAtId:13 and expanded with this file's objectidentifier macros.
+ftCstr ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseIgnoreMatch
+  SUBSTRINGS MATCHING RULE  caseIgnoreSubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"ftCstr"}
+  LDAP-DESC                 "Fortress User Temporal Constraint"
+  ID                        id-at-ftCstr }
+
+-- OID written as ftAtId:14 and expanded with this file's objectidentifier macros.
+ftRA ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseIgnoreMatch
+  SUBSTRINGS MATCHING RULE  caseIgnoreSubstringsMatch
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"ftRA"}
+  LDAP-DESC                 "Fortress User Role Assignments"
+  ID                        id-at-ftRA }
+
+-- OID written as ftAtId:15 and expanded with this file's objectidentifier macros.
+ftRC ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseIgnoreMatch
+  SUBSTRINGS MATCHING RULE  caseIgnoreSubstringsMatch
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"ftRC"}
+  LDAP-DESC                 "Fortress User Role Constraints"
+  ID                        id-at-ftRC }
+
+-- OID written as ftAtId:16 and expanded with this file's objectidentifier macros.
+ftSetName ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseIgnoreMatch
+  SUBSTRINGS MATCHING RULE  caseIgnoreSubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"ftSetName"}
+  LDAP-DESC                 "Fortress Separation of Duties Set Name"
+  ID                        id-at-ftSetName }
+
+-- OID written as ftAtId:17 and expanded with this file's objectidentifier macros.
+ftSetCardinality ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  EQUALITY MATCHING RULE    integerMatch
+  ORDERING MATCHING RULE    integerOrderingMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"ftSetCardinality"}
+  LDAP-DESC                 "Fortress Separation of Duties Set Cardinality"
+  ID                        id-at-ftSetCardinality }
+
+-- OID written as ftAtId:18 and expanded with this file's objectidentifier macros.
+ftRels ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseIgnoreMatch
+  SUBSTRINGS MATCHING RULE  caseIgnoreSubstringsMatch
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"ftRels"}
+  LDAP-DESC                 "Fortress Child to Parent Relationships"
+  ID                        id-at-ftRels }
+
+-- OID written as ftAtId:19 and expanded with this file's objectidentifier macros.
+ftOSU ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseIgnoreMatch
+  SUBSTRINGS MATCHING RULE  caseIgnoreSubstringsMatch
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"ftOSU"}
+  LDAP-DESC                 "Fortress User Organizational Unit Pool"
+  ID                        id-at-ftOSU }
+
+-- OID written as ftAtId:20 and expanded with this file's objectidentifier macros.
+ftOSP ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseIgnoreMatch
+  SUBSTRINGS MATCHING RULE  caseIgnoreSubstringsMatch
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"ftOSP"}
+  LDAP-DESC                 "Fortress Permission Organizational Unit Pool"
+  ID                        id-at-ftOSP }
+
+-- OID written as ftAtId:21 and expanded with this file's objectidentifier macros.
+ftARC ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseIgnoreMatch
+  SUBSTRINGS MATCHING RULE  caseIgnoreSubstringsMatch
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"ftARC"}
+  LDAP-DESC                 "Fortress Admin Role Constraints"
+  ID                        id-at-ftARC }
+
+-- OID written as ftAtId:22 and expanded with this file's objectidentifier macros.
+ftARA ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseIgnoreMatch
+  SUBSTRINGS MATCHING RULE  caseIgnoreSubstringsMatch
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"ftARA"}
+  LDAP-DESC                 "Fortress Admin Role Assignments"
+  ID                        id-at-ftARA }
+
+-- OID written as ftAtId:23 and expanded with this file's objectidentifier macros.
+ftRange ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseIgnoreMatch
+  SUBSTRINGS MATCHING RULE  caseIgnoreSubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"ftRange"}
+  LDAP-DESC                 "Fortress Role Hierarchy Range"
+  ID                        id-at-ftRange }
+
+-- OID written as ftAtId:24 and expanded with this file's objectidentifier macros.
+ftModifier ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseIgnoreMatch
+  SUBSTRINGS MATCHING RULE  caseIgnoreSubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"ftModifier"}
+  LDAP-DESC                 "Fortress Audit Modifier Internal UserID"
+  ID                        id-at-ftModifier }
+
+-- OID written as ftAtId:25 and expanded with this file's objectidentifier macros.
+ftModCode ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseIgnoreMatch
+  SUBSTRINGS MATCHING RULE  caseIgnoreSubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"ftModCode"}
+  LDAP-DESC                 "Fortress Audit Modifier Operation Code"
+  ID                        id-at-ftModCode }
+
+-- OID written as ftAtId:26 and expanded with this file's objectidentifier macros.
+ftModId ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseIgnoreMatch
+  SUBSTRINGS MATCHING RULE  caseIgnoreSubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"ftModId"}
+  LDAP-DESC                 "Fortress Audit Modifier Unique ID"
+  ID                        id-at-ftModId }
+
+-- OID written as ftAtId:27 and expanded with this file's objectidentifier macros.
+ftSystem ATTRIBUTE ::= {
+  WITH SYNTAX               BOOLEAN
+  EQUALITY MATCHING RULE    booleanMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               boolean.&id
+  LDAP-NAME                 {"ftSystem"}
+  LDAP-DESC                 "Fortress System User"
+  ID                        id-at-ftSystem }
+
+-- OID written as ftAtId:28 and expanded with this file's objectidentifier macros.
+ftParents ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseIgnoreMatch
+  SUBSTRINGS MATCHING RULE  caseIgnoreSubstringsMatch
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"ftParents"}
+  LDAP-DESC                 "Fortress Parent Nodes"
+  ID                        id-at-ftParents }
+
+-- OID written as ftAtId:29 and expanded with this file's objectidentifier macros.
+configProtocol ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseIgnoreMatch
+  SUBSTRINGS MATCHING RULE  caseIgnoreSubstringsMatch
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"configProtocol"}
+  LDAP-DESC                 "LDAP Group protocol attribute"
+  ID                        id-at-configProtocol }
+
+-- OID written as ftAtId:30 and expanded with this file's objectidentifier macros.
+configParameter ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseIgnoreMatch
+  SUBSTRINGS MATCHING RULE  caseIgnoreSubstringsMatch
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"configParameter"}
+  LDAP-DESC                 "LDAP Group config properties"
+  ID                        id-at-configParameter }
+
+-- OID written as ftAtId:31 and expanded with this file's objectidentifier macros.
+ftPA ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseIgnoreMatch
+  SUBSTRINGS MATCHING RULE  caseIgnoreSubstringsMatch
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"ftPA"}
+  LDAP-DESC                 "Fortress Permission Attribute Constraints"
+  ID                        id-at-ftPA }
+
+-- OID written as ftAtId:32 and expanded with this file's objectidentifier macros.
+ftPASet ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseIgnoreMatch
+  SUBSTRINGS MATCHING RULE  caseIgnoreSubstringsMatch
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"ftPASet"}
+  LDAP-DESC                 "Fortress Permission Attribute Set"
+  ID                        id-at-ftPASet }
+
+-- OID written as ftAtId:33 and expanded with this file's objectidentifier macros.
+ftPADefaultOperator ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseIgnoreMatch
+  SUBSTRINGS MATCHING RULE  caseIgnoreSubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"ftPADefaultOperator"}
+  LDAP-DESC                 "Fortress Permission Attribute Set Default Operator"
+  ID                        id-at-ftPADefaultOperator }
+
+-- OID written as ftAtId:34 and expanded with this file's objectidentifier macros.
+ftPASetType ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseIgnoreMatch
+  SUBSTRINGS MATCHING RULE  caseIgnoreSubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"ftPASetType"}
+  LDAP-DESC                 "Fortress Permission Attribute Set Type"
+  ID                        id-at-ftPASetType }
+
+-- OID written as ftAtId:35 and expanded with this file's objectidentifier macros.
+ftPADataType ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseIgnoreMatch
+  SUBSTRINGS MATCHING RULE  caseIgnoreSubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"ftPADataType"}
+  LDAP-DESC                 "Fortress Permission Attribute Data Type"
+  ID                        id-at-ftPADataType }
+
+-- OID written as ftAtId:36 and expanded with this file's objectidentifier macros.
+ftPADefaultValue ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseIgnoreMatch
+  SUBSTRINGS MATCHING RULE  caseIgnoreSubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"ftPADefaultValue"}
+  LDAP-DESC                 "Fortress Permission Attribute Set Default Value"
+  ID                        id-at-ftPADefaultValue }
+
+-- OID written as ftAtId:37 and expanded with this file's objectidentifier macros.
+ftPADefaultStrategy ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseIgnoreMatch
+  SUBSTRINGS MATCHING RULE  caseIgnoreSubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"ftPADefaultStrategy"}
+  LDAP-DESC                 "Fortress Permission Attribute Default Strategy"
+  ID                        id-at-ftPADefaultStrategy }
+
+-- OID written as ftAtId:38 and expanded with this file's objectidentifier macros.
+ftPAValidVals ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseIgnoreMatch
+  SUBSTRINGS MATCHING RULE  caseIgnoreSubstringsMatch
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"ftPAValidVals"}
+  LDAP-DESC                 "Fortress Permission Attribute Valid Values"
+  ID                        id-at-ftPAValidVals }
+
+-- OID written as ftAtId:39 and expanded with this file's objectidentifier macros.
+ftUidNumber ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  EQUALITY MATCHING RULE    integerMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"ftUidNumber"}
+  LDAP-DESC                 "Sequence for uidNumber"
+  ID                        id-at-ftUidNumber }
+
+-- OID written as ftAtId:40 and expanded with this file's objectidentifier macros.
+ftGidNumber ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  EQUALITY MATCHING RULE    integerMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"ftGidNumber"}
+  LDAP-DESC                 "Sequence for uidNumber"
+  ID                        id-at-ftGidNumber }
+
+-- Object classes
+
+-- OID written as ftObId:1 and expanded with this file's objectidentifier macros.
+ftRls OBJECT-CLASS ::= {
+  SUBCLASS OF               { organizationalRole }
+  MUST CONTAIN              { ftId
+                              | ftRoleName }
+  MAY CONTAIN               { description
+                              | ftCstr
+                              | ftParents }
+  LDAP-NAME                 {"ftRls"}
+  LDAP-DESC                 "Fortress Role Structural Object Class"
+  ID                        id-oc-ftRls }
+
+-- OID written as ftObId:2 and expanded with this file's objectidentifier macros.
+ftObject OBJECT-CLASS ::= {
+  SUBCLASS OF               { organizationalUnit }
+  MUST CONTAIN              { ftId
+                              | ftObjNm }
+  MAY CONTAIN               { ftType }
+  LDAP-NAME                 {"ftObject"}
+  LDAP-DESC                 "Fortress Permission Object Class"
+  ID                        id-oc-ftObject }
+
+-- OID written as ftObId:3 and expanded with this file's objectidentifier macros.
+ftOperation OBJECT-CLASS ::= {
+  SUBCLASS OF               { organizationalRole }
+  MUST CONTAIN              { ftId
+                              | ftPermName
+                              | ftObjNm
+                              | ftOpNm }
+  MAY CONTAIN               { ftObjId
+                              | ftRoles
+                              | ftUsers
+                              | ftType
+                              | ftPASet }
+  LDAP-NAME                 {"ftOperation"}
+  LDAP-DESC                 "Fortress Permission Operation Structural Object Class"
+  ID                        id-oc-ftOperation }
+
+-- OID written as ftObId:4 and expanded with this file's objectidentifier macros.
+ftSSDSet OBJECT-CLASS ::= {
+  SUBCLASS OF               { organizationalRole }
+  MUST CONTAIN              { ftId
+                              | ftSetName
+                              | ftSetCardinality }
+  MAY CONTAIN               { ftRoles
+                              | description }
+  LDAP-NAME                 {"ftSSDSet"}
+  LDAP-DESC                 "Fortress Role Static Separation of Duty Set Structural Object Class"
+  ID                        id-oc-ftSSDSet }
+
+-- OID written as ftObId:5 and expanded with this file's objectidentifier macros.
+ftDSDSet OBJECT-CLASS ::= {
+  SUBCLASS OF               { organizationalRole }
+  MUST CONTAIN              { ftId
+                              | ftSetName
+                              | ftSetCardinality }
+  MAY CONTAIN               { ftRoles
+                              | description }
+  LDAP-NAME                 {"ftDSDSet"}
+  LDAP-DESC                 "Fortress Role Dynamic Separation of Duty Set Structural Object Class"
+  ID                        id-oc-ftDSDSet }
+
+-- OID written as ftObId:6 and expanded with this file's objectidentifier macros.
+ftOrgUnit OBJECT-CLASS ::= {
+  SUBCLASS OF               { organizationalUnit }
+  MUST CONTAIN              { ftId }
+  MAY CONTAIN               { ftParents }
+  LDAP-NAME                 {"ftOrgUnit"}
+  LDAP-DESC                 "Fortress OrgUnit Structural Object Class"
+  ID                        id-oc-ftOrgUnit }
+
+-- OID written as ftObId:7 and expanded with this file's objectidentifier macros.
+ftHier OBJECT-CLASS ::= {
+  SUBCLASS OF               { organizationalRole }
+  MUST CONTAIN              { commonName }
+  MAY CONTAIN               { ftRels
+                              | description }
+  LDAP-NAME                 {"ftHier"}
+  LDAP-DESC                 "Fortress Hierarchy Structural Object Class"
+  ID                        id-oc-ftHier }
+
+-- OID written as ftObId:8 and expanded with this file's objectidentifier macros.
+configGroup OBJECT-CLASS ::= {
+  SUBCLASS OF               { groupOfNames }
+  MUST CONTAIN              { configProtocol
+                              | ftType }
+  MAY CONTAIN               { configParameter
+                              | ftProps }
+  LDAP-NAME                 {"configGroup"}
+  LDAP-DESC                 "LDAP Configuration Group"
+  ID                        id-oc-configGroup }
+
+-- OID written as ftObId:9 and expanded with this file's objectidentifier macros.
+ftAttributeSet OBJECT-CLASS ::= {
+  SUBCLASS OF               { organizationalUnit }
+  MUST CONTAIN              { ftId
+                              | ftPASet
+                              | commonName }
+  MAY CONTAIN               { ftPA
+                              | ftPASetType
+                              | description }
+  LDAP-NAME                 {"ftAttributeSet"}
+  LDAP-DESC                 "Fortress Attribute Set Structural Object Class"
+  ID                        id-oc-ftAttributeSet }
+
+-- OID written as ftObId:10 and expanded with this file's objectidentifier macros.
+ftAttribute OBJECT-CLASS ::= {
+  SUBCLASS OF               { organizationalRole }
+  MUST CONTAIN              { ftId
+                              | ftPASet
+                              | ftPA
+                              | commonName }
+  MAY CONTAIN               { ftPADataType
+                              | ftPADefaultValue
+                              | ftPADefaultStrategy
+                              | ftPADefaultOperator
+                              | ftPAValidVals
+                              | description }
+  LDAP-NAME                 {"ftAttribute"}
+  LDAP-DESC                 "Fortress Attribute Structural Object Class"
+  ID                        id-oc-ftAttribute }
+
+-- OID written as ftAxId:1 and expanded with this file's objectidentifier macros.
+-- SUP was absent. RFC 4512 treats that as a subclass of top, so SUBCLASS OF { top } was added.
+ftUserAttrs OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  KIND                      auxiliary
+  MUST CONTAIN              { ftId }
+  MAY CONTAIN               { ftRC
+                              | ftRA
+                              | ftARC
+                              | ftARA
+                              | ftCstr
+                              | ftSystem }
+  LDAP-NAME                 {"ftUserAttrs"}
+  LDAP-DESC                 "Fortress User Attribute AUX Object Class"
+  ID                        id-oc-ftUserAttrs }
+
+-- OID written as ftAxId:2 and expanded with this file's objectidentifier macros.
+-- SUP was absent. RFC 4512 treats that as a subclass of top, so SUBCLASS OF { top } was added.
+ftProperties OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  KIND                      auxiliary
+  MAY CONTAIN               { ftProps }
+  LDAP-NAME                 {"ftProperties"}
+  LDAP-DESC                 "Fortress Properties AUX Object Class"
+  ID                        id-oc-ftProperties }
+
+-- OID written as ftAxId:3 and expanded with this file's objectidentifier macros.
+-- SUP was absent. RFC 4512 treats that as a subclass of top, so SUBCLASS OF { top } was added.
+ftPools OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  KIND                      auxiliary
+  MAY CONTAIN               { ftOSU
+                              | ftOSP
+                              | ftRange }
+  LDAP-NAME                 {"ftPools"}
+  LDAP-DESC                 "Fortress Pools AUX Object Class"
+  ID                        id-oc-ftPools }
+
+-- OID written as ftAxId:4 and expanded with this file's objectidentifier macros.
+-- SUP was absent. RFC 4512 treats that as a subclass of top, so SUBCLASS OF { top } was added.
+ftMods OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  KIND                      auxiliary
+  MAY CONTAIN               { ftModifier
+                              | ftModCode
+                              | ftModId }
+  LDAP-NAME                 {"ftMods"}
+  LDAP-DESC                 "Fortress Modifiers AUX Object Class"
+  ID                        id-oc-ftMods }
+
+-- OID written as ftAxId:5 and expanded with this file's objectidentifier macros.
+-- SUP was absent. RFC 4512 treats that as a subclass of top, so SUBCLASS OF { top } was added.
+ftConfig OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  KIND                      auxiliary
+  MUST CONTAIN              { ftGidNumber
+                              | ftUidNumber }
+  LDAP-NAME                 {"ftConfig"}
+  LDAP-DESC                 "Fortress Config Properties"
+  ID                        id-oc-ftConfig }
+END

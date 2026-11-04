@@ -1,0 +1,128 @@
+-- Derived from data/ldap-schema/auto-member-plugin.ldif
+-- This module is a container for LDAP schema. It has no module identifier.
+-- X- extension fields from the LDAP schema are comments. USAGE userApplications and structural KIND are omitted because they are the defaults.
+LdapAutoMemberPlugin DEFINITIONS ::=
+BEGIN
+
+IMPORTS
+
+  ATTRIBUTE, DistinguishedName, OBJECT-CLASS, top
+    FROM InformationFramework
+      {joint-iso-itu-t ds(5) module(1) informationFramework(1) 9} WITH SUCCESSORS
+
+  commonName, description, directoryString, dn, ia5String,
+    UnboundedDirectoryString
+    FROM SelectedAttributeTypes
+      {joint-iso-itu-t ds(5) module(1) selectedAttributeTypes(5) 9} WITH SUCCESSORS ;
+
+-- Object identifiers
+
+id-at-autoMemberScope OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 2097 }
+id-at-autoMemberFilter OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 2098 }
+id-at-autoMemberExclusiveRegex OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 2099 }
+id-at-autoMemberInclusiveRegex OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 2100 }
+id-at-autoMemberDefaultGroup OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 2101 }
+id-at-autoMemberGroupingAttr OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 2102 }
+id-at-autoMemberDisabled OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 2103 }
+id-at-autoMemberTargetGroup OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 2105 }
+id-oc-autoMemberDefinition OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 2 322 }
+id-oc-autoMemberRegexRule OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 2 323 }
+
+-- Attribute types
+
+-- X-ORIGIN: "389 Directory Server"
+autoMemberScope ATTRIBUTE ::= {
+  WITH SYNTAX               DistinguishedName
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               dn.&id
+  LDAP-NAME                 {"autoMemberScope"}
+  LDAP-DESC                 "Auto Membership scope criteria"
+  ID                        id-at-autoMemberScope }
+
+-- X-ORIGIN: "389 Directory Server"
+autoMemberFilter ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"autoMemberFilter"}
+  LDAP-DESC                 "Auto Membership filter criteria"
+  ID                        id-at-autoMemberFilter }
+
+-- X-ORIGIN: "389 Directory Server"
+autoMemberExclusiveRegex ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"autoMemberExclusiveRegex"}
+  LDAP-DESC                 "Auto Membership exclusive regex rule"
+  ID                        id-at-autoMemberExclusiveRegex }
+
+-- X-ORIGIN: "389 Directory Server"
+autoMemberInclusiveRegex ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"autoMemberInclusiveRegex"}
+  LDAP-DESC                 "Auto Membership inclusive regex rule"
+  ID                        id-at-autoMemberInclusiveRegex }
+
+-- X-ORIGIN: "389 Directory Server"
+autoMemberDefaultGroup ATTRIBUTE ::= {
+  WITH SYNTAX               DistinguishedName
+  LDAP-SYNTAX               dn.&id
+  LDAP-NAME                 {"autoMemberDefaultGroup"}
+  LDAP-DESC                 "Auto Membership default group"
+  ID                        id-at-autoMemberDefaultGroup }
+
+-- X-ORIGIN: "389 Directory Server"
+autoMemberGroupingAttr ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"autoMemberGroupingAttr"}
+  LDAP-DESC                 "Auto Membership grouping attribute"
+  ID                        id-at-autoMemberGroupingAttr }
+
+-- X-ORIGIN: "389 Directory Server"
+autoMemberDisabled ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"autoMemberDisabled"}
+  LDAP-DESC                 "Auto Membership disabled attribute"
+  ID                        id-at-autoMemberDisabled }
+
+-- X-ORIGIN: "389 Directory Server"
+autoMemberTargetGroup ATTRIBUTE ::= {
+  WITH SYNTAX               DistinguishedName
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               dn.&id
+  LDAP-NAME                 {"autoMemberTargetGroup"}
+  LDAP-DESC                 "Auto Membership target group"
+  ID                        id-at-autoMemberTargetGroup }
+
+-- Object classes
+
+-- X-ORIGIN: "389 Directory Server"
+autoMemberDefinition OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  MUST CONTAIN              { commonName
+                              | autoMemberScope
+                              | autoMemberFilter
+                              | autoMemberGroupingAttr }
+  MAY CONTAIN               { autoMemberDefaultGroup
+                              | autoMemberDisabled }
+  LDAP-NAME                 {"autoMemberDefinition"}
+  LDAP-DESC                 "Auto Membership Config Definition Entry"
+  ID                        id-oc-autoMemberDefinition }
+
+-- X-ORIGIN: "389 Directory Server"
+autoMemberRegexRule OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  MUST CONTAIN              { commonName
+                              | autoMemberTargetGroup }
+  MAY CONTAIN               { autoMemberExclusiveRegex
+                              | autoMemberInclusiveRegex
+                              | description }
+  LDAP-NAME                 {"autoMemberRegexRule"}
+  LDAP-DESC                 "Auto Membership Regex Rule Entry"
+  ID                        id-oc-autoMemberRegexRule }
+END

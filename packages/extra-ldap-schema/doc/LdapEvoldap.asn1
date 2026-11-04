@@ -1,0 +1,117 @@
+-- Derived from data/ldap-schema/evoldap.schema
+-- Upstream: https://github.com/hyperair/gconf-gdbus/blob/84884e9df7ce8c081a1c223c66a799b82545ff1e/backends/evoldap.schema#L13
+-- This module is a container for LDAP schema. It has no module identifier.
+-- X- extension fields from the LDAP schema are comments. USAGE userApplications and structural KIND are omitted because they are the defaults.
+LdapEvoldap DEFINITIONS ::=
+BEGIN
+
+IMPORTS
+
+  ATTRIBUTE, OBJECT-CLASS, top
+    FROM InformationFramework
+      {joint-iso-itu-t ds(5) module(1) informationFramework(1) 9} WITH SUCCESSORS
+
+  caseIgnoreMatch, caseIgnoreSubstringsMatch, directoryString,
+    UnboundedDirectoryString
+    FROM SelectedAttributeTypes
+      {joint-iso-itu-t ds(5) module(1) selectedAttributeTypes(5) 9} WITH SUCCESSORS ;
+
+-- Object identifiers
+
+id-at-evolutionMailSourceURI OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 3317 5 4 1 1 1 }
+id-at-evolutionMailTransportURI OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 3317 5 4 1 1 2 }
+id-oc-evolutionMailAccount OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 3317 5 4 1 2 1 }
+id-at-evolutionAddressbookURI OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 3317 5 4 1 1 3 }
+id-oc-evolutionAddressbookSource OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 3317 5 4 1 2 2 }
+id-at-evolutionCalendarURI OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 3317 5 4 1 1 4 }
+id-oc-evolutionCalendarSource OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 3317 5 4 1 2 3 }
+id-at-evolutionTasksURI OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 3317 5 4 1 1 5 }
+id-oc-evolutionTasksSource OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 3317 5 4 1 2 4 }
+
+-- Attribute types
+
+evolutionMailSourceURI ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseIgnoreMatch
+  SUBSTRINGS MATCHING RULE  caseIgnoreSubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"evolutionMailSourceURI"}
+  LDAP-DESC                 "Evolution mail account source URI"
+  ID                        id-at-evolutionMailSourceURI }
+
+evolutionMailTransportURI ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseIgnoreMatch
+  SUBSTRINGS MATCHING RULE  caseIgnoreSubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"evolutionMailTransportURI"}
+  LDAP-DESC                 "Evolution mail account transport URI"
+  ID                        id-at-evolutionMailTransportURI }
+
+evolutionAddressbookURI ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseIgnoreMatch
+  SUBSTRINGS MATCHING RULE  caseIgnoreSubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"evolutionAddressbookURI"}
+  LDAP-DESC                 "Evolution addressbook source URI"
+  ID                        id-at-evolutionAddressbookURI }
+
+evolutionCalendarURI ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseIgnoreMatch
+  SUBSTRINGS MATCHING RULE  caseIgnoreSubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"evolutionCalendarURI"}
+  LDAP-DESC                 "Evolution calendar source URI"
+  ID                        id-at-evolutionCalendarURI }
+
+evolutionTasksURI ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseIgnoreMatch
+  SUBSTRINGS MATCHING RULE  caseIgnoreSubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"evolutionTasksURI"}
+  LDAP-DESC                 "Evolution tasks source URI"
+  ID                        id-at-evolutionTasksURI }
+
+-- Object classes
+
+evolutionMailAccount OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  KIND                      auxiliary
+  MAY CONTAIN               { evolutionMailSourceURI
+                              | evolutionMailTransportURI }
+  LDAP-NAME                 {"evolutionMailAccount"}
+  LDAP-DESC                 "Evolution mail account"
+  ID                        id-oc-evolutionMailAccount }
+
+evolutionAddressbookSource OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  KIND                      auxiliary
+  MAY CONTAIN               { evolutionAddressbookURI }
+  LDAP-NAME                 {"evolutionAddressbookSource"}
+  LDAP-DESC                 "Evolution addressbook source"
+  ID                        id-oc-evolutionAddressbookSource }
+
+evolutionCalendarSource OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  KIND                      auxiliary
+  MAY CONTAIN               { evolutionCalendarURI }
+  LDAP-NAME                 {"evolutionCalendarSource"}
+  LDAP-DESC                 "Evolution calendar source"
+  ID                        id-oc-evolutionCalendarSource }
+
+evolutionTasksSource OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  KIND                      auxiliary
+  MAY CONTAIN               { evolutionTasksURI }
+  LDAP-NAME                 {"evolutionTasksSource"}
+  LDAP-DESC                 "Evolution tasks source"
+  ID                        id-oc-evolutionTasksSource }
+END

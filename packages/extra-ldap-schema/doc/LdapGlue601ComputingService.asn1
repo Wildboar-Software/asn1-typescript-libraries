@@ -1,0 +1,113 @@
+-- Derived from data/ldap-schema/glue/6-01-ComputingService.schema
+-- Upstream: http://redmine.ogf.org/projects/glue-wg
+-- This module is a container for LDAP schema. It has no module identifier.
+-- X- extension fields from the LDAP schema are comments. USAGE userApplications and structural KIND are omitted because they are the defaults.
+LdapGlue601ComputingService DEFINITIONS ::=
+BEGIN
+
+IMPORTS
+
+  ATTRIBUTE, OBJECT-CLASS
+    FROM InformationFramework
+      {joint-iso-itu-t ds(5) module(1) informationFramework(1) 9} WITH SUCCESSORS
+
+  integer, integerMatch, integerOrderingMatch
+    FROM SelectedAttributeTypes
+      {joint-iso-itu-t ds(5) module(1) selectedAttributeTypes(5) 9} WITH SUCCESSORS
+
+  gLUE2Service
+    FROM LdapGlue506Service ;
+
+-- Object identifiers
+
+id-at-gLUE2ComputingServiceTotalJobs OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 6757 100 1 1 17 1 }
+id-at-gLUE2ComputingServiceRunningJobs OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 6757 100 1 1 17 2 }
+id-at-gLUE2ComputingServiceWaitingJobs OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 6757 100 1 1 17 3 }
+id-at-gLUE2ComputingServiceStagingJobs OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 6757 100 1 1 17 4 }
+id-at-gLUE2ComputingServiceSuspendedJobs OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 6757 100 1 1 17 5 }
+id-at-gLUE2ComputingServicePreLRMSWaitingJobs OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 6757 100 1 1 17 6 }
+id-oc-gLUE2ComputingService OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 6757 100 1 1 17 }
+
+-- Attribute types
+
+-- initial capital of "GLUE2ComputingServiceTotalJobs" lowercased so the assignment is a valuereference.
+gLUE2ComputingServiceTotalJobs ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  EQUALITY MATCHING RULE    integerMatch
+  ORDERING MATCHING RULE    integerOrderingMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"GLUE2ComputingServiceTotalJobs"}
+  LDAP-DESC                 "Number of total jobs"
+  ID                        id-at-gLUE2ComputingServiceTotalJobs }
+
+-- initial capital of "GLUE2ComputingServiceRunningJobs" lowercased so the assignment is a valuereference.
+gLUE2ComputingServiceRunningJobs ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  EQUALITY MATCHING RULE    integerMatch
+  ORDERING MATCHING RULE    integerOrderingMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"GLUE2ComputingServiceRunningJobs"}
+  LDAP-DESC                 "Number of running jobs"
+  ID                        id-at-gLUE2ComputingServiceRunningJobs }
+
+-- initial capital of "GLUE2ComputingServiceWaitingJobs" lowercased so the assignment is a valuereference.
+gLUE2ComputingServiceWaitingJobs ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  EQUALITY MATCHING RULE    integerMatch
+  ORDERING MATCHING RULE    integerOrderingMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"GLUE2ComputingServiceWaitingJobs"}
+  LDAP-DESC                 "Number of jobs waiting in the underlying computing managers (i.e., Local Resource Manager System or LRMS)"
+  ID                        id-at-gLUE2ComputingServiceWaitingJobs }
+
+-- initial capital of "GLUE2ComputingServiceStagingJobs" lowercased so the assignment is a valuereference.
+gLUE2ComputingServiceStagingJobs ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  EQUALITY MATCHING RULE    integerMatch
+  ORDERING MATCHING RULE    integerOrderingMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"GLUE2ComputingServiceStagingJobs"}
+  LDAP-DESC                 "Number of jobs that are staging files in/out"
+  ID                        id-at-gLUE2ComputingServiceStagingJobs }
+
+-- initial capital of "GLUE2ComputingServiceSuspendedJobs" lowercased so the assignment is a valuereference.
+gLUE2ComputingServiceSuspendedJobs ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  EQUALITY MATCHING RULE    integerMatch
+  ORDERING MATCHING RULE    integerOrderingMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"GLUE2ComputingServiceSuspendedJobs"}
+  LDAP-DESC                 "Number of jobs which started their execution, but are suspended (e.g., for preemption)"
+  ID                        id-at-gLUE2ComputingServiceSuspendedJobs }
+
+-- initial capital of "GLUE2ComputingServicePreLRMSWaitingJobs" lowercased so the assignment is a valuereference.
+gLUE2ComputingServicePreLRMSWaitingJobs ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  EQUALITY MATCHING RULE    integerMatch
+  ORDERING MATCHING RULE    integerOrderingMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"GLUE2ComputingServicePreLRMSWaitingJobs"}
+  LDAP-DESC                 "Number of jobs that are in the Grid layer waiting to be passed to the underlying computing manager (i.e., LRMS)"
+  ID                        id-at-gLUE2ComputingServicePreLRMSWaitingJobs }
+
+-- Object classes
+
+-- initial capital of "GLUE2ComputingService" lowercased so the assignment is a valuereference.
+gLUE2ComputingService OBJECT-CLASS ::= {
+  SUBCLASS OF               { gLUE2Service }
+  MAY CONTAIN               { gLUE2ComputingServiceTotalJobs
+                              | gLUE2ComputingServiceRunningJobs
+                              | gLUE2ComputingServiceWaitingJobs
+                              | gLUE2ComputingServiceStagingJobs
+                              | gLUE2ComputingServiceSuspendedJobs
+                              | gLUE2ComputingServicePreLRMSWaitingJobs }
+  LDAP-NAME                 {"GLUE2ComputingService"}
+  LDAP-DESC                 "The computing service is autonomous and denotes a weak aggregation among computing endpoints, the underlying computing managers and related execution environments, and the defined computing shares. The computing service enables to identify the whole set of entities providing the computing functionality with a persistent name."
+  ID                        id-oc-gLUE2ComputingService }
+END

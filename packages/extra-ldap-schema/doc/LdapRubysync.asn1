@@ -1,0 +1,168 @@
+-- Derived from data/ldap-schema/rubysync.ldif
+-- Upstream: https://github.com/nowhereman/rubysync/blob/8606dc39dbd09ccdea0493f5314e575742e04911/docs/schema/rubysync_opends.ldif#L3
+-- This module is a container for LDAP schema. It has no module identifier.
+-- X- extension fields from the LDAP schema are comments. USAGE userApplications and structural KIND are omitted because they are the defaults.
+-- Object classes with no SUP were subclassed from top, the LDAP default (RFC 4512).
+LdapRubysync DEFINITIONS ::=
+BEGIN
+
+IMPORTS
+
+  ATTRIBUTE, OBJECT-CLASS, top
+    FROM InformationFramework
+      {joint-iso-itu-t ds(5) module(1) informationFramework(1) 9} WITH SUCCESSORS
+
+  caseExactMatch, caseExactSubstringsMatch, caseIgnoreMatch,
+    caseIgnoreSubstringsMatch, directoryString, integer, integerMatch,
+    integerOrderingMatch, octetString, UnboundedDirectoryString
+    FROM SelectedAttributeTypes
+      {joint-iso-itu-t ds(5) module(1) selectedAttributeTypes(5) 9} WITH SUCCESSORS
+
+  changeType
+    FROM ApacheDirectorySchema
+      {iso(1) identified-organization(3) dod(6) internet(1) private(4) enterprise(1) wildboar(56490) module(1) apache-directory-schema(36)} WITH SUCCESSORS
+
+  changeNumber, changes, deleteOldRdn, newRdn, newSuperior
+    FROM DSEE
+      {iso(1) identified-organization(3) dod(6) internet(1) private(4) enterprise(1) wildboar(56490) module(1) dsee(23)} WITH SUCCESSORS ;
+
+-- Object identifiers
+
+id-at-rubySyncAssociation OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 33635 1 1 1 }
+id-at-rubySyncLastSync OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 33635 1 1 2 }
+id-at-rubySyncContext OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 33635 1 1 3 }
+id-at-rubySyncDumpEntry OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 33635 1 1 4 }
+id-at-rubySyncIssueScore OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 33635 1 1 5 }
+id-at-rubySyncIssueStatus OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 33635 1 1 6 }
+id-at-rubySyncMatchValue OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 33635 1 1 7 }
+id-at-rubySyncSourceInfo OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 33635 1 1 8 }
+id-at-rubySyncTargetInfo OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 33635 1 1 9 }
+id-oc-rubySyncSynchable OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 33635 1 2 1 }
+id-oc-rubySyncConnectorState OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 33635 1 2 2 }
+id-oc-rubySyncChangeLogEntry OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 33635 1 2 3 }
+id-oc-rubySyncIssueEntry OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 33635 1 2 4 }
+
+-- Attribute types
+
+rubySyncAssociation ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseExactMatch
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"rubySyncAssociation", "rubySyncSource"}
+  LDAP-DESC                 "Context:Key provided by connected system"
+  ID                        id-at-rubySyncAssociation }
+
+rubySyncLastSync ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseExactMatch
+  SUBSTRINGS MATCHING RULE  caseExactSubstringsMatch
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"rubySyncLastSync"}
+  LDAP-DESC                 "Save informations about last synchronization of a client"
+  ID                        id-at-rubySyncLastSync }
+
+rubySyncContext ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseExactMatch
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"rubySyncContext"}
+  LDAP-DESC                 "Context (client and vault connectors) provided by connected system"
+  ID                        id-at-rubySyncContext }
+
+rubySyncDumpEntry ATTRIBUTE ::= {
+  WITH SYNTAX               OCTET STRING
+  LDAP-SYNTAX               octetString.&id
+  LDAP-NAME                 {"rubySyncDumpEntry"}
+  LDAP-DESC                 "a dump entry"
+  ID                        id-at-rubySyncDumpEntry }
+
+rubySyncIssueScore ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseIgnoreMatch
+  SUBSTRINGS MATCHING RULE  caseIgnoreSubstringsMatch
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"rubySyncIssueScore"}
+  ID                        id-at-rubySyncIssueScore }
+
+rubySyncIssueStatus ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  EQUALITY MATCHING RULE    integerMatch
+  ORDERING MATCHING RULE    integerOrderingMatch
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"rubySyncIssueStatus"}
+  LDAP-DESC                 "0=New, 1=Resolved, 2=Closed, 3=Reopened, 4=Rejected"
+  ID                        id-at-rubySyncIssueStatus }
+
+rubySyncMatchValue ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseIgnoreMatch
+  SUBSTRINGS MATCHING RULE  caseIgnoreSubstringsMatch
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"rubySyncMatchValue"}
+  ID                        id-at-rubySyncMatchValue }
+
+rubySyncSourceInfo ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseIgnoreMatch
+  SUBSTRINGS MATCHING RULE  caseIgnoreSubstringsMatch
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"rubySyncSourceInfo"}
+  LDAP-DESC                 "a DN or a human identifier of the source entry"
+  ID                        id-at-rubySyncSourceInfo }
+
+rubySyncTargetInfo ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseIgnoreMatch
+  SUBSTRINGS MATCHING RULE  caseIgnoreSubstringsMatch
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"rubySyncTargetInfo"}
+  LDAP-DESC                 "a DN or a human identifier of the target entry"
+  ID                        id-at-rubySyncTargetInfo }
+
+-- Object classes
+
+-- SUP was absent. RFC 4512 treats that as a subclass of top, so SUBCLASS OF { top } was added.
+rubySyncSynchable OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  KIND                      auxiliary
+  MAY CONTAIN               { rubySyncAssociation }
+  LDAP-NAME                 {"rubySyncSynchable"}
+  LDAP-DESC                 "Object can preserve links to other objects via rubySync"
+  ID                        id-oc-rubySyncSynchable }
+
+-- SUP was absent. RFC 4512 treats that as a subclass of top, so SUBCLASS OF { top } was added.
+rubySyncConnectorState OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  KIND                      auxiliary
+  MAY CONTAIN               { rubySyncLastSync }
+  LDAP-NAME                 {"rubySyncConnectorState"}
+  LDAP-DESC                 "Synchronization informations between client and vault connectors"
+  ID                        id-oc-rubySyncConnectorState }
+
+rubySyncChangeLogEntry OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  MUST CONTAIN              { changeNumber
+                              | changeType
+                              | rubySyncSourceInfo }
+  MAY CONTAIN               { rubySyncContext
+                              | rubySyncDumpEntry
+                              | changes
+                              | newRdn
+                              | deleteOldRdn
+                              | newSuperior }
+  LDAP-NAME                 {"rubySyncChangeLogEntry"}
+  LDAP-DESC                 "Useful for LDAP server without native public changelog support (see https://opends.dev.java.net/public/standards/draft-good-ldap-changelog.txt)"
+  ID                        id-oc-rubySyncChangeLogEntry }
+
+-- SUP was absent. RFC 4512 treats that as a subclass of top, so SUBCLASS OF { top } was added.
+rubySyncIssueEntry OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  MUST CONTAIN              { rubySyncAssociation }
+  MAY CONTAIN               { rubySyncIssueScore
+                              | rubySyncIssueStatus
+                              | rubySyncMatchValue
+                              | rubySyncSourceInfo
+                              | rubySyncTargetInfo }
+  LDAP-NAME                 {"rubySyncIssueEntry"}
+  ID                        id-oc-rubySyncIssueEntry }
+END

@@ -1,0 +1,25 @@
+{
+  "name": "extra-ldap-schema",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "packages/extra-ldap-schema/src",
+  "projectType": "library",
+  "targets": {
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": [
+        "{options.outputPath}"
+      ],
+      "options": {
+        "outputPath": "dist/packages/extra-ldap-schema",
+        "tsConfig": "packages/extra-ldap-schema/tsconfig.lib.json",
+        "packageJson": "packages/extra-ldap-schema/package.json",
+        "main": "packages/extra-ldap-schema/src/index.mts",
+        "assets": [
+          "packages/extra-ldap-schema/*.md",
+          "packages/extra-ldap-schema/LICENSE.txt",
+          "packages/extra-ldap-schema/package.json"
+        ]
+      }
+    }
+  }
+}

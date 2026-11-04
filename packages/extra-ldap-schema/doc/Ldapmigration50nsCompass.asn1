@@ -1,0 +1,625 @@
+-- Derived from data/ldap-schema/ldapmigration/50ns-compass.ldif
+-- This module is a container for LDAP schema. It has no module identifier.
+-- X- extension fields from the LDAP schema are comments. USAGE userApplications and structural KIND are omitted because they are the defaults.
+Ldapmigration50nsCompass DEFINITIONS ::=
+BEGIN
+
+IMPORTS
+
+  ATTRIBUTE, OBJECT-CLASS, objectClass, top
+    FROM InformationFramework
+      {joint-iso-itu-t ds(5) module(1) informationFramework(1) 9} WITH SUCCESSORS
+
+  commonName, description, directoryString, ia5String,
+    UnboundedDirectoryString
+    FROM SelectedAttributeTypes
+      {joint-iso-itu-t ds(5) module(1) selectedAttributeTypes(5) 9} WITH SUCCESSORS
+
+  userPassword
+    FROM AuthenticationFramework
+      {joint-iso-itu-t ds(5) module(1) authenticationFramework(7) 9} WITH SUCCESSORS
+
+  mail
+    FROM LdapSchema2ldifCore ;
+
+-- Object identifiers
+
+id-at-pipuid OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 137 }
+id-at-pipcompassservers OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 138 }
+id-at-pipuniqueid OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 139 }
+id-at-pipstatus OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 140 }
+id-at-pipusertype OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 141 }
+id-at-pipfrequency OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 142 }
+id-at-pipmedium OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 143 }
+id-at-pipformat OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 144 }
+id-at-piphour OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 145 }
+id-at-pipmaxhits OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 146 }
+id-at-pipresultset OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 147 }
+id-at-pipsortorder OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 148 }
+id-at-piptimestamp OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 149 }
+id-at-pipirlist OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 150 }
+id-at-pipiroption OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 151 }
+id-at-pippwp OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 152 }
+id-at-piplastcount OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 153 }
+id-at-piptotalcount OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 154 }
+id-at-piptotalrun OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 155 }
+id-at-pipnotify OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 156 }
+id-at-pipprivilege OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 157 }
+id-at-pipgroup OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 158 }
+id-at-pipidstcount OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 159 }
+id-at-pipstid OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 160 }
+id-at-pipstname OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 161 }
+id-at-pipstquery OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 162 }
+id-at-pipsttaxonomy OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 163 }
+id-at-pipstinterest OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 164 }
+id-at-pipsttype OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 165 }
+id-at-pipstprivacy OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 166 }
+id-at-pipststatus OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 167 }
+id-at-pipstlastcount OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 168 }
+id-at-pipsttotalcount OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 169 }
+id-at-pipsttotalrun OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 170 }
+id-at-pipstcategory OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 171 }
+id-at-pipstfrequency OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 172 }
+id-at-pipstmedium OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 173 }
+id-at-pipstformat OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 174 }
+id-at-pipsthour OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 175 }
+id-at-pipstmaxhits OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 176 }
+id-at-pipstresultset OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 177 }
+id-at-pipstsortorder OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 178 }
+id-at-pipsttimestamp OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 179 }
+id-at-pipstirlist OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 180 }
+id-at-pipstiroption OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 181 }
+id-at-pipreservedcis1 OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 182 }
+id-at-pipreservedcis2 OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 183 }
+id-at-pipreservedcis3 OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 184 }
+id-at-pipreservedcis4 OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 185 }
+id-at-pipreservedcis5 OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 186 }
+id-at-pipreservedcis6 OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 187 }
+id-at-pipreservedces1 OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 188 }
+id-at-pipreservedces2 OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 189 }
+id-at-pipreservedces3 OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 190 }
+id-oc-netscapeCompassServer OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 2 19 }
+id-oc-personalInterestProfile OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 2 20 }
+id-oc-pIPUserInfo OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 2 21 }
+id-oc-pIPUser OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 2 22 }
+
+-- Attribute types
+
+-- X-ORIGIN: "Netscape Compass Server"
+pipuid ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"pipuid"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-pipuid }
+
+-- X-ORIGIN: "Netscape Compass Server"
+pipcompassservers ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"pipcompassservers"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-pipcompassservers }
+
+-- X-ORIGIN: "Netscape Compass Server"
+pipuniqueid ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"pipuniqueid"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-pipuniqueid }
+
+-- X-ORIGIN: "Netscape Compass Server"
+pipstatus ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"pipstatus"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-pipstatus }
+
+-- X-ORIGIN: "Netscape Compass Server"
+pipusertype ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"pipusertype"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-pipusertype }
+
+-- X-ORIGIN: "Netscape Compass Server"
+pipfrequency ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"pipfrequency"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-pipfrequency }
+
+-- X-ORIGIN: "Netscape Compass Server"
+pipmedium ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"pipmedium"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-pipmedium }
+
+-- X-ORIGIN: "Netscape Compass Server"
+pipformat ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"pipformat"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-pipformat }
+
+-- X-ORIGIN: "Netscape Compass Server"
+piphour ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"piphour"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-piphour }
+
+-- X-ORIGIN: "Netscape Compass Server"
+pipmaxhits ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"pipmaxhits"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-pipmaxhits }
+
+-- X-ORIGIN: "Netscape Compass Server"
+pipresultset ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"pipresultset"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-pipresultset }
+
+-- X-ORIGIN: "Netscape Compass Server"
+pipsortorder ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"pipsortorder"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-pipsortorder }
+
+-- X-ORIGIN: "Netscape Compass Server"
+piptimestamp ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"piptimestamp"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-piptimestamp }
+
+-- X-ORIGIN: "Netscape Compass Server"
+pipirlist ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"pipirlist"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-pipirlist }
+
+-- X-ORIGIN: "Netscape Compass Server"
+pipiroption ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"pipiroption"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-pipiroption }
+
+-- X-ORIGIN: "Netscape Compass Server"
+pippwp ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"pippwp"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-pippwp }
+
+-- X-ORIGIN: "Netscape Compass Server"
+piplastcount ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"piplastcount"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-piplastcount }
+
+-- X-ORIGIN: "Netscape Compass Server"
+piptotalcount ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"piptotalcount"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-piptotalcount }
+
+-- X-ORIGIN: "Netscape Compass Server"
+piptotalrun ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"piptotalrun"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-piptotalrun }
+
+-- X-ORIGIN: "Netscape Compass Server"
+pipnotify ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"pipnotify"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-pipnotify }
+
+-- X-ORIGIN: "Netscape Compass Server"
+pipprivilege ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"pipprivilege"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-pipprivilege }
+
+-- X-ORIGIN: "Netscape Compass Server"
+pipgroup ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"pipgroup"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-pipgroup }
+
+-- X-ORIGIN: "Netscape Compass Server"
+pipidstcount ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"pipidstcount"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-pipidstcount }
+
+-- X-ORIGIN: "Netscape Compass Server"
+pipstid ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"pipstid"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-pipstid }
+
+-- X-ORIGIN: "Netscape Compass Server"
+pipstname ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"pipstname"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-pipstname }
+
+-- X-ORIGIN: "Netscape Compass Server"
+pipstquery ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"pipstquery"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-pipstquery }
+
+-- X-ORIGIN: "Netscape Compass Server"
+pipsttaxonomy ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"pipsttaxonomy"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-pipsttaxonomy }
+
+-- X-ORIGIN: "Netscape Compass Server"
+pipstinterest ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"pipstinterest"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-pipstinterest }
+
+-- X-ORIGIN: "Netscape Compass Server"
+pipsttype ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"pipsttype"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-pipsttype }
+
+-- X-ORIGIN: "Netscape Compass Server"
+pipstprivacy ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"pipstprivacy"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-pipstprivacy }
+
+-- X-ORIGIN: "Netscape Compass Server"
+pipststatus ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"pipststatus"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-pipststatus }
+
+-- X-ORIGIN: "Netscape Compass Server"
+pipstlastcount ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"pipstlastcount"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-pipstlastcount }
+
+-- X-ORIGIN: "Netscape Compass Server"
+pipsttotalcount ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"pipsttotalcount"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-pipsttotalcount }
+
+-- X-ORIGIN: "Netscape Compass Server"
+pipsttotalrun ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"pipsttotalrun"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-pipsttotalrun }
+
+-- X-ORIGIN: "Netscape Compass Server"
+pipstcategory ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"pipstcategory"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-pipstcategory }
+
+-- X-ORIGIN: "Netscape Compass Server"
+pipstfrequency ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"pipstfrequency"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-pipstfrequency }
+
+-- X-ORIGIN: "Netscape Compass Server"
+pipstmedium ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"pipstmedium"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-pipstmedium }
+
+-- X-ORIGIN: "Netscape Compass Server"
+pipstformat ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"pipstformat"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-pipstformat }
+
+-- X-ORIGIN: "Netscape Compass Server"
+pipsthour ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"pipsthour"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-pipsthour }
+
+-- X-ORIGIN: "Netscape Compass Server"
+pipstmaxhits ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"pipstmaxhits"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-pipstmaxhits }
+
+-- X-ORIGIN: "Netscape Compass Server"
+pipstresultset ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"pipstresultset"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-pipstresultset }
+
+-- X-ORIGIN: "Netscape Compass Server"
+pipstsortorder ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"pipstsortorder"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-pipstsortorder }
+
+-- X-ORIGIN: "Netscape Compass Server"
+pipsttimestamp ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"pipsttimestamp"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-pipsttimestamp }
+
+-- X-ORIGIN: "Netscape Compass Server"
+pipstirlist ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"pipstirlist"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-pipstirlist }
+
+-- X-ORIGIN: "Netscape Compass Server"
+pipstiroption ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"pipstiroption"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-pipstiroption }
+
+-- X-ORIGIN: "Netscape Compass Server"
+pipreservedcis1 ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"pipreservedcis1"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-pipreservedcis1 }
+
+-- X-ORIGIN: "Netscape Compass Server"
+pipreservedcis2 ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"pipreservedcis2"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-pipreservedcis2 }
+
+-- X-ORIGIN: "Netscape Compass Server"
+pipreservedcis3 ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"pipreservedcis3"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-pipreservedcis3 }
+
+-- X-ORIGIN: "Netscape Compass Server"
+pipreservedcis4 ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"pipreservedcis4"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-pipreservedcis4 }
+
+-- X-ORIGIN: "Netscape Compass Server"
+pipreservedcis5 ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"pipreservedcis5"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-pipreservedcis5 }
+
+-- X-ORIGIN: "Netscape Compass Server"
+pipreservedcis6 ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"pipreservedcis6"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-pipreservedcis6 }
+
+-- X-ORIGIN: "Netscape Compass Server"
+pipreservedces1 ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"pipreservedces1"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-pipreservedces1 }
+
+-- X-ORIGIN: "Netscape Compass Server"
+pipreservedces2 ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"pipreservedces2"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-pipreservedces2 }
+
+-- X-ORIGIN: "Netscape Compass Server"
+pipreservedces3 ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"pipreservedces3"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-pipreservedces3 }
+
+-- Object classes
+
+-- X-ORIGIN: "Netscape Compass Server"
+netscapeCompassServer OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  MUST CONTAIN              { objectClass }
+  LDAP-NAME                 {"netscapeCompassServer"}
+  LDAP-DESC                 "Netscape defined objectclass"
+  ID                        id-oc-netscapeCompassServer }
+
+-- X-ORIGIN: "Netscape Compass Server"
+personalInterestProfile OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  MUST CONTAIN              { objectClass
+                              | pipuid }
+  MAY CONTAIN               { pipuniqueid
+                              | pipstatus
+                              | pipusertype
+                              | pipfrequency
+                              | pipmedium
+                              | pipformat
+                              | piphour
+                              | pipmaxhits
+                              | pipresultset
+                              | pipsortorder
+                              | piptimestamp
+                              | pipirlist
+                              | pipiroption
+                              | pippwp
+                              | piplastcount
+                              | piptotalcount
+                              | piptotalrun
+                              | pipnotify
+                              | pipprivilege
+                              | pipgroup
+                              | pipidstcount
+                              | pipstid
+                              | pipstname
+                              | pipstquery
+                              | pipsttaxonomy
+                              | pipstinterest
+                              | pipsttype
+                              | pipstprivacy
+                              | pipststatus
+                              | pipstlastcount
+                              | pipsttotalcount
+                              | pipsttotalrun
+                              | pipstcategory
+                              | pipstfrequency
+                              | pipstmedium
+                              | pipstformat
+                              | pipsthour
+                              | pipstmaxhits
+                              | pipstresultset
+                              | pipstsortorder
+                              | pipsttimestamp
+                              | pipstirlist
+                              | pipstiroption
+                              | pipreservedcis1
+                              | pipreservedcis2
+                              | pipreservedcis3
+                              | pipreservedcis4
+                              | pipreservedcis5
+                              | pipreservedcis6
+                              | pipreservedces1
+                              | pipreservedces2
+                              | pipreservedces3 }
+  LDAP-NAME                 {"personalInterestProfile"}
+  LDAP-DESC                 "Netscape defined objectclass"
+  ID                        id-oc-personalInterestProfile }
+
+-- initial capital of "PIPUserInfo" lowercased so the assignment is a valuereference.
+-- X-ORIGIN: "Netscape Compass Server"
+pIPUserInfo OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  MUST CONTAIN              { objectClass }
+  MAY CONTAIN               { commonName
+                              | mail
+                              | userPassword
+                              | description
+                              | pipcompassservers
+                              | pipuniqueid }
+  LDAP-NAME                 {"PIPUserInfo"}
+  LDAP-DESC                 "Netscape defined objectclass"
+  ID                        id-oc-pIPUserInfo }
+
+-- initial capital of "PIPUser" lowercased so the assignment is a valuereference.
+-- X-ORIGIN: "Netscape Compass Server"
+pIPUser OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  MUST CONTAIN              { objectClass }
+  MAY CONTAIN               { pipuniqueid
+                              | pipcompassservers
+                              | pipreservedcis1
+                              | pipreservedcis2
+                              | pipreservedcis3
+                              | pipreservedcis4
+                              | pipreservedcis5
+                              | pipreservedcis6
+                              | pipreservedces1
+                              | pipreservedces2
+                              | pipreservedces3 }
+  LDAP-NAME                 {"PIPUser"}
+  LDAP-DESC                 "Netscape defined objectclass"
+  ID                        id-oc-pIPUser }
+END

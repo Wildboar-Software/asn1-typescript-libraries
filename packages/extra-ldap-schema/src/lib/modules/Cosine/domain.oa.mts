@@ -1,0 +1,91 @@
+/* eslint-disable */
+import { userPassword } from "../AuthenticationFramework/userPassword.oa.mjs";
+import { associatedName } from "../Cosine/associatedName.oa.mjs";
+import { id_oc_domain } from "../Cosine/id-oc-domain.va.mjs";
+import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
+import { structural /* IMPORTED_SHORT_ENUMERATION_ITEM */ } from "../InformationFramework/ObjectClassKind.ta.mjs";
+import { top } from "../InformationFramework/top.oa.mjs";
+import { businessCategory } from "../SelectedAttributeTypes/businessCategory.oa.mjs";
+import { dc } from "../SelectedAttributeTypes/dc.oa.mjs";
+import { description } from "../SelectedAttributeTypes/description.oa.mjs";
+import { destinationIndicator } from "../SelectedAttributeTypes/destinationIndicator.oa.mjs";
+import { facsimileTelephoneNumber } from "../SelectedAttributeTypes/facsimileTelephoneNumber.oa.mjs";
+import { internationalISDNNumber } from "../SelectedAttributeTypes/internationalISDNNumber.oa.mjs";
+import { localityName } from "../SelectedAttributeTypes/localityName.oa.mjs";
+import { organizationName } from "../SelectedAttributeTypes/organizationName.oa.mjs";
+import { physicalDeliveryOfficeName } from "../SelectedAttributeTypes/physicalDeliveryOfficeName.oa.mjs";
+import { postalAddress } from "../SelectedAttributeTypes/postalAddress.oa.mjs";
+import { postalCode } from "../SelectedAttributeTypes/postalCode.oa.mjs";
+import { postOfficeBox } from "../SelectedAttributeTypes/postOfficeBox.oa.mjs";
+import { preferredDeliveryMethod } from "../SelectedAttributeTypes/preferredDeliveryMethod.oa.mjs";
+import { registeredAddress } from "../SelectedAttributeTypes/registeredAddress.oa.mjs";
+import { searchGuide } from "../SelectedAttributeTypes/searchGuide.oa.mjs";
+import { seeAlso } from "../SelectedAttributeTypes/seeAlso.oa.mjs";
+import { stateOrProvinceName } from "../SelectedAttributeTypes/stateOrProvinceName.oa.mjs";
+import { streetAddress } from "../SelectedAttributeTypes/streetAddress.oa.mjs";
+import { telephoneNumber } from "../SelectedAttributeTypes/telephoneNumber.oa.mjs";
+import { telexNumber } from "../SelectedAttributeTypes/telexNumber.oa.mjs";
+import { x121Address } from "../SelectedAttributeTypes/x121Address.oa.mjs";
+
+
+/**
+ * @summary domain
+ * @description
+ * 
+ * ### ASN.1 Definition:
+ * 
+ * ```asn1
+ * domain OBJECT-CLASS ::= {
+ *     SUBCLASS OF     {top}
+ *     KIND            structural
+ *     MUST CONTAIN    {dc}
+ *     MAY CONTAIN {
+ *         associatedName
+ *         | organizationName
+ *         | description
+ *         | businessCategory
+ *         | seeAlso
+ *         | searchGuide
+ *         | userPassword
+ *         | localityName
+ *         | stateOrProvinceName
+ *         | physicalDeliveryOfficeName
+ *         | postalAddress
+ *         | postalCode
+ *         | postOfficeBox
+ *         | streetAddress
+ *         | facsimileTelephoneNumber
+ *         | internationalISDNNumber
+ *         | telephoneNumber
+ *         -- | teletexTerminalIdentifier
+ *         | telexNumber
+ *         | preferredDeliveryMethod
+ *         | destinationIndicator
+ *         | registeredAddress
+ *         | x121Address
+ *     }
+ *     LDAP-NAME       {"domain"}
+ *     ID              id-oc-domain
+ * }
+ * ```
+ * 
+ * @constant
+ * @type {OBJECT_CLASS}
+ * @implements {OBJECT_CLASS}
+ */
+export
+const domain: OBJECT_CLASS = {
+    class: "OBJECT-CLASS",
+    decoderFor: {
+    },
+    encoderFor: {
+    },
+    "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
+    "&kind": structural /* OBJECT_FIELD_SETTING */,
+    "&MandatoryAttributes": [ dc, ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ associatedName, organizationName, description, businessCategory, seeAlso, searchGuide, userPassword, localityName, stateOrProvinceName, physicalDeliveryOfficeName, postalAddress, postalCode, postOfficeBox, streetAddress, facsimileTelephoneNumber, internationalISDNNumber, telephoneNumber, telexNumber, preferredDeliveryMethod, destinationIndicator, registeredAddress, x121Address, ] /* OBJECT_FIELD_SETTING */,
+    "&ldapName": [ "domain" ] /* OBJECT_FIELD_SETTING */,
+    "&id": id_oc_domain /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,
+};
+
+/* eslint-enable */

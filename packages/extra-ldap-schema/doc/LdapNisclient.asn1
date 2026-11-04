@@ -1,0 +1,427 @@
+-- Derived from data/ldap-schema/nisclient.ldif
+-- Upstream: https://github.com/thorsten-l/ldapmigration/blob/9722365224f38bf0417e9fa241f1a419397efbad/schema/95nisclient.ldif#L14
+-- This module is a container for LDAP schema. It has no module identifier.
+-- X- extension fields from the LDAP schema are comments. USAGE userApplications and structural KIND are omitted because they are the defaults.
+-- 5 elements were omitted because their OIDs are already defined. See CONVERSION-REPORT.txt.
+-- 5 elements were omitted because another source file in this corpus defines the same OID.
+-- 1 elements were omitted because the OID is invalid or unresolved.
+LdapNisclient DEFINITIONS ::=
+BEGIN
+
+IMPORTS
+
+  ATTRIBUTE, DistinguishedName, OBJECT-CLASS, top
+    FROM InformationFramework
+      {joint-iso-itu-t ds(5) module(1) informationFramework(1) 9} WITH SUCCESSORS
+
+  boolean, commonName, description, dn, ia5String, integer, octetString
+    FROM SelectedAttributeTypes
+      {joint-iso-itu-t ds(5) module(1) selectedAttributeTypes(5) 9} WITH SUCCESSORS
+
+  memberUid
+    FROM NIS
+      {iso(1) identified-organization(3) dod(6) internet(1) private(4) enterprise(1) wildboar(56490) module(1) nis(7)} WITH SUCCESSORS ;
+
+-- Object identifiers
+
+id-at-solarisPreferredServerOnly OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 42 2 27 5 1 28 }
+id-at-solarisCacheTTL OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 42 2 27 5 1 17 }
+id-at-solarisProjectName OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 42 2 27 5 1 2 }
+id-at-solarisAuthMethod OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 42 2 27 5 1 20 }
+id-at-solarisAttrShortDesc OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 42 2 27 5 1 7 }
+id-at-solarisPreferredServer OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 42 2 27 5 1 27 }
+id-at-solarisUserQualifier OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 42 2 27 5 1 12 }
+-- The LDAP source used the placeholder token memberGid-oid. It was replaced with 1.3.6.1.4.1.42.2.27.5.1.30.
+id-at-memberGid OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 42 2 27 5 1 30 }
+id-at-solarisBindPassword OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 42 2 27 5 1 19 }
+id-at-solarisAttrKeyValue OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 42 2 27 5 1 4 }
+id-at-solarisCertificatePath OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 42 2 27 5 1 22 }
+id-at-solarisProfileId OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 42 2 27 5 1 11 }
+id-at-solarisSearchReferral OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 42 2 27 5 1 29 }
+id-at-solarisAttrReserved2 OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 42 2 27 5 1 14 }
+id-at-solarisProjectID OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 42 2 27 5 1 1 }
+id-at-solarisTransportSecurity OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 42 2 27 5 1 21 }
+id-at-solarisKernelSecurityPolicy OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 42 2 27 5 1 9 }
+id-at-solarisAuditNever OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 42 2 27 5 1 6 }
+id-at-solarisDataSearchDN OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 42 2 27 5 1 24 }
+id-at-solarisAttrReserved1 OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 42 2 27 5 1 13 }
+id-at-solarisSearchBaseDN OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 42 2 27 5 1 16 }
+id-at-solarisProjectAttr OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 42 2 27 5 1 3 }
+id-at-solarisCertificatePassword OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 42 2 27 5 1 23 }
+id-at-solarisSearchTimeLimit OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 42 2 27 5 1 26 }
+id-at-solarisLDAPServers OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 42 2 27 5 1 15 }
+id-at-solarisAttrLongDesc OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 42 2 27 5 1 8 }
+id-at-solarisBindDN OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 42 2 27 5 1 18 }
+id-at-solarisAuditAlways OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 42 2 27 5 1 5 }
+id-at-solarisSearchScope OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 42 2 27 5 1 25 }
+id-at-solarisProfileType OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 42 2 27 5 1 10 }
+id-oc-solarisNamingProfile OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 42 2 27 5 2 7 }
+id-oc-solarisAuditUser OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 42 2 27 5 2 2 }
+id-oc-solarisUserAttr OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 42 2 27 5 2 3 }
+id-oc-solarisAuthAttr OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 42 2 27 5 2 4 }
+id-oc-solarisProAttr OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 42 2 27 5 2 5 }
+id-oc-solarisExecAttr OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 42 2 27 5 2 6 }
+id-oc-solarisProject OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 42 2 27 5 2 1 }
+
+-- Attribute types
+
+-- initial capital of "SolarisPreferredServerOnly" lowercased so the assignment is a valuereference.
+-- X-ORIGIN: "user defined"
+solarisPreferredServerOnly ATTRIBUTE ::= {
+  WITH SYNTAX               BOOLEAN
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               boolean.&id
+  LDAP-NAME                 {"SolarisPreferredServerOnly"}
+  ID                        id-at-solarisPreferredServerOnly }
+
+-- initial capital of "SolarisCacheTTL" lowercased so the assignment is a valuereference.
+-- X-ORIGIN: "user defined"
+solarisCacheTTL ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"SolarisCacheTTL"}
+  ID                        id-at-solarisCacheTTL }
+
+-- initial capital of "SolarisProjectName" lowercased so the assignment is a valuereference.
+-- X-ORIGIN: "user defined"
+solarisProjectName ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"SolarisProjectName"}
+  ID                        id-at-solarisProjectName }
+
+-- initial capital of "SolarisAuthMethod" lowercased so the assignment is a valuereference.
+-- X-ORIGIN: "user defined"
+solarisAuthMethod ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"SolarisAuthMethod"}
+  ID                        id-at-solarisAuthMethod }
+
+-- initial capital of "SolarisAttrShortDesc" lowercased so the assignment is a valuereference.
+-- X-ORIGIN: "user defined"
+solarisAttrShortDesc ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"SolarisAttrShortDesc"}
+  ID                        id-at-solarisAttrShortDesc }
+
+-- initial capital of "SolarisPreferredServer" lowercased so the assignment is a valuereference.
+-- X-ORIGIN: "user defined"
+solarisPreferredServer ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"SolarisPreferredServer"}
+  ID                        id-at-solarisPreferredServer }
+
+-- initial capital of "SolarisUserQualifier" lowercased so the assignment is a valuereference.
+-- X-ORIGIN: "user defined"
+solarisUserQualifier ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"SolarisUserQualifier"}
+  ID                        id-at-solarisUserQualifier }
+
+-- X-ORIGIN: "user defined"
+-- The LDAP source used the placeholder token memberGid-oid. It was replaced with 1.3.6.1.4.1.42.2.27.5.1.30.
+memberGid ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"memberGid"}
+  ID                        id-at-memberGid }
+
+-- initial capital of "SolarisBindPassword" lowercased so the assignment is a valuereference.
+-- X-ORIGIN: "user defined"
+solarisBindPassword ATTRIBUTE ::= {
+  WITH SYNTAX               OCTET STRING
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               octetString.&id
+  LDAP-NAME                 {"SolarisBindPassword"}
+  ID                        id-at-solarisBindPassword }
+
+-- initial capital of "SolarisAttrKeyValue" lowercased so the assignment is a valuereference.
+-- X-ORIGIN: "user defined"
+solarisAttrKeyValue ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"SolarisAttrKeyValue"}
+  ID                        id-at-solarisAttrKeyValue }
+
+-- initial capital of "SolarisCertificatePath" lowercased so the assignment is a valuereference.
+-- X-ORIGIN: "user defined"
+solarisCertificatePath ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"SolarisCertificatePath"}
+  ID                        id-at-solarisCertificatePath }
+
+-- initial capital of "SolarisProfileId" lowercased so the assignment is a valuereference.
+-- X-ORIGIN: "user defined"
+solarisProfileId ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"SolarisProfileId"}
+  ID                        id-at-solarisProfileId }
+
+-- initial capital of "SolarisSearchReferral" lowercased so the assignment is a valuereference.
+-- X-ORIGIN: "user defined"
+solarisSearchReferral ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"SolarisSearchReferral"}
+  ID                        id-at-solarisSearchReferral }
+
+-- initial capital of "SolarisAttrReserved2" lowercased so the assignment is a valuereference.
+-- X-ORIGIN: "user defined"
+solarisAttrReserved2 ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"SolarisAttrReserved2"}
+  ID                        id-at-solarisAttrReserved2 }
+
+-- initial capital of "SolarisProjectID" lowercased so the assignment is a valuereference.
+-- X-ORIGIN: "user defined"
+solarisProjectID ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"SolarisProjectID"}
+  ID                        id-at-solarisProjectID }
+
+-- initial capital of "SolarisTransportSecurity" lowercased so the assignment is a valuereference.
+-- X-ORIGIN: "user defined"
+solarisTransportSecurity ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"SolarisTransportSecurity"}
+  ID                        id-at-solarisTransportSecurity }
+
+-- initial capital of "SolarisKernelSecurityPolicy" lowercased so the assignment is a valuereference.
+-- X-ORIGIN: "user defined"
+solarisKernelSecurityPolicy ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"SolarisKernelSecurityPolicy"}
+  ID                        id-at-solarisKernelSecurityPolicy }
+
+-- initial capital of "SolarisAuditNever" lowercased so the assignment is a valuereference.
+-- X-ORIGIN: "user defined"
+solarisAuditNever ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"SolarisAuditNever"}
+  ID                        id-at-solarisAuditNever }
+
+-- initial capital of "SolarisDataSearchDN" lowercased so the assignment is a valuereference.
+-- X-ORIGIN: "user defined"
+solarisDataSearchDN ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"SolarisDataSearchDN"}
+  ID                        id-at-solarisDataSearchDN }
+
+-- initial capital of "SolarisAttrReserved1" lowercased so the assignment is a valuereference.
+-- X-ORIGIN: "user defined"
+solarisAttrReserved1 ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"SolarisAttrReserved1"}
+  ID                        id-at-solarisAttrReserved1 }
+
+-- initial capital of "SolarisSearchBaseDN" lowercased so the assignment is a valuereference.
+-- X-ORIGIN: "user defined"
+solarisSearchBaseDN ATTRIBUTE ::= {
+  WITH SYNTAX               DistinguishedName
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               dn.&id
+  LDAP-NAME                 {"SolarisSearchBaseDN"}
+  ID                        id-at-solarisSearchBaseDN }
+
+-- initial capital of "SolarisProjectAttr" lowercased so the assignment is a valuereference.
+-- X-ORIGIN: "user defined"
+solarisProjectAttr ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"SolarisProjectAttr"}
+  ID                        id-at-solarisProjectAttr }
+
+-- initial capital of "SolarisCertificatePassword" lowercased so the assignment is a valuereference.
+-- X-ORIGIN: "user defined"
+solarisCertificatePassword ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"SolarisCertificatePassword"}
+  ID                        id-at-solarisCertificatePassword }
+
+-- initial capital of "SolarisSearchTimeLimit" lowercased so the assignment is a valuereference.
+-- X-ORIGIN: "user defined"
+solarisSearchTimeLimit ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"SolarisSearchTimeLimit"}
+  ID                        id-at-solarisSearchTimeLimit }
+
+-- initial capital of "SolarisLDAPServers" lowercased so the assignment is a valuereference.
+-- X-ORIGIN: "user defined"
+solarisLDAPServers ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"SolarisLDAPServers"}
+  ID                        id-at-solarisLDAPServers }
+
+-- initial capital of "SolarisAttrLongDesc" lowercased so the assignment is a valuereference.
+-- X-ORIGIN: "user defined"
+solarisAttrLongDesc ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"SolarisAttrLongDesc"}
+  ID                        id-at-solarisAttrLongDesc }
+
+-- initial capital of "SolarisBindDN" lowercased so the assignment is a valuereference.
+-- X-ORIGIN: "user defined"
+solarisBindDN ATTRIBUTE ::= {
+  WITH SYNTAX               DistinguishedName
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               dn.&id
+  LDAP-NAME                 {"SolarisBindDN"}
+  ID                        id-at-solarisBindDN }
+
+-- initial capital of "SolarisAuditAlways" lowercased so the assignment is a valuereference.
+-- X-ORIGIN: "user defined"
+solarisAuditAlways ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"SolarisAuditAlways"}
+  ID                        id-at-solarisAuditAlways }
+
+-- initial capital of "SolarisSearchScope" lowercased so the assignment is a valuereference.
+-- X-ORIGIN: "user defined"
+solarisSearchScope ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"SolarisSearchScope"}
+  ID                        id-at-solarisSearchScope }
+
+-- initial capital of "SolarisProfileType" lowercased so the assignment is a valuereference.
+-- X-ORIGIN: "user defined"
+solarisProfileType ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"SolarisProfileType"}
+  ID                        id-at-solarisProfileType }
+
+-- Object classes
+
+-- initial capital of "SolarisNamingProfile" lowercased so the assignment is a valuereference.
+-- X-ORIGIN: "user defined"
+solarisNamingProfile OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  MUST CONTAIN              { commonName
+                              | solarisLDAPServers
+                              | solarisSearchBaseDN }
+  MAY CONTAIN               { solarisAuthMethod
+                              | solarisBindDN
+                              | solarisBindPassword
+                              | solarisCacheTTL
+                              | solarisCertificatePassword
+                              | solarisCertificatePath
+                              | solarisDataSearchDN
+                              | solarisPreferredServer
+                              | solarisPreferredServerOnly
+                              | solarisSearchReferral
+                              | solarisSearchScope
+                              | solarisSearchTimeLimit
+                              | solarisTransportSecurity }
+  LDAP-NAME                 {"SolarisNamingProfile"}
+  ID                        id-oc-solarisNamingProfile }
+
+-- initial capital of "SolarisAuditUser" lowercased so the assignment is a valuereference.
+-- X-ORIGIN: "user defined"
+solarisAuditUser OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  MAY CONTAIN               { solarisAuditAlways
+                              | solarisAuditNever }
+  LDAP-NAME                 {"SolarisAuditUser"}
+  ID                        id-oc-solarisAuditUser }
+
+-- initial capital of "SolarisUserAttr" lowercased so the assignment is a valuereference.
+-- X-ORIGIN: "user defined"
+solarisUserAttr OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  MAY CONTAIN               { solarisAttrKeyValue
+                              | solarisAttrReserved1
+                              | solarisAttrReserved2
+                              | solarisUserQualifier }
+  LDAP-NAME                 {"SolarisUserAttr"}
+  ID                        id-oc-solarisUserAttr }
+
+-- initial capital of "SolarisAuthAttr" lowercased so the assignment is a valuereference.
+-- X-ORIGIN: "user defined"
+solarisAuthAttr OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  MUST CONTAIN              { commonName }
+  MAY CONTAIN               { solarisAttrKeyValue
+                              | solarisAttrLongDesc
+                              | solarisAttrReserved1
+                              | solarisAttrReserved2
+                              | solarisAttrShortDesc }
+  LDAP-NAME                 {"SolarisAuthAttr"}
+  ID                        id-oc-solarisAuthAttr }
+
+-- initial capital of "SolarisProAttr" lowercased so the assignment is a valuereference.
+-- X-ORIGIN: "user defined"
+solarisProAttr OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  MUST CONTAIN              { commonName }
+  MAY CONTAIN               { solarisAttrKeyValue
+                              | solarisAttrLongDesc
+                              | solarisAttrReserved1
+                              | solarisAttrReserved2 }
+  LDAP-NAME                 {"SolarisProAttr"}
+  ID                        id-oc-solarisProAttr }
+
+-- initial capital of "SolarisExecAttr" lowercased so the assignment is a valuereference.
+-- X-ORIGIN: "user defined"
+solarisExecAttr OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  MAY CONTAIN               { solarisAttrKeyValue
+                              | solarisAttrReserved1
+                              | solarisAttrReserved2
+                              | solarisKernelSecurityPolicy
+                              | solarisProfileId
+                              | solarisProfileType }
+  LDAP-NAME                 {"SolarisExecAttr"}
+  ID                        id-oc-solarisExecAttr }
+
+-- initial capital of "SolarisProject" lowercased so the assignment is a valuereference.
+-- X-ORIGIN: "user defined"
+solarisProject OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  MUST CONTAIN              { solarisProjectID
+                              | solarisProjectName }
+  MAY CONTAIN               { description
+                              | memberGid
+                              | memberUid
+                              | solarisProjectAttr }
+  LDAP-NAME                 {"SolarisProject"}
+  ID                        id-oc-solarisProject }
+END

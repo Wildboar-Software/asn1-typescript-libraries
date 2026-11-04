@@ -1,0 +1,90 @@
+/* eslint-disable */
+import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
+import { structural /* IMPORTED_SHORT_ENUMERATION_ITEM */ } from "../InformationFramework/ObjectClassKind.ta.mjs";
+import { mail } from "../LdapSchema2ldifCore/mail.oa.mjs";
+import { adminCount } from "../MSUser/adminCount.oa.mjs";
+import { controlAccessRights } from "../MSUser/controlAccessRights.oa.mjs";
+import { desktopProfile } from "../MSUser/desktopProfile.oa.mjs";
+import { groupAttributes } from "../MSUser/groupAttributes.oa.mjs";
+import { groupMembershipSAM } from "../MSUser/groupMembershipSAM.oa.mjs";
+import { groupType } from "../MSUser/groupType.oa.mjs";
+import { id_oc_group } from "../MSUser/id-oc-group.va.mjs";
+import { managedBy } from "../MSUser/managedBy.oa.mjs";
+import { msDS_AzApplicationData } from "../MSUser/msDS-AzApplicationData.oa.mjs";
+import { msDS_AzBizRule } from "../MSUser/msDS-AzBizRule.oa.mjs";
+import { msDS_AzBizRuleLanguage } from "../MSUser/msDS-AzBizRuleLanguage.oa.mjs";
+import { msDS_AzGenericData } from "../MSUser/msDS-AzGenericData.oa.mjs";
+import { msDS_AzLastImportedBizRulePath } from "../MSUser/msDS-AzLastImportedBizRulePath.oa.mjs";
+import { msDS_AzLDAPQuery } from "../MSUser/msDS-AzLDAPQuery.oa.mjs";
+import { msDS_AzObjectGuid } from "../MSUser/msDS-AzObjectGuid.oa.mjs";
+import { msDS_NonMembers } from "../MSUser/msDS-NonMembers.oa.mjs";
+import { msDS_PrimaryComputer } from "../MSUser/msDS-PrimaryComputer.oa.mjs";
+import { msSFU30Name } from "../MSUser/msSFU30Name.oa.mjs";
+import { msSFU30NisDomain } from "../MSUser/msSFU30NisDomain.oa.mjs";
+import { msSFU30PosixMember } from "../MSUser/msSFU30PosixMember.oa.mjs";
+import { mstop } from "../MSUser/mstop.oa.mjs";
+import { nonSecurityMember } from "../MSUser/nonSecurityMember.oa.mjs";
+import { nTGroupMembers } from "../MSUser/nTGroupMembers.oa.mjs";
+import { operatorCount } from "../MSUser/operatorCount.oa.mjs";
+import { primaryGroupToken } from "../MSUser/primaryGroupToken.oa.mjs";
+import { member } from "../SelectedAttributeTypes/member.oa.mjs";
+
+
+/**
+ * @summary group
+ * @description
+ * 
+ * ### ASN.1 Definition:
+ * 
+ * ```asn1
+ * group OBJECT-CLASS ::= {
+ *   SUBCLASS OF               { mstop }
+ *   MUST CONTAIN              { groupType }
+ *   MAY CONTAIN               { member
+ *                               | nTGroupMembers
+ *                               | operatorCount
+ *                               | adminCount
+ *                               | groupAttributes
+ *                               | groupMembershipSAM
+ *                               | controlAccessRights
+ *                               | desktopProfile
+ *                               | nonSecurityMember
+ *                               | managedBy
+ *                               | primaryGroupToken
+ *                               | msDS-AzLDAPQuery
+ *                               | msDS-NonMembers
+ *                               | msDS-AzBizRule
+ *                               | msDS-AzBizRuleLanguage
+ *                               | msDS-AzLastImportedBizRulePath
+ *                               | msDS-AzApplicationData
+ *                               | msDS-AzObjectGuid
+ *                               | msDS-AzGenericData
+ *                               | msDS-PrimaryComputer
+ *                               | mail
+ *                               | msSFU30Name
+ *                               | msSFU30NisDomain
+ *                               | msSFU30PosixMember }
+ *   LDAP-NAME                 {"group"}
+ *   ID                        id-oc-group }
+ * ```
+ * 
+ * @constant
+ * @type {OBJECT_CLASS}
+ * @implements {OBJECT_CLASS}
+ */
+export
+const group: OBJECT_CLASS = {
+    class: "OBJECT-CLASS",
+    decoderFor: {
+    },
+    encoderFor: {
+    },
+    "&Superclasses": [ mstop, ] /* OBJECT_FIELD_SETTING */,
+    "&MandatoryAttributes": [ groupType, ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ member, nTGroupMembers, operatorCount, adminCount, groupAttributes, groupMembershipSAM, controlAccessRights, desktopProfile, nonSecurityMember, managedBy, primaryGroupToken, msDS_AzLDAPQuery, msDS_NonMembers, msDS_AzBizRule, msDS_AzBizRuleLanguage, msDS_AzLastImportedBizRulePath, msDS_AzApplicationData, msDS_AzObjectGuid, msDS_AzGenericData, msDS_PrimaryComputer, mail, msSFU30Name, msSFU30NisDomain, msSFU30PosixMember, ] /* OBJECT_FIELD_SETTING */,
+    "&ldapName": [ "group" ] /* OBJECT_FIELD_SETTING */,
+    "&id": id_oc_group /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,
+    "&kind": structural /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
+};
+
+/* eslint-enable */

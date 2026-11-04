@@ -1,0 +1,64 @@
+-- Derived from data/ldap-schema/schema2ldif/fmserver.schema
+-- This module is a container for LDAP schema. It has no module identifier.
+-- X- extension fields from the LDAP schema are comments. USAGE userApplications and structural KIND are omitted because they are the defaults.
+-- 6 elements were omitted because their OIDs are already defined. See CONVERSION-REPORT.txt.
+LdapSchema2ldifFmserver DEFINITIONS ::=
+BEGIN
+
+IMPORTS
+
+  OBJECT-CLASS, top
+    FROM InformationFramework
+      {joint-iso-itu-t ds(5) module(1) informationFramework(1) 9} WITH SUCCESSORS
+
+  commonName, description, localityName, name, owner, telephoneNumber
+    FROM SelectedAttributeTypes
+      {joint-iso-itu-t ds(5) module(1) selectedAttributeTypes(5) 9} WITH SUCCESSORS
+
+  keywords, managedBy, serviceBindingInformation, serviceClassName,
+    serviceDNSName, serviceDNSNameType
+    FROM MSUser
+      {iso(1) identified-organization(3) dod(6) internet(1) private(4) enterprise(1) wildboar(56490) module(1) msuser(26)} WITH SUCCESSORS
+
+  mail
+    FROM LdapSchema2ldifCore ;
+
+-- Object identifiers
+
+id-oc-leaf OBJECT IDENTIFIER ::= { 1 2 840 113556 1 5 20 }
+id-oc-connectionPoint OBJECT IDENTIFIER ::= { 1 2 840 113556 1 5 14 }
+id-oc-serviceConnectionPoint OBJECT IDENTIFIER ::= { 1 2 840 113556 1 5 126 }
+
+-- Object classes
+
+leaf OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  LDAP-NAME                 {"leaf"}
+  LDAP-DESC                 "Microsoft Active Directory Leaf Object"
+  ID                        id-oc-leaf }
+
+connectionPoint OBJECT-CLASS ::= {
+  SUBCLASS OF               { leaf }
+  MUST CONTAIN              { commonName }
+  MAY CONTAIN               { keywords
+                              | managedBy }
+  LDAP-NAME                 {"connectionPoint"}
+  LDAP-DESC                 "Microsoft Active Directory ConnectPoint Object"
+  ID                        id-oc-connectionPoint }
+
+serviceConnectionPoint OBJECT-CLASS ::= {
+  SUBCLASS OF               { connectionPoint }
+  MUST CONTAIN              { name
+                              | serviceBindingInformation }
+  MAY CONTAIN               { localityName
+                              | mail
+                              | owner
+                              | serviceClassName
+                              | serviceDNSName
+                              | serviceDNSNameType
+                              | telephoneNumber
+                              | description }
+  LDAP-NAME                 {"serviceConnectionPoint"}
+  LDAP-DESC                 "Microsoft Active Directory ServiceConnectionPoint Object"
+  ID                        id-oc-serviceConnectionPoint }
+END

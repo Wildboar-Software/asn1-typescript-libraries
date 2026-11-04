@@ -1,0 +1,70 @@
+/* eslint-disable */
+import { displayName } from "../InetOrgPerson/displayName.oa.mjs";
+import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
+import { objectClass } from "../InformationFramework/objectClass.oa.mjs";
+import { structural /* IMPORTED_SHORT_ENUMERATION_ITEM */ } from "../InformationFramework/ObjectClassKind.ta.mjs";
+import { top } from "../InformationFramework/top.oa.mjs";
+import { defaultScope } from "../LdapOx/defaultScope.oa.mjs";
+import { del } from "../LdapOx/del.oa.mjs";
+import { exp } from "../LdapOx/exp.oa.mjs";
+import { id_oc_oxAuthCustomScope } from "../LdapOx/id-oc-oxAuthCustomScope.va.mjs";
+import { inum } from "../LdapOx/inum.oa.mjs";
+import { oxAttributes } from "../LdapOx/oxAttributes.oa.mjs";
+import { oxAuthClaim } from "../LdapOx/oxAuthClaim.oa.mjs";
+import { oxAuthGroupClaims } from "../LdapOx/oxAuthGroupClaims.oa.mjs";
+import { oxIconUrl } from "../LdapOx/oxIconUrl.oa.mjs";
+import { oxId } from "../LdapOx/oxId.oa.mjs";
+import { oxScopeType } from "../LdapOx/oxScopeType.oa.mjs";
+import { oxScriptDn } from "../LdapOx/oxScriptDn.oa.mjs";
+import { oxUmaPolicyScriptDn } from "../LdapOx/oxUmaPolicyScriptDn.oa.mjs";
+import { description } from "../SelectedAttributeTypes/description.oa.mjs";
+
+
+/**
+ * @summary oxAuthCustomScope
+ * @description
+ * 
+ * ### ASN.1 Definition:
+ * 
+ * ```asn1
+ * oxAuthCustomScope OBJECT-CLASS ::= {
+ *   SUBCLASS OF               { top }
+ *   MUST CONTAIN              { objectClass }
+ *   MAY CONTAIN               { defaultScope
+ *                               | description
+ *                               | displayName
+ *                               | inum
+ *                               | oxScopeType
+ *                               | oxAuthClaim
+ *                               | oxScriptDn
+ *                               | oxAuthGroupClaims
+ *                               | oxId
+ *                               | oxIconUrl
+ *                               | oxUmaPolicyScriptDn
+ *                               | oxAttributes
+ *                               | exp
+ *                               | del }
+ *   LDAP-NAME                 {"oxAuthCustomScope"}
+ *   ID                        id-oc-oxAuthCustomScope }
+ * ```
+ * 
+ * @constant
+ * @type {OBJECT_CLASS}
+ * @implements {OBJECT_CLASS}
+ */
+export
+const oxAuthCustomScope: OBJECT_CLASS = {
+    class: "OBJECT-CLASS",
+    decoderFor: {
+    },
+    encoderFor: {
+    },
+    "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
+    "&MandatoryAttributes": [ objectClass, ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ defaultScope, description, displayName, inum, oxScopeType, oxAuthClaim, oxScriptDn, oxAuthGroupClaims, oxId, oxIconUrl, oxUmaPolicyScriptDn, oxAttributes, exp, del, ] /* OBJECT_FIELD_SETTING */,
+    "&ldapName": [ "oxAuthCustomScope" ] /* OBJECT_FIELD_SETTING */,
+    "&id": id_oc_oxAuthCustomScope /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,
+    "&kind": structural /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
+};
+
+/* eslint-enable */

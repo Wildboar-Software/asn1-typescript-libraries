@@ -1,0 +1,58 @@
+/* eslint-disable */
+import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
+import { structural /* IMPORTED_SHORT_ENUMERATION_ITEM */ } from "../InformationFramework/ObjectClassKind.ta.mjs";
+import { top } from "../InformationFramework/top.oa.mjs";
+import { id_oc_zimbraMimeEntry } from "../LdapZimbra/id-oc-zimbraMimeEntry.va.mjs";
+import { zimbraMimeFileExtension } from "../LdapZimbra/zimbraMimeFileExtension.oa.mjs";
+import { zimbraMimeHandlerClass } from "../LdapZimbra/zimbraMimeHandlerClass.oa.mjs";
+import { zimbraMimeHandlerExtension } from "../LdapZimbra/zimbraMimeHandlerExtension.oa.mjs";
+import { zimbraMimeIndexingEnabled } from "../LdapZimbra/zimbraMimeIndexingEnabled.oa.mjs";
+import { zimbraMimePriority } from "../LdapZimbra/zimbraMimePriority.oa.mjs";
+import { zimbraMimeType } from "../LdapZimbra/zimbraMimeType.oa.mjs";
+import { commonName } from "../SelectedAttributeTypes/commonName.oa.mjs";
+import { description } from "../SelectedAttributeTypes/description.oa.mjs";
+
+
+/**
+ * @summary zimbraMimeEntry
+ * @description
+ * 
+ * ### ASN.1 Definition:
+ * 
+ * ```asn1
+ * zimbraMimeEntry OBJECT-CLASS ::= {
+ *   SUBCLASS OF               { top }
+ *   MUST CONTAIN              { commonName
+ *                               | zimbraMimeIndexingEnabled }
+ *   MAY CONTAIN               { description
+ *                               | zimbraMimeFileExtension
+ *                               | zimbraMimeHandlerClass
+ *                               | zimbraMimeHandlerExtension
+ *                               | zimbraMimePriority
+ *                               | zimbraMimeType }
+ *   LDAP-NAME                 {"zimbraMimeEntry"}
+ *   LDAP-DESC                 "MIME type info"
+ *   ID                        id-oc-zimbraMimeEntry }
+ * ```
+ * 
+ * @constant
+ * @type {OBJECT_CLASS}
+ * @implements {OBJECT_CLASS}
+ */
+export
+const zimbraMimeEntry: OBJECT_CLASS = {
+    class: "OBJECT-CLASS",
+    decoderFor: {
+    },
+    encoderFor: {
+    },
+    "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
+    "&MandatoryAttributes": [ commonName, zimbraMimeIndexingEnabled, ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ description, zimbraMimeFileExtension, zimbraMimeHandlerClass, zimbraMimeHandlerExtension, zimbraMimePriority, zimbraMimeType, ] /* OBJECT_FIELD_SETTING */,
+    "&ldapName": [ "zimbraMimeEntry" ] /* OBJECT_FIELD_SETTING */,
+    "&ldapDesc": "MIME type info" /* OBJECT_FIELD_SETTING */,
+    "&id": id_oc_zimbraMimeEntry /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,
+    "&kind": structural /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
+};
+
+/* eslint-enable */

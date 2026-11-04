@@ -1,0 +1,30 @@
+-- Derived from data/ldap-schema/ldap-subentry.ldif
+-- Upstream: https://docs.ldap.com/specs/draft-ietf-ldup-subentry-08.txt
+-- This module is a container for LDAP schema. It has no module identifier.
+-- X- extension fields from the LDAP schema are comments. USAGE userApplications and structural KIND are omitted because they are the defaults.
+LdapSubentry DEFINITIONS ::=
+BEGIN
+
+IMPORTS
+
+  OBJECT-CLASS, top
+    FROM InformationFramework
+      {joint-iso-itu-t ds(5) module(1) informationFramework(1) 9} WITH SUCCESSORS
+
+  commonName
+    FROM SelectedAttributeTypes
+      {joint-iso-itu-t ds(5) module(1) selectedAttributeTypes(5) 9} WITH SUCCESSORS ;
+
+-- Object identifiers
+
+id-oc-ldapSubEntry OBJECT IDENTIFIER ::= { 2 16 840 1 113719 2 142 6 1 1 }
+
+-- Object classes
+
+ldapSubEntry OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  MAY CONTAIN               { commonName }
+  LDAP-NAME                 {"ldapSubEntry"}
+  LDAP-DESC                 "LDAP Subentry class, version 1"
+  ID                        id-oc-ldapSubEntry }
+END

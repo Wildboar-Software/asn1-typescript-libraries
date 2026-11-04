@@ -1,0 +1,64 @@
+-- Derived from data/ldap-schema/ansible.schema
+-- This module is a container for LDAP schema. It has no module identifier.
+-- X- extension fields from the LDAP schema are comments. USAGE userApplications and structural KIND are omitted because they are the defaults.
+-- LDAP {length} bounds on directory strings are DirectoryString{n}. Bounds on IA5String, PrintableString, NumericString, and OCTET STRING are SIZE (1..n). Other bounds stay comments because the LDAP figure is an encoded-length hint.
+LdapAnsible DEFINITIONS ::=
+BEGIN
+
+IMPORTS
+
+  ATTRIBUTE, OBJECT-CLASS, top
+    FROM InformationFramework
+      {joint-iso-itu-t ds(5) module(1) informationFramework(1) 9} WITH SUCCESSORS
+
+  caseIgnoreMatch, caseIgnoreSubstringsMatch, directoryString, DirectoryString
+    FROM SelectedAttributeTypes
+      {joint-iso-itu-t ds(5) module(1) selectedAttributeTypes(5) 9} WITH SUCCESSORS ;
+
+-- Object identifiers
+
+id-at-ansibleVar OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 7637 70 1 2 1 }
+id-at-ansibleGroupVar OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 7637 70 1 2 2 }
+id-oc-ansibleHost OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 7637 70 1 1 1 }
+id-oc-ansibleGroup OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 7637 70 1 1 2 }
+
+-- Attribute types
+
+-- LDAP syntax length {1024} rendered as DirectoryString{1024}.
+ansibleVar ATTRIBUTE ::= {
+  WITH SYNTAX               DirectoryString{1024}
+  EQUALITY MATCHING RULE    caseIgnoreMatch
+  SUBSTRINGS MATCHING RULE  caseIgnoreSubstringsMatch
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"ansibleVar"}
+  LDAP-DESC                 "A variable=value setting for an Ansible host"
+  ID                        id-at-ansibleVar }
+
+-- LDAP syntax length {1024} rendered as DirectoryString{1024}.
+ansibleGroupVar ATTRIBUTE ::= {
+  WITH SYNTAX               DirectoryString{1024}
+  EQUALITY MATCHING RULE    caseIgnoreMatch
+  SUBSTRINGS MATCHING RULE  caseIgnoreSubstringsMatch
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"ansibleGroupVar"}
+  LDAP-DESC                 "A variable=value setting for an Ansible Group"
+  ID                        id-at-ansibleGroupVar }
+
+-- Object classes
+
+ansibleHost OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  KIND                      auxiliary
+  MAY CONTAIN               { ansibleVar }
+  LDAP-NAME                 {"ansibleHost"}
+  LDAP-DESC                 "Ansible host entry"
+  ID                        id-oc-ansibleHost }
+
+ansibleGroup OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  KIND                      auxiliary
+  MAY CONTAIN               { ansibleGroupVar }
+  LDAP-NAME                 {"ansibleGroup"}
+  LDAP-DESC                 "Ansible group entry"
+  ID                        id-oc-ansibleGroup }
+END

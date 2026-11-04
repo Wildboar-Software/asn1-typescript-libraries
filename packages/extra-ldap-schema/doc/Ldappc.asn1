@@ -1,0 +1,242 @@
+-- Derived from data/ldap-schema/ldappc.schema
+-- Upstream: https://github.com/Internet2/grouper/blob/b00c9899258bd26ccc30f5651772445115ce1fa8/grouper/misc/ldap/ldappc.schema
+-- This module is a container for LDAP schema. It has no module identifier.
+-- X- extension fields from the LDAP schema are comments. USAGE userApplications and structural KIND are omitted because they are the defaults.
+-- Object classes with no SUP were subclassed from top, the LDAP default (RFC 4512).
+Ldappc DEFINITIONS ::=
+BEGIN
+
+IMPORTS
+
+  ATTRIBUTE, DistinguishedName, distinguishedNameMatch, OBJECT-CLASS, top
+    FROM InformationFramework
+      {joint-iso-itu-t ds(5) module(1) informationFramework(1) 9} WITH SUCCESSORS
+
+  caseExactMatch, caseIgnoreMatch, caseIgnoreSubstringsMatch, directoryString,
+    dn, UnboundedDirectoryString
+    FROM SelectedAttributeTypes
+      {joint-iso-itu-t ds(5) module(1) selectedAttributeTypes(5) 9} WITH SUCCESSORS ;
+
+-- Object identifiers
+
+id-at-eduPermissionId OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 5923 1 8 1 1 }
+id-at-eduPermissionSubsystemId OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 5923 1 8 1 2 }
+id-at-eduPermissionScopeId OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 5923 1 8 1 3 }
+id-at-eduPermissionScopeName OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 5923 1 8 1 4 }
+id-at-eduPermissionLimitId OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 5923 1 8 1 5 }
+id-at-eduPermissionLimit OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 5923 1 8 1 6 }
+id-at-eduPermissionFunctionId OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 5923 1 8 1 7 }
+id-oc-eduPermission OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 5923 1 8 }
+id-at-isMemberOf OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 5923 1 5 1 1 }
+id-at-hasMember OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 5923 1 5 1 2 }
+id-oc-eduMember OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 5923 1 5 2 1 }
+id-at-eduPersonAffiliation OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 5923 1 1 1 1 }
+id-at-eduPersonNickname OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 5923 1 1 1 2 }
+id-at-eduPersonOrgDN OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 5923 1 1 1 3 }
+id-at-eduPersonOrgUnitDN OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 5923 1 1 1 4 }
+id-at-eduPersonPrimaryAffiliation OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 5923 1 1 1 5 }
+id-at-eduPersonPrincipalName OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 5923 1 1 1 6 }
+id-at-eduPersonEntitlement OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 5923 1 1 1 7 }
+id-at-eduPersonPrimaryOrgUnitDN OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 5923 1 1 1 8 }
+id-at-eduPersonScopedAffiliation OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 5923 1 1 1 9 }
+id-oc-eduPerson OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 5923 1 1 2 }
+
+-- Attribute types
+
+eduPermissionId ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseIgnoreMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"eduPermissionId"}
+  LDAP-DESC                 "The permissionId of the permission"
+  ID                        id-at-eduPermissionId }
+
+eduPermissionSubsystemId ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseIgnoreMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"eduPermissionSubsystemId"}
+  LDAP-DESC                 "The identifier of the subsystem within which this permission is defined"
+  ID                        id-at-eduPermissionSubsystemId }
+
+eduPermissionScopeId ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseIgnoreMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"eduPermissionScopeId"}
+  LDAP-DESC                 "The identifier of the scope within which this permission is defined"
+  ID                        id-at-eduPermissionScopeId }
+
+eduPermissionScopeName ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseIgnoreMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"eduPermissionScopeName"}
+  LDAP-DESC                 "The name of the scope within which this permission is defined"
+  ID                        id-at-eduPermissionScopeName }
+
+eduPermissionLimitId ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseIgnoreMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"eduPermissionLimitId"}
+  LDAP-DESC                 "A limitId associated with the permission"
+  ID                        id-at-eduPermissionLimitId }
+
+eduPermissionLimit ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseIgnoreMatch
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"eduPermissionLimit"}
+  LDAP-DESC                 "A limit associated with the permission"
+  ID                        id-at-eduPermissionLimit }
+
+eduPermissionFunctionId ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseIgnoreMatch
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"eduPermissionFunctionId"}
+  LDAP-DESC                 "A functionId associated with the permission"
+  ID                        id-at-eduPermissionFunctionId }
+
+isMemberOf ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseExactMatch
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"isMemberOf"}
+  LDAP-DESC                 "identifiers for groups to which containing entity belongs"
+  ID                        id-at-isMemberOf }
+
+hasMember ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseExactMatch
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"hasMember"}
+  LDAP-DESC                 "identifiers for entities that are members of the group"
+  ID                        id-at-hasMember }
+
+eduPersonAffiliation ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseIgnoreMatch
+  SUBSTRINGS MATCHING RULE  caseIgnoreSubstringsMatch
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"eduPersonAffiliation"}
+  LDAP-DESC                 "eduPerson per Internet2 and EDUCAUSE"
+  ID                        id-at-eduPersonAffiliation }
+
+eduPersonNickname ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseIgnoreMatch
+  SUBSTRINGS MATCHING RULE  caseIgnoreSubstringsMatch
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"eduPersonNickname"}
+  LDAP-DESC                 "eduPerson per Internet2 and EDUCAUSE"
+  ID                        id-at-eduPersonNickname }
+
+eduPersonOrgDN ATTRIBUTE ::= {
+  WITH SYNTAX               DistinguishedName
+  EQUALITY MATCHING RULE    distinguishedNameMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               dn.&id
+  LDAP-NAME                 {"eduPersonOrgDN"}
+  LDAP-DESC                 "eduPerson per Internet2 and EDUCAUSE"
+  ID                        id-at-eduPersonOrgDN }
+
+eduPersonOrgUnitDN ATTRIBUTE ::= {
+  WITH SYNTAX               DistinguishedName
+  EQUALITY MATCHING RULE    distinguishedNameMatch
+  LDAP-SYNTAX               dn.&id
+  LDAP-NAME                 {"eduPersonOrgUnitDN"}
+  LDAP-DESC                 "eduPerson per Internet2 and EDUCAUSE"
+  ID                        id-at-eduPersonOrgUnitDN }
+
+eduPersonPrimaryAffiliation ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseIgnoreMatch
+  SUBSTRINGS MATCHING RULE  caseIgnoreSubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"eduPersonPrimaryAffiliation"}
+  LDAP-DESC                 "eduPerson per Internet2 and EDUCAUSE"
+  ID                        id-at-eduPersonPrimaryAffiliation }
+
+eduPersonPrincipalName ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseIgnoreMatch
+  SUBSTRINGS MATCHING RULE  caseIgnoreSubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"eduPersonPrincipalName"}
+  LDAP-DESC                 "eduPerson per Internet2 and EDUCAUSE"
+  ID                        id-at-eduPersonPrincipalName }
+
+eduPersonEntitlement ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseExactMatch
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"eduPersonEntitlement"}
+  LDAP-DESC                 "eduPerson per Internet2 and EDUCAUSE"
+  ID                        id-at-eduPersonEntitlement }
+
+eduPersonPrimaryOrgUnitDN ATTRIBUTE ::= {
+  WITH SYNTAX               DistinguishedName
+  EQUALITY MATCHING RULE    distinguishedNameMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               dn.&id
+  LDAP-NAME                 {"eduPersonPrimaryOrgUnitDN"}
+  LDAP-DESC                 "eduPerson per Internet2 and EDUCAUSE"
+  ID                        id-at-eduPersonPrimaryOrgUnitDN }
+
+eduPersonScopedAffiliation ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseIgnoreMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"eduPersonScopedAffiliation"}
+  LDAP-DESC                 "eduPerson per Internet2 and EDUCAUSE"
+  ID                        id-at-eduPersonScopedAffiliation }
+
+-- Object classes
+
+eduPermission OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  MUST CONTAIN              { eduPermissionSubsystemId
+                              | eduPermissionFunctionId
+                              | eduPermissionId }
+  MAY CONTAIN               { eduPermissionScopeId
+                              | eduPermissionScopeName
+                              | eduPermissionLimit
+                              | eduPermissionLimitId }
+  LDAP-NAME                 {"eduPermission"}
+  ID                        id-oc-eduPermission }
+
+-- SUP was absent. RFC 4512 treats that as a subclass of top, so SUBCLASS OF { top } was added.
+eduMember OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  KIND                      auxiliary
+  MAY CONTAIN               { isMemberOf
+                              | hasMember }
+  LDAP-NAME                 {"eduMember"}
+  ID                        id-oc-eduMember }
+
+-- SUP was absent. RFC 4512 treats that as a subclass of top, so SUBCLASS OF { top } was added.
+eduPerson OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  KIND                      auxiliary
+  MAY CONTAIN               { eduPersonAffiliation
+                              | eduPersonNickname
+                              | eduPersonOrgDN
+                              | eduPersonOrgUnitDN
+                              | eduPersonPrimaryAffiliation
+                              | eduPersonPrincipalName
+                              | eduPersonEntitlement
+                              | eduPersonPrimaryOrgUnitDN
+                              | eduPersonScopedAffiliation }
+  LDAP-NAME                 {"eduPerson"}
+  ID                        id-oc-eduPerson }
+END

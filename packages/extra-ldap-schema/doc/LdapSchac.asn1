@@ -1,0 +1,383 @@
+-- Derived from data/ldap-schema/schac.schema
+-- Upstream: https://raw.githubusercontent.com/REFEDS/SCHAC/refs/heads/main/schema/schac.schema
+-- This module is a container for LDAP schema. It has no module identifier.
+-- X- extension fields from the LDAP schema are comments. USAGE userApplications and structural KIND are omitted because they are the defaults.
+-- Object classes with no SUP were subclassed from top, the LDAP default (RFC 4512).
+LdapSchac DEFINITIONS ::=
+BEGIN
+
+IMPORTS
+
+  ATTRIBUTE, OBJECT-CLASS, top
+    FROM InformationFramework
+      {joint-iso-itu-t ds(5) module(1) informationFramework(1) 9} WITH SUCCESSORS
+
+  caseExactMatch, caseExactOrderingMatch, caseExactSubstringsMatch,
+    caseIgnoreIA5Match, caseIgnoreIA5SubstringsMatch, caseIgnoreMatch,
+    caseIgnoreOrderingMatch, caseIgnoreSubstringsMatch, directoryString,
+    generalizedTime, generalizedTimeMatch, generalizedTimeOrderingMatch,
+    ia5String, integer, integerMatch, numericString, numericStringMatch,
+    numericStringOrderingMatch, numericStringSubstringsMatch,
+    UnboundedDirectoryString
+    FROM SelectedAttributeTypes
+      {joint-iso-itu-t ds(5) module(1) selectedAttributeTypes(5) 9} WITH SUCCESSORS ;
+
+-- Object identifiers
+
+id-at-schacMotherTongue OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 25178 1 2 1 }
+id-at-schacGender OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 25178 1 2 2 }
+id-at-schacDateOfBirth OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 25178 1 2 3 }
+id-at-schacPlaceOfBirth OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 25178 1 2 4 }
+id-at-schacCountryOfCitizenship OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 25178 1 2 5 }
+id-at-schacSn1 OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 25178 1 2 6 }
+id-at-schacSn2 OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 25178 1 2 7 }
+id-at-schacPersonalTitle OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 25178 1 2 8 }
+id-at-schacHomeOrganization OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 25178 1 2 9 }
+id-at-schacHomeOrganizationType OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 25178 1 2 10 }
+id-at-schacCountryOfResidence OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 25178 1 2 11 }
+id-at-schacUserPresenceID OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 25178 1 2 12 }
+id-at-schacPersonalPosition OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 25178 1 2 13 }
+id-at-schacPersonalUniqueCode OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 25178 1 2 14 }
+id-at-schacPersonalUniqueID OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 25178 1 2 15 }
+id-at-schacExpiryDate OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 25178 1 2 17 }
+id-at-schacUserPrivateAttribute OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 25178 1 2 18 }
+id-at-schacUserStatus OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 25178 1 2 19 }
+id-at-schacProjectMembership OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 25178 1 2 20 }
+id-at-schacProjectSpecificRole OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 25178 1 2 21 }
+id-oc-schacPersonalCharacteristics OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 25178 1 1 1 }
+id-oc-schacContactLocation OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 25178 1 1 2 }
+id-oc-schacEmployeeInfo OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 25178 1 1 3 }
+id-oc-schacLinkageIdentifiers OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 25178 1 1 4 }
+id-oc-schacEntryMetadata OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 25178 1 1 5 }
+id-oc-schacEntryConfidentiality OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 25178 1 1 6 }
+id-oc-schacUserEntitlements OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 25178 1 1 7 }
+id-oc-schacGroupMembership OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 25178 1 1 8 }
+id-at-schacYearOfBirth OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 25178 1 0 2 3 }
+id-oc-schacExperimentalOC OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 25178 1 0 1 1 }
+
+-- Attribute types
+
+-- OID written as schacAttributeType:1 and expanded with this file's objectidentifier macros.
+schacMotherTongue ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseExactMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"schacMotherTongue"}
+  LDAP-DESC                 "RFC 3066 code for prefered language of communication"
+  ID                        id-at-schacMotherTongue }
+
+-- OID written as schacAttributeType:2 and expanded with this file's objectidentifier macros.
+schacGender ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  EQUALITY MATCHING RULE    integerMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"schacGender"}
+  LDAP-DESC                 "Representation of human sex (see ISO 5218)"
+  ID                        id-at-schacGender }
+
+-- OID written as schacAttributeType:3 and expanded with this file's objectidentifier macros.
+schacDateOfBirth ATTRIBUTE ::= {
+  WITH SYNTAX               NumericString
+  EQUALITY MATCHING RULE    numericStringMatch
+  ORDERING MATCHING RULE    numericStringOrderingMatch
+  SUBSTRINGS MATCHING RULE  numericStringSubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               numericString.&id
+  LDAP-NAME                 {"schacDateOfBirth"}
+  LDAP-DESC                 "Date of birth (format YYYYMMDD, only numeric chars)"
+  ID                        id-at-schacDateOfBirth }
+
+-- OID written as schacAttributeType:4 and expanded with this file's objectidentifier macros.
+schacPlaceOfBirth ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseIgnoreMatch
+  ORDERING MATCHING RULE    caseIgnoreOrderingMatch
+  SUBSTRINGS MATCHING RULE  caseIgnoreSubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"schacPlaceOfBirth"}
+  LDAP-DESC                 "Birth place of a person"
+  ID                        id-at-schacPlaceOfBirth }
+
+-- OID written as schacAttributeType:5 and expanded with this file's objectidentifier macros.
+schacCountryOfCitizenship ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseIgnoreMatch
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"schacCountryOfCitizenship"}
+  LDAP-DESC                 "Country of citizenship of a person. Format two-letter acronym according to ISO 3166"
+  ID                        id-at-schacCountryOfCitizenship }
+
+-- OID written as schacAttributeType:6 and expanded with this file's objectidentifier macros.
+schacSn1 ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseIgnoreMatch
+  ORDERING MATCHING RULE    caseIgnoreOrderingMatch
+  SUBSTRINGS MATCHING RULE  caseIgnoreSubstringsMatch
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"schacSn1"}
+  LDAP-DESC                 "First surname of a person"
+  ID                        id-at-schacSn1 }
+
+-- OID written as schacAttributeType:7 and expanded with this file's objectidentifier macros.
+schacSn2 ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseIgnoreMatch
+  ORDERING MATCHING RULE    caseIgnoreOrderingMatch
+  SUBSTRINGS MATCHING RULE  caseIgnoreSubstringsMatch
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"schacSn2"}
+  LDAP-DESC                 "Second surname of a person"
+  ID                        id-at-schacSn2 }
+
+-- OID written as schacAttributeType:8 and expanded with this file's objectidentifier macros.
+schacPersonalTitle ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseIgnoreMatch
+  SUBSTRINGS MATCHING RULE  caseIgnoreSubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"schacPersonalTitle"}
+  LDAP-DESC                 "RFC1274: personal title"
+  ID                        id-at-schacPersonalTitle }
+
+-- OID written as schacAttributeType:9 and expanded with this file's objectidentifier macros.
+schacHomeOrganization ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseIgnoreMatch
+  SUBSTRINGS MATCHING RULE  caseIgnoreSubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"schacHomeOrganization"}
+  LDAP-DESC                 "Domain name of the home organization"
+  ID                        id-at-schacHomeOrganization }
+
+-- OID written as schacAttributeType:10 and expanded with this file's objectidentifier macros.
+schacHomeOrganizationType ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseIgnoreMatch
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"schacHomeOrganizationType"}
+  LDAP-DESC                 "Type of the home organization"
+  ID                        id-at-schacHomeOrganizationType }
+
+-- OID written as schacAttributeType:11 and expanded with this file's objectidentifier macros.
+schacCountryOfResidence ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseIgnoreMatch
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"schacCountryOfResidence"}
+  LDAP-DESC                 "Country of residence of a person. Format two-letter acronym according to ISO 3166"
+  ID                        id-at-schacCountryOfResidence }
+
+-- OID written as schacAttributeType:12 and expanded with this file's objectidentifier macros.
+schacUserPresenceID ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseExactMatch
+  SUBSTRINGS MATCHING RULE  caseExactSubstringsMatch
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"schacUserPresenceID"}
+  LDAP-DESC                 "Used to store a set of values related to the network presence"
+  ID                        id-at-schacUserPresenceID }
+
+-- OID written as schacAttributeType:13 and expanded with this file's objectidentifier macros.
+schacPersonalPosition ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseIgnoreMatch
+  SUBSTRINGS MATCHING RULE  caseIgnoreSubstringsMatch
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"schacPersonalPosition"}
+  LDAP-DESC                 "Position inside an institution"
+  ID                        id-at-schacPersonalPosition }
+
+-- OID written as schacAttributeType:14 and expanded with this file's objectidentifier macros.
+schacPersonalUniqueCode ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseIgnoreMatch
+  ORDERING MATCHING RULE    caseIgnoreOrderingMatch
+  SUBSTRINGS MATCHING RULE  caseIgnoreSubstringsMatch
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"schacPersonalUniqueCode"}
+  LDAP-DESC                 "unique code for the subject"
+  ID                        id-at-schacPersonalUniqueCode }
+
+-- OID written as schacAttributeType:15 and expanded with this file's objectidentifier macros.
+schacPersonalUniqueID ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseExactMatch
+  ORDERING MATCHING RULE    caseExactOrderingMatch
+  SUBSTRINGS MATCHING RULE  caseExactSubstringsMatch
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"schacPersonalUniqueID"}
+  LDAP-DESC                 "Unique identifier for the subject"
+  ID                        id-at-schacPersonalUniqueID }
+
+-- OID written as schacAttributeType:17 and expanded with this file's objectidentifier macros.
+schacExpiryDate ATTRIBUTE ::= {
+  WITH SYNTAX               GeneralizedTime
+  EQUALITY MATCHING RULE    generalizedTimeMatch
+  ORDERING MATCHING RULE    generalizedTimeOrderingMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               generalizedTime.&id
+  LDAP-NAME                 {"schacExpiryDate"}
+  LDAP-DESC                 "Date from which the set of data is to be considered invalid (format YYYYMMDDhhmmssZ)"
+  ID                        id-at-schacExpiryDate }
+
+-- OID written as schacAttributeType:18 and expanded with this file's objectidentifier macros.
+schacUserPrivateAttribute ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  EQUALITY MATCHING RULE    caseIgnoreIA5Match
+  SUBSTRINGS MATCHING RULE  caseIgnoreIA5SubstringsMatch
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"schacUserPrivateAttribute"}
+  LDAP-DESC                 "Set of denied access attributes"
+  ID                        id-at-schacUserPrivateAttribute }
+
+-- OID written as schacAttributeType:19 and expanded with this file's objectidentifier macros.
+schacUserStatus ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseIgnoreMatch
+  SUBSTRINGS MATCHING RULE  caseIgnoreSubstringsMatch
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"schacUserStatus"}
+  LDAP-DESC                 "Used to store a set of status of a person as user of services"
+  ID                        id-at-schacUserStatus }
+
+-- OID written as schacAttributeType:20 and expanded with this file's objectidentifier macros.
+schacProjectMembership ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseIgnoreMatch
+  SUBSTRINGS MATCHING RULE  caseIgnoreSubstringsMatch
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"schacProjectMembership"}
+  LDAP-DESC                 "Name of the project"
+  ID                        id-at-schacProjectMembership }
+
+-- OID written as schacAttributeType:21 and expanded with this file's objectidentifier macros.
+schacProjectSpecificRole ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseIgnoreMatch
+  SUBSTRINGS MATCHING RULE  caseIgnoreSubstringsMatch
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"schacProjectSpecificRole"}
+  LDAP-DESC                 "Used to store a set of roles of a person inside a project"
+  ID                        id-at-schacProjectSpecificRole }
+
+-- OID written as schacExpAttr:3 and expanded with this file's objectidentifier macros.
+schacYearOfBirth ATTRIBUTE ::= {
+  WITH SYNTAX               NumericString
+  EQUALITY MATCHING RULE    numericStringMatch
+  ORDERING MATCHING RULE    numericStringOrderingMatch
+  SUBSTRINGS MATCHING RULE  numericStringSubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               numericString.&id
+  LDAP-NAME                 {"schacYearOfBirth"}
+  LDAP-DESC                 "Year of birth (format YYYY, only numeric chars)"
+  ID                        id-at-schacYearOfBirth }
+
+-- Object classes
+
+-- OID written as schacObjectClass:1 and expanded with this file's objectidentifier macros.
+-- SUP was absent. RFC 4512 treats that as a subclass of top, so SUBCLASS OF { top } was added.
+schacPersonalCharacteristics OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  KIND                      auxiliary
+  MAY CONTAIN               { schacMotherTongue
+                              | schacGender
+                              | schacDateOfBirth
+                              | schacPlaceOfBirth
+                              | schacCountryOfCitizenship
+                              | schacSn1
+                              | schacSn2
+                              | schacPersonalTitle }
+  LDAP-NAME                 {"schacPersonalCharacteristics"}
+  LDAP-DESC                 "Personal characteristics describe the individual person represented by the entry"
+  ID                        id-oc-schacPersonalCharacteristics }
+
+-- OID written as schacObjectClass:2 and expanded with this file's objectidentifier macros.
+-- SUP was absent. RFC 4512 treats that as a subclass of top, so SUBCLASS OF { top } was added.
+schacContactLocation OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  KIND                      auxiliary
+  MAY CONTAIN               { schacHomeOrganization
+                              | schacHomeOrganizationType
+                              | schacCountryOfResidence
+                              | schacUserPresenceID }
+  LDAP-NAME                 {"schacContactLocation"}
+  LDAP-DESC                 "Primary means of locating and contacting potential collaborators and other persons-of-interest at peer institutions"
+  ID                        id-oc-schacContactLocation }
+
+-- OID written as schacObjectClass:3 and expanded with this file's objectidentifier macros.
+-- SUP was absent. RFC 4512 treats that as a subclass of top, so SUBCLASS OF { top } was added.
+schacEmployeeInfo OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  KIND                      auxiliary
+  MAY CONTAIN               { schacPersonalPosition }
+  LDAP-NAME                 {"schacEmployeeInfo"}
+  LDAP-DESC                 "Employee information includes attributes that have relevance to the employee role, such as position, office hours, and job title"
+  ID                        id-oc-schacEmployeeInfo }
+
+-- OID written as schacObjectClass:4 and expanded with this file's objectidentifier macros.
+-- SUP was absent. RFC 4512 treats that as a subclass of top, so SUBCLASS OF { top } was added.
+schacLinkageIdentifiers OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  KIND                      auxiliary
+  MAY CONTAIN               { schacPersonalUniqueCode
+                              | schacPersonalUniqueID }
+  LDAP-NAME                 {"schacLinkageIdentifiers"}
+  LDAP-DESC                 "Used to link a directory entry with records in external data stores or other directory entries"
+  ID                        id-oc-schacLinkageIdentifiers }
+
+-- OID written as schacObjectClass:5 and expanded with this file's objectidentifier macros.
+-- SUP was absent. RFC 4512 treats that as a subclass of top, so SUBCLASS OF { top } was added.
+schacEntryMetadata OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  KIND                      auxiliary
+  MAY CONTAIN               { schacExpiryDate }
+  LDAP-NAME                 {"schacEntryMetadata"}
+  LDAP-DESC                 "Used to contain information about the entry itself, often its status, birth, and death"
+  ID                        id-oc-schacEntryMetadata }
+
+-- OID written as schacObjectClass:6 and expanded with this file's objectidentifier macros.
+-- SUP was absent. RFC 4512 treats that as a subclass of top, so SUBCLASS OF { top } was added.
+schacEntryConfidentiality OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  KIND                      auxiliary
+  MAY CONTAIN               { schacUserPrivateAttribute }
+  LDAP-NAME                 {"schacEntryConfidentiality"}
+  LDAP-DESC                 "Used to indicate whether an entry is visible publicly, visible only to affiliates of the institution, or not visible at all"
+  ID                        id-oc-schacEntryConfidentiality }
+
+-- OID written as schacObjectClass:7 and expanded with this file's objectidentifier macros.
+-- SUP was absent. RFC 4512 treats that as a subclass of top, so SUBCLASS OF { top } was added.
+schacUserEntitlements OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  KIND                      auxiliary
+  MAY CONTAIN               { schacUserStatus }
+  LDAP-NAME                 {"schacUserEntitlements"}
+  LDAP-DESC                 "Authorization for services"
+  ID                        id-oc-schacUserEntitlements }
+
+-- OID written as schacObjectClass:8 and expanded with this file's objectidentifier macros.
+-- SUP was absent. RFC 4512 treats that as a subclass of top, so SUBCLASS OF { top } was added.
+schacGroupMembership OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  KIND                      auxiliary
+  MAY CONTAIN               { schacProjectMembership
+                              | schacProjectSpecificRole }
+  LDAP-NAME                 {"schacGroupMembership"}
+  LDAP-DESC                 "Groups used to provide/restrict authorization to entries and attributes"
+  ID                        id-oc-schacGroupMembership }
+
+-- OID written as schacExpObjClass:1 and expanded with this file's objectidentifier macros.
+-- SUP was absent. RFC 4512 treats that as a subclass of top, so SUBCLASS OF { top } was added.
+schacExperimentalOC OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  KIND                      auxiliary
+  MAY CONTAIN               { schacYearOfBirth }
+  LDAP-NAME                 {"schacExperimentalOC"}
+  LDAP-DESC                 "Experimental Object Class"
+  ID                        id-oc-schacExperimentalOC }
+END

@@ -1,0 +1,487 @@
+-- Derived from data/ldap-schema/base4kids2.ldif
+-- Upstream: https://github.com/adfinis/base4kids2-ldap-schema/blob/40e47910e20923990e6f308e0bedda08dea1ffe4/base4kids2.ldif
+-- This module is a container for LDAP schema. It has no module identifier.
+-- X- extension fields from the LDAP schema are comments. USAGE userApplications and structural KIND are omitted because they are the defaults.
+LdapBase4kids2 DEFINITIONS ::=
+BEGIN
+
+IMPORTS
+
+  ATTRIBUTE, OBJECT-CLASS, top
+    FROM InformationFramework
+      {joint-iso-itu-t ds(5) module(1) informationFramework(1) 9} WITH SUCCESSORS
+
+  boolean, booleanMatch, caseExactMatch, caseExactOrderingMatch,
+    caseExactSubstringsMatch, caseIgnoreMatch, caseIgnoreOrderingMatch,
+    caseIgnoreSubstringsMatch, countryName, directoryString, distinguishedName,
+    generalizedTime, generalizedTimeMatch, generalizedTimeOrderingMatch,
+    integer, integerMatch, integerOrderingMatch, localityName, member,
+    printableString, telephoneNumber, UnboundedDirectoryString
+    FROM SelectedAttributeTypes
+      {joint-iso-itu-t ds(5) module(1) selectedAttributeTypes(5) 9} WITH SUCCESSORS
+
+  mail
+    FROM LdapSchema2ldifCore ;
+
+-- Object identifiers
+
+id-at-base4kidsRole OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 31534 2 5 2 1 }
+id-at-base4kidsIsActive OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 31534 2 5 2 2 }
+id-at-base4kidsChatIsActive OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 31534 2 5 2 3 }
+id-at-base4kidsCloudStorageIsActive OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 31534 2 5 2 4 }
+id-at-base4kidsEportfolioIsActive OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 31534 2 5 2 5 }
+id-at-base4kidsGroupwareIsActive OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 31534 2 5 2 6 }
+id-at-base4kidsImapIsActive OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 31534 2 5 2 7 }
+id-at-base4kidsLearningPlatformIsActive OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 31534 2 5 2 8 }
+id-at-base4kidsSmtpReceiveIsActive OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 31534 2 5 2 9 }
+id-at-base4kidsSmtpSubmissionIsActive OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 31534 2 5 2 10 }
+id-at-base4kidsWebmailIsActive OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 31534 2 5 2 11 }
+id-at-base4kidsMattermostTeamId OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 31534 2 5 2 12 }
+id-at-base4kidsMattermostChannelId OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 31534 2 5 2 13 }
+id-at-base4kidsNextcloudShareId OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 31534 2 5 2 14 }
+id-at-base4kidsMaharaGroupId OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 31534 2 5 2 15 }
+id-at-base4kidsSchoolDistrict OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 31534 2 5 2 16 }
+id-at-base4kidsSchoolLocation OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 31534 2 5 2 17 }
+id-at-base4kidsSchoolCampus OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 31534 2 5 2 18 }
+id-at-base4kidsSchoolClassName OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 31534 2 5 2 19 }
+id-at-base4kidsSchoolClassLevel OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 31534 2 5 2 20 }
+id-at-base4kidsSchoolClassSubGroup OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 31534 2 5 2 21 }
+id-at-base4kidsAppleId OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 31534 2 5 2 22 }
+id-at-base4kidsEgovId OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 31534 2 5 2 23 }
+id-at-base4kidsGroupType OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 31534 2 5 2 24 }
+id-at-base4kidsNextcloudUserQuota OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 31534 2 5 2 25 }
+id-at-base4kidsNextcloudClassShareId OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 31534 2 5 2 26 }
+id-at-base4kidsNextcloudClassTemplateShareId OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 31534 2 5 2 27 }
+id-at-base4kidsGender OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 31534 2 5 2 28 }
+id-at-base4kidsPersiskaNumber OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 31534 2 5 2 29 }
+id-at-base4kidsExpirationDate OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 31534 2 5 2 30 }
+id-at-base4kidsSchoolClassYear OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 31534 2 5 2 31 }
+id-at-base4kidsSchoolProgrammYear OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 31534 2 5 2 32 }
+id-at-base4kidsLegalGuardianOf OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 31534 2 5 2 33 }
+id-at-base4kidsLegalGuardian OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 31534 2 5 2 34 }
+id-at-base4kidsSchoolLevel OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 31534 2 5 2 35 }
+id-at-base4kidsSchoolCycle OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 31534 2 5 2 36 }
+id-at-base4kidsInitiator OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 31534 2 5 2 37 }
+id-at-base4kidsSchoolClassSupplement OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 31534 2 5 2 38 }
+id-at-base4kidsIsBlocked OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 31534 2 5 2 39 }
+id-at-base4kidsCountryCode OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 31534 2 5 2 40 }
+id-at-base4kidsIsDisabled OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 31534 2 5 2 41 }
+id-at-base4kidsBusinessTelephoneNumber OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 31534 2 5 2 42 }
+id-at-base4kidsDateOfBirth OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 31534 2 5 2 43 }
+id-at-base4kidsPlaceOfOrigin OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 31534 2 5 2 44 }
+id-oc-base4kidsPerson OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 31534 2 5 1 1 }
+id-oc-base4kidsGroup OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 31534 2 5 1 2 }
+
+-- Attribute types
+
+base4kidsRole ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseIgnoreMatch
+  ORDERING MATCHING RULE    caseIgnoreOrderingMatch
+  SUBSTRINGS MATCHING RULE  caseIgnoreSubstringsMatch
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"base4kidsRole"}
+  LDAP-DESC                 "Role of a base4kids object"
+  ID                        id-at-base4kidsRole }
+
+base4kidsIsActive ATTRIBUTE ::= {
+  WITH SYNTAX               BOOLEAN
+  EQUALITY MATCHING RULE    booleanMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               boolean.&id
+  LDAP-NAME                 {"base4kidsIsActive"}
+  LDAP-DESC                 "Determines whether a base4kids object is active"
+  ID                        id-at-base4kidsIsActive }
+
+base4kidsChatIsActive ATTRIBUTE ::= {
+  SUBTYPE OF                base4kidsIsActive
+  LDAP-NAME                 {"base4kidsChatIsActive"}
+  LDAP-DESC                 "Determines whether chat access is active"
+  ID                        id-at-base4kidsChatIsActive }
+
+base4kidsCloudStorageIsActive ATTRIBUTE ::= {
+  SUBTYPE OF                base4kidsIsActive
+  LDAP-NAME                 {"base4kidsCloudStorageIsActive"}
+  LDAP-DESC                 "Determines whether cloud storage access is active"
+  ID                        id-at-base4kidsCloudStorageIsActive }
+
+base4kidsEportfolioIsActive ATTRIBUTE ::= {
+  SUBTYPE OF                base4kidsIsActive
+  LDAP-NAME                 {"base4kidsEportfolioIsActive"}
+  LDAP-DESC                 "Determines whether the ePortfolio system access is active"
+  ID                        id-at-base4kidsEportfolioIsActive }
+
+base4kidsGroupwareIsActive ATTRIBUTE ::= {
+  SUBTYPE OF                base4kidsIsActive
+  LDAP-NAME                 {"base4kidsGroupwareIsActive"}
+  LDAP-DESC                 "Determines whether groupware access is active"
+  ID                        id-at-base4kidsGroupwareIsActive }
+
+base4kidsImapIsActive ATTRIBUTE ::= {
+  SUBTYPE OF                base4kidsIsActive
+  LDAP-NAME                 {"base4kidsImapIsActive"}
+  LDAP-DESC                 "Determines whether IMAP access is active"
+  ID                        id-at-base4kidsImapIsActive }
+
+base4kidsLearningPlatformIsActive ATTRIBUTE ::= {
+  SUBTYPE OF                base4kidsIsActive
+  LDAP-NAME                 {"base4kidsLearningPlatformIsActive"}
+  LDAP-DESC                 "Determines whether learning platform access is active"
+  ID                        id-at-base4kidsLearningPlatformIsActive }
+
+base4kidsSmtpReceiveIsActive ATTRIBUTE ::= {
+  SUBTYPE OF                base4kidsIsActive
+  LDAP-NAME                 {"base4kidsSmtpReceiveIsActive"}
+  LDAP-DESC                 "Determines whether SMTP (mail) receiving is active"
+  ID                        id-at-base4kidsSmtpReceiveIsActive }
+
+base4kidsSmtpSubmissionIsActive ATTRIBUTE ::= {
+  SUBTYPE OF                base4kidsIsActive
+  LDAP-NAME                 {"base4kidsSmtpSubmissionIsActive"}
+  LDAP-DESC                 "Determines whether SMTP submission is permitted"
+  ID                        id-at-base4kidsSmtpSubmissionIsActive }
+
+base4kidsWebmailIsActive ATTRIBUTE ::= {
+  SUBTYPE OF                base4kidsIsActive
+  LDAP-NAME                 {"base4kidsWebmailIsActive"}
+  LDAP-DESC                 "Determines whether webmail access is active"
+  ID                        id-at-base4kidsWebmailIsActive }
+
+base4kidsMattermostTeamId ATTRIBUTE ::= {
+  WITH SYNTAX               PrintableString
+  EQUALITY MATCHING RULE    caseExactMatch
+  ORDERING MATCHING RULE    caseExactOrderingMatch
+  SUBSTRINGS MATCHING RULE  caseExactSubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               printableString.&id
+  LDAP-NAME                 {"base4kidsMattermostTeamId"}
+  LDAP-DESC                 "Mattermost team GUID"
+  ID                        id-at-base4kidsMattermostTeamId }
+
+base4kidsMattermostChannelId ATTRIBUTE ::= {
+  SUBTYPE OF                base4kidsMattermostTeamId
+  LDAP-NAME                 {"base4kidsMattermostChannelId"}
+  LDAP-DESC                 "Mattermost channel GUID"
+  ID                        id-at-base4kidsMattermostChannelId }
+
+base4kidsNextcloudShareId ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  EQUALITY MATCHING RULE    integerMatch
+  ORDERING MATCHING RULE    integerOrderingMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"base4kidsNextcloudShareId"}
+  LDAP-DESC                 "Nextcloud share ID"
+  ID                        id-at-base4kidsNextcloudShareId }
+
+base4kidsMaharaGroupId ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  EQUALITY MATCHING RULE    integerMatch
+  ORDERING MATCHING RULE    integerOrderingMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"base4kidsMaharaGroupId"}
+  LDAP-DESC                 "Mahara group ID"
+  ID                        id-at-base4kidsMaharaGroupId }
+
+base4kidsSchoolDistrict ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseIgnoreMatch
+  ORDERING MATCHING RULE    caseIgnoreOrderingMatch
+  SUBSTRINGS MATCHING RULE  caseIgnoreSubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"base4kidsSchoolDistrict"}
+  LDAP-DESC                 "The name of the school district (Schulkreis)"
+  ID                        id-at-base4kidsSchoolDistrict }
+
+base4kidsSchoolLocation ATTRIBUTE ::= {
+  SUBTYPE OF                base4kidsSchoolDistrict
+  LDAP-NAME                 {"base4kidsSchoolLocation"}
+  LDAP-DESC                 "The name of the school location (Schulstandort)"
+  ID                        id-at-base4kidsSchoolLocation }
+
+base4kidsSchoolCampus ATTRIBUTE ::= {
+  SUBTYPE OF                base4kidsSchoolDistrict
+  LDAP-NAME                 {"base4kidsSchoolCampus"}
+  LDAP-DESC                 "The name of the school campus (Schulanlage)"
+  ID                        id-at-base4kidsSchoolCampus }
+
+base4kidsSchoolClassName ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseExactMatch
+  ORDERING MATCHING RULE    caseExactOrderingMatch
+  SUBSTRINGS MATCHING RULE  caseExactSubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"base4kidsSchoolClassName"}
+  LDAP-DESC                 "The name of a school class"
+  ID                        id-at-base4kidsSchoolClassName }
+
+base4kidsSchoolClassLevel ATTRIBUTE ::= {
+  SUBTYPE OF                base4kidsSchoolClassName
+  LDAP-NAME                 {"base4kidsSchoolClassLevel"}
+  LDAP-DESC                 "The level of a school class (Klassenstufe)"
+  ID                        id-at-base4kidsSchoolClassLevel }
+
+base4kidsSchoolClassSubGroup ATTRIBUTE ::= {
+  SUBTYPE OF                base4kidsSchoolClassName
+  LDAP-NAME                 {"base4kidsSchoolClassSubGroup"}
+  LDAP-DESC                 "The school class sub group"
+  ID                        id-at-base4kidsSchoolClassSubGroup }
+
+base4kidsAppleId ATTRIBUTE ::= {
+  SUBTYPE OF                mail
+  LDAP-NAME                 {"base4kidsAppleId"}
+  LDAP-DESC                 "Apple ID (email address)"
+  ID                        id-at-base4kidsAppleId }
+
+base4kidsEgovId ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseExactMatch
+  ORDERING MATCHING RULE    caseExactOrderingMatch
+  SUBSTRINGS MATCHING RULE  caseExactSubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"base4kidsEgovId"}
+  LDAP-DESC                 "eGov ID"
+  ID                        id-at-base4kidsEgovId }
+
+base4kidsGroupType ATTRIBUTE ::= {
+  WITH SYNTAX               PrintableString
+  EQUALITY MATCHING RULE    caseIgnoreMatch
+  ORDERING MATCHING RULE    caseIgnoreOrderingMatch
+  SUBSTRINGS MATCHING RULE  caseIgnoreSubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               printableString.&id
+  LDAP-NAME                 {"base4kidsGroupType"}
+  LDAP-DESC                 "Group type"
+  ID                        id-at-base4kidsGroupType }
+
+base4kidsNextcloudUserQuota ATTRIBUTE ::= {
+  WITH SYNTAX               PrintableString
+  EQUALITY MATCHING RULE    caseIgnoreMatch
+  ORDERING MATCHING RULE    caseIgnoreOrderingMatch
+  SUBSTRINGS MATCHING RULE  caseIgnoreSubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               printableString.&id
+  LDAP-NAME                 {"base4kidsNextcloudUserQuota"}
+  LDAP-DESC                 "Nextcloud user quota"
+  ID                        id-at-base4kidsNextcloudUserQuota }
+
+base4kidsNextcloudClassShareId ATTRIBUTE ::= {
+  SUBTYPE OF                base4kidsNextcloudShareId
+  LDAP-NAME                 {"base4kidsNextcloudClassShareId"}
+  LDAP-DESC                 "Nextcloud school class folder share ID"
+  ID                        id-at-base4kidsNextcloudClassShareId }
+
+base4kidsNextcloudClassTemplateShareId ATTRIBUTE ::= {
+  SUBTYPE OF                base4kidsNextcloudShareId
+  LDAP-NAME                 {"base4kidsNextcloudClassTemplateShareId"}
+  LDAP-DESC                 "Nextcloud school class template folder share ID"
+  ID                        id-at-base4kidsNextcloudClassTemplateShareId }
+
+base4kidsGender ATTRIBUTE ::= {
+  WITH SYNTAX               PrintableString
+  EQUALITY MATCHING RULE    caseExactMatch
+  ORDERING MATCHING RULE    caseExactOrderingMatch
+  SUBSTRINGS MATCHING RULE  caseExactSubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               printableString.&id
+  LDAP-NAME                 {"base4kidsGender"}
+  LDAP-DESC                 "Gender of a person"
+  ID                        id-at-base4kidsGender }
+
+base4kidsPersiskaNumber ATTRIBUTE ::= {
+  WITH SYNTAX               PrintableString
+  EQUALITY MATCHING RULE    caseExactMatch
+  ORDERING MATCHING RULE    caseExactOrderingMatch
+  SUBSTRINGS MATCHING RULE  caseExactSubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               printableString.&id
+  LDAP-NAME                 {"base4kidsPersiskaNumber"}
+  LDAP-DESC                 "Employees reference number from the information system PERSISKA"
+  ID                        id-at-base4kidsPersiskaNumber }
+
+base4kidsExpirationDate ATTRIBUTE ::= {
+  WITH SYNTAX               GeneralizedTime
+  EQUALITY MATCHING RULE    generalizedTimeMatch
+  ORDERING MATCHING RULE    generalizedTimeOrderingMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               generalizedTime.&id
+  LDAP-NAME                 {"base4kidsExpirationDate"}
+  LDAP-DESC                 "Expiration date of a Base4Kids object in coordinated universal time"
+  ID                        id-at-base4kidsExpirationDate }
+
+base4kidsSchoolClassYear ATTRIBUTE ::= {
+  SUBTYPE OF                base4kidsSchoolClassName
+  LDAP-NAME                 {"base4kidsSchoolClassYear"}
+  LDAP-DESC                 "The school class year"
+  ID                        id-at-base4kidsSchoolClassYear }
+
+base4kidsSchoolProgrammYear ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  EQUALITY MATCHING RULE    integerMatch
+  ORDERING MATCHING RULE    integerOrderingMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"base4kidsSchoolProgrammYear"}
+  LDAP-DESC                 "The school programm year (Programmjahr)"
+  ID                        id-at-base4kidsSchoolProgrammYear }
+
+base4kidsLegalGuardianOf ATTRIBUTE ::= {
+  SUBTYPE OF                member
+  LDAP-NAME                 {"base4kidsLegalGuardianOf"}
+  LDAP-DESC                 "References to DNs for which this person is a legal guardian"
+  ID                        id-at-base4kidsLegalGuardianOf }
+
+base4kidsLegalGuardian ATTRIBUTE ::= {
+  SUBTYPE OF                base4kidsLegalGuardianOf
+  LDAP-NAME                 {"base4kidsLegalGuardian"}
+  LDAP-DESC                 "References to legal guardian DNs for this person"
+  ID                        id-at-base4kidsLegalGuardian }
+
+base4kidsSchoolLevel ATTRIBUTE ::= {
+  WITH SYNTAX               PrintableString
+  EQUALITY MATCHING RULE    caseIgnoreMatch
+  ORDERING MATCHING RULE    caseIgnoreOrderingMatch
+  SUBSTRINGS MATCHING RULE  caseIgnoreSubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               printableString.&id
+  LDAP-NAME                 {"base4kidsSchoolLevel"}
+  LDAP-DESC                 "The school level"
+  ID                        id-at-base4kidsSchoolLevel }
+
+base4kidsSchoolCycle ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  EQUALITY MATCHING RULE    integerMatch
+  ORDERING MATCHING RULE    integerOrderingMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"base4kidsSchoolCycle"}
+  LDAP-DESC                 "The school cycle"
+  ID                        id-at-base4kidsSchoolCycle }
+
+base4kidsInitiator ATTRIBUTE ::= {
+  SUBTYPE OF                distinguishedName
+  LDAP-NAME                 {"base4kidsInitiator"}
+  LDAP-DESC                 "Reference to a DN of a person which created a specific resource"
+  ID                        id-at-base4kidsInitiator }
+
+base4kidsSchoolClassSupplement ATTRIBUTE ::= {
+  SUBTYPE OF                base4kidsSchoolClassName
+  LDAP-NAME                 {"base4kidsSchoolClassSupplement"}
+  LDAP-DESC                 "The school class supplement"
+  ID                        id-at-base4kidsSchoolClassSupplement }
+
+base4kidsIsBlocked ATTRIBUTE ::= {
+  WITH SYNTAX               BOOLEAN
+  EQUALITY MATCHING RULE    booleanMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               boolean.&id
+  LDAP-NAME                 {"base4kidsIsBlocked"}
+  LDAP-DESC                 "Determines whether a base4kids object is blocked but still active"
+  ID                        id-at-base4kidsIsBlocked }
+
+base4kidsCountryCode ATTRIBUTE ::= {
+  SUBTYPE OF                countryName
+  LDAP-NAME                 {"base4kidsCountryCode"}
+  LDAP-DESC                 "ISO 3166 two-letter country code"
+  ID                        id-at-base4kidsCountryCode }
+
+base4kidsIsDisabled ATTRIBUTE ::= {
+  SUBTYPE OF                base4kidsIsBlocked
+  LDAP-NAME                 {"base4kidsIsDisabled"}
+  LDAP-DESC                 "Determines whether a base4kids object is disabled but still active"
+  ID                        id-at-base4kidsIsDisabled }
+
+base4kidsBusinessTelephoneNumber ATTRIBUTE ::= {
+  SUBTYPE OF                telephoneNumber
+  LDAP-NAME                 {"base4kidsBusinessTelephoneNumber"}
+  LDAP-DESC                 "Business telephone number"
+  ID                        id-at-base4kidsBusinessTelephoneNumber }
+
+base4kidsDateOfBirth ATTRIBUTE ::= {
+  WITH SYNTAX               PrintableString
+  EQUALITY MATCHING RULE    caseExactMatch
+  ORDERING MATCHING RULE    caseExactOrderingMatch
+  SUBSTRINGS MATCHING RULE  caseExactSubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               printableString.&id
+  LDAP-NAME                 {"base4kidsDateOfBirth"}
+  LDAP-DESC                 "Date of Birth"
+  ID                        id-at-base4kidsDateOfBirth }
+
+base4kidsPlaceOfOrigin ATTRIBUTE ::= {
+  SUBTYPE OF                localityName
+  LDAP-NAME                 {"base4kidsPlaceOfOrigin"}
+  LDAP-DESC                 "The place of origin"
+  ID                        id-at-base4kidsPlaceOfOrigin }
+
+-- Object classes
+
+base4kidsPerson OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  KIND                      auxiliary
+  MAY CONTAIN               { base4kidsAppleId
+                              | base4kidsBusinessTelephoneNumber
+                              | base4kidsChatIsActive
+                              | base4kidsCloudStorageIsActive
+                              | base4kidsCountryCode
+                              | base4kidsDateOfBirth
+                              | base4kidsEgovId
+                              | base4kidsEportfolioIsActive
+                              | base4kidsGender
+                              | base4kidsGroupwareIsActive
+                              | base4kidsImapIsActive
+                              | base4kidsIsActive
+                              | base4kidsIsBlocked
+                              | base4kidsIsDisabled
+                              | base4kidsLearningPlatformIsActive
+                              | base4kidsLegalGuardian
+                              | base4kidsLegalGuardianOf
+                              | base4kidsNextcloudUserQuota
+                              | base4kidsPersiskaNumber
+                              | base4kidsPlaceOfOrigin
+                              | base4kidsRole
+                              | base4kidsSchoolProgrammYear
+                              | base4kidsSmtpReceiveIsActive
+                              | base4kidsSmtpSubmissionIsActive
+                              | base4kidsWebmailIsActive }
+  LDAP-NAME                 {"base4kidsPerson"}
+  LDAP-DESC                 "Base4Kids person object"
+  ID                        id-oc-base4kidsPerson }
+
+base4kidsGroup OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  KIND                      auxiliary
+  MAY CONTAIN               { base4kidsEgovId
+                              | base4kidsExpirationDate
+                              | base4kidsGroupType
+                              | base4kidsInitiator
+                              | base4kidsIsActive
+                              | base4kidsIsBlocked
+                              | base4kidsIsDisabled
+                              | base4kidsMaharaGroupId
+                              | base4kidsMattermostChannelId
+                              | base4kidsMattermostTeamId
+                              | base4kidsNextcloudClassShareId
+                              | base4kidsNextcloudClassTemplateShareId
+                              | base4kidsNextcloudShareId
+                              | base4kidsRole
+                              | base4kidsSchoolCampus
+                              | base4kidsSchoolClassLevel
+                              | base4kidsSchoolClassName
+                              | base4kidsSchoolClassSubGroup
+                              | base4kidsSchoolClassSupplement
+                              | base4kidsSchoolClassYear
+                              | base4kidsSchoolCycle
+                              | base4kidsSchoolDistrict
+                              | base4kidsSchoolLevel
+                              | base4kidsSchoolLocation
+                              | base4kidsSmtpReceiveIsActive
+                              | base4kidsSmtpSubmissionIsActive }
+  LDAP-NAME                 {"base4kidsGroup"}
+  LDAP-DESC                 "Base4Kids person group"
+  ID                        id-oc-base4kidsGroup }
+END
