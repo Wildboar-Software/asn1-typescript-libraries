@@ -2,7 +2,7 @@
 import {
     ObjectIdentifier as _OID
 } from "@wildboar/asn1";
-import { ID } from "../VOPerson/ID.ta.mjs";
+import { type ID } from "../VOPerson/ID.ta.mjs";
 
 
 /**
@@ -19,7 +19,13 @@ import { ID } from "../VOPerson/ID.ta.mjs";
  */
 export
 const id_geant: ID = _OID.fromParts([
+    1,
+    3,
+    6,
+    1,
+    4,
+    1,
     25178,
-], id_pen);
+]);
 
 /* eslint-enable */
