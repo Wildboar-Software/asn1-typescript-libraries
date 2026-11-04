@@ -299,6 +299,18 @@ function refinementToJSON (
  * are relative to `base`. `specificationFilter` further restricts by
  * object class ({@link Refinement}).
  *
+ * There is no `union` of two `SubtreeSpecification` values. They can
+ * have incompatible `base`, `minimum`, `maximum`, chops, and
+ * refinements, and no single specification can represent every
+ * combination. Evaluate each specification separately (for example
+ * with `dnWithinSubtreeSpecification`); if any matches, the name is
+ * in the union.
+ *
+ * There is no `contains` either. Deciding that one specification
+ * selects a subset of another requires proving that one
+ * `specificationFilter` (`Refinement`) is a subset of another, which
+ * this package does not attempt.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -465,6 +477,12 @@ export class SubtreeSpecification implements ChopSpecification {
      *
      * This is the same algorithm as `subtreeIntersection`; that
      * function wraps an X.500 `Matcher` lookup and calls this method.
+     *
+     * There is no `union`: incompatible `base`, `minimum`, `maximum`,
+     * and other components cannot collapse into one specification.
+     * Evaluate each specification separately; if any matches, the
+     * name is in the union. There is no `contains` either: a
+     * `Refinement` cannot be shown to be a subset of another.
      *
      * @param other The other subtree specification
      * @param getMatcher Optional equality-matcher lookup for naming
