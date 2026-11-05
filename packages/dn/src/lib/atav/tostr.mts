@@ -49,20 +49,19 @@ function bytesToHex(bytes: Uint8Array): string {
 /**
  * @summary String encode an LDAP value when the syntax is not known.
  * @description
- * 
- * This function encodes a default value.
- * 
+ *
+ * Hex-encodes the BER of `value`. {@link ASN1Element.toBytes} returns a
+ * slice of the Node.js Buffer pool. This hex-encodes that one slice;
+ * combining `.buffer` / `.byteOffset` / `.byteLength` from separate
+ * `toBytes()` calls can read leftover pool bytes when the pool wraps.
+ *
  * @param value The value to encode.
- * @returns The encoded value.
+ * @returns The encoded value, `#` followed by lowercase hexadecimal.
  * @function
  */
 export
 function defaultValueEncoder (value: ASN1Element): string {
-    return "#" + Buffer.from(
-        value.toBytes().buffer,
-        value.toBytes().byteOffset,
-        value.toBytes().byteLength
-    ).toString("hex");
+    return "#" + bytesToHex(value.toBytes());
 }
 
 const directoryStringTagNumbers = new Set([

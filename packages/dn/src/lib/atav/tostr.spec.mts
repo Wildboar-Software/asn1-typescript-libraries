@@ -87,6 +87,35 @@ describe("defaultValueEncoder()", () => {
         expect(defaultValueEncoder(contextElement())).toBe("#8101ff");
         expect(defaultValueEncoder(unrecognizedUniversal())).toBe("#150101");
     });
+
+    it("hex-encodes only the element's octets when the Node.js Buffer pool wraps", () => {
+        const el = _encodeUTF8String("admin", BER);
+        // `toBytes()` uses Buffer.allocUnsafe, which slices an 8 KiB pool.
+        // Paint a slab with 0x2f (`/`) and leave 8 bytes so the first 7-byte
+        // encoding fits and the next wraps. Mixing `.buffer` from the first
+        // call with `.byteOffset` from the second would then hex leftover
+        // pool bytes (the reported `#2f2f2053656520` was "// See ").
+        let positioned = false;
+        for (let i = 0; i < Buffer.poolSize; i++) {
+            const start = Buffer.allocUnsafe(1);
+            if (start.byteOffset === 0) {
+                start.fill(0x2f);
+                break;
+            }
+        }
+        for (let i = 0; i < Buffer.poolSize; i++) {
+            const probe = Buffer.allocUnsafe(1);
+            probe.fill(0x2f);
+            const alignedOffset = (probe.byteOffset + 1 + 7) & ~7;
+            if (Buffer.poolSize - alignedOffset === 8) {
+                positioned = true;
+                break;
+            }
+        }
+        expect(positioned).toBe(true);
+        expect(defaultValueEncoder(el)).toBe("#0c0561646d696e");
+        expect(el.utf8String).toBe("admin");
+    });
 });
 
 describe("distinguishedValueToString()", () => {
