@@ -114,6 +114,25 @@ export class AttCertIssuer {
             _o._unrecognizedExtensionsList
         );
     }
+
+    /**
+     * @summary Whether no issuer identifier is present.
+     * @description
+     *
+     * X.509 requires at least one of `issuerName`, `baseCertificateID`,
+     * and `objectDigestInfo`. An issuer with none is empty.
+     *
+     * @public
+     * @method
+     * @returns {boolean} `true` if every identifying component is absent.
+     */
+    public isEmpty(): boolean {
+        return (
+            (this.issuerName === undefined || this.issuerName.length === 0)
+            && this.baseCertificateID === undefined
+            && this.objectDigestInfo === undefined
+        );
+    }
 }
 
 /**

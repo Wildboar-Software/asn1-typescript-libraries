@@ -83,6 +83,31 @@ export class CertificatePairAssertion {
             _o._unrecognizedExtensionsList
         );
     }
+
+    /**
+     * @summary Whether neither half of the pair is constrained.
+     * @description
+     *
+     * X.509 requires at least one of `issuedToThisCAAssertion` and
+     * `issuedByThisCAAssertion`. A side whose assertion is itself
+     * empty does not constrain that certificate.
+     *
+     * @public
+     * @method
+     * @returns {boolean} `true` if both sides are absent or empty.
+     */
+    public isEmpty(): boolean {
+        return (
+            (
+                this.issuedToThisCAAssertion === undefined
+                || this.issuedToThisCAAssertion.isEmpty()
+            )
+            && (
+                this.issuedByThisCAAssertion === undefined
+                || this.issuedByThisCAAssertion.isEmpty()
+            )
+        );
+    }
 }
 
 /**

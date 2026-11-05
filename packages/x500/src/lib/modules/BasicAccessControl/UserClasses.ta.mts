@@ -127,6 +127,27 @@ export class UserClasses {
             _o._unrecognizedExtensionsList
         );
     }
+
+    /**
+     * @summary Whether no user selector is present.
+     * @description
+     *
+     * Omitted axes are not selected. Present `SET SIZE (1..MAX)`
+     * components cannot be empty; an empty array is treated as absent.
+     *
+     * @public
+     * @method
+     * @returns {boolean} `true` if every selector is absent or empty.
+     */
+    public isEmpty(): boolean {
+        return (
+            this.allUsers === undefined
+            && this.thisEntry === undefined
+            && (this.name === undefined || this.name.length === 0)
+            && (this.userGroup === undefined || this.userGroup.length === 0)
+            && (this.subtree === undefined || this.subtree.length === 0)
+        );
+    }
 }
 
 /**

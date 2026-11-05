@@ -169,6 +169,30 @@ export class Attribute {
             }
         }
     }
+
+    /**
+     * @summary Whether this attribute has no values.
+     * @description
+     *
+     * A stored attribute shall have at least one value, but a transferred
+     * `Attribute` may have none (for example because access control hid
+     * them). Empty when both `values` and `valuesWithContext` have no
+     * members.
+     *
+     * @public
+     * @method
+     * @returns {boolean} `true` if there are no values, with or without
+     *  context.
+     */
+    public isEmpty(): boolean {
+        return (
+            this.values.length === 0
+            && (
+                this.valuesWithContext === undefined
+                || this.valuesWithContext.length === 0
+            )
+        );
+    }
 }
 
 /**

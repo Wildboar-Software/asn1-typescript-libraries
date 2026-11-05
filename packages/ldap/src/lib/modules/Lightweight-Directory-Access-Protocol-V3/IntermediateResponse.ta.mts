@@ -100,6 +100,27 @@ export class IntermediateResponse {
       _o._unrecognizedExtensionsList
     );
   }
+
+  /**
+   * @summary Whether both `responseName` and `responseValue` are absent.
+   * @description
+   *
+   * Both components are OPTIONAL. An intermediate response with neither
+   * is empty of protocol payload.
+   *
+   * @public
+   * @method
+   * @returns {boolean} `true` if both components are absent.
+   */
+  public isEmpty(): boolean {
+    return (
+      this.responseName === undefined
+      && (
+        this.responseValue === undefined
+        || this.responseValue.length === 0
+      )
+    );
+  }
 }
 
 

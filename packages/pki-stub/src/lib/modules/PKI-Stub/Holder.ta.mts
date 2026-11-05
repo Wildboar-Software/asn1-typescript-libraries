@@ -124,6 +124,25 @@ export class Holder {
             _o.objectDigestInfo
         );
     }
+
+    /**
+     * @summary Whether no holder identifier is present.
+     * @description
+     *
+     * X.509 requires at least one of `baseCertificateID`, `entityName`,
+     * and `objectDigestInfo`. A holder with none is empty.
+     *
+     * @public
+     * @method
+     * @returns {boolean} `true` if every identifying component is absent.
+     */
+    public isEmpty(): boolean {
+        return (
+            this.baseCertificateID === undefined
+            && (this.entityName === undefined || this.entityName.length === 0)
+            && this.objectDigestInfo === undefined
+        );
+    }
 }
 
 /**

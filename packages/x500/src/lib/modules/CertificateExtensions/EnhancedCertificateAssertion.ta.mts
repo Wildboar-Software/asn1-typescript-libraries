@@ -240,6 +240,35 @@ export class EnhancedCertificateAssertion {
             _o._unrecognizedExtensionsList
         );
     }
+
+    /**
+     * @summary Whether no matching component is present.
+     * @description
+     *
+     * X.509 requires at least one component (`ALL EXCEPT` none). An
+     * empty assertion is not a valid enhanced certificate match.
+     *
+     * @public
+     * @method
+     * @returns {boolean} `true` if every component is absent.
+     */
+    public isEmpty(): boolean {
+        return (
+            this.serialNumber === undefined
+            && this.issuer === undefined
+            && this.subjectKeyIdentifier === undefined
+            && this.authorityKeyIdentifier === undefined
+            && this.certificateValid === undefined
+            && this.privateKeyValid === undefined
+            && this.subjectPublicKeyAlgID === undefined
+            && this.keyUsage === undefined
+            && this.subjectAltName === undefined
+            && this.policy === undefined
+            && this.pathToName === undefined
+            && this.subject === undefined
+            && this.nameConstraints === undefined
+        );
+    }
 }
 
 /**

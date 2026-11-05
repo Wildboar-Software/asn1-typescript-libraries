@@ -105,6 +105,25 @@ export class PolicyConstraintsSyntax {
     }
 
     /**
+     * @summary Whether neither policy constraint is present.
+     * @description
+     *
+     * X.509 requires at least one of `requireExplicitPolicy` and
+     * `inhibitPolicyMapping`. SkipCerts `0` is a present constraint, not
+     * empty.
+     *
+     * @public
+     * @method
+     * @returns {boolean} `true` if both components are absent.
+     */
+    public isEmpty(): boolean {
+        return (
+            this.requireExplicitPolicy === undefined
+            && this.inhibitPolicyMapping === undefined
+        );
+    }
+
+    /**
      * @summary ASN.1 value notation for these policy constraints
      * @description
      *

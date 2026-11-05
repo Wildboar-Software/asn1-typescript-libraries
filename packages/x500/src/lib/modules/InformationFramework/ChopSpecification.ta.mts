@@ -92,6 +92,32 @@ export class ChopSpecification {
     }
 
     /**
+     * @summary Whether this chop does not restrict the subtree.
+     * @description
+     *
+     * No specific exclusions, `minimum` omitted or the default `0`, and
+     * no `maximum` means the whole subtree below the base is kept.
+     *
+     * @public
+     * @method
+     * @returns {boolean} `true` if the chop is a no-op.
+     */
+    public isEmpty(): boolean {
+        return (
+            (
+                this.specificExclusions === undefined
+                || this.specificExclusions.length === 0
+            )
+            && (
+                this.minimum === undefined
+                || this.minimum === 0
+                || this.minimum === 0n
+            )
+            && this.maximum === undefined
+        );
+    }
+
+    /**
      * @summary Getter that returns the default value for `minimum`.
      * @public
      * @static

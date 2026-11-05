@@ -138,6 +138,28 @@ export class AuthorityKeyIdentifier {
     ): boolean {
         return compareAuthorityKeyIdentifier(this, other, getEqualityMatcher);
     }
+
+    /**
+     * @summary Whether no key identifier or issuer+serial is present.
+     * @description
+     *
+     * All three components are OPTIONAL. `authorityCertIssuer` and
+     * `authorityCertSerialNumber` are both present or both absent.
+     *
+     * @public
+     * @method
+     * @returns {boolean} `true` if every component is absent.
+     */
+    public isEmpty(): boolean {
+        return (
+            this.keyIdentifier === undefined
+            && (
+                this.authorityCertIssuer === undefined
+                || this.authorityCertIssuer.length === 0
+            )
+            && this.authorityCertSerialNumber === undefined
+        );
+    }
 }
 
 /**

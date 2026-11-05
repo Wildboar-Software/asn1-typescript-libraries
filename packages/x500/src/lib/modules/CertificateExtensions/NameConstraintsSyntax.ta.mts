@@ -118,6 +118,31 @@ export class NameConstraintsSyntax {
     ): boolean {
         return compareNameConstraintsSyntax(this, other, getEqualityMatcher, options);
     }
+
+    /**
+     * @summary Whether no permitted or excluded subtrees are present.
+     * @description
+     *
+     * X.509 requires at least one of `permittedSubtrees` and
+     * `excludedSubtrees`. An empty `GeneralSubtrees` is not allowed if
+     * the component is present (`SIZE (1..MAX)`).
+     *
+     * @public
+     * @method
+     * @returns {boolean} `true` if both subtree lists are absent or empty.
+     */
+    public isEmpty(): boolean {
+        return (
+            (
+                this.permittedSubtrees === undefined
+                || this.permittedSubtrees.length === 0
+            )
+            && (
+                this.excludedSubtrees === undefined
+                || this.excludedSubtrees.length === 0
+            )
+        );
+    }
 }
 
 /**

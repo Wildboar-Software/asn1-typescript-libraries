@@ -171,6 +171,29 @@ export class CertificateListAssertion {
             _o._unrecognizedExtensionsList
         );
     }
+
+    /**
+     * @summary Whether no matching component is present.
+     * @description
+     *
+     * Present components are ANDed; omitted components do not constrain.
+     * An assertion with none present matches any CRL.
+     *
+     * @public
+     * @method
+     * @returns {boolean} `true` if every component is absent.
+     */
+    public isEmpty(): boolean {
+        return (
+            this.issuer === undefined
+            && this.minCRLNumber === undefined
+            && this.maxCRLNumber === undefined
+            && this.reasonFlags === undefined
+            && this.dateAndTime === undefined
+            && this.distributionPoint === undefined
+            && this.authorityKeyIdentifier === undefined
+        );
+    }
 }
 
 /**
