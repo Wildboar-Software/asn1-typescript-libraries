@@ -18,7 +18,10 @@ import {
 } from "../../modules/SelectedAttributeTypes/TimeSpecification.ta.mjs";
 import { Period } from "../../modules/SelectedAttributeTypes/Period.ta.mjs";
 import { Period_days_bitDay_monday } from "../../modules/SelectedAttributeTypes/Period-days-bitDay.ta.mjs";
-import timeSpecificationMatch_ from "./timeSpecificationMatch.mjs";
+import timeSpecificationMatch_, {
+    timeSpecificationMatchTyped,
+} from "./timeSpecificationMatch.mjs";
+import { MATCH_FLAG_HIGH_WORK_BUDGET } from "../../types/matching.mjs";
 import { onStoredValue } from "./onStoredValue.spec.mjs";
 
 const timeSpecificationMatch = onStoredValue(timeSpecificationMatch_);
@@ -103,5 +106,52 @@ describe("timeSpecificationMatch() period normalization", () => {
             assertionWithPeriod(new Period(undefined, { intDay: [2] })),
             acWithPeriod(new Period(undefined, { intDay: [2] }, undefined, { allMonths: null })),
         )).toBe(false);
+    });
+
+    it("matches SET OF Period regardless of member order", () => {
+        const monday = new Period(undefined, { intDay: [2] });
+        const tuesday = new Period(undefined, { intDay: [3] });
+        const asserted = _encode_TimeSpecification(
+            new TimeSpecification({ periodic: [ tuesday, monday ] }),
+            DER,
+        );
+        const ts = new TimeSpecification({ periodic: [ monday, tuesday ] });
+        const extn = _encode_TimeSpecification(ts, DER);
+        const tbs = new TBSAttributeCertificate(
+            AttCertVersion_v2,
+            new Holder(undefined, [{ dNSName: "holder.example" }]),
+            new AttCertIssuer([{ dNSName: "issuer.example" }]),
+            ALG,
+            new Uint8Array([1]),
+            new AttCertValidityPeriod(
+                new Date("2020-01-01T00:00:00Z"),
+                new Date("2030-01-01T00:00:00Z"),
+            ),
+            [],
+            undefined,
+            [],
+            [new Extension(id_ce_timeSpecification, true, extn.toBytes())],
+        );
+        const ac = _encode_AttributeCertificate(
+            new SIGNED(tbs, ALG, new Uint8ClampedArray([0])),
+            DER,
+        );
+        expect(timeSpecificationMatch(asserted, ac)).toBe(true);
+    });
+
+    it("passes MATCH_FLAG_HIGH_WORK_BUDGET through to SET OF Period pairing", () => {
+        const periods: Period[] = [];
+        for (let day = 1; day <= 14; day++) {
+            periods.push(new Period(undefined, { intDay: [day] }));
+        }
+        const asserted = new TimeSpecification({ periodic: periods });
+        const stored = new TimeSpecification({ periodic: periods.slice().reverse() });
+        expect(timeSpecificationMatchTyped(asserted, stored)).toBe(false);
+        expect(timeSpecificationMatchTyped(
+            asserted,
+            stored,
+            undefined,
+            MATCH_FLAG_HIGH_WORK_BUDGET,
+        )).toBe(true);
     });
 });
