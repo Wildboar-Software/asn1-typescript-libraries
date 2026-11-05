@@ -10,7 +10,7 @@ import {
     type Matcher,
     type TypedEquationFunction,
 } from "../../types/matching.mjs";
-import { stripSpaces } from "../insignificant.mjs";
+import { removeAllAsciiSpaceCharacters } from "../insignificant.mjs";
 
 /**
  * Rec. ITU-T X.520 (10/2019), clause 8.1.4 `numericStringMatch`.
@@ -30,7 +30,7 @@ function numericStringMatchTyped (
     flags: number = 0,
 ): boolean | undefined {
     const raw = typeof value === "string" ? value : value.numericString;
-    const stored = (flags & MATCH_FLAG_VALUE_NORMALIZED) ? raw : stripSpaces(raw);
+    const stored = (flags & MATCH_FLAG_VALUE_NORMALIZED) ? raw : removeAllAsciiSpaceCharacters(raw);
     if (flags & MATCH_FLAG_APPROXIMATE) {
         return approximatelyEqualStrings(assertion, stored);
     }
@@ -52,7 +52,7 @@ function decodeNumericStringMatchAssertion (el: ASN1Element): string {
  */
 export
 function normalizeNumericStringMatchAssertion (assertion: string): string {
-    return stripSpaces(assertion);
+    return removeAllAsciiSpaceCharacters(assertion);
 }
 
 /**

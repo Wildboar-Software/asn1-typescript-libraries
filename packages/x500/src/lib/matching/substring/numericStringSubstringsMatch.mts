@@ -17,7 +17,7 @@ import {
     prepareStored,
     type StringPreparer,
 } from "./prepareSubstrings.mjs";
-import { stripSpaces } from "../insignificant.mjs";
+import { removeAllAsciiSpaceCharacters } from "../insignificant.mjs";
 
 const RULE = "numericStringSubstringsMatch";
 
@@ -27,7 +27,7 @@ const RULE = "numericStringSubstringsMatch";
  * string was only spaces.
  */
 const prepareNumeric: StringPreparer = (raw) => {
-    const stripped = stripSpaces(raw);
+    const stripped = removeAllAsciiSpaceCharacters(raw);
     return stripped.length > 0 ? stripped : undefined;
 };
 

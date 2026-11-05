@@ -1,16 +1,18 @@
+const ASCII_SPACE: number = 0x20;
+const ASCII_HYPHEN: number = 0x2D;
+
 /**
- * Remove every SPACE (X.520 clause 7.6.2) without allocating when
- * the string already has none. Other ASCII whitespace is also
- * dropped so malformed NumericString values keep the previous
- * `/\s+/g` behavior for TAB through CR.
+ * Remove every ASCII SPACE (X.520 clause 7.6.2) without allocating
+ * when the `NumericString` already has none. Other characters are
+ * left unchanged: a valid `NumericString` may contain only digits
+ * and SPACE.
  */
 export
-function stripSpaces (numeric: string): string {
+function removeAllAsciiSpaceCharacters (numeric: string): string {
     const len = numeric.length;
     let i = 0;
     while (i < len) {
-        const c = numeric.charCodeAt(i);
-        if (c === 0x20 || (c >= 0x09 && c <= 0x0d)) {
+        if (numeric.charCodeAt(i) === ASCII_SPACE) {
             break;
         }
         i++;
@@ -20,8 +22,7 @@ function stripSpaces (numeric: string): string {
     }
     let out = numeric.slice(0, i);
     for (i++; i < len; i++) {
-        const c = numeric.charCodeAt(i);
-        if (c === 0x20 || (c >= 0x09 && c <= 0x0d)) {
+        if (numeric.charCodeAt(i) === ASCII_SPACE) {
             continue;
         }
         out += numeric[i];
@@ -40,7 +41,7 @@ function normalizeTelephoneNumber (telephoneNumber: string): string {
     let i = 0;
     while (i < len) {
         const c = telephoneNumber.charCodeAt(i);
-        if (c === 0x20 || c === 0x2d) {
+        if (c === ASCII_SPACE || c === ASCII_HYPHEN) {
             break;
         }
         i++;
@@ -51,7 +52,7 @@ function normalizeTelephoneNumber (telephoneNumber: string): string {
     let out = telephoneNumber.slice(0, i);
     for (i++; i < len; i++) {
         const c = telephoneNumber.charCodeAt(i);
-        if (c === 0x20 || c === 0x2d) {
+        if (c === ASCII_SPACE || c === ASCII_HYPHEN) {
             continue;
         }
         out += telephoneNumber[i];
