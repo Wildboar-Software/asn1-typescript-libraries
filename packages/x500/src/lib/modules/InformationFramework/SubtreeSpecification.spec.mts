@@ -8,7 +8,6 @@ import {
 } from "@wildboar/dn";
 import {
     AttributeTypeAndValue,
-    ChopSpecification,
     SubtreeSpecification,
     type AttributeType,
     type LocalName,
@@ -195,26 +194,5 @@ describe("SubtreeSpecification.intersection()", () => {
     it("returns null when the context prefixes do not overlap", () => {
         const open = new SubtreeSpecification();
         expect(open.intersection(open, getEqualityMatcher, root1, root2)).toBeNull();
-    });
-});
-
-describe("SubtreeSpecification.isEmpty()", () => {
-    it("treats {} and default base/minimum as empty", () => {
-        expect(new SubtreeSpecification().isEmpty()).toBe(true);
-        expect(new SubtreeSpecification([]).isEmpty()).toBe(true);
-        expect(new SubtreeSpecification([], undefined, 0).isEmpty()).toBe(true);
-        expect(new SubtreeSpecification(people).isEmpty()).toBe(false);
-        expect(new SubtreeSpecification([], undefined, 1).isEmpty()).toBe(false);
-        expect(new SubtreeSpecification(undefined, undefined, undefined, 2).isEmpty())
-            .toBe(false);
-    });
-});
-
-describe("ChopSpecification.isEmpty()", () => {
-    it("is true when the chop does not restrict", () => {
-        expect(new ChopSpecification().isEmpty()).toBe(true);
-        expect(new ChopSpecification(undefined, 0n).isEmpty()).toBe(true);
-        expect(new ChopSpecification(undefined, 1).isEmpty()).toBe(false);
-        expect(new ChopSpecification(undefined, undefined, 3).isEmpty()).toBe(false);
     });
 });

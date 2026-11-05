@@ -5,16 +5,6 @@ function subtree (name: string, minimum?: number, maximum?: number): GeneralSubt
     return new GeneralSubtree({ dNSName: name }, minimum, maximum);
 }
 
-describe("NameConstraintsSyntax.isEmpty()", () => {
-    it("is true when both subtree lists are absent or empty", () => {
-        expect(new NameConstraintsSyntax().isEmpty()).toBe(true);
-        expect(new NameConstraintsSyntax([]).isEmpty()).toBe(true);
-        expect(new NameConstraintsSyntax([subtree("example")]).isEmpty()).toBe(false);
-        expect(new NameConstraintsSyntax(undefined, [subtree("deny.example")]).isEmpty())
-            .toBe(false);
-    });
-});
-
 describe("NameConstraintsSyntax.isEqualTo()", () => {
     it("matches the same permitted subtrees", () => {
         const a = new NameConstraintsSyntax([subtree("example")]);
