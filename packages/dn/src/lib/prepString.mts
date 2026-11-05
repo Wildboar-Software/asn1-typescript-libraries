@@ -106,8 +106,8 @@ function removeInsignificantSpaces (mapped: string): string {
 
 /**
  * Map, prohibit, normalize, and insignificant-space removal, always
- * running the regexp steps. Used for long strings that are not
- * printable ASCII.
+ * running the regexp steps. Used when the string is longer than
+ * {@link SCAN_LIMIT} and is not printable ASCII.
  */
 function prepStringGeneral (str: string, caseFold: boolean): string | undefined {
     if (prohibitedCharacters.test(str)) { // 7.4: Prohibit
@@ -129,38 +129,16 @@ function prepStringGeneral (str: string, caseFold: boolean): string | undefined 
 }
 
 /**
- * @summary Prepare a string for matching, per ITU Recommendation X.520, Section 7.
- * @description
+ * Prepare a short string, or any printable ASCII string, by scanning
+ * it once.
  *
- * This function normalizes an input string for comparison in X.500 matching
- * rules according to the procedures defined in
- * [ITU Recommendation X.520 (2019)](https://www.itu.int/rec/T-REC-X.520/en),
- * Section 7.
- *
- * The input string is already expected to be transcoded, thereby satisfying
- * the procedures defined in section 7.1. There is nothing to be done relating
- * to section 7.5. NumericString and TelephoneNumber insignificant-character
- * removal (7.6.2 / 8.2.8) belong in those matching rules, not here:
- * NumericString is only digits and SPACE, so Map and case-folding are no-ops.
- *
- * Prohibit (7.4) may run before or after Map: the two sets do not overlap.
- *
- * @param {string} str The string to be normalized.
- * @param {PrepStringOptions} [options] `caseFold` applies RFC 3454 B.2 during Map.
- * @returns {string | undefined} The normalized string, or `undefined` if there
- *  was a prohibited character or the mapped string was empty.
- *
- * @function
+ * This is the path taken when {@link prepStringGeneral} does not apply:
+ * the string is at most {@link SCAN_LIMIT} code units, or every code
+ * unit is in U+0020..U+007E. Printable ASCII skips Map, Prohibit, and
+ * NFKC, and its case fold is `toLowerCase`. A short string that is not
+ * printable ASCII calls `replace` only for the mappings the scan found.
  */
-export
-function prepString (str: string, options?: PrepStringOptions): string | undefined {
-    const caseFold: boolean = options?.caseFold === true;
-    // One pass records which `replace` calls can do anything. Printable
-    // ASCII never needs Map, Prohibit, or NFKC, and its case fold is
-    // `toLowerCase`. See `packages/dn/bench/prepString.mjs`.
-    if (str.length > SCAN_LIMIT && notPlainAscii.test(str)) {
-        return prepStringGeneral(str, caseFold);
-    }
+function prepStringShortOrAscii (str: string, caseFold: boolean): string | undefined {
     const n: number = str.length;
     let mapControls: boolean = false;
     let maybeMappedToNothing: boolean = false;
@@ -220,6 +198,42 @@ function prepString (str: string, options?: PrepStringOptions): string | undefin
         return undefined;
     }
     return removeInsignificantSpaces(mapped);
+}
+
+/**
+ * @summary Prepare a string for matching, per ITU Recommendation X.520, Section 7.
+ * @description
+ *
+ * This function normalizes an input string for comparison in X.500 matching
+ * rules according to the procedures defined in
+ * [ITU Recommendation X.520 (2019)](https://www.itu.int/rec/T-REC-X.520/en),
+ * Section 7.
+ *
+ * The input string is already expected to be transcoded, thereby satisfying
+ * the procedures defined in section 7.1. There is nothing to be done relating
+ * to section 7.5. NumericString and TelephoneNumber insignificant-character
+ * removal (7.6.2 / 8.2.8) belong in those matching rules, not here:
+ * NumericString is only digits and SPACE, so Map and case-folding are no-ops.
+ *
+ * Prohibit (7.4) may run before or after Map: the two sets do not overlap.
+ *
+ * @param {string} str The string to be normalized.
+ * @param {PrepStringOptions} [options] `caseFold` applies RFC 3454 B.2 during Map.
+ * @returns {string | undefined} The normalized string, or `undefined` if there
+ *  was a prohibited character or the mapped string was empty.
+ *
+ * @function
+ */
+export
+function prepString (str: string, options?: PrepStringOptions): string | undefined {
+    const caseFold: boolean = options?.caseFold === true;
+    // Long strings that are not printable ASCII stay on the regexp
+    // path. Everything else is short or ASCII. See
+    // `packages/dn/bench/prepString.mjs`.
+    if (str.length > SCAN_LIMIT && notPlainAscii.test(str)) {
+        return prepStringGeneral(str, caseFold);
+    }
+    return prepStringShortOrAscii(str, caseFold);
 }
 
 /**
