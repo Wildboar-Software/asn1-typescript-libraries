@@ -12,6 +12,7 @@ import {
     PresentationAddress,
     _decode_PresentationAddress,
 } from "../../modules/SelectedAttributeTypes/PresentationAddress.ta.mjs";
+import { Buffer } from "node:buffer";
 
 function bothUndefinedOrSame (
     a: Uint8Array | undefined,
@@ -25,35 +26,22 @@ function bothUndefinedOrSame (
 }
 
 /**
- * Presented NSAPs are a subset of stored NSAPs. Typical addresses have
- * a handful of NSAPs, so a linear `bytesEqual` scan beats allocating
- * a `Set` of string keys.
+ * Real NSAPs are at most 20 octets (ITU-T X.213), but decoded values are
+ * untrusted, and `Function.prototype.apply()` throws a `RangeError` when
+ * given too many arguments.
  */
-function nAddressesSubset (
-    presented: readonly OCTET_STRING[],
-    stored: readonly OCTET_STRING[],
-    constantTime: boolean | number,
-): boolean {
-    let matched = true;
-    for (let i = 0; i < presented.length; i++) {
-        const a = presented[i];
-        let found = false;
-        for (let j = 0; j < stored.length; j++) {
-            if (bytesEqual(a, stored[j], constantTime)) {
-                found = true;
-                if (!constantTime) {
-                    break;
-                }
-            }
-        }
-        if (!found) {
-            if (!constantTime) {
-                return false;
-            }
-            matched = false;
-        }
+const MAX_FROM_CHAR_CODE_LENGTH: number = 256;
+
+/**
+ * Maps each octet to one Latin-1 code unit, so equal keys iff equal octets.
+ * This is much faster and shorter than `Uint8Array.prototype.toString()`,
+ * which produces comma-separated decimal octets.
+ */
+function nsapToKey (naddr: OCTET_STRING): string {
+    if (naddr.length <= MAX_FROM_CHAR_CODE_LENGTH) {
+        return String.fromCharCode.apply(null, naddr as unknown as number[]);
     }
-    return matched;
+    return Buffer.from(naddr.buffer, naddr.byteOffset, naddr.byteLength).toString("latin1");
 }
 
 /**
@@ -77,18 +65,25 @@ function presentationAddressMatchTyped (
 ): boolean {
     const v = readDecoded(value, _decode_PresentationAddress);
     const constantTime = flags & MATCH_FLAG_CONSTANT_TIME;
+    const storedNAddresses: Set<string> = new Set<string>(v.nAddresses.map(nsapToKey));
     if (!constantTime) {
         return (
             bothUndefinedOrSame(a.pSelector, v.pSelector)
             && bothUndefinedOrSame(a.sSelector, v.sSelector)
             && bothUndefinedOrSame(a.tSelector, v.tSelector)
-            && nAddressesSubset(a.nAddresses, v.nAddresses, 0)
+            && a.nAddresses.every((naddr: OCTET_STRING) => storedNAddresses.has(nsapToKey(naddr)))
         );
     }
     const pSame = bothUndefinedOrSame(a.pSelector, v.pSelector, constantTime);
     const sSame = bothUndefinedOrSame(a.sSelector, v.sSelector, constantTime);
     const tSame = bothUndefinedOrSame(a.tSelector, v.tSelector, constantTime);
-    return pSame && sSame && tSame && nAddressesSubset(a.nAddresses, v.nAddresses, constantTime);
+    let nAddressesMatch = true;
+    for (let i = 0; i < a.nAddresses.length; i++) {
+        if (!storedNAddresses.has(nsapToKey(a.nAddresses[i]))) {
+            nAddressesMatch = false;
+        }
+    }
+    return pSame && sSame && tSame && nAddressesMatch;
 }
 
 presentationAddressMatchTyped satisfies TypedEquationFunction<PresentationAddress>;
