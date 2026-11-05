@@ -9,7 +9,7 @@ import {
     anyPolicy,
 } from "../../modules/CertificateExtensions/anyPolicy.va.mjs";
 
-const ANY_POLICY = anyPolicy;
+const ANY_POLICY_KEY = anyPolicy.toString();
 
 /**
  * Map of a certificate's extensions by OID string, the same key
@@ -94,8 +94,9 @@ function certificateExtensionReader (
  * X.509 clause 13.3.2 `policy`: TRUE if either side contains
  * `anyPolicy`, or if the asserted and stored policy OIDs intersect.
  *
- * Compared with `OBJECT_IDENTIFIER.isEqualTo`, not dotted-decimal
- * strings.
+ * Asserted OIDs are indexed in a `Set` of `toString()` keys
+ * (`OBJECT_IDENTIFIER.toString()` is cached). Stored policies then
+ * look up in that set.
  *
  * @param asserted Presented `CertPolicySet`.
  * @param stored Decoded `certificatePolicies` extension.
@@ -108,21 +109,18 @@ function certificatePoliciesIntersect (
     asserted: OBJECT_IDENTIFIER[],
     stored: CertificatePoliciesSyntax,
 ): boolean {
+    const assertedIds: Set<string> = new Set();
+    for (const oid of asserted) {
+        const key = oid.toString();
+        if (key === ANY_POLICY_KEY) {
+            return true;
+        }
+        assertedIds.add(key);
+    }
     for (const policy of stored) {
-        if (policy.policyIdentifier.isEqualTo(ANY_POLICY)) {
+        const key = policy.policyIdentifier.toString();
+        if ((key === ANY_POLICY_KEY) || assertedIds.has(key)) {
             return true;
-        }
-    }
-    for (const oid of asserted) {
-        if (oid.isEqualTo(ANY_POLICY)) {
-            return true;
-        }
-    }
-    for (const oid of asserted) {
-        for (const policy of stored) {
-            if (oid.isEqualTo(policy.policyIdentifier)) {
-                return true;
-            }
         }
     }
     return false;
