@@ -33,8 +33,28 @@ function evaluateLDAPAttributeOptionContext (
     return evaluateLDAPAttributeOptionContextTyped(a, v, flags);
 }
 
-function optionEqualsIgnoreCase (a: string, b: string): boolean {
-    return a === b || a.toLowerCase() === b.toLowerCase();
+/**
+ * Original option strings plus their lowercased forms, so an
+ * already-matching assertion is a single `Set.has` and does not
+ * call `toLowerCase`. Nested loops are not used: option lists are
+ * a membership test, not a bounded walk, so a work limit would
+ * still be quadratic up to the cap.
+ */
+function storedOptionSet (value: readonly string[]): Set<string> {
+    const stored = new Set<string>();
+    for (let i = 0; i < value.length; i++) {
+        const option = value[i];
+        stored.add(option);
+        const folded = option.toLowerCase();
+        if (folded !== option) {
+            stored.add(folded);
+        }
+    }
+    return stored;
+}
+
+function optionIsStored (stored: Set<string>, option: string): boolean {
+    return stored.has(option) || stored.has(option.toLowerCase());
 }
 
 /**
@@ -53,19 +73,10 @@ function evaluateLDAPAttributeOptionContextTyped (
     flags: number = 0,
 ): boolean {
     const constantTime = Boolean(flags & MATCH_FLAG_CONSTANT_TIME);
+    const storedValues = storedOptionSet(value);
     let matched = true;
     for (let i = 0; i < assertion.length; i++) {
-        const assertedValue = assertion[i];
-        let found = false;
-        for (let j = 0; j < value.length; j++) {
-            if (optionEqualsIgnoreCase(assertedValue, value[j])) {
-                found = true;
-                if (!constantTime) {
-                    break;
-                }
-            }
-        }
-        if (!found) {
+        if (!optionIsStored(storedValues, assertion[i])) {
             if (!constantTime) {
                 return false;
             }
