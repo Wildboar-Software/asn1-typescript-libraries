@@ -17,6 +17,32 @@ const controlsToSpace: RegExp = /[\t\n\v\f\r\u0085]/g;
  */
 const mappedToNothing: RegExp = /[\u00AD\u1806\u034F\u180B-\u180D\uFE00-\uFE0F\uFFFC\u200B\p{Cc}\p{Cf}]+/ug;
 
+/**
+ * Code units outside printable ASCII. Used only as a reject for the
+ * long-string scan, so it stays non-global and `test` cannot stick.
+ */
+const notPlainAscii: RegExp = /[^\u0020-\u007E]/;
+
+/**
+ * Leading whitespace, trailing whitespace, a whitespace run, or
+ * whitespace other than U+0020. When this does not match, replacing
+ * `/\s+/` with a single space and trimming would not change the string.
+ */
+const needsInsignificantSpaceRemoval: RegExp = /^\s|\s\s|\s$|[^\S ]/;
+
+const insignificantSpaces: RegExp = /\s+/g;
+
+const SPACE: number = 0x20;
+
+/**
+ * Above this length, a string that is not printable ASCII is prepared
+ * with the regexp steps directly. A character scan is faster for
+ * shorter strings and for printable ASCII of any length. It is slower
+ * when a mapped character sits near the end of a longer string: the
+ * scan walks the whole string and then so does `replace`.
+ */
+const SCAN_LIMIT: number = 64;
+
 export const prohibitedCharacters: RegExp = /[\uD800-\uDFFF\uFFFD]+/;
 
 /**
@@ -47,7 +73,21 @@ const FULL_CASE_FOLD: ReadonlyMap<number, string> = new Map([
     [0xFB06, "st"],
 ]);
 
+/**
+ * {@link FULL_CASE_FOLD} plus U+03A3. Whole-string `toLowerCase`
+ * applies the final-sigma rule, so a trailing capital sigma becomes
+ * U+03C2. Folding one code point at a time produces U+03C3. Keep this
+ * class in step with the map above.
+ */
+const needsSlowCaseFold: RegExp = /[\u00DF\u0130\u0149\u017F\u01F0\u0390\u03A3\u03B0\u0587\u1E96-\u1E9A\u1E9E\uFB00-\uFB06]/;
+
 function foldCase (str: string): string {
+    // Accented Latin and other ordinary letters have no special fold.
+    // `toLowerCase` on the whole string is several times faster than
+    // the per-code-point loop below.
+    if (!needsSlowCaseFold.test(str)) {
+        return str.toLowerCase();
+    }
     let out = "";
     for (const ch of str) {
         const mapped = FULL_CASE_FOLD.get(ch.codePointAt(0)!);
@@ -62,6 +102,131 @@ export interface PrepStringOptions {
      * Used by case-ignore and stored-prefix matchers.
      */
     readonly caseFold?: boolean;
+}
+
+/**
+ * Clause 7.6.1. A run of spaces becomes one SPACE, and leading and
+ * trailing SPACE are removed. A string of only spaces becomes one SPACE.
+ * Single internal U+0020s are already in that form; `replace` would
+ * still allocate a new string for them.
+ */
+function removeInsignificantSpaces (mapped: string): string {
+    if (!needsInsignificantSpaceRemoval.test(mapped)) {
+        return mapped;
+    }
+    const trimmed: string = mapped.replace(insignificantSpaces, " ").trim();
+    return trimmed.length === 0 ? " " : trimmed;
+}
+
+/**
+ * Map, prohibit, normalize, and insignificant-space removal, always
+ * running the regexp steps. Used when the string is longer than
+ * {@link SCAN_LIMIT} and is not printable ASCII.
+ */
+function prepStringGeneral (str: string, caseFold: boolean): string | undefined {
+    if (prohibitedCharacters.test(str)) { // 7.4: Prohibit
+        return undefined;
+    }
+    // 7.2: Map. Controls that become SPACE are rewritten first so they
+    // are not deleted with the remaining Cc characters.
+    let mapped: string = str
+        .replace(controlsToSpace, " ")
+        .replace(mappedToNothing, "");
+    if (caseFold) {
+        mapped = foldCase(mapped);
+    }
+    // Comment by Jonathan M. Wilbur (not AI):
+    // I checked: there are only control characters above ASCII (>0x7F)
+    // to the first Unicode code point that needs normalization (0x0A).
+    // It is safe to say that normalization will virtually always be needed if
+    // the input isn't plain ASCII.
+    mapped = mapped.normalize("NFKC"); // 7.3: Normalize
+    if (mapped.length === 0) {
+        return undefined;
+    }
+    return removeInsignificantSpaces(mapped);
+}
+
+/**
+ * Prepare a short string or any printable ASCII string by scanning
+ * it once.
+ *
+ * This is the path taken when {@link prepStringGeneral} does not apply:
+ * the string is at most {@link SCAN_LIMIT} code units, or every code
+ * unit is in U+0020..U+007E. Printable ASCII skips Map, Prohibit, and
+ * NFKC, and its case fold is `toLowerCase`. A short string that is not
+ * printable ASCII calls `replace` only for the mappings the scan found,
+ * then {@link foldCase}, which uses `toLowerCase` when no special fold
+ * is present.
+ */
+function prepStringShortOrAscii (str: string, caseFold: boolean): string | undefined {
+    const n: number = str.length;
+    let mapControls: boolean = false;
+    let maybeMappedToNothing: boolean = false;
+    /** Whether the string needs insignificant whitespace removal. */
+    let needsSpace: boolean = false;
+    /** Whether the previous character was a space. */
+    let prevSpace: boolean = false;
+    /** Whether the string is plain ASCII. */
+    let plain: boolean = true;
+    for (let i: number = 0; i < n; i++) {
+        const c: number = str.charCodeAt(i);
+        if (c === SPACE) {
+            if (prevSpace || i === 0 || i === (n - 1)) {
+                needsSpace = true;
+            }
+            prevSpace = true;
+            continue;
+        }
+        prevSpace = false;
+        if (c > 0x7E) {
+            plain = false;
+            if (c === 0x85) { // NEL maps to SPACE, not to nothing
+                mapControls = true;
+            } else if (c === 0xFFFD || (c >= 0xD800 && c <= 0xDFFF)) {
+                return undefined; // 7.4: Prohibit
+            } else {
+                maybeMappedToNothing = true;
+            }
+            continue;
+        }
+        if (c < SPACE) {
+            plain = false;
+            // TAB, LF, VT, FF, CR. Other C0 controls map to nothing.
+            if (c >= 0x09 && c <= 0x0D) {
+                mapControls = true;
+            } else {
+                maybeMappedToNothing = true;
+            }
+        }
+    }
+    if (plain) {
+        const mapped: string = caseFold ? str.toLowerCase() : str;
+        if (!needsSpace) {
+            return mapped.length === 0 ? undefined : mapped;
+        }
+        return removeInsignificantSpaces(mapped);
+    }
+    let mapped: string = str;
+    if (mapControls) {
+        mapped = mapped.replace(controlsToSpace, " ");
+    }
+    if (maybeMappedToNothing) {
+        mapped = mapped.replace(mappedToNothing, "");
+    }
+    if (caseFold) {
+        mapped = foldCase(mapped);
+    }
+    // Comment by Jonathan M. Wilbur (not AI):
+    // I checked: there are only control characters above ASCII (>0x7F)
+    // to the first Unicode code point that needs normalization (0x0A).
+    // It is safe to say that normalization will virtually always be needed if
+    // the input isn't plain ASCII.
+    mapped = mapped.normalize("NFKC");
+    if (mapped.length === 0) {
+        return undefined;
+    }
+    return removeInsignificantSpaces(mapped);
 }
 
 /**
@@ -90,26 +255,14 @@ export interface PrepStringOptions {
  */
 export
 function prepString (str: string, options?: PrepStringOptions): string | undefined {
-    if (prohibitedCharacters.test(str)) { // 7.4: Prohibit
-        return undefined;
+    const caseFold: boolean = options?.caseFold === true;
+    // Long strings that are not printable ASCII stay on the regexp
+    // path. Short strings and ASCII strings are scanned. See
+    // `packages/dn/bench/prepString.mjs`.
+    if (str.length > SCAN_LIMIT && notPlainAscii.test(str)) {
+        return prepStringGeneral(str, caseFold);
     }
-    // 7.2: Map. Controls that become SPACE are rewritten first so they
-    // are not deleted with the remaining Cc characters.
-    let mapped = str
-        .replace(controlsToSpace, " ")
-        .replace(mappedToNothing, "");
-    if (options?.caseFold === true) {
-        mapped = foldCase(mapped);
-    }
-    mapped = mapped.normalize("NFKC"); // 7.3: Normalize
-    if (mapped.length === 0) {
-        return undefined;
-    }
-    // 7.6.1: consecutive whitespace is one SPACE; leading and
-    // trailing SPACE are removed; a string of only spaces becomes
-    // a single SPACE.
-    const trimmed = mapped.replace(/\s+/g, " ").trim();
-    return trimmed.length === 0 ? " " : trimmed;
+    return prepStringShortOrAscii(str, caseFold);
 }
 
 /**
