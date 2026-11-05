@@ -53,9 +53,9 @@ function inSpecTimeZone (instant: Date, timeZone: number | undefined): Date {
 }
 
 /**
- * Cap on greedy-cover steps for `between` + `entirely`. Open-ended
- * assertions use `MAX_DATE`; each step is one occurrence, so a daily
- * band could otherwise iterate without bound.
+ * Cap on occurrence yields for `between` + `entirely`. Open-ended
+ * assertions use `MAX_DATE`; a daily band could otherwise iterate
+ * without bound.
  */
 const MAX_ENTIRELY_COVER_STEPS = 1000;
 
@@ -63,60 +63,6 @@ const MAX_ENTIRELY_COVER_STEPS = 1000;
  * {@link MAX_ENTIRELY_COVER_STEPS} when `MATCH_FLAG_HIGH_WORK_BUDGET` is set.
  */
 const MAX_ENTIRELY_COVER_STEPS_HIGH_WORK_BUDGET = 100_000;
-
-/**
- * @summary Instant one second after `instant`.
- * @description
- *
- * X.520 clause 10.2 `DayTime` is second-precision. The cover walk
- * advances by this amount after an occurrence end so
- * we can select a later `DayTimeBand` (band matching ignores milliseconds).
- *
- * @param {Date} instant Inclusive end of the current covering occurrence.
- * @returns {Date} `instant` plus one second.
- * @function
- * @author Cursor Grok 4.6
- */
-function secondAfter (instant: Date): Date {
-    return new Date(instant.valueOf() + 1000);
-}
-
-/**
- * @summary Latest inclusive occurrence end that covers `t`.
- * @description
- *
- * Among the stored `periodic` SET, take the farthest inclusive end of
- * any `Period` occurrence that contains `t`. `null` means `t` is a
- * hole in the union (X.520 clause 10.2).
- *
- * Occurrence bounds already include the `DayTimeBand` that contains
- * `t`. Later bands of the same `Period` are found on the next walk
- * step.
- *
- * @param {Period[]} periods Stored `TimeSpecification.time.periodic`.
- * @param {Date} t Instant that must lie in the union.
- * @returns {Date | null} Farthest inclusive end, or `null` if none
- *  cover `t`.
- * @function
- * @author Cursor Grok 4.6
- */
-function farthestOccurrenceEndCovering (periods: Period[], t: Date): Date | null {
-    let farthest: Date | null = null;
-    for (const period of periods) {
-        const boundaries: [ Date, Date ] | null = period.occurrences(t).next().value ?? null;
-        if (!boundaries) {
-            continue;
-        }
-        const [lower, upper] = boundaries;
-        if (lower > t) {
-            continue;
-        }
-        if ((farthest === null) || (upper.valueOf() > farthest.valueOf())) {
-            farthest = upper;
-        }
-    }
-    return farthest;
-}
 
 /**
  * @summary Whether `[start, end]` ⊆ the union of `Period` occurrences.
@@ -127,9 +73,12 @@ function farthestOccurrenceEndCovering (periods: Period[], t: Date): Date | null
  * union of all `Period` occurrences (the SET), not one occurrence of
  * one `Period`.
  *
- * Walk `t` from `start`; at each `t` take the farthest covering
- * occurrence end and continue at the next second. A hole, or more
- * than {@link MAX_ENTIRELY_COVER_STEPS} steps, fails. Open-ended
+ * Collect every occurrence that overlaps `[start, end]`, merge
+ * overlapping and 1-second-adjacent spans at `DayTime` second
+ * precision, and test that the merged union covers the assertion.
+ * Work is proportional to the number of occurrences, not the number
+ * of seconds in the band. A hole, or more than
+ * {@link MAX_ENTIRELY_COVER_STEPS} occurrences, fails. Open-ended
  * assertions use `MAX_DATE`. `MATCH_FLAG_HIGH_WORK_BUDGET` raises the
  * cap to {@link MAX_ENTIRELY_COVER_STEPS_HIGH_WORK_BUDGET}.
  *
@@ -153,26 +102,52 @@ function periodsEntirelyCoverInterval (
     const maxSteps: number = (flags & MATCH_FLAG_HIGH_WORK_BUDGET)
         ? MAX_ENTIRELY_COVER_STEPS_HIGH_WORK_BUDGET
         : MAX_ENTIRELY_COVER_STEPS;
-    let t: Date = start;
+    const startSec: number = Math.floor(start.valueOf() / 1000);
+    const endSec: number = Math.floor(end.valueOf() / 1000);
+    const intervals: [ number, number ][] = [];
     let steps: number = 0;
-    while (t.valueOf() <= end.valueOf()) {
-        steps += 1;
-        if (steps > maxSteps) {
-            if (flags & MATCH_FLAG_DEBUG) {
-                console.error(
-                    `@wildboar/x500: debug: temporalContext: exceeded ${maxSteps} cover steps`,
-                );
+    for (const period of periods) {
+        for (const [ lower, upper ] of period.occurrences(start, end)) {
+            steps += 1;
+            if (steps > maxSteps) {
+                if (flags & MATCH_FLAG_DEBUG) {
+                    console.error(
+                        `@wildboar/x500: debug: temporalContext: exceeded ${maxSteps} cover steps`,
+                    );
+                }
+                return false;
             }
-            return false;
+            const lo: number = Math.floor(lower.valueOf() / 1000);
+            const hi: number = Math.floor(upper.valueOf() / 1000);
+            if (hi < startSec) {
+                continue;
+            }
+            if (lo > endSec) {
+                break;
+            }
+            if ((lo <= startSec) && (hi >= endSec)) {
+                return true;
+            }
+            intervals.push([ lo, hi ]);
         }
-        const farthestEnd: Date | null = farthestOccurrenceEndCovering(periods, t);
-        if (farthestEnd === null) {
-            // No period covered that instant (a hole in the union).
-            return false;
-        }
-        t = secondAfter(farthestEnd);
     }
-    return true;
+    if (intervals.length === 0) {
+        return false;
+    }
+    intervals.sort((a, b) => (a[0] - b[0]) || (a[1] - b[1]));
+    let nextNeeded: number = startSec;
+    for (const [ lo, hi ] of intervals) {
+        if (lo > nextNeeded) {
+            return false;
+        }
+        if ((hi + 1) > nextNeeded) {
+            nextNeeded = hi + 1;
+        }
+        if (nextNeeded > endSec) {
+            return true;
+        }
+    }
+    return nextNeeded > endSec;
 }
 /** True if `time` falls in one occurrence of `period` (clause 10.2). */
 function timeFallsWithinPeriod (time: Date, period: Period, timezone: number | undefined): boolean {

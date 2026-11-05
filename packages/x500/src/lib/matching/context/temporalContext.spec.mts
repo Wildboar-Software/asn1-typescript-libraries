@@ -699,6 +699,37 @@ describe("evaluateTemporalContext", () => {
         expect(evaluateTemporalContext(assertion, value, MATCH_FLAG_HIGH_WORK_BUDGET)).toBe(true);
     });
 
+    it("matches between+entirely across 180 one-second Periods without walking each second", () => {
+        const periods: Period[] = [];
+        let hour = 9;
+        let minute = 0;
+        let second = 0;
+        for (let i = 0; i < 180; i++) {
+            const time = new DayTime(hour, minute, second);
+            periods.push(new Period([ new DayTimeBand(time, time) ]));
+            second += 1;
+            if (second === 60) {
+                second = 0;
+                minute += 1;
+                if (minute === 60) {
+                    minute = 0;
+                    hour += 1;
+                }
+            }
+        }
+        const assertion: TimeAssertion = {
+            between: new TimeAssertion_between(
+                new Date(2021, 4, 10, 9, 0, 0),
+                new Date(2021, 4, 10, 9, 2, 59),
+                TRUE,
+            ),
+        };
+        expect(evaluateTemporalContext(
+            _encode_TimeAssertion(assertion, DER),
+            _encode_TimeSpecification(new TimeSpecification({ periodic: periods }), DER),
+        )).toBe(true);
+    });
+
     it("matches between+entirely across abutting DayTimeBands from two Periods", () => {
         const assertion: TimeAssertion = {
             between: new TimeAssertion_between(
