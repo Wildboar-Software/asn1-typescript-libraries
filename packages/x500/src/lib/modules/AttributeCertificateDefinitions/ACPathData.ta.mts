@@ -102,6 +102,24 @@ export class ACPathData {
             _o._unrecognizedExtensionsList
         );
     }
+
+    /**
+     * @summary Whether both the PKC and the AC are absent.
+     * @description
+     *
+     * ASN.1 allows both components to be omitted. A hop with neither
+     * certificate is empty and should be treated as an error.
+     *
+     * @public
+     * @method
+     * @returns {boolean} `true` if both certificates are absent.
+     */
+    public isEmpty(): boolean {
+        return (
+            this.certificate === undefined
+            && this.attributeCertificate === undefined
+        );
+    }
 }
 
 /**

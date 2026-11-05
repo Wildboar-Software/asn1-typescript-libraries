@@ -83,6 +83,24 @@ export class CertificatePairExactAssertion {
             _o._unrecognizedExtensionsList
         );
     }
+
+    /**
+     * @summary Whether neither half of the pair is identified.
+     * @description
+     *
+     * X.509 requires at least one of `issuedToThisCAAssertion` and
+     * `issuedByThisCAAssertion`.
+     *
+     * @public
+     * @method
+     * @returns {boolean} `true` if both exact assertions are absent.
+     */
+    public isEmpty(): boolean {
+        return (
+            this.issuedToThisCAAssertion === undefined
+            && this.issuedByThisCAAssertion === undefined
+        );
+    }
 }
 
 /**

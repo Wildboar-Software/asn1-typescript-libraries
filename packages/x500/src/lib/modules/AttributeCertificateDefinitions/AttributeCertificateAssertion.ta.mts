@@ -115,6 +115,26 @@ export class AttributeCertificateAssertion {
             _o._unrecognizedExtensionsList
         );
     }
+
+    /**
+     * @summary Whether no matching component is present.
+     * @description
+     *
+     * Omitted components are unconstrained. An empty `attType` SET
+     * matches no types.
+     *
+     * @public
+     * @method
+     * @returns {boolean} `true` if every component is absent or empty.
+     */
+    public isEmpty(): boolean {
+        return (
+            this.holder === undefined
+            && (this.issuer === undefined || this.issuer.length === 0)
+            && this.attCertValidity === undefined
+            && (this.attType === undefined || this.attType.length === 0)
+        );
+    }
 }
 
 /**

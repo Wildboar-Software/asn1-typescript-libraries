@@ -157,6 +157,22 @@ export class PartialAttribute {
       vals: this.vals.map((value) => octetsToJSON(value)),
     };
   }
+
+  /**
+   * @summary Whether `vals` has no members.
+   * @description
+   *
+   * An empty SET is allowed (`typesOnly` search, access control, or
+   * modify delete/replace-all). The attribute description is still
+   * present.
+   *
+   * @public
+   * @method
+   * @returns {boolean} `true` if there are no values.
+   */
+  public isEmpty(): boolean {
+    return this.vals.length === 0;
+  }
 }
 
 
