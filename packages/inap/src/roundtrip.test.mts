@@ -3,6 +3,9 @@ import * as $ from "@wildboar/asn1/functional";
 import {
     AuthenticationLevel_basicLevels,
     AuthenticationLevel_basicLevels_level_simple,
+    entryACI as x500_entryACI,
+    prescriptiveACI as x500_prescriptiveACI,
+    subentryACI as x500_subentryACI,
 } from "@wildboar/x500/BasicAccessControl";
 import {
     AttributeTypeAndValue,
@@ -28,6 +31,26 @@ import {
 import {
     GrantsAndDenials_grantExecuteMethod,
 } from "./lib/modules/IN-CS2-SDF-BasicAccessControl/GrantsAndDenials.ta.mjs";
+import {
+    entryACI as cs2_entryACI,
+    prescriptiveACI as cs2_prescriptiveACI,
+    subentryACI as cs2_subentryACI,
+} from "./lib/modules/IN-CS2-SDF-BasicAccessControl/index.mjs";
+import { id_aca_entryACI as cs2_id_aca_entryACI } from "./lib/modules/IN-CS2-object-identifiers/id-aca-entryACI.va.mjs";
+import { id_aca_prescriptiveACI as cs2_id_aca_prescriptiveACI } from "./lib/modules/IN-CS2-object-identifiers/id-aca-prescriptiveACI.va.mjs";
+import { id_aca_subentryACI as cs2_id_aca_subentryACI } from "./lib/modules/IN-CS2-object-identifiers/id-aca-subentryACI.va.mjs";
+import {
+    entryACI as cs3_entryACI,
+    prescriptiveACI as cs3_prescriptiveACI,
+    subentryACI as cs3_subentryACI,
+} from "./lib/modules/IN-CS3-SCF-SDF-datatypes/index.mjs";
+import { id_aca_entryACI as cs3_id_aca_entryACI } from "./lib/modules/IN-CS3-object-identifiers/id-aca-entryACI.va.mjs";
+import {
+    entryACI as cs4_entryACI,
+    prescriptiveACI as cs4_prescriptiveACI,
+    subentryACI as cs4_subentryACI,
+} from "./lib/modules/IN-SCF-SDF-datatypes/index.mjs";
+import { id_aca_entryACI as cs4_id_aca_entryACI } from "./lib/modules/IN-object-identifiers/id-aca-entryACI.va.mjs";
 import {
     InitialDPArg,
     _decode_InitialDPArg,
@@ -216,6 +239,35 @@ describe("ACIItem", () => {
         expect(decoded.itemOrUserFirst.userFirst.userPermissions[0]?.grantsAndDenials)
             .toEqual(grants);
         expect(decoded).toEqual(original);
+    });
+});
+
+
+describe("IN ACI attributes", () => {
+    test("reuse X.500 attribute objects with capability-specific OIDs", () => {
+        expect(cs2_entryACI.decoderFor["&Type"]).toBe(x500_entryACI.decoderFor["&Type"]);
+        expect(cs2_entryACI.encoderFor["&Type"]).toBe(x500_entryACI.encoderFor["&Type"]);
+        expect(cs2_entryACI["&equality-match"]).toBe(x500_entryACI["&equality-match"]);
+        expect(cs2_entryACI["&usage"]).toBe(x500_entryACI["&usage"]);
+        expect(cs2_prescriptiveACI.decoderFor["&Type"]).toBe(x500_prescriptiveACI.decoderFor["&Type"]);
+        expect(cs2_subentryACI.decoderFor["&Type"]).toBe(x500_subentryACI.decoderFor["&Type"]);
+
+        expect(cs2_entryACI["&id"].isEqualTo(cs2_id_aca_entryACI)).toBe(true);
+        expect(cs2_prescriptiveACI["&id"].isEqualTo(cs2_id_aca_prescriptiveACI)).toBe(true);
+        expect(cs2_subentryACI["&id"].isEqualTo(cs2_id_aca_subentryACI)).toBe(true);
+        expect(cs2_entryACI["&id"].isEqualTo(x500_entryACI["&id"])).toBe(false);
+
+        expect(cs3_entryACI.decoderFor["&Type"]).toBe(x500_entryACI.decoderFor["&Type"]);
+        expect(cs3_entryACI["&id"].isEqualTo(cs3_id_aca_entryACI)).toBe(true);
+        expect(cs3_entryACI["&id"].isEqualTo(cs2_id_aca_entryACI)).toBe(false);
+        expect(cs3_prescriptiveACI.decoderFor["&Type"]).toBe(x500_prescriptiveACI.decoderFor["&Type"]);
+        expect(cs3_subentryACI.decoderFor["&Type"]).toBe(x500_subentryACI.decoderFor["&Type"]);
+
+        expect(cs4_entryACI.decoderFor["&Type"]).toBe(x500_entryACI.decoderFor["&Type"]);
+        expect(cs4_entryACI["&id"].isEqualTo(cs4_id_aca_entryACI)).toBe(true);
+        expect(cs4_entryACI["&id"].isEqualTo(cs2_id_aca_entryACI)).toBe(false);
+        expect(cs4_prescriptiveACI.decoderFor["&Type"]).toBe(x500_prescriptiveACI.decoderFor["&Type"]);
+        expect(cs4_subentryACI.decoderFor["&Type"]).toBe(x500_subentryACI.decoderFor["&Type"]);
     });
 });
 
