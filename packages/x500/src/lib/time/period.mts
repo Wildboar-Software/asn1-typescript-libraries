@@ -506,7 +506,7 @@ function *occurrencesWithinYear(
     }
 }
 
-function *occurrencesInfinitely(p: Period, startInstant: Date): IterableIterator<[Date, Date]> {
+function *occurrencesInfinitely(p: Period, startInstant: Date, lastYear: number = 9999): IterableIterator<[Date, Date]> {
     if (p.isEmpty()) {
         yield [MIN_GENERALIZED_TIME, MAX_GENERALIZED_TIME];
         return;
@@ -515,9 +515,15 @@ function *occurrencesInfinitely(p: Period, startInstant: Date): IterableIterator
     const bands = p.timesOfDay
         ? DayTimeBand.flatten(p.timesOfDay)
         : undefined;
+    if (bands?.length === 0) {
+        return;
+    }
     if (p.years) {
         const startYear = startInstant.getFullYear();
         for (const year of years(p)) {
+            if (year > lastYear) {
+                break;
+            }
             if (year < startYear) {
                 continue;
             }
@@ -531,7 +537,7 @@ function *occurrencesInfinitely(p: Period, startInstant: Date): IterableIterator
         }
     } else {
         let year = startInstant.getFullYear();
-        while (year <= 9999) {
+        while (year <= lastYear) {
             yield *occurrencesWithinYear(p, year, bands, startInstant);
             year++;
         }
@@ -539,10 +545,18 @@ function *occurrencesInfinitely(p: Period, startInstant: Date): IterableIterator
 }
 
 export
-function *occurrences(p: Period, startInstant: Date, endInstant: Date = MAX_GENERALIZED_TIME): IterableIterator<[Date, Date]> {
-    for (const occur of contiguator(occurrencesInfinitely(p, startInstant))) {
+function *occurrences(p: Period, startInstant: Date, endInstant: Date = MAX_GENERALIZED_TIME, coalesce: boolean = true): IterableIterator<[Date, Date]> {
+    // Include the following year because its first X.520 week may start in
+    // December. Bound even empty streams, which otherwise search through 9999.
+    const spans = occurrencesInfinitely(p, startInstant, coalesce
+        ? 9999
+        : Math.min(9999, endInstant.getFullYear() + 1));
+    for (const occur of (coalesce ? contiguator(spans) : spans)) {
         if (occur[0] > endInstant) {
             break;
+        }
+        if (!coalesce && occur[1] < startInstant) {
+            continue;
         }
         yield occur;
     }

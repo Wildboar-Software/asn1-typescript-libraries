@@ -118,6 +118,30 @@ function testOccurrences (
 }
 
 describe("occurrences", () => {
+    test("uncoalesced occurrences yield incrementally and stop at the requested end", () => {
+        const p = new Period([new DayTimeBand()]);
+        const spans = p.occurrences(START_2026, new Date(2026, 0, 2, 23, 59, 59), false);
+        expect(spans.next().value).toEqual([
+            START_2026,
+            new Date(2026, 0, 1, 23, 59, 59),
+        ]);
+        expect(spans.next().value).toEqual([
+            new Date(2026, 0, 2),
+            new Date(2026, 0, 2, 23, 59, 59),
+        ]);
+        expect(spans.next().done).toBe(true);
+    });
+
+    test("uncoalesced occurrences exclude spans ending before the start", () => {
+        const spans = new Period(undefined, undefined, undefined, { allMonths: null })
+            .occurrences(new Date(2026, 5, 15), new Date(2026, 5, 16), false);
+        expect(Array.from(spans)).toEqual([fullSpan(2026, 5, 1, 2026, 5, 30)]);
+    });
+
+    test("an empty time-band set has no occurrences", () => {
+        expect(Array.from(new Period([]).occurrences(START_2026, START_OF_2027, false))).toEqual([]);
+    });
+
     test("timesOfDay uses civil clock hours on a 25-hour DST fall-back day", () => {
         // 7 Nov 2021 in America/New_York is 25 hours. Elapsed-hours-from
         // midnight would put this band at 11:00–12:00 instead of 12:00–13:00.

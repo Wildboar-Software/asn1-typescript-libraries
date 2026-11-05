@@ -53,9 +53,8 @@ function inSpecTimeZone (instant: Date, timeZone: number | undefined): Date {
 }
 
 /**
- * Cap on greedy-cover steps for `between` + `entirely`. Open-ended
- * assertions use `MAX_DATE`; each step is one occurrence, so a daily
- * band could otherwise iterate without bound.
+ * Cap on occurrences consumed by the union merge for `between` + `entirely`.
+ * Open-ended assertions must not consume arbitrarily many recurring spans.
  */
 const MAX_ENTIRELY_COVER_STEPS = 1000;
 
@@ -65,57 +64,44 @@ const MAX_ENTIRELY_COVER_STEPS = 1000;
 const MAX_ENTIRELY_COVER_STEPS_HIGH_WORK_BUDGET = 100_000;
 
 /**
- * @summary Instant one second after `instant`.
+ * @summary Start of the next second after `instant`.
  * @description
  *
- * X.520 clause 10.2 `DayTime` is second-precision. The cover walk
- * advances by this amount after an occurrence end so
- * we can select a later `DayTimeBand` (band matching ignores milliseconds).
+ * X.520 clause 10.2 `DayTime` is second-precision. Calendar spans can
+ * end in .999, so adding 1000 ms would skip part of the next second.
  *
  * @param {Date} instant Inclusive end of the current covering occurrence.
- * @returns {Date} `instant` plus one second.
+ * @returns {Date} Start of the next second after `instant`.
  * @function
  * @author Cursor Grok 4.6
  */
 function secondAfter (instant: Date): Date {
-    return new Date(instant.valueOf() + 1000);
+    return new Date((Math.floor(instant.valueOf() / 1000) + 1) * 1000);
 }
 
-/**
- * @summary Latest inclusive occurrence end that covers `t`.
- * @description
- *
- * Among the stored `periodic` SET, take the farthest inclusive end of
- * any `Period` occurrence that contains `t`. `null` means `t` is a
- * hole in the union (X.520 clause 10.2).
- *
- * Occurrence bounds already include the `DayTimeBand` that contains
- * `t`. Later bands of the same `Period` are found on the next walk
- * step.
- *
- * @param {Period[]} periods Stored `TimeSpecification.time.periodic`.
- * @param {Date} t Instant that must lie in the union.
- * @returns {Date | null} Farthest inclusive end, or `null` if none
- *  cover `t`.
- * @function
- * @author Cursor Grok 4.6
- */
-function farthestOccurrenceEndCovering (periods: Period[], t: Date): Date | null {
-    let farthest: Date | null = null;
-    for (const period of periods) {
-        const boundaries: [ Date, Date ] | null = period.occurrences(t).next().value ?? null;
-        if (!boundaries) {
-            continue;
+interface OccurrenceHead {
+    bounds: [Date, Date];
+    iterator: IterableIterator<[Date, Date]>;
+}
+
+/** Restore the min-heap ordered by occurrence start after replacing a head. */
+function siftOccurrenceDown (heap: OccurrenceHead[], index: number): void {
+    const head = heap[index];
+    while ((index * 2) + 1 < heap.length) {
+        let child = (index * 2) + 1;
+        if (
+            (child + 1 < heap.length)
+            && (heap[child + 1].bounds[0] < heap[child].bounds[0])
+        ) {
+            child++;
         }
-        const [lower, upper] = boundaries;
-        if (lower > t) {
-            continue;
+        if (head.bounds[0] <= heap[child].bounds[0]) {
+            break;
         }
-        if ((farthest === null) || (upper.valueOf() > farthest.valueOf())) {
-            farthest = upper;
-        }
+        heap[index] = heap[child];
+        index = child;
     }
-    return farthest;
+    heap[index] = head;
 }
 
 /**
@@ -127,17 +113,22 @@ function farthestOccurrenceEndCovering (periods: Period[], t: Date): Date | null
  * union of all `Period` occurrences (the SET), not one occurrence of
  * one `Period`.
  *
- * Walk `t` from `start`; at each `t` take the farthest covering
- * occurrence end and continue at the next second. A hole, or more
- * than {@link MAX_ENTIRELY_COVER_STEPS} steps, fails. Open-ended
- * assertions use `MAX_DATE`. `MATCH_FLAG_HIGH_WORK_BUDGET` raises the
- * cap to {@link MAX_ENTIRELY_COVER_STEPS_HIGH_WORK_BUDGET}.
+ * Merge sorted occurrence streams using a min-heap, keeping one head per
+ * Period. Each occurrence is consumed once, without restarting generators
+ * or rescanning all Periods at each boundary. Heap work is O(p + k log p)
+ * and auxiliary space O(p), for p Periods and k consumed occurrences;
+ * this excludes the cost of generating calendar occurrences.
+ *
+ * Coalescing is disabled so a single iterator.next() cannot eagerly merge
+ * thousands of years before the work cap is checked. Exhaustion returns
+ * undefined (indeterminate), which must not become a match under negation.
+ * The cap counts uncoalesced occurrences, including contained spans:
+ * 1000 normally, or 100000 with MATCH_FLAG_HIGH_WORK_BUDGET.
  *
  * @param {Period[]} periods Stored `TimeSpecification.time.periodic`.
  * @param {Date} start Inclusive start of the asserted band (spec zone).
  * @param {Date} end Inclusive end of the asserted band (spec zone).
- * @returns {boolean} `true` iff every instant in `[start, end]` is
- *  covered.
+ * @returns Whether the band is covered, or undefined on budget exhaustion.
  * @function
  * @author Cursor Grok 4.6
  */
@@ -146,33 +137,60 @@ function periodsEntirelyCoverInterval (
     start: Date,
     end: Date,
     flags: number = 0,
-): boolean {
-    if (start.valueOf() > end.valueOf()) {
+): boolean | undefined {
+    if (!Number.isFinite(start.valueOf()) || !Number.isFinite(end.valueOf()) || start > end) {
         return false;
     }
     const maxSteps: number = (flags & MATCH_FLAG_HIGH_WORK_BUDGET)
         ? MAX_ENTIRELY_COVER_STEPS_HIGH_WORK_BUDGET
         : MAX_ENTIRELY_COVER_STEPS;
-    let t: Date = start;
-    let steps: number = 0;
-    while (t.valueOf() <= end.valueOf()) {
-        steps += 1;
-        if (steps > maxSteps) {
+    const heap: OccurrenceHead[] = [];
+    for (const period of periods) {
+        const iterator = period.occurrences(start, end, false);
+        const next = iterator.next();
+        if (!next.done) {
+            heap.push({ bounds: next.value, iterator });
+        }
+    }
+    for (let i = Math.floor(heap.length / 2) - 1; i >= 0; i--) {
+        siftOccurrenceDown(heap, i);
+    }
+    let t = start;
+    for (let steps = 0; heap.length; steps++) {
+        if (steps >= maxSteps) {
             if (flags & MATCH_FLAG_DEBUG) {
                 console.error(
                     `@wildboar/x500: debug: temporalContext: exceeded ${maxSteps} cover steps`,
                 );
             }
+            return undefined;
+        }
+        const head = heap[0];
+        const [lower, upper] = head.bounds;
+        if (lower > t) {
+            // All remaining starts are later: there is a hole in the union.
             return false;
         }
-        const farthestEnd: Date | null = farthestOccurrenceEndCovering(periods, t);
-        if (farthestEnd === null) {
-            // No period covered that instant (a hole in the union).
-            return false;
+        if (upper >= t) {
+            const nextSecond = secondAfter(upper);
+            if (nextSecond > end) {
+                return true;
+            }
+            t = nextSecond;
         }
-        t = secondAfter(farthestEnd);
+        const next = head.iterator.next();
+        if (!next.done) {
+            head.bounds = next.value;
+        } else {
+            const last = heap.pop()!;
+            if (!heap.length) {
+                break;
+            }
+            heap[0] = last;
+        }
+        siftOccurrenceDown(heap, 0);
     }
-    return true;
+    return false;
 }
 /** True if `time` falls in one occurrence of `period` (clause 10.2). */
 function timeFallsWithinPeriod (time: Date, period: Period, timezone: number | undefined): boolean {
@@ -241,7 +259,7 @@ function timeSpecificationContains (
     flags: number = 0,
 ): boolean {
     const constantTime = Boolean(flags & MATCH_FLAG_CONSTANT_TIME);
-    const result = ((): boolean => {
+    const result = ((): boolean | undefined => {
         const timezone: number | undefined = (spec.timeZone !== undefined)
             ? Number(spec.timeZone)
             : undefined;
@@ -296,7 +314,8 @@ function timeSpecificationContains (
             throw new Error(); // There is no other option.
         }
     })();
-    return xor(result, spec.notThisTime ?? TimeSpecification._default_value_for_notThisTime);
+    return (result !== undefined)
+        && xor(result, spec.notThisTime ?? TimeSpecification._default_value_for_notThisTime);
 }
 
 /**
@@ -350,7 +369,8 @@ function evaluateTemporalContextTyped (
  * whole asserted band must lie inside the stored times (for
  * `periodic`, the union of all `Period` occurrences). Missing
  * timezone is interpreted in the DSA's zone. Periodic SET OF is a
- * logical OR.
+ * logical OR. Exhausting the periodic containment work budget returns
+ * FALSE even when `notThisTime` is set.
  *
  * `assertion` may be an element, a `TimeAssertion`, or a `Date`
  * (the `at` alternative). `value` may be an element or a
