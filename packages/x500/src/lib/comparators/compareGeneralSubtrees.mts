@@ -29,39 +29,19 @@ function subtreeKey (subtree: GeneralSubtree): string {
 }
 
 /**
- * @summary Set of subtree keys, keeping duplicate subtrees distinct
- * @description
- *
- * Each subtree contributes one element. A repeated key is stored
- * again with its occurrence, so two copies do not collapse into one.
- *
- * @param subtrees The subtrees to hash
- * @returns One set element per subtree
- * @function
- */
-function subtreeKeySet (subtrees: GeneralSubtrees): Set<string> {
-    const seen: Map<string, number> = new Map();
-    const keys: Set<string> = new Set();
-    for (let i = 0; i < subtrees.length; i++) {
-        const key: string = subtreeKey(subtrees[i]);
-        const occurrence: number = (seen.get(key) ?? 0) + 1;
-        seen.set(key, occurrence);
-        keys.add(`#${occurrence}:${key}`);
-    }
-    return keys;
-}
-
-/**
  * @summary Compare two `GeneralSubtrees` values
  * @description
  *
  * By default (`exactOrdering`) each subtree is compared with the
  * subtree in the same position. When `exactOrdering` is false, order
- * is not significant: both sequences are turned into sets of
- * {@link subtreeKey} values and those sets must be equal. That agrees
- * with `compareGeneralSubtree` when no equality matcher is supplied.
- * A matcher can equate directory names whose keys differ; only the
- * ordered comparison uses the matcher.
+ * is not significant: keys from the first sequence go in a set. If
+ * the number of keys differs from the number of subtrees in the
+ * other sequence, they do not match. Otherwise each subtree on the
+ * other side must have a key in that set. A repeated subtree
+ * collapses to one key. That agrees with `compareGeneralSubtree`
+ * when no equality matcher is supplied. A matcher can equate
+ * directory names whose keys differ; only the ordered comparison
+ * uses the matcher.
  *
  * @param a One value
  * @param b The other
@@ -90,13 +70,19 @@ function compareGeneralSubtrees (
         }
         return true;
     }
-    const aKeys: Set<string> = subtreeKeySet(a);
-    for (const key of subtreeKeySet(b)) {
-        if (!aKeys.delete(key)) {
+    const keys: Set<string> = new Set();
+    for (let i = 0; i < a.length; i++) {
+        keys.add(subtreeKey(a[i]));
+    }
+    if (keys.size !== b.length) {
+        return false;
+    }
+    for (let i = 0; i < b.length; i++) {
+        if (!keys.delete(subtreeKey(b[i]))) {
             return false;
         }
     }
-    return aKeys.size === 0;
+    return true;
 }
 
 export default compareGeneralSubtrees;

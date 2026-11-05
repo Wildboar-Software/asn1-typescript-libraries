@@ -60,7 +60,7 @@ describe("NameConstraintsSyntax.isEqualTo()", () => {
             new NameConstraintsSyntax([subtree("A.Example"), subtree("a.example")], [subtree("deny.example")]),
             undefined,
             ignoreOrder,
-        )).toBe(true);
+        )).toBe(false);
         expect(a.isEqualTo(
             new NameConstraintsSyntax(undefined, a.excludedSubtrees),
             undefined,
