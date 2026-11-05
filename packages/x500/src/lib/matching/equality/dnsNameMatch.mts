@@ -7,9 +7,79 @@ import {
     createEqualityMatcher,
     MATCH_FLAG_CONSTANT_TIME,
     MATCH_FLAG_DEBUG,
+    MATCH_FLAG_VALUE_NORMALIZED,
     type Matcher,
     type TypedEquationFunction,
 } from "../../types/matching.mjs";
+
+const localDomainToUnicode = domainToUnicode;
+const localCaseIgnoreMatchTyped = caseIgnoreMatchTyped;
+const FLAG_VALUE_NORMALIZED = MATCH_FLAG_VALUE_NORMALIZED;
+const FLAG_CONSTANT_TIME = MATCH_FLAG_CONSTANT_TIME;
+const FLAG_DEBUG = MATCH_FLAG_DEBUG;
+
+/**
+ * @summary Whether a stored domain still needs `domainToUnicode`.
+ * @description
+ *
+ * ASCII LDH names (`A–Z` / `a–z` / `0–9` / `-`, labels separated by
+ * `.`) and a complete-label wildcard `*` already compare correctly
+ * with `caseIgnoreMatch`. A-labels (`xn--…`), non-ASCII, spaces, and
+ * other non-LDH characters still go through IDNA so U-labels and
+ * invalid names keep their existing results.
+ *
+ * @param {string} domain Domain after `trim()`, before IDNA.
+ * @returns {boolean} `true` iff `domainToUnicode` must still run.
+ * @function
+ * @author Cursor Grok 4.6
+ */
+export
+function storedDnsNameNeedsIdna (domain: string): boolean {
+    const len = domain.length;
+    if (len === 0) {
+        return true;
+    }
+    let labelStart = 0;
+    for (let i = 0; i <= len; i++) {
+        const c = (i === len) ? 46 : domain.charCodeAt(i);
+        if (c === 46) {
+            const labelLen = i - labelStart;
+            if ((labelLen === 1) && (domain.charCodeAt(labelStart) === 42)) {
+                labelStart = i + 1;
+                continue;
+            }
+            if (labelLen >= 4) {
+                const c0 = domain.charCodeAt(labelStart) | 32;
+                const c1 = domain.charCodeAt(labelStart + 1) | 32;
+                if (
+                    (c0 === 120)
+                    && (c1 === 110)
+                    && (domain.charCodeAt(labelStart + 2) === 45)
+                    && (domain.charCodeAt(labelStart + 3) === 45)
+                ) {
+                    return true;
+                }
+            }
+            for (let j = labelStart; j < i; j++) {
+                const cc = domain.charCodeAt(j);
+                if (
+                    !((cc >= 48) && (cc <= 57))
+                    && !((cc >= 65) && (cc <= 90))
+                    && !((cc >= 97) && (cc <= 122))
+                    && (cc !== 45)
+                ) {
+                    return true;
+                }
+            }
+            labelStart = i + 1;
+            continue;
+        }
+        if (c > 127) {
+            return true;
+        }
+    }
+    return false;
+}
 
 /**
  * `domainToUnicode`, then prepare each label with `prepString`.
@@ -18,7 +88,7 @@ import {
  */
 export
 function prepareDnsAssertion (domain: string, el?: ASN1Element): string {
-    const unicode = domainToUnicode(domain.trim());
+    const unicode = localDomainToUnicode(domain.trim());
     if (unicode === "") {
         return "";
     }
@@ -42,6 +112,29 @@ function prepareDnsAssertion (domain: string, el?: ASN1Element): string {
     return prepared.join(".");
 }
 
+/**
+ * @summary Stored domain for label comparison.
+ * @description
+ *
+ * `MATCH_FLAG_VALUE_NORMALIZED` keeps the stored string as-is.
+ * Otherwise trim, then skip `domainToUnicode` for ASCII LDH / `*`.
+ *
+ * @param {string} stored Decoded stored domain.
+ * @param {number} flags Match flags.
+ * @returns {string} Domain to split into labels.
+ * @function
+ * @author Cursor Grok 4.6
+ */
+function storedDomainForMatch (stored: string, flags: number): string {
+    if (flags & FLAG_VALUE_NORMALIZED) {
+        return stored;
+    }
+    const trimmed = stored.trim();
+    return storedDnsNameNeedsIdna(trimmed)
+        ? localDomainToUnicode(trimmed)
+        : trimmed;
+}
+
 function compareLabels (
     a: string,
     b: string,
@@ -51,7 +144,7 @@ function compareLabels (
     if (a === "*" || b === "*") {
         return wildcardAllowed;
     }
-    return caseIgnoreMatchTyped(a, b, undefined, flags);
+    return localCaseIgnoreMatchTyped(a, b, undefined, flags);
 }
 
 /**
@@ -70,6 +163,8 @@ function compareLabels (
  * @param assertion Presented domain, already converted with
  *  `domainToUnicode` and with each label prepared.
  * @param value Stored domain, or that domain already decoded.
+ *  ASCII LDH names and a leftmost `*` skip `domainToUnicode`.
+ *  `MATCH_FLAG_VALUE_NORMALIZED` skips IDNA on the stored value.
  */
 export
 function dnsNameMatchTyped (
@@ -81,16 +176,16 @@ function dnsNameMatchTyped (
     const stored = typeof value === "string" ? value : value.utf8String;
     // The assertion is prepared once. `domainToUnicode` preserves `*` and `.`.
     const a = assertion;
-    const v = domainToUnicode(stored.trim());
+    const v = storedDomainForMatch(stored, flags);
     if (a === "" || v === "") {
-        if (flags & MATCH_FLAG_DEBUG) {
+        if (flags & FLAG_DEBUG) {
             console.error(
                 "@wildboar/x500: debug: dnsNameMatch: empty or invalid domain name",
             );
         }
         return false;
     }
-    const constantTime = Boolean(flags & MATCH_FLAG_CONSTANT_TIME);
+    const constantTime = Boolean(flags & FLAG_CONSTANT_TIME);
     let matched = true;
     let sawUndefined = false;
 

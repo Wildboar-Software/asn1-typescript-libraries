@@ -1,6 +1,11 @@
 import { DER, _encodeUTF8String } from "@wildboar/asn1/functional";
 import type { ASN1Element } from "@wildboar/asn1";
-import { dnsNameMatch as dnsNameMatch_ } from "./dnsNameMatch.mjs";
+import {
+    dnsNameMatch as dnsNameMatch_,
+    dnsNameMatchTyped,
+    storedDnsNameNeedsIdna,
+} from "./dnsNameMatch.mjs";
+import { MATCH_FLAG_VALUE_NORMALIZED } from "../../types/matching.mjs";
 import { onStoredValue } from "./onStoredValue.spec.mjs";
 
 const dnsNameMatch = onStoredValue(dnsNameMatch_);
@@ -167,5 +172,33 @@ describe("dnsNameMatch", () => {
             dns("example.com"),
             dns("xn--c1yn36f.com"),
         )).toBe(false);
+    });
+
+    it("skips domainToUnicode for ASCII LDH stored names and wildcards", () => {
+        expect(storedDnsNameNeedsIdna("www.example.com")).toBe(false);
+        expect(storedDnsNameNeedsIdna("WWW.Example.COM")).toBe(false);
+        expect(storedDnsNameNeedsIdna("*.example.com")).toBe(false);
+        expect(storedDnsNameNeedsIdna("xn--c1yn36f.com")).toBe(true);
+        expect(storedDnsNameNeedsIdna("XN--C1YN36F.COM")).toBe(true);
+        expect(storedDnsNameNeedsIdna("點看.com")).toBe(true);
+        expect(storedDnsNameNeedsIdna("not a domain")).toBe(true);
+        expect(dnsNameMatch(dns("WWW.Example.COM"), dns("www.example.com"))).toBe(true);
+        expect(dnsNameMatch(dns("*.example.com"), dns("www.example.com"))).toBe(true);
+    });
+
+    it("honors MATCH_FLAG_VALUE_NORMALIZED by skipping IDNA on the stored value", () => {
+        expect(dnsNameMatchTyped("點看.com", "xn--c1yn36f.com")).toBe(true);
+        expect(dnsNameMatchTyped(
+            "點看.com",
+            "xn--c1yn36f.com",
+            undefined,
+            MATCH_FLAG_VALUE_NORMALIZED,
+        )).toBe(false);
+        expect(dnsNameMatchTyped(
+            "www.example.com",
+            "www.example.com",
+            undefined,
+            MATCH_FLAG_VALUE_NORMALIZED,
+        )).toBe(true);
     });
 });
