@@ -55,19 +55,20 @@ function subtreeKeySet (subtrees: GeneralSubtrees): Set<string> {
  * @summary Compare two `GeneralSubtrees` values
  * @description
  *
- * By default each subtree is compared with the subtree in the same
- * position. When `ignoreOrder` is true, order is not significant:
- * both sequences are turned into sets of {@link subtreeKey} values
- * and those sets must be equal. That agrees with
- * `compareGeneralSubtree` when no equality matcher is supplied. A
- * matcher can equate directory names whose keys differ; only the
+ * By default (`exactOrdering`) each subtree is compared with the
+ * subtree in the same position. When `exactOrdering` is false, order
+ * is not significant: both sequences are turned into sets of
+ * {@link subtreeKey} values and those sets must be equal. That agrees
+ * with `compareGeneralSubtree` when no equality matcher is supplied.
+ * A matcher can equate directory names whose keys differ; only the
  * ordered comparison uses the matcher.
  *
  * @param a One value
  * @param b The other
  * @param getEqualityMatcher A function that takes an attribute type and
  *  returns a function that can equality-match two values of that type
- * @param ignoreOrder When true, subtree order does not affect the result
+ * @param exactOrdering When true, subtree order must match. When
+ *  false, order is ignored. Defaults to true.
  * @returns {boolean} `true` if they match; `false` otherwise
  * @function
  */
@@ -76,12 +77,12 @@ function compareGeneralSubtrees (
     a: GeneralSubtrees,
     b: GeneralSubtrees,
     getEqualityMatcher?: (attributeType: OBJECT_IDENTIFIER) => EqualityMatcher | undefined,
-    ignoreOrder: boolean = false,
+    exactOrdering: boolean = true,
 ): boolean {
     if (a.length !== b.length) {
         return false;
     }
-    if (!ignoreOrder) {
+    if (exactOrdering) {
         for (let i = 0; i < a.length; i++) {
             if (!compareGeneralSubtree(a[i], b[i], getEqualityMatcher)) {
                 return false;

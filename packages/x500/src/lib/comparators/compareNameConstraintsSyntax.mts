@@ -46,7 +46,7 @@ function compareNameConstraintsSyntax (
     getEqualityMatcher?: (attributeType: OBJECT_IDENTIFIER) => EqualityMatcher | undefined,
     options?: CompareNameConstraintsSyntaxOptions,
 ): boolean {
-    const ignoreOrder: boolean = options?.ignoreSubtreeOrder === true;
+    const exactOrdering: boolean = options?.ignoreSubtreeOrder !== true;
     if (Boolean(a.permittedSubtrees) !== Boolean(b.permittedSubtrees)) {
         return false;
     }
@@ -60,7 +60,7 @@ function compareNameConstraintsSyntax (
             a.permittedSubtrees,
             b.permittedSubtrees,
             getEqualityMatcher,
-            ignoreOrder,
+            exactOrdering,
         )
     ) {
         return false;
@@ -72,7 +72,7 @@ function compareNameConstraintsSyntax (
             a.excludedSubtrees,
             b.excludedSubtrees,
             getEqualityMatcher,
-            ignoreOrder,
+            exactOrdering,
         )
     ) {
         return false;
