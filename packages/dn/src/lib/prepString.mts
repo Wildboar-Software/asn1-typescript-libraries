@@ -121,6 +121,11 @@ function prepStringGeneral (str: string, caseFold: boolean): string | undefined 
     if (caseFold) {
         mapped = foldCase(mapped);
     }
+    // Comment by Jonathan M. Wilbur (not AI):
+    // I checked: there are only control characters above ASCII (>0x7F)
+    // to the first Unicode code point that needs normalization (0x0A).
+    // It is safe to say that normalization will virtually always be needed if
+    // the input isn't plain ASCII.
     mapped = mapped.normalize("NFKC"); // 7.3: Normalize
     if (mapped.length === 0) {
         return undefined;
@@ -129,7 +134,7 @@ function prepStringGeneral (str: string, caseFold: boolean): string | undefined 
 }
 
 /**
- * Prepare a short string and any printable ASCII string by scanning
+ * Prepare a short string or any printable ASCII string by scanning
  * it once.
  *
  * This is the path taken when {@link prepStringGeneral} does not apply:
@@ -138,12 +143,15 @@ function prepStringGeneral (str: string, caseFold: boolean): string | undefined 
  * NFKC, and its case fold is `toLowerCase`. A short string that is not
  * printable ASCII calls `replace` only for the mappings the scan found.
  */
-function prepStringShortAndAscii (str: string, caseFold: boolean): string | undefined {
+function prepStringShortOrAscii (str: string, caseFold: boolean): string | undefined {
     const n: number = str.length;
     let mapControls: boolean = false;
     let maybeMappedToNothing: boolean = false;
+    /** Whether the string needs insignificant whitespace removal. */
     let needsSpace: boolean = false;
+    /** Whether the previous character was a space. */
     let prevSpace: boolean = false;
+    /** Whether the string is plain ASCII. */
     let plain: boolean = true;
     for (let i: number = 0; i < n; i++) {
         const c: number = str.charCodeAt(i);
@@ -193,6 +201,11 @@ function prepStringShortAndAscii (str: string, caseFold: boolean): string | unde
     if (caseFold) {
         mapped = foldCase(mapped);
     }
+    // Comment by Jonathan M. Wilbur (not AI):
+    // I checked: there are only control characters above ASCII (>0x7F)
+    // to the first Unicode code point that needs normalization (0x0A).
+    // It is safe to say that normalization will virtually always be needed if
+    // the input isn't plain ASCII.
     mapped = mapped.normalize("NFKC");
     if (mapped.length === 0) {
         return undefined;
@@ -233,7 +246,7 @@ function prepString (str: string, options?: PrepStringOptions): string | undefin
     if (str.length > SCAN_LIMIT && notPlainAscii.test(str)) {
         return prepStringGeneral(str, caseFold);
     }
-    return prepStringShortAndAscii(str, caseFold);
+    return prepStringShortOrAscii(str, caseFold);
 }
 
 /**
