@@ -27,7 +27,8 @@ interface CompareNameConstraintsSyntaxOptions {
  * `permittedSubtrees` and `excludedSubtrees` are compared separately
  * and are not interchangeable. By default, subtrees are compared in
  * encoding order. Pass `{ ignoreSubtreeOrder: true }` when that order
- * should not matter.
+ * should not matter. Ignored order hashes each subtree with
+ * `generalNameToKey` and compares the sets.
  *
  * @param a One value
  * @param b The other

@@ -1,9 +1,55 @@
 import type { OBJECT_IDENTIFIER } from "@wildboar/asn1";
+import { generalNameToKey } from "@wildboar/gn";
 import type EqualityMatcher from "../types/EqualityMatcher.mjs";
+import type {
+    GeneralSubtree,
+} from "../modules/CertificateExtensions/GeneralSubtree.ta.mjs";
 import type {
     GeneralSubtrees,
 } from "../modules/CertificateExtensions/GeneralSubtrees.ta.mjs";
 import compareGeneralSubtree from "./compareGeneralSubtree.mjs";
+
+/**
+ * @summary Key for one `GeneralSubtree`
+ * @description
+ *
+ * `generalNameToKey` hashes the base name the same way
+ * `compareGeneralName` compares it when no equality matcher is
+ * supplied. Minimum defaults to 0. Absent maximum is an empty field
+ * so it does not collide with maximum 0.
+ *
+ * @param subtree The subtree to hash
+ * @returns A string that can be stored in a set
+ * @function
+ */
+function subtreeKey (subtree: GeneralSubtree): string {
+    const minimum: number = subtree.minimum ?? 0;
+    const maximum: string = subtree.maximum === undefined ? "" : String(subtree.maximum);
+    return `${minimum}:${maximum}:${generalNameToKey(subtree.base)}`;
+}
+
+/**
+ * @summary Set of subtree keys, keeping duplicate subtrees distinct
+ * @description
+ *
+ * Each subtree contributes one element. A repeated key is stored
+ * again with its occurrence, so two copies do not collapse into one.
+ *
+ * @param subtrees The subtrees to hash
+ * @returns One set element per subtree
+ * @function
+ */
+function subtreeKeySet (subtrees: GeneralSubtrees): Set<string> {
+    const seen: Map<string, number> = new Map();
+    const keys: Set<string> = new Set();
+    for (let i = 0; i < subtrees.length; i++) {
+        const key: string = subtreeKey(subtrees[i]);
+        const occurrence: number = (seen.get(key) ?? 0) + 1;
+        seen.set(key, occurrence);
+        keys.add(`#${occurrence}:${key}`);
+    }
+    return keys;
+}
 
 /**
  * @summary Compare two `GeneralSubtrees` values
@@ -11,8 +57,11 @@ import compareGeneralSubtree from "./compareGeneralSubtree.mjs";
  *
  * By default each subtree is compared with the subtree in the same
  * position. When `ignoreOrder` is true, order is not significant:
- * each subtree must pair with a distinct equal subtree on the other
- * side.
+ * both sequences are turned into sets of {@link subtreeKey} values
+ * and those sets must be equal. That agrees with
+ * `compareGeneralSubtree` when no equality matcher is supplied. A
+ * matcher can equate directory names whose keys differ; only the
+ * ordered comparison uses the matcher.
  *
  * @param a One value
  * @param b The other
@@ -40,24 +89,13 @@ function compareGeneralSubtrees (
         }
         return true;
     }
-    const paired: boolean[] = new Array(b.length).fill(false);
-    for (let i = 0; i < a.length; i++) {
-        let matched: boolean = false;
-        for (let j = 0; j < b.length; j++) {
-            if (paired[j]) {
-                continue;
-            }
-            if (compareGeneralSubtree(a[i], b[j], getEqualityMatcher)) {
-                paired[j] = true;
-                matched = true;
-                break;
-            }
-        }
-        if (!matched) {
+    const aKeys: Set<string> = subtreeKeySet(a);
+    for (const key of subtreeKeySet(b)) {
+        if (!aKeys.delete(key)) {
             return false;
         }
     }
-    return true;
+    return aKeys.size === 0;
 }
 
 export default compareGeneralSubtrees;
