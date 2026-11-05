@@ -156,8 +156,8 @@ export class AttCertValidityPeriod {
      * are the same instant.
      * @method
      */
-    public get isEmpty(): boolean {
-        return this.notBeforeTime.getTime() === this.notAfterTime.getTime();
+    public isEmpty(): boolean {
+        return this.notBeforeTime.getTime() >= this.notAfterTime.getTime();
     }
 
     /**

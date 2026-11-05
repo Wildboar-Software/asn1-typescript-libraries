@@ -143,8 +143,8 @@ export class Validity {
      * @returns {boolean} `true` if `notBefore` and `notAfter` are the same instant.
      * @method
      */
-    public get isEmpty(): boolean {
-        return this.notBeforeAsDate().getTime() === this.notAfterAsDate().getTime();
+    public isEmpty(): boolean {
+        return this.notBeforeAsDate().getTime() >= this.notAfterAsDate().getTime();
     }
 
     /**

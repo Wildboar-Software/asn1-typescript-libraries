@@ -24,8 +24,8 @@ describe("AttCertValidityPeriod Range API", () => {
     it("isEqual / isEqualTo / isEmpty copy VS Code Range", () => {
         expect(year.isEqual(new AttCertValidityPeriod(jan, dec))).toBe(true);
         expect(year.isEqualTo(new AttCertValidityPeriod(jan, dec))).toBe(true);
-        expect(year.isEmpty).toBe(false);
-        expect(new AttCertValidityPeriod(jan, jan).isEmpty).toBe(true);
+        expect(year.isEmpty()).toBe(false);
+        expect(new AttCertValidityPeriod(jan, jan).isEmpty()).toBe(true);
     });
 
     it("intersection / union / overlaps copy VS Code Range", () => {
