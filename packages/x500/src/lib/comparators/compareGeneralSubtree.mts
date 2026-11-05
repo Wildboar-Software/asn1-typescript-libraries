@@ -22,10 +22,10 @@ function compareGeneralSubtree (
     b: GeneralSubtree,
     getEqualityMatcher?: (attributeType: OBJECT_IDENTIFIER) => EqualityMatcher | undefined,
 ): boolean {
-    if ((a.minimum ?? DEFAULT_MINIMUM) !== (b.minimum ?? DEFAULT_MINIMUM)) {
+    if ((a.minimum ?? DEFAULT_MINIMUM) != (b.minimum ?? DEFAULT_MINIMUM)) {
         return false;
     }
-    if (a.maximum !== b.maximum) {
+    if (a.maximum != b.maximum) {
         return false;
     }
     return compareGeneralName(a.base, b.base, getEqualityMatcher);
