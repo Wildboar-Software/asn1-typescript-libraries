@@ -1,8 +1,6 @@
-import {
-    type DistinguishedName,
-    SubtreeSpecification,
-    type Refinement,
-} from "../modules/InformationFramework/index.mjs";
+import type { DistinguishedName } from "../modules/InformationFramework/DistinguishedName.ta.mjs";
+import type { Refinement } from "../modules/InformationFramework/Refinement.ta.mjs";
+import { SubtreeSpecification } from "../modules/InformationFramework/SubtreeSpecification.ta.mjs";
 import { dnStartsWith, type RDNSequenceDescending, asDITDescending } from "@wildboar/dn";
 import type { EqualityMatcher } from "../types/matching.mjs";
 import type { AttributeType } from "@wildboar/x500/InformationFramework";

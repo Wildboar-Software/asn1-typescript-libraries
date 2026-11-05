@@ -2,11 +2,9 @@ import type { ASN1Element } from "@wildboar/asn1";
 import type {
     FilterItem_substrings_strings_Item,
 } from "../modules/DirectoryAbstractService/FilterItem-substrings-strings-Item.ta.mjs";
-import {
-    Attribute,
-    AttributeTypeAndValue,
-    type AttributeType,
-} from "../modules/InformationFramework/index.mjs";
+import type { Attribute } from "../modules/InformationFramework/Attribute.ta.mjs";
+import type { AttributeType } from "../modules/InformationFramework/AttributeType.ta.mjs";
+import { AttributeTypeAndValue } from "../modules/InformationFramework/AttributeTypeAndValue.ta.mjs";
 
 /** Flags used by matching rule implementations. */
 export type MatchFlags = number;
