@@ -129,7 +129,7 @@ function prepStringGeneral (str: string, caseFold: boolean): string | undefined 
 }
 
 /**
- * Prepare a short string, or any printable ASCII string, by scanning
+ * Prepare a short string and any printable ASCII string by scanning
  * it once.
  *
  * This is the path taken when {@link prepStringGeneral} does not apply:
@@ -138,7 +138,7 @@ function prepStringGeneral (str: string, caseFold: boolean): string | undefined 
  * NFKC, and its case fold is `toLowerCase`. A short string that is not
  * printable ASCII calls `replace` only for the mappings the scan found.
  */
-function prepStringShortOrAscii (str: string, caseFold: boolean): string | undefined {
+function prepStringShortAndAscii (str: string, caseFold: boolean): string | undefined {
     const n: number = str.length;
     let mapControls: boolean = false;
     let maybeMappedToNothing: boolean = false;
@@ -228,12 +228,12 @@ export
 function prepString (str: string, options?: PrepStringOptions): string | undefined {
     const caseFold: boolean = options?.caseFold === true;
     // Long strings that are not printable ASCII stay on the regexp
-    // path. Everything else is short or ASCII. See
+    // path. Short strings and ASCII strings are scanned. See
     // `packages/dn/bench/prepString.mjs`.
     if (str.length > SCAN_LIMIT && notPlainAscii.test(str)) {
         return prepStringGeneral(str, caseFold);
     }
-    return prepStringShortOrAscii(str, caseFold);
+    return prepStringShortAndAscii(str, caseFold);
 }
 
 /**
