@@ -1,18 +1,29 @@
-// Run with `npx vitest bench --run src/lib/types/matching.bench.mts` from packages/x500.
+/**
+ * `createEqualityMatcher` used to allocate `new Attribute(type_, [value])`
+ * for every distinguished value, then walk `values`. An
+ * `AttributeTypeAndValue` is one value, so the matcher now reads `.value`.
+ *
+ * The "before" case pays that allocation outside the matcher and then calls
+ * the same function, so the comparison stays on `createEqualityMatcher`
+ * rather than a copy of it.
+ *
+ * Run from the repo root:
+ *   npx vitest bench --run --config packages/x500/vite.config.ts src/lib/types/matching.bench.mts
+ */
 import type { ASN1Element } from "@wildboar/asn1";
 import { DER, _encodeInteger } from "@wildboar/asn1/functional";
 import { describe, expect, test } from "vitest";
 import {
-    Attribute,
-    AttributeTypeAndValue,
-    type AttributeType,
+    Attribute as ImportedAttribute,
+    AttributeTypeAndValue as ImportedAttributeTypeAndValue,
 } from "../modules/InformationFramework/index.mjs";
 import { oidC } from "../modules/SelectedAttributeTypes/index.mjs";
-import {
-    createEqualityMatcher,
-    type Matcher,
-    type TypedEquationFunction,
-} from "./matching.mjs";
+import { createEqualityMatcher } from "./matching.mjs";
+
+// Vite's module runner turns imported bindings into getters. Local copies keep
+// that per-call overhead out of the measurement.
+const Attribute = ImportedAttribute;
+const AttributeTypeAndValue = ImportedAttributeTypeAndValue;
 
 const BEFORE = "before: wrap ATAV in Attribute";
 const AFTER = "after: evaluate ATAV value directly";
@@ -25,58 +36,17 @@ function integerATAV (value: number | bigint): AttributeTypeAndValue {
     return new AttributeTypeAndValue(oidC["&id"], integer(value));
 }
 
-const equalsValue: TypedEquationFunction<bigint> = (
-    assertion: bigint,
-    value: ASN1Element,
-): boolean => BigInt(assertion) === BigInt(value.integer);
+const match = createEqualityMatcher(
+    (el) => el.integer,
+    (assertion, value) => assertion === value.integer,
+);
 
-/**
- * The previous `createEqualityMatcher` body: every distinguished
- * value was re-wrapped as `new Attribute(type, [ value ])`.
- */
-function createEqualityMatcherWrapping<A> (
-    assertionDecoder: (el: ASN1Element) => A,
-    valueMatcher: TypedEquationFunction<A>,
-): Matcher {
-    return function (
-        assertion: ASN1Element,
-        valueOrValues: AttributeTypeAndValue | Attribute,
-        getEqualityMatcher?: (attributeType: AttributeType) => Matcher | undefined,
-        flags: number = 0,
-        matchedValues?: Attribute,
-    ): boolean | undefined {
-        const decodedAssertion = assertionDecoder(assertion);
-        const attr: Attribute = (
-            ("value" in valueOrValues)
-            || (valueOrValues instanceof AttributeTypeAndValue)
-        )
-            ? new Attribute(valueOrValues.type_, [ valueOrValues.value ])
-            : valueOrValues;
-        for (let i = 0; i < attr.values.length; i++) {
-            const value = attr.values[i];
-            const result = valueMatcher(
-                decodedAssertion,
-                value,
-                getEqualityMatcher,
-                flags,
-            );
-            if (result === true) {
-                if (matchedValues) {
-                    matchedValues.values.push(value);
-                } else {
-                    return true;
-                }
-            }
-        }
-        return false;
-    };
+function matchWrapped (
+    assertion: ASN1Element,
+    atav: AttributeTypeAndValue,
+): boolean | undefined {
+    return match(assertion, new Attribute(atav.type_, [ atav.value ]));
 }
-
-const wrappingMatcher = createEqualityMatcherWrapping((el) => el.integer, equalsValue);
-const directMatcher = createEqualityMatcher((el) => el.integer, equalsValue);
-
-const localWrapping = wrappingMatcher;
-const localDirect = directMatcher;
 
 const assertion = integer(5);
 const matchingAtav = integerATAV(5);
@@ -85,28 +55,28 @@ let sink = 0;
 
 describe("createEqualityMatcher ATAV path", () => {
     test("single matching distinguished value", async ({ bench }) => {
-        expect(localWrapping(assertion, matchingAtav)).toBe(true);
-        expect(localDirect(assertion, matchingAtav)).toBe(true);
+        expect(matchWrapped(assertion, matchingAtav)).toBe(true);
+        expect(match(assertion, matchingAtav)).toBe(true);
         const result = await bench.compare(
             bench(BEFORE, () => {
-                sink += localWrapping(assertion, matchingAtav) ? 1 : 0;
+                sink += matchWrapped(assertion, matchingAtav) ? 1 : 0;
             }),
             bench(AFTER, () => {
-                sink += localDirect(assertion, matchingAtav) ? 1 : 0;
+                sink += match(assertion, matchingAtav) ? 1 : 0;
             }),
         );
         expect(result.get(AFTER)).toBeFasterThan(result.get(BEFORE));
     });
 
     test("single non-matching distinguished value", async ({ bench }) => {
-        expect(localWrapping(assertion, missingAtav)).toBe(false);
-        expect(localDirect(assertion, missingAtav)).toBe(false);
+        expect(matchWrapped(assertion, missingAtav)).toBe(false);
+        expect(match(assertion, missingAtav)).toBe(false);
         const result = await bench.compare(
             bench(BEFORE, () => {
-                sink += localWrapping(assertion, missingAtav) ? 1 : 0;
+                sink += matchWrapped(assertion, missingAtav) ? 1 : 0;
             }),
             bench(AFTER, () => {
-                sink += localDirect(assertion, missingAtav) ? 1 : 0;
+                sink += match(assertion, missingAtav) ? 1 : 0;
             }),
         );
         expect(result.get(AFTER)).toBeFasterThan(result.get(BEFORE));

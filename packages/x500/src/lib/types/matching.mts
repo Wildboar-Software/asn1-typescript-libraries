@@ -4,9 +4,12 @@ import type {
 } from "../modules/DirectoryAbstractService/FilterItem-substrings-strings-Item.ta.mjs";
 import {
     Attribute,
-    AttributeTypeAndValue,
+    AttributeTypeAndValue as ImportedAttributeTypeAndValue,
     type AttributeType,
 } from "../modules/InformationFramework/index.mjs";
+
+// Held locally so the per-value `instanceof` does not re-read the import.
+const AttributeTypeAndValue = ImportedAttributeTypeAndValue;
 
 /** Flags used by matching rule implementations. */
 export type MatchFlags = number;
