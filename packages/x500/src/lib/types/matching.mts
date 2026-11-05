@@ -118,11 +118,11 @@ export type AssertedSubstring<T> =
  * 1. An `AttributeTypeAndValue` or
  * 2. An entire `Attribute.
  * 
- * An `AttributeTypeAndValue` is converted to an `Attribute` of like type with
- * a single value and no contexts and evaluated as such. All values are
- * evaluated until a match is found, unless the `MATCH_FLAG_CONSTANT_TIME`
- * flag is used--implementations are expected to (but might not) evaluate all
- * attribute values, even if one is known to match.
+ * An `AttributeTypeAndValue` is evaluated as a single stored value with no
+ * contexts. All values of an `Attribute` are evaluated until a match is
+ * found, unless the `MATCH_FLAG_CONSTANT_TIME` flag is used--implementations
+ * are expected to (but might not) evaluate all attribute values, even if one
+ * is known to match.
  * 
  * `getEqualityMatcher` is a function that takes an attribute type and returns
  * the corresponding value equality matcher. This is generally so that
@@ -465,15 +465,32 @@ function createEqualityMatcher<A>(
             }
             return undefined;
         }
-        const attr: Attribute = (
-            ("value" in valueOrValues)
-            || (valueOrValues instanceof AttributeTypeAndValue)
-        )
-            ? new Attribute(valueOrValues.type_, [ valueOrValues.value ])
-            : valueOrValues;
         const constantTime = (flags & MATCH_FLAG_CONSTANT_TIME);
         let allUndefined: boolean = true;
         let deferredResult: boolean | undefined = false;
+        // Distinguished values are a single AVA. Do not wrap them in an
+        // Attribute: DN/AVA comparison is the matching hot path.
+        if (("value" in valueOrValues) || (valueOrValues instanceof AttributeTypeAndValue)) {
+            const value = valueOrValues.value;
+            try {
+                const result = valueMatcher(
+                    decodedAssertion,
+                    value,
+                    getEqualityMatcher,
+                    flags,
+                );
+                if (result === true && matchedValues) {
+                    matchedValues.values.push(value);
+                }
+                return result;
+            } catch (e) {
+                if (flags & MATCH_FLAG_DEBUG) {
+                    console.error(valueErrorMessage(false, 0, valueOrValues.type_, e));
+                }
+                return undefined;
+            }
+        }
+        const attr: Attribute = valueOrValues;
         for (let i = 0; i < attr.values.length; i++) {
             const value = attr.values[i];
             try {
