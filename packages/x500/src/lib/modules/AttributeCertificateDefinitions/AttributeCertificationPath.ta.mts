@@ -15,6 +15,7 @@ import {
     _decode_AttributeCertificate,
     _encode_AttributeCertificate,
 } from "../AttributeCertificateDefinitions/AttributeCertificate.ta.mjs";
+
 /**
  * @summary AttributeCertificationPath
  * @description
@@ -108,6 +109,21 @@ export class AttributeCertificationPath {
             _o.acPath,
             _o._unrecognizedExtensionsList
         );
+    }
+
+    /**
+     * @summary Converts a delegation path of attribute certificates into an AttributeCertificationPath.
+     * @param delegationPath - A delegation path of attribute certificates.
+     * @returns An AttributeCertificationPath.
+     * @public
+     * @static
+     * @method
+     */
+    public static fromDelegationPath(
+        delegationPath: [AttributeCertificate, ...AttributeCertificate[]],
+    ): AttributeCertificationPath {
+        const path = [ ...delegationPath ].reverse();
+        return new AttributeCertificationPath(path.pop()!, path.slice(0, -1));
     }
 }
 
