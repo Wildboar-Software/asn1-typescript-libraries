@@ -1,7 +1,7 @@
 /**
  * Benchmark comparing the `Uint8Array.prototype.toString()` NSAP keys
- * that `presentationAddressMatchTyped` used to build for its `Set` against
- * the Latin-1 keys it builds now.
+ * that `presentationAddressMatchTyped` used to build for its `Set`
+ * against the current linear `bytesEqual` scan.
  *
  * Run from the repo root:
  *   npx vitest bench --run --config packages/x500/vite.config.ts
@@ -17,7 +17,7 @@ import { presentationAddressMatchTyped } from "../src/lib/matching/equality/pres
 import { presentationAddressMatchToStringKeys } from "./presentationAddressMatchToStringKeys.mjs";
 
 const BEFORE = "before: Uint8Array.toString() keys";
-const AFTER = "after: Latin-1 keys";
+const AFTER = "after: linear bytesEqual";
 
 const hex = (s) => new Uint8Array(Buffer.from(s.replace(/\s+/g, ""), "hex"));
 
@@ -50,19 +50,21 @@ let sink;
 
 test("NSAP key generation only (5 NSAPs)", async ({ bench, expect }) => {
     const nsaps = [nsapRfc1277, nsapIpv6a, nsapIpv6b, nsapIpv6c, nsapX121];
+    const toStringKeys = "Uint8Array.toString() keys";
+    const latin1Keys = "Latin-1 keys";
     const result = await bench.compare(
-        bench(BEFORE, () => {
+        bench(toStringKeys, () => {
             for (const naddr of nsaps) {
                 sink = naddr.toString();
             }
         }),
-        bench(AFTER, () => {
+        bench(latin1Keys, () => {
             for (const naddr of nsaps) {
                 sink = String.fromCharCode.apply(null, naddr);
             }
         }),
     );
-    expect(result.get(AFTER)).toBeFasterThan(result.get(BEFORE));
+    expect(result.get(latin1Keys)).toBeFasterThan(result.get(toStringKeys));
 });
 
 for (const [name, a, b, expected] of cases) {
