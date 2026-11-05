@@ -24,6 +24,36 @@ import { DER } from "@wildboar/asn1/functional";
 import { TimeSpecification_time_absolute } from "../../modules/SelectedAttributeTypes/TimeSpecification-time-absolute.ta.mjs";
 import { TimeAssertion_between } from "../../modules/SelectedAttributeTypes/TimeAssertion-between.ta.mjs";
 
+/**
+ * `count` clock times beginning at `hour:minute:second`, stepping
+ * `stepSeconds` (1 = adjacent seconds, 2 = a one-second gap).
+ */
+function consecutiveDayTimes (
+    count: number,
+    hour: number,
+    minute: number,
+    second: number,
+    stepSeconds: number,
+): DayTime[] {
+    const times: DayTime[] = [];
+    let h: number = hour;
+    let m: number = minute;
+    let s: number = second;
+    for (let i = 0; i < count; i++) {
+        times.push(new DayTime(h, m, s));
+        s += stepSeconds;
+        while (s >= 60) {
+            s -= 60;
+            m += 1;
+            if (m >= 60) {
+                m -= 60;
+                h += 1;
+            }
+        }
+    }
+    return times;
+}
+
 describe("evaluateTemporalContext", () => {
     it("matches an at-assertion against an absolute temporal context", () => {
         const assertion: TimeAssertion = {
@@ -760,5 +790,107 @@ describe("evaluateTemporalContext", () => {
             _encode_TimeAssertion(assertion, DER),
             _encode_TimeSpecification(value, DER),
         )).toBe(true);
+    });
+
+    it("matches between+entirely across 1500 adjacent one-second bands of one Period", () => {
+        // More bands than the default cover-step cap. Flattening inside
+        // Period.occurrences must collapse them to one span.
+        const bands = consecutiveDayTimes(1500, 9, 0, 0, 1)
+            .map((time) => new DayTimeBand(time, time));
+        const assertion: TimeAssertion = {
+            between: new TimeAssertion_between(
+                new Date(2021, 4, 10, 9, 0, 0),
+                new Date(2021, 4, 10, 9, 24, 59),
+                TRUE,
+            ),
+        };
+        expect(evaluateTemporalContext(
+            assertion,
+            new TimeSpecification({ periodic: [ new Period(bands) ] }),
+        )).toBe(true);
+    });
+
+    it("does not match between+entirely when one-second bands leave a gap", () => {
+        const bands = consecutiveDayTimes(5, 9, 0, 0, 2)
+            .map((time) => new DayTimeBand(time, time));
+        const assertion: TimeAssertion = {
+            between: new TimeAssertion_between(
+                new Date(2021, 4, 10, 9, 0, 0),
+                new Date(2021, 4, 10, 9, 0, 8),
+                TRUE,
+            ),
+        };
+        expect(evaluateTemporalContext(
+            assertion,
+            new TimeSpecification({ periodic: [ new Period(bands) ] }),
+        )).toBe(false);
+    });
+
+    it("does not let one-second gaps ahead of a covering Period exhaust the cover budget", () => {
+        // Every other second for 2500 seconds is more than the default
+        // cap of yielded spans, and those spans do not cover the band.
+        // The second Period does. The sweep must notice that before
+        // draining the gaps.
+        const gaps = consecutiveDayTimes(2500, 9, 0, 0, 2)
+            .map((time) => new DayTimeBand(time, time));
+        const assertion: TimeAssertion = {
+            between: new TimeAssertion_between(
+                new Date(2021, 4, 10, 9, 0, 0),
+                new Date(2021, 4, 10, 10, 0, 0),
+                TRUE,
+            ),
+        };
+        const value = new TimeSpecification({
+            periodic: [
+                new Period(gaps),
+                new Period([
+                    new DayTimeBand(new DayTime(9, 0, 0), new DayTime(12, 0, 0)),
+                ]),
+            ],
+        });
+        expect(evaluateTemporalContext(assertion, value)).toBe(true);
+    });
+
+    it("matches between+entirely across 900 one-second Periods under the default cover budget", () => {
+        // 900 is under the cap of 1000 and over half of it, so counting
+        // a finished iterator as another step would fail the match.
+        const periods = consecutiveDayTimes(900, 9, 0, 0, 1)
+            .map((time) => new Period([ new DayTimeBand(time, time) ]));
+        const assertion: TimeAssertion = {
+            between: new TimeAssertion_between(
+                new Date(2021, 4, 10, 9, 0, 0),
+                new Date(2021, 4, 10, 9, 14, 59),
+                TRUE,
+            ),
+        };
+        expect(evaluateTemporalContext(
+            assertion,
+            new TimeSpecification({ periodic: periods }),
+        )).toBe(true);
+    });
+
+    it("matches a multi-day between+entirely when a one-second Period is listed first", () => {
+        const assertion: TimeAssertion = {
+            between: new TimeAssertion_between(
+                new Date(2021, 0, 1, 0, 0, 0),
+                new Date(2024, 5, 1, 0, 0, 0),
+                TRUE,
+            ),
+        };
+        const value = new TimeSpecification({
+            periodic: [
+                new Period([
+                    new DayTimeBand(new DayTime(0, 0, 0), new DayTime(0, 0, 0)),
+                ]),
+                new Period(
+                    undefined,
+                    undefined,
+                    undefined,
+                    undefined,
+                    [ 2021, 2022, 2023, 2024 ],
+                ),
+            ],
+        });
+        expect(evaluateTemporalContext(assertion, value)).toBe(true);
     });
 });

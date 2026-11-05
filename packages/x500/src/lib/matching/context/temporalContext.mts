@@ -65,6 +65,129 @@ const MAX_ENTIRELY_COVER_STEPS = 1000;
 const MAX_ENTIRELY_COVER_STEPS_HIGH_WORK_BUDGET = 100_000;
 
 /**
+ * One pending occurrence span from a single `Period` iterator.
+ * Spans are whole seconds (`DayTime` precision).
+ */
+type CoverCursor = {
+    lo: number;
+    hi: number;
+    iter: Iterator<[Date, Date]>;
+};
+
+type CoverBudget = {
+    steps: number;
+    readonly maxSteps: number;
+};
+
+type NextCover =
+    | { readonly kind: "span"; readonly lo: number; readonly hi: number }
+    | { readonly kind: "end" }
+    | { readonly kind: "budget" };
+
+/**
+ * Earlier start wins. At the same start, the farther end wins, so a
+ * span that already covers the band is applied before a one-second
+ * sliver from another `Period`.
+ */
+function coverCursorBefore (a: CoverCursor, b: CoverCursor): boolean {
+    return (a.lo < b.lo) || ((a.lo === b.lo) && (a.hi > b.hi));
+}
+
+function heapSwap (heap: CoverCursor[], i: number, j: number): void {
+    const tmp: CoverCursor = heap[i];
+    heap[i] = heap[j];
+    heap[j] = tmp;
+}
+
+function heapSiftUp (heap: CoverCursor[], index: number): void {
+    let i: number = index;
+    while (i > 0) {
+        const parent: number = (i - 1) >> 1;
+        if (!coverCursorBefore(heap[i], heap[parent])) {
+            break;
+        }
+        heapSwap(heap, i, parent);
+        i = parent;
+    }
+}
+
+function heapSiftDown (heap: CoverCursor[], index: number): void {
+    const n: number = heap.length;
+    let i: number = index;
+    while (true) {
+        const left: number = (i * 2) + 1;
+        if (left >= n) {
+            break;
+        }
+        const right: number = left + 1;
+        let best: number = left;
+        if ((right < n) && coverCursorBefore(heap[right], heap[left])) {
+            best = right;
+        }
+        if (!coverCursorBefore(heap[best], heap[i])) {
+            break;
+        }
+        heapSwap(heap, i, best);
+        i = best;
+    }
+}
+
+function heapPush (heap: CoverCursor[], item: CoverCursor): void {
+    heap.push(item);
+    heapSiftUp(heap, heap.length - 1);
+}
+
+function heapPop (heap: CoverCursor[]): CoverCursor {
+    const top: CoverCursor = heap[0];
+    const last: CoverCursor | undefined = heap.pop();
+    if ((last !== undefined) && (heap.length > 0)) {
+        heap[0] = last;
+        heapSiftDown(heap, 0);
+    }
+    return top;
+}
+
+/**
+ * Next occurrence that overlaps `[startSec, endSec]`, or why the
+ * iterator stopped. Each yielded span counts toward the step cap,
+ * including spans that end before the band. A finished iterator does
+ * not: `Period.occurrences` ends when the next span would start after
+ * `end`, and that sentinel must not itself exhaust the budget.
+ */
+function pullCoverSpan (
+    iter: Iterator<[Date, Date]>,
+    startSec: number,
+    endSec: number,
+    budget: CoverBudget,
+    flags: number,
+): NextCover {
+    while (true) {
+        const step = iter.next();
+        if (step.done) {
+            return { kind: "end" };
+        }
+        budget.steps += 1;
+        if (budget.steps > budget.maxSteps) {
+            if (flags & MATCH_FLAG_DEBUG) {
+                console.error(
+                    `@wildboar/x500: debug: temporalContext: exceeded ${budget.maxSteps} cover steps`,
+                );
+            }
+            return { kind: "budget" };
+        }
+        const lo: number = Math.floor(step.value[0].valueOf() / 1000);
+        const hi: number = Math.floor(step.value[1].valueOf() / 1000);
+        if (hi < startSec) {
+            continue;
+        }
+        if (lo > endSec) {
+            return { kind: "end" };
+        }
+        return { kind: "span", lo, hi };
+    }
+}
+
+/**
  * @summary Whether `[start, end]` ⊆ the union of `Period` occurrences.
  * @description
  *
@@ -73,14 +196,18 @@ const MAX_ENTIRELY_COVER_STEPS_HIGH_WORK_BUDGET = 100_000;
  * union of all `Period` occurrences (the SET), not one occurrence of
  * one `Period`.
  *
- * Collect every occurrence that overlaps `[start, end]`, merge
- * overlapping and 1-second-adjacent spans at `DayTime` second
- * precision, and test that the merged union covers the assertion.
- * Work is proportional to the number of occurrences, not the number
- * of seconds in the band. A hole, or more than
- * {@link MAX_ENTIRELY_COVER_STEPS} occurrences, fails. Open-ended
- * assertions use `MAX_DATE`. `MATCH_FLAG_HIGH_WORK_BUDGET` raises the
- * cap to {@link MAX_ENTIRELY_COVER_STEPS_HIGH_WORK_BUDGET}.
+ * `Period.occurrences` already coalesces overlapping and
+ * 1-second-adjacent `DayTimeBand`s, so a run of one-second bands in
+ * one `Period` is one span. This sweep keeps one pending span per
+ * `Period` and merges those spans across the SET. It stops at the
+ * first hole, and it stops when any span covers the rest of the band,
+ * so a one-second recurrence cannot exhaust the step cap before a
+ * later `Period` is considered. Spans are not retained.
+ *
+ * A hole, or more than {@link MAX_ENTIRELY_COVER_STEPS} yielded
+ * spans, fails. Open-ended assertions use `MAX_DATE`.
+ * `MATCH_FLAG_HIGH_WORK_BUDGET` raises the cap to
+ * {@link MAX_ENTIRELY_COVER_STEPS_HIGH_WORK_BUDGET}.
  *
  * @param {Period[]} periods Stored `TimeSpecification.time.periodic`.
  * @param {Date} start Inclusive start of the asserted band (spec zone).
@@ -104,51 +231,56 @@ function periodsEntirelyCoverInterval (
         : MAX_ENTIRELY_COVER_STEPS;
     const startSec: number = Math.floor(start.valueOf() / 1000);
     const endSec: number = Math.floor(end.valueOf() / 1000);
-    const intervals: [ number, number ][] = [];
-    let steps: number = 0;
+    const budget: CoverBudget = { steps: 0, maxSteps };
+    const heap: CoverCursor[] = [];
     for (const period of periods) {
-        for (const [ lower, upper ] of period.occurrences(start, end)) {
-            steps += 1;
-            if (steps > maxSteps) {
-                if (flags & MATCH_FLAG_DEBUG) {
-                    console.error(
-                        `@wildboar/x500: debug: temporalContext: exceeded ${maxSteps} cover steps`,
-                    );
-                }
-                return false;
-            }
-            const lo: number = Math.floor(lower.valueOf() / 1000);
-            const hi: number = Math.floor(upper.valueOf() / 1000);
-            if (hi < startSec) {
-                continue;
-            }
-            if (lo > endSec) {
-                break;
-            }
-            if ((lo <= startSec) && (hi >= endSec)) {
-                return true;
-            }
-            intervals.push([ lo, hi ]);
-        }
-    }
-    if (intervals.length === 0) {
-        return false;
-    }
-    intervals.sort((a, b) => (a[0] - b[0]) || (a[1] - b[1]));
-    let nextNeeded: number = startSec;
-    for (const [ lo, hi ] of intervals) {
-        if (lo > nextNeeded) {
+        const iter: Iterator<[Date, Date]> = period.occurrences(start, end);
+        const next: NextCover = pullCoverSpan(
+            iter,
+            startSec,
+            endSec,
+            budget,
+            flags,
+        );
+        if (next.kind === "budget") {
             return false;
         }
-        if ((hi + 1) > nextNeeded) {
-            nextNeeded = hi + 1;
+        if (next.kind === "end") {
+            continue;
         }
-        if (nextNeeded > endSec) {
+        if ((next.lo <= startSec) && (next.hi >= endSec)) {
             return true;
+        }
+        heapPush(heap, { lo: next.lo, hi: next.hi, iter });
+    }
+    let nextNeeded: number = startSec;
+    while (heap.length > 0) {
+        const cursor: CoverCursor = heapPop(heap);
+        if ((cursor.lo <= nextNeeded) && (cursor.hi >= nextNeeded)) {
+            nextNeeded = cursor.hi + 1;
+            if (nextNeeded > endSec) {
+                return true;
+            }
+        } else if (cursor.lo > nextNeeded) {
+            return false;
+        }
+        const next: NextCover = pullCoverSpan(
+            cursor.iter,
+            startSec,
+            endSec,
+            budget,
+            flags,
+        );
+        if (next.kind === "budget") {
+            return false;
+        }
+        if (next.kind === "span") {
+            heapPush(heap, { lo: next.lo, hi: next.hi, iter: cursor.iter });
         }
     }
     return nextNeeded > endSec;
 }
+
 /** True if `time` falls in one occurrence of `period` (clause 10.2). */
 function timeFallsWithinPeriod (time: Date, period: Period, timezone: number | undefined): boolean {
     const adjustedTime = inSpecTimeZone(time, timezone);
