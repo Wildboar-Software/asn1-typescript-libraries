@@ -227,6 +227,64 @@ function evaluateByFindAndToString (
     return true;
 }
 
+/**
+ * The new extension path: one index, each extension decoded at most
+ * once, policies compared with `isEqualTo`. Same components as
+ * {@link evaluateByFindAndToString}, so the bench does not also
+ * measure `evaluateCertificateAssertion`'s nameConstraints walk.
+ */
+function evaluateByIndex (
+    assertion: CertificateAssertion,
+    cert: Certificate,
+): boolean {
+    const extensions = new LocalIndex(cert.toBeSigned.extensions);
+    if (assertion.subjectKeyIdentifier) {
+        const ski = extensions.subjectKeyIdentifier;
+        if (!ski || Buffer.compare(ski, assertion.subjectKeyIdentifier)) {
+            return false;
+        }
+    }
+    if (assertion.keyUsage) {
+        const storedKU = extensions.keyUsage;
+        if (!storedKU) {
+            return false;
+        }
+        if (!assertion.keyUsage.every((bit, i) => !bit || Boolean(storedKU[i]))) {
+            return false;
+        }
+    }
+    if (assertion.subjectAltName) {
+        const sans = extensions.subjectAltName;
+        if (!sans || !sans.some((san) => ("dNSName" in san))) {
+            return false;
+        }
+    }
+    if (assertion.policy) {
+        const cp = extensions.certificatePolicies;
+        if (!cp || !localIntersect(assertion.policy, cp)) {
+            return false;
+        }
+    }
+    if (assertion.pathToName) {
+        const nc = extensions.nameConstraints;
+        if (nc?.permittedSubtrees && !nc.permittedSubtrees.every((sub) => {
+            if (!("directoryName" in sub.base)) {
+                return true;
+            }
+            return dnWithinSubtree(
+                assertion.pathToName!.rdnSequence,
+                sub.base.directoryName.rdnSequence,
+            );
+        })) {
+            return false;
+        }
+    }
+    if (assertion.nameConstraints) {
+        extensions.subjectAltName;
+    }
+    return true;
+}
+
 const policyParts = Array.from({ length: 32 }, (_, i) => [ 1, 2, 3, 4, i + 1 ]);
 
 function freshPolicies (): CertificatePoliciesSyntax {
@@ -275,9 +333,9 @@ const assertion = new CertificateAssertion(
 );
 
 const localIntersect = certificatePoliciesIntersect;
-const localEvaluate = evaluateCertificateAssertion;
 const localFindEvaluate = evaluateByFindAndToString;
 const LocalIndex = CertificateExtensionIndex;
+const localIndexEvaluate = evaluateByIndex;
 const localDecodeGeneralNames = _decode_GeneralNames;
 const localSanOid = id_ce_subjectAltName;
 
@@ -302,13 +360,14 @@ describe("certificatePoliciesIntersect vs oid.toString() Set", () => {
 describe("certificateMatch extension lookup", () => {
     test("SKI + keyUsage + SAN + policy + nameConstraints after 64 filler extensions", async ({ bench }) => {
         expect(localFindEvaluate(assertion, cert)).toBe(true);
-        expect(localEvaluate(assertion, cert)).toBe(true);
+        expect(localIndexEvaluate(assertion, cert)).toBe(true);
+        expect(evaluateCertificateAssertion(assertion, cert)).toBe(true);
         const result = await bench.compare(
             bench(BEFORE, () => {
                 sink += localFindEvaluate(assertion, cert) ? 1 : 0;
             }),
             bench(AFTER, () => {
-                sink += localEvaluate(assertion, cert) ? 1 : 0;
+                sink += localIndexEvaluate(assertion, cert) ? 1 : 0;
             }),
         );
         expect(result.get(AFTER)).toBeFasterThan(result.get(BEFORE));

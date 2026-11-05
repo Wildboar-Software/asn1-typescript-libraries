@@ -67,6 +67,7 @@ const decodeKU = _decode_KeyUsage;
 const decodeSAN = _decode_GeneralNames;
 const decodeCP = _decode_CertificatePoliciesSyntax;
 const decodeNC = _decode_NameConstraintsSyntax;
+const ID_CE_LEN = SKI_ID.byteLength();
 
 const UNSET: unique symbol = Symbol("unset");
 type Lazy<T> = T | typeof UNSET;
@@ -121,8 +122,14 @@ class CertificateExtensionIndex {
         let cpExt: Extension | undefined;
         let ncExt: Extension | undefined;
         if (extensions) {
+            // `id-ce` components used here encode on 3 bytes (`2.5.29.*`
+            // with a last arc below 128). Skip longer OIDs before the
+            // seven `isEqualTo` checks.
             for (const ext of extensions) {
                 const id = ext.extnId;
+                if (id.byteLength() !== ID_CE_LEN) {
+                    continue;
+                }
                 if (id.isEqualTo(SKI_ID)) {
                     skiExt = ext;
                 } else if (id.isEqualTo(AKI_ID)) {
