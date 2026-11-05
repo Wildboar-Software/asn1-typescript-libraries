@@ -73,7 +73,21 @@ const FULL_CASE_FOLD: ReadonlyMap<number, string> = new Map([
     [0xFB06, "st"],
 ]);
 
+/**
+ * {@link FULL_CASE_FOLD} plus U+03A3. Whole-string `toLowerCase`
+ * applies the final-sigma rule, so a trailing capital sigma becomes
+ * U+03C2. Folding one code point at a time produces U+03C3. Keep this
+ * class in step with the map above.
+ */
+const needsSlowCaseFold: RegExp = /[\u00DF\u0130\u0149\u017F\u01F0\u0390\u03A3\u03B0\u0587\u1E96-\u1E9A\u1E9E\uFB00-\uFB06]/;
+
 function foldCase (str: string): string {
+    // Accented Latin and other ordinary letters have no special fold.
+    // `toLowerCase` on the whole string is several times faster than
+    // the per-code-point loop below.
+    if (!needsSlowCaseFold.test(str)) {
+        return str.toLowerCase();
+    }
     let out = "";
     for (const ch of str) {
         const mapped = FULL_CASE_FOLD.get(ch.codePointAt(0)!);
@@ -141,7 +155,9 @@ function prepStringGeneral (str: string, caseFold: boolean): string | undefined 
  * the string is at most {@link SCAN_LIMIT} code units, or every code
  * unit is in U+0020..U+007E. Printable ASCII skips Map, Prohibit, and
  * NFKC, and its case fold is `toLowerCase`. A short string that is not
- * printable ASCII calls `replace` only for the mappings the scan found.
+ * printable ASCII calls `replace` only for the mappings the scan found,
+ * then {@link foldCase}, which uses `toLowerCase` when no special fold
+ * is present.
  */
 function prepStringShortOrAscii (str: string, caseFold: boolean): string | undefined {
     const n: number = str.length;

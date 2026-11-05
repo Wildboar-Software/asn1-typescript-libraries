@@ -11,22 +11,22 @@
  * by the unconditional copy. The copy is local to this file, so the
  * ratios understate the speedup of calling the old function:
  *
- *   exact clean short            7.5x
+ *   exact clean short            8.0x
  *   exact clean internal spaces  3.8x
- *   exact clean long             3.7x
+ *   exact clean long             3.3x
  *   exact dirty whitespace       1.2x
  *   exact dirty map / normalize  1.4x
- *   exact mixed batch            3.5x
- *   exact dns labels             8.1x
- *   exact soft hyphen at end     0.88x
- *   caseFold clean short        10.1x
- *   caseFold clean spaces        4.1x
- *   caseFold clean long          9.5x
- *   caseFold dirty whitespace    1.6x
- *   caseFold dirty map           1.3x
- *   caseFold mixed batch         3.8x
- *   caseFold dns labels         11.6x
- *   caseFold soft hyphen at end  0.97x
+ *   exact mixed batch            3.8x
+ *   exact dns labels             9.1x
+ *   exact soft hyphen at end     0.89x
+ *   caseFold clean short        10.5x
+ *   caseFold clean spaces        6.2x
+ *   caseFold clean long          8.9x
+ *   caseFold dirty whitespace    1.8x
+ *   caseFold dirty map           1.5x
+ *   caseFold mixed batch         5.6x
+ *   caseFold dns labels         13.2x
+ *   caseFold soft hyphen at end  3.1x
  *
  * Run from the repo root:
  *   node packages/dn/bench/prepString.mjs

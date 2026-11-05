@@ -57,6 +57,11 @@ describe("prepString()", () => {
             .toBe(prepString("Straße", { caseFold: true }));
     });
 
+    it("lowercases a trailing capital sigma one code point at a time", () => {
+        expect(prepString("ΟΣ", { caseFold: true })).toBe("οσ");
+        expect(prepString("AΣ", { caseFold: true })).toBe("aσ");
+    });
+
     it("case-folds printable ASCII and collapses its spaces", () => {
         expect(prepString("  AbC  DeF ", { caseFold: true })).toBe("abc def");
         expect(prepString("already fine")).toBe("already fine");
