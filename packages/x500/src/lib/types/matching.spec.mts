@@ -168,6 +168,19 @@ suite("assertion normalizers", () => {
         expect(normalizer).not.toHaveBeenCalled();
     });
 
+    test("createEqualityMatcher evaluates an ATAV without wrapping it in an Attribute", () => {
+        const match = createEqualityMatcher(
+            (el) => el.integer,
+            equalsValue,
+        );
+        expect(match(integer(5), integerATAV(5))).toBe(true);
+        expect(match(integer(5), integerATAV(-5))).toBe(false);
+        const matchedValues = new Attribute(oidC["&id"], [], []);
+        expect(match(integer(5), integerATAV(5), undefined, MATCH_FLAG_NONE, matchedValues)).toBe(true);
+        expect(matchedValues.values).toHaveLength(1);
+        expect(Number(matchedValues.values[0].integer)).toBe(5);
+    });
+
     test("createEqualityMatcher normalizes once per call, not once per value", () => {
         const normalizer = vi.fn(negate);
         const match = createEqualityMatcher(
