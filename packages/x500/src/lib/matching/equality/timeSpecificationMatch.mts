@@ -1,6 +1,5 @@
 import { ASN1Element, DERElement } from "@wildboar/asn1";
 import type { AttributeType } from "../../modules/InformationFramework/index.mjs";
-import { stringsEqual } from "../constantTime.mjs";
 import {
     createEqualityMatcher,
     MATCH_FLAG_APPROXIMATE,
@@ -24,39 +23,9 @@ import type {
 import {
     id_ce_timeSpecification,
 } from "../../modules/AttributeCertificateDefinitions/id-ce-timeSpecification.va.mjs";
-import {
-    _encode_Period,
-    type Period,
-} from "../../modules/SelectedAttributeTypes/Period.ta.mjs";
-import { DER } from "@wildboar/asn1/functional";
-import { Buffer } from "node:buffer";
 import { _decode_Certificate } from "../../modules/AuthenticationFramework/Certificate.ta.mjs";
 import compareElements from "../../comparators/compareElements.mjs";
-import { normalizePeriod } from "../../utils/normalizePeriod.mjs";
-
-/**
- * @summary DER-hash key for a `Period` after X.520 clause 10.2
- *  canonicalization.
- * @description
- *
- * Used so `timeSpecificationMatch` can compare `SET OF Period` as a
- * set of equivalent encodings. `normalizePeriod` is applied first so
- * INTEGER vs BIT STRING and complete-set vs `allWeeks`/`allMonths`
- * compare equal when they denote the same times.
- *
- * @param {Period} period A stored or asserted periodic component.
- * @returns {string} Base64 of the DER encoding of the canonical `Period`.
- * @function
- * @author Cursor Grok 4.6
- */
-function periodHashKey(period: Period): string {
-    const encoding = _encode_Period(normalizePeriod(period), DER).toBytes();
-    return Buffer.from(
-        encoding.buffer,
-        encoding.byteOffset,
-        encoding.byteLength,
-    ).toString("base64");
-}
+import { periodSetsEquivalent } from "../../utils/periodEquals.mjs";
 
 /**
  * Rec. ITU-T X.509 (10/2019), clause 17.1.2.1.2
@@ -235,19 +204,15 @@ function timeSpecificationsEqual (
             }
         }
     } else if (("periodic" in storedTime.time) && ("periodic" in assertedTime.time)) {
-        if (storedTime.time.periodic.length !== assertedTime.time.periodic.length) {
-            return false;
-        }
-        const len = storedTime.time.periodic.length;
-        const storedPeriods = storedTime.time.periodic.map(periodHashKey).sort();
-        const assertedPeriods = assertedTime.time.periodic.map(periodHashKey).sort();
-        for (let i = 0; i < len; i++) {
-            if (!stringsEqual(assertedPeriods[i], storedPeriods[i], constantTime)) {
-                if (!constantTime) {
-                    return false;
-                }
-                matched = false;
+        if (!periodSetsEquivalent(
+            assertedTime.time.periodic,
+            storedTime.time.periodic,
+            constantTime,
+        )) {
+            if (!constantTime) {
+                return false;
             }
+            matched = false;
         }
     } else {
         return false;

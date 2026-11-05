@@ -104,4 +104,35 @@ describe("timeSpecificationMatch() period normalization", () => {
             acWithPeriod(new Period(undefined, { intDay: [2] }, undefined, { allMonths: null })),
         )).toBe(false);
     });
+
+    it("matches SET OF Period regardless of member order", () => {
+        const monday = new Period(undefined, { intDay: [2] });
+        const tuesday = new Period(undefined, { intDay: [3] });
+        const asserted = _encode_TimeSpecification(
+            new TimeSpecification({ periodic: [ tuesday, monday ] }),
+            DER,
+        );
+        const ts = new TimeSpecification({ periodic: [ monday, tuesday ] });
+        const extn = _encode_TimeSpecification(ts, DER);
+        const tbs = new TBSAttributeCertificate(
+            AttCertVersion_v2,
+            new Holder(undefined, [{ dNSName: "holder.example" }]),
+            new AttCertIssuer([{ dNSName: "issuer.example" }]),
+            ALG,
+            new Uint8Array([1]),
+            new AttCertValidityPeriod(
+                new Date("2020-01-01T00:00:00Z"),
+                new Date("2030-01-01T00:00:00Z"),
+            ),
+            [],
+            undefined,
+            [],
+            [new Extension(id_ce_timeSpecification, true, extn.toBytes())],
+        );
+        const ac = _encode_AttributeCertificate(
+            new SIGNED(tbs, ALG, new Uint8ClampedArray([0])),
+            DER,
+        );
+        expect(timeSpecificationMatch(asserted, ac)).toBe(true);
+    });
 });
