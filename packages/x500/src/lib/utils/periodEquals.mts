@@ -8,10 +8,36 @@ import type { NamedDay } from "../modules/SelectedAttributeTypes/NamedDay.ta.mjs
 import type { XDayOf } from "../modules/SelectedAttributeTypes/XDayOf.ta.mjs";
 import compareElements from "../comparators/compareElements.mjs";
 import { bytesEqual } from "../matching/constantTime.mjs";
+import {
+    MATCH_FLAG_CONSTANT_TIME,
+    MATCH_FLAG_DEBUG,
+    MATCH_FLAG_HIGH_WORK_BUDGET,
+} from "../types/matching.mjs";
 import { normalizePeriod } from "./normalizePeriod.mjs";
 
 /**
+ * Inner-loop iterations allowed while pairing `SET OF Period`.
+ * A successful pairing of `n` members always visits `n(n+1)/2`
+ * indexes, so 13 members (91) finish and 14 (105) stop.
+ */
+const MAX_PERIOD_SET_PAIR_ITERATIONS = 100;
+
+/**
+ * {@link MAX_PERIOD_SET_PAIR_ITERATIONS} when
+ * `MATCH_FLAG_HIGH_WORK_BUDGET` is set. 44 members (990) finish;
+ * 45 (1035) stop.
+ */
+const MAX_PERIOD_SET_PAIR_ITERATIONS_HIGH_WORK_BUDGET = 1000;
+
+/**
  * @summary Whether two `SET OF INTEGER` values contain the same numbers.
+ * @description
+ *
+ * Both arrays are sorted and de-duplicated by an earlier
+ * {@link normalizePeriod} call (`uniqueSorted`, or `bitsToInts`, which
+ * emits values in ascending order). Invariant
+ * `f4d50123-e5ff-4c83-b972-04ff3319a96a`.
+ *
  * @param {INTEGER[]} a One SET, already unique and sorted.
  * @param {INTEGER[]} b The other SET, already unique and sorted.
  * @param {boolean | number} constantTime `MATCH_FLAG_CONSTANT_TIME`.
@@ -152,9 +178,13 @@ function daysEqual (
             && compareElements(a, b);
     }
     if ("intDay" in a) {
+        // Sorted and de-duplicated by normalizePeriod
+        // (f4d50123-e5ff-4c83-b972-04ff3319a96a).
         return ("intDay" in b) && integersEqual(a.intDay, b.intDay, constantTime);
     }
     if ("bitDay" in a) {
+        // In-range bitDay is converted to SET OF INTEGER by normalizePeriod,
+        // so both sides of an equivalent value are the same variant.
         return ("bitDay" in b) && bytesEqual(a.bitDay, b.bitDay, constantTime);
     }
     if ("dayOf" in a) {
@@ -192,9 +222,13 @@ function weeksEqual (
         return ("allWeeks" in b);
     }
     if ("intWeek" in a) {
+        // Sorted and de-duplicated by normalizePeriod
+        // (f4d50123-e5ff-4c83-b972-04ff3319a96a).
         return ("intWeek" in b) && integersEqual(a.intWeek, b.intWeek, constantTime);
     }
     if ("bitWeek" in a) {
+        // In-range bitWeek is converted to SET OF INTEGER by normalizePeriod,
+        // so both sides of an equivalent value are the same variant.
         return ("bitWeek" in b) && bytesEqual(a.bitWeek, b.bitWeek, constantTime);
     }
     return false;
@@ -229,9 +263,13 @@ function monthsEqual (
         return ("allMonths" in b);
     }
     if ("intMonth" in a) {
+        // Sorted and de-duplicated by normalizePeriod
+        // (f4d50123-e5ff-4c83-b972-04ff3319a96a).
         return ("intMonth" in b) && integersEqual(a.intMonth, b.intMonth, constantTime);
     }
     if ("bitMonth" in a) {
+        // In-range bitMonth is converted to SET OF INTEGER by normalizePeriod,
+        // so both sides of an equivalent value are the same variant.
         return ("bitMonth" in b) && bytesEqual(a.bitMonth, b.bitMonth, constantTime);
     }
     return false;
@@ -317,6 +355,8 @@ function canonicalPeriodsEqual (
         && daysEqual(a.days, b.days, constantTime)
         && weeksEqual(a.weeks, b.weeks, constantTime)
         && monthsEqual(a.months, b.months, constantTime)
+        // `years` is sorted and de-duplicated by normalizePeriod
+        // (f4d50123-e5ff-4c83-b972-04ff3319a96a).
         && integersEqual(a.years ?? [], b.years ?? [], constantTime)
         && ((a.years === undefined) === (b.years === undefined))
         && extensionListsEqual(a._unrecognizedExtensionsList, b._unrecognizedExtensionsList);
@@ -357,9 +397,17 @@ function periodsEquivalent (
  * then matched with an O(n²) pairing so equivalent encodings compare
  * equal without DER-encoding or hashing.
  *
+ * The inner loop stops after {@link MAX_PERIOD_SET_PAIR_ITERATIONS}
+ * iterations (or {@link MAX_PERIOD_SET_PAIR_ITERATIONS_HIGH_WORK_BUDGET}
+ * when `MATCH_FLAG_HIGH_WORK_BUDGET` is set). A successful pairing
+ * visits `n(n+1)/2` indexes, so a larger SET compares unequal without
+ * being canonicalized. `MATCH_FLAG_DEBUG` logs that stop. The cap
+ * applies under `MATCH_FLAG_CONSTANT_TIME` as well.
+ *
  * @param {Period[]} asserted Presented SET.
  * @param {Period[]} stored Stored SET.
- * @param {boolean | number} constantTime `MATCH_FLAG_CONSTANT_TIME`.
+ * @param {number} flags `MATCH_FLAG_CONSTANT_TIME`,
+ *  `MATCH_FLAG_HIGH_WORK_BUDGET`, and `MATCH_FLAG_DEBUG`.
  * @returns {boolean} `true` iff both SETs have the same members.
  * @function
  * @author Cursor Grok 4.6
@@ -368,7 +416,7 @@ export
 function periodSetsEquivalent (
     asserted: readonly Period[],
     stored: readonly Period[],
-    constantTime: boolean | number = 0,
+    flags: number = 0,
 ): boolean {
     const len = asserted.length;
     if (len !== stored.length) {
@@ -376,6 +424,21 @@ function periodSetsEquivalent (
     }
     if (len === 0) {
         return true;
+    }
+    const constantTime = flags & MATCH_FLAG_CONSTANT_TIME;
+    const maxIterations = (flags & MATCH_FLAG_HIGH_WORK_BUDGET)
+        ? MAX_PERIOD_SET_PAIR_ITERATIONS_HIGH_WORK_BUDGET
+        : MAX_PERIOD_SET_PAIR_ITERATIONS;
+    // Every successful pairing visits this many inner-loop indexes.
+    // Past the cap the SET cannot compare equal, so skip the walk.
+    if ((len * (len + 1)) / 2 > maxIterations) {
+        if (flags & MATCH_FLAG_DEBUG) {
+            console.error(
+                "@wildboar/x500: debug: periodSetsEquivalent:"
+                + ` exceeded ${maxIterations} pairing iterations`,
+            );
+        }
+        return false;
     }
     const assertedCanonical: Period[] = new Array(len);
     const storedCanonical: Period[] = new Array(len);
@@ -385,9 +448,20 @@ function periodSetsEquivalent (
     }
     const used: Uint8Array = new Uint8Array(len);
     let matched = true;
+    let iterations = 0;
     for (let i = 0; i < len; i++) {
         let found = false;
         for (let j = 0; j < len; j++) {
+            iterations += 1;
+            if (iterations > maxIterations) {
+                if (flags & MATCH_FLAG_DEBUG) {
+                    console.error(
+                        "@wildboar/x500: debug: periodSetsEquivalent:"
+                        + ` exceeded ${maxIterations} pairing iterations`,
+                    );
+                }
+                return false;
+            }
             if (used[j]) {
                 continue;
             }

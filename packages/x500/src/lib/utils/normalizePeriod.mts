@@ -51,6 +51,9 @@ const BIT_NAMED_DAY_MAX = 6;
  * `Period` uses SET OF INTEGER for `intDay`, `intWeek`, `intMonth`, and
  * `years`. SET membership is unordered and unique.
  *
+ * `integersEqual` in `periodEquals.mts` compares these arrays in order.
+ * Invariant f4d50123-e5ff-4c83-b972-04ff3319a96a.
+ *
  * @param {INTEGER[]} values The SET members, in any order.
  * @returns {number[]} Unique values in ascending numeric order.
  * @function
@@ -96,7 +99,8 @@ function sameSet(actual: readonly INTEGER[], expected: readonly number[]): boole
  * named range, so the original BIT STRING can be kept.
  *
  * Bits are visited from 0 upward, so the result is already unique and
- * ascending.
+ * ascending. `integersEqual` in `periodEquals.mts` compares these arrays
+ * in order. Invariant f4d50123-e5ff-4c83-b972-04ff3319a96a.
  *
  * @param {BIT_STRING} bits Named bits (`TRUE_BIT` where set).
  * @param {number} maxBitIndex Highest named bit (inclusive).
@@ -291,6 +295,8 @@ function normalizeDays(
         if (!ints) {
             return { bitDay: trimmedBits(days.bitDay) };
         }
+        // In-range BIT STRING becomes SET OF INTEGER so period equality
+        // sees the same variant on both sides.
         return { intDay: ints };
     }
     return days;
@@ -325,6 +331,8 @@ function normalizeWeeks(
         if (!ints) {
             return { bitWeek: trimmedBits(weeks.bitWeek) };
         }
+        // In-range BIT STRING becomes SET OF INTEGER so period equality
+        // sees the same variant on both sides.
         return { intWeek: ints };
     }
     return weeks;
@@ -360,6 +368,8 @@ function normalizeMonths(
         if (!ints) {
             return { bitMonth: trimmedBits(months.bitMonth) };
         }
+        // In-range BIT STRING becomes SET OF INTEGER so period equality
+        // sees the same variant on both sides.
         return { intMonth: ints };
     }
     return months;

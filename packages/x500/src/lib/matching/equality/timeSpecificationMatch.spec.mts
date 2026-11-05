@@ -18,7 +18,10 @@ import {
 } from "../../modules/SelectedAttributeTypes/TimeSpecification.ta.mjs";
 import { Period } from "../../modules/SelectedAttributeTypes/Period.ta.mjs";
 import { Period_days_bitDay_monday } from "../../modules/SelectedAttributeTypes/Period-days-bitDay.ta.mjs";
-import timeSpecificationMatch_ from "./timeSpecificationMatch.mjs";
+import timeSpecificationMatch_, {
+    timeSpecificationMatchTyped,
+} from "./timeSpecificationMatch.mjs";
+import { MATCH_FLAG_HIGH_WORK_BUDGET } from "../../types/matching.mjs";
 import { onStoredValue } from "./onStoredValue.spec.mjs";
 
 const timeSpecificationMatch = onStoredValue(timeSpecificationMatch_);
@@ -134,5 +137,21 @@ describe("timeSpecificationMatch() period normalization", () => {
             DER,
         );
         expect(timeSpecificationMatch(asserted, ac)).toBe(true);
+    });
+
+    it("passes MATCH_FLAG_HIGH_WORK_BUDGET through to SET OF Period pairing", () => {
+        const periods: Period[] = [];
+        for (let day = 1; day <= 14; day++) {
+            periods.push(new Period(undefined, { intDay: [day] }));
+        }
+        const asserted = new TimeSpecification({ periodic: periods });
+        const stored = new TimeSpecification({ periodic: periods.slice().reverse() });
+        expect(timeSpecificationMatchTyped(asserted, stored)).toBe(false);
+        expect(timeSpecificationMatchTyped(
+            asserted,
+            stored,
+            undefined,
+            MATCH_FLAG_HIGH_WORK_BUDGET,
+        )).toBe(true);
     });
 });

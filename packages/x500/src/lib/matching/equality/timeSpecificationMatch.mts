@@ -99,7 +99,8 @@ const timeSpecificationMatch: Matcher = createEqualityMatcher(
  *
  * @param assertedTime Presented time specification.
  * @param storedTime Stored time specification.
- * @param flags `MATCH_FLAG_DEBUG`.
+ * @param flags `MATCH_FLAG_DEBUG`, `MATCH_FLAG_CONSTANT_TIME`,
+ *  `MATCH_FLAG_APPROXIMATE`, and `MATCH_FLAG_HIGH_WORK_BUDGET`.
  * @returns `true` when every presented component matches.
  */
 function timeSpecificationsEqual (
@@ -207,7 +208,7 @@ function timeSpecificationsEqual (
         if (!periodSetsEquivalent(
             assertedTime.time.periodic,
             storedTime.time.periodic,
-            constantTime,
+            flags,
         )) {
             if (!constantTime) {
                 return false;
