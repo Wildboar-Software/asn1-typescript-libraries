@@ -33,6 +33,10 @@ function evaluateLDAPAttributeOptionContext (
     return evaluateLDAPAttributeOptionContextTyped(a, v, flags);
 }
 
+function optionEqualsIgnoreCase (a: string, b: string): boolean {
+    return a === b || a.toLowerCase() === b.toLowerCase();
+}
+
 /**
  * `ldapAttributeOptionContext` on two option lists. Asserted
  * options must be a case-insensitive subset of the stored options.
@@ -49,11 +53,19 @@ function evaluateLDAPAttributeOptionContextTyped (
     flags: number = 0,
 ): boolean {
     const constantTime = Boolean(flags & MATCH_FLAG_CONSTANT_TIME);
-    const storedValues: Set<string> = new Set(value.map((str) => str.toLowerCase()));
     let matched = true;
     for (let i = 0; i < assertion.length; i++) {
-        const assertedValue: string = assertion[i].toLowerCase();
-        if (!storedValues.has(assertedValue)) {
+        const assertedValue = assertion[i];
+        let found = false;
+        for (let j = 0; j < value.length; j++) {
+            if (optionEqualsIgnoreCase(assertedValue, value[j])) {
+                found = true;
+                if (!constantTime) {
+                    break;
+                }
+            }
+        }
+        if (!found) {
             if (!constantTime) {
                 return false;
             }

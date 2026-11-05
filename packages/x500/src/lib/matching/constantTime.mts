@@ -1,9 +1,17 @@
 import { Buffer } from "node:buffer";
 
+/**
+ * BIT STRING values are `Uint8ClampedArray`; OCTET STRING values are
+ * `Uint8Array`. Indexed comparison works on both; `Buffer.compare`
+ * does not accept clamped arrays.
+ */
+export
+type ByteArray = Uint8Array | Uint8ClampedArray;
+
 export
 type TimingSafeEqual = (
-    a: Uint8Array,
-    b: Uint8Array,
+    a: ByteArray,
+    b: ByteArray,
 ) => boolean;
 
 /**
@@ -11,7 +19,7 @@ type TimingSafeEqual = (
  * two `Uint8Array`s of equal length.
  */
 export
-function jsTimingSafeEqual (a: Uint8Array, b: Uint8Array): boolean {
+function jsTimingSafeEqual (a: ByteArray, b: ByteArray): boolean {
     if (a.byteLength !== b.byteLength) {
         throw new RangeError("Input buffers must have the same byte length");
     }
@@ -20,6 +28,12 @@ function jsTimingSafeEqual (a: Uint8Array, b: Uint8Array): boolean {
         diff |= a[i] ^ b[i];
     }
     return diff === 0;
+}
+
+function asUint8Array (bytes: ByteArray): Uint8Array {
+    return bytes instanceof Uint8Array
+        ? bytes
+        : new Uint8Array(bytes.buffer, bytes.byteOffset, bytes.byteLength);
 }
 
 let timingSafeEqual: TimingSafeEqual = jsTimingSafeEqual;
@@ -35,7 +49,7 @@ function setTimingSafeEqual (fn: TimingSafeEqual): void {
  */
 const SMALL_BYTES_EQUAL_THRESHOLD = 48;
 
-function fastBytesEqual (a: Uint8Array, b: Uint8Array): boolean {
+function fastBytesEqual (a: ByteArray, b: ByteArray): boolean {
     const len = a.byteLength;
     if (len !== b.byteLength) {
         return false;
@@ -48,7 +62,7 @@ function fastBytesEqual (a: Uint8Array, b: Uint8Array): boolean {
         }
         return true;
     }
-    return Buffer.compare(a, b) === 0;
+    return Buffer.compare(asUint8Array(a), asUint8Array(b)) === 0;
 }
 
 /**
@@ -94,15 +108,16 @@ function stringsEqual (
  * to `a.byteLength`.
  */
 export
-function ctBytesEqual (a: Uint8Array, b: Uint8Array): boolean {
-    if (a.byteLength === 0) {
+function ctBytesEqual (a: ByteArray, b: ByteArray): boolean {
+    const aView = asUint8Array(a);
+    if (aView.byteLength === 0) {
         return b.byteLength === 0;
     }
-    if (a.byteLength !== b.byteLength) {
-        timingSafeEqual(a, a);
+    if (aView.byteLength !== b.byteLength) {
+        timingSafeEqual(aView, aView);
         return false;
     }
-    return timingSafeEqual(a, b);
+    return timingSafeEqual(aView, asUint8Array(b));
 }
 
 /**
@@ -110,8 +125,8 @@ function ctBytesEqual (a: Uint8Array, b: Uint8Array): boolean {
  */
 export
 function bytesEqual (
-    a: Uint8Array,
-    b: Uint8Array,
+    a: ByteArray,
+    b: ByteArray,
     constantTime: boolean | number,
 ): boolean {
     return constantTime
@@ -153,7 +168,7 @@ function ctCompareCodePoints (a: string, b: string): number {
  * on the first differing byte.
  */
 export
-function ctCompareBytes (a: Uint8Array, b: Uint8Array): number {
+function ctCompareBytes (a: ByteArray, b: ByteArray): number {
     const aLen = a.length;
     const bLen = b.length;
     const minLen = Math.min(aLen, bLen);
@@ -181,9 +196,9 @@ function ctCompareBytes (a: Uint8Array, b: Uint8Array): number {
  */
 export
 function ctBytesEqualAt (
-    haystack: Uint8Array,
+    haystack: ByteArray,
     start: number,
-    needle: Uint8Array,
+    needle: ByteArray,
 ): number {
     const n = needle.length;
     const hlen = haystack.length;
@@ -204,8 +219,8 @@ function ctBytesEqualAt (
  */
 export
 function ctBytesIndexOf (
-    haystack: Uint8Array,
-    needle: Uint8Array,
+    haystack: ByteArray,
+    needle: ByteArray,
     from: number,
     end: number,
 ): number {

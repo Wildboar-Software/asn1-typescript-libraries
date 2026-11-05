@@ -739,6 +739,53 @@ function matchSubstringsConstantTime (
 }
 
 /**
+ * Same partition as slicing the remainder after each `initial` /
+ * `any` / `final` piece, but the haystack is never copied. `any`
+ * searches from `start` and must end at or before `end`, so a
+ * previously matched `final` still cannot be reused.
+ *
+ * `MATCH_FLAG_CONSTANT_TIME` scans every alignment of every piece.
+ */
+export
+function matchStringSubstrings (
+    prepared: string,
+    assertion: AssertedSubstring<string>[],
+    flags: number = 0,
+): boolean {
+    if (flags & MATCH_FLAG_CONSTANT_TIME) {
+        return matchSubstringsConstantTime(prepared, assertion);
+    }
+    let start = 0;
+    let end = prepared.length;
+    for (let i = 0; i < assertion.length; i++) {
+        const subass = assertion[i];
+        if ("any_" in subass) {
+            const needle = subass.any_;
+            const idx = prepared.indexOf(needle, start);
+            if (idx < 0 || (idx + needle.length) > end) {
+                return false;
+            }
+            start = idx + needle.length;
+        } else if ("initial" in subass) {
+            const needle = subass.initial;
+            const next = start + needle.length;
+            if (next > end || !prepared.startsWith(needle, start)) {
+                return false;
+            }
+            start = next;
+        } else if ("final" in subass) {
+            const needle = subass.final;
+            const finalStart = end - needle.length;
+            if (finalStart < start || !prepared.startsWith(needle, finalStart)) {
+                return false;
+            }
+            end = finalStart;
+        }
+    }
+    return true;
+}
+
+/**
  * @summary Create a function that performs substrings matching on a string-typed value.
  * @description
  * 
@@ -763,34 +810,6 @@ function getStringSubstringsMatcher (
         _getEqualityMatcher?: (attributeType: AttributeType) => Matcher | undefined,
         flags: number = 0,
     ): boolean | undefined {
-        const prepared = valuePrepper(value);
-        if (flags & MATCH_FLAG_CONSTANT_TIME) {
-            return matchSubstringsConstantTime(prepared, assertion);
-        }
-        let v = prepared;
-        for (let i = 0; i < assertion.length; i++) {
-            const subass = assertion[i];
-            if ("any_" in subass) {
-                const idx = v.indexOf(subass.any_);
-                if (idx >= 0) {
-                    v = v.slice(idx + subass.any_.length);
-                } else {
-                    return false;
-                }
-            } else if ("initial" in subass) {
-                if (v.startsWith(subass.initial)) {
-                    v = v.slice(subass.initial.length);
-                } else {
-                    return false;
-                }
-            } else if ("final" in subass) {
-                if (v.endsWith(subass.final)) {
-                    v = v.slice(0, v.length - subass.final.length);
-                } else {
-                    return false;
-                }
-            }
-        }
-        return true;
+        return matchStringSubstrings(valuePrepper(value), assertion, flags);
     };
 }

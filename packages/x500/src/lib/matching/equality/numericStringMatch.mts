@@ -10,13 +10,7 @@ import {
     type Matcher,
     type TypedEquationFunction,
 } from "../../types/matching.mjs";
-
-/**
- * Remove every space (X.520 clause 7.6.2).
- */
-function stripSpaces (numeric: string): string {
-    return numeric.replace(/\s+/g, "");
-}
+import { stripSpaces } from "../insignificant.mjs";
 
 /**
  * Rec. ITU-T X.520 (10/2019), clause 8.1.4 `numericStringMatch`.

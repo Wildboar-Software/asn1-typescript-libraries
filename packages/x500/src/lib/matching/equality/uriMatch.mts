@@ -112,8 +112,19 @@ function isUnreserved (code: number): boolean {
         || code === 0x7E;
 }
 
-function isHexDigit (character: string): boolean {
-    return /^[0-9A-Fa-f]$/.test(character);
+const HEX_UPPER = "0123456789ABCDEF";
+
+function hexValue (code: number): number {
+    if (code >= 0x30 && code <= 0x39) {
+        return code - 0x30;
+    }
+    if (code >= 0x41 && code <= 0x46) {
+        return code - 0x41 + 10;
+    }
+    if (code >= 0x61 && code <= 0x66) {
+        return code - 0x61 + 10;
+    }
+    return -1;
 }
 
 /**
@@ -121,23 +132,22 @@ function isHexDigit (character: string): boolean {
  * percent-encoding triplets, and decode unreserved octets.
  */
 function normalizePercentEncoding (input: string): string {
+    const len = input.length;
     let output = "";
-    for (let i = 0; i < input.length; i++) {
-        if (
-            input[i] === "%"
-            && i + 2 < input.length
-            && isHexDigit(input[i + 1])
-            && isHexDigit(input[i + 2])
-        ) {
-            const hex = input.slice(i + 1, i + 3).toUpperCase();
-            const code = Number.parseInt(hex, 16);
-            if (isUnreserved(code)) {
-                output += String.fromCharCode(code);
-            } else {
-                output += "%" + hex;
+    for (let i = 0; i < len; i++) {
+        if (input.charCodeAt(i) === 0x25 && i + 2 < len) {
+            const h1 = hexValue(input.charCodeAt(i + 1));
+            const h2 = hexValue(input.charCodeAt(i + 2));
+            if (h1 >= 0 && h2 >= 0) {
+                const code = (h1 << 4) | h2;
+                if (isUnreserved(code)) {
+                    output += String.fromCharCode(code);
+                } else {
+                    output += "%" + HEX_UPPER[h1] + HEX_UPPER[h2];
+                }
+                i += 2;
+                continue;
             }
-            i += 2;
-            continue;
         }
         output += input[i];
     }
@@ -145,17 +155,17 @@ function normalizePercentEncoding (input: string): string {
 }
 
 function lowercasePreservingPercent (input: string): string {
+    const len = input.length;
     let output = "";
-    for (let i = 0; i < input.length; i++) {
-        if (
-            input[i] === "%"
-            && i + 2 < input.length
-            && isHexDigit(input[i + 1])
-            && isHexDigit(input[i + 2])
-        ) {
-            output += "%" + input.slice(i + 1, i + 3).toUpperCase();
-            i += 2;
-            continue;
+    for (let i = 0; i < len; i++) {
+        if (input.charCodeAt(i) === 0x25 && i + 2 < len) {
+            const h1 = hexValue(input.charCodeAt(i + 1));
+            const h2 = hexValue(input.charCodeAt(i + 2));
+            if (h1 >= 0 && h2 >= 0) {
+                output += "%" + HEX_UPPER[h1] + HEX_UPPER[h2];
+                i += 2;
+                continue;
+            }
         }
         const codePoint = input.codePointAt(i)!;
         output += String.fromCodePoint(codePoint).toLowerCase();

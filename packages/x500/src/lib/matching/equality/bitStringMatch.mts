@@ -1,4 +1,3 @@
-import { Buffer } from "node:buffer";
 import type { ASN1Element, BIT_STRING } from "@wildboar/asn1";
 import type { AttributeType } from "../../modules/InformationFramework/index.mjs";
 import { approximatelyEqualBytes } from "../approximate.mjs";
@@ -34,8 +33,8 @@ function bitStringMatchTyped (
         return approximatelyEqualBytes(assertion, stored);
     }
     return bytesEqual(
-        Buffer.from(assertion.buffer, assertion.byteOffset, assertion.byteLength),
-        Buffer.from(stored.buffer, stored.byteOffset, stored.byteLength),
+        assertion,
+        stored,
         flags & MATCH_FLAG_CONSTANT_TIME,
     );
 }
