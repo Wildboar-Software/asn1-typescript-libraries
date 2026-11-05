@@ -1,4 +1,4 @@
-import { ASN1Element, DERElement, FALSE_BIT, type OBJECT_IDENTIFIER } from "@wildboar/asn1";
+import { ASN1Element, FALSE_BIT } from "@wildboar/asn1";
 import type { AttributeType } from "../../modules/InformationFramework/index.mjs";
 import { valueEqualityMatcher } from "../valueEqualityMatcher.mjs";
 import {
@@ -18,46 +18,6 @@ import {
     _decode_Certificate,
 } from "../../modules/AuthenticationFramework/Certificate.ta.mjs";
 import {
-    Extension,
-} from "../../modules/AuthenticationFramework/Extension.ta.mjs";
-import {
-    id_ce_subjectKeyIdentifier,
-} from "../../modules/CertificateExtensions/id-ce-subjectKeyIdentifier.va.mjs";
-import {
-    id_ce_authorityKeyIdentifier,
-} from "../../modules/CertificateExtensions/id-ce-authorityKeyIdentifier.va.mjs";
-import {
-    id_ce_privateKeyUsagePeriod,
-} from "../../modules/CertificateExtensions/id-ce-privateKeyUsagePeriod.va.mjs";
-import {
-    id_ce_subjectAltName,
-} from "../../modules/CertificateExtensions/id-ce-subjectAltName.va.mjs";
-import {
-    id_ce_certificatePolicies,
-} from "../../modules/CertificateExtensions/id-ce-certificatePolicies.va.mjs";
-import {
-    id_ce_nameConstraints,
-} from "../../modules/CertificateExtensions/id-ce-nameConstraints.va.mjs";
-import {
-    id_ce_keyUsage,
-} from "../../modules/CertificateExtensions/id-ce-keyUsage.va.mjs";
-import {
-    AuthorityKeyIdentifier,
-    _decode_AuthorityKeyIdentifier,
-} from "../../modules/CertificateExtensions/AuthorityKeyIdentifier.ta.mjs";
-import {
-    PrivateKeyUsagePeriod,
-    _decode_PrivateKeyUsagePeriod,
-} from "../../modules/CertificateExtensions/PrivateKeyUsagePeriod.ta.mjs";
-import {
-    type KeyUsage,
-    _decode_KeyUsage,
-} from "../../modules/CertificateExtensions/KeyUsage.ta.mjs";
-import {
-    type GeneralNames,
-    _decode_GeneralNames,
-} from "../../modules/CertificateExtensions/GeneralNames.ta.mjs";
-import {
     AltNameType_builtinNameForm_rfc822Name,
     AltNameType_builtinNameForm_dNSName,
     AltNameType_builtinNameForm_x400Address,
@@ -70,28 +30,12 @@ import {
 import compareAuthorityKeyIdentifier from "../../comparators/compareAuthorityKeyIdentifier.mjs";
 import { compareGeneralName } from "@wildboar/gn";
 import { getDateFromTime } from "@wildboar/pki-stub";
-import {
-    type CertificatePoliciesSyntax,
-    _decode_CertificatePoliciesSyntax,
-} from "../../modules/CertificateExtensions/CertificatePoliciesSyntax.ta.mjs";
-import {
-    NameConstraintsSyntax,
-    _decode_NameConstraintsSyntax,
-} from "../../modules/CertificateExtensions/NameConstraintsSyntax.ta.mjs";
-import {
-    anyPolicy,
-} from "../../modules/CertificateExtensions/anyPolicy.va.mjs";
 import dnWithinSubtree from "../../utils/dnWithinSubtree.mjs";
 import { Buffer } from "node:buffer";
-
-const AKI_OID: string = id_ce_authorityKeyIdentifier.toString();
-const SKI_OID: string = id_ce_subjectKeyIdentifier.toString();
-const PKUP_OID: string = id_ce_privateKeyUsagePeriod.toString();
-const KU_OID: string = id_ce_keyUsage.toString();
-const SAN_OID: string = id_ce_subjectAltName.toString();
-const CP_OID: string = id_ce_certificatePolicies.toString();
-const NC_OID: string = id_ce_nameConstraints.toString();
-const ANY_POLICY_OID: string = anyPolicy.toString();
+import {
+    CertificateExtensionIndex,
+    certificatePoliciesIntersect,
+} from "./certificateExtensionIndex.mjs";
 
 /**
  * Rec. ITU-T X.509 (10/2019), clause 13.3.10 component matching.
@@ -119,6 +63,7 @@ function evaluateEnhancedCertificateAssertion (
     }
     const getEqualityMatcher = valueEqualityMatcher(getMatcher, flags);
     const tbs = value.toBeSigned;
+    const extensions = new CertificateExtensionIndex(tbs.extensions);
     if (assertion.serialNumber && Buffer.compare(assertion.serialNumber, tbs.serialNumber)) {
         return false;
     }
@@ -126,27 +71,14 @@ function evaluateEnhancedCertificateAssertion (
         return false;
     }
     if (assertion.subjectKeyIdentifier) {
-        const ski: Extension | undefined = tbs.extensions
-            ?.find((ext: Extension): boolean => (ext.extnId.isEqualTo(id_ce_subjectKeyIdentifier)));
-        if (!ski) {
-            return false;
-        }
-        const el: DERElement = new DERElement();
-        el.fromBytes(ski.extnValue);
-        if (Buffer.compare(el.octetString, assertion.subjectKeyIdentifier)) {
+        const ski = extensions.subjectKeyIdentifier;
+        if (!ski || Buffer.compare(ski, assertion.subjectKeyIdentifier)) {
             return false;
         }
     }
     if (assertion.authorityKeyIdentifier) {
-        const aki: Extension | undefined = tbs.extensions
-            ?.find((ext: Extension): boolean => (ext.extnId.isEqualTo(id_ce_authorityKeyIdentifier)));
-        if (!aki) {
-            return false;
-        }
-        const el: DERElement = new DERElement();
-        el.fromBytes(aki.extnValue);
-        const storedAKI: AuthorityKeyIdentifier = _decode_AuthorityKeyIdentifier(el);
-        if (!compareAuthorityKeyIdentifier(assertion.authorityKeyIdentifier, storedAKI)) {
+        const storedAKI = extensions.authorityKeyIdentifier;
+        if (!storedAKI || !compareAuthorityKeyIdentifier(assertion.authorityKeyIdentifier, storedAKI)) {
             return false;
         }
     }
@@ -166,12 +98,8 @@ function evaluateEnhancedCertificateAssertion (
     }
 
     if (assertion.privateKeyValid) {
-        const pkupExt: Extension | undefined = tbs.extensions
-            ?.find((ext: Extension): boolean => (ext.extnId.isEqualTo(id_ce_privateKeyUsagePeriod)));
-        if (pkupExt) {
-            const el: DERElement = new DERElement();
-            el.fromBytes(pkupExt.extnValue);
-            const pkup: PrivateKeyUsagePeriod = _decode_PrivateKeyUsagePeriod(el);
+        const pkup = extensions.privateKeyUsagePeriod;
+        if (pkup) {
             if (
                 pkup.notBefore
                 && (assertion.privateKeyValid.valueOf() < pkup.notBefore.valueOf() - timeTol)
@@ -188,20 +116,16 @@ function evaluateEnhancedCertificateAssertion (
     }
 
     if (assertion.subjectPublicKeyAlgID) {
-        if (assertion.subjectPublicKeyAlgID.toString() !== tbs.subjectPublicKeyInfo.algorithm.algorithm.toString()) {
+        if (!assertion.subjectPublicKeyAlgID.isEqualTo(tbs.subjectPublicKeyInfo.algorithm.algorithm)) {
             return false;
         }
     }
 
     if (assertion.keyUsage) {
-        const kuExt: Extension | undefined = tbs.extensions
-            ?.find((ext: Extension): boolean => (ext.extnId.isEqualTo(id_ce_keyUsage)));
-        if (!kuExt) {
+        const storedKU = extensions.keyUsage;
+        if (!storedKU) {
             return false;
         }
-        const el: DERElement = new DERElement();
-        el.fromBytes(kuExt.extnValue);
-        const storedKU: KeyUsage = _decode_KeyUsage(el);
         if (!assertion.keyUsage.every((ku: number, index: number): boolean => (
             (ku === FALSE_BIT)
             || Boolean(storedKU[index])
@@ -212,14 +136,10 @@ function evaluateEnhancedCertificateAssertion (
 
     const subjectAltName = assertion.subjectAltName;
     if (subjectAltName) {
-        const sanExt: Extension | undefined = tbs.extensions
-            ?.find((ext: Extension): boolean => (ext.extnId.isEqualTo(id_ce_subjectAltName)));
-        if (!sanExt) {
+        const sans = extensions.subjectAltName;
+        if (!sans) {
             return false;
         }
-        const el: DERElement = new DERElement();
-        el.fromBytes(sanExt.extnValue);
-        const sans: GeneralNames = _decode_GeneralNames(el);
         const altNameValue = subjectAltName.altNameValue;
         if (altNameValue) {
             if (!sans.some((san): boolean => compareGeneralName(san, altNameValue, getEqualityMatcher))) {
@@ -307,34 +227,15 @@ function evaluateEnhancedCertificateAssertion (
     }
 
     if (assertion.policy) {
-        const cpExt: Extension | undefined = tbs.extensions
-            ?.find((ext: Extension): boolean => (ext.extnId.isEqualTo(id_ce_certificatePolicies)));
-        if (!cpExt) {
-            return false;
-        }
-        const el: DERElement = new DERElement();
-        el.fromBytes(cpExt.extnValue);
-        const cp: CertificatePoliciesSyntax = _decode_CertificatePoliciesSyntax(el);
-        const policiesHad: Set<string> = new Set<string>(
-            cp.map((policy) => policy.policyIdentifier.toString()),
-        );
-        const assertionHasAnyPolicy = assertion.policy.some((policy) => policy.isEqualTo(anyPolicy));
-        if (
-            !policiesHad.has(ANY_POLICY_OID)
-            && !assertionHasAnyPolicy
-            && !assertion.policy.some((policy): boolean => policiesHad.has(policy.toString()))
-        ) {
+        const cp = extensions.certificatePolicies;
+        if (!cp || !certificatePoliciesIntersect(assertion.policy, cp)) {
             return false;
         }
     }
 
     if (assertion.pathToName) {
-        const ncExt: Extension | undefined = tbs.extensions
-            ?.find((ext: Extension): boolean => (ext.extnId.isEqualTo(id_ce_nameConstraints)));
-        if (ncExt) {
-            const el: DERElement = new DERElement();
-            el.fromBytes(ncExt.extnValue);
-            const nc: NameConstraintsSyntax = _decode_NameConstraintsSyntax(el);
+        const nc = extensions.nameConstraints;
+        if (nc) {
 
             if (!assertion.pathToName.every((path) => {
                 if (!("directoryName" in path)) {
@@ -410,12 +311,8 @@ function evaluateEnhancedCertificateAssertion (
             return false;
         }
 
-        const sanExt: Extension | undefined = tbs.extensions
-            ?.find((ext: Extension): boolean => (ext.extnId.isEqualTo(id_ce_subjectAltName)));
-        if (sanExt) {
-            const el: DERElement = new DERElement();
-            el.fromBytes(sanExt.extnValue);
-            const sans: GeneralNames = _decode_GeneralNames(el);
+        const sans = extensions.subjectAltName;
+        if (sans) {
             if (!sans.every((san): boolean => {
                 if (nc.excludedSubtrees?.some((sub): boolean => {
                     if (!("directoryName" in sub.base)) {
