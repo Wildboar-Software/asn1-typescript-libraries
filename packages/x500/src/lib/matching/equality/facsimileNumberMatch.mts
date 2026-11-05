@@ -11,6 +11,7 @@ import type {
     FacsimileTelephoneNumber,
 } from "../../modules/SelectedAttributeTypes/FacsimileTelephoneNumber.ta.mjs";
 import { telephoneNumberMatchTyped } from "./telephoneNumberMatch.mjs";
+import { normalizeTelephoneNumber } from "../insignificant.mjs";
 import {
     createEqualityMatcher,
     type Matcher,
@@ -39,10 +40,6 @@ function readFacsimileNumber (value: FacsimileNumberInput): string {
         return _decode_TelephoneNumber(value.sequence[0]);
     }
     return value.printableString;
-}
-
-function normalizeTelephoneNumber (telephoneNumber: string): string {
-    return telephoneNumber.replace(/[- ]/g, "");
 }
 
 /**

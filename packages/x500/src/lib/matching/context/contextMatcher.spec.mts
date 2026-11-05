@@ -20,7 +20,10 @@ import {
     MATCH_FLAG_DEBUG,
 } from "../../types/matching.mjs";
 import { languageContext } from "./languageContext.mjs";
-import { ldapAttributeOptionContext } from "./ldapAttributeOptionContext.mjs";
+import {
+    evaluateLDAPAttributeOptionContextTyped,
+    ldapAttributeOptionContext,
+} from "./ldapAttributeOptionContext.mjs";
 import { localeContext } from "./localeContext.mjs";
 import { temporalContext } from "./temporalContext.mjs";
 
@@ -121,6 +124,18 @@ describe("context matchers", () => {
             assertion,
             [_encodeInteger(1, DER), fr].values(),
         )).toBe(true);
+        expect(evaluateLDAPAttributeOptionContextTyped(
+            [ "binary", "lang-en" ],
+            [ "lang-en", "binary", "x-foo" ],
+        )).toBe(true);
+        expect(evaluateLDAPAttributeOptionContextTyped(
+            [ "BINARY" ],
+            [ "binary" ],
+        )).toBe(true);
+        expect(evaluateLDAPAttributeOptionContextTyped(
+            [ "lang-FR" ],
+            [ "lang-en" ],
+        )).toBe(false);
     });
 
     it("matches a locale against any stored value, including an unrecognized alternative", () => {

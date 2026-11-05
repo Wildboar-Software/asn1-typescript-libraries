@@ -12,12 +12,15 @@ import {
 } from "../../modules/SelectedAttributeTypes/UnboundedDirectoryString.ta.mjs";
 import { directoryStringToString } from "../../stringifiers/directoryStringToString.mjs";
 import {
-    getStringSubstringsMatcher,
     MATCH_FLAG_ASSERTION_VALIDATED,
     MATCH_FLAG_DEBUG,
     MATCH_FLAG_VALUE_NORMALIZED,
+    matchStringSubstrings,
     type AssertedSubstring,
 } from "../../types/matching.mjs";
+import { normalizeTelephoneNumber } from "../insignificant.mjs";
+
+export { normalizeTelephoneNumber };
 
 /**
  * Returns the prepared character string, or `undefined` when
@@ -31,15 +34,6 @@ type SubstringChoice<T> =
     | { readonly final: T }
     | { readonly control: Attribute }
     | ASN1Element;
-
-/**
- * Hyphens and spaces are insignificant for telephone-number
- * matching (X.520). Other characters, including `+`, stay.
- */
-export
-function normalizeTelephoneNumber (telephoneNumber: string): string {
-    return telephoneNumber.replace(/[- ]/g, "");
-}
 
 /**
  * Prepare `raw` for an assertion piece. Failure and an empty
@@ -313,23 +307,18 @@ function hasMatchPiece (
  * Match already-prepared pieces against an already-prepared string.
  * An assertion with no `initial` / `any` / `final` is UNDEFINED
  * rather than a match of every value. `MATCH_FLAG_CONSTANT_TIME`
- * is honored by `getStringSubstringsMatcher`.
+ * is honored by `matchStringSubstrings`.
  */
 export
 function matchPreparedString (
     assertion: AssertedSubstring<string>[],
     prepared: string,
-    value: ASN1Element,
+    _value: ASN1Element,
     flags: number,
     rule?: string,
 ): boolean | undefined {
     if (!hasMatchPiece(assertion, flags, rule)) {
         return undefined;
     }
-    return getStringSubstringsMatcher(() => prepared)(
-        assertion,
-        value,
-        undefined,
-        flags,
-    );
+    return matchStringSubstrings(prepared, assertion, flags);
 }

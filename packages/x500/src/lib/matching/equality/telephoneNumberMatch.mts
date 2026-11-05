@@ -10,10 +10,7 @@ import {
     type Matcher,
     type TypedEquationFunction,
 } from "../../types/matching.mjs";
-
-function normalizeTelephoneNumber (telephoneNumber: string): string {
-    return telephoneNumber.replace(/[- ]/g, "");
-}
+import { normalizeTelephoneNumber } from "../insignificant.mjs";
 
 /**
  * Rec. ITU-T X.520 (10/2019), clause 8.2.8 `telephoneNumberMatch`.

@@ -13,8 +13,22 @@ import {
     type TypedEquationFunction,
 } from "../../types/matching.mjs";
 
-function isWordChar(c: string | undefined): boolean {
-    return !!c && /[\p{L}\p{N}_]/u.test(c);
+const NON_ASCII_WORD_CHAR = /[\p{L}\p{N}]/u;
+
+/**
+ * Letters, digits, or underscore. ASCII is a char-code table;
+ * other code units go through `\p{L}` / `\p{N}`.
+ */
+function isWordCode (code: number): boolean {
+    if (code <= 0x7F) {
+        return (
+            (code >= 0x30 && code <= 0x39)
+            || (code >= 0x41 && code <= 0x5A)
+            || (code >= 0x61 && code <= 0x7A)
+            || code === 0x5F
+        );
+    }
+    return NON_ASCII_WORD_CHAR.test(String.fromCharCode(code));
 }
 
 function ctContainsWord (haystack: string, needle: string): boolean {
@@ -29,12 +43,41 @@ function ctContainsWord (haystack: string, needle: string): boolean {
             const hc = hLen === 0 ? 0 : haystack.charCodeAt(inPos ? pos : 0);
             mismatch |= (hc ^ needle.charCodeAt(j)) | (inPos ^ 1);
         }
-        const before = i > 0 ? haystack[i - 1] : undefined;
-        const after = (i + nLen < hLen) ? haystack[i + nLen] : undefined;
-        const boundary = (!isWordChar(before) && !isWordChar(after)) ? 1 : 0;
-        found |= (mismatch === 0 ? 1 : 0) & boundary;
+        const beforeOk = (i === 0 || !isWordCode(haystack.charCodeAt(i - 1))) ? 1 : 0;
+        const afterIdx = i + nLen;
+        const afterOk = (afterIdx >= hLen || !isWordCode(haystack.charCodeAt(afterIdx))) ? 1 : 0;
+        found |= (mismatch === 0 ? 1 : 0) & beforeOk & afterOk;
     }
     return found === 1;
+}
+
+function approxContainsWord (
+    haystack: string,
+    needle: string,
+    constantTime: boolean,
+): boolean {
+    let matched = false;
+    const hLen = haystack.length;
+    let i = 0;
+    while (i < hLen) {
+        while (i < hLen && !isWordCode(haystack.charCodeAt(i))) {
+            i++;
+        }
+        const start = i;
+        while (i < hLen && isWordCode(haystack.charCodeAt(i))) {
+            i++;
+        }
+        if (start === i) {
+            break;
+        }
+        if (approximatelyEqualStrings(haystack.slice(start, i), needle)) {
+            if (!constantTime) {
+                return true;
+            }
+            matched = true;
+        }
+    }
+    return matched;
 }
 
 /**
@@ -51,32 +94,24 @@ function containsWord (
 ): boolean {
     const numFlags = typeof flags === "number" ? flags : (flags ? MATCH_FLAG_CONSTANT_TIME : 0);
     if (numFlags & MATCH_FLAG_APPROXIMATE) {
-        const words = haystack.match(/[\p{L}\p{N}_]+/gu);
-        if (!words) {
-            return false;
-        }
-        let matched = false;
-        const constantTime = Boolean(numFlags & MATCH_FLAG_CONSTANT_TIME);
-        for (let i = 0; i < words.length; i++) {
-            if (approximatelyEqualStrings(words[i], needle)) {
-                if (!constantTime) {
-                    return true;
-                }
-                matched = true;
-            }
-        }
-        return matched;
+        return approxContainsWord(
+            haystack,
+            needle,
+            Boolean(numFlags & MATCH_FLAG_CONSTANT_TIME),
+        );
     }
     if (typeof flags === "boolean" ? flags : (numFlags & MATCH_FLAG_CONSTANT_TIME)) {
         return ctContainsWord(haystack, needle);
     }
+    const nLen = needle.length;
     let i = haystack.indexOf(needle);
     while (i >= 0) {
-        const before = haystack[i - 1];
-        const after = haystack[i + needle.length];
         // We have to check that what we found isn't a substring of another
         // word. It must match on a complete word.
-        if (!isWordChar(before) && !isWordChar(after)) {
+        if (
+            (i === 0 || !isWordCode(haystack.charCodeAt(i - 1)))
+            && (i + nLen >= haystack.length || !isWordCode(haystack.charCodeAt(i + nLen)))
+        ) {
             return true;
         }
         i = haystack.indexOf(needle, i + 1);
