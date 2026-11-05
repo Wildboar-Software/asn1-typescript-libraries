@@ -6,8 +6,10 @@ import { Buffer } from "node:buffer";
 import { describe, expect, test } from "vitest";
 import { evaluateCertificateAssertion } from "./certificateMatch.mjs";
 import {
-    CertificateExtensionIndex,
+    certificateExtensionMap,
+    certificateExtensionReader,
     certificatePoliciesIntersect,
+    decodeCertificateExtension,
 } from "./certificateExtensionIndex.mjs";
 import {
     CertificateAssertion,
@@ -60,7 +62,7 @@ import dnWithinSubtree from "../../utils/dnWithinSubtree.mjs";
 import { AltNameType_builtinNameForm_dNSName } from "../../modules/CertificateExtensions/AltNameType-builtinNameForm.ta.mjs";
 
 const BEFORE = "before: find + re-decode + oid.toString()";
-const AFTER = "after: index once + isEqualTo";
+const AFTER = "after: Map of OIDs + isEqualTo";
 
 const ALG = new AlgorithmIdentifier(ObjectIdentifier.fromString("1.2.840.113549.1.1.11"));
 const POLICY_B = ObjectIdentifier.fromString("1.2.3.4.6");
@@ -228,24 +230,25 @@ function evaluateByFindAndToString (
 }
 
 /**
- * The new extension path: one index, each extension decoded at most
- * once, policies compared with `isEqualTo`. Same components as
- * {@link evaluateByFindAndToString}, so the bench does not also
- * measure `evaluateCertificateAssertion`'s nameConstraints walk.
+ * The new extension path: `Map` of OID strings to extensions, each
+ * decoded at most once, policies compared with `isEqualTo`. Same
+ * components as {@link evaluateByFindAndToString}, so the bench does
+ * not also measure `evaluateCertificateAssertion`'s nameConstraints
+ * walk.
  */
 function evaluateByIndex (
     assertion: CertificateAssertion,
     cert: Certificate,
 ): boolean {
-    const extensions = new LocalIndex(cert.toBeSigned.extensions);
+    const ext = localReader(cert.toBeSigned.extensions);
     if (assertion.subjectKeyIdentifier) {
-        const ski = extensions.subjectKeyIdentifier;
+        const ski = ext(localSkiOid, (el) => el.octetString);
         if (!ski || Buffer.compare(ski, assertion.subjectKeyIdentifier)) {
             return false;
         }
     }
     if (assertion.keyUsage) {
-        const storedKU = extensions.keyUsage;
+        const storedKU = ext(localKuOid, localDecodeKeyUsage);
         if (!storedKU) {
             return false;
         }
@@ -254,19 +257,19 @@ function evaluateByIndex (
         }
     }
     if (assertion.subjectAltName) {
-        const sans = extensions.subjectAltName;
+        const sans = ext(localSanOid, localDecodeGeneralNames);
         if (!sans || !sans.some((san) => ("dNSName" in san))) {
             return false;
         }
     }
     if (assertion.policy) {
-        const cp = extensions.certificatePolicies;
+        const cp = ext(localCpOid, localDecodePolicies);
         if (!cp || !localIntersect(assertion.policy, cp)) {
             return false;
         }
     }
     if (assertion.pathToName) {
-        const nc = extensions.nameConstraints;
+        const nc = ext(localNcOid, localDecodeNameConstraints);
         if (nc?.permittedSubtrees && !nc.permittedSubtrees.every((sub) => {
             if (!("directoryName" in sub.base)) {
                 return true;
@@ -280,7 +283,7 @@ function evaluateByIndex (
         }
     }
     if (assertion.nameConstraints) {
-        extensions.subjectAltName;
+        ext(localSanOid, localDecodeGeneralNames);
     }
     return true;
 }
@@ -334,10 +337,19 @@ const assertion = new CertificateAssertion(
 
 const localIntersect = certificatePoliciesIntersect;
 const localFindEvaluate = evaluateByFindAndToString;
-const LocalIndex = CertificateExtensionIndex;
+const localMap = certificateExtensionMap;
+const localReader = certificateExtensionReader;
+const localDecodeMapped = decodeCertificateExtension;
 const localIndexEvaluate = evaluateByIndex;
 const localDecodeGeneralNames = _decode_GeneralNames;
+const localDecodeKeyUsage = _decode_KeyUsage;
+const localDecodePolicies = _decode_CertificatePoliciesSyntax;
+const localDecodeNameConstraints = _decode_NameConstraintsSyntax;
 const localSanOid = id_ce_subjectAltName;
+const localSkiOid = id_ce_subjectKeyIdentifier;
+const localKuOid = id_ce_keyUsage;
+const localCpOid = id_ce_certificatePolicies;
+const localNcOid = id_ce_nameConstraints;
 
 let sink = 0;
 
@@ -374,12 +386,14 @@ describe("certificateMatch extension lookup", () => {
     });
 });
 
-describe("CertificateExtensionIndex SAN decode-once", () => {
+describe("decodeCertificateExtension SAN decode-once", () => {
     test("20 SAN names decoded twice vs once", async ({ bench }) => {
         const extensions = cert.toBeSigned.extensions!;
         const sanExt = findExt(extensions, localSanOid)!;
         expect(decodeExt(sanExt, localDecodeGeneralNames)).toHaveLength(20);
-        expect(new LocalIndex(extensions).subjectAltName).toHaveLength(20);
+        const map = localMap(extensions);
+        const cache: Map<string, unknown> = new Map();
+        expect(localDecodeMapped(map, localSanOid, localDecodeGeneralNames, cache)).toHaveLength(20);
         const result = await bench.compare(
             bench(BEFORE, () => {
                 decodeExt(sanExt, localDecodeGeneralNames);

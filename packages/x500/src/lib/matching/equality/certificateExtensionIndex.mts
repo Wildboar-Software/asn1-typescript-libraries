@@ -3,213 +3,91 @@ import {
     type Extension,
 } from "../../modules/AuthenticationFramework/Extension.ta.mjs";
 import {
-    id_ce_subjectKeyIdentifier,
-} from "../../modules/CertificateExtensions/id-ce-subjectKeyIdentifier.va.mjs";
-import {
-    id_ce_authorityKeyIdentifier,
-} from "../../modules/CertificateExtensions/id-ce-authorityKeyIdentifier.va.mjs";
-import {
-    id_ce_privateKeyUsagePeriod,
-} from "../../modules/CertificateExtensions/id-ce-privateKeyUsagePeriod.va.mjs";
-import {
-    id_ce_subjectAltName,
-} from "../../modules/CertificateExtensions/id-ce-subjectAltName.va.mjs";
-import {
-    id_ce_certificatePolicies,
-} from "../../modules/CertificateExtensions/id-ce-certificatePolicies.va.mjs";
-import {
-    id_ce_nameConstraints,
-} from "../../modules/CertificateExtensions/id-ce-nameConstraints.va.mjs";
-import {
-    id_ce_keyUsage,
-} from "../../modules/CertificateExtensions/id-ce-keyUsage.va.mjs";
-import {
-    type AuthorityKeyIdentifier,
-    _decode_AuthorityKeyIdentifier,
-} from "../../modules/CertificateExtensions/AuthorityKeyIdentifier.ta.mjs";
-import {
-    type PrivateKeyUsagePeriod,
-    _decode_PrivateKeyUsagePeriod,
-} from "../../modules/CertificateExtensions/PrivateKeyUsagePeriod.ta.mjs";
-import {
-    type KeyUsage,
-    _decode_KeyUsage,
-} from "../../modules/CertificateExtensions/KeyUsage.ta.mjs";
-import {
-    type GeneralNames,
-    _decode_GeneralNames,
-} from "../../modules/CertificateExtensions/GeneralNames.ta.mjs";
-import {
     type CertificatePoliciesSyntax,
-    _decode_CertificatePoliciesSyntax,
 } from "../../modules/CertificateExtensions/CertificatePoliciesSyntax.ta.mjs";
-import {
-    type NameConstraintsSyntax,
-    _decode_NameConstraintsSyntax,
-} from "../../modules/CertificateExtensions/NameConstraintsSyntax.ta.mjs";
 import {
     anyPolicy,
 } from "../../modules/CertificateExtensions/anyPolicy.va.mjs";
 
-// Vite's module runner turns imported bindings into getters. Locals keep
-// that per-call overhead out of the matching hot path.
-const SKI_ID = id_ce_subjectKeyIdentifier;
-const AKI_ID = id_ce_authorityKeyIdentifier;
-const PKUP_ID = id_ce_privateKeyUsagePeriod;
-const KU_ID = id_ce_keyUsage;
-const SAN_ID = id_ce_subjectAltName;
-const CP_ID = id_ce_certificatePolicies;
-const NC_ID = id_ce_nameConstraints;
 const ANY_POLICY = anyPolicy;
-const decodeAKI = _decode_AuthorityKeyIdentifier;
-const decodePKUP = _decode_PrivateKeyUsagePeriod;
-const decodeKU = _decode_KeyUsage;
-const decodeSAN = _decode_GeneralNames;
-const decodeCP = _decode_CertificatePoliciesSyntax;
-const decodeNC = _decode_NameConstraintsSyntax;
-const ID_CE_LEN = SKI_ID.byteLength();
-
-const UNSET: unique symbol = Symbol("unset");
-type Lazy<T> = T | typeof UNSET;
-
-function decodeExtension<T> (
-    ext: Extension | undefined,
-    decoder: (el: DERElement) => T,
-): T | undefined {
-    if (!ext) {
-        return undefined;
-    }
-    const el: DERElement = new DERElement();
-    el.fromBytes(ext.extnValue);
-    return decoder(el);
-}
 
 /**
- * One pass over a certificate's extensions, with each well-known
- * extension decoded at most once.
+ * Map of a certificate's extensions by OID string, the same key
+ * {@link groupByOID} uses. RFC 5280 forbids duplicate types; a
+ * second member with the same OID overwrites the first.
  *
- * `certificateMatch` and `enhancedCertificateMatch` used to `.find`
- * and re-decode the same extension for every asserted component
- * (subjectAltName was decoded twice when `nameConstraints` was also
- * present). Policy OIDs were compared via `toString()`.
- *
+ * @param {Extension[]} extensions `TBSCertificate.extensions`.
+ * @returns {Map<string, Extension>} OID string to extension.
+ * @function
  * @author Cursor Grok 4.6
  */
 export
-class CertificateExtensionIndex {
-    private readonly skiExt: Extension | undefined;
-    private readonly akiExt: Extension | undefined;
-    private readonly pkupExt: Extension | undefined;
-    private readonly kuExt: Extension | undefined;
-    private readonly sanExt: Extension | undefined;
-    private readonly cpExt: Extension | undefined;
-    private readonly ncExt: Extension | undefined;
-
-    private ski: Lazy<Uint8Array | undefined> = UNSET;
-    private aki: Lazy<AuthorityKeyIdentifier | undefined> = UNSET;
-    private pkup: Lazy<PrivateKeyUsagePeriod | undefined> = UNSET;
-    private ku: Lazy<KeyUsage | undefined> = UNSET;
-    private san: Lazy<GeneralNames | undefined> = UNSET;
-    private cp: Lazy<CertificatePoliciesSyntax | undefined> = UNSET;
-    private nc: Lazy<NameConstraintsSyntax | undefined> = UNSET;
-
-    constructor (extensions: Extension[] | undefined) {
-        let skiExt: Extension | undefined;
-        let akiExt: Extension | undefined;
-        let pkupExt: Extension | undefined;
-        let kuExt: Extension | undefined;
-        let sanExt: Extension | undefined;
-        let cpExt: Extension | undefined;
-        let ncExt: Extension | undefined;
-        if (extensions) {
-            // `id-ce` components used here encode on 3 bytes (`2.5.29.*`
-            // with a last arc below 128). Skip longer OIDs before the
-            // seven `isEqualTo` checks.
-            for (const ext of extensions) {
-                const id = ext.extnId;
-                if (id.byteLength() !== ID_CE_LEN) {
-                    continue;
-                }
-                if (id.isEqualTo(SKI_ID)) {
-                    skiExt = ext;
-                } else if (id.isEqualTo(AKI_ID)) {
-                    akiExt = ext;
-                } else if (id.isEqualTo(PKUP_ID)) {
-                    pkupExt = ext;
-                } else if (id.isEqualTo(KU_ID)) {
-                    kuExt = ext;
-                } else if (id.isEqualTo(SAN_ID)) {
-                    sanExt = ext;
-                } else if (id.isEqualTo(CP_ID)) {
-                    cpExt = ext;
-                } else if (id.isEqualTo(NC_ID)) {
-                    ncExt = ext;
-                }
-            }
-        }
-        this.skiExt = skiExt;
-        this.akiExt = akiExt;
-        this.pkupExt = pkupExt;
-        this.kuExt = kuExt;
-        this.sanExt = sanExt;
-        this.cpExt = cpExt;
-        this.ncExt = ncExt;
+function certificateExtensionMap (
+    extensions: Extension[] | undefined,
+): Map<string, Extension> {
+    const map: Map<string, Extension> = new Map();
+    if (!extensions) {
+        return map;
     }
-
-    get subjectKeyIdentifier (): Uint8Array | undefined {
-        if (this.ski === UNSET) {
-            if (!this.skiExt) {
-                this.ski = undefined;
-            } else {
-                const el: DERElement = new DERElement();
-                el.fromBytes(this.skiExt.extnValue);
-                this.ski = el.octetString;
-            }
-        }
-        return this.ski;
+    for (const ext of extensions) {
+        map.set(ext.extnId.toString(), ext);
     }
+    return map;
+}
 
-    get authorityKeyIdentifier (): AuthorityKeyIdentifier | undefined {
-        if (this.aki === UNSET) {
-            this.aki = decodeExtension(this.akiExt, decodeAKI);
-        }
-        return this.aki;
+/**
+ * Decode one mapped extension. `cache` holds the decoded value so
+ * `subjectAltName` is not re-decoded when `nameConstraints` also
+ * reads it.
+ *
+ * @param {Map<string, Extension>} map From {@link certificateExtensionMap}.
+ * @param {OBJECT_IDENTIFIER} oid The extension type.
+ * @param {Function} decoder X.690 decoder for that extension.
+ * @param {Map<string, unknown>} cache Optional per-certificate decode cache.
+ * @returns The decoded value, or `undefined` if the extension is absent.
+ * @function
+ * @author Cursor Grok 4.6
+ */
+export
+function decodeCertificateExtension <T> (
+    map: Map<string, Extension>,
+    oid: OBJECT_IDENTIFIER,
+    decoder: (el: DERElement) => T,
+    cache?: Map<string, unknown>,
+): T | undefined {
+    const key = oid.toString();
+    if (cache?.has(key)) {
+        return cache.get(key) as T | undefined;
     }
+    const ext = map.get(key);
+    let value: T | undefined;
+    if (ext) {
+        const el: DERElement = new DERElement();
+        el.fromBytes(ext.extnValue);
+        value = decoder(el);
+    }
+    cache?.set(key, value);
+    return value;
+}
 
-    get privateKeyUsagePeriod (): PrivateKeyUsagePeriod | undefined {
-        if (this.pkup === UNSET) {
-            this.pkup = decodeExtension(this.pkupExt, decodePKUP);
-        }
-        return this.pkup;
-    }
-
-    get keyUsage (): KeyUsage | undefined {
-        if (this.ku === UNSET) {
-            this.ku = decodeExtension(this.kuExt, decodeKU);
-        }
-        return this.ku;
-    }
-
-    get subjectAltName (): GeneralNames | undefined {
-        if (this.san === UNSET) {
-            this.san = decodeExtension(this.sanExt, decodeSAN);
-        }
-        return this.san;
-    }
-
-    get certificatePolicies (): CertificatePoliciesSyntax | undefined {
-        if (this.cp === UNSET) {
-            this.cp = decodeExtension(this.cpExt, decodeCP);
-        }
-        return this.cp;
-    }
-
-    get nameConstraints (): NameConstraintsSyntax | undefined {
-        if (this.nc === UNSET) {
-            this.nc = decodeExtension(this.ncExt, decodeNC);
-        }
-        return this.nc;
-    }
+/**
+ * Map of extensions plus a decode cache so each OID is decoded at
+ * most once for one certificate.
+ *
+ * @param {Extension[]} extensions `TBSCertificate.extensions`.
+ * @returns {Function} `(oid, decoder) => decoded | undefined`.
+ * @function
+ * @author Cursor Grok 4.6
+ */
+export
+function certificateExtensionReader (
+    extensions: Extension[] | undefined,
+): <T>(oid: OBJECT_IDENTIFIER, decoder: (el: DERElement) => T) => T | undefined {
+    const map = certificateExtensionMap(extensions);
+    const decoded: Map<string, unknown> = new Map();
+    return <T>(oid: OBJECT_IDENTIFIER, decoder: (el: DERElement) => T): T | undefined => (
+        decodeCertificateExtension(map, oid, decoder, decoded)
+    );
 }
 
 /**

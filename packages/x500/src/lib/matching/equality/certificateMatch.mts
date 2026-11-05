@@ -1,4 +1,4 @@
-import { ASN1Element, FALSE_BIT } from "@wildboar/asn1";
+import { ASN1Element, FALSE_BIT, type DERElement } from "@wildboar/asn1";
 import type { AttributeType } from "../../modules/InformationFramework/index.mjs";
 import { valueEqualityMatcher } from "../valueEqualityMatcher.mjs";
 import {
@@ -18,6 +18,45 @@ import {
     _decode_Certificate,
 } from "../../modules/AuthenticationFramework/Certificate.ta.mjs";
 import {
+    id_ce_subjectKeyIdentifier,
+} from "../../modules/CertificateExtensions/id-ce-subjectKeyIdentifier.va.mjs";
+import {
+    id_ce_authorityKeyIdentifier,
+} from "../../modules/CertificateExtensions/id-ce-authorityKeyIdentifier.va.mjs";
+import {
+    id_ce_privateKeyUsagePeriod,
+} from "../../modules/CertificateExtensions/id-ce-privateKeyUsagePeriod.va.mjs";
+import {
+    id_ce_keyUsage,
+} from "../../modules/CertificateExtensions/id-ce-keyUsage.va.mjs";
+import {
+    id_ce_subjectAltName,
+} from "../../modules/CertificateExtensions/id-ce-subjectAltName.va.mjs";
+import {
+    id_ce_certificatePolicies,
+} from "../../modules/CertificateExtensions/id-ce-certificatePolicies.va.mjs";
+import {
+    id_ce_nameConstraints,
+} from "../../modules/CertificateExtensions/id-ce-nameConstraints.va.mjs";
+import {
+    _decode_AuthorityKeyIdentifier,
+} from "../../modules/CertificateExtensions/AuthorityKeyIdentifier.ta.mjs";
+import {
+    _decode_PrivateKeyUsagePeriod,
+} from "../../modules/CertificateExtensions/PrivateKeyUsagePeriod.ta.mjs";
+import {
+    _decode_KeyUsage,
+} from "../../modules/CertificateExtensions/KeyUsage.ta.mjs";
+import {
+    _decode_GeneralNames,
+} from "../../modules/CertificateExtensions/GeneralNames.ta.mjs";
+import {
+    _decode_CertificatePoliciesSyntax,
+} from "../../modules/CertificateExtensions/CertificatePoliciesSyntax.ta.mjs";
+import {
+    _decode_NameConstraintsSyntax,
+} from "../../modules/CertificateExtensions/NameConstraintsSyntax.ta.mjs";
+import {
     AltNameType_builtinNameForm_rfc822Name,
     AltNameType_builtinNameForm_dNSName,
     AltNameType_builtinNameForm_x400Address,
@@ -32,9 +71,26 @@ import { getDateFromTime } from "@wildboar/pki-stub";
 import dnWithinSubtree from "../../utils/dnWithinSubtree.mjs";
 import { Buffer } from "node:buffer";
 import {
-    CertificateExtensionIndex,
+    certificateExtensionReader,
     certificatePoliciesIntersect,
 } from "./certificateExtensionIndex.mjs";
+
+const SKI_ID = id_ce_subjectKeyIdentifier;
+const AKI_ID = id_ce_authorityKeyIdentifier;
+const PKUP_ID = id_ce_privateKeyUsagePeriod;
+const KU_ID = id_ce_keyUsage;
+const SAN_ID = id_ce_subjectAltName;
+const CP_ID = id_ce_certificatePolicies;
+const NC_ID = id_ce_nameConstraints;
+const decodeAKI = _decode_AuthorityKeyIdentifier;
+const decodePKUP = _decode_PrivateKeyUsagePeriod;
+const decodeKU = _decode_KeyUsage;
+const decodeSAN = _decode_GeneralNames;
+const decodeCP = _decode_CertificatePoliciesSyntax;
+const decodeNC = _decode_NameConstraintsSyntax;
+const decodeSKI = (el: DERElement): Uint8Array => el.octetString;
+const extensionReader = certificateExtensionReader;
+const policiesIntersect = certificatePoliciesIntersect;
 
 /**
  * Rec. ITU-T X.509 (10/2019), clause 13.3.2 component matching.
@@ -65,7 +121,7 @@ function evaluateCertificateAssertion (
     }
     const getEqualityMatcher = valueEqualityMatcher(getMatcher, flags);
     const tbs = value.toBeSigned;
-    const extensions = new CertificateExtensionIndex(tbs.extensions);
+    const ext = extensionReader(tbs.extensions);
     if (assertion.serialNumber && Buffer.compare(assertion.serialNumber, tbs.serialNumber)) {
         return false;
     }
@@ -73,13 +129,13 @@ function evaluateCertificateAssertion (
         return false;
     }
     if (assertion.subjectKeyIdentifier) {
-        const ski = extensions.subjectKeyIdentifier;
+        const ski = ext(SKI_ID, decodeSKI);
         if (!ski || Buffer.compare(ski, assertion.subjectKeyIdentifier)) {
             return false;
         }
     }
     if (assertion.authorityKeyIdentifier) {
-        const storedAKI = extensions.authorityKeyIdentifier;
+        const storedAKI = ext(AKI_ID, decodeAKI);
         if (!storedAKI || !compareAuthorityKeyIdentifier(assertion.authorityKeyIdentifier, storedAKI)) {
             return false;
         }
@@ -100,7 +156,7 @@ function evaluateCertificateAssertion (
     }
 
     if (assertion.privateKeyValid) {
-        const pkup = extensions.privateKeyUsagePeriod;
+        const pkup = ext(PKUP_ID, decodePKUP);
         if (pkup) {
             if (
                 pkup.notBefore
@@ -124,7 +180,7 @@ function evaluateCertificateAssertion (
     }
 
     if (assertion.keyUsage) {
-        const storedKU = extensions.keyUsage;
+        const storedKU = ext(KU_ID, decodeKU);
         if (!storedKU) {
             return false;
         }
@@ -138,7 +194,7 @@ function evaluateCertificateAssertion (
 
     const subjectAltName = assertion.subjectAltName;
     if (subjectAltName) {
-        const sans = extensions.subjectAltName;
+        const sans = ext(SAN_ID, decodeSAN);
         if (!sans) {
             return false;
         }
@@ -224,15 +280,15 @@ function evaluateCertificateAssertion (
     }
 
     if (assertion.policy) {
-        const cp = extensions.certificatePolicies;
-        if (!cp || !certificatePoliciesIntersect(assertion.policy, cp)) {
+        const cp = ext(CP_ID, decodeCP);
+        if (!cp || !policiesIntersect(assertion.policy, cp)) {
             return false;
         }
     }
 
     const pathToName = assertion.pathToName;
     if (pathToName) {
-        const nc = extensions.nameConstraints;
+        const nc = ext(NC_ID, decodeNC);
         if (nc) {
             if (nc.excludedSubtrees?.some((sub): boolean => {
                 if (!("directoryName" in sub.base)) {
@@ -298,7 +354,7 @@ function evaluateCertificateAssertion (
             return false;
         }
 
-        const sans = extensions.subjectAltName;
+        const sans = ext(SAN_ID, decodeSAN);
         if (sans) {
             if (!sans.every((san): boolean => {
                 if (nc.excludedSubtrees?.some((sub): boolean => {
