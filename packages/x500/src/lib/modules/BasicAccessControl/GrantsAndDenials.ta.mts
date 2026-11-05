@@ -12,6 +12,13 @@ import * as $ from "@wildboar/asn1/functional";
  * whether a denial may reveal the item versus concealing it as no-such-object.
  * Browse/export/import/modify/rename/returnDN apply only with `entry`;
  * compare/filterMatch/invoke apply to non-entry items.
+ * 
+ * ### Q.1228 / Q.1238 / Q.1248 - Intelligent Networks Bits
+ * 
+ * INAP defines a similar bit string, but with these bits too:
+ * 
+ * - grantExecuteMethod (30)
+ * - denyExecuteMethod (31)
  *
  * ### ASN.1 Definition:
  *
@@ -365,6 +372,11 @@ export const GrantsAndDenials_denyInvoke: number = 25; /* LONG_NAMED_BIT */
  */
 export const denyInvoke: number = GrantsAndDenials_denyInvoke; /* SHORT_NAMED_BIT */
 
+// Q.1228 / Q.1238 / Q.1248 name these bits on the same BIT STRING.
+export const GrantsAndDenials_grantExecuteMethod: number = 30;
+export const grantExecuteMethod: number = GrantsAndDenials_grantExecuteMethod;
+export const GrantsAndDenials_denyExecuteMethod: number = 31;
+export const denyExecuteMethod: number = GrantsAndDenials_denyExecuteMethod;
 
 export const _decode_GrantsAndDenials: $.ASN1Decoder<BIT_STRING> = $._decodeBitString;
 

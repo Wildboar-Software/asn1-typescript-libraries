@@ -54,10 +54,8 @@ export {
     grantInvoke,
     GrantsAndDenials_denyInvoke,
     denyInvoke,
+    GrantsAndDenials_grantExecuteMethod,
+    grantExecuteMethod,
+    GrantsAndDenials_denyExecuteMethod,
+    denyExecuteMethod,
 } from "@wildboar/x500/BasicAccessControl";
-
-// Q.1228 / Q.1238 / Q.1248 name these bits on the same BIT STRING.
-export const GrantsAndDenials_grantExecuteMethod: number = 30;
-export const grantExecuteMethod: number = GrantsAndDenials_grantExecuteMethod;
-export const GrantsAndDenials_denyExecuteMethod: number = 31;
-export const denyExecuteMethod: number = GrantsAndDenials_denyExecuteMethod;
