@@ -19,66 +19,25 @@ const FLAG_CONSTANT_TIME = MATCH_FLAG_CONSTANT_TIME;
 const FLAG_DEBUG = MATCH_FLAG_DEBUG;
 
 /**
- * @summary Whether a stored domain still needs `domainToUnicode`.
- * @description
- *
- * ASCII LDH names (`A–Z` / `a–z` / `0–9` / `-`, labels separated by
- * `.`) and a complete-label wildcard `*` already compare correctly
- * with `caseIgnoreMatch`. A-labels (`xn--…`), non-ASCII, spaces, and
- * other non-LDH characters still go through IDNA so U-labels and
- * invalid names keep their existing results.
- *
- * @param {string} domain Domain after `trim()`, before IDNA.
- * @returns {boolean} `true` iff `domainToUnicode` must still run.
- * @function
- * @author Cursor Grok 4.6
+ * A-label (`xn--` at the start of a label). ASCII, but `domainToUnicode`
+ * still has to decode it so it can match the corresponding U-label.
+ */
+const A_LABEL = /(?:^|\.)xn--/i;
+
+/**
+ * ASCII LDH labels, or a `*` that is an entire label.
+ * `caseIgnoreMatch` compares these directly.
+ * Anything else (spaces, controls, `#`, non-ASCII, …) still goes
+ * through `domainToUnicode`, which maps or rejects it.
+ */
+const ASCII_LDH_OR_WILDCARD = /^(?:\*|[a-z0-9-]+)(?:\.(?:\*|[a-z0-9-]+))*$/i;
+
+/**
+ * Whether a stored domain (already trimmed) still needs `domainToUnicode`.
  */
 export
 function storedDnsNameNeedsIdna (domain: string): boolean {
-    const len = domain.length;
-    if (len === 0) {
-        return true;
-    }
-    let labelStart = 0;
-    for (let i = 0; i <= len; i++) {
-        const c = (i === len) ? 46 : domain.charCodeAt(i);
-        if (c === 46) {
-            const labelLen = i - labelStart;
-            if ((labelLen === 1) && (domain.charCodeAt(labelStart) === 42)) {
-                labelStart = i + 1;
-                continue;
-            }
-            if (labelLen >= 4) {
-                const c0 = domain.charCodeAt(labelStart) | 32;
-                const c1 = domain.charCodeAt(labelStart + 1) | 32;
-                if (
-                    (c0 === 120)
-                    && (c1 === 110)
-                    && (domain.charCodeAt(labelStart + 2) === 45)
-                    && (domain.charCodeAt(labelStart + 3) === 45)
-                ) {
-                    return true;
-                }
-            }
-            for (let j = labelStart; j < i; j++) {
-                const cc = domain.charCodeAt(j);
-                if (
-                    !((cc >= 48) && (cc <= 57))
-                    && !((cc >= 65) && (cc <= 90))
-                    && !((cc >= 97) && (cc <= 122))
-                    && (cc !== 45)
-                ) {
-                    return true;
-                }
-            }
-            labelStart = i + 1;
-            continue;
-        }
-        if (c > 127) {
-            return true;
-        }
-    }
-    return false;
+    return A_LABEL.test(domain) || !ASCII_LDH_OR_WILDCARD.test(domain);
 }
 
 /**
@@ -122,8 +81,6 @@ function prepareDnsAssertion (domain: string, el?: ASN1Element): string {
  * @param {string} stored Decoded stored domain.
  * @param {number} flags Match flags.
  * @returns {string} Domain to split into labels.
- * @function
- * @author Cursor Grok 4.6
  */
 function storedDomainForMatch (stored: string, flags: number): string {
     if (flags & FLAG_VALUE_NORMALIZED) {

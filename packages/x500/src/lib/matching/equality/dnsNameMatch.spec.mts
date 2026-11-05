@@ -178,12 +178,19 @@ describe("dnsNameMatch", () => {
         expect(storedDnsNameNeedsIdna("www.example.com")).toBe(false);
         expect(storedDnsNameNeedsIdna("WWW.Example.COM")).toBe(false);
         expect(storedDnsNameNeedsIdna("*.example.com")).toBe(false);
+        expect(storedDnsNameNeedsIdna("foo.*.com")).toBe(false);
+        // "xn--" only counts at the start of a label.
+        expect(storedDnsNameNeedsIdna("axn--foo.com")).toBe(false);
         expect(storedDnsNameNeedsIdna("xn--c1yn36f.com")).toBe(true);
         expect(storedDnsNameNeedsIdna("XN--C1YN36F.COM")).toBe(true);
+        expect(storedDnsNameNeedsIdna("foo.xn--bar")).toBe(true);
         expect(storedDnsNameNeedsIdna("點看.com")).toBe(true);
         expect(storedDnsNameNeedsIdna("not a domain")).toBe(true);
+        // domainToUnicode deletes TAB, so this still goes through it.
+        expect(storedDnsNameNeedsIdna("a\tb.com")).toBe(true);
         expect(dnsNameMatch(dns("WWW.Example.COM"), dns("www.example.com"))).toBe(true);
         expect(dnsNameMatch(dns("*.example.com"), dns("www.example.com"))).toBe(true);
+        expect(dnsNameMatch(dns("ab.com"), dns("a\tb.com"))).toBe(true);
     });
 
     it("honors MATCH_FLAG_VALUE_NORMALIZED by skipping IDNA on the stored value", () => {
