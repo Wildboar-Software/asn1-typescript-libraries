@@ -349,6 +349,35 @@ export class SubtreeSpecification implements ChopSpecification {
     }
 
     /**
+     * @summary Whether this specification selects the whole context area.
+     * @description
+     *
+     * Empty sequence `{}` means the whole area implied by context (the
+     * administrative point). `base` of `{}` and `minimum` of `0` are the
+     * defaults and do not narrow the selection.
+     *
+     * @public
+     * @method
+     * @returns {boolean} `true` if only defaults remain.
+     */
+    public isEmpty(): boolean {
+        return (
+            (this.base === undefined || this.base.length === 0)
+            && (
+                this.specificExclusions === undefined
+                || this.specificExclusions.length === 0
+            )
+            && (
+                this.minimum === undefined
+                || this.minimum === 0
+                || this.minimum === 0n
+            )
+            && this.maximum === undefined
+            && this.specificationFilter === undefined
+        );
+    }
+
+    /**
      * @summary Intersection of this subtree and another
      * @description
      *

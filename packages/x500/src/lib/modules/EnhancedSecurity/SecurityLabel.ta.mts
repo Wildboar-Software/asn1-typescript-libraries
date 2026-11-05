@@ -116,6 +116,29 @@ export class SecurityLabel {
             _o._unrecognizedExtensionsList
         );
     }
+
+    /**
+     * @summary Whether no label component is present.
+     * @description
+     *
+     * All four fields are OPTIONAL, but at least one shall be present
+     * (`ALL EXCEPT` none). An empty SET is invalid.
+     *
+     * @public
+     * @method
+     * @returns {boolean} `true` if every component is absent.
+     */
+    public isEmpty(): boolean {
+        return (
+            this.security_policy_identifier === undefined
+            && this.security_classification === undefined
+            && this.privacy_mark === undefined
+            && (
+                this.security_categories === undefined
+                || this.security_categories.length === 0
+            )
+        );
+    }
 }
 
 /**

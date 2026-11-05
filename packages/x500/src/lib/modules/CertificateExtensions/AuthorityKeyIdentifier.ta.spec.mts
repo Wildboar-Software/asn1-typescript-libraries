@@ -12,6 +12,14 @@ function aki (
     );
 }
 
+describe("AuthorityKeyIdentifier.isEmpty()", () => {
+    it("is true only when every component is absent", () => {
+        expect(new AuthorityKeyIdentifier().isEmpty()).toBe(true);
+        expect(aki([9]).isEmpty()).toBe(false);
+        expect(aki(undefined, "ca.example", [1]).isEmpty()).toBe(false);
+    });
+});
+
 describe("AuthorityKeyIdentifier.isEqualTo()", () => {
     it("matches the same key identifier", () => {
         expect(aki([1, 2, 3]).isEqualTo(aki([1, 2, 3]))).toBe(true);

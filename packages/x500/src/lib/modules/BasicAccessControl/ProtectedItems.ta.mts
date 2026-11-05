@@ -255,6 +255,38 @@ export class ProtectedItems {
             _o._unrecognizedExtensionsList
         );
     }
+
+    /**
+     * @summary Whether no protection axis is present.
+     * @description
+     *
+     * Each omitted component is unconstrained on that axis. An empty
+     * `ProtectedItems` therefore constrains nothing. Present `SET SIZE
+     * (1..MAX)` components cannot be empty; an empty array is treated
+     * as absent.
+     *
+     * @public
+     * @method
+     * @returns {boolean} `true` if every component is absent or empty.
+     */
+    public isEmpty(): boolean {
+        return (
+            this.entry === undefined
+            && this.allUserAttributeTypes === undefined
+            && (this.attributeType === undefined || this.attributeType.length === 0)
+            && (this.allAttributeValues === undefined || this.allAttributeValues.length === 0)
+            && this.allUserAttributeTypesAndValues === undefined
+            && (this.attributeValue === undefined || this.attributeValue.length === 0)
+            && (this.selfValue === undefined || this.selfValue.length === 0)
+            && this.rangeOfValues === undefined
+            && (this.maxValueCount === undefined || this.maxValueCount.length === 0)
+            && this.maxImmSub === undefined
+            && (this.restrictedBy === undefined || this.restrictedBy.length === 0)
+            && (this.contexts === undefined || this.contexts.length === 0)
+            && this.classes === undefined
+            && (this.entryMethods === undefined || this.entryMethods.length === 0)
+        );
+    }
 }
 
 /**

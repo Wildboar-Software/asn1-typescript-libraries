@@ -79,6 +79,21 @@ export class SaslCredentials {
   }
 
   /**
+   * @summary Whether `mechanism` is the empty string.
+   * @description
+   *
+   * RFC 4511: an empty `mechanism` aborts a SASL negotiation and MUST
+   * be answered with `authMethodNotSupported`.
+   *
+   * @public
+   * @method
+   * @returns {boolean} `true` if `mechanism` has length zero.
+   */
+  public isEmpty(): boolean {
+    return this.mechanism.length === 0;
+  }
+
+  /**
    * @summary Restructures an object into a SaslCredentials
    * @description
    *

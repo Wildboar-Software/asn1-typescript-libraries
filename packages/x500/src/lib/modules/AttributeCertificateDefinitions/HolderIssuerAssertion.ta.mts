@@ -83,6 +83,25 @@ export class HolderIssuerAssertion {
             _o._unrecognizedExtensionsList
         );
     }
+
+    /**
+     * @summary Whether neither holder nor issuer constrains the match.
+     * @description
+     *
+     * Omitted components are unconstrained; both may be absent (matches
+     * any attribute certificate). An empty nested `Holder` or
+     * `AttCertIssuer` does not identify a party.
+     *
+     * @public
+     * @method
+     * @returns {boolean} `true` if both sides are absent or empty.
+     */
+    public isEmpty(): boolean {
+        return (
+            (this.holder === undefined || this.holder.isEmpty())
+            && (this.issuer === undefined || this.issuer.isEmpty())
+        );
+    }
 }
 
 /**

@@ -8,6 +8,7 @@ import {
 } from "@wildboar/dn";
 import {
     AttributeTypeAndValue,
+    ChopSpecification,
     SubtreeSpecification,
     type AttributeType,
     type LocalName,
@@ -117,15 +118,10 @@ describe("SubtreeSpecification.toJSON()", () => {
     });
 
     it("keeps local names in X.500 order", () => {
-        const spec = new SubtreeSpecification(
-            people,
-            [ { chopBefore: [ cn("secret") ] } ],
-            1,
-            4,
-            { or: [ { item: person }, { not: { item: top } } ] },
-        );
-        expect(spec.toJSON()).toEqual({
-            base: rdnSequenceToJSON(people),
+        // Encode the expected JSON from a separate RDN sequence so a
+        // later BER write cannot clobber the bytes this assertion reads.
+        const expected = {
+            base: rdnSequenceToJSON([ ou("people"), cn("admin") ]),
             specificExclusions: [
                 { chopBefore: rdnSequenceToJSON([ cn("secret") ]) },
             ],
@@ -137,7 +133,15 @@ describe("SubtreeSpecification.toJSON()", () => {
                     { not: { item: "2.5.6.0" } },
                 ],
             },
-        });
+        };
+        const spec = new SubtreeSpecification(
+            [ ou("people"), cn("admin") ],
+            [ { chopBefore: [ cn("secret") ] } ],
+            1,
+            4,
+            { or: [ { item: person }, { not: { item: top } } ] },
+        );
+        expect(spec.toJSON()).toEqual(expected);
         expect(spec.toJSON().base?.[0]?.[0]?.type).toBe("2.5.4.11");
         expect(spec.toJSON().base?.[1]?.[0]?.type).toBe("2.5.4.3");
     });
@@ -191,5 +195,26 @@ describe("SubtreeSpecification.intersection()", () => {
     it("returns null when the context prefixes do not overlap", () => {
         const open = new SubtreeSpecification();
         expect(open.intersection(open, getEqualityMatcher, root1, root2)).toBeNull();
+    });
+});
+
+describe("SubtreeSpecification.isEmpty()", () => {
+    it("treats {} and default base/minimum as empty", () => {
+        expect(new SubtreeSpecification().isEmpty()).toBe(true);
+        expect(new SubtreeSpecification([]).isEmpty()).toBe(true);
+        expect(new SubtreeSpecification([], undefined, 0).isEmpty()).toBe(true);
+        expect(new SubtreeSpecification(people).isEmpty()).toBe(false);
+        expect(new SubtreeSpecification([], undefined, 1).isEmpty()).toBe(false);
+        expect(new SubtreeSpecification(undefined, undefined, undefined, 2).isEmpty())
+            .toBe(false);
+    });
+});
+
+describe("ChopSpecification.isEmpty()", () => {
+    it("is true when the chop does not restrict", () => {
+        expect(new ChopSpecification().isEmpty()).toBe(true);
+        expect(new ChopSpecification(undefined, 0n).isEmpty()).toBe(true);
+        expect(new ChopSpecification(undefined, 1).isEmpty()).toBe(false);
+        expect(new ChopSpecification(undefined, undefined, 3).isEmpty()).toBe(false);
     });
 });
