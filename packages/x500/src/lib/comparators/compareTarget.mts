@@ -1,9 +1,9 @@
 import type { OBJECT_IDENTIFIER } from "@wildboar/asn1";
 import type { EqualityMatcher } from "../types/EqualityMatcher.mjs";
 import type { GeneralName } from "../modules/CertificateExtensions/index.mjs";
+import { GeneralSubtree } from "../modules/CertificateExtensions/GeneralSubtree.ta.mjs";
 import {
     type Target,
-    GeneralSubtree,
 } from "../modules/AttributeCertificateDefinitions/index.mjs";
 import { compareGeneralName } from "@wildboar/gn";
 import { compareIssuerSerial } from "./compareIssuerSerial.mjs";

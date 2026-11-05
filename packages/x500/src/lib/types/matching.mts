@@ -118,11 +118,11 @@ export type AssertedSubstring<T> =
  * 1. An `AttributeTypeAndValue` or
  * 2. An entire `Attribute.
  * 
- * An `AttributeTypeAndValue` is converted to an `Attribute` of like type with
- * a single value and no contexts and evaluated as such. All values are
- * evaluated until a match is found, unless the `MATCH_FLAG_CONSTANT_TIME`
- * flag is used--implementations are expected to (but might not) evaluate all
- * attribute values, even if one is known to match.
+ * An `AttributeTypeAndValue` is evaluated as a single stored value with no
+ * contexts. All values of an `Attribute` are evaluated until a match is
+ * found, unless the `MATCH_FLAG_CONSTANT_TIME` flag is used--implementations
+ * are expected to (but might not) evaluate all attribute values, even if one
+ * is known to match.
  * 
  * `getEqualityMatcher` is a function that takes an attribute type and returns
  * the corresponding value equality matcher. This is generally so that
@@ -465,15 +465,32 @@ function createEqualityMatcher<A>(
             }
             return undefined;
         }
-        const attr: Attribute = (
-            ("value" in valueOrValues)
-            || (valueOrValues instanceof AttributeTypeAndValue)
-        )
-            ? new Attribute(valueOrValues.type_, [ valueOrValues.value ])
-            : valueOrValues;
         const constantTime = (flags & MATCH_FLAG_CONSTANT_TIME);
         let allUndefined: boolean = true;
         let deferredResult: boolean | undefined = false;
+        // Distinguished values are a single AVA. Do not wrap them in an
+        // Attribute: DN/AVA comparison is the matching hot path.
+        if (("value" in valueOrValues) || (valueOrValues instanceof AttributeTypeAndValue)) {
+            const value = valueOrValues.value;
+            try {
+                const result = valueMatcher(
+                    decodedAssertion,
+                    value,
+                    getEqualityMatcher,
+                    flags,
+                );
+                if (result === true && matchedValues) {
+                    matchedValues.values.push(value);
+                }
+                return result;
+            } catch (e) {
+                if (flags & MATCH_FLAG_DEBUG) {
+                    console.error(valueErrorMessage(false, 0, valueOrValues.type_, e));
+                }
+                return undefined;
+            }
+        }
+        const attr: Attribute = valueOrValues;
         for (let i = 0; i < attr.values.length; i++) {
             const value = attr.values[i];
             try {
@@ -739,6 +756,53 @@ function matchSubstringsConstantTime (
 }
 
 /**
+ * Same partition as slicing the remainder after each `initial` /
+ * `any` / `final` piece, but the haystack is never copied. `any`
+ * searches from `start` and must end at or before `end`, so a
+ * previously matched `final` still cannot be reused.
+ *
+ * `MATCH_FLAG_CONSTANT_TIME` scans every alignment of every piece.
+ */
+export
+function matchStringSubstrings (
+    prepared: string,
+    assertion: AssertedSubstring<string>[],
+    flags: number = 0,
+): boolean {
+    if (flags & MATCH_FLAG_CONSTANT_TIME) {
+        return matchSubstringsConstantTime(prepared, assertion);
+    }
+    let start = 0;
+    let end = prepared.length;
+    for (let i = 0; i < assertion.length; i++) {
+        const subass = assertion[i];
+        if ("any_" in subass) {
+            const needle = subass.any_;
+            const idx = prepared.indexOf(needle, start);
+            if (idx < 0 || (idx + needle.length) > end) {
+                return false;
+            }
+            start = idx + needle.length;
+        } else if ("initial" in subass) {
+            const needle = subass.initial;
+            const next = start + needle.length;
+            if (next > end || !prepared.startsWith(needle, start)) {
+                return false;
+            }
+            start = next;
+        } else if ("final" in subass) {
+            const needle = subass.final;
+            const finalStart = end - needle.length;
+            if (finalStart < start || !prepared.startsWith(needle, finalStart)) {
+                return false;
+            }
+            end = finalStart;
+        }
+    }
+    return true;
+}
+
+/**
  * @summary Create a function that performs substrings matching on a string-typed value.
  * @description
  * 
@@ -763,34 +827,6 @@ function getStringSubstringsMatcher (
         _getEqualityMatcher?: (attributeType: AttributeType) => Matcher | undefined,
         flags: number = 0,
     ): boolean | undefined {
-        const prepared = valuePrepper(value);
-        if (flags & MATCH_FLAG_CONSTANT_TIME) {
-            return matchSubstringsConstantTime(prepared, assertion);
-        }
-        let v = prepared;
-        for (let i = 0; i < assertion.length; i++) {
-            const subass = assertion[i];
-            if ("any_" in subass) {
-                const idx = v.indexOf(subass.any_);
-                if (idx >= 0) {
-                    v = v.slice(idx + subass.any_.length);
-                } else {
-                    return false;
-                }
-            } else if ("initial" in subass) {
-                if (v.startsWith(subass.initial)) {
-                    v = v.slice(subass.initial.length);
-                } else {
-                    return false;
-                }
-            } else if ("final" in subass) {
-                if (v.endsWith(subass.final)) {
-                    v = v.slice(0, v.length - subass.final.length);
-                } else {
-                    return false;
-                }
-            }
-        }
-        return true;
+        return matchStringSubstrings(valuePrepper(value), assertion, flags);
     };
 }

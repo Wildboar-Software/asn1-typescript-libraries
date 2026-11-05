@@ -1,11 +1,11 @@
 import type { OBJECT_IDENTIFIER } from "@wildboar/asn1";
 import type EqualityMatcher from "../types/EqualityMatcher.mjs";
-import {
+import type {
     GeneralSubtree,
 } from "../modules/CertificateExtensions/GeneralSubtree.ta.mjs";
 import { compareGeneralName } from "@wildboar/gn";
 
-const DEFAULT_MINIMUM: number = GeneralSubtree._default_value_for_minimum as number;
+const DEFAULT_MINIMUM: number = 0;
 
 /**
  * @summary Compare two `GeneralSubtree` values

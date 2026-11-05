@@ -21,6 +21,16 @@ import { mapSubstringChoices } from "./prepareSubstrings.mjs";
 
 const RULE = "octetStringSubstringsMatch";
 
+function bytesEqualAt (haystack: Uint8Array, start: number, needle: Uint8Array): boolean {
+    const n = needle.length;
+    for (let j = 0; j < n; j++) {
+        if (haystack[start + j] !== needle[j]) {
+            return false;
+        }
+    }
+    return true;
+}
+
 function nonEmpty (bytes: Uint8Array): Uint8Array {
     if (bytes.length === 0) {
         throw new Error(`${RULE}: empty substring`);
@@ -124,7 +134,7 @@ function octetStringSubstringsMatchTyped (
     if (flags & MATCH_FLAG_CONSTANT_TIME) {
         return matchOctetSubstringsConstantTime(stored, assertion, flags);
     }
-    const buf = Buffer.from(stored);
+    const buf = Buffer.from(stored.buffer, stored.byteOffset, stored.byteLength);
     let start = 0;
     let end = stored.length;
     let sawPiece = false;
@@ -142,7 +152,7 @@ function octetStringSubstringsMatchTyped (
         if ("initial" in piece) {
             const needle = piece.initial;
             const next = start + needle.length;
-            if (next > end || Buffer.compare(stored.subarray(start, next), needle) !== 0) {
+            if (next > end || !bytesEqualAt(stored, start, needle)) {
                 return false;
             }
             start = next;
@@ -156,10 +166,7 @@ function octetStringSubstringsMatchTyped (
         } else if ("final" in piece) {
             const needle = piece.final;
             const finalStart = end - needle.length;
-            if (
-                finalStart < start
-                || Buffer.compare(stored.subarray(finalStart, end), needle) !== 0
-            ) {
+            if (finalStart < start || !bytesEqualAt(stored, finalStart, needle)) {
                 return false;
             }
             end = finalStart;

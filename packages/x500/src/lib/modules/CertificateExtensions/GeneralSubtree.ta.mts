@@ -3,8 +3,11 @@ import {
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     type OPTIONAL,
+    type OBJECT_IDENTIFIER,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
+import type EqualityMatcher from "../../types/EqualityMatcher.mjs";
+import compareGeneralSubtree from "../../comparators/compareGeneralSubtree.mjs";
 import {
     type BaseDistance,
     _decode_BaseDistance,
@@ -115,6 +118,22 @@ export class GeneralSubtree {
      */
     public static get _default_value_for_minimum(): BaseDistance {
         return 0;
+    }
+
+    /**
+     * @summary Compare this general subtree with another
+     * @param other The other general subtree
+     * @param getEqualityMatcher A function that takes an attribute type and
+     *  returns a function that can equality-match two values of that type
+     * @returns `true` if they match
+     * @function
+     * @public
+     */
+    public isEqualTo(
+        other: GeneralSubtree,
+        getEqualityMatcher?: (attributeType: OBJECT_IDENTIFIER) => EqualityMatcher | undefined,
+    ): boolean {
+        return compareGeneralSubtree(this, other, getEqualityMatcher);
     }
 }
 

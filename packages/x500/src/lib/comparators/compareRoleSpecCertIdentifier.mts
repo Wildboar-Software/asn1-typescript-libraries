@@ -1,6 +1,6 @@
 import type { OBJECT_IDENTIFIER } from "@wildboar/asn1";
 import type EqualityMatcher from "../types/EqualityMatcher.mjs";
-import {
+import type {
     RoleSpecCertIdentifier,
 } from "../modules/AttributeCertificateDefinitions/RoleSpecCertIdentifier.ta.mjs";
 import { compareGeneralName } from "@wildboar/gn";

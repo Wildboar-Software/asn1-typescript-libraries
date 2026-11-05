@@ -3,8 +3,11 @@ import {
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     type OPTIONAL,
+    type OBJECT_IDENTIFIER,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
+import type EqualityMatcher from "../../types/EqualityMatcher.mjs";
+import compareRoleSpecCertIdentifier from "../../comparators/compareRoleSpecCertIdentifier.mjs";
 import {
     type CertificateSerialNumber,
     _decode_CertificateSerialNumber,
@@ -107,6 +110,22 @@ export class RoleSpecCertIdentifier {
             _o.roleCertLocator,
             _o._unrecognizedExtensionsList
         );
+    }
+
+    /**
+     * @summary Compare this role-specification certificate identifier with another
+     * @param other The other role-specification certificate identifier
+     * @param getEqualityMatcher A function that takes an attribute type and
+     *  returns a function that can equality-match two values of that type
+     * @returns `true` if they match
+     * @function
+     * @public
+     */
+    public isEqualTo(
+        other: RoleSpecCertIdentifier,
+        getEqualityMatcher?: (attributeType: OBJECT_IDENTIFIER) => EqualityMatcher | undefined,
+    ): boolean {
+        return compareRoleSpecCertIdentifier(this, other, getEqualityMatcher);
     }
 }
 
