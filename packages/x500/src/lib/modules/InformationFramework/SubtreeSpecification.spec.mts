@@ -117,10 +117,15 @@ describe("SubtreeSpecification.toJSON()", () => {
     });
 
     it("keeps local names in X.500 order", () => {
-        // Encode the expected JSON from a separate RDN sequence so a
-        // later BER write cannot clobber the bytes this assertion reads.
-        const expected = {
-            base: rdnSequenceToJSON([ ou("people"), cn("admin") ]),
+        const spec = new SubtreeSpecification(
+            people,
+            [ { chopBefore: [ cn("secret") ] } ],
+            1,
+            4,
+            { or: [ { item: person }, { not: { item: top } } ] },
+        );
+        expect(spec.toJSON()).toEqual({
+            base: rdnSequenceToJSON(people),
             specificExclusions: [
                 { chopBefore: rdnSequenceToJSON([ cn("secret") ]) },
             ],
@@ -132,15 +137,7 @@ describe("SubtreeSpecification.toJSON()", () => {
                     { not: { item: "2.5.6.0" } },
                 ],
             },
-        };
-        const spec = new SubtreeSpecification(
-            [ ou("people"), cn("admin") ],
-            [ { chopBefore: [ cn("secret") ] } ],
-            1,
-            4,
-            { or: [ { item: person }, { not: { item: top } } ] },
-        );
-        expect(spec.toJSON()).toEqual(expected);
+        });
         expect(spec.toJSON().base?.[0]?.[0]?.type).toBe("2.5.4.11");
         expect(spec.toJSON().base?.[1]?.[0]?.type).toBe("2.5.4.3");
     });
