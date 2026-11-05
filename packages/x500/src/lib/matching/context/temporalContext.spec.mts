@@ -697,6 +697,107 @@ describe("evaluateTemporalContext", () => {
         ), DER);
         expect(evaluateTemporalContext(assertion, value)).toBe(false);
         expect(evaluateTemporalContext(assertion, value, MATCH_FLAG_HIGH_WORK_BUDGET)).toBe(true);
+        const negatedValue = _decode_TimeSpecification(value);
+        const negated = new TimeSpecification(negatedValue.time, TRUE);
+        // Running out of work is not evidence of a hole, even under negation.
+        expect(evaluateTemporalContext(assertion, negated)).toBe(false);
+        expect(evaluateTemporalContext(assertion, negated, MATCH_FLAG_HIGH_WORK_BUDGET)).toBe(false);
+    });
+
+    it("merges many interleaved streams without restarting or rescanning them", () => {
+        const count = 128;
+        const base = new Date(2026, 0, 1).valueOf();
+        const instant = (second: number) => new Date(base + second * 1000);
+        let starts = 0;
+        let yielded = 0;
+        const periods = Array.from({ length: count }, (_, i) => {
+            const period = new Period();
+            period.occurrences = function* (start: Date) {
+                starts++;
+                for (const offset of [i * 2, (count + i) * 2]) {
+                    const span: [Date, Date] = [instant(offset), instant(offset + 1)];
+                    if (span[1] >= start) {
+                        yielded++;
+                        yield span;
+                    }
+                }
+            };
+            return period;
+        }).reverse();
+        const assertion: TimeAssertion = {
+            between: new TimeAssertion_between(instant(0), instant(count * 4 - 1), TRUE),
+        };
+        expect(evaluateTemporalContext(assertion, new TimeSpecification({ periodic: periods }))).toBe(true);
+        expect(starts).toBe(count);
+        expect(yielded).toBe(count * 2);
+    });
+
+    it("handles a full-day recurrence without eagerly coalescing all future days", () => {
+        const assertion: TimeAssertion = {
+            between: new TimeAssertion_between(
+                new Date(2026, 0, 1, 0, 0, 0),
+                new Date(2026, 0, 1, 23, 59, 59),
+                TRUE,
+            ),
+        };
+        const value = new TimeSpecification({ periodic: [new Period([new DayTimeBand()])] });
+        expect(evaluateTemporalContext(assertion, value)).toBe(true);
+    });
+
+    it("does not skip the second after a calendar occurrence ending in .999", () => {
+        const assertion: TimeAssertion = {
+            between: new TimeAssertion_between(
+                new Date(2026, 0, 1, 12),
+                new Date(2026, 0, 2),
+                TRUE,
+            ),
+        };
+        const value = new TimeSpecification({
+            periodic: [new Period(undefined, { intDay: [1] }, undefined, undefined, [2026])],
+        });
+        expect(evaluateTemporalContext(assertion, value)).toBe(false);
+    });
+
+    it("does not lose coverage when an overlapping occurrence has an earlier end", () => {
+        const value = new TimeSpecification({ periodic: [
+            new Period([new DayTimeBand(new DayTime(9), new DayTime(15))]),
+            new Period([new DayTimeBand(new DayTime(10), new DayTime(11))]),
+            new Period([new DayTimeBand(new DayTime(15, 0, 1), new DayTime(17))]),
+        ] });
+        const assertion: TimeAssertion = {
+            between: new TimeAssertion_between(new Date(2026, 0, 1, 9), new Date(2026, 0, 1, 17), TRUE),
+        };
+        expect(evaluateTemporalContext(assertion, value)).toBe(true);
+    });
+
+    it("agrees with a second-by-second oracle for small unions", () => {
+        let seed = 2026;
+        for (let trial = 0; trial < 128; trial++) {
+            const masks = Array.from({ length: 4 }, () => {
+                seed = (Math.imul(seed, 1664525) + 1013904223) >>> 0;
+                return seed >>> 24;
+            });
+            if (trial % 2 === 0) {
+                // Include positive cases, not just randomly occurring holes.
+                masks[3] |= (~(masks[0] | masks[1] | masks[2])) & 255;
+            }
+            const periods = masks.map((mask) => new Period(
+                Array.from({ length: 8 }, (_, second) => second)
+                    .filter((second) => mask & (1 << second))
+                    .map((second) => new DayTimeBand(new DayTime(12, 0, second), new DayTime(12, 0, second))),
+            ));
+            const assertion: TimeAssertion = {
+                between: new TimeAssertion_between(
+                    new Date(2026, 0, 1, 12, 0, 0),
+                    new Date(2026, 0, 1, 12, 0, 7),
+                    TRUE,
+                ),
+            };
+            const expected = Array.from({ length: 8 }, (_, second) => second)
+                .every((second) => masks.some((mask) => mask & (1 << second)));
+            const value = new TimeSpecification({ periodic: periods });
+            expect(evaluateTemporalContext(assertion, value), `trial ${trial}`).toBe(expected);
+        }
     });
 
     it("matches between+entirely across abutting DayTimeBands from two Periods", () => {

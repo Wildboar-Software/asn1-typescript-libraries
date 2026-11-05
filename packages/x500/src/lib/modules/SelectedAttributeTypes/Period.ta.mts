@@ -300,6 +300,8 @@ export class Period {
      *
      * @param startInstant The start instant
      * @param endInstant The end instant
+     * @param coalesce Join adjacent occurrences. Disable for incremental,
+     *  work-budgeted consumers that must not eagerly merge long recurrences.
      * @yields {[Date, Date]} The start and end times (inclusive) of a timespan
      *  of an occurrence of the period.
      * @returns An iterator over the occurrences of this period
@@ -307,8 +309,8 @@ export class Period {
      * @method
      * @generator
      */
-    public occurrences(startInstant: Date, endInstant: Date = MAX_GENERALIZED_TIME): IterableIterator<[Date, Date]> {
-        return occurrences(this, startInstant, endInstant);
+    public occurrences(startInstant: Date, endInstant: Date = MAX_GENERALIZED_TIME, coalesce: boolean = true): IterableIterator<[Date, Date]> {
+        return occurrences(this, startInstant, endInstant, coalesce);
     }
 }
 
