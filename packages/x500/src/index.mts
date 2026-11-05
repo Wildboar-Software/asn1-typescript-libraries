@@ -116,7 +116,10 @@ export { default as compareGeneralSubtrees } from "./lib/comparators/compareGene
 export { compareGeneralSubtree } from "./lib/comparators/compareGeneralSubtree.mjs";
 export { compareHolder } from "./lib/comparators/compareHolder.mjs";
 export { compareIssuerSerial } from "./lib/comparators/compareIssuerSerial.mjs";
-export { compareNameConstraintsSyntax } from "./lib/comparators/compareNameConstraintsSyntax.mjs";
+export {
+    compareNameConstraintsSyntax,
+    type CompareNameConstraintsSyntaxOptions,
+} from "./lib/comparators/compareNameConstraintsSyntax.mjs";
 export { default as compareNSAPs } from "./lib/comparators/compareNSAPs.mjs";
 export { compareRoleSpecCertIdentifier } from "./lib/comparators/compareRoleSpecCertIdentifier.mjs";
 export { compareTarget } from "./lib/comparators/compareTarget.mjs";
