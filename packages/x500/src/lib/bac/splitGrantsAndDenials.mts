@@ -25,11 +25,11 @@ import type {
  */
 export
 function splitGrantsAndDenials (gad: GrantsAndDenials): [ GrantsAndDenials ] | [ GrantsAndDenials, GrantsAndDenials ] {
-    const grants: GrantsAndDenials = new Uint8ClampedArray(24);
-    const denials: GrantsAndDenials = new Uint8ClampedArray(24);
+    const grants: GrantsAndDenials = new Uint8ClampedArray(gad.length);
+    const denials: GrantsAndDenials = new Uint8ClampedArray(gad.length);
     let grantsEncountered: boolean = false;
     let denialsEncountered: boolean = false;
-    const len: number = Math.min(gad.length, 24);
+    const len: number = gad.length;
     for (let i = 0; i < len; i++) {
         if ((i % 2) && gad[i]) { // Odd bits are denials. If it is set...
             denials[i] = TRUE_BIT;
