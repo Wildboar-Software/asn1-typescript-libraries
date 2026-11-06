@@ -3,7 +3,7 @@ import {
     type IA5String
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { id_at_mxRecord } from "../Cosine/id-at-mxRecord.va.mjs";
+import { id_at_mxRecord } from "../Cosine/id-at-mXRecord.va.mjs";
 import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
 import { userApplications /* IMPORTED_SHORT_ENUMERATION_ITEM */ } from "../InformationFramework/AttributeUsage.ta.mjs";
 import { ia5String } from "../SelectedAttributeTypes/ia5String.oa.mjs";

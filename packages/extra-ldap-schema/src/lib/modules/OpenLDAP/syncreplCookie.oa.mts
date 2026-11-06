@@ -4,10 +4,11 @@ import {
 } from "@wildboar/asn1";
 import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
 import { dSAOperation /* IMPORTED_SHORT_ENUMERATION_ITEM */ } from "../InformationFramework/AttributeUsage.ta.mjs";
-import { UUID, _decode_UUID, _encode_UUID } from "../SelectedAttributeTypes/UUID.ta.mjs";
+import { type UUID, _decode_UUID, _encode_UUID } from "../SelectedAttributeTypes/UUID.ta.mjs";
 import { octetStringMatch } from "../SelectedAttributeTypes/octetStringMatch.oa.mjs";
 import { octetStringOrderingMatch } from "../SelectedAttributeTypes/octetStringOrderingMatch.oa.mjs";
 import { octetStringSubstringsMatch } from "../SelectedAttributeTypes/octetStringSubstringsMatch.oa.mjs";
+import { octetString } from "../SelectedAttributeTypes/octetString.oa.mjs";
 
 
 /**

@@ -2,6 +2,7 @@
 import {
     ObjectIdentifier as _OID
 } from "@wildboar/asn1";
+import { id_nf } from "@wildboar/x500/UsefulDefinitions";
 import { duaConfigProfile } from "../DUAConf/duaConfigProfile.oa.mjs";
 import { type NAME_FORM } from "../InformationFramework/NAME-FORM.oca.mjs";
 import { commonName } from "../SelectedAttributeTypes/commonName.oa.mjs";

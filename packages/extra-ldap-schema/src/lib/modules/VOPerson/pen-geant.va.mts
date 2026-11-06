@@ -1,5 +1,7 @@
 /* eslint-disable */
 
+export type PrivateEnterpriseNumber = number;
+
 
 
 /**

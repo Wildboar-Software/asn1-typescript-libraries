@@ -2,7 +2,7 @@
 import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
 import { userApplications /* IMPORTED_SHORT_ENUMERATION_ITEM */ } from "../InformationFramework/AttributeUsage.ta.mjs";
 import { id_at_soniaLocalityMobile } from "../Ldapmigration97sonia/id-at-soniaLocalityMobile.va.mjs";
-import { TelephoneNumber, _decode_TelephoneNumber, _encode_TelephoneNumber } from "../SelectedAttributeTypes/TelephoneNumber.ta.mjs";
+import { type TelephoneNumber, _decode_TelephoneNumber, _encode_TelephoneNumber } from "../SelectedAttributeTypes/TelephoneNumber.ta.mjs";
 import { telephoneNr } from "../SelectedAttributeTypes/telephoneNr.oa.mjs";
 
 

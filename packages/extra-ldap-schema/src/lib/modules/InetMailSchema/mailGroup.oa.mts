@@ -4,6 +4,9 @@ import { mailRoutingAddress } from "../InetMailSchema/mailRoutingAddress.oa.mjs"
 import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
 import { structural /* IMPORTED_SHORT_ENUMERATION_ITEM */ } from "../InformationFramework/ObjectClassKind.ta.mjs";
 import { description } from "../SelectedAttributeTypes/description.oa.mjs";
+import { commonName } from "../SelectedAttributeTypes/commonName.oa.mjs";
+import { mail } from "../Cosine/mail.oa.mjs";
+import { member } from "../SelectedAttributeTypes/member.oa.mjs";
 
 
 /**

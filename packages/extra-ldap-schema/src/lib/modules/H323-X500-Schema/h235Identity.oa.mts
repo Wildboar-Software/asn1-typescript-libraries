@@ -8,6 +8,11 @@ import { h235IdentityPassword } from "../H323-X500-Schema/h235IdentityPassword.o
 import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
 import { structural /* IMPORTED_SHORT_ENUMERATION_ITEM */ } from "../InformationFramework/ObjectClassKind.ta.mjs";
 import { top } from "../InformationFramework/top.oa.mjs";
+import { userCertificate } from "../AuthenticationFramework/userCertificate.oa.mjs";
+import { cACertificate } from "../AuthenticationFramework/cACertificate.oa.mjs";
+import { authorityRevocationList } from "../AuthenticationFramework/authorityRevocationList.oa.mjs";
+import { certificateRevocationList } from "../AuthenticationFramework/certificateRevocationList.oa.mjs";
+import { crossCertificatePair } from "../AuthenticationFramework/crossCertificatePair.oa.mjs";
 
 
 /**

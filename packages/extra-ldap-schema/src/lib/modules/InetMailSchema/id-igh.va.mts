@@ -20,7 +20,13 @@ import {
  */
 export
 const id_igh: OBJECT_IDENTIFIER = _OID.fromParts([
+    1,
+    3,
+    6,
+    1,
+    4,
+    1,
     15347,
-], id_pen);
+]);
 
 /* eslint-enable */

@@ -5,6 +5,10 @@ import {
 import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
 import { structural /* IMPORTED_SHORT_ENUMERATION_ITEM */ } from "../InformationFramework/ObjectClassKind.ta.mjs";
 import { id_openldap_oc } from "../OpenLDAP/id-openldap-oc.va.mjs";
+import { organization } from "../SelectedObjectClasses/organization.oa.mjs";
+import { buildingName } from "../Cosine/buildingName.oa.mjs";
+import { displayName } from "../InetOrgPerson/displayName.oa.mjs";
+import { labeledURI } from "../OpenLDAPCoreSchema/labeledURI.oa.mjs";
 
 
 /**

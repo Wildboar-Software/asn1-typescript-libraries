@@ -87,7 +87,7 @@ class AttributeQuality {
      * @static
      * @method
      */
-    public static get _default_value_for_attribute_completeness () { return AttributeQuality_attribute_completeness_full; }        /**
+    public static get _default_value_for_attribute_completeness (): AttributeQuality_attribute_completeness { return AttributeQuality_attribute_completeness_full; }        /**
          * @summary The enum used as the type of the component `maintenance_level`
          * @public
          * @static

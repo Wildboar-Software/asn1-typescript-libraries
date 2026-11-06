@@ -2,7 +2,7 @@
 import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
 import { userApplications /* IMPORTED_SHORT_ENUMERATION_ITEM */ } from "../InformationFramework/AttributeUsage.ta.mjs";
 import { id_at_sambaTrustForestTrustInfo } from "../LdapSchema2ldifSamba/id-at-sambaTrustForestTrustInfo.va.mjs";
-import { DirectoryString, _decode_DirectoryString, _encode_DirectoryString } from "../SelectedAttributeTypes/DirectoryString.ta.mjs";
+import { type DirectoryString, _decode_DirectoryString, _encode_DirectoryString } from "../SelectedAttributeTypes/DirectoryString.ta.mjs";
 import { caseExactMatch } from "../SelectedAttributeTypes/caseExactMatch.oa.mjs";
 import { directoryString } from "../SelectedAttributeTypes/directoryString.oa.mjs";
 

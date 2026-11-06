@@ -10,6 +10,8 @@ import { area } from "../ISSS-Schema/area.oa.mjs";
 import { fax } from "../ISSS-Schema/fax.oa.mjs";
 import { id_euro_oc_orgUnit } from "../ISSS-Schema/id-euro-oc-orgUnit.va.mjs";
 import { serialNumber } from "../SelectedAttributeTypes/serialNumber.oa.mjs";
+import { mail } from "../Cosine/mail.oa.mjs";
+import { labeledURI } from "../OpenLDAPCoreSchema/labeledURI.oa.mjs";
 
 
 /**

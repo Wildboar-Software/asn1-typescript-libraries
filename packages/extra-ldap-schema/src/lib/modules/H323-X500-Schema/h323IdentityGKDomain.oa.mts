@@ -7,6 +7,7 @@ import * as $ from "@wildboar/asn1/functional";
 import { h323_id_at } from "../H323-X500-Schema/h323-id-at.va.mjs";
 import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
 import { userApplications /* IMPORTED_SHORT_ENUMERATION_ITEM */ } from "../InformationFramework/AttributeUsage.ta.mjs";
+import { caseIgnoreIA5Match } from "../SelectedAttributeTypes/caseIgnoreIA5Match.oa.mjs";
 
 
 /**

@@ -5,7 +5,7 @@ import {
 import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
 import { userApplications /* IMPORTED_SHORT_ENUMERATION_ITEM */ } from "../InformationFramework/AttributeUsage.ta.mjs";
 import { id_nis_at } from "../NIS/id-nis-at.va.mjs";
-import { Uint8, _decode_Uint8, _encode_Uint8 } from "../NIS/Uint8.ta.mjs";
+import { type Uint8, _decode_Uint8, _encode_Uint8 } from "../NIS/Uint8.ta.mjs";
 import { integer } from "../SelectedAttributeTypes/integer.oa.mjs";
 import { integerMatch } from "../SelectedAttributeTypes/integerMatch.oa.mjs";
 import { integerOrderingMatch } from "../SelectedAttributeTypes/integerOrderingMatch.oa.mjs";

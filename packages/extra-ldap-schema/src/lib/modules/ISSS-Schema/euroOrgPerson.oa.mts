@@ -22,6 +22,8 @@ import { initials } from "../SelectedAttributeTypes/initials.oa.mjs";
 import { serialNumber } from "../SelectedAttributeTypes/serialNumber.oa.mjs";
 import { uid } from "../SelectedAttributeTypes/uid.oa.mjs";
 import { uniqueIdentifier } from "../SelectedAttributeTypes/uniqueIdentifier.oa.mjs";
+import { mail } from "../Cosine/mail.oa.mjs";
+import { labeledURI } from "../OpenLDAPCoreSchema/labeledURI.oa.mjs";
 
 
 /**

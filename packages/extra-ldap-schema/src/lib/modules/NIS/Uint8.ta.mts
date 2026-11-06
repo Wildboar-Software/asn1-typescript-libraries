@@ -1,9 +1,11 @@
 /* eslint-disable */
 import {
-    type INTEGER
+    type INTEGER,
+    type ASN1Element as _Element,
+    ASN1OverflowError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-
+import { maxUint8 } from "../NIS/maxUint8.va.mjs";
 
 
 /**
@@ -20,7 +22,13 @@ export
 type Uint8 = INTEGER;
 
 export
-const _decode_Uint8: $.ASN1Decoder<Uint8> = $._decodeInteger;
+const _decode_Uint8 = (el: _Element): Uint8 => {
+    const value = $._decodeInteger(el);
+    if (typeof value === "bigint" ? (value < 0n || value > BigInt(maxUint8)) : (value < 0 || value > maxUint8)) {
+        throw new ASN1OverflowError("Uint8 violates INTEGER constraint");
+    }
+    return value;
+};
 
 export
 const _encode_Uint8: $.ASN1Encoder<Uint8> = $._encodeInteger;
