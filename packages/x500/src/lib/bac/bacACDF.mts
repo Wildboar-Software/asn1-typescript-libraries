@@ -125,10 +125,10 @@ interface BACACDFReturn extends ACDFReturn {
  *
  * ### Compliance
  *
- * This function deviates from the specification in these ways:
- *
- * - The function `discardNonRelevantACDFTuples()`, which is called by this
- *   function, does not observe the `restrictedBy` or `contexts` constraints.
+ * Constraints are evaluated before precedence and specificity. Requests must
+ * supply post-operation counts and, for `restrictedBy`, the complete resulting
+ * entry attributes. A constrained grant is discarded if the information needed
+ * to establish that it satisfies a constraint is unavailable.
  *
  * ### Parameters
  *
@@ -208,9 +208,9 @@ function bacACDF (
     // SORT BY USER CLASS SPECIFICITY
     const sortedByDescendingUserClassSpecificity: ACDFTupleExtended[] = tuplesThatSurvivedStage1
         .sort((a, b) => Math.floor(b[5]) - Math.floor(a[5])); // Must be floored. Search for: 1E9DC3EB-E3DB-4CFA-A7BE-B86342F7EF75
-    const highestUserClassSpecificity: number = sortedByDescendingUserClassSpecificity[0][5];
+    const highestUserClassSpecificity: number = Math.floor(sortedByDescendingUserClassSpecificity[0][5]);
     const charlieIndex = sortedByDescendingUserClassSpecificity
-        .findIndex((t) => (t[5] < highestUserClassSpecificity));
+        .findIndex((t) => (Math.floor(t[5]) < highestUserClassSpecificity));
     const tuplesThatSurvivedStage2: ACDFTupleExtended[] = ((charlieIndex < 0)
         ? sortedByDescendingUserClassSpecificity // All were of the same specificity.
         : sortedByDescendingUserClassSpecificity.slice(0, charlieIndex)); // Select the most specific.
