@@ -121,13 +121,13 @@ function evaluateCertificateAssertion (
     }
     const getEqualityMatcher = valueEqualityMatcher(getMatcher, flags);
     const tbs = value.toBeSigned;
-    const ext = extensionReader(tbs.extensions);
     if (assertion.serialNumber && Buffer.compare(assertion.serialNumber, tbs.serialNumber)) {
         return false;
     }
     if (assertion.issuer && !compareName(assertion.issuer, tbs.issuer, getEqualityMatcher)) {
         return false;
     }
+    const ext = extensionReader(tbs.extensions);
     if (assertion.subjectKeyIdentifier) {
         const ski = ext(SKI_ID, decodeSKI);
         if (!ski || Buffer.compare(ski, assertion.subjectKeyIdentifier)) {
