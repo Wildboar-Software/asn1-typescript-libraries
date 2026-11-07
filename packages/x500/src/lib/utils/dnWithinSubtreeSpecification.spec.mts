@@ -137,6 +137,13 @@ const specificExclusionsTest = (use_scope: boolean, before: boolean) => () => {
 };
 
 describe("dnWithinSubtreeSpecification", () => {
+    it.each([0, 0n])("limits maximum %s to the base, including under an administrative scope", (maximum) => {
+        const scope = [rdn(9)];
+        const subtree = new SubtreeSpecification([rdn(0)], undefined, 0, maximum);
+        expect(withinSubtree([...scope, rdn(0)], [], subtree, scope)).toBe(true);
+        expect(withinSubtree([...scope, rdn(0), rdn(1)], [], subtree, scope)).toBe(false);
+    });
+
     it("correctly assesses whether a DN falls within the subtree's base", baseTest(false));
     it("correctly assesses whether a DN falls within the subtree's base (using scope)", baseTest(true));
     it("correctly assesses whether a DN falls within the minimum and maximum bounds", minimumAndMaximumTest(false));

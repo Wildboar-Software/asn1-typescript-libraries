@@ -285,8 +285,8 @@ function gnWithinGeneralSubtree (
     subtree: GeneralSubtree,
     getEqualityMatcher?: (attributeType: OBJECT_IDENTIFIER) => EqualityMatcher | undefined,
 ): boolean {
-    const minimum: number = (subtree.minimum ? Number(subtree.minimum) : 0);
-    const maximum: number = (subtree.maximum ? Number(subtree.maximum) : Infinity);
+    const minimum: number = Number(subtree.minimum ?? 0);
+    const maximum: number = (subtree.maximum === undefined) ? Infinity : Number(subtree.maximum);
     if (maximum < minimum) {
         return false;
     }

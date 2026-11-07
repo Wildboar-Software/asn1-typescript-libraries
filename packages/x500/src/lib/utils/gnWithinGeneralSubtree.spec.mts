@@ -56,6 +56,19 @@ describe("evaluateSRVNameConstraints", () => {
 });
 
 describe("gnWithinGeneralSubtree", () => {
+    it.each([0, 0n])("limits maximum %s to the base for hierarchical name forms", (maximum) => {
+        const dns = new GeneralSubtree({ dNSName: "example.com" }, 0, maximum);
+        expect(gnWithinGeneralSubtree({ dNSName: "example.com" }, dns)).toBe(true);
+        expect(gnWithinGeneralSubtree({ dNSName: "a.example.com" }, dns)).toBe(false);
+        const base = [[new AttributeTypeAndValue(commonName["&id"], commonName.encoderFor["&Type"]!({ printableString: "root" }, DER))]];
+        const directory = new GeneralSubtree({ directoryName: { rdnSequence: base } }, 0, maximum);
+        expect(gnWithinGeneralSubtree({ directoryName: { rdnSequence: base } }, directory)).toBe(true);
+        expect(gnWithinGeneralSubtree({ directoryName: { rdnSequence: [...base, ...base] } }, directory)).toBe(false);
+        const oid = new GeneralSubtree({ registeredID: ObjectIdentifier.fromString("1.2.3") }, 0, maximum);
+        expect(gnWithinGeneralSubtree({ registeredID: ObjectIdentifier.fromString("1.2.3") }, oid)).toBe(true);
+        expect(gnWithinGeneralSubtree({ registeredID: ObjectIdentifier.fromString("1.2.3.4") }, oid)).toBe(false);
+    });
+
     it("evaluates dNSName general names within a dNSName subtree", () => {
         const asserted1a: GeneralName = {
             dNSName: "www.example.com",

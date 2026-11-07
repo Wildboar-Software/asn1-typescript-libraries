@@ -78,8 +78,8 @@ function dnWithinSubtreeSpecification (
         ...scope,
         ...(sts.base ?? []),
     ];
-    const minimum = (sts.minimum ? Number(sts.minimum) : 0);
-    const maximum = (sts.maximum ? Number(sts.maximum) : Infinity);
+    const minimum = Number(sts.minimum ?? 0);
+    const maximum = (sts.maximum === undefined) ? Infinity : Number(sts.maximum);
     // Short circuits to avoid the more costly ATAV comparisons later on.
     if (entryDN.length < (base.length + minimum)) {
         return false;
