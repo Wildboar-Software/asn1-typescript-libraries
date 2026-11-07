@@ -1,0 +1,3257 @@
+-- Derived from data/ldap-schema/core389.ldif
+-- Upstream: https://github.com/389ds/389-ds-base/blob/main/ldap/schema/01core389.ldif
+-- This module is a container for LDAP schema. It has no module identifier.
+-- X- extension fields from the LDAP schema are comments. USAGE userApplications and structural KIND are omitted because they are the defaults.
+-- 1 elements were omitted because their OIDs are already defined. See CONVERSION-REPORT.txt.
+-- 26 elements were omitted because the OID is invalid or unresolved.
+LdapCore389 DEFINITIONS ::=
+BEGIN
+
+IMPORTS
+
+  ATTRIBUTE, DistinguishedName, distinguishedNameMatch, OBJECT-CLASS, top
+    FROM InformationFramework
+      {joint-iso-itu-t ds(5) module(1) informationFramework(1) 9} WITH SUCCESSORS
+
+  boolean, caseIgnoreMatch, commonName, description, directoryString, dn,
+    generalizedTime, generalizedTimeMatch, generalizedTimeOrderingMatch,
+    integer, integerMatch, integerOrderingMatch, octetString,
+    UnboundedDirectoryString
+    FROM SelectedAttributeTypes
+      {joint-iso-itu-t ds(5) module(1) selectedAttributeTypes(5) 9} WITH SUCCESSORS ;
+
+-- Object identifiers
+
+id-at-oid OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 215 }
+id-at-nsslapd-pluginPath OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 224 }
+id-at-nsslapd-pluginInitfunc OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 225 }
+id-at-nsslapd-pluginType OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 226 }
+id-at-nsslapd-pluginId OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 227 }
+id-at-nsslapd-pluginVersion OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 228 }
+id-at-nsslapd-pluginVendor OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 229 }
+id-at-nsslapd-pluginDescription OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 230 }
+id-at-nsslapd-pluginEnabled OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 231 }
+id-at-nsslapd-pluginConfigArea OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 2104 }
+id-at-nsSNMPEnabled OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 232 }
+id-at-nsSNMPOrganization OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 233 }
+id-at-nsSNMPLocation OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 234 }
+id-at-nsSNMPContact OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 235 }
+id-at-nsSNMPDescription OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 236 }
+id-at-nsSNMPMasterHost OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 237 }
+id-at-nsSNMPMasterPort OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 238 }
+id-at-nsSNMPName OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 593 }
+id-at-nsSystemIndex OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 242 }
+id-at-nsIndexType OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 327 }
+id-at-nsMatchingRule OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 328 }
+id-at-nsIndexIDListScanLimit OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 2161 }
+id-at-nsState OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 543 }
+id-at-nsParentUniqueId OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 544 }
+id-at-nscpEntryDN OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 545 }
+id-at-multiLineDescription OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 250 1 2 }
+id-at-nsDS5ReplicaHost OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 578 }
+id-at-nsDS5ReplicaPort OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 579 }
+id-at-nsDS5ReplicaTransportInfo OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 580 }
+id-at-nsDS5ReplicaBindDN OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 581 }
+id-at-nsDS5ReplicaCredentials OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 582 }
+id-at-nsDS5ReplicaBindMethod OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 583 }
+id-at-nsDS5ReplicaRoot OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 584 }
+id-at-nsDS5ReplicatedAttributeList OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 585 }
+id-at-nsDS5ReplicatedAttributeListTotal OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 594 }
+id-at-nsDS5ReplicaUpdateSchedule OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 586 }
+id-at-nsds50ruv OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 587 }
+id-at-nsruvReplicaLastModified OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 2027 }
+id-at-nsDS5ReplicaId OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 588 }
+id-at-nsDS5ReplicaType OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 589 }
+id-at-nsDS5ReplicaName OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 590 }
+id-at-nsDS5ReplicaReferral OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 591 }
+id-at-nsDS5ReplicaAutoReferral OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 592 }
+id-at-nsDS5Flags OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 607 }
+id-at-nsDS5Task OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 608 }
+id-at-nsds5BeginReplicaRefresh OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 609 }
+id-at-nsds5ReplicaPurgeDelay OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 682 }
+id-at-nsds5ReplicaChangeCount OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 684 }
+id-at-nsds5ReplicaTombstonePurgeInterval OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 683 }
+id-at-nsds5replicaLastUpdateStart OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 685 }
+id-at-nsds5replicaLastUpdateEnd OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 686 }
+id-at-nsds5replicaChangesSentSinceStartup OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 687 }
+id-at-nsds5replicaLastUpdateStatus OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 688 }
+id-at-nsds5replicaUpdateInProgress OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 689 }
+id-at-nsds5ReplicaLegacyConsumer OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 802 }
+id-at-nsds5ReplicaEnabled OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 2132 }
+id-at-nsSchemaCSN OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 804 }
+id-at-nsds5replicaTimeout OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 805 }
+id-at-nsds5replicaLastInitStart OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 807 }
+id-at-nsds5replicaLastInitEnd OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 808 }
+id-at-nsds5replicaLastInitStatus OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 809 }
+id-at-nsds5replicaBusyWaitTime OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 1097 }
+id-at-nsds5replicaSessionPauseTime OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 1098 }
+id-at-nsds5ReplicaStripAttrs OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 2134 }
+id-at-nsds5debugreplicatimeout OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 9999999 }
+id-at-nsSaslMapRegexString OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 2064 }
+id-at-nsSaslMapBaseDNTemplate OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 2065 }
+id-at-nsSaslMapFilterTemplate OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 2066 }
+id-at-nsSaslMapPriority OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 2142 }
+id-at-nsslapd-suffix OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 2091 }
+id-at-nsslapd-ldapiautodnsuffix OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 2092 }
+id-at-nsslapd-changelogsuffix OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 2093 }
+id-at-connection OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 2095 }
+id-at-entryusn OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 2096 }
+id-at-internalModifiersName OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 2113 }
+id-at-internalCreatorsName OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 2114 }
+id-at-pwdUpdateTime OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 2133 }
+id-at-nsds5ReplicaCleanRUV OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 2135 }
+id-at-nsds5ReplicaCleanRUVNotified OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 2136 }
+id-at-nsds5ReplicaAbortCleanRUV OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 2137 }
+id-at-tombstoneNumSubordinates OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 2111 }
+id-at-nsslapd-readonly OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 2138 }
+id-at-nsslapd-sasl-mapping-fallback OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 2143 }
+id-at-rootdn-open-time OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 2144 }
+id-at-rootdn-close-time OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 2145 }
+id-at-rootdn-days-allowed OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 2146 }
+id-at-rootdn-allow-host OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 2147 }
+id-at-rootdn-deny-host OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 2148 }
+id-at-rootdn-allow-ip OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 2149 }
+id-at-rootdn-deny-ip OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 2150 }
+id-at-nsslapd-plugin-depends-on-type OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 2151 }
+id-at-nsds5ReplicaProtocolTimeout OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 2152 }
+id-at-nsds5ReplicaBackoffMin OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 2154 }
+id-at-nsds5ReplicaBackoffMax OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 2155 }
+id-at-nsslapd-sasl-max-buffer-size OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 2156 }
+id-at-schemaUpdateObjectclassAccept OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 2165 }
+id-at-schemaUpdateObjectclassReject OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 2166 }
+id-at-schemaUpdateAttributeAccept OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 2167 }
+id-at-schemaUpdateAttributeReject OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 2168 }
+id-at-nsslapd-pagedsizelimit OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 2169 }
+id-at-nsslapd-accesslog-level OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 2170 }
+id-at-nsslapd-accesslog-maxlogsperdir OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 2171 }
+id-at-nsslapd-accesslog-maxlogsize OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 2172 }
+id-at-nsslapd-errorlog-maxlogsize OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 2173 }
+id-at-nsslapd-auditlog-maxlogsize OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 2174 }
+id-at-nsslapd-accesslog-logrotationsync-enabled OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 2175 }
+id-at-nsslapd-errorlog-logrotationsync-enabled OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 2176 }
+id-at-nsslapd-auditlog-logrotationsync-enabled OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 2177 }
+id-at-nsslapd-accesslog-logrotationsynchour OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 2178 }
+id-at-nsslapd-errorlog-logrotationsynchour OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 2179 }
+id-at-nsslapd-auditlog-logrotationsynchour OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 2180 }
+id-at-nsslapd-accesslog-logrotationsyncmin OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 2181 }
+id-at-nsslapd-errorlog-logrotationsyncmin OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 2182 }
+id-at-nsslapd-audit-logrotationsyncmin OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 2183 }
+id-at-nsslapd-accesslog-logrotationtime OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 2184 }
+id-at-nsslapd-errorlog-logrotationtime OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 2185 }
+id-at-nsslapd-auditlog-logrotationtime OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 2186 }
+id-at-nsslapd-accesslog-logrotationtimeunit OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 2187 }
+id-at-nsslapd-errorlog-logrotationtimeunit OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 2188 }
+id-at-nsslapd-auditlog-logrotationtimeunit OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 2189 }
+id-at-nsslapd-accesslog-logmaxdiskspace OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 2190 }
+id-at-nsslapd-errorlog-logmaxdiskspace OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 2191 }
+id-at-nsslapd-auditlog-logmaxdiskspace OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 2192 }
+id-at-nsslapd-accesslog-logminfreediskspace OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 2193 }
+id-at-nsslapd-errorlog-logminfreediskspace OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 2194 }
+id-at-nsslapd-auditlog-logminfreediskspace OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 2195 }
+id-at-nsslapd-accesslog-logexpirationtime OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 2196 }
+id-at-nsslapd-errorlog-logexpirationtime OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 2197 }
+id-at-nsslapd-auditlog-logexpirationtime OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 2198 }
+id-at-nsslapd-accesslog-logexpirationtimeunit OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 2199 }
+id-at-nsslapd-errorlog-logexpirationtimeunit OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 2200 }
+id-at-nsslapd-auditlog-logexpirationtimeunit OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 2201 }
+id-at-nsslapd-accesslog-logging-enabled OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 2202 }
+id-at-nsslapd-errorlog-logging-enabled OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 2203 }
+id-at-nsslapd-auditlog-logging-enabled OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 2204 }
+id-at-nsslapd-auditlog-logging-hide-unhashed-pw OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 2205 }
+id-at-nsslapd-unhashed-pw-switch OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 2206 }
+id-at-nsslapd-rootdn OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 2207 }
+id-at-nsslapd-rootdnpw OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 2208 }
+id-at-nsslapd-rootpwstoragescheme OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 2209 }
+id-at-nsslapd-auditlog OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 2210 }
+id-at-nsslapd-dynamicconf OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 2211 }
+id-at-nsslapd-useroc OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 2212 }
+id-at-nsslapd-userat OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 2213 }
+id-at-nsslapd-svrtab OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 2214 }
+id-at-nsslapd-allow-unauthenticated-binds OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 2215 }
+id-at-nsslapd-require-secure-binds OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 2216 }
+id-at-nsslapd-allow-anonymous-access OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 2217 }
+id-at-nsslapd-localssf OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 2218 }
+id-at-nsslapd-minssf OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 2219 }
+id-at-nsslapd-minssf-exclude-rootdse OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 2220 }
+id-at-nsslapd-validate-cert OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 2221 }
+id-at-nsslapd-localuser OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 2222 }
+id-at-nsslapd-localhost OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 2223 }
+id-at-nsslapd-port OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 2224 }
+id-at-nsslapd-workingdir OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 2225 }
+id-at-nsslapd-listenhost OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 2226 }
+id-at-nsslapd-snmp-index OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 2227 }
+id-at-nsslapd-ldapifilepath OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 2228 }
+id-at-nsslapd-ldapilisten OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 2229 }
+id-at-nsslapd-ldapiautobind OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 2230 }
+id-at-nsslapd-ldapimaprootdn OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 2231 }
+id-at-nsslapd-ldapimaptoentries OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 2232 }
+id-at-nsslapd-ldapiuidnumbertype OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 2233 }
+id-at-nsslapd-ldapigidnumbertype OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 2234 }
+id-at-nsslapd-ldapientrysearchbase OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 2235 }
+id-at-nsslapd-anonlimitsdn OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 2236 }
+id-at-nsslapd-counters OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 2237 }
+id-at-nsslapd-security OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 2238 }
+id-at-nsslapd-SSL3ciphers OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 2239 }
+id-at-nsslapd-accesslog OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 2240 }
+id-at-nsslapd-errorlog OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 2241 }
+id-at-nsslapd-securePort OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 2242 }
+id-at-nsslapd-securelistenhost OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 2243 }
+id-at-nnslapd-threadnumber OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 2244 }
+id-at-nsslapd-maxthreadsperconn OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 2245 }
+id-at-nsslapd-maxdescriptors OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 2246 }
+id-at-nsslapd-reservedescriptors OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 2248 }
+id-at-nsslapd-idletimeout OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 2249 }
+id-at-nsslapd-ioblocktimeout OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 2250 }
+id-at-nsslapd-accesscontrol OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 2251 }
+id-at-nsslapd-groupevalnestlevel OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 2252 }
+id-at-nsslapd-nagle OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 2253 }
+id-at-nsslapd-pwpolicy-local OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 2254 }
+id-at-passwordIsGlobalPolicy OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 2255 }
+id-at-passwordLegacyPolicy OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 2256 }
+id-at-nsslapd-accesslog-logbuffering OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 2257 }
+id-at-nsslapd-csnlogging OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 2258 }
+id-at-nsslapd-return-exact-case OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 2259 }
+id-at-nsslapd-result-tweak OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 2260 }
+id-at-nsslapd-attribute-name-exceptions OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 2261 }
+id-at-nsslapd-maxbersize OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 2262 }
+id-at-nsslapd-maxsasliosize OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 2263 }
+id-at-nsslapd-max-filter-nest-level OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 2264 }
+id-at-nsslapd-versionstring OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 2265 }
+id-at-nsslapd-enquote-sup-oc OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 2266 }
+id-at-nsslapd-certmap-basedn OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 2267 }
+id-at-nsslapd-accesslog-list OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 2268 }
+id-at-nsslapd-errorlog-list OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 2269 }
+id-at-nsslapd-auditlog-list OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 2270 }
+id-at-nsslapd-rewrite-rfc1274 OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 2271 }
+id-at-nsslapd-plugin-binddn-tracking OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 2272 }
+id-at-nsslapd-config OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 2273 }
+id-at-nsslapd-instancedir OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 2274 }
+id-at-nsslapd-schemadir OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 2275 }
+id-at-nsslapd-lockdir OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 2276 }
+id-at-nsslapd-tmpdir OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 2277 }
+id-at-nsslapd-certdir OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 2278 }
+id-at-nsslapd-ldifdir OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 2279 }
+id-at-nsslapd-bakdir OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 2280 }
+id-at-nsslapd-saslpath OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 2281 }
+id-at-nsslapd-rundir OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 2282 }
+id-at-nsslapd-SSLclientAuth OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 2283 }
+id-at-nsslapd-ssl-check-hostname OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 2284 }
+id-at-nsslapd-hash-filters OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 2285 }
+id-at-nsslapd-outbound-ldap-io-timeout OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 2286 }
+id-at-nsslapd-force-sasl-external OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 2287 }
+id-at-nsslapd-defaultnamingcontext OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 2288 }
+id-at-nsslapd-disk-monitoring OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 2289 }
+id-at-nsslapd-disk-monitoring-threshold OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 2290 }
+id-at-nsslapd-disk-monitoring-grace-period OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 2291 }
+id-at-nsslapd-disk-monitoring-logging-critical OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 2292 }
+id-at-nsslapd-ndn-cache-enabled OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 2293 }
+id-at-nsslapd-ndn-cache-max-size OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 2294 }
+id-at-nsslapd-allowed-sasl-mechanisms OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 2295 }
+id-at-nsslapd-ignore-virtual-attrs OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 2296 }
+id-at-nsslapd-search-return-original-type-switch OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 2297 }
+id-at-nsslapd-enable-turbo-mode OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 2298 }
+id-at-nsslapd-connection-buffer OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 2299 }
+id-at-nsslapd-connection-nocanon OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 2300 }
+id-at-nsslapd-plugin-logging OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 2301 }
+id-at-nsslapd-listen-backlog-size OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 2302 }
+id-at-nsslapd-ignore-time-skew OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 2303 }
+id-at-nsslapd-dynamic-plugins OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 2304 }
+id-at-nsslapd-moddn-aci OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 2305 }
+id-at-nsslapd-return-default-opattr OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 2306 }
+id-at-nsslapd-allow-hashed-passwords OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 2307 }
+id-at-nstombstonecsn OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 2308 }
+id-at-nsds5ReplicaPreciseTombstonePurging OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 2309 }
+id-at-nsds5ReplicaFlowControlWindow OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 2310 }
+id-at-nsds5ReplicaFlowControlPause OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 2311 }
+id-at-nsslapd-changelogtrim-interval OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 2313 }
+id-at-nsslapd-changelogcompactdb-interval OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 2314 }
+id-at-nsDS5ReplicaWaitForAsyncResults OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 2315 }
+id-at-nsslapd-auditfaillog-maxlogsize OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 2316 }
+id-at-nsslapd-auditfaillog-logrotationsync-enabled OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 2317 }
+id-at-nsslapd-auditfaillog-logrotationsynchour OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 2318 }
+id-at-nsslapd-auditfaillog-logrotationtime OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 2319 }
+id-at-nsslapd-auditfaillog-logrotationtimeunit OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 2320 }
+id-at-nsslapd-auditfaillog-logmaxdiskspace OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 2321 }
+id-at-nsslapd-auditfaillog-logminfreediskspace OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 2322 }
+id-at-nsslapd-auditfaillog-logexpirationtime OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 2323 }
+id-at-nsslapd-auditfaillog-logexpirationtimeunit OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 2324 }
+id-at-nsslapd-auditfaillog-logging-enabled OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 2325 }
+id-at-nsslapd-auditfaillog-logging-hide-unhashed-pw OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 2326 }
+id-at-nsslapd-auditfaillog OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 2327 }
+id-at-nsslapd-auditfaillog-list OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 2328 }
+id-at-nsslapd-logging-backend OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 2330 }
+id-at-nsslapd-logging-hr-timestamps-enabled OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 2331 }
+id-at-allowWeakDHParam OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 2332 }
+id-at-nsds5ReplicaReleaseTimeout OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 2333 }
+id-at-nsds5ReplicaIgnoreMissingChange OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 2335 }
+id-at-nsDS5ReplicaBindDnGroupCheckInterval OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 2336 }
+id-at-nsDS5ReplicaBindDNGroup OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 2338 }
+id-at-nsslapd-changelogdir OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 2339 }
+id-at-nsslapd-changelogmaxage OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 2340 }
+id-at-nsslapd-changelogmaxentries OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 2341 }
+id-at-nsslapd-tls-check-crl OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 2344 }
+id-at-nsslapd-encryptionalgorithm OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 2353 }
+id-at-nsSymmetricKey OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 2084 }
+id-at-nsds5replicaLastInitStatusJSON OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 2364 }
+id-at-nsds5replicaLastUpdateStatusJSON OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 2365 }
+id-at-nsslapd-libPath OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 2367 }
+id-at-nsslapd-filterrewriter OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 2368 }
+id-at-nsslapd-returnedAttrRewriter OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 2369 }
+id-at-nsslapd-enable-upgrade-hash OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 2370 }
+id-at-entrydn OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 602 }
+id-at-dncomp OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 603 }
+id-at-parentid OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 604 }
+id-at-entryid OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 605 }
+id-at-nsDS5ReplicaBootstrapBindDN OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 2371 }
+id-at-nsDS5ReplicaBootstrapCredentials OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 2372 }
+id-at-nsDS5ReplicaBootstrapBindMethod OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 2373 }
+id-at-nsDS5ReplicaBootstrapTransportInfo OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 2374 }
+id-at-nsslapd-tcp-fin-timeout OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 2387 }
+id-at-nsslapd-tcp-keepalive-time OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 2388 }
+id-at-nsds5ReplicaKeepAliveUpdateInterval OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 2390 }
+id-at-dsEntryDN OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 2391 }
+id-at-nsslapd-return-original-entrydn OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 2392 }
+id-at-nsslapd-auditlog-display-attrs OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 2393 }
+id-at-nsslapd-haproxy-trusted-ip OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 2398 }
+id-at-nsslapd-pwdPBKDF2NumIterations OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 2400 }
+id-at-nsslapd-pwdPBKDF2AcceptMaxIterations OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 2403 }
+id-at-nsslapd-maxcontrolsperop OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 2402 }
+id-at-nsslapd-thread-pool-stats OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 2404 }
+id-oc-directoryServerFeature OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 2 40 }
+id-oc-nsslapdPlugin OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 2 41 }
+id-oc-nsIndex OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 2 44 }
+id-oc-nsBackendInstance OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 2 109 }
+id-oc-nsMappingTree OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 2 110 }
+id-oc-nsContainer OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 2 104 }
+id-oc-nsDS5Replica OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 2 108 }
+id-oc-nsTombstone OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 2 113 }
+id-oc-nsDS5ReplicationAgreement OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 2 103 }
+id-oc-nsslapdConfig OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 2 39 }
+id-oc-nsSaslMapping OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 2 317 }
+id-oc-nsSNMP OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 2 43 }
+id-oc-rootDNPluginConfig OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 2 327 }
+id-oc-nsSchemaPolicy OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 2 328 }
+id-oc-nsChangelogConfig OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 2 332 }
+id-oc-rewriterEntry OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 2 337 }
+id-oc-pwdPBKDF2PluginConfig OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 2 340 }
+
+-- Attribute types
+
+-- X-ORIGIN: "Netscape Directory Server"
+oid ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"oid"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-oid }
+
+-- X-ORIGIN: "Netscape Directory Server"
+nsslapd-pluginPath ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"nsslapd-pluginPath"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-nsslapd-pluginPath }
+
+-- X-ORIGIN: "Netscape Directory Server"
+nsslapd-pluginInitfunc ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"nsslapd-pluginInitfunc"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-nsslapd-pluginInitfunc }
+
+-- X-ORIGIN: "Netscape Directory Server"
+nsslapd-pluginType ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"nsslapd-pluginType"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-nsslapd-pluginType }
+
+-- X-ORIGIN: "Netscape Directory Server"
+nsslapd-pluginId ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"nsslapd-pluginId"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-nsslapd-pluginId }
+
+-- X-ORIGIN: "Netscape Directory Server"
+nsslapd-pluginVersion ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"nsslapd-pluginVersion"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-nsslapd-pluginVersion }
+
+-- X-ORIGIN: "Netscape Directory Server"
+nsslapd-pluginVendor ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"nsslapd-pluginVendor"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-nsslapd-pluginVendor }
+
+-- X-ORIGIN: "Netscape Directory Server"
+nsslapd-pluginDescription ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"nsslapd-pluginDescription"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-nsslapd-pluginDescription }
+
+-- X-ORIGIN: "Netscape Directory Server"
+nsslapd-pluginEnabled ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"nsslapd-pluginEnabled"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-nsslapd-pluginEnabled }
+
+-- X-ORIGIN: "Netscape Directory Server"
+nsslapd-pluginConfigArea ATTRIBUTE ::= {
+  WITH SYNTAX               DistinguishedName
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               dn.&id
+  LDAP-NAME                 {"nsslapd-pluginConfigArea"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-nsslapd-pluginConfigArea }
+
+-- X-ORIGIN: "Netscape Directory Server"
+nsSNMPEnabled ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"nsSNMPEnabled"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-nsSNMPEnabled }
+
+-- X-ORIGIN: "Netscape Directory Server"
+nsSNMPOrganization ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"nsSNMPOrganization"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-nsSNMPOrganization }
+
+-- X-ORIGIN: "Netscape Directory Server"
+nsSNMPLocation ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"nsSNMPLocation"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-nsSNMPLocation }
+
+-- X-ORIGIN: "Netscape Directory Server"
+nsSNMPContact ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"nsSNMPContact"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-nsSNMPContact }
+
+-- X-ORIGIN: "Netscape Directory Server"
+nsSNMPDescription ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"nsSNMPDescription"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-nsSNMPDescription }
+
+-- X-ORIGIN: "Netscape Directory Server"
+nsSNMPMasterHost ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"nsSNMPMasterHost"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-nsSNMPMasterHost }
+
+-- X-ORIGIN: "Netscape Directory Server"
+nsSNMPMasterPort ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"nsSNMPMasterPort"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-nsSNMPMasterPort }
+
+-- X-ORIGIN: "Netscape Directory Server"
+nsSNMPName ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"nsSNMPName"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-nsSNMPName }
+
+-- X-ORIGIN: "Netscape Directory Server"
+nsSystemIndex ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"nsSystemIndex"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-nsSystemIndex }
+
+-- X-ORIGIN: "Netscape Directory Server"
+nsIndexType ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"nsIndexType"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-nsIndexType }
+
+-- X-ORIGIN: "Netscape Directory Server"
+nsMatchingRule ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"nsMatchingRule"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-nsMatchingRule }
+
+-- X-ORIGIN: "Netscape Directory Server"
+nsIndexIDListScanLimit ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"nsIndexIDListScanLimit"}
+  LDAP-DESC                 "fine grained idlistscanlimit - per index/type/value"
+  ID                        id-at-nsIndexIDListScanLimit }
+
+-- X-ORIGIN: "Netscape Directory Server"
+-- LDAP binary syntax has no X.500 directory type here. Represented as OCTET STRING.
+nsState ATTRIBUTE ::= {
+  WITH SYNTAX               OCTET STRING
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               { 1 3 6 1 4 1 1466 115 121 1 5 }
+  LDAP-NAME                 {"nsState"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-nsState }
+
+-- X-ORIGIN: "Netscape Directory Server"
+nsParentUniqueId ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"nsParentUniqueId"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-nsParentUniqueId }
+
+-- X-ORIGIN: "Netscape Directory Server"
+nscpEntryDN ATTRIBUTE ::= {
+  WITH SYNTAX               DistinguishedName
+  SINGLE VALUE              TRUE
+  NO USER MODIFICATION      TRUE
+  USAGE                     directoryOperation
+  LDAP-SYNTAX               dn.&id
+  LDAP-NAME                 {"nscpEntryDN"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-nscpEntryDN }
+
+-- X-ORIGIN: "Internet White Pages Pilot"
+multiLineDescription ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"multiLineDescription"}
+  LDAP-DESC                 "Pilot attribute type"
+  ID                        id-at-multiLineDescription }
+
+-- X-ORIGIN: "Netscape Directory Server"
+nsDS5ReplicaHost ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"nsDS5ReplicaHost"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-nsDS5ReplicaHost }
+
+-- X-ORIGIN: "Netscape Directory Server"
+nsDS5ReplicaPort ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"nsDS5ReplicaPort"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-nsDS5ReplicaPort }
+
+-- X-ORIGIN: "Netscape Directory Server"
+nsDS5ReplicaTransportInfo ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"nsDS5ReplicaTransportInfo"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-nsDS5ReplicaTransportInfo }
+
+-- X-ORIGIN: "Netscape Directory Server"
+nsDS5ReplicaBindDN ATTRIBUTE ::= {
+  WITH SYNTAX               DistinguishedName
+  LDAP-SYNTAX               dn.&id
+  LDAP-NAME                 {"nsDS5ReplicaBindDN"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-nsDS5ReplicaBindDN }
+
+-- X-ORIGIN: "Netscape Directory Server"
+-- LDAP binary syntax has no X.500 directory type here. Represented as OCTET STRING.
+nsDS5ReplicaCredentials ATTRIBUTE ::= {
+  WITH SYNTAX               OCTET STRING
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               { 1 3 6 1 4 1 1466 115 121 1 5 }
+  LDAP-NAME                 {"nsDS5ReplicaCredentials"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-nsDS5ReplicaCredentials }
+
+-- X-ORIGIN: "Netscape Directory Server"
+nsDS5ReplicaBindMethod ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"nsDS5ReplicaBindMethod"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-nsDS5ReplicaBindMethod }
+
+-- X-ORIGIN: "Netscape Directory Server"
+nsDS5ReplicaRoot ATTRIBUTE ::= {
+  WITH SYNTAX               DistinguishedName
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               dn.&id
+  LDAP-NAME                 {"nsDS5ReplicaRoot"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-nsDS5ReplicaRoot }
+
+-- X-ORIGIN: "Netscape Directory Server"
+nsDS5ReplicatedAttributeList ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"nsDS5ReplicatedAttributeList"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-nsDS5ReplicatedAttributeList }
+
+-- X-ORIGIN: "Netscape Directory Server"
+nsDS5ReplicatedAttributeListTotal ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"nsDS5ReplicatedAttributeListTotal"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-nsDS5ReplicatedAttributeListTotal }
+
+-- X-ORIGIN: "Netscape Directory Server"
+nsDS5ReplicaUpdateSchedule ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"nsDS5ReplicaUpdateSchedule"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-nsDS5ReplicaUpdateSchedule }
+
+-- X-ORIGIN: "Netscape Directory Server"
+nsds50ruv ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"nsds50ruv"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-nsds50ruv }
+
+-- X-ORIGIN: "Netscape Directory Server"
+nsruvReplicaLastModified ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"nsruvReplicaLastModified"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-nsruvReplicaLastModified }
+
+-- X-ORIGIN: "Netscape Directory Server"
+nsDS5ReplicaId ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"nsDS5ReplicaId"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-nsDS5ReplicaId }
+
+-- X-ORIGIN: "Netscape Directory Server"
+nsDS5ReplicaType ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"nsDS5ReplicaType"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-nsDS5ReplicaType }
+
+-- X-ORIGIN: "Netscape Directory Server"
+nsDS5ReplicaName ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"nsDS5ReplicaName"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-nsDS5ReplicaName }
+
+-- X-ORIGIN: "Netscape Directory Server"
+nsDS5ReplicaReferral ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"nsDS5ReplicaReferral"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-nsDS5ReplicaReferral }
+
+-- X-ORIGIN: "Netscape Directory Server"
+nsDS5ReplicaAutoReferral ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"nsDS5ReplicaAutoReferral"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-nsDS5ReplicaAutoReferral }
+
+-- X-ORIGIN: "Netscape Directory Server"
+nsDS5Flags ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"nsDS5Flags"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-nsDS5Flags }
+
+-- X-ORIGIN: "Netscape Directory Server"
+nsDS5Task ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"nsDS5Task"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-nsDS5Task }
+
+-- X-ORIGIN: "Netscape Directory Server"
+nsds5BeginReplicaRefresh ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"nsds5BeginReplicaRefresh"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-nsds5BeginReplicaRefresh }
+
+-- X-ORIGIN: "Netscape Directory Server"
+nsds5ReplicaPurgeDelay ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  EQUALITY MATCHING RULE    integerMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"nsds5ReplicaPurgeDelay"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-nsds5ReplicaPurgeDelay }
+
+-- X-ORIGIN: "Netscape Directory Server"
+nsds5ReplicaChangeCount ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  EQUALITY MATCHING RULE    integerMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"nsds5ReplicaChangeCount"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-nsds5ReplicaChangeCount }
+
+-- X-ORIGIN: "Netscape Directory Server"
+nsds5ReplicaTombstonePurgeInterval ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  EQUALITY MATCHING RULE    integerMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"nsds5ReplicaTombstonePurgeInterval"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-nsds5ReplicaTombstonePurgeInterval }
+
+-- X-ORIGIN: "Netscape Directory Server"
+nsds5replicaLastUpdateStart ATTRIBUTE ::= {
+  WITH SYNTAX               GeneralizedTime
+  EQUALITY MATCHING RULE    generalizedTimeMatch
+  ORDERING MATCHING RULE    generalizedTimeOrderingMatch
+  SINGLE VALUE              TRUE
+  NO USER MODIFICATION      TRUE
+  LDAP-SYNTAX               generalizedTime.&id
+  LDAP-NAME                 {"nsds5replicaLastUpdateStart"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-nsds5replicaLastUpdateStart }
+
+-- X-ORIGIN: "Netscape Directory Server"
+nsds5replicaLastUpdateEnd ATTRIBUTE ::= {
+  WITH SYNTAX               GeneralizedTime
+  EQUALITY MATCHING RULE    generalizedTimeMatch
+  ORDERING MATCHING RULE    generalizedTimeOrderingMatch
+  SINGLE VALUE              TRUE
+  NO USER MODIFICATION      TRUE
+  LDAP-SYNTAX               generalizedTime.&id
+  LDAP-NAME                 {"nsds5replicaLastUpdateEnd"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-nsds5replicaLastUpdateEnd }
+
+-- X-ORIGIN: "Netscape Directory Server"
+nsds5replicaChangesSentSinceStartup ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  EQUALITY MATCHING RULE    integerMatch
+  SINGLE VALUE              TRUE
+  NO USER MODIFICATION      TRUE
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"nsds5replicaChangesSentSinceStartup"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-nsds5replicaChangesSentSinceStartup }
+
+-- X-ORIGIN: "Netscape Directory Server"
+nsds5replicaLastUpdateStatus ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  NO USER MODIFICATION      TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"nsds5replicaLastUpdateStatus"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-nsds5replicaLastUpdateStatus }
+
+-- X-ORIGIN: "Netscape Directory Server"
+nsds5replicaUpdateInProgress ATTRIBUTE ::= {
+  WITH SYNTAX               BOOLEAN
+  SINGLE VALUE              TRUE
+  NO USER MODIFICATION      TRUE
+  LDAP-SYNTAX               boolean.&id
+  LDAP-NAME                 {"nsds5replicaUpdateInProgress"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-nsds5replicaUpdateInProgress }
+
+-- X-ORIGIN: "Netscape Directory Server"
+nsds5ReplicaLegacyConsumer ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"nsds5ReplicaLegacyConsumer"}
+  LDAP-DESC                 "Netscape defined attribute type - OBSOLETE"
+  ID                        id-at-nsds5ReplicaLegacyConsumer }
+
+-- X-ORIGIN: "Netscape Directory Server"
+nsds5ReplicaEnabled ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"nsds5ReplicaEnabled"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-nsds5ReplicaEnabled }
+
+-- X-ORIGIN: "Netscape Directory Server"
+nsSchemaCSN ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  USAGE                     directoryOperation
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"nsSchemaCSN"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-nsSchemaCSN }
+
+-- X-ORIGIN: "Netscape Directory Server"
+nsds5replicaTimeout ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  EQUALITY MATCHING RULE    integerMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"nsds5replicaTimeout"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-nsds5replicaTimeout }
+
+-- X-ORIGIN: "Netscape Directory Server"
+nsds5replicaLastInitStart ATTRIBUTE ::= {
+  WITH SYNTAX               GeneralizedTime
+  EQUALITY MATCHING RULE    generalizedTimeMatch
+  ORDERING MATCHING RULE    generalizedTimeOrderingMatch
+  SINGLE VALUE              TRUE
+  NO USER MODIFICATION      TRUE
+  LDAP-SYNTAX               generalizedTime.&id
+  LDAP-NAME                 {"nsds5replicaLastInitStart"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-nsds5replicaLastInitStart }
+
+-- X-ORIGIN: "Netscape Directory Server"
+nsds5replicaLastInitEnd ATTRIBUTE ::= {
+  WITH SYNTAX               GeneralizedTime
+  EQUALITY MATCHING RULE    generalizedTimeMatch
+  ORDERING MATCHING RULE    generalizedTimeOrderingMatch
+  SINGLE VALUE              TRUE
+  NO USER MODIFICATION      TRUE
+  LDAP-SYNTAX               generalizedTime.&id
+  LDAP-NAME                 {"nsds5replicaLastInitEnd"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-nsds5replicaLastInitEnd }
+
+-- X-ORIGIN: "Netscape Directory Server"
+nsds5replicaLastInitStatus ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  NO USER MODIFICATION      TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"nsds5replicaLastInitStatus"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-nsds5replicaLastInitStatus }
+
+-- X-ORIGIN: "Netscape Directory Server"
+nsds5replicaBusyWaitTime ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  EQUALITY MATCHING RULE    integerMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"nsds5replicaBusyWaitTime"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-nsds5replicaBusyWaitTime }
+
+-- X-ORIGIN: "Netscape Directory Server"
+nsds5replicaSessionPauseTime ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  EQUALITY MATCHING RULE    integerMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"nsds5replicaSessionPauseTime"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-nsds5replicaSessionPauseTime }
+
+-- X-ORIGIN: "Netscape Directory Server"
+nsds5ReplicaStripAttrs ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"nsds5ReplicaStripAttrs"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-nsds5ReplicaStripAttrs }
+
+-- X-ORIGIN: "Netscape Directory Server"
+-- OID 2.16.840.1.113730.3.1.9999999 contains an all-nines arc (9999999). Kept as published.
+nsds5debugreplicatimeout ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"nsds5debugreplicatimeout"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-nsds5debugreplicatimeout }
+
+-- X-ORIGIN: "Netscape Directory Server"
+nsSaslMapRegexString ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"nsSaslMapRegexString"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-nsSaslMapRegexString }
+
+-- X-ORIGIN: "Netscape Directory Server"
+nsSaslMapBaseDNTemplate ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"nsSaslMapBaseDNTemplate"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-nsSaslMapBaseDNTemplate }
+
+-- X-ORIGIN: "Netscape Directory Server"
+nsSaslMapFilterTemplate ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"nsSaslMapFilterTemplate"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-nsSaslMapFilterTemplate }
+
+-- X-ORIGIN: "Netscape Directory Server"
+nsSaslMapPriority ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"nsSaslMapPriority"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-nsSaslMapPriority }
+
+-- X-ORIGIN: "Netscape"
+nsslapd-suffix ATTRIBUTE ::= {
+  WITH SYNTAX               DistinguishedName
+  LDAP-SYNTAX               dn.&id
+  LDAP-NAME                 {"nsslapd-suffix"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-nsslapd-suffix }
+
+-- X-ORIGIN: "Netscape"
+nsslapd-ldapiautodnsuffix ATTRIBUTE ::= {
+  WITH SYNTAX               DistinguishedName
+  LDAP-SYNTAX               dn.&id
+  LDAP-NAME                 {"nsslapd-ldapiautodnsuffix"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-nsslapd-ldapiautodnsuffix }
+
+-- X-ORIGIN: "Netscape"
+nsslapd-changelogsuffix ATTRIBUTE ::= {
+  WITH SYNTAX               DistinguishedName
+  LDAP-SYNTAX               dn.&id
+  LDAP-NAME                 {"nsslapd-changelogsuffix"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-nsslapd-changelogsuffix }
+
+-- X-ORIGIN: "Netscape"
+connection ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"connection"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-connection }
+
+-- X-ORIGIN: "Netscape"
+entryusn ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  SINGLE VALUE              TRUE
+  NO USER MODIFICATION      TRUE
+  USAGE                     directoryOperation
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"entryusn"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-entryusn }
+
+-- X-ORIGIN: "389 Directory Server"
+internalModifiersName ATTRIBUTE ::= {
+  WITH SYNTAX               DistinguishedName
+  SINGLE VALUE              TRUE
+  NO USER MODIFICATION      TRUE
+  USAGE                     directoryOperation
+  LDAP-SYNTAX               dn.&id
+  LDAP-NAME                 {"internalModifiersName"}
+  LDAP-DESC                 "plugin dn"
+  ID                        id-at-internalModifiersName }
+
+-- X-ORIGIN: "389 Directory Server"
+internalCreatorsName ATTRIBUTE ::= {
+  WITH SYNTAX               DistinguishedName
+  SINGLE VALUE              TRUE
+  NO USER MODIFICATION      TRUE
+  USAGE                     directoryOperation
+  LDAP-SYNTAX               dn.&id
+  LDAP-NAME                 {"internalCreatorsName"}
+  LDAP-DESC                 "plugin dn"
+  ID                        id-at-internalCreatorsName }
+
+-- X-ORIGIN: "389 Directory Server"
+pwdUpdateTime ATTRIBUTE ::= {
+  WITH SYNTAX               GeneralizedTime
+  SINGLE VALUE              TRUE
+  USAGE                     directoryOperation
+  LDAP-SYNTAX               generalizedTime.&id
+  LDAP-NAME                 {"pwdUpdateTime"}
+  LDAP-DESC                 "Last password update time"
+  ID                        id-at-pwdUpdateTime }
+
+-- X-ORIGIN: "Netscape Directory Server"
+nsds5ReplicaCleanRUV ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"nsds5ReplicaCleanRUV"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-nsds5ReplicaCleanRUV }
+
+-- X-ORIGIN: "Netscape Directory Server"
+nsds5ReplicaCleanRUVNotified ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"nsds5ReplicaCleanRUVNotified"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-nsds5ReplicaCleanRUVNotified }
+
+-- X-ORIGIN: "Netscape Directory Server"
+nsds5ReplicaAbortCleanRUV ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"nsds5ReplicaAbortCleanRUV"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-nsds5ReplicaAbortCleanRUV }
+
+-- X-ORIGIN: "389 directory server"
+tombstoneNumSubordinates ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  EQUALITY MATCHING RULE    integerMatch
+  ORDERING MATCHING RULE    integerOrderingMatch
+  SINGLE VALUE              TRUE
+  NO USER MODIFICATION      TRUE
+  USAGE                     directoryOperation
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"tombstoneNumSubordinates"}
+  LDAP-DESC                 "count of immediate subordinates for tombstone entries"
+  ID                        id-at-tombstoneNumSubordinates }
+
+-- X-ORIGIN: "Netscape Directory Server"
+nsslapd-readonly ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"nsslapd-readonly"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-nsslapd-readonly }
+
+-- X-ORIGIN: "Netscape Directory Server"
+nsslapd-sasl-mapping-fallback ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"nsslapd-sasl-mapping-fallback"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-nsslapd-sasl-mapping-fallback }
+
+-- X-ORIGIN: "Netscape Directory Server"
+rootdn-open-time ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"rootdn-open-time"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-rootdn-open-time }
+
+-- X-ORIGIN: "Netscape Directory Server"
+rootdn-close-time ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"rootdn-close-time"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-rootdn-close-time }
+
+-- X-ORIGIN: "Netscape Directory Server"
+rootdn-days-allowed ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"rootdn-days-allowed"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-rootdn-days-allowed }
+
+-- X-ORIGIN: "Netscape Directory Server"
+rootdn-allow-host ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"rootdn-allow-host"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-rootdn-allow-host }
+
+-- X-ORIGIN: "Netscape Directory Server"
+rootdn-deny-host ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"rootdn-deny-host"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-rootdn-deny-host }
+
+-- X-ORIGIN: "Netscape Directory Server"
+rootdn-allow-ip ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"rootdn-allow-ip"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-rootdn-allow-ip }
+
+-- X-ORIGIN: "Netscape Directory Server"
+rootdn-deny-ip ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"rootdn-deny-ip"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-rootdn-deny-ip }
+
+-- X-ORIGIN: "Netscape Directory Server"
+nsslapd-plugin-depends-on-type ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"nsslapd-plugin-depends-on-type"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-nsslapd-plugin-depends-on-type }
+
+-- X-ORIGIN: "Netscape Directory Server"
+nsds5ReplicaProtocolTimeout ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"nsds5ReplicaProtocolTimeout"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-nsds5ReplicaProtocolTimeout }
+
+-- X-ORIGIN: "Netscape Directory Server"
+nsds5ReplicaBackoffMin ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"nsds5ReplicaBackoffMin"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-nsds5ReplicaBackoffMin }
+
+-- X-ORIGIN: "Netscape Directory Server"
+nsds5ReplicaBackoffMax ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"nsds5ReplicaBackoffMax"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-nsds5ReplicaBackoffMax }
+
+-- X-ORIGIN: "Netscape Directory Server"
+nsslapd-sasl-max-buffer-size ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"nsslapd-sasl-max-buffer-size"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-nsslapd-sasl-max-buffer-size }
+
+-- X-ORIGIN: "Netscape Directory Server"
+schemaUpdateObjectclassAccept ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"schemaUpdateObjectclassAccept"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-schemaUpdateObjectclassAccept }
+
+-- X-ORIGIN: "Netscape Directory Server"
+schemaUpdateObjectclassReject ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"schemaUpdateObjectclassReject"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-schemaUpdateObjectclassReject }
+
+-- X-ORIGIN: "Netscape Directory Server"
+schemaUpdateAttributeAccept ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"schemaUpdateAttributeAccept"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-schemaUpdateAttributeAccept }
+
+-- X-ORIGIN: "Netscape Directory Server"
+schemaUpdateAttributeReject ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"schemaUpdateAttributeReject"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-schemaUpdateAttributeReject }
+
+-- X-ORIGIN: "Netscape Directory Server"
+nsslapd-pagedsizelimit ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"nsslapd-pagedsizelimit"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-nsslapd-pagedsizelimit }
+
+-- X-ORIGIN: "Netscape Directory Server"
+nsslapd-accesslog-level ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"nsslapd-accesslog-level"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-nsslapd-accesslog-level }
+
+-- X-ORIGIN: "Netscape Directory Server"
+nsslapd-accesslog-maxlogsperdir ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"nsslapd-accesslog-maxlogsperdir"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-nsslapd-accesslog-maxlogsperdir }
+
+-- X-ORIGIN: "Netscape Directory Server"
+nsslapd-accesslog-maxlogsize ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"nsslapd-accesslog-maxlogsize"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-nsslapd-accesslog-maxlogsize }
+
+-- X-ORIGIN: "Netscape Directory Server"
+nsslapd-errorlog-maxlogsize ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"nsslapd-errorlog-maxlogsize"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-nsslapd-errorlog-maxlogsize }
+
+-- X-ORIGIN: "Netscape Directory Server"
+nsslapd-auditlog-maxlogsize ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"nsslapd-auditlog-maxlogsize"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-nsslapd-auditlog-maxlogsize }
+
+-- X-ORIGIN: "Netscape Directory Server"
+nsslapd-accesslog-logrotationsync-enabled ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"nsslapd-accesslog-logrotationsync-enabled"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-nsslapd-accesslog-logrotationsync-enabled }
+
+-- X-ORIGIN: "Netscape Directory Server"
+nsslapd-errorlog-logrotationsync-enabled ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"nsslapd-errorlog-logrotationsync-enabled"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-nsslapd-errorlog-logrotationsync-enabled }
+
+-- X-ORIGIN: "Netscape Directory Server"
+nsslapd-auditlog-logrotationsync-enabled ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"nsslapd-auditlog-logrotationsync-enabled"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-nsslapd-auditlog-logrotationsync-enabled }
+
+-- X-ORIGIN: "Netscape Directory Server"
+nsslapd-accesslog-logrotationsynchour ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"nsslapd-accesslog-logrotationsynchour"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-nsslapd-accesslog-logrotationsynchour }
+
+-- X-ORIGIN: "Netscape Directory Server"
+nsslapd-errorlog-logrotationsynchour ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"nsslapd-errorlog-logrotationsynchour"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-nsslapd-errorlog-logrotationsynchour }
+
+-- X-ORIGIN: "Netscape Directory Server"
+nsslapd-auditlog-logrotationsynchour ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"nsslapd-auditlog-logrotationsynchour"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-nsslapd-auditlog-logrotationsynchour }
+
+-- X-ORIGIN: "Netscape Directory Server"
+nsslapd-accesslog-logrotationsyncmin ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"nsslapd-accesslog-logrotationsyncmin"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-nsslapd-accesslog-logrotationsyncmin }
+
+-- X-ORIGIN: "Netscape Directory Server"
+nsslapd-errorlog-logrotationsyncmin ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"nsslapd-errorlog-logrotationsyncmin"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-nsslapd-errorlog-logrotationsyncmin }
+
+-- X-ORIGIN: "Netscape Directory Server"
+nsslapd-audit-logrotationsyncmin ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"nsslapd-audit-logrotationsyncmin"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-nsslapd-audit-logrotationsyncmin }
+
+-- X-ORIGIN: "Netscape Directory Server"
+nsslapd-accesslog-logrotationtime ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"nsslapd-accesslog-logrotationtime"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-nsslapd-accesslog-logrotationtime }
+
+-- X-ORIGIN: "Netscape Directory Server"
+nsslapd-errorlog-logrotationtime ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"nsslapd-errorlog-logrotationtime"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-nsslapd-errorlog-logrotationtime }
+
+-- X-ORIGIN: "Netscape Directory Server"
+nsslapd-auditlog-logrotationtime ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"nsslapd-auditlog-logrotationtime"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-nsslapd-auditlog-logrotationtime }
+
+-- X-ORIGIN: "Netscape Directory Server"
+nsslapd-accesslog-logrotationtimeunit ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"nsslapd-accesslog-logrotationtimeunit"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-nsslapd-accesslog-logrotationtimeunit }
+
+-- X-ORIGIN: "Netscape Directory Server"
+nsslapd-errorlog-logrotationtimeunit ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"nsslapd-errorlog-logrotationtimeunit"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-nsslapd-errorlog-logrotationtimeunit }
+
+-- X-ORIGIN: "Netscape Directory Server"
+nsslapd-auditlog-logrotationtimeunit ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"nsslapd-auditlog-logrotationtimeunit"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-nsslapd-auditlog-logrotationtimeunit }
+
+-- X-ORIGIN: "Netscape Directory Server"
+nsslapd-accesslog-logmaxdiskspace ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"nsslapd-accesslog-logmaxdiskspace"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-nsslapd-accesslog-logmaxdiskspace }
+
+-- X-ORIGIN: "Netscape Directory Server"
+nsslapd-errorlog-logmaxdiskspace ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"nsslapd-errorlog-logmaxdiskspace"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-nsslapd-errorlog-logmaxdiskspace }
+
+-- X-ORIGIN: "Netscape Directory Server"
+nsslapd-auditlog-logmaxdiskspace ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"nsslapd-auditlog-logmaxdiskspace"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-nsslapd-auditlog-logmaxdiskspace }
+
+-- X-ORIGIN: "Netscape Directory Server"
+nsslapd-accesslog-logminfreediskspace ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"nsslapd-accesslog-logminfreediskspace"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-nsslapd-accesslog-logminfreediskspace }
+
+-- X-ORIGIN: "Netscape Directory Server"
+nsslapd-errorlog-logminfreediskspace ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"nsslapd-errorlog-logminfreediskspace"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-nsslapd-errorlog-logminfreediskspace }
+
+-- X-ORIGIN: "Netscape Directory Server"
+nsslapd-auditlog-logminfreediskspace ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"nsslapd-auditlog-logminfreediskspace"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-nsslapd-auditlog-logminfreediskspace }
+
+-- X-ORIGIN: "Netscape Directory Server"
+nsslapd-accesslog-logexpirationtime ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"nsslapd-accesslog-logexpirationtime"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-nsslapd-accesslog-logexpirationtime }
+
+-- X-ORIGIN: "Netscape Directory Server"
+nsslapd-errorlog-logexpirationtime ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"nsslapd-errorlog-logexpirationtime"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-nsslapd-errorlog-logexpirationtime }
+
+-- X-ORIGIN: "Netscape Directory Server"
+nsslapd-auditlog-logexpirationtime ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"nsslapd-auditlog-logexpirationtime"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-nsslapd-auditlog-logexpirationtime }
+
+-- X-ORIGIN: "Netscape Directory Server"
+nsslapd-accesslog-logexpirationtimeunit ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"nsslapd-accesslog-logexpirationtimeunit"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-nsslapd-accesslog-logexpirationtimeunit }
+
+-- X-ORIGIN: "Netscape Directory Server"
+nsslapd-errorlog-logexpirationtimeunit ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"nsslapd-errorlog-logexpirationtimeunit"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-nsslapd-errorlog-logexpirationtimeunit }
+
+-- X-ORIGIN: "Netscape Directory Server"
+nsslapd-auditlog-logexpirationtimeunit ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"nsslapd-auditlog-logexpirationtimeunit"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-nsslapd-auditlog-logexpirationtimeunit }
+
+-- X-ORIGIN: "Netscape Directory Server"
+nsslapd-accesslog-logging-enabled ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"nsslapd-accesslog-logging-enabled"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-nsslapd-accesslog-logging-enabled }
+
+-- X-ORIGIN: "Netscape Directory Server"
+nsslapd-errorlog-logging-enabled ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"nsslapd-errorlog-logging-enabled"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-nsslapd-errorlog-logging-enabled }
+
+-- X-ORIGIN: "Netscape Directory Server"
+nsslapd-auditlog-logging-enabled ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"nsslapd-auditlog-logging-enabled"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-nsslapd-auditlog-logging-enabled }
+
+-- X-ORIGIN: "Netscape Directory Server"
+nsslapd-auditlog-logging-hide-unhashed-pw ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"nsslapd-auditlog-logging-hide-unhashed-pw"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-nsslapd-auditlog-logging-hide-unhashed-pw }
+
+-- X-ORIGIN: "Netscape Directory Server"
+nsslapd-unhashed-pw-switch ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"nsslapd-unhashed-pw-switch"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-nsslapd-unhashed-pw-switch }
+
+-- X-ORIGIN: "Netscape Directory Server"
+nsslapd-rootdn ATTRIBUTE ::= {
+  WITH SYNTAX               DistinguishedName
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               dn.&id
+  LDAP-NAME                 {"nsslapd-rootdn"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-nsslapd-rootdn }
+
+-- X-ORIGIN: "Netscape Directory Server"
+nsslapd-rootdnpw ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"nsslapd-rootdnpw"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-nsslapd-rootdnpw }
+
+-- X-ORIGIN: "Netscape Directory Server"
+nsslapd-rootpwstoragescheme ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"nsslapd-rootpwstoragescheme"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-nsslapd-rootpwstoragescheme }
+
+-- X-ORIGIN: "Netscape Directory Server"
+nsslapd-auditlog ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"nsslapd-auditlog"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-nsslapd-auditlog }
+
+-- X-ORIGIN: "Netscape Directory Server"
+nsslapd-dynamicconf ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"nsslapd-dynamicconf"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-nsslapd-dynamicconf }
+
+-- X-ORIGIN: "Netscape Directory Server"
+nsslapd-useroc ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"nsslapd-useroc"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-nsslapd-useroc }
+
+-- X-ORIGIN: "Netscape Directory Server"
+nsslapd-userat ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"nsslapd-userat"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-nsslapd-userat }
+
+-- X-ORIGIN: "Netscape Directory Server"
+nsslapd-svrtab ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"nsslapd-svrtab"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-nsslapd-svrtab }
+
+-- X-ORIGIN: "Netscape Directory Server"
+nsslapd-allow-unauthenticated-binds ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"nsslapd-allow-unauthenticated-binds"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-nsslapd-allow-unauthenticated-binds }
+
+-- X-ORIGIN: "Netscape Directory Server"
+nsslapd-require-secure-binds ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"nsslapd-require-secure-binds"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-nsslapd-require-secure-binds }
+
+-- X-ORIGIN: "Netscape Directory Server"
+nsslapd-allow-anonymous-access ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"nsslapd-allow-anonymous-access"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-nsslapd-allow-anonymous-access }
+
+-- X-ORIGIN: "Netscape Directory Server"
+nsslapd-localssf ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"nsslapd-localssf"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-nsslapd-localssf }
+
+-- X-ORIGIN: "Netscape Directory Server"
+nsslapd-minssf ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"nsslapd-minssf"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-nsslapd-minssf }
+
+-- X-ORIGIN: "Netscape Directory Server"
+nsslapd-minssf-exclude-rootdse ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"nsslapd-minssf-exclude-rootdse"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-nsslapd-minssf-exclude-rootdse }
+
+-- X-ORIGIN: "Netscape Directory Server"
+nsslapd-validate-cert ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"nsslapd-validate-cert"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-nsslapd-validate-cert }
+
+-- X-ORIGIN: "Netscape Directory Server"
+nsslapd-localuser ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"nsslapd-localuser"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-nsslapd-localuser }
+
+-- X-ORIGIN: "Netscape Directory Server"
+nsslapd-localhost ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"nsslapd-localhost"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-nsslapd-localhost }
+
+-- X-ORIGIN: "Netscape Directory Server"
+nsslapd-port ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"nsslapd-port"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-nsslapd-port }
+
+-- X-ORIGIN: "Netscape Directory Server"
+nsslapd-workingdir ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"nsslapd-workingdir"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-nsslapd-workingdir }
+
+-- X-ORIGIN: "Netscape Directory Server"
+nsslapd-listenhost ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"nsslapd-listenhost"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-nsslapd-listenhost }
+
+-- X-ORIGIN: "Netscape Directory Server"
+nsslapd-snmp-index ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"nsslapd-snmp-index"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-nsslapd-snmp-index }
+
+-- X-ORIGIN: "Netscape Directory Server"
+nsslapd-ldapifilepath ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"nsslapd-ldapifilepath"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-nsslapd-ldapifilepath }
+
+-- X-ORIGIN: "Netscape Directory Server"
+nsslapd-ldapilisten ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"nsslapd-ldapilisten"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-nsslapd-ldapilisten }
+
+-- X-ORIGIN: "Netscape Directory Server"
+nsslapd-ldapiautobind ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"nsslapd-ldapiautobind"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-nsslapd-ldapiautobind }
+
+-- X-ORIGIN: "Netscape Directory Server"
+nsslapd-ldapimaprootdn ATTRIBUTE ::= {
+  WITH SYNTAX               DistinguishedName
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               dn.&id
+  LDAP-NAME                 {"nsslapd-ldapimaprootdn"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-nsslapd-ldapimaprootdn }
+
+-- X-ORIGIN: "Netscape Directory Server"
+nsslapd-ldapimaptoentries ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"nsslapd-ldapimaptoentries"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-nsslapd-ldapimaptoentries }
+
+-- X-ORIGIN: "Netscape Directory Server"
+nsslapd-ldapiuidnumbertype ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"nsslapd-ldapiuidnumbertype"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-nsslapd-ldapiuidnumbertype }
+
+-- X-ORIGIN: "Netscape Directory Server"
+nsslapd-ldapigidnumbertype ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"nsslapd-ldapigidnumbertype"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-nsslapd-ldapigidnumbertype }
+
+-- X-ORIGIN: "Netscape Directory Server"
+nsslapd-ldapientrysearchbase ATTRIBUTE ::= {
+  WITH SYNTAX               DistinguishedName
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               dn.&id
+  LDAP-NAME                 {"nsslapd-ldapientrysearchbase"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-nsslapd-ldapientrysearchbase }
+
+-- X-ORIGIN: "Netscape Directory Server"
+nsslapd-anonlimitsdn ATTRIBUTE ::= {
+  WITH SYNTAX               DistinguishedName
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               dn.&id
+  LDAP-NAME                 {"nsslapd-anonlimitsdn"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-nsslapd-anonlimitsdn }
+
+-- X-ORIGIN: "Netscape Directory Server"
+nsslapd-counters ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"nsslapd-counters"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-nsslapd-counters }
+
+-- X-ORIGIN: "Netscape Directory Server"
+nsslapd-security ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"nsslapd-security"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-nsslapd-security }
+
+-- X-ORIGIN: "Netscape Directory Server"
+nsslapd-SSL3ciphers ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"nsslapd-SSL3ciphers"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-nsslapd-SSL3ciphers }
+
+-- X-ORIGIN: "Netscape Directory Server"
+nsslapd-accesslog ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"nsslapd-accesslog"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-nsslapd-accesslog }
+
+-- X-ORIGIN: "Netscape Directory Server"
+nsslapd-errorlog ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"nsslapd-errorlog"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-nsslapd-errorlog }
+
+-- X-ORIGIN: "Netscape Directory Server"
+nsslapd-securePort ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"nsslapd-securePort"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-nsslapd-securePort }
+
+-- X-ORIGIN: "Netscape Directory Server"
+nsslapd-securelistenhost ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"nsslapd-securelistenhost"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-nsslapd-securelistenhost }
+
+-- X-ORIGIN: "Netscape Directory Server"
+nnslapd-threadnumber ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"nnslapd-threadnumber"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-nnslapd-threadnumber }
+
+-- X-ORIGIN: "Netscape Directory Server"
+nsslapd-maxthreadsperconn ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"nsslapd-maxthreadsperconn"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-nsslapd-maxthreadsperconn }
+
+-- X-ORIGIN: "Netscape Directory Server"
+nsslapd-maxdescriptors ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"nsslapd-maxdescriptors"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-nsslapd-maxdescriptors }
+
+-- X-ORIGIN: "Netscape Directory Server"
+nsslapd-reservedescriptors ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"nsslapd-reservedescriptors"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-nsslapd-reservedescriptors }
+
+-- X-ORIGIN: "Netscape Directory Server"
+nsslapd-idletimeout ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"nsslapd-idletimeout"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-nsslapd-idletimeout }
+
+-- X-ORIGIN: "Netscape Directory Server"
+nsslapd-ioblocktimeout ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"nsslapd-ioblocktimeout"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-nsslapd-ioblocktimeout }
+
+-- X-ORIGIN: "Netscape Directory Server"
+nsslapd-accesscontrol ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"nsslapd-accesscontrol"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-nsslapd-accesscontrol }
+
+-- X-ORIGIN: "Netscape Directory Server"
+nsslapd-groupevalnestlevel ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"nsslapd-groupevalnestlevel"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-nsslapd-groupevalnestlevel }
+
+-- X-ORIGIN: "Netscape Directory Server"
+nsslapd-nagle ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"nsslapd-nagle"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-nsslapd-nagle }
+
+-- X-ORIGIN: "Netscape Directory Server"
+nsslapd-pwpolicy-local ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"nsslapd-pwpolicy-local"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-nsslapd-pwpolicy-local }
+
+-- X-ORIGIN: "Netscape Directory Server"
+passwordIsGlobalPolicy ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"passwordIsGlobalPolicy"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-passwordIsGlobalPolicy }
+
+-- X-ORIGIN: "Netscape Directory Server"
+passwordLegacyPolicy ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"passwordLegacyPolicy"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-passwordLegacyPolicy }
+
+-- X-ORIGIN: "Netscape Directory Server"
+nsslapd-accesslog-logbuffering ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"nsslapd-accesslog-logbuffering"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-nsslapd-accesslog-logbuffering }
+
+-- X-ORIGIN: "Netscape Directory Server"
+nsslapd-csnlogging ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"nsslapd-csnlogging"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-nsslapd-csnlogging }
+
+-- X-ORIGIN: "Netscape Directory Server"
+nsslapd-return-exact-case ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"nsslapd-return-exact-case"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-nsslapd-return-exact-case }
+
+-- X-ORIGIN: "Netscape Directory Server"
+nsslapd-result-tweak ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"nsslapd-result-tweak"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-nsslapd-result-tweak }
+
+-- X-ORIGIN: "Netscape Directory Server"
+nsslapd-attribute-name-exceptions ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"nsslapd-attribute-name-exceptions"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-nsslapd-attribute-name-exceptions }
+
+-- X-ORIGIN: "Netscape Directory Server"
+nsslapd-maxbersize ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"nsslapd-maxbersize"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-nsslapd-maxbersize }
+
+-- X-ORIGIN: "Netscape Directory Server"
+nsslapd-maxsasliosize ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"nsslapd-maxsasliosize"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-nsslapd-maxsasliosize }
+
+-- X-ORIGIN: "Netscape Directory Server"
+nsslapd-max-filter-nest-level ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"nsslapd-max-filter-nest-level"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-nsslapd-max-filter-nest-level }
+
+-- X-ORIGIN: "Netscape Directory Server"
+nsslapd-versionstring ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"nsslapd-versionstring"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-nsslapd-versionstring }
+
+-- X-ORIGIN: "Netscape Directory Server"
+nsslapd-enquote-sup-oc ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"nsslapd-enquote-sup-oc"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-nsslapd-enquote-sup-oc }
+
+-- X-ORIGIN: "Netscape Directory Server"
+nsslapd-certmap-basedn ATTRIBUTE ::= {
+  WITH SYNTAX               DistinguishedName
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               dn.&id
+  LDAP-NAME                 {"nsslapd-certmap-basedn"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-nsslapd-certmap-basedn }
+
+-- X-ORIGIN: "Netscape Directory Server"
+nsslapd-accesslog-list ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"nsslapd-accesslog-list"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-nsslapd-accesslog-list }
+
+-- X-ORIGIN: "Netscape Directory Server"
+nsslapd-errorlog-list ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"nsslapd-errorlog-list"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-nsslapd-errorlog-list }
+
+-- X-ORIGIN: "Netscape Directory Server"
+nsslapd-auditlog-list ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"nsslapd-auditlog-list"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-nsslapd-auditlog-list }
+
+-- X-ORIGIN: "Netscape Directory Server"
+nsslapd-rewrite-rfc1274 ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"nsslapd-rewrite-rfc1274"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-nsslapd-rewrite-rfc1274 }
+
+-- X-ORIGIN: "Netscape Directory Server"
+nsslapd-plugin-binddn-tracking ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"nsslapd-plugin-binddn-tracking"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-nsslapd-plugin-binddn-tracking }
+
+-- X-ORIGIN: "Netscape Directory Server"
+nsslapd-config ATTRIBUTE ::= {
+  WITH SYNTAX               DistinguishedName
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               dn.&id
+  LDAP-NAME                 {"nsslapd-config"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-nsslapd-config }
+
+-- X-ORIGIN: "Netscape Directory Server"
+nsslapd-instancedir ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"nsslapd-instancedir"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-nsslapd-instancedir }
+
+-- X-ORIGIN: "Netscape Directory Server"
+nsslapd-schemadir ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"nsslapd-schemadir"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-nsslapd-schemadir }
+
+-- X-ORIGIN: "Netscape Directory Server"
+nsslapd-lockdir ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"nsslapd-lockdir"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-nsslapd-lockdir }
+
+-- X-ORIGIN: "Netscape Directory Server"
+nsslapd-tmpdir ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"nsslapd-tmpdir"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-nsslapd-tmpdir }
+
+-- X-ORIGIN: "Netscape Directory Server"
+nsslapd-certdir ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"nsslapd-certdir"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-nsslapd-certdir }
+
+-- X-ORIGIN: "Netscape Directory Server"
+nsslapd-ldifdir ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"nsslapd-ldifdir"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-nsslapd-ldifdir }
+
+-- X-ORIGIN: "Netscape Directory Server"
+nsslapd-bakdir ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"nsslapd-bakdir"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-nsslapd-bakdir }
+
+-- X-ORIGIN: "Netscape Directory Server"
+nsslapd-saslpath ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"nsslapd-saslpath"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-nsslapd-saslpath }
+
+-- X-ORIGIN: "Netscape Directory Server"
+nsslapd-rundir ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"nsslapd-rundir"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-nsslapd-rundir }
+
+-- X-ORIGIN: "Netscape Directory Server"
+nsslapd-SSLclientAuth ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"nsslapd-SSLclientAuth"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-nsslapd-SSLclientAuth }
+
+-- X-ORIGIN: "Netscape Directory Server"
+nsslapd-ssl-check-hostname ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"nsslapd-ssl-check-hostname"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-nsslapd-ssl-check-hostname }
+
+-- X-ORIGIN: "Netscape Directory Server"
+nsslapd-hash-filters ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"nsslapd-hash-filters"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-nsslapd-hash-filters }
+
+-- X-ORIGIN: "Netscape Directory Server"
+nsslapd-outbound-ldap-io-timeout ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"nsslapd-outbound-ldap-io-timeout"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-nsslapd-outbound-ldap-io-timeout }
+
+-- X-ORIGIN: "Netscape Directory Server"
+nsslapd-force-sasl-external ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"nsslapd-force-sasl-external"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-nsslapd-force-sasl-external }
+
+-- X-ORIGIN: "Netscape Directory Server"
+nsslapd-defaultnamingcontext ATTRIBUTE ::= {
+  WITH SYNTAX               DistinguishedName
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               dn.&id
+  LDAP-NAME                 {"nsslapd-defaultnamingcontext"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-nsslapd-defaultnamingcontext }
+
+-- X-ORIGIN: "Netscape Directory Server"
+nsslapd-disk-monitoring ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"nsslapd-disk-monitoring"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-nsslapd-disk-monitoring }
+
+-- X-ORIGIN: "Netscape Directory Server"
+nsslapd-disk-monitoring-threshold ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"nsslapd-disk-monitoring-threshold"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-nsslapd-disk-monitoring-threshold }
+
+-- X-ORIGIN: "Netscape Directory Server"
+nsslapd-disk-monitoring-grace-period ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"nsslapd-disk-monitoring-grace-period"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-nsslapd-disk-monitoring-grace-period }
+
+-- X-ORIGIN: "Netscape Directory Server"
+nsslapd-disk-monitoring-logging-critical ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"nsslapd-disk-monitoring-logging-critical"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-nsslapd-disk-monitoring-logging-critical }
+
+-- X-ORIGIN: "Netscape Directory Server"
+nsslapd-ndn-cache-enabled ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"nsslapd-ndn-cache-enabled"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-nsslapd-ndn-cache-enabled }
+
+-- X-ORIGIN: "Netscape Directory Server"
+nsslapd-ndn-cache-max-size ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"nsslapd-ndn-cache-max-size"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-nsslapd-ndn-cache-max-size }
+
+-- X-ORIGIN: "Netscape Directory Server"
+nsslapd-allowed-sasl-mechanisms ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"nsslapd-allowed-sasl-mechanisms"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-nsslapd-allowed-sasl-mechanisms }
+
+-- X-ORIGIN: "Netscape Directory Server"
+nsslapd-ignore-virtual-attrs ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"nsslapd-ignore-virtual-attrs"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-nsslapd-ignore-virtual-attrs }
+
+-- X-ORIGIN: "Netscape Directory Server"
+nsslapd-search-return-original-type-switch ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"nsslapd-search-return-original-type-switch"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-nsslapd-search-return-original-type-switch }
+
+-- X-ORIGIN: "Netscape Directory Server"
+nsslapd-enable-turbo-mode ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"nsslapd-enable-turbo-mode"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-nsslapd-enable-turbo-mode }
+
+-- X-ORIGIN: "Netscape Directory Server"
+nsslapd-connection-buffer ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"nsslapd-connection-buffer"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-nsslapd-connection-buffer }
+
+-- X-ORIGIN: "Netscape Directory Server"
+nsslapd-connection-nocanon ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"nsslapd-connection-nocanon"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-nsslapd-connection-nocanon }
+
+-- X-ORIGIN: "Netscape Directory Server"
+nsslapd-plugin-logging ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"nsslapd-plugin-logging"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-nsslapd-plugin-logging }
+
+-- X-ORIGIN: "Netscape Directory Server"
+nsslapd-listen-backlog-size ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"nsslapd-listen-backlog-size"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-nsslapd-listen-backlog-size }
+
+-- X-ORIGIN: "Netscape Directory Server"
+nsslapd-ignore-time-skew ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"nsslapd-ignore-time-skew"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-nsslapd-ignore-time-skew }
+
+-- X-ORIGIN: "Netscape Directory Server"
+nsslapd-dynamic-plugins ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"nsslapd-dynamic-plugins"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-nsslapd-dynamic-plugins }
+
+-- X-ORIGIN: "Netscape Directory Server"
+nsslapd-moddn-aci ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"nsslapd-moddn-aci"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-nsslapd-moddn-aci }
+
+-- X-ORIGIN: "Netscape Directory Server"
+nsslapd-return-default-opattr ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  USAGE                     directoryOperation
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"nsslapd-return-default-opattr"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-nsslapd-return-default-opattr }
+
+-- X-ORIGIN: "Netscape Directory Server"
+nsslapd-allow-hashed-passwords ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"nsslapd-allow-hashed-passwords"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-nsslapd-allow-hashed-passwords }
+
+-- X-ORIGIN: "Netscape Directory Server"
+nstombstonecsn ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"nstombstonecsn"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-nstombstonecsn }
+
+-- X-ORIGIN: "Netscape Directory Server"
+nsds5ReplicaPreciseTombstonePurging ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"nsds5ReplicaPreciseTombstonePurging"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-nsds5ReplicaPreciseTombstonePurging }
+
+-- X-ORIGIN: "Netscape Directory Server"
+nsds5ReplicaFlowControlWindow ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"nsds5ReplicaFlowControlWindow"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-nsds5ReplicaFlowControlWindow }
+
+-- X-ORIGIN: "Netscape Directory Server"
+nsds5ReplicaFlowControlPause ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"nsds5ReplicaFlowControlPause"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-nsds5ReplicaFlowControlPause }
+
+-- X-ORIGIN: "Netscape Directory Server"
+nsslapd-changelogtrim-interval ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"nsslapd-changelogtrim-interval"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-nsslapd-changelogtrim-interval }
+
+-- X-ORIGIN: "Netscape Directory Server"
+nsslapd-changelogcompactdb-interval ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"nsslapd-changelogcompactdb-interval"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-nsslapd-changelogcompactdb-interval }
+
+-- X-ORIGIN: "Netscape Directory Server"
+nsDS5ReplicaWaitForAsyncResults ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"nsDS5ReplicaWaitForAsyncResults"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-nsDS5ReplicaWaitForAsyncResults }
+
+-- X-ORIGIN: "Netscape Directory Server"
+nsslapd-auditfaillog-maxlogsize ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"nsslapd-auditfaillog-maxlogsize"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-nsslapd-auditfaillog-maxlogsize }
+
+-- X-ORIGIN: "Netscape Directory Server"
+nsslapd-auditfaillog-logrotationsync-enabled ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"nsslapd-auditfaillog-logrotationsync-enabled"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-nsslapd-auditfaillog-logrotationsync-enabled }
+
+-- X-ORIGIN: "Netscape Directory Server"
+nsslapd-auditfaillog-logrotationsynchour ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"nsslapd-auditfaillog-logrotationsynchour"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-nsslapd-auditfaillog-logrotationsynchour }
+
+-- X-ORIGIN: "Netscape Directory Server"
+nsslapd-auditfaillog-logrotationtime ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"nsslapd-auditfaillog-logrotationtime"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-nsslapd-auditfaillog-logrotationtime }
+
+-- X-ORIGIN: "Netscape Directory Server"
+nsslapd-auditfaillog-logrotationtimeunit ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"nsslapd-auditfaillog-logrotationtimeunit"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-nsslapd-auditfaillog-logrotationtimeunit }
+
+-- X-ORIGIN: "Netscape Directory Server"
+nsslapd-auditfaillog-logmaxdiskspace ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"nsslapd-auditfaillog-logmaxdiskspace"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-nsslapd-auditfaillog-logmaxdiskspace }
+
+-- X-ORIGIN: "Netscape Directory Server"
+nsslapd-auditfaillog-logminfreediskspace ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"nsslapd-auditfaillog-logminfreediskspace"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-nsslapd-auditfaillog-logminfreediskspace }
+
+-- X-ORIGIN: "Netscape Directory Server"
+nsslapd-auditfaillog-logexpirationtime ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"nsslapd-auditfaillog-logexpirationtime"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-nsslapd-auditfaillog-logexpirationtime }
+
+-- X-ORIGIN: "Netscape Directory Server"
+nsslapd-auditfaillog-logexpirationtimeunit ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"nsslapd-auditfaillog-logexpirationtimeunit"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-nsslapd-auditfaillog-logexpirationtimeunit }
+
+-- X-ORIGIN: "Netscape Directory Server"
+nsslapd-auditfaillog-logging-enabled ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"nsslapd-auditfaillog-logging-enabled"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-nsslapd-auditfaillog-logging-enabled }
+
+-- X-ORIGIN: "Netscape Directory Server"
+nsslapd-auditfaillog-logging-hide-unhashed-pw ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"nsslapd-auditfaillog-logging-hide-unhashed-pw"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-nsslapd-auditfaillog-logging-hide-unhashed-pw }
+
+-- X-ORIGIN: "Netscape Directory Server"
+nsslapd-auditfaillog ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"nsslapd-auditfaillog"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-nsslapd-auditfaillog }
+
+-- X-ORIGIN: "Netscape Directory Server"
+nsslapd-auditfaillog-list ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"nsslapd-auditfaillog-list"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-nsslapd-auditfaillog-list }
+
+-- X-ORIGIN: "Netscape Directory Server"
+nsslapd-logging-backend ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"nsslapd-logging-backend"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-nsslapd-logging-backend }
+
+-- X-ORIGIN: "Netscape Directory Server"
+nsslapd-logging-hr-timestamps-enabled ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"nsslapd-logging-hr-timestamps-enabled"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-nsslapd-logging-hr-timestamps-enabled }
+
+-- X-ORIGIN: "Netscape Directory Server"
+allowWeakDHParam ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"allowWeakDHParam"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-allowWeakDHParam }
+
+-- X-ORIGIN: "Netscape Directory Server"
+nsds5ReplicaReleaseTimeout ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"nsds5ReplicaReleaseTimeout"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-nsds5ReplicaReleaseTimeout }
+
+-- X-ORIGIN: "Netscape Directory Server"
+nsds5ReplicaIgnoreMissingChange ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"nsds5ReplicaIgnoreMissingChange"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-nsds5ReplicaIgnoreMissingChange }
+
+-- X-ORIGIN: "Netscape Directory Server"
+nsDS5ReplicaBindDnGroupCheckInterval ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"nsDS5ReplicaBindDnGroupCheckInterval"}
+  LDAP-DESC                 "Replication configuration setting for controlling the bind dn group check interval"
+  ID                        id-at-nsDS5ReplicaBindDnGroupCheckInterval }
+
+-- X-ORIGIN: "389 Directory Server"
+nsDS5ReplicaBindDNGroup ATTRIBUTE ::= {
+  WITH SYNTAX               DistinguishedName
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               dn.&id
+  LDAP-NAME                 {"nsDS5ReplicaBindDNGroup"}
+  LDAP-DESC                 "Group whose members are treated as replication managers"
+  ID                        id-at-nsDS5ReplicaBindDNGroup }
+
+-- X-ORIGIN: "389 Directory Server"
+nsslapd-changelogdir ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"nsslapd-changelogdir"}
+  LDAP-DESC                 "The changelog5 directory storage location"
+  ID                        id-at-nsslapd-changelogdir }
+
+-- X-ORIGIN: "389 Directory Server"
+nsslapd-changelogmaxage ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"nsslapd-changelogmaxage"}
+  LDAP-DESC                 "The changelog5 time where an entry will be retained"
+  ID                        id-at-nsslapd-changelogmaxage }
+
+-- X-ORIGIN: "389 Directory Server"
+nsslapd-changelogmaxentries ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"nsslapd-changelogmaxentries"}
+  LDAP-DESC                 "The changelog5 max entries limit"
+  ID                        id-at-nsslapd-changelogmaxentries }
+
+-- X-ORIGIN: "389 Directory Server"
+nsslapd-tls-check-crl ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"nsslapd-tls-check-crl"}
+  LDAP-DESC                 "Check CRL when opening outbound TLS connections. Valid options are none, peer, all."
+  ID                        id-at-nsslapd-tls-check-crl }
+
+-- X-ORIGIN: "389 Directory Server"
+nsslapd-encryptionalgorithm ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"nsslapd-encryptionalgorithm"}
+  LDAP-DESC                 "The encryption algorithm used to encrypt the changelog"
+  ID                        id-at-nsslapd-encryptionalgorithm }
+
+-- X-ORIGIN: "attribute encryption"
+nsSymmetricKey ATTRIBUTE ::= {
+  WITH SYNTAX               OCTET STRING
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               octetString.&id
+  LDAP-NAME                 {"nsSymmetricKey"}
+  LDAP-DESC                 "A symmetric key - currently used by attribute encryption"
+  ID                        id-at-nsSymmetricKey }
+
+-- X-ORIGIN: "Netscape Directory Server"
+nsds5replicaLastInitStatusJSON ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  NO USER MODIFICATION      TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"nsds5replicaLastInitStatusJSON"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-nsds5replicaLastInitStatusJSON }
+
+-- X-ORIGIN: "Netscape Directory Server"
+nsds5replicaLastUpdateStatusJSON ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  NO USER MODIFICATION      TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"nsds5replicaLastUpdateStatusJSON"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-nsds5replicaLastUpdateStatusJSON }
+
+-- X-ORIGIN: "389 Directory Server"
+nsslapd-libPath ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"nsslapd-libPath"}
+  LDAP-DESC                 "Rewriter shared library path"
+  ID                        id-at-nsslapd-libPath }
+
+-- X-ORIGIN: "389 Directory Server"
+nsslapd-filterrewriter ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"nsslapd-filterrewriter"}
+  LDAP-DESC                 "Filter rewriter function name"
+  ID                        id-at-nsslapd-filterrewriter }
+
+-- X-ORIGIN: "389 Directory Server"
+nsslapd-returnedAttrRewriter ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"nsslapd-returnedAttrRewriter"}
+  LDAP-DESC                 "Returned attribute rewriter function name"
+  ID                        id-at-nsslapd-returnedAttrRewriter }
+
+-- X-ORIGIN: "389 Directory Server"
+nsslapd-enable-upgrade-hash ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"nsslapd-enable-upgrade-hash"}
+  LDAP-DESC                 "Upgrade password hash on bind"
+  ID                        id-at-nsslapd-enable-upgrade-hash }
+
+-- X-ORIGIN: "Netscape Directory Server"
+entrydn ATTRIBUTE ::= {
+  WITH SYNTAX               DistinguishedName
+  EQUALITY MATCHING RULE    distinguishedNameMatch
+  SINGLE VALUE              TRUE
+  NO USER MODIFICATION      TRUE
+  USAGE                     directoryOperation
+  LDAP-SYNTAX               dn.&id
+  LDAP-NAME                 {"entrydn"}
+  LDAP-DESC                 "Internal database attribute for the entry DN"
+  ID                        id-at-entrydn }
+
+-- X-ORIGIN: "Netscape Directory Server"
+dncomp ATTRIBUTE ::= {
+  WITH SYNTAX               DistinguishedName
+  EQUALITY MATCHING RULE    distinguishedNameMatch
+  NO USER MODIFICATION      TRUE
+  USAGE                     directoryOperation
+  LDAP-SYNTAX               dn.&id
+  LDAP-NAME                 {"dncomp"}
+  LDAP-DESC                 "Internal database attribute for each DN component"
+  ID                        id-at-dncomp }
+
+-- X-ORIGIN: "Netscape Directory Server"
+parentid ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  EQUALITY MATCHING RULE    integerMatch
+  SINGLE VALUE              TRUE
+  NO USER MODIFICATION      TRUE
+  USAGE                     directoryOperation
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"parentid"}
+  LDAP-DESC                 "Internal database attribute for the parent ID of the entry"
+  ID                        id-at-parentid }
+
+-- X-ORIGIN: "Netscape Directory Server"
+entryid ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseIgnoreMatch
+  SINGLE VALUE              TRUE
+  NO USER MODIFICATION      TRUE
+  USAGE                     directoryOperation
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"entryid"}
+  LDAP-DESC                 "Internal database attribute for the ID of the entry"
+  ID                        id-at-entryid }
+
+-- X-ORIGIN: "Netscape Directory Server"
+nsDS5ReplicaBootstrapBindDN ATTRIBUTE ::= {
+  WITH SYNTAX               DistinguishedName
+  LDAP-SYNTAX               dn.&id
+  LDAP-NAME                 {"nsDS5ReplicaBootstrapBindDN"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-nsDS5ReplicaBootstrapBindDN }
+
+-- X-ORIGIN: "Netscape Directory Server"
+-- LDAP binary syntax has no X.500 directory type here. Represented as OCTET STRING.
+nsDS5ReplicaBootstrapCredentials ATTRIBUTE ::= {
+  WITH SYNTAX               OCTET STRING
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               { 1 3 6 1 4 1 1466 115 121 1 5 }
+  LDAP-NAME                 {"nsDS5ReplicaBootstrapCredentials"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-nsDS5ReplicaBootstrapCredentials }
+
+-- X-ORIGIN: "Netscape Directory Server"
+nsDS5ReplicaBootstrapBindMethod ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"nsDS5ReplicaBootstrapBindMethod"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-nsDS5ReplicaBootstrapBindMethod }
+
+-- X-ORIGIN: "Netscape Directory Server"
+nsDS5ReplicaBootstrapTransportInfo ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"nsDS5ReplicaBootstrapTransportInfo"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-nsDS5ReplicaBootstrapTransportInfo }
+
+-- X-ORIGIN: "Netscape Directory Server"
+nsslapd-tcp-fin-timeout ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"nsslapd-tcp-fin-timeout"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-nsslapd-tcp-fin-timeout }
+
+-- X-ORIGIN: "Netscape Directory Server"
+nsslapd-tcp-keepalive-time ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"nsslapd-tcp-keepalive-time"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-nsslapd-tcp-keepalive-time }
+
+-- X-ORIGIN: "389 Directory Server"
+nsds5ReplicaKeepAliveUpdateInterval ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"nsds5ReplicaKeepAliveUpdateInterval"}
+  LDAP-DESC                 "389 defined attribute type"
+  ID                        id-at-nsds5ReplicaKeepAliveUpdateInterval }
+
+-- X-ORIGIN: "389 Directory Server"
+dsEntryDN ATTRIBUTE ::= {
+  WITH SYNTAX               DistinguishedName
+  SINGLE VALUE              TRUE
+  NO USER MODIFICATION      TRUE
+  USAGE                     directoryOperation
+  LDAP-SYNTAX               dn.&id
+  LDAP-NAME                 {"dsEntryDN"}
+  LDAP-DESC                 "389 Directory Server defined attribute type"
+  ID                        id-at-dsEntryDN }
+
+-- X-ORIGIN: "389 Directory Server"
+nsslapd-return-original-entrydn ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"nsslapd-return-original-entrydn"}
+  LDAP-DESC                 "389 Directory Server defined attribute type"
+  ID                        id-at-nsslapd-return-original-entrydn }
+
+-- X-ORIGIN: "389 Directory Server"
+nsslapd-auditlog-display-attrs ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"nsslapd-auditlog-display-attrs"}
+  LDAP-DESC                 "389 Directory Server defined attribute type"
+  ID                        id-at-nsslapd-auditlog-display-attrs }
+
+-- X-ORIGIN: "389 Directory Server"
+nsslapd-haproxy-trusted-ip ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"nsslapd-haproxy-trusted-ip"}
+  LDAP-DESC                 "389 Directory Server defined attribute type"
+  ID                        id-at-nsslapd-haproxy-trusted-ip }
+
+-- X-ORIGIN: "Directory Server"
+nsslapd-pwdPBKDF2NumIterations ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"nsslapd-pwdPBKDF2NumIterations"}
+  LDAP-DESC                 "389 Directory Server defined attribute type"
+  ID                        id-at-nsslapd-pwdPBKDF2NumIterations }
+
+-- X-ORIGIN: "389 Directory Server"
+nsslapd-pwdPBKDF2AcceptMaxIterations ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"nsslapd-pwdPBKDF2AcceptMaxIterations"}
+  LDAP-DESC                 "Maximum PBKDF2 iterations accepted from stored hash on bind"
+  ID                        id-at-nsslapd-pwdPBKDF2AcceptMaxIterations }
+
+-- X-ORIGIN: "389 Directory Server"
+nsslapd-maxcontrolsperop ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"nsslapd-maxcontrolsperop"}
+  LDAP-DESC                 "389 Directory Server defined attribute type"
+  ID                        id-at-nsslapd-maxcontrolsperop }
+
+-- X-ORIGIN: "389 Directory Server"
+nsslapd-thread-pool-stats ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"nsslapd-thread-pool-stats"}
+  LDAP-DESC                 "389 Directory Server defined attribute type"
+  ID                        id-at-nsslapd-thread-pool-stats }
+
+-- Object classes
+
+-- X-ORIGIN: "Netscape Directory Server"
+directoryServerFeature OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  MAY CONTAIN               { oid
+                              | commonName
+                              | multiLineDescription }
+  LDAP-NAME                 {"directoryServerFeature"}
+  LDAP-DESC                 "Netscape defined objectclass"
+  ID                        id-oc-directoryServerFeature }
+
+-- X-ORIGIN: "Netscape Directory Server"
+nsslapdPlugin OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  MUST CONTAIN              { commonName
+                              | nsslapd-pluginPath
+                              | nsslapd-pluginInitfunc
+                              | nsslapd-pluginType
+                              | nsslapd-pluginId
+                              | nsslapd-pluginVersion
+                              | nsslapd-pluginVendor
+                              | nsslapd-pluginDescription
+                              | nsslapd-pluginEnabled }
+  MAY CONTAIN               { nsslapd-pluginConfigArea
+                              | nsslapd-plugin-depends-on-type }
+  LDAP-NAME                 {"nsslapdPlugin"}
+  LDAP-DESC                 "Netscape defined objectclass"
+  ID                        id-oc-nsslapdPlugin }
+
+-- X-ORIGIN: "Netscape Directory Server"
+nsIndex OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  MUST CONTAIN              { commonName
+                              | nsSystemIndex }
+  MAY CONTAIN               { description
+                              | nsIndexType
+                              | nsMatchingRule
+                              | nsIndexIDListScanLimit }
+  LDAP-NAME                 {"nsIndex"}
+  LDAP-DESC                 "Netscape defined objectclass"
+  ID                        id-oc-nsIndex }
+
+-- X-ORIGIN: "Netscape Directory Server"
+nsBackendInstance OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  MUST CONTAIN              { commonName }
+  LDAP-NAME                 {"nsBackendInstance"}
+  LDAP-DESC                 "Netscape defined objectclass"
+  ID                        id-oc-nsBackendInstance }
+
+-- X-ORIGIN: "Netscape Directory Server"
+nsMappingTree OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  MUST CONTAIN              { commonName }
+  LDAP-NAME                 {"nsMappingTree"}
+  LDAP-DESC                 "Netscape defined objectclass"
+  ID                        id-oc-nsMappingTree }
+
+-- X-ORIGIN: "Netscape Directory Server"
+nsContainer OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  MUST CONTAIN              { commonName }
+  LDAP-NAME                 {"nsContainer"}
+  LDAP-DESC                 "Netscape defined objectclass"
+  ID                        id-oc-nsContainer }
+
+-- X-ORIGIN: "Netscape Directory Server"
+nsDS5Replica OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  MUST CONTAIN              { nsDS5ReplicaRoot
+                              | nsDS5ReplicaId }
+  MAY CONTAIN               { commonName
+                              | nsds5ReplicaPreciseTombstonePurging
+                              | nsds5ReplicaCleanRUV
+                              | nsds5ReplicaAbortCleanRUV
+                              | nsDS5ReplicaType
+                              | nsDS5ReplicaBindDN
+                              | nsDS5ReplicaBindDNGroup
+                              | nsState
+                              | nsDS5ReplicaName
+                              | nsDS5Flags
+                              | nsDS5Task
+                              | nsDS5ReplicaReferral
+                              | nsDS5ReplicaAutoReferral
+                              | nsds5ReplicaPurgeDelay
+                              | nsds5ReplicaTombstonePurgeInterval
+                              | nsds5ReplicaChangeCount
+                              | nsds5ReplicaLegacyConsumer
+                              | nsds5ReplicaProtocolTimeout
+                              | nsds5ReplicaBackoffMin
+                              | nsds5ReplicaBackoffMax
+                              | nsds5ReplicaReleaseTimeout
+                              | nsDS5ReplicaBindDnGroupCheckInterval
+                              | nsds5ReplicaKeepAliveUpdateInterval }
+  LDAP-NAME                 {"nsDS5Replica"}
+  LDAP-DESC                 "Replication configuration objectclass"
+  ID                        id-oc-nsDS5Replica }
+
+-- X-ORIGIN: "Netscape Directory Server"
+nsTombstone OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  MAY CONTAIN               { nstombstonecsn
+                              | nsParentUniqueId
+                              | nscpEntryDN }
+  LDAP-NAME                 {"nsTombstone"}
+  LDAP-DESC                 "Netscape defined objectclass"
+  ID                        id-oc-nsTombstone }
+
+-- X-ORIGIN: "Netscape Directory Server"
+nsDS5ReplicationAgreement OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  MUST CONTAIN              { commonName }
+  MAY CONTAIN               { nsds5ReplicaCleanRUVNotified
+                              | nsDS5ReplicaHost
+                              | nsDS5ReplicaPort
+                              | nsDS5ReplicaTransportInfo
+                              | nsDS5ReplicaBindDN
+                              | nsDS5ReplicaCredentials
+                              | nsDS5ReplicaBindMethod
+                              | nsDS5ReplicaRoot
+                              | nsDS5ReplicatedAttributeList
+                              | nsDS5ReplicatedAttributeListTotal
+                              | nsDS5ReplicaUpdateSchedule
+                              | nsds5BeginReplicaRefresh
+                              | description
+                              | nsds50ruv
+                              | nsruvReplicaLastModified
+                              | nsds5replicaTimeout
+                              | nsds5replicaChangesSentSinceStartup
+                              | nsds5replicaLastUpdateEnd
+                              | nsds5replicaLastUpdateStart
+                              | nsds5replicaLastUpdateStatus
+                              | nsds5replicaUpdateInProgress
+                              | nsds5replicaLastInitEnd
+                              | nsds5ReplicaEnabled
+                              | nsds5replicaLastInitStart
+                              | nsds5replicaLastInitStatus
+                              | nsds5debugreplicatimeout
+                              | nsds5replicaBusyWaitTime
+                              | nsds5ReplicaStripAttrs
+                              | nsds5replicaSessionPauseTime
+                              | nsds5ReplicaProtocolTimeout
+                              | nsds5ReplicaFlowControlWindow
+                              | nsds5ReplicaFlowControlPause
+                              | nsDS5ReplicaWaitForAsyncResults
+                              | nsds5ReplicaIgnoreMissingChange
+                              | nsDS5ReplicaBootstrapBindDN
+                              | nsDS5ReplicaBootstrapCredentials
+                              | nsDS5ReplicaBootstrapBindMethod
+                              | nsDS5ReplicaBootstrapTransportInfo }
+  LDAP-NAME                 {"nsDS5ReplicationAgreement"}
+  LDAP-DESC                 "Netscape defined objectclass"
+  ID                        id-oc-nsDS5ReplicationAgreement }
+
+-- X-ORIGIN: "Netscape Directory Server"
+nsslapdConfig OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  MAY CONTAIN               { commonName }
+  LDAP-NAME                 {"nsslapdConfig"}
+  LDAP-DESC                 "Netscape defined objectclass"
+  ID                        id-oc-nsslapdConfig }
+
+-- X-ORIGIN: "Netscape Directory Server"
+nsSaslMapping OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  MUST CONTAIN              { commonName
+                              | nsSaslMapRegexString
+                              | nsSaslMapBaseDNTemplate
+                              | nsSaslMapFilterTemplate }
+  MAY CONTAIN               { nsSaslMapPriority }
+  LDAP-NAME                 {"nsSaslMapping"}
+  LDAP-DESC                 "Netscape defined objectclass"
+  ID                        id-oc-nsSaslMapping }
+
+-- X-ORIGIN: "Netscape Directory Server"
+nsSNMP OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  MUST CONTAIN              { commonName
+                              | nsSNMPEnabled }
+  MAY CONTAIN               { nsSNMPOrganization
+                              | nsSNMPLocation
+                              | nsSNMPContact
+                              | nsSNMPDescription
+                              | nsSNMPName
+                              | nsSNMPMasterHost
+                              | nsSNMPMasterPort }
+  LDAP-NAME                 {"nsSNMP"}
+  LDAP-DESC                 "Netscape defined objectclass"
+  ID                        id-oc-nsSNMP }
+
+-- X-ORIGIN: "Netscape"
+rootDNPluginConfig OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  MUST CONTAIN              { commonName }
+  MAY CONTAIN               { rootdn-open-time
+                              | rootdn-close-time
+                              | rootdn-days-allowed
+                              | rootdn-allow-host
+                              | rootdn-deny-host
+                              | rootdn-allow-ip
+                              | rootdn-deny-ip }
+  LDAP-NAME                 {"rootDNPluginConfig"}
+  LDAP-DESC                 "Netscape defined objectclass"
+  ID                        id-oc-rootDNPluginConfig }
+
+-- X-ORIGIN: "Netscape Directory Server"
+nsSchemaPolicy OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  MAY CONTAIN               { commonName
+                              | schemaUpdateObjectclassAccept
+                              | schemaUpdateObjectclassReject
+                              | schemaUpdateAttributeAccept
+                              | schemaUpdateAttributeReject }
+  LDAP-NAME                 {"nsSchemaPolicy"}
+  LDAP-DESC                 "Netscape defined objectclass"
+  ID                        id-oc-nsSchemaPolicy }
+
+-- X-ORIGIN: "389 Directory Server"
+nsChangelogConfig OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  MUST CONTAIN              { commonName
+                              | nsslapd-changelogdir }
+  MAY CONTAIN               { nsslapd-changelogmaxage
+                              | nsslapd-changelogtrim-interval
+                              | nsslapd-changelogmaxentries
+                              | nsslapd-changelogsuffix
+                              | nsslapd-changelogcompactdb-interval
+                              | nsslapd-encryptionalgorithm
+                              | nsSymmetricKey }
+  LDAP-NAME                 {"nsChangelogConfig"}
+  LDAP-DESC                 "Configuration of the changelog5 object"
+  ID                        id-oc-nsChangelogConfig }
+
+-- X-ORIGIN: "389 Directory Server"
+rewriterEntry OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  MUST CONTAIN              { nsslapd-libPath }
+  MAY CONTAIN               { commonName
+                              | nsslapd-filterrewriter
+                              | nsslapd-returnedAttrRewriter }
+  LDAP-NAME                 {"rewriterEntry"}
+  ID                        id-oc-rewriterEntry }
+
+-- X-ORIGIN: "389 Directory Server"
+pwdPBKDF2PluginConfig OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  MAY CONTAIN               { nsslapd-pwdPBKDF2NumIterations
+                              | nsslapd-pwdPBKDF2AcceptMaxIterations }
+  LDAP-NAME                 {"pwdPBKDF2PluginConfig"}
+  LDAP-DESC                 "PBKDF2 Password Storage Plugin configuration"
+  ID                        id-oc-pwdPBKDF2PluginConfig }
+END

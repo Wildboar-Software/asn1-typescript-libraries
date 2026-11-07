@@ -1,0 +1,232 @@
+-- Derived from data/ldap-schema/schema2ldif/nadf.schema
+-- This module is a container for LDAP schema. It has no module identifier.
+-- X- extension fields from the LDAP schema are comments. USAGE userApplications and structural KIND are omitted because they are the defaults.
+-- LDAP {length} bounds on directory strings are DirectoryString{n}. Bounds on IA5String, PrintableString, NumericString, and OCTET STRING are SIZE (1..n). Other bounds stay comments because the LDAP figure is an encoded-length hint.
+LdapSchema2ldifNadf DEFINITIONS ::=
+BEGIN
+
+IMPORTS
+
+  ATTRIBUTE, DistinguishedName, OBJECT-CLASS, top
+    FROM InformationFramework
+      {joint-iso-itu-t ds(5) module(1) informationFramework(1) 9} WITH SUCCESSORS
+
+  caseIgnoreMatch, countryName, directoryString, DirectoryString, dn, integer,
+    integerMatch, localityName, numericString, numericStringMatch,
+    printableString, stateOrProvinceName, supportedApplicationContext,
+    UnboundedDirectoryString
+    FROM SelectedAttributeTypes
+      {joint-iso-itu-t ds(5) module(1) selectedAttributeTypes(5) 9} WITH SUCCESSORS
+
+  applicationEntity, locality, organization
+    FROM SelectedObjectClasses
+      {joint-iso-itu-t ds(5) module(1) selectedObjectClasses(6) 9} WITH SUCCESSORS
+
+  lastModifiedTime
+    FROM LdapSchema2ldifCosine ;
+
+-- Object identifiers
+
+id-at-fipsStateNumericCode OBJECT IDENTIFIER ::= { 2 6 6 5 2 4 1 }
+id-at-fipsStateAlphaCode OBJECT IDENTIFIER ::= { 2 6 6 5 2 4 2 }
+id-at-fipsCountyNumericCode OBJECT IDENTIFIER ::= { 2 6 6 5 2 4 3 }
+id-at-fipsPlaceNumericCode OBJECT IDENTIFIER ::= { 2 6 6 5 2 4 4 }
+id-at-ansiOrgNumericCode OBJECT IDENTIFIER ::= { 2 6 6 5 2 4 5 }
+id-at-addmdName OBJECT IDENTIFIER ::= { 2 6 6 5 2 4 6 }
+id-at-nadfSearchGuide OBJECT IDENTIFIER ::= { 2 6 6 5 2 4 7 }
+id-at-supplementaryInformation OBJECT IDENTIFIER ::= { 2 6 6 5 2 4 8 }
+id-at-namingLink OBJECT IDENTIFIER ::= { 2 6 6 5 2 4 9 }
+id-at-reciprocalNamingLink OBJECT IDENTIFIER ::= { 2 6 6 5 2 4 10 }
+id-at-logicalDSAReference OBJECT IDENTIFIER ::= { 2 6 6 5 2 4 15 }
+id-at-multiMediaInformation OBJECT IDENTIFIER ::= { 2 6 6 5 2 4 16 }
+id-oc-nadfObject OBJECT IDENTIFIER ::= { 2 6 6 5 2 6 7 }
+id-oc-usStateOrEquivalent OBJECT IDENTIFIER ::= { 2 6 6 5 2 6 1 }
+id-oc-usPlace OBJECT IDENTIFIER ::= { 2 6 6 5 2 6 2 }
+id-oc-usCountyOrEquivalent OBJECT IDENTIFIER ::= { 2 6 6 5 2 6 3 }
+id-oc-nadfApplicationEntity OBJECT IDENTIFIER ::= { 2 6 6 5 2 6 5 }
+id-oc-nadfADDMD OBJECT IDENTIFIER ::= { 2 6 6 5 2 6 6 }
+id-oc-publicObject OBJECT IDENTIFIER ::= { 2 6 6 5 2 6 8 }
+id-oc-providerObject OBJECT IDENTIFIER ::= { 2 6 6 5 2 6 9 }
+id-oc-fips55Object OBJECT IDENTIFIER ::= { 2 6 6 5 2 6 11 }
+id-oc-nationalObject OBJECT IDENTIFIER ::= { 2 6 6 5 2 6 19 }
+id-oc-ansiOrgObject OBJECT IDENTIFIER ::= { 2 6 6 5 2 6 20 }
+id-oc-caProvinceOrTerritory OBJECT IDENTIFIER ::= { 2 6 6 5 2 6 21 }
+
+-- Attribute types
+
+fipsStateNumericCode ATTRIBUTE ::= {
+  WITH SYNTAX               NumericString(SIZE (1..2))
+  EQUALITY MATCHING RULE    numericStringMatch
+  LDAP-SYNTAX               numericString.&id
+  LDAP-NAME                 {"fipsStateNumericCode"}
+  ID                        id-at-fipsStateNumericCode }
+
+fipsStateAlphaCode ATTRIBUTE ::= {
+  WITH SYNTAX               PrintableString(SIZE (1..2))
+  EQUALITY MATCHING RULE    caseIgnoreMatch
+  LDAP-SYNTAX               printableString.&id
+  LDAP-NAME                 {"fipsStateAlphaCode"}
+  ID                        id-at-fipsStateAlphaCode }
+
+fipsCountyNumericCode ATTRIBUTE ::= {
+  WITH SYNTAX               NumericString(SIZE (1..5))
+  EQUALITY MATCHING RULE    numericStringMatch
+  LDAP-SYNTAX               numericString.&id
+  LDAP-NAME                 {"fipsCountyNumericCode"}
+  ID                        id-at-fipsCountyNumericCode }
+
+fipsPlaceNumericCode ATTRIBUTE ::= {
+  WITH SYNTAX               NumericString(SIZE (1..5))
+  EQUALITY MATCHING RULE    numericStringMatch
+  LDAP-SYNTAX               numericString.&id
+  LDAP-NAME                 {"fipsPlaceNumericCode", "fips55"}
+  ID                        id-at-fipsPlaceNumericCode }
+
+ansiOrgNumericCode ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  EQUALITY MATCHING RULE    integerMatch
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"ansiOrgNumericCode"}
+  ID                        id-at-ansiOrgNumericCode }
+
+addmdName ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseIgnoreMatch
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"addmdName", "ad"}
+  ID                        id-at-addmdName }
+
+-- LDAP binary syntax has no X.500 directory type here. Represented as OCTET STRING.
+nadfSearchGuide ATTRIBUTE ::= {
+  WITH SYNTAX               OCTET STRING
+  LDAP-SYNTAX               { 1 3 6 1 4 1 1466 115 121 1 5 }
+  LDAP-NAME                 {"nadfSearchGuide"}
+  ID                        id-at-nadfSearchGuide }
+
+-- LDAP syntax length {76} rendered as DirectoryString{76}.
+supplementaryInformation ATTRIBUTE ::= {
+  WITH SYNTAX               DirectoryString{76}
+  EQUALITY MATCHING RULE    caseIgnoreMatch
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"supplementaryInformation"}
+  ID                        id-at-supplementaryInformation }
+
+namingLink ATTRIBUTE ::= {
+  WITH SYNTAX               DistinguishedName
+  LDAP-SYNTAX               dn.&id
+  LDAP-NAME                 {"namingLink"}
+  ID                        id-at-namingLink }
+
+reciprocalNamingLink ATTRIBUTE ::= {
+  WITH SYNTAX               DistinguishedName
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               dn.&id
+  LDAP-NAME                 {"reciprocalNamingLink"}
+  ID                        id-at-reciprocalNamingLink }
+
+logicalDSAReference ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseIgnoreMatch
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"logicalDSAReference"}
+  ID                        id-at-logicalDSAReference }
+
+-- LDAP binary syntax has no X.500 directory type here. Represented as OCTET STRING.
+multiMediaInformation ATTRIBUTE ::= {
+  WITH SYNTAX               OCTET STRING
+  LDAP-SYNTAX               { 1 3 6 1 4 1 1466 115 121 1 5 }
+  LDAP-NAME                 {"multiMediaInformation"}
+  ID                        id-at-multiMediaInformation }
+
+-- Object classes
+
+nadfObject OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  KIND                      abstract
+  MUST CONTAIN              { lastModifiedTime }
+  MAY CONTAIN               { multiMediaInformation
+                              | nadfSearchGuide
+                              | supplementaryInformation }
+  LDAP-NAME                 {"nadfObject"}
+  ID                        id-oc-nadfObject }
+
+usStateOrEquivalent OBJECT-CLASS ::= {
+  SUBCLASS OF               { locality
+                              | nadfObject }
+  MUST CONTAIN              { localityName
+                              | fipsStateNumericCode
+                              | fipsStateAlphaCode
+                              | stateOrProvinceName }
+  LDAP-NAME                 {"usStateOrEquivalent"}
+  ID                        id-oc-usStateOrEquivalent }
+
+usPlace OBJECT-CLASS ::= {
+  SUBCLASS OF               { locality
+                              | nadfObject }
+  MUST CONTAIN              { localityName
+                              | fipsPlaceNumericCode }
+  LDAP-NAME                 {"usPlace"}
+  ID                        id-oc-usPlace }
+
+usCountyOrEquivalent OBJECT-CLASS ::= {
+  SUBCLASS OF               { usPlace }
+  MUST CONTAIN              { fipsCountyNumericCode }
+  LDAP-NAME                 {"usCountyOrEquivalent"}
+  ID                        id-oc-usCountyOrEquivalent }
+
+nadfApplicationEntity OBJECT-CLASS ::= {
+  SUBCLASS OF               { applicationEntity }
+  MUST CONTAIN              { supportedApplicationContext }
+  LDAP-NAME                 {"nadfApplicationEntity"}
+  ID                        id-oc-nadfApplicationEntity }
+
+nadfADDMD OBJECT-CLASS ::= {
+  SUBCLASS OF               { organization
+                              | nadfObject }
+  MUST CONTAIN              { addmdName }
+  LDAP-NAME                 {"nadfADDMD"}
+  ID                        id-oc-nadfADDMD }
+
+publicObject OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  KIND                      auxiliary
+  MUST CONTAIN              { namingLink }
+  LDAP-NAME                 {"publicObject"}
+  ID                        id-oc-publicObject }
+
+providerObject OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  KIND                      auxiliary
+  MUST CONTAIN              { reciprocalNamingLink }
+  LDAP-NAME                 {"providerObject"}
+  ID                        id-oc-providerObject }
+
+fips55Object OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  KIND                      auxiliary
+  MUST CONTAIN              { fipsPlaceNumericCode }
+  MAY CONTAIN               { stateOrProvinceName }
+  LDAP-NAME                 {"fips55Object"}
+  ID                        id-oc-fips55Object }
+
+nationalObject OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  KIND                      auxiliary
+  MUST CONTAIN              { countryName }
+  LDAP-NAME                 {"nationalObject"}
+  ID                        id-oc-nationalObject }
+
+ansiOrgObject OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  KIND                      auxiliary
+  MUST CONTAIN              { ansiOrgNumericCode }
+  LDAP-NAME                 {"ansiOrgObject"}
+  ID                        id-oc-ansiOrgObject }
+
+caProvinceOrTerritory OBJECT-CLASS ::= {
+  SUBCLASS OF               { locality
+                              | nadfObject }
+  MUST CONTAIN              { stateOrProvinceName }
+  LDAP-NAME                 {"caProvinceOrTerritory"}
+  ID                        id-oc-caProvinceOrTerritory }
+END

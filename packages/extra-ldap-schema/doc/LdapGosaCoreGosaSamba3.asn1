@@ -1,0 +1,824 @@
+-- Derived from data/ldap-schema/gosa-core/gosa-samba3.schema
+-- This module is a container for LDAP schema. It has no module identifier.
+-- X- extension fields from the LDAP schema are comments. USAGE userApplications and structural KIND are omitted because they are the defaults.
+-- LDAP {length} bounds on directory strings are DirectoryString{n}. Bounds on IA5String, PrintableString, NumericString, and OCTET STRING are SIZE (1..n). Other bounds stay comments because the LDAP figure is an encoded-length hint.
+LdapGosaCoreGosaSamba3 DEFINITIONS ::=
+BEGIN
+
+IMPORTS
+
+  ATTRIBUTE, DistinguishedName, distinguishedNameMatch, OBJECT-CLASS, top
+    FROM InformationFramework
+      {joint-iso-itu-t ds(5) module(1) informationFramework(1) 9} WITH SUCCESSORS
+
+  caseIgnoreIA5Match, caseIgnoreIA5SubstringsMatch, caseIgnoreMatch,
+    caseIgnoreSubstringsMatch, commonName, description, directoryString,
+    DirectoryString, dn, ia5String, integer, jpeg, member,
+    organizationalUnitName, uid, UnboundedDirectoryString
+    FROM SelectedAttributeTypes
+      {joint-iso-itu-t ds(5) module(1) selectedAttributeTypes(5) 9} WITH SUCCESSORS
+
+  sambaBadPasswordCount, sambaBadPasswordTime, sambaLMPassword,
+    sambaNTPassword, sambaPwdLastSet
+    FROM SambaV3Schema
+      {iso(1) identified-organization(3) dod(6) internet(1) private(4) enterprise(1) wildboar(56490) module(1) samba-v3-schema(45)} WITH SUCCESSORS
+
+  gotoLogonScript
+    FROM LdapGosaCoreGoto
+
+  mail
+    FROM LdapSchema2ldifCore
+
+  manager, personalTitle
+    FROM LdapSchema2ldifCosine ;
+
+-- Object identifiers
+
+id-at-gosaSubtreeACL OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 10098 1 1 12 1 }
+id-at-gosaUser OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 10098 1 1 12 2 }
+id-at-gosaObject OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 10098 1 1 12 3 }
+id-at-gosaMailServer OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 10098 1 1 12 4 }
+id-at-gosaMailQuota OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 10098 1 1 12 5 }
+id-at-gosaMailAlternateAddress OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 10098 1 1 12 6 }
+id-at-gosaMailForwardingAddress OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 10098 1 1 12 7 }
+id-at-gosaMailMaxSize OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 10098 1 1 12 8 }
+id-at-gosaSpamSortLevel OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 10098 1 1 12 9 }
+id-at-gosaSpamMailbox OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 10098 1 1 12 10 }
+id-at-gosaVacationMessage OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 10098 1 1 12 11 }
+id-at-gosaMailDeliveryMode OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 10098 1 1 12 12 }
+id-at-gosaDefaultPrinter OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 10098 1 1 12 13 }
+id-at-gosaDefaultLanguage OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 10098 1 1 12 14 }
+id-at-gosaHostACL OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 10098 1 1 12 15 }
+id-at-gosaService OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 10098 1 1 12 16 }
+id-at-gosaProxyID OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 10098 1 1 12 17 }
+id-at-gosaProxyAcctFlags OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 10098 1 1 12 18 }
+id-at-gosaProxyWorkingStart OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 10098 1 1 12 19 }
+id-at-gosaProxyWorkingStop OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 10098 1 1 12 20 }
+id-at-gosaApplicationName OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 10098 1 1 12 21 }
+id-at-gosaApplicationExecute OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 10098 1 1 12 22 }
+id-at-gosaApplicationFlags OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 10098 1 1 12 23 }
+id-at-gosaApplicationCategory OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 10098 1 1 12 31 }
+id-at-gosaApplicationIcon OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 10098 1 1 12 24 }
+id-at-gosaSharedFolderTarget OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 10098 1 1 12 25 }
+id-at-gosaMemberApplication OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 10098 1 1 12 26 }
+id-at-gosaApplicationParameter OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 10098 1 1 12 27 }
+id-at-gosaProxyQuota OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 10098 1 1 12 28 }
+id-at-gosaProxyQuotaPeriod OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 10098 1 1 12 29 }
+id-at-gosaGroupObjects OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 10098 1 1 12 30 }
+id-at-gosaApplicationMimeType OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 10098 1 1 12 32 }
+id-at-gosaUnitTag OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 10098 1 1 12 33 }
+id-at-gosaAclTemplate OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 10098 1 1 12 34 }
+id-at-gosaAclEntry OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 10098 1 1 12 35 }
+id-at-gosaSnapshotType OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 10098 1 1 12 36 }
+id-at-gosaSnapshotTimestamp OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 10098 1 1 12 37 }
+id-at-gosaSnapshotDN OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 10098 1 1 12 38 }
+id-at-gosaSnapshotData OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 10098 1 1 12 39 }
+id-at-gosaSetting OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 10098 1 1 12 40 }
+id-at-gosaVacationStart OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 10098 1 1 12 41 }
+id-at-gosaVacationStop OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 10098 1 1 12 42 }
+id-at-gosaApplicationPriority OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 10098 1 1 12 43 }
+id-at-gotoLastSystemLogin OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 10098 1 1 12 44 }
+id-at-gotoLastSystem OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 10098 1 1 12 45 }
+id-at-gosaLoginRestriction OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 10098 1 1 12 46 }
+id-at-gosaUserDefinedFilter OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 10098 1 1 12 47 }
+id-at-gosaWebDAVQuota OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 10098 1 1 12 48 }
+id-at-academicTitle OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 10098 1 1 6 2 }
+id-at-gender OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 15305 2 1 }
+id-at-dateOfBirth OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 15305 2 2 }
+id-at-acl OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 19414 2 1 651 }
+id-oc-gosaObject-2 OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 10098 1 2 1 19 1 }
+id-oc-gosaLockEntry OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 10098 1 2 1 19 2 }
+id-oc-gosaCacheEntry OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 10098 1 2 1 19 3 }
+id-oc-gosaDepartment OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 10098 1 2 1 19 4 }
+id-oc-gosaMailAccount OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 10098 1 2 1 19 5 }
+id-oc-gosaAccount OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 10098 1 2 1 19 6 }
+id-oc-gosaHost OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 10098 1 2 1 19 7 }
+id-oc-gosaProxyAccount OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 10098 1 2 1 19 8 }
+id-oc-gosaApplication OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 10098 1 2 1 19 9 }
+id-oc-gosaApplicationGroup OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 10098 1 2 1 19 10 }
+id-oc-gosaUserTemplate OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 10098 1 2 1 19 11 }
+id-oc-gosaGroupOfNames OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 10098 1 2 1 19 12 }
+id-oc-gosaWebDAVAccount OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 10098 1 2 1 19 13 }
+id-oc-gosaIntranetAccount OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 10098 1 2 1 19 14 }
+id-oc-gosaAdministrativeUnit OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 10098 1 2 1 19 15 }
+id-oc-gosaAdministrativeUnitTag OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 10098 1 2 1 19 16 }
+id-oc-gosaRole OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 10098 1 2 1 19 17 }
+id-oc-gosaAcl OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 10098 1 2 1 19 18 }
+id-oc-gosaSnapshotObject OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 10098 1 2 1 19 19 }
+id-oc-gosaConfig OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 10098 1 2 1 19 20 }
+id-oc-gotoSubmenuEntry OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 10098 1 2 1 43 }
+id-oc-gotoMenuEntry OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 10098 1 2 1 44 }
+id-oc-gosaProperties OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 10098 1 2 1 19 21 }
+
+-- Attribute types
+
+gosaSubtreeACL ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseIgnoreMatch
+  SUBSTRINGS MATCHING RULE  caseIgnoreSubstringsMatch
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"gosaSubtreeACL"}
+  LDAP-DESC                 "GOsa acl entry"
+  ID                        id-at-gosaSubtreeACL }
+
+gosaUser ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseIgnoreMatch
+  SUBSTRINGS MATCHING RULE  caseIgnoreSubstringsMatch
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"gosaUser"}
+  LDAP-DESC                 "GOsa user"
+  ID                        id-at-gosaUser }
+
+gosaObject ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseIgnoreMatch
+  SUBSTRINGS MATCHING RULE  caseIgnoreSubstringsMatch
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"gosaObject"}
+  LDAP-DESC                 "GOsa object"
+  ID                        id-at-gosaObject }
+
+gosaMailServer ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  EQUALITY MATCHING RULE    caseIgnoreIA5Match
+  SUBSTRINGS MATCHING RULE  caseIgnoreIA5SubstringsMatch
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"gosaMailServer"}
+  LDAP-DESC                 "Specify users main mail server"
+  ID                        id-at-gosaMailServer }
+
+gosaMailQuota ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  EQUALITY MATCHING RULE    caseIgnoreIA5Match
+  SUBSTRINGS MATCHING RULE  caseIgnoreIA5SubstringsMatch
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"gosaMailQuota"}
+  LDAP-DESC                 "GOsa quota definitions"
+  ID                        id-at-gosaMailQuota }
+
+gosaMailAlternateAddress ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  EQUALITY MATCHING RULE    caseIgnoreIA5Match
+  SUBSTRINGS MATCHING RULE  caseIgnoreIA5SubstringsMatch
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"gosaMailAlternateAddress"}
+  LDAP-DESC                 "Additional mail addresses where the user is reachable"
+  ID                        id-at-gosaMailAlternateAddress }
+
+gosaMailForwardingAddress ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  EQUALITY MATCHING RULE    caseIgnoreIA5Match
+  SUBSTRINGS MATCHING RULE  caseIgnoreIA5SubstringsMatch
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"gosaMailForwardingAddress"}
+  LDAP-DESC                 "Addresses where to forward mail to"
+  ID                        id-at-gosaMailForwardingAddress }
+
+gosaMailMaxSize ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  EQUALITY MATCHING RULE    caseIgnoreIA5Match
+  SUBSTRINGS MATCHING RULE  caseIgnoreIA5SubstringsMatch
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"gosaMailMaxSize"}
+  LDAP-DESC                 "Block mails bigger than this value"
+  ID                        id-at-gosaMailMaxSize }
+
+gosaSpamSortLevel ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  EQUALITY MATCHING RULE    caseIgnoreIA5Match
+  SUBSTRINGS MATCHING RULE  caseIgnoreIA5SubstringsMatch
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"gosaSpamSortLevel"}
+  LDAP-DESC                 "Spamassassins hits"
+  ID                        id-at-gosaSpamSortLevel }
+
+gosaSpamMailbox ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  EQUALITY MATCHING RULE    caseIgnoreIA5Match
+  SUBSTRINGS MATCHING RULE  caseIgnoreIA5SubstringsMatch
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"gosaSpamMailbox"}
+  LDAP-DESC                 "Where to put spam"
+  ID                        id-at-gosaSpamMailbox }
+
+gosaVacationMessage ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseIgnoreMatch
+  SUBSTRINGS MATCHING RULE  caseIgnoreSubstringsMatch
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"gosaVacationMessage"}
+  LDAP-DESC                 "Text to display in case of vacation"
+  ID                        id-at-gosaVacationMessage }
+
+gosaMailDeliveryMode ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  EQUALITY MATCHING RULE    caseIgnoreIA5Match
+  SUBSTRINGS MATCHING RULE  caseIgnoreIA5SubstringsMatch
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"gosaMailDeliveryMode"}
+  LDAP-DESC                 "What to do with mails"
+  ID                        id-at-gosaMailDeliveryMode }
+
+gosaDefaultPrinter ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  EQUALITY MATCHING RULE    caseIgnoreIA5Match
+  SUBSTRINGS MATCHING RULE  caseIgnoreIA5SubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"gosaDefaultPrinter"}
+  LDAP-DESC                 "Defines a default printer a user owns"
+  ID                        id-at-gosaDefaultPrinter }
+
+gosaDefaultLanguage ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  EQUALITY MATCHING RULE    caseIgnoreIA5Match
+  SUBSTRINGS MATCHING RULE  caseIgnoreIA5SubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"gosaDefaultLanguage"}
+  LDAP-DESC                 "Defines the default language for a user"
+  ID                        id-at-gosaDefaultLanguage }
+
+gosaHostACL ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  EQUALITY MATCHING RULE    caseIgnoreIA5Match
+  SUBSTRINGS MATCHING RULE  caseIgnoreIA5SubstringsMatch
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"gosaHostACL"}
+  LDAP-DESC                 "Defines the places where users can login"
+  ID                        id-at-gosaHostACL }
+
+gosaService ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  EQUALITY MATCHING RULE    caseIgnoreIA5Match
+  SUBSTRINGS MATCHING RULE  caseIgnoreIA5SubstringsMatch
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"gosaService"}
+  LDAP-DESC                 "Defines services a certain host can provide"
+  ID                        id-at-gosaService }
+
+gosaProxyID ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  EQUALITY MATCHING RULE    caseIgnoreIA5Match
+  SUBSTRINGS MATCHING RULE  caseIgnoreIA5SubstringsMatch
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"gosaProxyID"}
+  LDAP-DESC                 "Defines the proxy user id used, needed for some filters"
+  ID                        id-at-gosaProxyID }
+
+gosaProxyAcctFlags ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String(SIZE (1..16))
+  EQUALITY MATCHING RULE    caseIgnoreIA5Match
+  SUBSTRINGS MATCHING RULE  caseIgnoreIA5SubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"gosaProxyAcctFlags"}
+  LDAP-DESC                 "Proxy Account Flags"
+  ID                        id-at-gosaProxyAcctFlags }
+
+gosaProxyWorkingStart ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  EQUALITY MATCHING RULE    caseIgnoreIA5Match
+  SUBSTRINGS MATCHING RULE  caseIgnoreIA5SubstringsMatch
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"gosaProxyWorkingStart"}
+  LDAP-DESC                 "Specifies the beginning of work in minutes, relative to 00:00"
+  ID                        id-at-gosaProxyWorkingStart }
+
+gosaProxyWorkingStop ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  EQUALITY MATCHING RULE    caseIgnoreIA5Match
+  SUBSTRINGS MATCHING RULE  caseIgnoreIA5SubstringsMatch
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"gosaProxyWorkingStop"}
+  LDAP-DESC                 "Specifies the end of work in minutes, relative to 00:00"
+  ID                        id-at-gosaProxyWorkingStop }
+
+gosaApplicationName ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseIgnoreMatch
+  SUBSTRINGS MATCHING RULE  caseIgnoreSubstringsMatch
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"gosaApplicationName"}
+  LDAP-DESC                 "Specifies the name of an application to be shown up on users desktop"
+  ID                        id-at-gosaApplicationName }
+
+gosaApplicationExecute ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseIgnoreMatch
+  SUBSTRINGS MATCHING RULE  caseIgnoreSubstringsMatch
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"gosaApplicationExecute"}
+  LDAP-DESC                 "Specifies the executable path of an application"
+  ID                        id-at-gosaApplicationExecute }
+
+gosaApplicationFlags ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  EQUALITY MATCHING RULE    caseIgnoreIA5Match
+  SUBSTRINGS MATCHING RULE  caseIgnoreIA5SubstringsMatch
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"gosaApplicationFlags"}
+  LDAP-DESC                 "Specifies the application flags G(roup only), D(esktop), M(enu)"
+  ID                        id-at-gosaApplicationFlags }
+
+gosaApplicationCategory ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseIgnoreMatch
+  SUBSTRINGS MATCHING RULE  caseIgnoreSubstringsMatch
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"gosaApplicationCategory"}
+  LDAP-DESC                 "Store application parameters"
+  ID                        id-at-gosaApplicationCategory }
+
+-- X.520 models the JPEG syntax as NULL. Represented as OCTET STRING. LDAP-SYNTAX remains jpeg.&id.
+gosaApplicationIcon ATTRIBUTE ::= {
+  WITH SYNTAX               OCTET STRING
+  LDAP-SYNTAX               jpeg.&id
+  LDAP-NAME                 {"gosaApplicationIcon"}
+  LDAP-DESC                 "Keeps the application icon in png format"
+  ID                        id-at-gosaApplicationIcon }
+
+gosaSharedFolderTarget ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  EQUALITY MATCHING RULE    caseIgnoreIA5Match
+  SUBSTRINGS MATCHING RULE  caseIgnoreIA5SubstringsMatch
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"gosaSharedFolderTarget"}
+  LDAP-DESC                 "Keeps the target of cyrus shared folders"
+  ID                        id-at-gosaSharedFolderTarget }
+
+gosaMemberApplication ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseIgnoreMatch
+  SUBSTRINGS MATCHING RULE  caseIgnoreSubstringsMatch
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"gosaMemberApplication"}
+  LDAP-DESC                 "Like memberUid, just for applications"
+  ID                        id-at-gosaMemberApplication }
+
+gosaApplicationParameter ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseIgnoreMatch
+  SUBSTRINGS MATCHING RULE  caseIgnoreSubstringsMatch
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"gosaApplicationParameter"}
+  LDAP-DESC                 "Store application parameters"
+  ID                        id-at-gosaApplicationParameter }
+
+gosaProxyQuota ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  EQUALITY MATCHING RULE    caseIgnoreIA5Match
+  SUBSTRINGS MATCHING RULE  caseIgnoreIA5SubstringsMatch
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"gosaProxyQuota"}
+  LDAP-DESC                 "Specifies the amount of data a user may surf in a defined period of time"
+  ID                        id-at-gosaProxyQuota }
+
+gosaProxyQuotaPeriod ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  EQUALITY MATCHING RULE    caseIgnoreIA5Match
+  SUBSTRINGS MATCHING RULE  caseIgnoreIA5SubstringsMatch
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"gosaProxyQuotaPeriod"}
+  LDAP-DESC                 "Specifies period of time where the counter is been reseted"
+  ID                        id-at-gosaProxyQuotaPeriod }
+
+gosaGroupObjects ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  EQUALITY MATCHING RULE    caseIgnoreIA5Match
+  SUBSTRINGS MATCHING RULE  caseIgnoreIA5SubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"gosaGroupObjects"}
+  LDAP-DESC                 "Takes a list of all object types that are in a gosaGroupOfNames"
+  ID                        id-at-gosaGroupObjects }
+
+gosaApplicationMimeType ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  EQUALITY MATCHING RULE    caseIgnoreIA5Match
+  SUBSTRINGS MATCHING RULE  caseIgnoreIA5SubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"gosaApplicationMimeType"}
+  LDAP-DESC                 "Takes a list of relevant mime-type|priority settings"
+  ID                        id-at-gosaApplicationMimeType }
+
+gosaUnitTag ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  EQUALITY MATCHING RULE    caseIgnoreIA5Match
+  SUBSTRINGS MATCHING RULE  caseIgnoreIA5SubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"gosaUnitTag"}
+  LDAP-DESC                 "Takes a list of relevant mime-type|priority settings"
+  ID                        id-at-gosaUnitTag }
+
+gosaAclTemplate ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  EQUALITY MATCHING RULE    caseIgnoreIA5Match
+  SUBSTRINGS MATCHING RULE  caseIgnoreIA5SubstringsMatch
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"gosaAclTemplate"}
+  LDAP-DESC                 "Takes ACL entries for gosaRoles"
+  ID                        id-at-gosaAclTemplate }
+
+gosaAclEntry ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  EQUALITY MATCHING RULE    caseIgnoreIA5Match
+  SUBSTRINGS MATCHING RULE  caseIgnoreIA5SubstringsMatch
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"gosaAclEntry"}
+  LDAP-DESC                 "Takes ACL entries for gosaRoles"
+  ID                        id-at-gosaAclEntry }
+
+gosaSnapshotType ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseIgnoreMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"gosaSnapshotType"}
+  LDAP-DESC                 "Takes either undo or snapshot"
+  ID                        id-at-gosaSnapshotType }
+
+gosaSnapshotTimestamp ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseIgnoreMatch
+  SUBSTRINGS MATCHING RULE  caseIgnoreSubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"gosaSnapshotTimestamp"}
+  LDAP-DESC                 "Unix timestamp of snapshot"
+  ID                        id-at-gosaSnapshotTimestamp }
+
+gosaSnapshotDN ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseIgnoreMatch
+  SUBSTRINGS MATCHING RULE  caseIgnoreSubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"gosaSnapshotDN"}
+  LDAP-DESC                 "Original DN of saved object"
+  ID                        id-at-gosaSnapshotDN }
+
+-- LDAP binary syntax has no X.500 directory type here. Represented as OCTET STRING.
+gosaSnapshotData ATTRIBUTE ::= {
+  WITH SYNTAX               OCTET STRING
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               { 1 3 6 1 4 1 1466 115 121 1 5 }
+  LDAP-NAME                 {"gosaSnapshotData"}
+  LDAP-DESC                 "Original DN of saved object"
+  ID                        id-at-gosaSnapshotData }
+
+gosaSetting ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseIgnoreMatch
+  SUBSTRINGS MATCHING RULE  caseIgnoreSubstringsMatch
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"gosaSetting"}
+  LDAP-DESC                 "Original DN of saved object"
+  ID                        id-at-gosaSetting }
+
+gosaVacationStart ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"gosaVacationStart"}
+  LDAP-DESC                 "Timestamp for enabling current vacation message"
+  ID                        id-at-gosaVacationStart }
+
+gosaVacationStop ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"gosaVacationStop"}
+  LDAP-DESC                 "Timestamp for switching off current vacation message"
+  ID                        id-at-gosaVacationStop }
+
+gosaApplicationPriority ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"gosaApplicationPriority"}
+  LDAP-DESC                 "Keeps the application icon in png format"
+  ID                        id-at-gosaApplicationPriority }
+
+gotoLastSystemLogin ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"gotoLastSystemLogin"}
+  LDAP-DESC                 "Timestamp for a Users last System Login"
+  ID                        id-at-gotoLastSystemLogin }
+
+gotoLastSystem ATTRIBUTE ::= {
+  WITH SYNTAX               DistinguishedName
+  EQUALITY MATCHING RULE    distinguishedNameMatch
+  LDAP-SYNTAX               dn.&id
+  LDAP-NAME                 {"gotoLastSystem"}
+  LDAP-DESC                 "The DN of the System where the Login was performed"
+  ID                        id-at-gotoLastSystem }
+
+-- This attribute declares neither a supertype nor a syntax.
+gosaLoginRestriction ATTRIBUTE ::= {
+  LDAP-NAME                 {"gosaLoginRestriction"}
+  LDAP-DESC                 "Multivalue attribute to carry a number of allowed ips/subnets"
+  ID                        id-at-gosaLoginRestriction }
+
+gosaUserDefinedFilter ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"gosaUserDefinedFilter"}
+  LDAP-DESC                 "A user defined filter"
+  ID                        id-at-gosaUserDefinedFilter }
+
+gosaWebDAVQuota ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"gosaWebDAVQuota"}
+  LDAP-DESC                 "Webdav share quota in KB"
+  ID                        id-at-gosaWebDAVQuota }
+
+academicTitle ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseIgnoreMatch
+  SUBSTRINGS MATCHING RULE  caseIgnoreSubstringsMatch
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"academicTitle"}
+  LDAP-DESC                 "Field to represent the academic title"
+  ID                        id-at-academicTitle }
+
+gender ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String(SIZE (1..1))
+  EQUALITY MATCHING RULE    caseIgnoreIA5Match
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"gender", "sex"}
+  LDAP-DESC                 "Gender: M for male, F for female"
+  ID                        id-at-gender }
+
+-- LDAP syntax length {10} rendered as DirectoryString{10}.
+dateOfBirth ATTRIBUTE ::= {
+  WITH SYNTAX               DirectoryString{10}
+  EQUALITY MATCHING RULE    caseIgnoreMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"dateOfBirth", "dob"}
+  LDAP-DESC                 "Date of birth in ISO 8601 format"
+  ID                        id-at-dateOfBirth }
+
+acl ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String(SIZE (1..256))
+  EQUALITY MATCHING RULE    caseIgnoreIA5Match
+  SUBSTRINGS MATCHING RULE  caseIgnoreIA5SubstringsMatch
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"acl"}
+  ID                        id-at-acl }
+
+-- Object classes
+
+-- disambiguated gosaObject to gosaObject-2 inside LdapGosaCoreGosaSamba3.
+gosaObject-2 OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  KIND                      auxiliary
+  MUST CONTAIN              { gosaSubtreeACL }
+  LDAP-NAME                 {"gosaObject"}
+  LDAP-DESC                 "Class for GOsa settings (v2.7)"
+  ID                        id-oc-gosaObject-2 }
+
+gosaLockEntry OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  MUST CONTAIN              { gosaUser
+                              | gosaObject
+                              | commonName }
+  LDAP-NAME                 {"gosaLockEntry"}
+  LDAP-DESC                 "Class for GOsa locking (v2.7)"
+  ID                        id-oc-gosaLockEntry }
+
+gosaCacheEntry OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  MUST CONTAIN              { commonName }
+  MAY CONTAIN               { gosaUser }
+  LDAP-NAME                 {"gosaCacheEntry"}
+  LDAP-DESC                 "Class for GOsa caching (v2.7)"
+  ID                        id-oc-gosaCacheEntry }
+
+gosaDepartment OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  KIND                      auxiliary
+  MUST CONTAIN              { organizationalUnitName
+                              | description }
+  MAY CONTAIN               { manager }
+  LDAP-NAME                 {"gosaDepartment"}
+  LDAP-DESC                 "Class to mark Departments for GOsa (v2.7)"
+  ID                        id-oc-gosaDepartment }
+
+gosaMailAccount OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  KIND                      auxiliary
+  MUST CONTAIN              { mail
+                              | gosaMailServer
+                              | gosaMailDeliveryMode }
+  MAY CONTAIN               { gosaMailQuota
+                              | gosaMailAlternateAddress
+                              | gosaMailForwardingAddress
+                              | gosaMailMaxSize
+                              | gosaSpamSortLevel
+                              | gosaSpamMailbox
+                              | gosaVacationMessage
+                              | gosaVacationStart
+                              | gosaVacationStop
+                              | gosaSharedFolderTarget
+                              | acl }
+  LDAP-NAME                 {"gosaMailAccount"}
+  LDAP-DESC                 "Class to mark MailAccounts for GOsa (v2.7)"
+  ID                        id-oc-gosaMailAccount }
+
+gosaAccount OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  KIND                      auxiliary
+  MUST CONTAIN              { uid }
+  MAY CONTAIN               { sambaLMPassword
+                              | sambaNTPassword
+                              | sambaPwdLastSet
+                              | gosaDefaultPrinter
+                              | gosaDefaultLanguage
+                              | academicTitle
+                              | personalTitle
+                              | gosaHostACL
+                              | dateOfBirth
+                              | sambaBadPasswordCount
+                              | sambaBadPasswordTime
+                              | gender
+                              | gotoLastSystemLogin
+                              | gotoLastSystem
+                              | gosaLoginRestriction }
+  LDAP-NAME                 {"gosaAccount"}
+  LDAP-DESC                 "Class for GOsa Accounts (v2.7)"
+  ID                        id-oc-gosaAccount }
+
+gosaHost OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  KIND                      auxiliary
+  MUST CONTAIN              { commonName }
+  MAY CONTAIN               { description
+                              | gosaService }
+  LDAP-NAME                 {"gosaHost"}
+  LDAP-DESC                 "Class for GOsa Hosts (v2.7)"
+  ID                        id-oc-gosaHost }
+
+gosaProxyAccount OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  KIND                      auxiliary
+  MUST CONTAIN              { gosaProxyAcctFlags }
+  MAY CONTAIN               { gosaProxyID
+                              | gosaProxyWorkingStart
+                              | gosaProxyWorkingStop
+                              | gosaProxyQuota
+                              | gosaProxyQuotaPeriod }
+  LDAP-NAME                 {"gosaProxyAccount"}
+  LDAP-DESC                 "Class for GOsa Proxy settings (v2.7)"
+  ID                        id-oc-gosaProxyAccount }
+
+gosaApplication OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  MUST CONTAIN              { commonName
+                              | gosaApplicationExecute }
+  MAY CONTAIN               { gosaApplicationName
+                              | gosaApplicationIcon
+                              | gosaApplicationFlags
+                              | gosaApplicationMimeType
+                              | gosaApplicationParameter
+                              | gotoLogonScript
+                              | description
+                              | gosaApplicationCategory }
+  LDAP-NAME                 {"gosaApplication"}
+  LDAP-DESC                 "Class for GOsa applications (v2.7)"
+  ID                        id-oc-gosaApplication }
+
+gosaApplicationGroup OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  KIND                      auxiliary
+  MUST CONTAIN              { commonName }
+  MAY CONTAIN               { gosaMemberApplication
+                              | gosaApplicationParameter }
+  LDAP-NAME                 {"gosaApplicationGroup"}
+  LDAP-DESC                 "Class for GOsa application groups (v2.7)"
+  ID                        id-oc-gosaApplicationGroup }
+
+gosaUserTemplate OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  KIND                      auxiliary
+  MUST CONTAIN              { commonName }
+  LDAP-NAME                 {"gosaUserTemplate"}
+  LDAP-DESC                 "Class for GOsa User Templates (v2.7)"
+  ID                        id-oc-gosaUserTemplate }
+
+gosaGroupOfNames OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  MUST CONTAIN              { commonName
+                              | gosaGroupObjects }
+  MAY CONTAIN               { member
+                              | description }
+  LDAP-NAME                 {"gosaGroupOfNames"}
+  LDAP-DESC                 "GOsa object grouping (v2.7)"
+  ID                        id-oc-gosaGroupOfNames }
+
+gosaWebDAVAccount OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  KIND                      auxiliary
+  MUST CONTAIN              { commonName
+                              | uid }
+  MAY CONTAIN               { gosaWebDAVQuota }
+  LDAP-NAME                 {"gosaWebDAVAccount"}
+  LDAP-DESC                 "GOsa webdav enabling account (v2.7)"
+  ID                        id-oc-gosaWebDAVAccount }
+
+gosaIntranetAccount OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  KIND                      auxiliary
+  MUST CONTAIN              { commonName
+                              | uid }
+  MAY CONTAIN               { gosaDefaultLanguage }
+  LDAP-NAME                 {"gosaIntranetAccount"}
+  LDAP-DESC                 "GOsa Inatrent enabling account (v2.7)"
+  ID                        id-oc-gosaIntranetAccount }
+
+gosaAdministrativeUnit OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  KIND                      auxiliary
+  MUST CONTAIN              { gosaUnitTag }
+  LDAP-NAME                 {"gosaAdministrativeUnit"}
+  LDAP-DESC                 "Marker for administrational units (v2.7)"
+  ID                        id-oc-gosaAdministrativeUnit }
+
+gosaAdministrativeUnitTag OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  KIND                      auxiliary
+  MUST CONTAIN              { gosaUnitTag }
+  LDAP-NAME                 {"gosaAdministrativeUnitTag"}
+  LDAP-DESC                 "Marker for objects below administrational units (v2.7)"
+  ID                        id-oc-gosaAdministrativeUnitTag }
+
+gosaRole OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  MUST CONTAIN              { gosaAclTemplate
+                              | commonName }
+  MAY CONTAIN               { description }
+  LDAP-NAME                 {"gosaRole"}
+  LDAP-DESC                 "ACL container to define roles (v2.7)"
+  ID                        id-oc-gosaRole }
+
+gosaAcl OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  KIND                      auxiliary
+  MUST CONTAIN              { gosaAclEntry }
+  LDAP-NAME                 {"gosaAcl"}
+  LDAP-DESC                 "ACL container to define single ACLs (v2.7)"
+  ID                        id-oc-gosaAcl }
+
+gosaSnapshotObject OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  MUST CONTAIN              { gosaSnapshotType
+                              | gosaSnapshotTimestamp
+                              | gosaSnapshotDN
+                              | gosaSnapshotData }
+  MAY CONTAIN               { description }
+  LDAP-NAME                 {"gosaSnapshotObject"}
+  LDAP-DESC                 "Container object for undo and snapshot data (v2.7)"
+  ID                        id-oc-gosaSnapshotObject }
+
+gosaConfig OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  MUST CONTAIN              { commonName }
+  MAY CONTAIN               { gosaSetting }
+  LDAP-NAME                 {"gosaConfig"}
+  LDAP-DESC                 "Settings for gosa. Replaces parts of the gosa.conf. (v2.7)"
+  ID                        id-oc-gosaConfig }
+
+gotoSubmenuEntry OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  MUST CONTAIN              { commonName }
+  MAY CONTAIN               { gosaApplicationIcon
+                              | gosaApplicationPriority }
+  LDAP-NAME                 {"gotoSubmenuEntry"}
+  LDAP-DESC                 "GOto - contains environment settings (v2.7)"
+  ID                        id-oc-gotoSubmenuEntry }
+
+gotoMenuEntry OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  MUST CONTAIN              { commonName }
+  MAY CONTAIN               { gosaApplicationParameter
+                              | gosaApplicationPriority }
+  LDAP-NAME                 {"gotoMenuEntry"}
+  LDAP-DESC                 "GOto - defines a menu entry (v2.7)"
+  ID                        id-oc-gotoMenuEntry }
+
+gosaProperties OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  KIND                      auxiliary
+  MAY CONTAIN               { gosaUserDefinedFilter }
+  LDAP-NAME                 {"gosaProperties"}
+  LDAP-DESC                 "Store GOsa properties (v2.7)"
+  ID                        id-oc-gosaProperties }
+END

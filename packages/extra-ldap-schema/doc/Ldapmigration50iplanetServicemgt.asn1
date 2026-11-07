@@ -1,0 +1,149 @@
+-- Derived from data/ldap-schema/ldapmigration/50iplanet-servicemgt.ldif
+-- This module is a container for LDAP schema. It has no module identifier.
+-- X- extension fields from the LDAP schema are comments. USAGE userApplications and structural KIND are omitted because they are the defaults.
+Ldapmigration50iplanetServicemgt DEFINITIONS ::=
+BEGIN
+
+IMPORTS
+
+  ATTRIBUTE, OBJECT-CLASS, top
+    FROM InformationFramework
+      {joint-iso-itu-t ds(5) module(1) informationFramework(1) 9} WITH SUCCESSORS
+
+  description, directoryString, ia5String, integer, organizationalUnitName,
+    UnboundedDirectoryString
+    FROM SelectedAttributeTypes
+      {joint-iso-itu-t ds(5) module(1) selectedAttributeTypes(5) 9} WITH SUCCESSORS
+
+  labeledURI
+    FROM OpenLDAPCoreSchema
+      {iso(1) identified-organization(3) dod(6) internet(1) private(4) enterprise(1) wildboar(56490) module(1) openldap-core(6)} WITH SUCCESSORS ;
+
+-- Object identifiers
+
+id-at-iplanetServiceSchema OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 813 }
+id-at-iplanetServiceID OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 814 }
+id-at-iplanetPluginID OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 815 }
+id-at-iplanetSMSPriority OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 816 }
+id-at-iplanetPluginSchema OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 817 }
+id-at-iplanetKeyValue OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 818 }
+id-at-iplanetXMLKeyValue OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 819 }
+id-oc-iplanetService OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 2 155 }
+id-oc-iplanetOrgService OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 2 156 }
+id-oc-iplanetServiceComponent OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 2 157 }
+id-oc-iplanetServicePlugin OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 2 158 }
+
+-- Attribute types
+
+-- X-ORIGIN: "iPlanet Service Management"
+iplanetServiceSchema ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"iplanetServiceSchema"}
+  LDAP-DESC                 "XML schema of a particular service"
+  ID                        id-at-iplanetServiceSchema }
+
+-- X-ORIGIN: "iPlanet Service Management"
+iplanetServiceID ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"iplanetServiceID"}
+  LDAP-DESC                 "reference to an inherited service object"
+  ID                        id-at-iplanetServiceID }
+
+-- X-ORIGIN: "iPlanet Service Management"
+iplanetPluginID ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"iplanetPluginID"}
+  LDAP-DESC                 "reference to the service plugin configuration"
+  ID                        id-at-iplanetPluginID }
+
+-- X-ORIGIN: "iPlanet Service Management"
+iplanetSMSPriority ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"iplanetSMSPriority"}
+  LDAP-DESC                 "priority of a service with respect to its siblings"
+  ID                        id-at-iplanetSMSPriority }
+
+-- X-ORIGIN: "iPlanet Service Management"
+iplanetPluginSchema ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"iplanetPluginSchema"}
+  LDAP-DESC                 "service plugin schema information"
+  ID                        id-at-iplanetPluginSchema }
+
+-- X-ORIGIN: "iPlanet Service Management"
+iplanetKeyValue ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"iplanetKeyValue"}
+  LDAP-DESC                 "encoded key values of the services"
+  ID                        id-at-iplanetKeyValue }
+
+-- X-ORIGIN: "iPlanet Service Management"
+iplanetXMLKeyValue ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"iplanetXMLKeyValue"}
+  LDAP-DESC                 "service key values in XML format"
+  ID                        id-at-iplanetXMLKeyValue }
+
+-- Object classes
+
+-- X-ORIGIN: "iPlanet Service Management"
+iplanetService OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  MUST CONTAIN              { organizationalUnitName }
+  MAY CONTAIN               { labeledURI
+                              | iplanetServiceSchema
+                              | iplanetKeyValue
+                              | iplanetXMLKeyValue
+                              | iplanetPluginSchema
+                              | description }
+  LDAP-NAME                 {"iplanetService"}
+  LDAP-DESC                 "object containing service information"
+  ID                        id-oc-iplanetService }
+
+-- X-ORIGIN: "iPlanet Service Management"
+iplanetOrgService OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  MUST CONTAIN              { organizationalUnitName }
+  MAY CONTAIN               { iplanetKeyValue
+                              | iplanetXMLKeyValue
+                              | description }
+  LDAP-NAME                 {"iplanetOrgService"}
+  LDAP-DESC                 "service information specific to organizations"
+  ID                        id-oc-iplanetOrgService }
+
+-- X-ORIGIN: "iPlanet Service Management"
+iplanetServiceComponent OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  MUST CONTAIN              { organizationalUnitName }
+  MAY CONTAIN               { iplanetServiceID
+                              | iplanetSMSPriority
+                              | iplanetKeyValue
+                              | iplanetXMLKeyValue
+                              | description }
+  LDAP-NAME                 {"iplanetServiceComponent"}
+  LDAP-DESC                 "sub-components of a service"
+  ID                        id-oc-iplanetServiceComponent }
+
+-- X-ORIGIN: "iPlanet Service Management"
+iplanetServicePlugin OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  MUST CONTAIN              { organizationalUnitName }
+  MAY CONTAIN               { iplanetPluginID
+                              | iplanetKeyValue
+                              | iplanetXMLKeyValue
+                              | iplanetSMSPriority }
+  LDAP-NAME                 {"iplanetServicePlugin"}
+  LDAP-DESC                 "Object that stores information specific to service plugins"
+  ID                        id-oc-iplanetServicePlugin }
+END

@@ -1,0 +1,1063 @@
+-- Derived from data/ldap-schema/gosa-core/goserver.schema
+-- This module is a container for LDAP schema. It has no module identifier.
+-- X- extension fields from the LDAP schema are comments. USAGE userApplications and structural KIND are omitted because they are the defaults.
+LdapGosaCoreGoserver DEFINITIONS ::=
+BEGIN
+
+IMPORTS
+
+  ATTRIBUTE, OBJECT-CLASS, top
+    FROM InformationFramework
+      {joint-iso-itu-t ds(5) module(1) informationFramework(1) 9} WITH SUCCESSORS
+
+  caseExactIA5Match, caseExactMatch, commonName, description, directoryString,
+    ia5String, integer, integerMatch, UnboundedDirectoryString
+    FROM SelectedAttributeTypes
+      {joint-iso-itu-t ds(5) module(1) selectedAttributeTypes(5) 9} WITH SUCCESSORS
+
+  ipHostNumber, macAddress
+    FROM NIS
+      {iso(1) identified-organization(3) dod(6) internet(1) private(4) enterprise(1) wildboar(56490) module(1) nis(7)} WITH SUCCESSORS
+
+  gotoKioskProfile
+    FROM LdapGosaCoreGoto ;
+
+-- Object identifiers
+
+id-at-goXdmcpIsEnabled OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 10098 1 1 9 1 }
+id-at-goFontPath OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 10098 1 1 9 2 }
+id-at-goExportEntry OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 10098 1 1 9 4 }
+id-at-goSyslogSection OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 10098 1 1 9 9 }
+id-at-goTimeSource OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 10098 1 1 9 10 }
+id-at-goSpoolPath OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 10098 1 1 9 11 }
+id-at-goLdapBase OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 10098 1 1 9 12 }
+id-at-goImapName OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 10098 1 1 9 13 }
+id-at-goImapConnect OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 10098 1 1 9 14 }
+id-at-goImapAdmin OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 10098 1 1 9 15 }
+id-at-goImapPassword OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 10098 1 1 9 16 }
+id-at-goImapSieveServer OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 10098 1 1 9 17 }
+id-at-goImapSievePort OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 10098 1 1 9 18 }
+id-at-goKrbRealm OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 10098 1 1 9 19 }
+id-at-goKrbAdmin OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 10098 1 1 9 20 }
+id-at-goKrbPassword OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 10098 1 1 9 21 }
+id-at-goFaxAdmin OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 10098 1 1 9 22 }
+id-at-goFaxPassword OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 10098 1 1 9 23 }
+id-at-gosaLogDB OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 10098 1 1 9 83 }
+id-at-goLogAdmin OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 10098 1 1 9 24 }
+id-at-goLogPassword OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 10098 1 1 9 25 }
+id-at-goFonAdmin OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 10098 1 1 9 26 }
+id-at-goFonPassword OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 10098 1 1 9 27 }
+id-at-goFonAreaCode OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 10098 1 1 9 28 }
+id-at-goFonCountryCode OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 10098 1 1 9 29 }
+id-at-goGlpiAdmin OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 10098 1 1 9 30 }
+id-at-goGlpiPassword OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 10098 1 1 9 31 }
+id-at-goGlpiDatabase OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 10098 1 1 9 32 }
+id-at-goTerminalServerStatus OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 10098 1 1 9 33 }
+id-at-goNfsServerStatus OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 10098 1 1 9 34 }
+id-at-goNtpServerStatus OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 10098 1 1 9 35 }
+id-at-goSyslogServerStatus OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 10098 1 1 9 36 }
+id-at-goLdapServerStatus OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 10098 1 1 9 37 }
+id-at-goImapServerStatus OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 10098 1 1 9 38 }
+id-at-goKrbServerStatus OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 10098 1 1 9 39 }
+id-at-goFaxServerStatus OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 10098 1 1 9 40 }
+id-at-goLogDBServerStatus OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 10098 1 1 9 41 }
+id-at-goFonServerStatus OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 10098 1 1 9 42 }
+id-at-goShareServerStatus OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 10098 1 1 9 43 }
+id-at-goMailServerStatus OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 10098 1 1 9 44 }
+id-at-goGlpiServerStatus OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 10098 1 1 9 45 }
+id-at-postfixHeaderSizeLimit OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 10098 1 1 9 46 }
+id-at-postfixMailboxSizeLimit OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 10098 1 1 9 47 }
+id-at-postfixMessageSizeLimit OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 10098 1 1 9 48 }
+id-at-postfixMyDestinations OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 10098 1 1 9 49 }
+id-at-postfixMyDomain OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 10098 1 1 9 50 }
+id-at-postfixMyHostname OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 10098 1 1 9 51 }
+id-at-postfixMyNetworks OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 10098 1 1 9 52 }
+id-at-postfixRelayhost OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 10098 1 1 9 53 }
+id-at-postfixTransportTable OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 10098 1 1 9 54 }
+id-at-postfixSenderRestrictions OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 10098 1 1 9 55 }
+id-at-postfixRecipientRestrictions OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 10098 1 1 9 56 }
+id-at-cyrusImap OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 10098 1 1 9 57 }
+id-at-cyrusImapSSL OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 10098 1 1 9 58 }
+id-at-cyrusPop3 OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 10098 1 1 9 59 }
+id-at-cyrusPop3SSL OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 10098 1 1 9 60 }
+id-at-goCupsServerStatus OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 10098 1 1 9 61 }
+id-at-saRewriteHeader OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 10098 1 1 9 62 }
+id-at-saTrustedNetworks OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 10098 1 1 9 63 }
+id-at-saRequiredScore OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 10098 1 1 9 64 }
+id-at-saFlags OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 10098 1 1 9 65 }
+id-at-saRule OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 10098 1 1 9 66 }
+id-at-saStatus OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 10098 1 1 9 67 }
+id-at-avMaxThreads OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 10098 1 1 9 68 }
+id-at-avMaxDirectoryRecursions OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 10098 1 1 9 69 }
+id-at-avUser OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 10098 1 1 9 70 }
+id-at-avFlags OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 10098 1 1 9 71 }
+id-at-avArchiveMaxFileSize OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 10098 1 1 9 72 }
+id-at-avArchiveMaxRecursion OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 10098 1 1 9 73 }
+id-at-avArchiveMaxCompressionRatio OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 10098 1 1 9 74 }
+id-at-avDatabaseMirror OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 10098 1 1 9 75 }
+id-at-avHttpProxyURL OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 10098 1 1 9 76 }
+id-at-avStatus OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 10098 1 1 9 77 }
+id-at-avChecksPerDay OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 10098 1 1 9 78 }
+id-at-goLogDB OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 10098 1 1 9 79 }
+id-at-goLogDBUser OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 10098 1 1 9 80 }
+id-at-goLogDBPassword OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 10098 1 1 9 81 }
+id-at-gotoSessionType OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 10098 1 1 9 82 }
+id-oc-goTerminalServer OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 10098 1 2 1 16 }
+id-oc-goNfsServer OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 10098 1 2 1 19 }
+id-oc-goNtpServer OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 10098 1 2 1 20 }
+id-oc-goSyslogServer OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 10098 1 2 1 21 }
+id-oc-goLdapServer OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 10098 1 2 1 22 }
+id-oc-goCupsServer OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 10098 1 2 1 23 }
+id-oc-goImapServer OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 10098 1 2 1 24 }
+id-oc-goKrbServer OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 10098 1 2 1 25 }
+id-oc-goFaxServer OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 10098 1 2 1 26 }
+id-oc-goServer OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 10098 1 2 1 27 }
+id-oc-goLogDBServer OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 10098 1 2 1 28 }
+id-oc-goFonServer OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 10098 1 2 1 29 }
+id-oc-goShareServer OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 10098 1 2 1 33 }
+id-oc-goMailServer OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 10098 1 2 1 36 }
+id-oc-goGlpiServer OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 10098 1 2 1 37 }
+id-oc-goSpamServer OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 10098 1 2 1 38 }
+id-oc-goVirusServer OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 10098 1 2 1 39 }
+id-oc-gosaLogServer OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 10098 1 2 1 40 }
+id-oc-goEnvironmentServer OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 10098 1 2 1 41 }
+
+-- Attribute types
+
+goXdmcpIsEnabled ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  EQUALITY MATCHING RULE    caseExactIA5Match
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"goXdmcpIsEnabled"}
+  LDAP-DESC                 "Indicates if the server is enabled for XDMCP queries"
+  ID                        id-at-goXdmcpIsEnabled }
+
+goFontPath ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  EQUALITY MATCHING RULE    caseExactIA5Match
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"goFontPath"}
+  LDAP-DESC                 "Fontserver Entry"
+  ID                        id-at-goFontPath }
+
+goExportEntry ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseExactMatch
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"goExportEntry"}
+  LDAP-DESC                 "Provides an export entry"
+  ID                        id-at-goExportEntry }
+
+goSyslogSection ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  EQUALITY MATCHING RULE    caseExactIA5Match
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"goSyslogSection"}
+  LDAP-DESC                 "What sections wants the server for its syslog service? i.e. *.*"
+  ID                        id-at-goSyslogSection }
+
+goTimeSource ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  EQUALITY MATCHING RULE    caseExactIA5Match
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"goTimeSource"}
+  LDAP-DESC                 "List of time sources"
+  ID                        id-at-goTimeSource }
+
+goSpoolPath ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  EQUALITY MATCHING RULE    caseExactIA5Match
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"goSpoolPath"}
+  LDAP-DESC                 "Provides a spool path for printing services"
+  ID                        id-at-goSpoolPath }
+
+goLdapBase ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseExactMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"goLdapBase"}
+  LDAP-DESC                 "Base to use for this LDAP server"
+  ID                        id-at-goLdapBase }
+
+goImapName ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  EQUALITY MATCHING RULE    caseExactIA5Match
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"goImapName"}
+  LDAP-DESC                 "Name of IMAP server appearing in GOsa"
+  ID                        id-at-goImapName }
+
+goImapConnect ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  EQUALITY MATCHING RULE    caseExactIA5Match
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"goImapConnect"}
+  LDAP-DESC                 "PHP connect string for IMAP server"
+  ID                        id-at-goImapConnect }
+
+goImapAdmin ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  EQUALITY MATCHING RULE    caseExactIA5Match
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"goImapAdmin"}
+  LDAP-DESC                 "IMAP admin account"
+  ID                        id-at-goImapAdmin }
+
+goImapPassword ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  EQUALITY MATCHING RULE    caseExactIA5Match
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"goImapPassword"}
+  LDAP-DESC                 "IMAP admin password"
+  ID                        id-at-goImapPassword }
+
+goImapSieveServer ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  EQUALITY MATCHING RULE    caseExactIA5Match
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"goImapSieveServer"}
+  LDAP-DESC                 "Cyrus sieve server address or name"
+  ID                        id-at-goImapSieveServer }
+
+goImapSievePort ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  EQUALITY MATCHING RULE    caseExactIA5Match
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"goImapSievePort"}
+  LDAP-DESC                 "Cyrus sieve server port"
+  ID                        id-at-goImapSievePort }
+
+goKrbRealm ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  EQUALITY MATCHING RULE    caseExactIA5Match
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"goKrbRealm"}
+  LDAP-DESC                 "Default Kerberos realm to use for this server"
+  ID                        id-at-goKrbRealm }
+
+goKrbAdmin ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  EQUALITY MATCHING RULE    caseExactIA5Match
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"goKrbAdmin"}
+  LDAP-DESC                 "Admin principal for kerberos server"
+  ID                        id-at-goKrbAdmin }
+
+goKrbPassword ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  EQUALITY MATCHING RULE    caseExactIA5Match
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"goKrbPassword"}
+  LDAP-DESC                 "Admin password for kerberos server"
+  ID                        id-at-goKrbPassword }
+
+goFaxAdmin ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  EQUALITY MATCHING RULE    caseExactIA5Match
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"goFaxAdmin"}
+  LDAP-DESC                 "Admin principal for fax server"
+  ID                        id-at-goFaxAdmin }
+
+goFaxPassword ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  EQUALITY MATCHING RULE    caseExactIA5Match
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"goFaxPassword"}
+  LDAP-DESC                 "Admin password for fax server"
+  ID                        id-at-goFaxPassword }
+
+gosaLogDB ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  EQUALITY MATCHING RULE    caseExactIA5Match
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"gosaLogDB"}
+  LDAP-DESC                 "GOsa logging DB name"
+  ID                        id-at-gosaLogDB }
+
+goLogAdmin ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  EQUALITY MATCHING RULE    caseExactIA5Match
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"goLogAdmin"}
+  LDAP-DESC                 "Admin principal for log server"
+  ID                        id-at-goLogAdmin }
+
+goLogPassword ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  EQUALITY MATCHING RULE    caseExactIA5Match
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"goLogPassword"}
+  LDAP-DESC                 "Admin password for log server"
+  ID                        id-at-goLogPassword }
+
+goFonAdmin ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  EQUALITY MATCHING RULE    caseExactIA5Match
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"goFonAdmin"}
+  LDAP-DESC                 "Admin principal for fon server"
+  ID                        id-at-goFonAdmin }
+
+goFonPassword ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  EQUALITY MATCHING RULE    caseExactIA5Match
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"goFonPassword"}
+  LDAP-DESC                 "Admin password for fon server"
+  ID                        id-at-goFonPassword }
+
+goFonAreaCode ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  EQUALITY MATCHING RULE    caseExactIA5Match
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"goFonAreaCode"}
+  LDAP-DESC                 "Store area code"
+  ID                        id-at-goFonAreaCode }
+
+goFonCountryCode ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  EQUALITY MATCHING RULE    caseExactIA5Match
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"goFonCountryCode"}
+  LDAP-DESC                 "Store country code"
+  ID                        id-at-goFonCountryCode }
+
+goGlpiAdmin ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  EQUALITY MATCHING RULE    caseExactIA5Match
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"goGlpiAdmin"}
+  LDAP-DESC                 "Admin principal for glpi database server"
+  ID                        id-at-goGlpiAdmin }
+
+goGlpiPassword ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  EQUALITY MATCHING RULE    caseExactIA5Match
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"goGlpiPassword"}
+  LDAP-DESC                 "Admin password for glpi database server"
+  ID                        id-at-goGlpiPassword }
+
+goGlpiDatabase ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  EQUALITY MATCHING RULE    caseExactIA5Match
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"goGlpiDatabase"}
+  LDAP-DESC                 "Database name for glpi extension"
+  ID                        id-at-goGlpiDatabase }
+
+goTerminalServerStatus ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  EQUALITY MATCHING RULE    caseExactIA5Match
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"goTerminalServerStatus"}
+  LDAP-DESC                 "Server status container - on / off / fail"
+  ID                        id-at-goTerminalServerStatus }
+
+goNfsServerStatus ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  EQUALITY MATCHING RULE    caseExactIA5Match
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"goNfsServerStatus"}
+  LDAP-DESC                 "Server status container - on / off / fail"
+  ID                        id-at-goNfsServerStatus }
+
+goNtpServerStatus ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  EQUALITY MATCHING RULE    caseExactIA5Match
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"goNtpServerStatus"}
+  LDAP-DESC                 "Server status container - on / off / fail"
+  ID                        id-at-goNtpServerStatus }
+
+goSyslogServerStatus ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  EQUALITY MATCHING RULE    caseExactIA5Match
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"goSyslogServerStatus"}
+  LDAP-DESC                 "Server status container - on / off / fail"
+  ID                        id-at-goSyslogServerStatus }
+
+goLdapServerStatus ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  EQUALITY MATCHING RULE    caseExactIA5Match
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"goLdapServerStatus"}
+  LDAP-DESC                 "Server status container - on / off / fail"
+  ID                        id-at-goLdapServerStatus }
+
+goImapServerStatus ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  EQUALITY MATCHING RULE    caseExactIA5Match
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"goImapServerStatus"}
+  LDAP-DESC                 "Server status container - on / off / fail"
+  ID                        id-at-goImapServerStatus }
+
+goKrbServerStatus ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  EQUALITY MATCHING RULE    caseExactIA5Match
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"goKrbServerStatus"}
+  LDAP-DESC                 "Server status container - on / off / fail"
+  ID                        id-at-goKrbServerStatus }
+
+goFaxServerStatus ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  EQUALITY MATCHING RULE    caseExactIA5Match
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"goFaxServerStatus"}
+  LDAP-DESC                 "Server status container - on / off / fail"
+  ID                        id-at-goFaxServerStatus }
+
+goLogDBServerStatus ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  EQUALITY MATCHING RULE    caseExactIA5Match
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"goLogDBServerStatus"}
+  LDAP-DESC                 "Server status container - on / off / fail"
+  ID                        id-at-goLogDBServerStatus }
+
+goFonServerStatus ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  EQUALITY MATCHING RULE    caseExactIA5Match
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"goFonServerStatus"}
+  LDAP-DESC                 "Server status container - on / off / fail"
+  ID                        id-at-goFonServerStatus }
+
+goShareServerStatus ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  EQUALITY MATCHING RULE    caseExactIA5Match
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"goShareServerStatus"}
+  LDAP-DESC                 "Server status container - on / off / fail"
+  ID                        id-at-goShareServerStatus }
+
+goMailServerStatus ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  EQUALITY MATCHING RULE    caseExactIA5Match
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"goMailServerStatus"}
+  LDAP-DESC                 "Server status container - on / off / fail"
+  ID                        id-at-goMailServerStatus }
+
+goGlpiServerStatus ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  EQUALITY MATCHING RULE    caseExactIA5Match
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"goGlpiServerStatus"}
+  LDAP-DESC                 "Server status container - on / off / fail"
+  ID                        id-at-goGlpiServerStatus }
+
+postfixHeaderSizeLimit ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  EQUALITY MATCHING RULE    caseExactIA5Match
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"postfixHeaderSizeLimit"}
+  LDAP-DESC                 "Keep postfix header-size-limit variable"
+  ID                        id-at-postfixHeaderSizeLimit }
+
+postfixMailboxSizeLimit ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  EQUALITY MATCHING RULE    caseExactIA5Match
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"postfixMailboxSizeLimit"}
+  LDAP-DESC                 "Keep postfix mailbox-size-limit variable"
+  ID                        id-at-postfixMailboxSizeLimit }
+
+postfixMessageSizeLimit ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  EQUALITY MATCHING RULE    caseExactIA5Match
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"postfixMessageSizeLimit"}
+  LDAP-DESC                 "Keep postfix message-size-limit variable"
+  ID                        id-at-postfixMessageSizeLimit }
+
+postfixMyDestinations ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  EQUALITY MATCHING RULE    caseExactIA5Match
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"postfixMyDestinations"}
+  LDAP-DESC                 "Keep postfix mydestinations variable"
+  ID                        id-at-postfixMyDestinations }
+
+postfixMyDomain ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  EQUALITY MATCHING RULE    caseExactIA5Match
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"postfixMyDomain"}
+  LDAP-DESC                 "Keep postfix mydomain variable"
+  ID                        id-at-postfixMyDomain }
+
+postfixMyHostname ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  EQUALITY MATCHING RULE    caseExactIA5Match
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"postfixMyHostname"}
+  LDAP-DESC                 "Keep postfix myhostname variable"
+  ID                        id-at-postfixMyHostname }
+
+postfixMyNetworks ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  EQUALITY MATCHING RULE    caseExactIA5Match
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"postfixMyNetworks"}
+  LDAP-DESC                 "Keep postfix mynetworks variable"
+  ID                        id-at-postfixMyNetworks }
+
+postfixRelayhost ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  EQUALITY MATCHING RULE    caseExactIA5Match
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"postfixRelayhost"}
+  LDAP-DESC                 "Keep postfix relayhost variable"
+  ID                        id-at-postfixRelayhost }
+
+postfixTransportTable ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  EQUALITY MATCHING RULE    caseExactIA5Match
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"postfixTransportTable"}
+  LDAP-DESC                 "Keep postfix transport tables"
+  ID                        id-at-postfixTransportTable }
+
+postfixSenderRestrictions ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  EQUALITY MATCHING RULE    caseExactIA5Match
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"postfixSenderRestrictions"}
+  LDAP-DESC                 "Keep postfix sender restrictions"
+  ID                        id-at-postfixSenderRestrictions }
+
+postfixRecipientRestrictions ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  EQUALITY MATCHING RULE    caseExactIA5Match
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"postfixRecipientRestrictions"}
+  LDAP-DESC                 "Keep postfix transport tables"
+  ID                        id-at-postfixRecipientRestrictions }
+
+cyrusImap ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  EQUALITY MATCHING RULE    caseExactIA5Match
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"cyrusImap"}
+  LDAP-DESC                 "Start IMAP service? true/false"
+  ID                        id-at-cyrusImap }
+
+cyrusImapSSL ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  EQUALITY MATCHING RULE    caseExactIA5Match
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"cyrusImapSSL"}
+  LDAP-DESC                 "Start IMAP SSL service? true/false"
+  ID                        id-at-cyrusImapSSL }
+
+cyrusPop3 ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  EQUALITY MATCHING RULE    caseExactIA5Match
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"cyrusPop3"}
+  LDAP-DESC                 "Start POP3 service? true/false"
+  ID                        id-at-cyrusPop3 }
+
+cyrusPop3SSL ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  EQUALITY MATCHING RULE    caseExactIA5Match
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"cyrusPop3SSL"}
+  LDAP-DESC                 "Start POP3 SSL service? true/false"
+  ID                        id-at-cyrusPop3SSL }
+
+goCupsServerStatus ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  EQUALITY MATCHING RULE    caseExactIA5Match
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"goCupsServerStatus"}
+  LDAP-DESC                 "Server status container - on / off / fail"
+  ID                        id-at-goCupsServerStatus }
+
+saRewriteHeader ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  EQUALITY MATCHING RULE    caseExactIA5Match
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"saRewriteHeader"}
+  LDAP-DESC                 "Text to place in front of mail subjects"
+  ID                        id-at-saRewriteHeader }
+
+saTrustedNetworks ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  EQUALITY MATCHING RULE    caseExactIA5Match
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"saTrustedNetworks"}
+  LDAP-DESC                 "List of trusted networks"
+  ID                        id-at-saTrustedNetworks }
+
+saRequiredScore ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  EQUALITY MATCHING RULE    integerMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"saRequiredScore"}
+  LDAP-DESC                 "Required score to tag a mail as SPAM"
+  ID                        id-at-saRequiredScore }
+
+saFlags ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  EQUALITY MATCHING RULE    caseExactIA5Match
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"saFlags"}
+  LDAP-DESC                 "Flags for spamassassin"
+  ID                        id-at-saFlags }
+
+saRule ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  EQUALITY MATCHING RULE    caseExactIA5Match
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"saRule"}
+  LDAP-DESC                 "Base64 encoded rule text for spamassassin"
+  ID                        id-at-saRule }
+
+saStatus ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  EQUALITY MATCHING RULE    caseExactIA5Match
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"saStatus"}
+  LDAP-DESC                 "Server status container - on / off / fail"
+  ID                        id-at-saStatus }
+
+avMaxThreads ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  EQUALITY MATCHING RULE    integerMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"avMaxThreads"}
+  LDAP-DESC                 "Number of AV scanning threads"
+  ID                        id-at-avMaxThreads }
+
+avMaxDirectoryRecursions ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  EQUALITY MATCHING RULE    integerMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"avMaxDirectoryRecursions"}
+  LDAP-DESC                 "Number of recursions done with directories"
+  ID                        id-at-avMaxDirectoryRecursions }
+
+avUser ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  EQUALITY MATCHING RULE    caseExactIA5Match
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"avUser"}
+  LDAP-DESC                 "Username to run with"
+  ID                        id-at-avUser }
+
+avFlags ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  EQUALITY MATCHING RULE    caseExactIA5Match
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"avFlags"}
+  LDAP-DESC                 "Special flags for the scan engine"
+  ID                        id-at-avFlags }
+
+avArchiveMaxFileSize ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  EQUALITY MATCHING RULE    integerMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"avArchiveMaxFileSize"}
+  LDAP-DESC                 "Maximum archive file size"
+  ID                        id-at-avArchiveMaxFileSize }
+
+avArchiveMaxRecursion ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  EQUALITY MATCHING RULE    integerMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"avArchiveMaxRecursion"}
+  LDAP-DESC                 "Maximum number of archive nestings"
+  ID                        id-at-avArchiveMaxRecursion }
+
+avArchiveMaxCompressionRatio ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  EQUALITY MATCHING RULE    integerMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"avArchiveMaxCompressionRatio"}
+  LDAP-DESC                 "Maximum compression ratio"
+  ID                        id-at-avArchiveMaxCompressionRatio }
+
+avDatabaseMirror ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  EQUALITY MATCHING RULE    caseExactIA5Match
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"avDatabaseMirror"}
+  LDAP-DESC                 "Where to find updates"
+  ID                        id-at-avDatabaseMirror }
+
+avHttpProxyURL ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  EQUALITY MATCHING RULE    caseExactIA5Match
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"avHttpProxyURL"}
+  LDAP-DESC                 "How to get the updates"
+  ID                        id-at-avHttpProxyURL }
+
+avStatus ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  EQUALITY MATCHING RULE    caseExactIA5Match
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"avStatus"}
+  LDAP-DESC                 "Server status container - on / off / fail"
+  ID                        id-at-avStatus }
+
+avChecksPerDay ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  EQUALITY MATCHING RULE    integerMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"avChecksPerDay"}
+  LDAP-DESC                 "Update checks per day"
+  ID                        id-at-avChecksPerDay }
+
+goLogDB ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  EQUALITY MATCHING RULE    caseExactIA5Match
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"goLogDB"}
+  LDAP-DESC                 "Name of logging DB"
+  ID                        id-at-goLogDB }
+
+goLogDBUser ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  EQUALITY MATCHING RULE    caseExactIA5Match
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"goLogDBUser"}
+  LDAP-DESC                 "Auth user for logging DB"
+  ID                        id-at-goLogDBUser }
+
+goLogDBPassword ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  EQUALITY MATCHING RULE    caseExactIA5Match
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"goLogDBPassword"}
+  LDAP-DESC                 "Password for logging DB user"
+  ID                        id-at-goLogDBPassword }
+
+gotoSessionType ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  EQUALITY MATCHING RULE    caseExactIA5Match
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"gotoSessionType"}
+  LDAP-DESC                 "Supported type for a terminal server"
+  ID                        id-at-gotoSessionType }
+
+-- Object classes
+
+goTerminalServer OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  KIND                      auxiliary
+  MUST CONTAIN              { commonName
+                              | goXdmcpIsEnabled }
+  MAY CONTAIN               { description
+                              | goTerminalServerStatus
+                              | gotoSessionType
+                              | goFontPath }
+  LDAP-NAME                 {"goTerminalServer"}
+  LDAP-DESC                 "Terminal server description (v2.7)"
+  ID                        id-oc-goTerminalServer }
+
+goNfsServer OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  KIND                      auxiliary
+  MUST CONTAIN              { commonName }
+  MAY CONTAIN               { goExportEntry
+                              | description
+                              | goNfsServerStatus }
+  LDAP-NAME                 {"goNfsServer"}
+  LDAP-DESC                 "NFS server description (v2.7)"
+  ID                        id-oc-goNfsServer }
+
+goNtpServer OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  KIND                      auxiliary
+  MUST CONTAIN              { commonName }
+  MAY CONTAIN               { goTimeSource
+                              | description
+                              | goNtpServerStatus }
+  LDAP-NAME                 {"goNtpServer"}
+  LDAP-DESC                 "Time server description (v2.7)"
+  ID                        id-oc-goNtpServer }
+
+goSyslogServer OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  KIND                      auxiliary
+  MUST CONTAIN              { commonName }
+  MAY CONTAIN               { goSyslogSection
+                              | description
+                              | goSyslogServerStatus }
+  LDAP-NAME                 {"goSyslogServer"}
+  LDAP-DESC                 "Syslog server description (v2.7)"
+  ID                        id-oc-goSyslogServer }
+
+goLdapServer OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  KIND                      auxiliary
+  MUST CONTAIN              { commonName }
+  MAY CONTAIN               { goLdapBase
+                              | description
+                              | goLdapServerStatus }
+  LDAP-NAME                 {"goLdapServer"}
+  LDAP-DESC                 "LDAP server description (v2.7)"
+  ID                        id-oc-goLdapServer }
+
+goCupsServer OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  KIND                      auxiliary
+  MUST CONTAIN              { commonName }
+  MAY CONTAIN               { description
+                              | goCupsServerStatus }
+  LDAP-NAME                 {"goCupsServer"}
+  LDAP-DESC                 "CUPS server description (v2.7)"
+  ID                        id-oc-goCupsServer }
+
+goImapServer OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  KIND                      auxiliary
+  MUST CONTAIN              { commonName
+                              | goImapName
+                              | goImapConnect
+                              | goImapAdmin
+                              | goImapPassword }
+  MAY CONTAIN               { goImapSieveServer
+                              | goImapSievePort
+                              | description
+                              | goImapServerStatus
+                              | cyrusImap
+                              | cyrusImapSSL
+                              | cyrusPop3
+                              | cyrusPop3SSL }
+  LDAP-NAME                 {"goImapServer"}
+  LDAP-DESC                 "IMAP server description (v2.7)"
+  ID                        id-oc-goImapServer }
+
+goKrbServer OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  KIND                      auxiliary
+  MUST CONTAIN              { commonName
+                              | goKrbRealm }
+  MAY CONTAIN               { description
+                              | goKrbServerStatus }
+  LDAP-NAME                 {"goKrbServer"}
+  LDAP-DESC                 "Kerberos server description (v2.7)"
+  ID                        id-oc-goKrbServer }
+
+goFaxServer OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  KIND                      auxiliary
+  MUST CONTAIN              { commonName
+                              | goFaxAdmin
+                              | goFaxPassword }
+  MAY CONTAIN               { description
+                              | goFaxServerStatus }
+  LDAP-NAME                 {"goFaxServer"}
+  LDAP-DESC                 "Fax server description (v2.7)"
+  ID                        id-oc-goFaxServer }
+
+goServer OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  KIND                      auxiliary
+  MUST CONTAIN              { commonName }
+  MAY CONTAIN               { description
+                              | macAddress
+                              | ipHostNumber }
+  LDAP-NAME                 {"goServer"}
+  LDAP-DESC                 "Server description (v2.7)"
+  ID                        id-oc-goServer }
+
+goLogDBServer OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  KIND                      auxiliary
+  MUST CONTAIN              { commonName
+                              | gosaLogDB
+                              | goLogAdmin
+                              | goLogPassword }
+  MAY CONTAIN               { goLogDBServerStatus }
+  LDAP-NAME                 {"goLogDBServer"}
+  LDAP-DESC                 "Log DB server description (v2.7)"
+  ID                        id-oc-goLogDBServer }
+
+goFonServer OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  KIND                      auxiliary
+  MUST CONTAIN              { commonName
+                              | goFonAdmin
+                              | goFonPassword
+                              | goFonAreaCode
+                              | goFonCountryCode }
+  MAY CONTAIN               { description
+                              | goFonServerStatus }
+  LDAP-NAME                 {"goFonServer"}
+  LDAP-DESC                 "Fon server description (v2.7)"
+  ID                        id-oc-goFonServer }
+
+goShareServer OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  KIND                      auxiliary
+  MUST CONTAIN              { commonName }
+  MAY CONTAIN               { description
+                              | goExportEntry
+                              | goShareServerStatus }
+  LDAP-NAME                 {"goShareServer"}
+  LDAP-DESC                 "Share server description (v2.7)"
+  ID                        id-oc-goShareServer }
+
+goMailServer OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  KIND                      auxiliary
+  MUST CONTAIN              { commonName }
+  MAY CONTAIN               { description
+                              | goMailServerStatus
+                              | postfixHeaderSizeLimit
+                              | postfixMailboxSizeLimit
+                              | postfixMessageSizeLimit
+                              | postfixMyDestinations
+                              | postfixMyDomain
+                              | postfixMyHostname
+                              | postfixMyNetworks
+                              | postfixRelayhost
+                              | postfixTransportTable
+                              | postfixSenderRestrictions
+                              | postfixRecipientRestrictions }
+  LDAP-NAME                 {"goMailServer"}
+  LDAP-DESC                 "Mail server definition (v2.7)"
+  ID                        id-oc-goMailServer }
+
+goGlpiServer OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  KIND                      auxiliary
+  MUST CONTAIN              { commonName
+                              | goGlpiAdmin
+                              | goGlpiDatabase }
+  MAY CONTAIN               { description
+                              | goGlpiPassword
+                              | goGlpiServerStatus }
+  LDAP-NAME                 {"goGlpiServer"}
+  LDAP-DESC                 "Glpi server definition (v2.7)"
+  ID                        id-oc-goGlpiServer }
+
+goSpamServer OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  KIND                      auxiliary
+  MUST CONTAIN              { commonName }
+  MAY CONTAIN               { saRewriteHeader
+                              | saTrustedNetworks
+                              | saRequiredScore
+                              | saFlags
+                              | saRule
+                              | saStatus }
+  LDAP-NAME                 {"goSpamServer"}
+  LDAP-DESC                 "Spam server definition (v2.7)"
+  ID                        id-oc-goSpamServer }
+
+goVirusServer OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  KIND                      auxiliary
+  MUST CONTAIN              { commonName }
+  MAY CONTAIN               { avMaxThreads
+                              | avMaxDirectoryRecursions
+                              | avUser
+                              | avFlags
+                              | avArchiveMaxFileSize
+                              | avArchiveMaxRecursion
+                              | avArchiveMaxCompressionRatio
+                              | avDatabaseMirror
+                              | avChecksPerDay
+                              | avHttpProxyURL
+                              | avStatus }
+  LDAP-NAME                 {"goVirusServer"}
+  LDAP-DESC                 "Virus server definition (v2.7)"
+  ID                        id-oc-goVirusServer }
+
+gosaLogServer OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  KIND                      auxiliary
+  MUST CONTAIN              { commonName
+                              | goLogDB
+                              | goLogDBUser
+                              | goLogDBPassword }
+  LDAP-NAME                 {"gosaLogServer"}
+  LDAP-DESC                 "GOsa log server (v2.7)"
+  ID                        id-oc-gosaLogServer }
+
+goEnvironmentServer OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  KIND                      auxiliary
+  MUST CONTAIN              { commonName }
+  MAY CONTAIN               { gotoKioskProfile }
+  LDAP-NAME                 {"goEnvironmentServer"}
+  LDAP-DESC                 "Environment server definition (v2.7)"
+  ID                        id-oc-goEnvironmentServer }
+END

@@ -1,0 +1,123 @@
+-- Derived from data/ldap-schema/certmap.ldif
+-- Upstream: https://github.com/stlaz/freeipa/blob/ffc36e82639b08f5370261b87c40b55fffbf9b99/install/share/73certmap.ldif#L12
+-- This module is a container for LDAP schema. It has no module identifier.
+-- X- extension fields from the LDAP schema are comments. USAGE userApplications and structural KIND are omitted because they are the defaults.
+-- Object classes with no SUP were subclassed from top, the LDAP default (RFC 4512).
+LdapCertmap DEFINITIONS ::=
+BEGIN
+
+IMPORTS
+
+  ATTRIBUTE, OBJECT-CLASS, top
+    FROM InformationFramework
+      {joint-iso-itu-t ds(5) module(1) informationFramework(1) 9} WITH SUCCESSORS
+
+  boolean, booleanMatch, caseIgnoreMatch, caseIgnoreSubstringsMatch,
+    commonName, description, directoryString, integer,
+    UnboundedDirectoryString
+    FROM SelectedAttributeTypes
+      {joint-iso-itu-t ds(5) module(1) selectedAttributeTypes(5) 9} WITH SUCCESSORS
+
+  associatedDomain
+    FROM MIXERAddressMapping
+      {iso(1) identified-organization(3) dod(6) internet(1) private(4) enterprise(1) wildboar(56490) module(1) mixer-address-mapping(9)} WITH SUCCESSORS
+
+  ipaEnabledFlag
+    FROM Ldap60basev2 ;
+
+-- Object identifiers
+
+id-at-ipaCertMapPromptUsername OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 8 22 1 1 }
+id-at-ipaCertMapMapRule OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 8 22 1 2 }
+id-at-ipaCertMapMatchRule OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 8 22 1 3 }
+id-at-ipaCertMapData OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 8 22 1 4 }
+id-at-ipaCertMapPriority OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 8 22 1 5 }
+id-oc-ipaCertMapConfigObject OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 8 22 2 1 }
+id-oc-ipaCertMapRule OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 8 22 2 2 }
+id-oc-ipaCertMapObject OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 8 22 2 3 }
+
+-- Attribute types
+
+-- X-ORIGIN: "IPA v4.5"
+ipaCertMapPromptUsername ATTRIBUTE ::= {
+  WITH SYNTAX               BOOLEAN
+  EQUALITY MATCHING RULE    booleanMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               boolean.&id
+  LDAP-NAME                 {"ipaCertMapPromptUsername"}
+  LDAP-DESC                 "Prompt for the username when multiple identities are mapped to a certificate"
+  ID                        id-at-ipaCertMapPromptUsername }
+
+-- X-ORIGIN: "IPA v4.5"
+ipaCertMapMapRule ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"ipaCertMapMapRule"}
+  LDAP-DESC                 "Certificate Mapping Rule"
+  ID                        id-at-ipaCertMapMapRule }
+
+-- X-ORIGIN: "IPA v4.5"
+ipaCertMapMatchRule ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"ipaCertMapMatchRule"}
+  LDAP-DESC                 "Certificate Matching Rule"
+  ID                        id-at-ipaCertMapMatchRule }
+
+-- X-ORIGIN: "IPA v4.5"
+ipaCertMapData ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseIgnoreMatch
+  SUBSTRINGS MATCHING RULE  caseIgnoreSubstringsMatch
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"ipaCertMapData"}
+  LDAP-DESC                 "Certificate Mapping Data"
+  ID                        id-at-ipaCertMapData }
+
+-- X-ORIGIN: "IPA v4.5"
+ipaCertMapPriority ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"ipaCertMapPriority"}
+  LDAP-DESC                 "Rule priority"
+  ID                        id-at-ipaCertMapPriority }
+
+-- Object classes
+
+-- X-ORIGIN: "IPA v4.5"
+-- SUP was absent. RFC 4512 treats that as a subclass of top, so SUBCLASS OF { top } was added.
+ipaCertMapConfigObject OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  KIND                      auxiliary
+  MAY CONTAIN               { ipaCertMapPromptUsername }
+  LDAP-NAME                 {"ipaCertMapConfigObject"}
+  LDAP-DESC                 "IPA Certificate Mapping global config options"
+  ID                        id-oc-ipaCertMapConfigObject }
+
+-- X-ORIGIN: "IPA v4.5"
+ipaCertMapRule OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  MUST CONTAIN              { commonName }
+  MAY CONTAIN               { description
+                              | ipaCertMapMapRule
+                              | ipaCertMapMatchRule
+                              | associatedDomain
+                              | ipaCertMapPriority
+                              | ipaEnabledFlag }
+  LDAP-NAME                 {"ipaCertMapRule"}
+  LDAP-DESC                 "IPA Certificate Mapping rule"
+  ID                        id-oc-ipaCertMapRule }
+
+-- X-ORIGIN: "IPA v4.5"
+-- SUP was absent. RFC 4512 treats that as a subclass of top, so SUBCLASS OF { top } was added.
+ipaCertMapObject OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  KIND                      auxiliary
+  MAY CONTAIN               { ipaCertMapData }
+  LDAP-NAME                 {"ipaCertMapObject"}
+  LDAP-DESC                 "IPA Object for Certificate Mapping"
+  ID                        id-oc-ipaCertMapObject }
+END

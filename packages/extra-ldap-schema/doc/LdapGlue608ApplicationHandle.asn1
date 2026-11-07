@@ -1,0 +1,88 @@
+-- Derived from data/ldap-schema/glue/6-08-ApplicationHandle.schema
+-- Upstream: http://redmine.ogf.org/projects/glue-wg
+-- This module is a container for LDAP schema. It has no module identifier.
+-- X- extension fields from the LDAP schema are comments. USAGE userApplications and structural KIND are omitted because they are the defaults.
+LdapGlue608ApplicationHandle DEFINITIONS ::=
+BEGIN
+
+IMPORTS
+
+  ATTRIBUTE, OBJECT-CLASS
+    FROM InformationFramework
+      {joint-iso-itu-t ds(5) module(1) informationFramework(1) 9} WITH SUCCESSORS
+
+  caseExactMatch, caseExactSubstringsMatch, directoryString,
+    UnboundedDirectoryString
+    FROM SelectedAttributeTypes
+      {joint-iso-itu-t ds(5) module(1) selectedAttributeTypes(5) 9} WITH SUCCESSORS
+
+  gLUE2Entity
+    FROM LdapGlue501Entity ;
+
+-- Object identifiers
+
+id-at-gLUE2ApplicationHandleID OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 6757 100 1 1 24 1 }
+id-at-gLUE2ApplicationHandleType OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 6757 100 1 1 24 2 }
+id-at-gLUE2ApplicationHandleValue OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 6757 100 1 1 24 3 }
+id-at-gLUE2ApplicationHandleApplicationEnvironmentForeignKey OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 6757 100 1 1 24 4 }
+id-oc-gLUE2ApplicationHandle OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 6757 100 1 1 24 }
+
+-- Attribute types
+
+-- initial capital of "GLUE2ApplicationHandleID" lowercased so the assignment is a valuereference.
+gLUE2ApplicationHandleID ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseExactMatch
+  SUBSTRINGS MATCHING RULE  caseExactSubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"GLUE2ApplicationHandleID"}
+  LDAP-DESC                 "Type of handle for an application environment"
+  ID                        id-at-gLUE2ApplicationHandleID }
+
+-- initial capital of "GLUE2ApplicationHandleType" lowercased so the assignment is a valuereference.
+gLUE2ApplicationHandleType ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseExactMatch
+  SUBSTRINGS MATCHING RULE  caseExactSubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"GLUE2ApplicationHandleType"}
+  LDAP-DESC                 "Type of handle for an application environment"
+  ID                        id-at-gLUE2ApplicationHandleType }
+
+-- initial capital of "GLUE2ApplicationHandleValue" lowercased so the assignment is a valuereference.
+gLUE2ApplicationHandleValue ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseExactMatch
+  SUBSTRINGS MATCHING RULE  caseExactSubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"GLUE2ApplicationHandleValue"}
+  LDAP-DESC                 "Actionable value to trigger the handle method"
+  ID                        id-at-gLUE2ApplicationHandleValue }
+
+-- initial capital of "GLUE2ApplicationHandleApplicationEnvironmentForeignKey" lowercased so the assignment is a valuereference.
+gLUE2ApplicationHandleApplicationEnvironmentForeignKey ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseExactMatch
+  SUBSTRINGS MATCHING RULE  caseExactSubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"GLUE2ApplicationHandleApplicationEnvironmentForeignKey"}
+  LDAP-DESC                 "ForeignKey"
+  ID                        id-at-gLUE2ApplicationHandleApplicationEnvironmentForeignKey }
+
+-- Object classes
+
+-- initial capital of "GLUE2ApplicationHandle" lowercased so the assignment is a valuereference.
+gLUE2ApplicationHandle OBJECT-CLASS ::= {
+  SUBCLASS OF               { gLUE2Entity }
+  MUST CONTAIN              { gLUE2ApplicationHandleID
+                              | gLUE2ApplicationHandleType
+                              | gLUE2ApplicationHandleValue
+                              | gLUE2ApplicationHandleApplicationEnvironmentForeignKey }
+  LDAP-NAME                 {"GLUE2ApplicationHandle"}
+  LDAP-DESC                 "Technique for bootstrapping and/or accessing the application"
+  ID                        id-oc-gLUE2ApplicationHandle }
+END

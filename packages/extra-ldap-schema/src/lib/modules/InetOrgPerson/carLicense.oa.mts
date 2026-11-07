@@ -1,0 +1,60 @@
+/* eslint-disable */
+import { id_at_carLicense } from "../InetOrgPerson/id-at-carLicense.va.mjs";
+import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
+import { userApplications /* IMPORTED_SHORT_ENUMERATION_ITEM */ } from "../InformationFramework/AttributeUsage.ta.mjs";
+import { type UnboundedDirectoryString, _decode_UnboundedDirectoryString, _encode_UnboundedDirectoryString } from "../SelectedAttributeTypes/UnboundedDirectoryString.ta.mjs";
+import { caseIgnoreMatch } from "../SelectedAttributeTypes/caseIgnoreMatch.oa.mjs";
+import { caseIgnoreOrderingMatch } from "../SelectedAttributeTypes/caseIgnoreOrderingMatch.oa.mjs";
+import { caseIgnoreSubstringsMatch } from "../SelectedAttributeTypes/caseIgnoreSubstringsMatch.oa.mjs";
+import { directoryString } from "../SelectedAttributeTypes/directoryString.oa.mjs";
+
+
+/**
+ * @summary carLicense
+ * @description
+ * 
+ * ### ASN.1 Definition:
+ * 
+ * ```asn1
+ * carLicense ATTRIBUTE ::= {
+ *     WITH SYNTAX                 UnboundedDirectoryString
+ *     EQUALITY MATCHING RULE         caseIgnoreMatch
+ *     ORDERING MATCHING RULE        caseIgnoreOrderingMatch
+ *     SUBSTRINGS MATCHING RULE     caseIgnoreSubstringsMatch
+ *     LDAP-SYNTAX                 directoryString.&id
+ *     LDAP-NAME                     {"carLicense"}
+ *     LDAP-DESC                    "RFC2798: vehicle license or registration plate"
+ *     ID                          id-at-carLicense
+ * }
+ * ```
+ * 
+ * @constant
+ * @type {ATTRIBUTE<UnboundedDirectoryString>}
+ * @implements {ATTRIBUTE<UnboundedDirectoryString>}
+ */
+export
+const carLicense: ATTRIBUTE<UnboundedDirectoryString> = {
+    class: "ATTRIBUTE",
+    decoderFor: {
+        "&Type": _decode_UnboundedDirectoryString,
+    },
+    encoderFor: {
+        "&Type": _encode_UnboundedDirectoryString,
+    },
+    "&equality-match": caseIgnoreMatch /* OBJECT_FIELD_SETTING */,
+    "&ordering-match": caseIgnoreOrderingMatch /* OBJECT_FIELD_SETTING */,
+    "&substrings-match": caseIgnoreSubstringsMatch /* OBJECT_FIELD_SETTING */,
+    "&ldapSyntax": directoryString["&id"] /* OBJECT_FIELD_SETTING */,
+    "&ldapName": [ "carLicense" ] /* OBJECT_FIELD_SETTING */,
+    "&ldapDesc": "RFC2798: vehicle license or registration plate" /* OBJECT_FIELD_SETTING */,
+    "&id": id_at_carLicense /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,
+    "&Type": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
+    "&single-valued": false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
+    "&collective": false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
+    "&dummy": false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
+    "&no-user-modification": false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
+    "&usage": userApplications /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
+    "&obsolete": false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
+};
+
+/* eslint-enable */

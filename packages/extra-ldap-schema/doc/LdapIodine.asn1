@@ -1,0 +1,1314 @@
+-- Derived from data/ldap-schema/iodine.schema
+-- Upstream: https://github.com/tjcsl/iodine/blob/422ee7e604b43d82b3544ea906b72114d12c589e/ldap/iodine.schema
+-- This module is a container for LDAP schema. It has no module identifier.
+-- X- extension fields from the LDAP schema are comments. USAGE userApplications and structural KIND are omitted because they are the defaults.
+-- Object classes with no SUP were subclassed from top, the LDAP default (RFC 4512).
+-- LDAP {length} bounds on directory strings are DirectoryString{n}. Bounds on IA5String, PrintableString, NumericString, and OCTET STRING are SIZE (1..n). Other bounds stay comments because the LDAP figure is an encoded-length hint.
+LdapIodine DEFINITIONS ::=
+BEGIN
+
+IMPORTS
+
+  alias, ATTRIBUTE, DistinguishedName, distinguishedNameMatch, OBJECT-CLASS,
+    top
+    FROM InformationFramework
+      {joint-iso-itu-t ds(5) module(1) informationFramework(1) 9} WITH SUCCESSORS
+
+  boolean, booleanMatch, caseExactMatch, caseIgnoreMatch,
+    caseIgnoreSubstringsMatch, commonName, description, directoryString,
+    DirectoryString, dn, givenName, integer, integerMatch, numericString,
+    numericStringMatch, numericStringSubstringsMatch, owner, surname, uid,
+    UnboundedDirectoryString, uniqueMember
+    FROM SelectedAttributeTypes
+      {joint-iso-itu-t ds(5) module(1) selectedAttributeTypes(5) 9} WITH SUCCESSORS
+
+  userPassword
+    FROM AuthenticationFramework
+      {joint-iso-itu-t ds(5) module(1) authenticationFramework(7) 9} WITH SUCCESSORS
+
+  displayName, employeeNumber, inetOrgPerson
+    FROM InetOrgPerson
+      {iso(1) identified-organization(3) dod(6) internet(1) private(4) enterprise(1) wildboar(56490) module(1) inetorgperson(5)} WITH SUCCESSORS
+
+  gidNumber, homeDirectory, loginShell, posixAccount, uidNumber
+    FROM NIS
+      {iso(1) identified-organization(3) dod(6) internet(1) private(4) enterprise(1) wildboar(56490) module(1) nis(7)} WITH SUCCESSORS
+
+  roomNumber
+    FROM LdapSchema2ldifCosine
+
+  jpegPhoto
+    FROM LdapSchema2ldifInetorgperson ;
+
+-- Object identifiers
+
+id-at-graduationYear OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 20601 1 1 1 }
+id-at-tjhsstStudentId OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 20601 1 1 2 }
+id-at-classPeriod OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 20601 1 1 3 }
+id-at-shortClassName OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 20601 1 1 4 }
+id-at-perm-showpictures OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 20601 1 1 5 }
+id-at-perm-showaddress OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 20601 1 1 6 }
+id-at-perm-showtelephone OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 20601 1 1 7 }
+id-at-block OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 20601 1 1 8 }
+id-at-classRef OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 20601 1 1 9 }
+id-at-eighthoffice-comments OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 20601 1 1 10 }
+id-at-sponsorDn OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 20601 1 1 11 }
+id-at-groupLeader OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 20601 1 1 12 }
+id-at-counselor OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 20601 1 1 13 }
+id-at-iodineUid OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 20601 1 1 14 }
+id-at-tjhsstSectionId OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 20601 1 1 17 }
+id-at-prerequisite OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 20601 1 1 18 }
+id-at-corequisite OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 20601 1 1 19 }
+id-at-tjhsstClassId OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 20601 1 1 20 }
+id-at-tjhsstActivityId OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 20601 1 1 21 }
+id-at-tjhsstGroupId OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 20601 1 1 22 }
+id-at-courseLength OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 20601 1 1 23 }
+id-at-eighthBlockId OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 20601 1 1 24 }
+id-at-enrolledStudent OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 20601 1 1 26 }
+id-at-middlename OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 20601 1 1 27 }
+id-at-groupMembership OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 20601 1 1 28 }
+id-at-iodineUidNumber OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 20601 1 1 29 }
+id-at-birthday OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 20601 1 1 30 }
+id-at-nickname OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 20601 1 1 31 }
+id-at-gender OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 20601 1 1 32 }
+id-at-startpage OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 20601 1 1 33 }
+id-at-style OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 20601 1 1 34 }
+id-at-header OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 20601 1 1 35 }
+id-at-chrome OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 20601 1 1 36 }
+id-at-aim OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 20601 1 1 37 }
+id-at-yahoo OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 20601 1 1 38 }
+id-at-msn OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 20601 1 1 39 }
+id-at-jabber OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 20601 1 1 40 }
+id-at-icq OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 20601 1 1 41 }
+id-at-googleTalk OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 20601 1 1 42 }
+id-at-webpage OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 20601 1 1 43 }
+id-at-locker OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 20601 1 1 44 }
+id-at-perm-showbirthday OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 20601 1 1 46 }
+id-at-perm-showmap OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 20601 1 1 47 }
+id-at-perm-showschedule OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 20601 1 1 48 }
+id-at-soundexlast OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 20601 1 1 49 }
+id-at-soundexfirst OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 20601 1 1 50 }
+id-at-perm-showbirthday-self OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 20601 1 1 55 }
+id-at-perm-showmap-self OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 20601 1 1 56 }
+id-at-perm-showschedule-self OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 20601 1 1 57 }
+id-at-perm-showpictures-self OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 20601 1 1 58 }
+id-at-perm-showaddress-self OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 20601 1 1 59 }
+id-at-perm-showtelephone-self OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 20601 1 1 60 }
+id-at-xfire OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 20601 1 1 61 }
+id-at-metaphonelast OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 20601 1 1 63 }
+id-at-metaphonefirst OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 20601 1 1 64 }
+id-at-quarterNumber OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 20601 1 1 65 }
+id-at-preferredPhoto OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 20601 1 1 66 }
+id-at-mailentries OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 20601 1 1 67 }
+id-at-enrolledclass OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 20601 1 1 68 }
+id-at-perm-showeighth-self OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 20601 1 1 69 }
+id-at-skype OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 20601 1 1 70 }
+id-at-boxcolor OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 20601 1 1 71 }
+id-at-boxtitlecolor OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 20601 1 1 72 }
+id-at-perm-showeighth OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 20601 1 1 73 }
+id-at-is-admin OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 20601 1 1 74 }
+id-at-afsid OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 20601 1 1 75 }
+id-at-perm-showlocker OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 20601 1 1 76 }
+id-at-perm-showlocker-self OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 20601 1 1 77 }
+id-at-is-student-admin OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 20601 1 1 78 }
+id-at-friend OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 20601 1 1 79 }
+id-at-perm-showtelephone-friend OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 20601 1 1 80 }
+id-at-eighthAgreement OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 20601 1 1 81 }
+id-oc-tjhsstStudent OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 20601 1 2 1 }
+id-oc-tjhsstTeacher OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 20601 1 2 2 }
+id-oc-tjStarPresenter OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 20601 1 2 3 }
+id-oc-tjhsstClass OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 20601 1 2 4 }
+id-oc-tjhsstUser OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 20601 1 2 5 }
+id-oc-syslabUser OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 20601 1 2 8 }
+id-oc-tjhsstRoom OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 20601 1 2 9 }
+id-oc-tjhsstYear OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 20601 1 2 10 }
+id-oc-prerequisiteGrouping OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 20601 1 2 11 }
+id-oc-corequisiteGrouping OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 20601 1 2 12 }
+id-oc-prerequisiteANDGrouping OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 20601 1 2 13 }
+id-oc-prerequisiteORGrouping OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 20601 1 2 14 }
+id-oc-corequisiteANDGrouping OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 20601 1 2 15 }
+id-oc-corequisiteORGrouping OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 20601 1 2 16 }
+id-oc-iodineAlias OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 20601 1 2 17 }
+id-oc-tjhsstCounselor OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 20601 1 2 18 }
+id-oc-simpleUser OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 20601 1 2 19 }
+id-oc-iodineGroup OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 20601 1 2 20 }
+id-oc-iodinePhoto OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 20601 1 2 21 }
+
+-- Attribute types
+
+-- OID written as i2Attr:1 and expanded with this file's objectidentifier macros.
+-- LDAP syntax length {4} kept as a comment only; it is an encoded-length hint, not a value constraint.
+-- SYNTAX integerSyntax expanded to 1.3.6.1.4.1.1466.115.121.1.27 through an objectidentifier macro.
+graduationYear ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  EQUALITY MATCHING RULE    integerMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"graduationYear", "gradYear", "year"}
+  LDAP-DESC                 "A year of graduation"
+  ID                        id-at-graduationYear }
+
+-- OID written as i2Attr:2 and expanded with this file's objectidentifier macros.
+-- SYNTAX integerSyntax expanded to 1.3.6.1.4.1.1466.115.121.1.27 through an objectidentifier macro.
+tjhsstStudentId ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  EQUALITY MATCHING RULE    integerMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"tjhsstStudentId", "studentId", "fcpsStudentId"}
+  LDAP-DESC                 "The FCPS Student ID Number"
+  ID                        id-at-tjhsstStudentId }
+
+-- OID written as i2Attr:3 and expanded with this file's objectidentifier macros.
+-- SYNTAX stringSyntax expanded to 1.3.6.1.4.1.1466.115.121.1.15 through an objectidentifier macro.
+classPeriod ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseIgnoreMatch
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"classPeriod", "period", "tjhsstPeriod", "periodNo", "periodNumber"}
+  LDAP-DESC                 "The period of a class"
+  ID                        id-at-classPeriod }
+
+-- OID written as i2Attr:4 and expanded with this file's objectidentifier macros.
+-- SYNTAX stringSyntax expanded to 1.3.6.1.4.1.1466.115.121.1.15 through an objectidentifier macro.
+shortClassName ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseIgnoreMatch
+  SUBSTRINGS MATCHING RULE  caseIgnoreSubstringsMatch
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"shortClassName", "abbrevClassName"}
+  LDAP-DESC                 "The abbreviated name of a class"
+  ID                        id-at-shortClassName }
+
+-- OID written as i2Attr:5 and expanded with this file's objectidentifier macros.
+-- SYNTAX boolSyntax expanded to 1.3.6.1.4.1.1466.115.121.1.7 through an objectidentifier macro.
+perm-showpictures ATTRIBUTE ::= {
+  WITH SYNTAX               BOOLEAN
+  EQUALITY MATCHING RULE    booleanMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               boolean.&id
+  LDAP-NAME                 {"perm-showpictures", "perm-showpicture", "showpictures", "showpicture"}
+  LDAP-DESC                 "Whether the pictures should be visible to others"
+  ID                        id-at-perm-showpictures }
+
+-- OID written as i2Attr:6 and expanded with this file's objectidentifier macros.
+-- SYNTAX boolSyntax expanded to 1.3.6.1.4.1.1466.115.121.1.7 through an objectidentifier macro.
+perm-showaddress ATTRIBUTE ::= {
+  WITH SYNTAX               BOOLEAN
+  EQUALITY MATCHING RULE    booleanMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               boolean.&id
+  LDAP-NAME                 {"perm-showaddress", "showaddress"}
+  LDAP-DESC                 "Whether the address should be visible to others"
+  ID                        id-at-perm-showaddress }
+
+-- OID written as i2Attr:7 and expanded with this file's objectidentifier macros.
+-- SYNTAX boolSyntax expanded to 1.3.6.1.4.1.1466.115.121.1.7 through an objectidentifier macro.
+perm-showtelephone ATTRIBUTE ::= {
+  WITH SYNTAX               BOOLEAN
+  EQUALITY MATCHING RULE    booleanMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               boolean.&id
+  LDAP-NAME                 {"perm-showtelephone", "showtelephone", "showphone", "showphonenumber"}
+  LDAP-DESC                 "Whether the telephone number(s) should be visible to others"
+  ID                        id-at-perm-showtelephone }
+
+-- OID written as i2Attr:8 and expanded with this file's objectidentifier macros.
+-- SYNTAX stringSyntax expanded to 1.3.6.1.4.1.1466.115.121.1.15 through an objectidentifier macro.
+block ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseIgnoreMatch
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"block", "blockLetter", "eighthBlock"}
+  LDAP-DESC                 "The block of an activity"
+  ID                        id-at-block }
+
+-- OID written as i2Attr:9 and expanded with this file's objectidentifier macros.
+-- SYNTAX dnSyntax expanded to 1.3.6.1.4.1.1466.115.121.1.12 through an objectidentifier macro.
+classRef ATTRIBUTE ::= {
+  WITH SYNTAX               DistinguishedName
+  EQUALITY MATCHING RULE    distinguishedNameMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               dn.&id
+  LDAP-NAME                 {"classRef", "classDn", "memberClass"}
+  LDAP-DESC                 "A reference to a class by DN"
+  ID                        id-at-classRef }
+
+-- OID written as i2Attr:10 and expanded with this file's objectidentifier macros.
+-- SYNTAX stringSyntax expanded to 1.3.6.1.4.1.1466.115.121.1.15 through an objectidentifier macro.
+eighthoffice-comments ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseIgnoreMatch
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"eighthoffice-comments", "comments"}
+  LDAP-DESC                 "Comments the 8th-period office has about something"
+  ID                        id-at-eighthoffice-comments }
+
+-- OID written as i2Attr:11 and expanded with this file's objectidentifier macros.
+-- SYNTAX dnSyntax expanded to 1.3.6.1.4.1.1466.115.121.1.12 through an objectidentifier macro.
+sponsorDn ATTRIBUTE ::= {
+  WITH SYNTAX               DistinguishedName
+  EQUALITY MATCHING RULE    distinguishedNameMatch
+  LDAP-SYNTAX               dn.&id
+  LDAP-NAME                 {"sponsorDn", "sponsor", "teacher"}
+  LDAP-DESC                 "The DN of the teacher(s) sponsoring an activity"
+  ID                        id-at-sponsorDn }
+
+-- OID written as i2Attr:12 and expanded with this file's objectidentifier macros.
+-- SYNTAX dnSyntax expanded to 1.3.6.1.4.1.1466.115.121.1.12 through an objectidentifier macro.
+groupLeader ATTRIBUTE ::= {
+  WITH SYNTAX               DistinguishedName
+  EQUALITY MATCHING RULE    distinguishedNameMatch
+  LDAP-SYNTAX               dn.&id
+  LDAP-NAME                 {"groupLeader", "leader", "master", "groupAdmin", "administrator", "admin", "groupAdministrator"}
+  LDAP-DESC                 "The DN of the people in charge of a group"
+  ID                        id-at-groupLeader }
+
+-- OID written as i2Attr:13 and expanded with this file's objectidentifier macros.
+-- SYNTAX stringSyntax expanded to 1.3.6.1.4.1.1466.115.121.1.15 through an objectidentifier macro.
+counselor ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseIgnoreMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"counselor", "couns"}
+  LDAP-DESC                 "The iodineUid of the counselor a student is assigned to"
+  ID                        id-at-counselor }
+
+-- OID written as i2Attr:14 and expanded with this file's objectidentifier macros.
+-- SYNTAX stringSyntax expanded to 1.3.6.1.4.1.1466.115.121.1.15 through an objectidentifier macro.
+iodineUid ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseIgnoreMatch
+  SUBSTRINGS MATCHING RULE  caseIgnoreSubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"iodineUid", "i2uid", "lanuid", "schooluid", "localuid"}
+  LDAP-DESC                 "A log-in username"
+  ID                        id-at-iodineUid }
+
+-- OID written as i2Attr:17 and expanded with this file's objectidentifier macros.
+-- SYNTAX stringSyntax expanded to 1.3.6.1.4.1.1466.115.121.1.15 through an objectidentifier macro.
+tjhsstSectionId ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseIgnoreMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"tjhsstSectionId", "sectionId"}
+  LDAP-DESC                 "The ID of a class/period pairing"
+  ID                        id-at-tjhsstSectionId }
+
+-- OID written as i2Attr:18 and expanded with this file's objectidentifier macros.
+-- SYNTAX integerSyntax expanded to 1.3.6.1.4.1.1466.115.121.1.27 through an objectidentifier macro.
+prerequisite ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  EQUALITY MATCHING RULE    integerMatch
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"prerequisite", "requiredClass", "prerequisiteClassId", "requiredClassId"}
+  LDAP-DESC                 "A required class"
+  ID                        id-at-prerequisite }
+
+-- OID written as i2Attr:19 and expanded with this file's objectidentifier macros.
+-- SYNTAX integerSyntax expanded to 1.3.6.1.4.1.1466.115.121.1.27 through an objectidentifier macro.
+corequisite ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  EQUALITY MATCHING RULE    integerMatch
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"corequisite", "corequisiteClassId", "corequisiteClass"}
+  LDAP-DESC                 "A corequisite class"
+  ID                        id-at-corequisite }
+
+-- OID written as i2Attr:20 and expanded with this file's objectidentifier macros.
+-- SYNTAX stringSyntax expanded to 1.3.6.1.4.1.1466.115.121.1.15 through an objectidentifier macro.
+tjhsstClassId ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseIgnoreMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"tjhsstClassId", "classId", "courseId", "tjhsstCourseId", "associatedClassId"}
+  LDAP-DESC                 "A string identifying a TJHSST class"
+  ID                        id-at-tjhsstClassId }
+
+-- OID written as i2Attr:21 and expanded with this file's objectidentifier macros.
+-- SYNTAX integerSyntax expanded to 1.3.6.1.4.1.1466.115.121.1.27 through an objectidentifier macro.
+tjhsstActivityId ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  EQUALITY MATCHING RULE    integerMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"tjhsstActivityId", "activityId", "aid"}
+  LDAP-DESC                 "A unique number identifying an activity"
+  ID                        id-at-tjhsstActivityId }
+
+-- OID written as i2Attr:22 and expanded with this file's objectidentifier macros.
+-- SYNTAX integerSyntax expanded to 1.3.6.1.4.1.1466.115.121.1.27 through an objectidentifier macro.
+tjhsstGroupId ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  EQUALITY MATCHING RULE    integerMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"tjhsstGroupId", "groupId", "gid", "i2GroupId"}
+  LDAP-DESC                 "A unique number identifying a group"
+  ID                        id-at-tjhsstGroupId }
+
+-- OID written as i2Attr:23 and expanded with this file's objectidentifier macros.
+-- LDAP syntax length {1} kept as a comment only; it is an encoded-length hint, not a value constraint.
+-- SYNTAX integerSyntax expanded to 1.3.6.1.4.1.1466.115.121.1.27 through an objectidentifier macro.
+courseLength ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  EQUALITY MATCHING RULE    integerMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"courseLength", "length", "quarters", "numQuarters"}
+  LDAP-DESC                 "How long a course is, in quarters"
+  ID                        id-at-courseLength }
+
+-- OID written as i2Attr:24 and expanded with this file's objectidentifier macros.
+-- SYNTAX integerSyntax expanded to 1.3.6.1.4.1.1466.115.121.1.27 through an objectidentifier macro.
+eighthBlockId ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  EQUALITY MATCHING RULE    integerMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"eighthBlockId", "eighthBlockNumber", "blockNumber", "blockId"}
+  LDAP-DESC                 "A unique number identifying an 8th-period block"
+  ID                        id-at-eighthBlockId }
+
+-- OID written as i2Attr:26 and expanded with this file's objectidentifier macros.
+-- SYNTAX dnSyntax expanded to 1.3.6.1.4.1.1466.115.121.1.12 through an objectidentifier macro.
+enrolledStudent ATTRIBUTE ::= {
+  WITH SYNTAX               DistinguishedName
+  EQUALITY MATCHING RULE    distinguishedNameMatch
+  LDAP-SYNTAX               dn.&id
+  LDAP-NAME                 {"enrolledStudent", "classMember", "enrolledStudentDn"}
+  LDAP-DESC                 "The DN of a student enrolled in a class"
+  ID                        id-at-enrolledStudent }
+
+-- OID written as i2Attr:27 and expanded with this file's objectidentifier macros.
+-- SYNTAX stringSyntax expanded to 1.3.6.1.4.1.1466.115.121.1.15 through an objectidentifier macro.
+middlename ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseIgnoreMatch
+  SUBSTRINGS MATCHING RULE  caseIgnoreSubstringsMatch
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"middlename", "mname"}
+  LDAP-DESC                 "A middle name"
+  ID                        id-at-middlename }
+
+-- OID written as i2Attr:28 and expanded with this file's objectidentifier macros.
+-- SYNTAX integerSyntax expanded to 1.3.6.1.4.1.1466.115.121.1.27 through an objectidentifier macro.
+groupMembership ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  EQUALITY MATCHING RULE    integerMatch
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"groupMembership", "group"}
+  LDAP-DESC                 "The ID of a group the entry is a member of"
+  ID                        id-at-groupMembership }
+
+-- OID written as i2Attr:29 and expanded with this file's objectidentifier macros.
+-- SYNTAX integerSyntax expanded to 1.3.6.1.4.1.1466.115.121.1.27 through an objectidentifier macro.
+iodineUidNumber ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  EQUALITY MATCHING RULE    integerMatch
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"iodineUidNumber", "iodineUserNumber"}
+  LDAP-DESC                 "The numerical ID of an iodine user"
+  ID                        id-at-iodineUidNumber }
+
+-- OID written as i2Attr:30 and expanded with this file's objectidentifier macros.
+-- SYNTAX numericStringSyntax expanded to 1.3.6.1.4.1.1466.115.121.1.36 through an objectidentifier macro.
+birthday ATTRIBUTE ::= {
+  WITH SYNTAX               NumericString
+  EQUALITY MATCHING RULE    numericStringMatch
+  SUBSTRINGS MATCHING RULE  numericStringSubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               numericString.&id
+  LDAP-NAME                 {"birthday", "bday"}
+  LDAP-DESC                 "The birthday of a person"
+  ID                        id-at-birthday }
+
+-- OID written as i2Attr:31 and expanded with this file's objectidentifier macros.
+-- SYNTAX stringSyntax expanded to 1.3.6.1.4.1.1466.115.121.1.15 through an objectidentifier macro.
+nickname ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseIgnoreMatch
+  SUBSTRINGS MATCHING RULE  caseIgnoreSubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"nickname", "nick", "nname"}
+  LDAP-DESC                 "The nickname of a person"
+  ID                        id-at-nickname }
+
+-- OID written as i2Attr:32 and expanded with this file's objectidentifier macros.
+-- SYNTAX stringSyntax expanded to 1.3.6.1.4.1.1466.115.121.1.15 through an objectidentifier macro.
+gender ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseIgnoreMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"gender", "sex"}
+  LDAP-DESC                 "The gender of a person"
+  ID                        id-at-gender }
+
+-- OID written as i2Attr:33 and expanded with this file's objectidentifier macros.
+-- SYNTAX stringSyntax expanded to 1.3.6.1.4.1.1466.115.121.1.15 through an objectidentifier macro.
+startpage ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseIgnoreMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"startpage", "defaultmodule"}
+  LDAP-DESC                 "The default Iodine module of a user"
+  ID                        id-at-startpage }
+
+-- OID written as i2Attr:34 and expanded with this file's objectidentifier macros.
+-- SYNTAX stringSyntax expanded to 1.3.6.1.4.1.1466.115.121.1.15 through an objectidentifier macro.
+style ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseIgnoreMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"style", "css", "theme"}
+  LDAP-DESC                 "The default Iodine style of a user"
+  ID                        id-at-style }
+
+-- OID written as i2Attr:35 and expanded with this file's objectidentifier macros.
+-- SYNTAX boolSyntax expanded to 1.3.6.1.4.1.1466.115.121.1.7 through an objectidentifier macro.
+header ATTRIBUTE ::= {
+  WITH SYNTAX               BOOLEAN
+  EQUALITY MATCHING RULE    booleanMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               boolean.&id
+  LDAP-NAME                 {"header", "headertype", "fullheader"}
+  LDAP-DESC                 "Whether the user prefers a full header"
+  ID                        id-at-header }
+
+-- OID written as i2Attr:36 and expanded with this file's objectidentifier macros.
+-- SYNTAX boolSyntax expanded to 1.3.6.1.4.1.1466.115.121.1.7 through an objectidentifier macro.
+chrome ATTRIBUTE ::= {
+  WITH SYNTAX               BOOLEAN
+  EQUALITY MATCHING RULE    booleanMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               boolean.&id
+  LDAP-NAME                 {"chrome", "usechrome"}
+  LDAP-DESC                 "Whether the user prefers chrome"
+  ID                        id-at-chrome }
+
+-- OID written as i2Attr:37 and expanded with this file's objectidentifier macros.
+-- SYNTAX stringSyntax expanded to 1.3.6.1.4.1.1466.115.121.1.15 through an objectidentifier macro.
+aim ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseIgnoreMatch
+  SUBSTRINGS MATCHING RULE  caseIgnoreSubstringsMatch
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"aim"}
+  LDAP-DESC                 "AIM/AOL Screenname"
+  ID                        id-at-aim }
+
+-- OID written as i2Attr:38 and expanded with this file's objectidentifier macros.
+-- SYNTAX stringSyntax expanded to 1.3.6.1.4.1.1466.115.121.1.15 through an objectidentifier macro.
+yahoo ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseIgnoreMatch
+  SUBSTRINGS MATCHING RULE  caseIgnoreSubstringsMatch
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"yahoo"}
+  LDAP-DESC                 "Yahoo! ID"
+  ID                        id-at-yahoo }
+
+-- OID written as i2Attr:39 and expanded with this file's objectidentifier macros.
+-- SYNTAX stringSyntax expanded to 1.3.6.1.4.1.1466.115.121.1.15 through an objectidentifier macro.
+msn ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseIgnoreMatch
+  SUBSTRINGS MATCHING RULE  caseIgnoreSubstringsMatch
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"msn"}
+  LDAP-DESC                 "MSN Username"
+  ID                        id-at-msn }
+
+-- OID written as i2Attr:40 and expanded with this file's objectidentifier macros.
+-- SYNTAX stringSyntax expanded to 1.3.6.1.4.1.1466.115.121.1.15 through an objectidentifier macro.
+jabber ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseIgnoreMatch
+  SUBSTRINGS MATCHING RULE  caseIgnoreSubstringsMatch
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"jabber"}
+  LDAP-DESC                 "Jabber Username"
+  ID                        id-at-jabber }
+
+-- OID written as i2Attr:41 and expanded with this file's objectidentifier macros.
+-- SYNTAX stringSyntax expanded to 1.3.6.1.4.1.1466.115.121.1.15 through an objectidentifier macro.
+icq ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseIgnoreMatch
+  SUBSTRINGS MATCHING RULE  caseIgnoreSubstringsMatch
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"icq"}
+  LDAP-DESC                 "ICQ Number"
+  ID                        id-at-icq }
+
+-- OID written as i2Attr:42 and expanded with this file's objectidentifier macros.
+-- SYNTAX stringSyntax expanded to 1.3.6.1.4.1.1466.115.121.1.15 through an objectidentifier macro.
+googleTalk ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseIgnoreMatch
+  SUBSTRINGS MATCHING RULE  caseIgnoreSubstringsMatch
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"googleTalk"}
+  LDAP-DESC                 "Google Talk"
+  ID                        id-at-googleTalk }
+
+-- OID written as i2Attr:43 and expanded with this file's objectidentifier macros.
+-- SYNTAX stringSyntax expanded to 1.3.6.1.4.1.1466.115.121.1.15 through an objectidentifier macro.
+webpage ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseIgnoreMatch
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"webpage", "website"}
+  LDAP-DESC                 "The website of a user"
+  ID                        id-at-webpage }
+
+-- OID written as i2Attr:44 and expanded with this file's objectidentifier macros.
+-- SYNTAX integerSyntax expanded to 1.3.6.1.4.1.1466.115.121.1.27 through an objectidentifier macro.
+locker ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  EQUALITY MATCHING RULE    integerMatch
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"locker", "lockerNumber"}
+  LDAP-DESC                 "The locker number or a person"
+  ID                        id-at-locker }
+
+-- OID written as i2Attr:46 and expanded with this file's objectidentifier macros.
+-- SYNTAX boolSyntax expanded to 1.3.6.1.4.1.1466.115.121.1.7 through an objectidentifier macro.
+perm-showbirthday ATTRIBUTE ::= {
+  WITH SYNTAX               BOOLEAN
+  EQUALITY MATCHING RULE    booleanMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               boolean.&id
+  LDAP-NAME                 {"perm-showbirthday", "showbirthday", "showbday", "showbdate"}
+  LDAP-DESC                 "Whether the birthday should be visible to others"
+  ID                        id-at-perm-showbirthday }
+
+-- OID written as i2Attr:47 and expanded with this file's objectidentifier macros.
+-- SYNTAX boolSyntax expanded to 1.3.6.1.4.1.1466.115.121.1.7 through an objectidentifier macro.
+perm-showmap ATTRIBUTE ::= {
+  WITH SYNTAX               BOOLEAN
+  EQUALITY MATCHING RULE    booleanMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               boolean.&id
+  LDAP-NAME                 {"perm-showmap", "showmap", "showdirections"}
+  LDAP-DESC                 "Whether a map to the house should be visible to others"
+  ID                        id-at-perm-showmap }
+
+-- OID written as i2Attr:48 and expanded with this file's objectidentifier macros.
+-- SYNTAX boolSyntax expanded to 1.3.6.1.4.1.1466.115.121.1.7 through an objectidentifier macro.
+perm-showschedule ATTRIBUTE ::= {
+  WITH SYNTAX               BOOLEAN
+  EQUALITY MATCHING RULE    booleanMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               boolean.&id
+  LDAP-NAME                 {"perm-showschedule", "showschedule", "showsched"}
+  LDAP-DESC                 "Whether the schedule information should be visible to others"
+  ID                        id-at-perm-showschedule }
+
+-- OID written as i2Attr:49 and expanded with this file's objectidentifier macros.
+-- SYNTAX stringSyntax expanded to 1.3.6.1.4.1.1466.115.121.1.15 through an objectidentifier macro.
+soundexlast ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseIgnoreMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"soundexlast", "lastsoundex", "lastnamesound"}
+  LDAP-DESC                 "The soundex of a last name"
+  ID                        id-at-soundexlast }
+
+-- OID written as i2Attr:50 and expanded with this file's objectidentifier macros.
+-- SYNTAX stringSyntax expanded to 1.3.6.1.4.1.1466.115.121.1.15 through an objectidentifier macro.
+soundexfirst ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseIgnoreMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"soundexfirst", "firstsoundex", "firstnamesound"}
+  LDAP-DESC                 "The soundex of a first name"
+  ID                        id-at-soundexfirst }
+
+-- OID written as i2Attr:55 and expanded with this file's objectidentifier macros.
+-- SYNTAX boolSyntax expanded to 1.3.6.1.4.1.1466.115.121.1.7 through an objectidentifier macro.
+perm-showbirthday-self ATTRIBUTE ::= {
+  WITH SYNTAX               BOOLEAN
+  EQUALITY MATCHING RULE    booleanMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               boolean.&id
+  LDAP-NAME                 {"perm-showbirthday-self", "showbirthday-self", "self-showbday", "self-showbdate", "showbdateself", "showbdayself"}
+  LDAP-DESC                 "Whether the birthday should be visible to others (user set)"
+  ID                        id-at-perm-showbirthday-self }
+
+-- OID written as i2Attr:56 and expanded with this file's objectidentifier macros.
+-- SYNTAX boolSyntax expanded to 1.3.6.1.4.1.1466.115.121.1.7 through an objectidentifier macro.
+perm-showmap-self ATTRIBUTE ::= {
+  WITH SYNTAX               BOOLEAN
+  EQUALITY MATCHING RULE    booleanMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               boolean.&id
+  LDAP-NAME                 {"perm-showmap-self", "showmap-self", "student-showmap", "showmapself"}
+  LDAP-DESC                 "Whether a map to the house should be visible to others (user set)"
+  ID                        id-at-perm-showmap-self }
+
+-- OID written as i2Attr:57 and expanded with this file's objectidentifier macros.
+-- SYNTAX boolSyntax expanded to 1.3.6.1.4.1.1466.115.121.1.7 through an objectidentifier macro.
+perm-showschedule-self ATTRIBUTE ::= {
+  WITH SYNTAX               BOOLEAN
+  EQUALITY MATCHING RULE    booleanMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               boolean.&id
+  LDAP-NAME                 {"perm-showschedule-self", "showschedule-self", "student-showsched", "showscheduleself", "showschedself"}
+  LDAP-DESC                 "Whether the schedule information should be visible to others (user set)"
+  ID                        id-at-perm-showschedule-self }
+
+-- OID written as i2Attr:58 and expanded with this file's objectidentifier macros.
+-- SYNTAX boolSyntax expanded to 1.3.6.1.4.1.1466.115.121.1.7 through an objectidentifier macro.
+perm-showpictures-self ATTRIBUTE ::= {
+  WITH SYNTAX               BOOLEAN
+  EQUALITY MATCHING RULE    booleanMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               boolean.&id
+  LDAP-NAME                 {"perm-showpictures-self", "showpictures-self", "self-showpicture", "showpictureself"}
+  LDAP-DESC                 "Whether the pictures should be visible to others (user set)"
+  ID                        id-at-perm-showpictures-self }
+
+-- OID written as i2Attr:59 and expanded with this file's objectidentifier macros.
+-- SYNTAX boolSyntax expanded to 1.3.6.1.4.1.1466.115.121.1.7 through an objectidentifier macro.
+perm-showaddress-self ATTRIBUTE ::= {
+  WITH SYNTAX               BOOLEAN
+  EQUALITY MATCHING RULE    booleanMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               boolean.&id
+  LDAP-NAME                 {"perm-showaddress-self", "showaddress-self", "showaddressself"}
+  LDAP-DESC                 "Whether the address should be visible to others (user set)"
+  ID                        id-at-perm-showaddress-self }
+
+-- OID written as i2Attr:60 and expanded with this file's objectidentifier macros.
+-- SYNTAX boolSyntax expanded to 1.3.6.1.4.1.1466.115.121.1.7 through an objectidentifier macro.
+perm-showtelephone-self ATTRIBUTE ::= {
+  WITH SYNTAX               BOOLEAN
+  EQUALITY MATCHING RULE    booleanMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               boolean.&id
+  LDAP-NAME                 {"perm-showtelephone-self", "showtelephone-self", "self-showphone", "showphonenumber-self", "showphoneself"}
+  LDAP-DESC                 "Whether the telephone number(s) should be visible to others (user set)"
+  ID                        id-at-perm-showtelephone-self }
+
+-- OID written as i2Attr:61 and expanded with this file's objectidentifier macros.
+-- SYNTAX stringSyntax expanded to 1.3.6.1.4.1.1466.115.121.1.15 through an objectidentifier macro.
+xfire ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseIgnoreMatch
+  SUBSTRINGS MATCHING RULE  caseIgnoreSubstringsMatch
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"xfire"}
+  LDAP-DESC                 "XFire handle"
+  ID                        id-at-xfire }
+
+-- OID written as i2Attr:63 and expanded with this file's objectidentifier macros.
+-- SYNTAX stringSyntax expanded to 1.3.6.1.4.1.1466.115.121.1.15 through an objectidentifier macro.
+metaphonelast ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseIgnoreMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"metaphonelast", "lastmetaphone"}
+  LDAP-DESC                 "The metaphone of a last name"
+  ID                        id-at-metaphonelast }
+
+-- OID written as i2Attr:64 and expanded with this file's objectidentifier macros.
+-- SYNTAX stringSyntax expanded to 1.3.6.1.4.1.1466.115.121.1.15 through an objectidentifier macro.
+metaphonefirst ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseIgnoreMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"metaphonefirst", "firstmetaphone"}
+  LDAP-DESC                 "The metaphone of a first name"
+  ID                        id-at-metaphonefirst }
+
+-- OID written as i2Attr:65 and expanded with this file's objectidentifier macros.
+-- LDAP syntax length {1} kept as a comment only; it is an encoded-length hint, not a value constraint.
+-- SYNTAX integerSyntax expanded to 1.3.6.1.4.1.1466.115.121.1.27 through an objectidentifier macro.
+quarterNumber ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  EQUALITY MATCHING RULE    integerMatch
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"quarterNumber", "quarter"}
+  LDAP-DESC                 "The quarter(s) in which a class occurs"
+  ID                        id-at-quarterNumber }
+
+-- OID written as i2Attr:66 and expanded with this file's objectidentifier macros.
+-- SYNTAX stringSyntax expanded to 1.3.6.1.4.1.1466.115.121.1.15 through an objectidentifier macro.
+preferredPhoto ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseIgnoreMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"preferredPhoto"}
+  LDAP-DESC                 "The preferred photo of a user"
+  ID                        id-at-preferredPhoto }
+
+-- OID written as i2Attr:67 and expanded with this file's objectidentifier macros.
+-- SYNTAX integerSyntax expanded to 1.3.6.1.4.1.1466.115.121.1.27 through an objectidentifier macro.
+mailentries ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  EQUALITY MATCHING RULE    integerMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"mailentries", "mailMessages"}
+  LDAP-DESC                 "The number of entries a user wishes in their mail intrabox"
+  ID                        id-at-mailentries }
+
+-- OID written as i2Attr:68 and expanded with this file's objectidentifier macros.
+-- SYNTAX dnSyntax expanded to 1.3.6.1.4.1.1466.115.121.1.12 through an objectidentifier macro.
+enrolledclass ATTRIBUTE ::= {
+  WITH SYNTAX               DistinguishedName
+  EQUALITY MATCHING RULE    distinguishedNameMatch
+  LDAP-SYNTAX               dn.&id
+  LDAP-NAME                 {"enrolledclass"}
+  LDAP-DESC                 "The DN of a class a student is enrolled in"
+  ID                        id-at-enrolledclass }
+
+-- OID written as i2Attr:69 and expanded with this file's objectidentifier macros.
+-- SYNTAX boolSyntax expanded to 1.3.6.1.4.1.1466.115.121.1.7 through an objectidentifier macro.
+perm-showeighth-self ATTRIBUTE ::= {
+  WITH SYNTAX               BOOLEAN
+  EQUALITY MATCHING RULE    booleanMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               boolean.&id
+  LDAP-NAME                 {"perm-showeighth-self", "showeighthself"}
+  LDAP-DESC                 "Whether the user wants their eighth-period presence shown"
+  ID                        id-at-perm-showeighth-self }
+
+-- OID written as i2Attr:70 and expanded with this file's objectidentifier macros.
+-- SYNTAX stringSyntax expanded to 1.3.6.1.4.1.1466.115.121.1.15 through an objectidentifier macro.
+skype ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseIgnoreMatch
+  SUBSTRINGS MATCHING RULE  caseIgnoreSubstringsMatch
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"skype"}
+  LDAP-DESC                 "A skype handle"
+  ID                        id-at-skype }
+
+-- OID written as i2Attr:71 and expanded with this file's objectidentifier macros.
+-- LDAP syntax length {6} rendered as DirectoryString{6}.
+-- SYNTAX stringSyntax expanded to 1.3.6.1.4.1.1466.115.121.1.15 through an objectidentifier macro.
+boxcolor ATTRIBUTE ::= {
+  WITH SYNTAX               DirectoryString{6}
+  EQUALITY MATCHING RULE    caseIgnoreMatch
+  SUBSTRINGS MATCHING RULE  caseIgnoreSubstringsMatch
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"boxcolor"}
+  LDAP-DESC                 "The color of Intrabox headers"
+  ID                        id-at-boxcolor }
+
+-- OID written as i2Attr:72 and expanded with this file's objectidentifier macros.
+-- LDAP syntax length {6} rendered as DirectoryString{6}.
+-- SYNTAX stringSyntax expanded to 1.3.6.1.4.1.1466.115.121.1.15 through an objectidentifier macro.
+boxtitlecolor ATTRIBUTE ::= {
+  WITH SYNTAX               DirectoryString{6}
+  EQUALITY MATCHING RULE    caseIgnoreMatch
+  SUBSTRINGS MATCHING RULE  caseIgnoreSubstringsMatch
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"boxtitlecolor"}
+  LDAP-DESC                 "The color of Intrabox header titles"
+  ID                        id-at-boxtitlecolor }
+
+-- OID written as i2Attr:73 and expanded with this file's objectidentifier macros.
+-- SYNTAX boolSyntax expanded to 1.3.6.1.4.1.1466.115.121.1.7 through an objectidentifier macro.
+perm-showeighth ATTRIBUTE ::= {
+  WITH SYNTAX               BOOLEAN
+  EQUALITY MATCHING RULE    booleanMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               boolean.&id
+  LDAP-NAME                 {"perm-showeighth", "showeighth"}
+  LDAP-DESC                 "Whether the users eighth-period presence may be shown"
+  ID                        id-at-perm-showeighth }
+
+-- OID written as i2Attr:74 and expanded with this file's objectidentifier macros.
+-- SYNTAX boolSyntax expanded to 1.3.6.1.4.1.1466.115.121.1.7 through an objectidentifier macro.
+is-admin ATTRIBUTE ::= {
+  WITH SYNTAX               BOOLEAN
+  EQUALITY MATCHING RULE    booleanMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               boolean.&id
+  LDAP-NAME                 {"is-admin", "admin-all"}
+  LDAP-DESC                 "Whether the user has full administrative access"
+  ID                        id-at-is-admin }
+
+-- OID written as i2Attr:75 and expanded with this file's objectidentifier macros.
+-- SYNTAX integerSyntax expanded to 1.3.6.1.4.1.1466.115.121.1.27 through an objectidentifier macro.
+afsid ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  EQUALITY MATCHING RULE    integerMatch
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"afsid"}
+  LDAP-DESC                 "AFS ID"
+  ID                        id-at-afsid }
+
+-- OID written as i2Attr:76 and expanded with this file's objectidentifier macros.
+-- SYNTAX boolSyntax expanded to 1.3.6.1.4.1.1466.115.121.1.7 through an objectidentifier macro.
+perm-showlocker ATTRIBUTE ::= {
+  WITH SYNTAX               BOOLEAN
+  EQUALITY MATCHING RULE    booleanMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               boolean.&id
+  LDAP-NAME                 {"perm-showlocker", "showlocker"}
+  LDAP-DESC                 "Whether the users locker number may be shown"
+  ID                        id-at-perm-showlocker }
+
+-- OID written as i2Attr:77 and expanded with this file's objectidentifier macros.
+-- SYNTAX boolSyntax expanded to 1.3.6.1.4.1.1466.115.121.1.7 through an objectidentifier macro.
+perm-showlocker-self ATTRIBUTE ::= {
+  WITH SYNTAX               BOOLEAN
+  EQUALITY MATCHING RULE    booleanMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               boolean.&id
+  LDAP-NAME                 {"perm-showlocker-self", "showlockerself"}
+  LDAP-DESC                 "Whether the user wants their locker number shown"
+  ID                        id-at-perm-showlocker-self }
+
+-- OID written as i2Attr:78 and expanded with this file's objectidentifier macros.
+-- SYNTAX boolSyntax expanded to 1.3.6.1.4.1.1466.115.121.1.7 through an objectidentifier macro.
+is-student-admin ATTRIBUTE ::= {
+  WITH SYNTAX               BOOLEAN
+  EQUALITY MATCHING RULE    booleanMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               boolean.&id
+  LDAP-NAME                 {"is-student-admin"}
+  LDAP-DESC                 "Whether the user is a student (limited-privileges) admin"
+  ID                        id-at-is-student-admin }
+
+-- OID written as i2Attr:79 and expanded with this file's objectidentifier macros.
+-- SYNTAX stringSyntax expanded to 1.3.6.1.4.1.1466.115.121.1.15 through an objectidentifier macro.
+friend ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseExactMatch
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"friend"}
+  LDAP-DESC                 "the identifier of a friend users cn"
+  ID                        id-at-friend }
+
+-- OID written as i2Attr:80 and expanded with this file's objectidentifier macros.
+-- SYNTAX boolSyntax expanded to 1.3.6.1.4.1.1466.115.121.1.7 through an objectidentifier macro.
+perm-showtelephone-friend ATTRIBUTE ::= {
+  WITH SYNTAX               BOOLEAN
+  EQUALITY MATCHING RULE    booleanMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               boolean.&id
+  LDAP-NAME                 {"perm-showtelephone-friend", "showtelephonefriend", "showphonefriend", "showphonenumberfriend"}
+  LDAP-DESC                 "Whether the telephone number(s) should be visible to friends"
+  ID                        id-at-perm-showtelephone-friend }
+
+-- OID written as i2Attr:81 and expanded with this file's objectidentifier macros.
+-- SYNTAX boolSyntax expanded to 1.3.6.1.4.1.1466.115.121.1.7 through an objectidentifier macro.
+eighthAgreement ATTRIBUTE ::= {
+  WITH SYNTAX               BOOLEAN
+  EQUALITY MATCHING RULE    booleanMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               boolean.&id
+  LDAP-NAME                 {"eighthAgreement"}
+  LDAP-DESC                 "Whether the user has accepted the 8th period policy agreement"
+  ID                        id-at-eighthAgreement }
+
+-- Object classes
+
+-- OID written as i2OC:1 and expanded with this file's objectidentifier macros.
+tjhsstStudent OBJECT-CLASS ::= {
+  SUBCLASS OF               { inetOrgPerson }
+  MUST CONTAIN              { graduationYear
+                              | iodineUid
+                              | commonName
+                              | surname
+                              | startpage
+                              | iodineUidNumber
+                              | style
+                              | header
+                              | chrome }
+  MAY CONTAIN               { tjhsstStudentId
+                              | perm-showpictures
+                              | perm-showaddress
+                              | perm-showtelephone
+                              | perm-showbirthday
+                              | perm-showschedule
+                              | perm-showmap
+                              | perm-showeighth
+                              | perm-showlocker
+                              | perm-showpictures-self
+                              | perm-showaddress-self
+                              | perm-showtelephone-self
+                              | perm-showbirthday-self
+                              | perm-showschedule-self
+                              | perm-showmap-self
+                              | perm-showeighth-self
+                              | perm-showlocker-self
+                              | friend
+                              | perm-showtelephone-friend
+                              | displayName
+                              | middlename
+                              | nickname
+                              | boxcolor
+                              | boxtitlecolor
+                              | counselor
+                              | groupMembership
+                              | birthday
+                              | gender
+                              | aim
+                              | xfire
+                              | yahoo
+                              | msn
+                              | jabber
+                              | icq
+                              | googleTalk
+                              | skype
+                              | webpage
+                              | locker
+                              | soundexlast
+                              | soundexfirst
+                              | metaphonelast
+                              | metaphonefirst
+                              | eighthoffice-comments
+                              | preferredPhoto
+                              | enrolledclass
+                              | mailentries
+                              | gidNumber
+                              | afsid
+                              | homeDirectory
+                              | loginShell
+                              | is-student-admin
+                              | is-admin
+                              | eighthAgreement }
+  LDAP-NAME                 {"tjhsstStudent"}
+  ID                        id-oc-tjhsstStudent }
+
+-- OID written as i2OC:2 and expanded with this file's objectidentifier macros.
+tjhsstTeacher OBJECT-CLASS ::= {
+  SUBCLASS OF               { inetOrgPerson }
+  MUST CONTAIN              { commonName
+                              | iodineUid
+                              | header
+                              | style
+                              | chrome
+                              | startpage
+                              | iodineUidNumber
+                              | surname }
+  MAY CONTAIN               { employeeNumber
+                              | displayName
+                              | middlename
+                              | groupMembership
+                              | nickname
+                              | birthday
+                              | gender
+                              | webpage
+                              | header
+                              | style
+                              | chrome
+                              | eighthoffice-comments
+                              | boxcolor
+                              | boxtitlecolor
+                              | counselor
+                              | soundexlast
+                              | soundexfirst
+                              | metaphonelast
+                              | metaphonefirst
+                              | aim
+                              | msn
+                              | xfire
+                              | yahoo
+                              | googleTalk
+                              | icq
+                              | jabber
+                              | xfire
+                              | skype
+                              | preferredPhoto
+                              | mailentries
+                              | gidNumber
+                              | afsid
+                              | homeDirectory
+                              | loginShell
+                              | perm-showaddress-self
+                              | perm-showtelephone-self
+                              | perm-showbirthday-self
+                              | perm-showpictures-self
+                              | perm-showaddress
+                              | perm-showtelephone
+                              | perm-showbirthday
+                              | perm-showpictures
+                              | is-admin }
+  LDAP-NAME                 {"tjhsstTeacher"}
+  ID                        id-oc-tjhsstTeacher }
+
+-- OID written as i2OC:3 and expanded with this file's objectidentifier macros.
+tjStarPresenter OBJECT-CLASS ::= {
+  SUBCLASS OF               { inetOrgPerson }
+  MUST CONTAIN              { commonName
+                              | iodineUid
+                              | header
+                              | style
+                              | chrome
+                              | startpage
+                              | iodineUidNumber
+                              | userPassword
+                              | surname }
+  MAY CONTAIN               { displayName
+                              | middlename
+                              | groupMembership
+                              | nickname
+                              | birthday
+                              | gender
+                              | webpage
+                              | header
+                              | style
+                              | chrome
+                              | eighthoffice-comments
+                              | boxcolor
+                              | boxtitlecolor
+                              | counselor
+                              | soundexlast
+                              | soundexfirst
+                              | metaphonelast
+                              | metaphonefirst
+                              | aim
+                              | msn
+                              | xfire
+                              | yahoo
+                              | googleTalk
+                              | icq
+                              | jabber
+                              | xfire
+                              | skype
+                              | preferredPhoto
+                              | mailentries
+                              | gidNumber
+                              | afsid
+                              | homeDirectory
+                              | loginShell
+                              | perm-showaddress-self
+                              | perm-showtelephone-self
+                              | perm-showbirthday-self
+                              | perm-showpictures-self
+                              | perm-showaddress
+                              | perm-showtelephone
+                              | perm-showbirthday
+                              | perm-showpictures
+                              | is-admin }
+  LDAP-NAME                 {"tjStarPresenter"}
+  ID                        id-oc-tjStarPresenter }
+
+-- OID written as i2OC:4 and expanded with this file's objectidentifier macros.
+-- SUP was absent. RFC 4512 treats that as a subclass of top, so SUBCLASS OF { top } was added.
+tjhsstClass OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  MUST CONTAIN              { tjhsstClassId
+                              | tjhsstSectionId
+                              | courseLength
+                              | commonName
+                              | sponsorDn
+                              | graduationYear
+                              | quarterNumber
+                              | classPeriod }
+  MAY CONTAIN               { shortClassName
+                              | description
+                              | displayName
+                              | enrolledStudent
+                              | roomNumber }
+  LDAP-NAME                 {"tjhsstClass"}
+  ID                        id-oc-tjhsstClass }
+
+-- OID written as i2OC:5 and expanded with this file's objectidentifier macros.
+tjhsstUser OBJECT-CLASS ::= {
+  SUBCLASS OF               { inetOrgPerson }
+  MUST CONTAIN              { commonName
+                              | iodineUid
+                              | header
+                              | style
+                              | chrome
+                              | startpage
+                              | iodineUidNumber
+                              | userPassword
+                              | surname }
+  MAY CONTAIN               { displayName
+                              | middlename
+                              | groupMembership
+                              | nickname
+                              | birthday
+                              | gender
+                              | webpage
+                              | header
+                              | style
+                              | chrome
+                              | eighthoffice-comments
+                              | boxcolor
+                              | boxtitlecolor
+                              | counselor
+                              | soundexlast
+                              | soundexfirst
+                              | metaphonelast
+                              | metaphonefirst
+                              | aim
+                              | msn
+                              | xfire
+                              | yahoo
+                              | googleTalk
+                              | icq
+                              | jabber
+                              | xfire
+                              | skype
+                              | preferredPhoto
+                              | mailentries
+                              | gidNumber
+                              | afsid
+                              | homeDirectory
+                              | loginShell
+                              | perm-showaddress-self
+                              | perm-showtelephone-self
+                              | perm-showbirthday-self
+                              | perm-showpictures-self
+                              | perm-showaddress
+                              | perm-showtelephone
+                              | perm-showbirthday
+                              | perm-showpictures
+                              | is-admin }
+  LDAP-NAME                 {"tjhsstUser"}
+  ID                        id-oc-tjhsstUser }
+
+-- OID written as i2OC:8 and expanded with this file's objectidentifier macros.
+syslabUser OBJECT-CLASS ::= {
+  SUBCLASS OF               { posixAccount }
+  KIND                      auxiliary
+  MUST CONTAIN              { commonName
+                              | uid
+                              | uidNumber
+                              | gidNumber
+                              | homeDirectory
+                              | loginShell }
+  MAY CONTAIN               { groupMembership }
+  LDAP-NAME                 {"syslabUser"}
+  ID                        id-oc-syslabUser }
+
+-- OID written as i2OC:9 and expanded with this file's objectidentifier macros.
+-- SUP was absent. RFC 4512 treats that as a subclass of top, so SUBCLASS OF { top } was added.
+tjhsstRoom OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  MUST CONTAIN              { roomNumber }
+  MAY CONTAIN               { commonName
+                              | description
+                              | displayName }
+  LDAP-NAME                 {"tjhsstRoom"}
+  ID                        id-oc-tjhsstRoom }
+
+-- OID written as i2OC:10 and expanded with this file's objectidentifier macros.
+-- SUP was absent. RFC 4512 treats that as a subclass of top, so SUBCLASS OF { top } was added.
+tjhsstYear OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  MUST CONTAIN              { graduationYear }
+  LDAP-NAME                 {"tjhsstYear"}
+  ID                        id-oc-tjhsstYear }
+
+-- OID written as i2OC:11 and expanded with this file's objectidentifier macros.
+-- SUP was absent. RFC 4512 treats that as a subclass of top, so SUBCLASS OF { top } was added.
+prerequisiteGrouping OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  LDAP-NAME                 {"prerequisiteGrouping"}
+  ID                        id-oc-prerequisiteGrouping }
+
+-- OID written as i2OC:12 and expanded with this file's objectidentifier macros.
+-- SUP was absent. RFC 4512 treats that as a subclass of top, so SUBCLASS OF { top } was added.
+corequisiteGrouping OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  LDAP-NAME                 {"corequisiteGrouping"}
+  ID                        id-oc-corequisiteGrouping }
+
+-- OID written as i2OC:13 and expanded with this file's objectidentifier macros.
+prerequisiteANDGrouping OBJECT-CLASS ::= {
+  SUBCLASS OF               { prerequisiteGrouping }
+  LDAP-NAME                 {"prerequisiteANDGrouping"}
+  ID                        id-oc-prerequisiteANDGrouping }
+
+-- OID written as i2OC:14 and expanded with this file's objectidentifier macros.
+prerequisiteORGrouping OBJECT-CLASS ::= {
+  SUBCLASS OF               { prerequisiteGrouping }
+  LDAP-NAME                 {"prerequisiteORGrouping"}
+  ID                        id-oc-prerequisiteORGrouping }
+
+-- OID written as i2OC:15 and expanded with this file's objectidentifier macros.
+corequisiteANDGrouping OBJECT-CLASS ::= {
+  SUBCLASS OF               { corequisiteGrouping }
+  LDAP-NAME                 {"corequisiteANDGrouping"}
+  ID                        id-oc-corequisiteANDGrouping }
+
+-- OID written as i2OC:16 and expanded with this file's objectidentifier macros.
+corequisiteORGrouping OBJECT-CLASS ::= {
+  SUBCLASS OF               { corequisiteGrouping }
+  LDAP-NAME                 {"corequisiteORGrouping"}
+  ID                        id-oc-corequisiteORGrouping }
+
+-- OID written as i2OC:17 and expanded with this file's objectidentifier macros.
+iodineAlias OBJECT-CLASS ::= {
+  SUBCLASS OF               { alias }
+  MAY CONTAIN               { iodineUid
+                              | tjhsstGroupId
+                              | tjhsstActivityId
+                              | tjhsstStudentId
+                              | tjhsstSectionId
+                              | tjhsstClassId
+                              | roomNumber
+                              | uid }
+  LDAP-NAME                 {"iodineAlias"}
+  ID                        id-oc-iodineAlias }
+
+-- OID written as i2OC:18 and expanded with this file's objectidentifier macros.
+tjhsstCounselor OBJECT-CLASS ::= {
+  SUBCLASS OF               { tjhsstTeacher }
+  LDAP-NAME                 {"tjhsstCounselor"}
+  ID                        id-oc-tjhsstCounselor }
+
+-- OID written as i2OC:19 and expanded with this file's objectidentifier macros.
+simpleUser OBJECT-CLASS ::= {
+  SUBCLASS OF               { inetOrgPerson }
+  MUST CONTAIN              { iodineUid
+                              | iodineUidNumber }
+  MAY CONTAIN               { startpage
+                              | style
+                              | chrome
+                              | header
+                              | startpage
+                              | givenName
+                              | surname
+                              | commonName
+                              | is-admin }
+  LDAP-NAME                 {"simpleUser"}
+  ID                        id-oc-simpleUser }
+
+-- OID written as i2OC:20 and expanded with this file's objectidentifier macros.
+-- SUP was absent. RFC 4512 treats that as a subclass of top, so SUBCLASS OF { top } was added.
+iodineGroup OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  MUST CONTAIN              { commonName }
+  MAY CONTAIN               { gidNumber
+                              | description
+                              | uniqueMember
+                              | owner }
+  LDAP-NAME                 {"iodineGroup"}
+  ID                        id-oc-iodineGroup }
+
+-- OID written as i2OC:21 and expanded with this file's objectidentifier macros.
+-- SUP was absent. RFC 4512 treats that as a subclass of top, so SUBCLASS OF { top } was added.
+iodinePhoto OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  MUST CONTAIN              { jpegPhoto
+                              | commonName }
+  MAY CONTAIN               { perm-showpictures
+                              | perm-showpictures-self }
+  LDAP-NAME                 {"iodinePhoto"}
+  ID                        id-oc-iodinePhoto }
+END

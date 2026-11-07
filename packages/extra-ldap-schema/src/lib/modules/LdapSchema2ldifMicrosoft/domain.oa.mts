@@ -1,0 +1,42 @@
+/* eslint-disable */
+import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
+import { abstract /* IMPORTED_SHORT_ENUMERATION_ITEM */ } from "../InformationFramework/ObjectClassKind.ta.mjs";
+import { top } from "../InformationFramework/top.oa.mjs";
+import { id_oc_domain } from "../LdapSchema2ldifMicrosoft/id-oc-domain.va.mjs";
+import { dc } from "../SelectedAttributeTypes/dc.oa.mjs";
+
+
+/**
+ * @summary domain
+ * @description
+ * 
+ * ### ASN.1 Definition:
+ * 
+ * ```asn1
+ * domain OBJECT-CLASS ::= {
+ *   SUBCLASS OF               { top }
+ *   KIND                      abstract
+ *   MUST CONTAIN              { dc }
+ *   LDAP-NAME                 {"domain"}
+ *   ID                        id-oc-domain }
+ * ```
+ * 
+ * @constant
+ * @type {OBJECT_CLASS}
+ * @implements {OBJECT_CLASS}
+ */
+export
+const domain: OBJECT_CLASS = {
+    class: "OBJECT-CLASS",
+    decoderFor: {
+    },
+    encoderFor: {
+    },
+    "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
+    "&kind": abstract /* OBJECT_FIELD_SETTING */,
+    "&MandatoryAttributes": [ dc, ] /* OBJECT_FIELD_SETTING */,
+    "&ldapName": [ "domain" ] /* OBJECT_FIELD_SETTING */,
+    "&id": id_oc_domain /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,
+};
+
+/* eslint-enable */

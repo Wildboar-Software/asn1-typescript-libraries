@@ -1,0 +1,32 @@
+-- Derived from data/ldap-schema/qmailuser.schema
+-- This module is a container for LDAP schema. It has no module identifier.
+-- X- extension fields from the LDAP schema are comments. USAGE userApplications and structural KIND are omitted because they are the defaults.
+-- 12 elements were omitted because their OIDs are already defined. See CONVERSION-REPORT.txt.
+-- 1 elements were omitted because another source file in this corpus defines the same OID.
+LdapQmailuser DEFINITIONS ::=
+BEGIN
+
+IMPORTS
+
+  ATTRIBUTE
+    FROM InformationFramework
+      {joint-iso-itu-t ds(5) module(1) informationFramework(1) 9} WITH SUCCESSORS
+
+  printableString
+    FROM SelectedAttributeTypes
+      {joint-iso-itu-t ds(5) module(1) selectedAttributeTypes(5) 9} WITH SUCCESSORS ;
+
+-- Object identifiers
+
+id-at-mailQuota OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 7914 1 2 1 5 }
+
+-- Attribute types
+
+mailQuota ATTRIBUTE ::= {
+  WITH SYNTAX               PrintableString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               printableString.&id
+  LDAP-NAME                 {"mailQuota"}
+  LDAP-DESC                 "The amount of space the user can use until all further messages get bounced."
+  ID                        id-at-mailQuota }
+END

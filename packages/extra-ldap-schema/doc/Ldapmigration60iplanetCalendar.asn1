@@ -1,0 +1,833 @@
+-- Derived from data/ldap-schema/ldapmigration/60iplanet-calendar.ldif
+-- This module is a container for LDAP schema. It has no module identifier.
+-- X- extension fields from the LDAP schema are comments. USAGE userApplications and structural KIND are omitted because they are the defaults.
+-- 23 elements were omitted because another source file in this corpus defines the same OID.
+-- Object classes with no SUP were subclassed from top, the LDAP default (RFC 4512).
+Ldapmigration60iplanetCalendar DEFINITIONS ::=
+BEGIN
+
+IMPORTS
+
+  ATTRIBUTE, DistinguishedName, distinguishedNameMatch, OBJECT-CLASS, top
+    FROM InformationFramework
+      {joint-iso-itu-t ds(5) module(1) informationFramework(1) 9} WITH SUCCESSORS
+
+  caseExactMatch, caseIgnoreMatch, commonName, description, directoryString,
+    dn, facsimileTelephoneNumber, givenName, integer, owner, postalAddress,
+    surname, telephoneNumber, uid, UnboundedDirectoryString
+    FROM SelectedAttributeTypes
+      {joint-iso-itu-t ds(5) module(1) selectedAttributeTypes(5) 9} WITH SUCCESSORS
+
+  userPassword
+    FROM AuthenticationFramework
+      {joint-iso-itu-t ds(5) module(1) authenticationFramework(7) 9} WITH SUCCESSORS
+
+  preferredLanguage
+    FROM InetOrgPerson
+      {iso(1) identified-organization(3) dod(6) internet(1) private(4) enterprise(1) wildboar(56490) module(1) inetorgperson(5)} WITH SUCCESSORS
+
+  mailAlternateAddress
+    FROM QMailSchema
+      {iso(1) identified-organization(3) dod(6) internet(1) private(4) enterprise(1) wildboar(56490) module(1) qmail-schema(55)} WITH SUCCESSORS
+
+  icsExtendedUserPrefs
+    FROM Ldapmigration55imsIcal
+
+  aclGroupAddr, groupid
+    FROM Ldapmigration56imsSchema
+
+  nswcalDisallowAccess
+    FROM LdapNsWcal
+
+  mail
+    FROM LdapSchema2ldifCore ;
+
+-- Object identifiers
+
+id-oc-davEntity OBJECT IDENTIFIER ::= { 2 16 840 1 113894 1009 1 2 3 }
+id-oc-nabUser OBJECT IDENTIFIER ::= { 2 16 840 1 113894 1009 1 2 1 }
+id-oc-nabDomain OBJECT IDENTIFIER ::= { 2 16 840 1 113894 1009 1 2 2 }
+id-oc-icsCalendarUser OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 42 2 27 9 2 140 }
+id-oc-icsCalendarResource OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 42 2 27 9 2 141 }
+id-oc-icsCalendarDomain OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 42 2 27 9 2 149 }
+id-oc-inetResource OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 2 142 }
+id-oc-icsCalendarDWPHost OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 42 2 27 9 2 1 }
+id-oc-icsCalendarGroup OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 42 2 27 9 2 113 }
+id-oc-icsAdministrator OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 2 145 }
+id-at-icsRecurrenceBound OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 750 }
+id-at-icsGeo OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 745 }
+id-at-icsCalendar OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 731 }
+id-at-inetResourceStatus OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 758 }
+id-at-icsAllowedServiceAccess OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 726 }
+id-at-icsExtendedDomainPrefs OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 739 }
+id-at-icsExtendedGroupPrefs OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 740 }
+id-at-icsSet OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 753 }
+id-at-icsQuota OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 748 }
+id-at-icsDefaultAccess OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 734 }
+id-at-icsAnonymousCalendar OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 729 }
+id-at-icsFirstDay OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 743 }
+id-at-icsSubscribed OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 756 }
+id-at-icsAdminRole OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 724 }
+id-at-icsDomainNotAllowed OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 737 }
+id-at-icsRecurrenceDate OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 751 }
+id-at-icsMandatorySubscribed OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 746 }
+id-at-icsAnonymousSet OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 732 }
+id-at-icsAllowRights OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 727 }
+id-at-icsExtendedResourcePrefs OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 741 }
+id-at-icsSourceHtml OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 754 }
+id-at-icsPreferredHost OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 749 }
+id-at-icsDefaultSet OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 735 }
+id-at-icsAnonymousLogin OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 798 }
+id-at-icsFreeBusy OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 744 }
+id-at-icsAnonymousDefaultSet OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 730 }
+id-at-icsTimezone OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 757 }
+id-at-icsAlias OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 725 }
+id-at-icsExtended OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 738 }
+id-at-icsSessionTimeout OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 752 }
+id-at-icsCapacity OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 800 }
+id-at-icsMandatoryView OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 747 }
+id-at-icsContact OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 733 }
+id-at-icsAnonymousAllowWrite OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 728 }
+id-at-icsStatus OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 755 }
+id-at-icsDomainAllowed OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 736 }
+id-at-icsDWPHost OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 42 2 27 9 1 1 }
+id-at-icsRegularExpressions OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 42 2 27 9 1 2 }
+id-at-icsDomainNames OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 42 2 27 9 1 3 }
+id-at-icsPartition OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 42 2 27 9 1 4 }
+id-at-icsDWPBackEndHosts OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 42 2 27 9 1 5 }
+id-at-icsCalendarOwned OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 42 2 27 9 1 6 }
+id-at-icsSecondaryowners OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 42 2 27 9 1 785 }
+id-at-icsDefaultacl OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 42 2 27 9 1 786 }
+id-at-icsDoublebooking OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 42 2 27 9 1 787 }
+id-at-icsAutoaccept OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 42 2 27 9 1 788 }
+id-at-davStore OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 42 2 27 9 1 936 }
+id-at-davAllowedServices OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 42 2 27 9 1 937 }
+id-at-davTimezone OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 42 2 27 9 1 938 }
+id-at-davEventNotification OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 42 2 27 9 1 939 }
+id-at-davEventNotificationDestination OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 42 2 27 9 1 940 }
+id-at-icsDomainAcl OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 42 2 27 9 1 991 }
+id-at-davUniqueId OBJECT IDENTIFIER ::= { 2 16 840 1 113894 1009 1 1 1 }
+id-at-nabStatus OBJECT IDENTIFIER ::= { 2 16 840 1 113894 1009 1 1 2 }
+id-at-nabDomainAcl OBJECT IDENTIFIER ::= { 2 16 840 1 113894 1009 1 1 3 }
+id-at-nabDomainNames OBJECT IDENTIFIER ::= { 2 16 840 1 113894 1009 1 1 4 }
+id-at-nabStore OBJECT IDENTIFIER ::= { 2 16 840 1 113894 1009 1 1 5 }
+
+-- Attribute types
+
+-- X-ORIGIN: "iPlanet Calendar Services"
+icsRecurrenceBound ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"icsRecurrenceBound"}
+  LDAP-DESC                 "Standard Attribute"
+  ID                        id-at-icsRecurrenceBound }
+
+-- X-ORIGIN: "iPlanet Calendar Services"
+icsGeo ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"icsGeo"}
+  LDAP-DESC                 "Standard Attribute"
+  ID                        id-at-icsGeo }
+
+-- X-ORIGIN: "iPla net Calendar Services"
+icsCalendar ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"icsCalendar"}
+  LDAP-DESC                 "Standard Attribute"
+  ID                        id-at-icsCalendar }
+
+-- X-ORIGIN: "iPlanet Calendar Services"
+inetResourceStatus ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"inetResourceStatus"}
+  LDAP-DESC                 "Standard Attribute"
+  ID                        id-at-inetResourceStatus }
+
+-- X-ORIGIN: "iPlanet Calendar Services"
+icsAllowedServiceAccess ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"icsAllowedServiceAccess"}
+  LDAP-DESC                 "Standard Attribute"
+  ID                        id-at-icsAllowedServiceAccess }
+
+-- X-ORIGIN: "iPlanet Calendar Services"
+icsExtendedDomainPrefs ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"icsExtendedDomainPrefs"}
+  LDAP-DESC                 "Standard Attribute"
+  ID                        id-at-icsExtendedDomainPrefs }
+
+-- X-ORIGIN: "iPlanet Calendar Services"
+icsExtendedGroupPrefs ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"icsExtendedGroupPrefs"}
+  LDAP-DESC                 "Standard Attribute"
+  ID                        id-at-icsExtendedGroupPrefs }
+
+-- X-ORIGIN: "iPlanet Calendar Services"
+icsSet ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"icsSet"}
+  LDAP-DESC                 "Standard Attribute"
+  ID                        id-at-icsSet }
+
+-- X-ORIGIN: "iPlanet Calendar Services"
+icsQuota ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"icsQuota"}
+  LDAP-DESC                 "Standard Attribute"
+  ID                        id-at-icsQuota }
+
+-- X-ORIGIN: "iPlanet Calendar Services"
+icsDefaultAccess ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"icsDefaultAccess"}
+  LDAP-DESC                 "Standard Attribute"
+  ID                        id-at-icsDefaultAccess }
+
+-- X-ORIGIN: "iPlanet Calendar Services"
+icsAnonymousCalendar ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"icsAnonymousCalendar"}
+  LDAP-DESC                 "Standard Attribute"
+  ID                        id-at-icsAnonymousCalendar }
+
+-- X-ORIGIN: "iPlan et Calendar Services"
+icsFirstDay ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"icsFirstDay"}
+  LDAP-DESC                 "Standard Attribute"
+  ID                        id-at-icsFirstDay }
+
+-- X-ORIGIN: "iPlanet Calendar Services"
+icsSubscribed ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"icsSubscribed"}
+  LDAP-DESC                 "Standard Attribute"
+  ID                        id-at-icsSubscribed }
+
+-- X-ORIGIN: "iPlanet Calendar Services"
+icsAdminRole ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"icsAdminRole"}
+  LDAP-DESC                 "Standard Attribute"
+  ID                        id-at-icsAdminRole }
+
+-- X-ORIGIN: "iPlanet Calendar Services"
+icsDomainNotAllowed ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"icsDomainNotAllowed"}
+  LDAP-DESC                 "Standard Attribute"
+  ID                        id-at-icsDomainNotAllowed }
+
+-- X-ORIGIN: "iPlanet Calendar Services"
+icsRecurrenceDate ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"icsRecurrenceDate"}
+  LDAP-DESC                 "Standard Attribute"
+  ID                        id-at-icsRecurrenceDate }
+
+-- X-ORIGIN: "iPlanet Calendar Services"
+icsMandatorySubscribed ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"icsMandatorySubscribed"}
+  LDAP-DESC                 "Standard Attribute"
+  ID                        id-at-icsMandatorySubscribed }
+
+-- X-ORIGIN: "iPlanet Calendar Services"
+icsAnonymousSet ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"icsAnonymousSet"}
+  LDAP-DESC                 "Standard Attribute"
+  ID                        id-at-icsAnonymousSet }
+
+-- X-ORIGIN: "iPlanet Calendar Services"
+icsAllowRights ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"icsAllowRights"}
+  LDAP-DESC                 "Standard Attribute"
+  ID                        id-at-icsAllowRights }
+
+-- X-ORIGIN: "iPlanet Calendar Services"
+icsExtendedResourcePrefs ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"icsExtendedResourcePrefs"}
+  LDAP-DESC                 "Standard Attribute"
+  ID                        id-at-icsExtendedResourcePrefs }
+
+-- X-ORIGIN: "iPlanet Calendar Services"
+icsSourceHtml ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"icsSourceHtml"}
+  LDAP-DESC                 "Standard Attribute"
+  ID                        id-at-icsSourceHtml }
+
+-- X-ORIGIN: "iPlanet Calendar Services"
+icsPreferredHost ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"icsPreferredHost"}
+  LDAP-DESC                 "Standard Attribute"
+  ID                        id-at-icsPreferredHost }
+
+-- X-ORIGIN: "iPlanet Calendar Services"
+icsDefaultSet ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"icsDefaultSet"}
+  LDAP-DESC                 "Standard Attribute"
+  ID                        id-at-icsDefaultSet }
+
+-- X-ORIGIN: "iPlanet Calendar Services"
+icsAnonymousLogin ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"icsAnonymousLogin"}
+  LDAP-DESC                 "Standard Attribute"
+  ID                        id-at-icsAnonymousLogin }
+
+-- X-ORIGIN: "iPlanet Calendar Services"
+icsFreeBusy ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"icsFreeBusy"}
+  LDAP-DESC                 "Standard Attribute"
+  ID                        id-at-icsFreeBusy }
+
+-- X-ORIGIN: "iPlanet Calendar Services"
+icsAnonymousDefaultSet ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"icsAnonymousDefaultSet"}
+  LDAP-DESC                 "Standard Attribute"
+  ID                        id-at-icsAnonymousDefaultSet }
+
+-- X-ORIGIN: "iPlanet Calendar Services"
+icsTimezone ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"icsTimezone"}
+  LDAP-DESC                 "Standard Attribute"
+  ID                        id-at-icsTimezone }
+
+-- X-ORIGIN: "iPlanet Calendar Services"
+icsAlias ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"icsAlias"}
+  LDAP-DESC                 "Standard Attribute"
+  ID                        id-at-icsAlias }
+
+-- X-ORIGIN: "iPlanet Calendar Services"
+icsExtended ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"icsExtended"}
+  LDAP-DESC                 "Standard Attribute"
+  ID                        id-at-icsExtended }
+
+-- X-ORIGIN: "iPlanet Calendar Services"
+icsSessionTimeout ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"icsSessionTimeout"}
+  LDAP-DESC                 "Standard Attribute"
+  ID                        id-at-icsSessionTimeout }
+
+-- X-ORIGIN: "iPlanet Calendar Services"
+icsCapacity ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"icsCapacity"}
+  LDAP-DESC                 "Standard Attribute"
+  ID                        id-at-icsCapacity }
+
+-- X-ORIGIN: "iPlanet Calendar Services"
+icsMandatoryView ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"icsMandatoryView"}
+  LDAP-DESC                 "Standard Attribute"
+  ID                        id-at-icsMandatoryView }
+
+-- X-ORIGIN: "iPlanet Calendar Services"
+icsContact ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"icsContact"}
+  LDAP-DESC                 "Standard Attribute"
+  ID                        id-at-icsContact }
+
+-- X-ORIGIN: "iPlanet Calendar Services"
+icsAnonymousAllowWrite ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"icsAnonymousAllowWrite"}
+  LDAP-DESC                 "Standard Attribute"
+  ID                        id-at-icsAnonymousAllowWrite }
+
+-- X-ORIGIN: "iPlanet Calendar Services"
+icsStatus ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"icsStatus"}
+  LDAP-DESC                 "Standard Attribute"
+  ID                        id-at-icsStatus }
+
+-- X-ORIGIN: "iPlanet Calendar Services"
+icsDomainAllowed ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"icsDomainAllowed"}
+  LDAP-DESC                 "Standard Attribute"
+  ID                        id-at-icsDomainAllowed }
+
+-- X-ORIGIN: "iPlanet Calendar Services"
+icsDWPHost ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseIgnoreMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"icsDWPHost"}
+  LDAP-DESC                 "iPlanet Calendar Attribute. Used to store one DWP server hostname"
+  ID                        id-at-icsDWPHost }
+
+-- X-ORIGIN: "iPlanet Calendar Services"
+icsRegularExpressions ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseExactMatch
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"icsRegularExpressions"}
+  LDAP-DESC                 "iPlanet Calendar Server attribute. Used to store multiple regular expresions"
+  ID                        id-at-icsRegularExpressions }
+
+-- X-ORIGIN: "iPlanet Calendar Services"
+icsDomainNames ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseIgnoreMatch
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"icsDomainNames"}
+  LDAP-DESC                 "iPlanet Calendar Server attribute. Used to store virtual domain names"
+  ID                        id-at-icsDomainNames }
+
+-- X-ORIGIN: "iPlanet Calendar Services"
+icsPartition ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseExactMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"icsPartition"}
+  LDAP-DESC                 "iPlanet Calendar Server attribute. Used to store the name of the partition that holds a calendar database. Reserved for future calendar use."
+  ID                        id-at-icsPartition }
+
+-- X-ORIGIN: "iPlanet Calendar Services"
+icsDWPBackEndHosts ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseIgnoreMatch
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"icsDWPBackEndHosts"}
+  LDAP-DESC                 "iPlanet Calendar Server attribute. Used in domain entry to store the possibleDWP backendhosts. machine1, machine2 - can be fully qualified host names"
+  ID                        id-at-icsDWPBackEndHosts }
+
+-- X-ORIGIN: "iPlanet Calendar Services"
+icsCalendarOwned ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"icsCalendarOwned"}
+  LDAP-DESC                 "iPlanet Calendar Server attribute. Used to store calendar names owned by a specific user"
+  ID                        id-at-icsCalendarOwned }
+
+-- X-ORIGIN: "JES Calendar"
+icsSecondaryowners ATTRIBUTE ::= {
+  WITH SYNTAX               DistinguishedName
+  EQUALITY MATCHING RULE    distinguishedNameMatch
+  LDAP-SYNTAX               dn.&id
+  LDAP-NAME                 {"icsSecondaryowners"}
+  LDAP-DESC                 "DNs of co-owners"
+  ID                        id-at-icsSecondaryowners }
+
+-- X-ORIGIN: "JES Calendar"
+icsDefaultacl ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseIgnoreMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"icsDefaultacl"}
+  LDAP-DESC                 "acl string for new calendar group"
+  ID                        id-at-icsDefaultacl }
+
+-- X-ORIGIN: "JES Calendar"
+icsDoublebooking ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseIgnoreMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"icsDoublebooking"}
+  LDAP-DESC                 "does group allow doublebooking"
+  ID                        id-at-icsDoublebooking }
+
+-- X-ORIGIN: "JES Calendar"
+icsAutoaccept ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseIgnoreMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"icsAutoaccept"}
+  LDAP-DESC                 "invitations automatically accepted or not"
+  ID                        id-at-icsAutoaccept }
+
+-- X-ORIGIN: "JES Calendar"
+davStore ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"davStore"}
+  LDAP-DESC                 "Logical Backed ID"
+  ID                        id-at-davStore }
+
+-- X-ORIGIN: "JES Calendar"
+davAllowedServices ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"davAllowedServices"}
+  LDAP-DESC                 "List of Allowed Services"
+  ID                        id-at-davAllowedServices }
+
+-- X-ORIGIN: "JES Calendar"
+davTimezone ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"davTimezone"}
+  LDAP-DESC                 "Dav object Timezone"
+  ID                        id-at-davTimezone }
+
+-- X-ORIGIN: "JES Calendar"
+davEventNotification ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseIgnoreMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"davEventNotification"}
+  LDAP-DESC                 "enable DAV JMS notifications"
+  ID                        id-at-davEventNotification }
+
+-- X-ORIGIN: "JES Calendar"
+davEventNotificationDestination ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"davEventNotificationDestination"}
+  LDAP-DESC                 "Dav JMS Notification Topic"
+  ID                        id-at-davEventNotificationDestination }
+
+-- X-ORIGIN: "OCUCS Calendar"
+icsDomainAcl ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseIgnoreMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"icsDomainAcl"}
+  LDAP-DESC                 "acl string for calendar domain"
+  ID                        id-at-icsDomainAcl }
+
+-- X-ORIGIN: "OCUCS Calendar NAB"
+davUniqueId ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"davUniqueId"}
+  LDAP-DESC                 "Dav Entry Unique ID"
+  ID                        id-at-davUniqueId }
+
+-- X-ORIGIN: "OCUCS NAB"
+nabStatus ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"nabStatus"}
+  LDAP-DESC                 "NAB Entry status"
+  ID                        id-at-nabStatus }
+
+-- X-ORIGIN: "OCUCS NAB"
+nabDomainAcl ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseIgnoreMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"nabDomainAcl"}
+  LDAP-DESC                 "ACL string for NAB domain"
+  ID                        id-at-nabDomainAcl }
+
+-- X-ORIGIN: "OCUCS NAB"
+nabDomainNames ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseIgnoreMatch
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"nabDomainNames"}
+  LDAP-DESC                 "Store domain names for NAB access control"
+  ID                        id-at-nabDomainNames }
+
+-- X-ORIGIN: "OCUCS NAB"
+nabStore ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"nabStore"}
+  LDAP-DESC                 "NAB SpecificLogical Backed ID"
+  ID                        id-at-nabStore }
+
+-- Object classes
+
+-- X-ORIGIN: "JES Calendar"
+-- SUP was absent. RFC 4512 treats that as a subclass of top, so SUBCLASS OF { top } was added.
+davEntity OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  KIND                      auxiliary
+  MAY CONTAIN               { mail
+                              | davStore
+                              | davAllowedServices
+                              | davEventNotification
+                              | davEventNotificationDestination
+                              | davTimezone
+                              | davUniqueId }
+  LDAP-NAME                 {"davEntity"}
+  LDAP-DESC                 "Common dav object"
+  ID                        id-oc-davEntity }
+
+-- X-ORIGIN: "OCUCS NAB"
+-- SUP was absent. RFC 4512 treats that as a subclass of top, so SUBCLASS OF { top } was added.
+nabUser OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  KIND                      auxiliary
+  MAY CONTAIN               { commonName
+                              | givenName
+                              | mail
+                              | mailAlternateAddress
+                              | preferredLanguage
+                              | surname
+                              | uid
+                              | userPassword
+                              | nabStatus
+                              | nabStore }
+  LDAP-NAME                 {"nabUser"}
+  LDAP-DESC                 "NAB Entry Object Class"
+  ID                        id-oc-nabUser }
+
+-- X-ORIGIN: "OCUCS NAB"
+-- SUP was absent. RFC 4512 treats that as a subclass of top, so SUBCLASS OF { top } was added.
+nabDomain OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  KIND                      auxiliary
+  MAY CONTAIN               { nabDomainNames
+                              | nabStatus
+                              | davAllowedServices
+                              | nabDomainAcl
+                              | nabStore }
+  LDAP-NAME                 {"nabDomain"}
+  LDAP-DESC                 "NAB Domain Object Class"
+  ID                        id-oc-nabDomain }
+
+-- X-ORIGIN: "JES Calendar"
+-- SUP was absent. RFC 4512 treats that as a subclass of top, so SUBCLASS OF { top } was added.
+icsCalendarUser OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  KIND                      auxiliary
+  MAY CONTAIN               { commonName
+                              | givenName
+                              | mail
+                              | mailAlternateAddress
+                              | preferredLanguage
+                              | surname
+                              | uid
+                              | userPassword
+                              | icsAllowedServiceAccess
+                              | icsCalendar
+                              | icsCalendarOwned
+                              | icsDefaultSet
+                              | icsDWPHost
+                              | icsExtended
+                              | icsExtendedUserPrefs
+                              | icsFirstDay
+                              | icsFreeBusy
+                              | icsGeo
+                              | icsPartition
+                              | icsPreferredHost
+                              | icsQuota
+                              | icsSet
+                              | icsStatus
+                              | icsSubscribed
+                              | icsTimezone
+                              | nswcalDisallowAccess
+                              | aclGroupAddr }
+  LDAP-NAME                 {"icsCalendarUser"}
+  LDAP-DESC                 "Standard Object Class"
+  ID                        id-oc-icsCalendarUser }
+
+-- X-ORIGIN: "JES Calendar"
+-- SUP was absent. RFC 4512 treats that as a subclass of top, so SUBCLASS OF { top } was added.
+icsCalendarResource OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  KIND                      auxiliary
+  MAY CONTAIN               { commonName
+                              | mail
+                              | mailAlternateAddress
+                              | icsAlias
+                              | icsCalendar
+                              | icsCapacity
+                              | icsContact
+                              | icsDWPHost
+                              | icsExtended
+                              | icsExtendedResourcePrefs
+                              | icsGeo
+                              | icsPartition
+                              | icsPreferredHost
+                              | icsQuota
+                              | icsStatus
+                              | icsTimezone
+                              | uid
+                              | description
+                              | owner
+                              | icsSecondaryowners
+                              | icsDefaultacl
+                              | icsDoublebooking
+                              | icsAutoaccept }
+  LDAP-NAME                 {"icsCalendarResource"}
+  LDAP-DESC                 "Standard Object Class"
+  ID                        id-oc-icsCalendarResource }
+
+-- X-ORIGIN: "JES Calendar"
+-- SUP was absent. RFC 4512 treats that as a subclass of top, so SUBCLASS OF { top } was added.
+icsCalendarDomain OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  KIND                      auxiliary
+  MAY CONTAIN               { icsAllowedServiceAccess
+                              | icsAllowRights
+                              | icsAnonymousAllowWrite
+                              | icsAnonymousCalendar
+                              | icsAnonymousDefaultSet
+                              | icsAnonymousLogin
+                              | icsAnonymousSet
+                              | icsDWPBackEndHosts
+                              | icsExtended
+                              | icsExtendedDomainPrefs
+                              | icsDefaultAccess
+                              | icsDomainAllowed
+                              | icsDomainNames
+                              | icsDomainNotAllowed
+                              | icsMandatorySubscribed
+                              | icsMandatoryView
+                              | icsPreferredHost
+                              | icsQuota
+                              | icsRecurrenceBound
+                              | icsRecurrenceDate
+                              | icsSessionTimeout
+                              | icsSourceHtml
+                              | icsStatus
+                              | icsTimezone
+                              | davAllowedServices
+                              | icsDomainAcl }
+  LDAP-NAME                 {"icsCalendarDomain"}
+  LDAP-DESC                 "Standard Object Class"
+  ID                        id-oc-icsCalendarDomain }
+
+-- X-ORIGIN: "iPlanet Calend ar Services"
+-- SUP was absent. RFC 4512 treats that as a subclass of top, so SUBCLASS OF { top } was added.
+inetResource OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  MUST CONTAIN              { commonName }
+  MAY CONTAIN               { telephoneNumber
+                              | facsimileTelephoneNumber
+                              | mail
+                              | postalAddress
+                              | inetResourceStatus }
+  LDAP-NAME                 {"inetResource"}
+  LDAP-DESC                 "Standard Object Class"
+  ID                        id-oc-inetResource }
+
+-- X-ORIGIN: "iPlanet Calendar Services"
+-- SUP was absent. RFC 4512 treats that as a subclass of top, so SUBCLASS OF { top } was added.
+icsCalendarDWPHost OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  MAY CONTAIN               { commonName
+                              | description
+                              | icsDWPHost
+                              | icsRegularExpressions
+                              | icsExtended
+                              | icsDomainNames
+                              | icsStatus }
+  LDAP-NAME                 {"icsCalendarDWPHost"}
+  LDAP-DESC                 "Standard Object Class"
+  ID                        id-oc-icsCalendarDWPHost }
+
+-- X-ORIGIN: "JES Calendar"
+icsCalendarGroup OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  KIND                      auxiliary
+  MUST CONTAIN              { groupid }
+  MAY CONTAIN               { icsSecondaryowners
+                              | icsDefaultacl
+                              | icsCalendar
+                              | icsStatus
+                              | icsTimezone
+                              | icsDWPHost
+                              | icsDoublebooking
+                              | icsAutoaccept
+                              | mail }
+  LDAP-NAME                 {"icsCalendarGroup"}
+  LDAP-DESC                 "Calendar Group object"
+  ID                        id-oc-icsCalendarGroup }
+
+-- X-ORIGIN: "iPlanet Calendar Services"
+-- SUP was absent. RFC 4512 treats that as a subclass of top, so SUBCLASS OF { top } was added.
+icsAdministrator OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  MAY CONTAIN               { icsAdminRole
+                              | icsExtended
+                              | icsExtendedGroupPrefs }
+  LDAP-NAME                 {"icsAdministrator"}
+  LDAP-DESC                 "Standard Object Class"
+  ID                        id-oc-icsAdministrator }
+END

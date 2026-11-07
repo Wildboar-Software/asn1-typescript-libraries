@@ -1,0 +1,136 @@
+-- Derived from data/ldap-schema/glue/5-06-Service.schema
+-- Upstream: http://redmine.ogf.org/projects/glue-wg
+-- This module is a container for LDAP schema. It has no module identifier.
+-- X- extension fields from the LDAP schema are comments. USAGE userApplications and structural KIND are omitted because they are the defaults.
+LdapGlue506Service DEFINITIONS ::=
+BEGIN
+
+IMPORTS
+
+  ATTRIBUTE, OBJECT-CLASS
+    FROM InformationFramework
+      {joint-iso-itu-t ds(5) module(1) informationFramework(1) 9} WITH SUCCESSORS
+
+  caseExactMatch, caseExactSubstringsMatch, directoryString,
+    UnboundedDirectoryString
+    FROM SelectedAttributeTypes
+      {joint-iso-itu-t ds(5) module(1) selectedAttributeTypes(5) 9} WITH SUCCESSORS
+
+  gLUE2Entity
+    FROM LdapGlue501Entity ;
+
+-- Object identifiers
+
+id-at-gLUE2ServiceID OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 6757 100 1 1 8 1 }
+id-at-gLUE2ServiceCapability OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 6757 100 1 1 8 2 }
+id-at-gLUE2ServiceType OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 6757 100 1 1 8 3 }
+id-at-gLUE2ServiceQualityLevel OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 6757 100 1 1 8 4 }
+id-at-gLUE2ServiceStatusInfo OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 6757 100 1 1 8 5 }
+id-at-gLUE2ServiceComplexity OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 6757 100 1 1 8 6 }
+id-at-gLUE2ServiceAdminDomainForeignKey OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 6757 100 1 1 8 7 }
+id-at-gLUE2ServiceServiceForeignKey OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 6757 100 1 1 8 8 }
+id-oc-gLUE2Service OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 6757 100 1 1 8 }
+
+-- Attribute types
+
+-- initial capital of "GLUE2ServiceID" lowercased so the assignment is a valuereference.
+gLUE2ServiceID ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseExactMatch
+  SUBSTRINGS MATCHING RULE  caseExactSubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"GLUE2ServiceID"}
+  LDAP-DESC                 "Globally unique ID"
+  ID                        id-at-gLUE2ServiceID }
+
+-- initial capital of "GLUE2ServiceCapability" lowercased so the assignment is a valuereference.
+gLUE2ServiceCapability ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseExactMatch
+  SUBSTRINGS MATCHING RULE  caseExactSubstringsMatch
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"GLUE2ServiceCapability"}
+  LDAP-DESC                 "The provided capability according to the OGSA architecture (it is given by the sum of all the capabilities provided by the related endpoints)"
+  ID                        id-at-gLUE2ServiceCapability }
+
+-- initial capital of "GLUE2ServiceType" lowercased so the assignment is a valuereference.
+gLUE2ServiceType ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseExactMatch
+  SUBSTRINGS MATCHING RULE  caseExactSubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"GLUE2ServiceType"}
+  LDAP-DESC                 "The type of service according to a middleware classification"
+  ID                        id-at-gLUE2ServiceType }
+
+-- initial capital of "GLUE2ServiceQualityLevel" lowercased so the assignment is a valuereference.
+gLUE2ServiceQualityLevel ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseExactMatch
+  SUBSTRINGS MATCHING RULE  caseExactSubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"GLUE2ServiceQualityLevel"}
+  LDAP-DESC                 "Maturity of the service in terms of quality of the software components"
+  ID                        id-at-gLUE2ServiceQualityLevel }
+
+-- initial capital of "GLUE2ServiceStatusInfo" lowercased so the assignment is a valuereference.
+gLUE2ServiceStatusInfo ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseExactMatch
+  SUBSTRINGS MATCHING RULE  caseExactSubstringsMatch
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"GLUE2ServiceStatusInfo"}
+  LDAP-DESC                 "A URL providing additional information like monitoring aspects"
+  ID                        id-at-gLUE2ServiceStatusInfo }
+
+-- initial capital of "GLUE2ServiceComplexity" lowercased so the assignment is a valuereference.
+gLUE2ServiceComplexity ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseExactMatch
+  SUBSTRINGS MATCHING RULE  caseExactSubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"GLUE2ServiceComplexity"}
+  LDAP-DESC                 "Human-readable summary description of the complexity in terms of the number of endpoint types, shares and resources. The syntax should be: EndpointType=X, Share=Y, Resource=Z."
+  ID                        id-at-gLUE2ServiceComplexity }
+
+-- initial capital of "GLUE2ServiceAdminDomainForeignKey" lowercased so the assignment is a valuereference.
+gLUE2ServiceAdminDomainForeignKey ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseExactMatch
+  SUBSTRINGS MATCHING RULE  caseExactSubstringsMatch
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"GLUE2ServiceAdminDomainForeignKey"}
+  LDAP-DESC                 "ForeignKey"
+  ID                        id-at-gLUE2ServiceAdminDomainForeignKey }
+
+-- initial capital of "GLUE2ServiceServiceForeignKey" lowercased so the assignment is a valuereference.
+gLUE2ServiceServiceForeignKey ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseExactMatch
+  SUBSTRINGS MATCHING RULE  caseExactSubstringsMatch
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"GLUE2ServiceServiceForeignKey"}
+  LDAP-DESC                 "ForeignKey"
+  ID                        id-at-gLUE2ServiceServiceForeignKey }
+
+-- Object classes
+
+-- initial capital of "GLUE2Service" lowercased so the assignment is a valuereference.
+gLUE2Service OBJECT-CLASS ::= {
+  SUBCLASS OF               { gLUE2Entity }
+  MUST CONTAIN              { gLUE2ServiceID
+                              | gLUE2ServiceType
+                              | gLUE2ServiceQualityLevel
+                              | gLUE2ServiceAdminDomainForeignKey }
+  MAY CONTAIN               { gLUE2ServiceCapability
+                              | gLUE2ServiceStatusInfo
+                              | gLUE2ServiceComplexity
+                              | gLUE2ServiceServiceForeignKey }
+  LDAP-NAME                 {"GLUE2Service"}
+  LDAP-DESC                 "An abstracted, logical view of actual software components that participate in the creation of an entity providing one or more functionalities useful in a Grid environment. A service exposes zero or more endpoints having well-defined interfaces, zero or more shares and zero or more managers and the related resources. The service is autonomous and denotes a weak aggregation among endpoints, the underlying managers and the related resources, and the defined shares. The service enables to identify the whole set of entities providing the functionality with a persistent name."
+  ID                        id-oc-gLUE2Service }
+END

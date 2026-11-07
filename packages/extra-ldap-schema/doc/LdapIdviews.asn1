@@ -1,0 +1,106 @@
+-- Derived from data/ldap-schema/idviews.ldif
+-- Upstream: https://github.com/hroncok/freeipa/blob/7688bbcc33eb24a86ede7dc12ea9c64a27006aa8/install/share/71idviews.ldif
+-- This module is a container for LDAP schema. It has no module identifier.
+-- X- extension fields from the LDAP schema are comments. USAGE userApplications and structural KIND are omitted because they are the defaults.
+LdapIdviews DEFINITIONS ::=
+BEGIN
+
+IMPORTS
+
+  ATTRIBUTE, OBJECT-CLASS, top
+    FROM InformationFramework
+      {joint-iso-itu-t ds(5) module(1) informationFramework(1) 9} WITH SUCCESSORS
+
+  caseIgnoreMatch, caseIgnoreOrderingMatch, commonName, description,
+    directoryString, uid, UnboundedDirectoryString
+    FROM SelectedAttributeTypes
+      {joint-iso-itu-t ds(5) module(1) selectedAttributeTypes(5) 9} WITH SUCCESSORS
+
+  gecos, gidNumber, homeDirectory, loginShell, uidNumber
+    FROM NIS
+      {iso(1) identified-organization(3) dod(6) internet(1) private(4) enterprise(1) wildboar(56490) module(1) nis(7)} WITH SUCCESSORS
+
+  nsContainer
+    FROM LdapCore389 ;
+
+-- Object identifiers
+
+id-at-ipaAnchorUUID OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 8 11 62 }
+id-at-ipaOriginalUid OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 8 11 63 }
+id-oc-ipaIDView OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 8 12 29 }
+id-oc-ipaOverrideAnchor OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 8 12 30 }
+id-oc-ipaUserOverride OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 8 12 31 }
+id-oc-ipaGroupOverride OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 8 12 32 }
+id-oc-ipaOverrideTarget OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 8 12 35 }
+
+-- Attribute types
+
+-- X-ORIGIN: "IPA v4"
+ipaAnchorUUID ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseIgnoreMatch
+  ORDERING MATCHING RULE    caseIgnoreOrderingMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"ipaAnchorUUID"}
+  LDAP-DESC                 "Unique Anchor Identifier"
+  ID                        id-at-ipaAnchorUUID }
+
+-- X-ORIGIN: "IPA v4"
+ipaOriginalUid ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseIgnoreMatch
+  ORDERING MATCHING RULE    caseIgnoreOrderingMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"ipaOriginalUid"}
+  LDAP-DESC                 "Original UID of overriden user"
+  ID                        id-at-ipaOriginalUid }
+
+-- Object classes
+
+-- X-ORIGIN: "IPA v4"
+ipaIDView OBJECT-CLASS ::= {
+  SUBCLASS OF               { nsContainer }
+  MAY CONTAIN               { description }
+  LDAP-NAME                 {"ipaIDView"}
+  ID                        id-oc-ipaIDView }
+
+-- X-ORIGIN: "IPA v4"
+ipaOverrideAnchor OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  MUST CONTAIN              { ipaAnchorUUID }
+  MAY CONTAIN               { description }
+  LDAP-NAME                 {"ipaOverrideAnchor"}
+  ID                        id-oc-ipaOverrideAnchor }
+
+-- X-ORIGIN: "IPA v4"
+ipaUserOverride OBJECT-CLASS ::= {
+  SUBCLASS OF               { ipaOverrideAnchor }
+  MAY CONTAIN               { uid
+                              | uidNumber
+                              | gidNumber
+                              | homeDirectory
+                              | loginShell
+                              | gecos
+                              | ipaOriginalUid }
+  LDAP-NAME                 {"ipaUserOverride"}
+  LDAP-DESC                 "Override for User Attributes"
+  ID                        id-oc-ipaUserOverride }
+
+-- X-ORIGIN: "IPA v4"
+ipaGroupOverride OBJECT-CLASS ::= {
+  SUBCLASS OF               { ipaOverrideAnchor }
+  MAY CONTAIN               { gidNumber
+                              | commonName }
+  LDAP-NAME                 {"ipaGroupOverride"}
+  LDAP-DESC                 "Override for Group Attributes"
+  ID                        id-oc-ipaGroupOverride }
+
+-- X-ORIGIN: "IPA v4"
+ipaOverrideTarget OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  MUST CONTAIN              { ipaAnchorUUID }
+  LDAP-NAME                 {"ipaOverrideTarget"}
+  ID                        id-oc-ipaOverrideTarget }
+END

@@ -1,0 +1,139 @@
+-- Derived from data/ldap-schema/schema2ldif/samba.schema
+-- This module is a container for LDAP schema. It has no module identifier.
+-- X- extension fields from the LDAP schema are comments. USAGE userApplications and structural KIND are omitted because they are the defaults.
+-- 54 elements were omitted because their OIDs are already defined. See CONVERSION-REPORT.txt.
+-- 4 elements were omitted because another source file in this corpus defines the same OID.
+-- LDAP {length} bounds on directory strings are DirectoryString{n}. Bounds on IA5String, PrintableString, NumericString, and OCTET STRING are SIZE (1..n). Other bounds stay comments because the LDAP figure is an encoded-length hint.
+LdapSchema2ldifSamba DEFINITIONS ::=
+BEGIN
+
+IMPORTS
+
+  ATTRIBUTE, OBJECT-CLASS, top
+    FROM InformationFramework
+      {joint-iso-itu-t ds(5) module(1) informationFramework(1) 9} WITH SUCCESSORS
+
+  caseExactMatch, caseIgnoreIA5Match, caseIgnoreMatch, commonName,
+    directoryString, DirectoryString, ia5String, integer, integerMatch
+    FROM SelectedAttributeTypes
+      {joint-iso-itu-t ds(5) module(1) selectedAttributeTypes(5) 9} WITH SUCCESSORS
+
+  caseExactIA5SubstringsMatch
+    FROM OpenLDAP
+      {iso(1) identified-organization(3) dod(6) internet(1) private(4) enterprise(1) wildboar(56490) module(1) openldap(28)} WITH SUCCESSORS ;
+
+-- Object identifiers
+
+id-at-sambaTrustType OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 7165 2 1 70 }
+id-at-sambaTrustAttributes OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 7165 2 1 71 }
+id-at-sambaTrustDirection OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 7165 2 1 72 }
+id-at-sambaTrustPartner OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 7165 2 1 73 }
+id-at-sambaFlatName OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 7165 2 1 74 }
+id-at-sambaTrustAuthOutgoing OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 7165 2 1 75 }
+id-at-sambaTrustAuthIncoming OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 7165 2 1 76 }
+id-at-sambaSecurityIdentifier OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 7165 2 1 77 }
+id-at-sambaTrustForestTrustInfo OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 7165 2 1 78 }
+id-oc-sambaTrustedDomain OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 7165 2 2 16 }
+
+-- Attribute types
+
+sambaTrustType ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  EQUALITY MATCHING RULE    integerMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"sambaTrustType"}
+  LDAP-DESC                 "Type of trust"
+  ID                        id-at-sambaTrustType }
+
+sambaTrustAttributes ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  EQUALITY MATCHING RULE    integerMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"sambaTrustAttributes"}
+  LDAP-DESC                 "Trust attributes for a trusted domain"
+  ID                        id-at-sambaTrustAttributes }
+
+sambaTrustDirection ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  EQUALITY MATCHING RULE    integerMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"sambaTrustDirection"}
+  LDAP-DESC                 "Direction of a trust"
+  ID                        id-at-sambaTrustDirection }
+
+-- LDAP syntax length {128} rendered as DirectoryString{128}.
+sambaTrustPartner ATTRIBUTE ::= {
+  WITH SYNTAX               DirectoryString{128}
+  EQUALITY MATCHING RULE    caseIgnoreMatch
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"sambaTrustPartner"}
+  LDAP-DESC                 "Fully qualified name of the domain with which a trust exists"
+  ID                        id-at-sambaTrustPartner }
+
+-- LDAP syntax length {128} rendered as DirectoryString{128}.
+sambaFlatName ATTRIBUTE ::= {
+  WITH SYNTAX               DirectoryString{128}
+  EQUALITY MATCHING RULE    caseIgnoreMatch
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"sambaFlatName"}
+  LDAP-DESC                 "NetBIOS name of a domain"
+  ID                        id-at-sambaFlatName }
+
+-- LDAP syntax length {1050} rendered as DirectoryString{1050}.
+sambaTrustAuthOutgoing ATTRIBUTE ::= {
+  WITH SYNTAX               DirectoryString{1050}
+  EQUALITY MATCHING RULE    caseExactMatch
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"sambaTrustAuthOutgoing"}
+  LDAP-DESC                 "Authentication information for the outgoing portion of a trust"
+  ID                        id-at-sambaTrustAuthOutgoing }
+
+-- LDAP syntax length {1050} rendered as DirectoryString{1050}.
+sambaTrustAuthIncoming ATTRIBUTE ::= {
+  WITH SYNTAX               DirectoryString{1050}
+  EQUALITY MATCHING RULE    caseExactMatch
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"sambaTrustAuthIncoming"}
+  LDAP-DESC                 "Authentication information for the incoming portion of a trust"
+  ID                        id-at-sambaTrustAuthIncoming }
+
+sambaSecurityIdentifier ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String(SIZE (1..64))
+  EQUALITY MATCHING RULE    caseIgnoreIA5Match
+  SUBSTRINGS MATCHING RULE  caseExactIA5SubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"sambaSecurityIdentifier"}
+  LDAP-DESC                 "SID of a trusted domain"
+  ID                        id-at-sambaSecurityIdentifier }
+
+-- LDAP syntax length {1050} rendered as DirectoryString{1050}.
+sambaTrustForestTrustInfo ATTRIBUTE ::= {
+  WITH SYNTAX               DirectoryString{1050}
+  EQUALITY MATCHING RULE    caseExactMatch
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"sambaTrustForestTrustInfo"}
+  LDAP-DESC                 "Forest trust information for a trusted domain object"
+  ID                        id-at-sambaTrustForestTrustInfo }
+
+-- Object classes
+
+sambaTrustedDomain OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  MUST CONTAIN              { commonName }
+  MAY CONTAIN               { sambaTrustType
+                              | sambaTrustAttributes
+                              | sambaTrustDirection
+                              | sambaTrustPartner
+                              | sambaFlatName
+                              | sambaTrustAuthOutgoing
+                              | sambaTrustAuthIncoming
+                              | sambaSecurityIdentifier
+                              | sambaTrustForestTrustInfo }
+  LDAP-NAME                 {"sambaTrustedDomain"}
+  LDAP-DESC                 "Samba Trusted Domain Object"
+  ID                        id-oc-sambaTrustedDomain }
+END

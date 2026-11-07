@@ -1,0 +1,54 @@
+-- Derived from data/ldap-schema/ald-host-mac.ldif
+-- Upstream: https://github.com/Conty111/reverse-proxy-mac/blob/38594e7ce038bd21e9c26776535924a8eeb47bba/74x-ald-host-mac.ldif
+-- This module is a container for LDAP schema. It has no module identifier.
+-- X- extension fields from the LDAP schema are comments. USAGE userApplications and structural KIND are omitted because they are the defaults.
+LdapAldHostMac DEFINITIONS ::=
+BEGIN
+
+IMPORTS
+
+  ATTRIBUTE, OBJECT-CLASS, top
+    FROM InformationFramework
+      {joint-iso-itu-t ds(5) module(1) informationFramework(1) 9} WITH SUCCESSORS
+
+  caseIgnoreMatch, directoryString, UnboundedDirectoryString
+    FROM SelectedAttributeTypes
+      {joint-iso-itu-t ds(5) module(1) selectedAttributeTypes(5) 9} WITH SUCCESSORS ;
+
+-- Object identifiers
+
+id-at-x-ald-host-mac OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 32702 1 1 2 1 }
+id-at-x-ald-host-mic-level OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 32702 1 1 2 2 }
+id-oc-aldHostContext OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 32702 2 2 }
+
+-- Attribute types
+
+x-ald-host-mac ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseIgnoreMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"x-ald-host-mac"}
+  LDAP-DESC                 "Complex MAC label for a host (confidentiality-min:categories-min:confidentiality-max:categories-max)"
+  ID                        id-at-x-ald-host-mac }
+
+x-ald-host-mic-level ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseIgnoreMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"x-ald-host-mic-level"}
+  LDAP-DESC                 "Maximum allowed integrity level (categories) for a host"
+  ID                        id-at-x-ald-host-mic-level }
+
+-- Object classes
+
+aldHostContext OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  KIND                      auxiliary
+  MUST CONTAIN              { x-ald-host-mac
+                              | x-ald-host-mic-level }
+  LDAP-NAME                 {"aldHostContext"}
+  LDAP-DESC                 "Auxiliary class for host MAC/MIC context"
+  ID                        id-oc-aldHostContext }
+END

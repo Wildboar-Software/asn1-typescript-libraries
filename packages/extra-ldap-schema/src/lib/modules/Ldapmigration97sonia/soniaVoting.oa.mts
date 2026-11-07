@@ -1,0 +1,64 @@
+/* eslint-disable */
+import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
+import { structural /* IMPORTED_SHORT_ENUMERATION_ITEM */ } from "../InformationFramework/ObjectClassKind.ta.mjs";
+import { top } from "../InformationFramework/top.oa.mjs";
+import { id_oc_soniaVoting } from "../Ldapmigration97sonia/id-oc-soniaVoting.va.mjs";
+import { soniaVotingAccessFilter } from "../Ldapmigration97sonia/soniaVotingAccessFilter.oa.mjs";
+import { soniaVotingDescription } from "../Ldapmigration97sonia/soniaVotingDescription.oa.mjs";
+import { soniaVotingEnabledCount } from "../Ldapmigration97sonia/soniaVotingEnabledCount.oa.mjs";
+import { soniaVotingEndDate } from "../Ldapmigration97sonia/soniaVotingEndDate.oa.mjs";
+import { soniaVotingFailedCount } from "../Ldapmigration97sonia/soniaVotingFailedCount.oa.mjs";
+import { soniaVotingMaxChoice } from "../Ldapmigration97sonia/soniaVotingMaxChoice.oa.mjs";
+import { soniaVotingMinChoice } from "../Ldapmigration97sonia/soniaVotingMinChoice.oa.mjs";
+import { soniaVotingResultViewer } from "../Ldapmigration97sonia/soniaVotingResultViewer.oa.mjs";
+import { soniaVotingSeat } from "../Ldapmigration97sonia/soniaVotingSeat.oa.mjs";
+import { soniaVotingStartDate } from "../Ldapmigration97sonia/soniaVotingStartDate.oa.mjs";
+import { soniaVotingSucceedCount } from "../Ldapmigration97sonia/soniaVotingSucceedCount.oa.mjs";
+import { commonName } from "../SelectedAttributeTypes/commonName.oa.mjs";
+
+
+/**
+ * @summary soniaVoting
+ * @description
+ * 
+ * ### ASN.1 Definition:
+ * 
+ * ```asn1
+ * soniaVoting OBJECT-CLASS ::= {
+ *   SUBCLASS OF               { top }
+ *   MUST CONTAIN              { commonName }
+ *   MAY CONTAIN               { soniaVotingDescription
+ *                               | soniaVotingStartDate
+ *                               | soniaVotingEndDate
+ *                               | soniaVotingAccessFilter
+ *                               | soniaVotingResultViewer
+ *                               | soniaVotingMinChoice
+ *                               | soniaVotingMaxChoice
+ *                               | soniaVotingSeat
+ *                               | soniaVotingSucceedCount
+ *                               | soniaVotingFailedCount
+ *                               | soniaVotingEnabledCount }
+ *   LDAP-NAME                 {"soniaVoting"}
+ *   ID                        id-oc-soniaVoting }
+ * ```
+ * 
+ * @constant
+ * @type {OBJECT_CLASS}
+ * @implements {OBJECT_CLASS}
+ */
+export
+const soniaVoting: OBJECT_CLASS = {
+    class: "OBJECT-CLASS",
+    decoderFor: {
+    },
+    encoderFor: {
+    },
+    "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
+    "&MandatoryAttributes": [ commonName, ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ soniaVotingDescription, soniaVotingStartDate, soniaVotingEndDate, soniaVotingAccessFilter, soniaVotingResultViewer, soniaVotingMinChoice, soniaVotingMaxChoice, soniaVotingSeat, soniaVotingSucceedCount, soniaVotingFailedCount, soniaVotingEnabledCount, ] /* OBJECT_FIELD_SETTING */,
+    "&ldapName": [ "soniaVoting" ] /* OBJECT_FIELD_SETTING */,
+    "&id": id_oc_soniaVoting /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,
+    "&kind": structural /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
+};
+
+/* eslint-enable */
