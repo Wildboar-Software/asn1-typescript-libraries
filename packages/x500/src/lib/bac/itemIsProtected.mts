@@ -23,7 +23,6 @@ import {
 import {
     Attribute,
 } from "../modules/InformationFramework/Attribute.ta.mjs";
-import evaluateContextAssertion from "../utils/evaluateContextAssertion.mjs";
 import compareElements from "../comparators/compareElements.mjs";
 
 /**
@@ -73,7 +72,6 @@ function itemIsProtected (
             )
         );
     } else if ("value" in request) {
-        const contexts = request.contexts;
         return Boolean(
             protectedItems.allAttributeValues
                 ?.some((av) => request.value.type_.isEqualTo(av))
@@ -137,16 +135,25 @@ function itemIsProtected (
                     settings,
                 )?.matched
             )
-            // || protectedItems.restrictedBy // Probably will never support this.
-            //     ?.some((rb) => rb.type_.toString() === request.value.type_.toString())
-            || (
-                contexts?.length
-                && protectedItems.contexts?.every((ca) => evaluateContextAssertion(
-                    ca,
-                    contexts,
-                    settings.getContextMatcher,
-                    settings.determineAbsentMatch,
-                )))
+            // restrictedBy is supported, but not in this function.
+            /*
+            Kept commented out to clarify here that this field is not used in
+            determining whether the item is protected. ITU-T Recommendation
+            X.501 (2019), Section 18.4.2.4, states that:
+
+            "This is only relevant when the permission sought is add, and all
+            context assertions shall be satisfied. It does not provide for
+            general use of contexts to differentiate protected items for other
+            permissions."
+            */
+            // || (
+            //     contexts?.length
+            //     && protectedItems.contexts?.every((ca) => evaluateContextAssertion(
+            //         ca,
+            //         contexts,
+            //         settings.getContextMatcher,
+            //         settings.determineAbsentMatch,
+            //     )))
         );
     } else {
         return false; // For lack of knowing what to do.

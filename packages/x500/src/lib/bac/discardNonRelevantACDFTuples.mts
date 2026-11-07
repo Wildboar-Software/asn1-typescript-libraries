@@ -9,6 +9,7 @@ import type { EvaluateFilterSettings } from "../utils/evaluateFilter.mjs";
 import type {
     NameAndOptionalUID,
 } from "../modules/SelectedAttributeTypes/NameAndOptionalUID.ta.mjs";
+import applyACDFConstraints from "./applyACDFConstraints.mjs";
 
 /**
  * Note that this function is different than `operationIsPermitted()`.
@@ -101,7 +102,7 @@ function discardNonRelevantACDFTuples (
         //     return !authenticationLevelIsHigherThanRequester;
         // })
         .filter((tuple) => itemIsProtected(request, tuple[2], requester, settings))
-        // WARNING: Step 3 is skipped. I don't understand it.
+        .map((tuple) => applyACDFConstraints(tuple, request, operations, settings))
         .filter((tuple) => operationRelevant(operations, tuple[3]));
 }
 

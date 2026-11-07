@@ -3,11 +3,7 @@ import type {
     GrantsAndDenials,
 } from "../modules/BasicAccessControl/GrantsAndDenials.ta.mjs";
 import type ProtectedItem from "../types/ProtectedItem.mjs";
-import { TRUE_BIT, type INTEGER } from "@wildboar/asn1";
-import {
-    PERMISSION_CATEGORY_ADD,
-    PERMISSION_CATEGORY_IMPORT,
-} from "./bacACDF.mjs";
+import { TRUE_BIT } from "@wildboar/asn1";
 
 /**
  * @summary Check if at least one ACDF tuple grants access and none deny
@@ -17,6 +13,7 @@ import {
  * Decision Function (ACDF): this function evaluates whether the
  * operation is permitted by checking that at least one relevant ACDF tuple
  * grants access and that none deny access.
+ * Constraints must already have been applied by `discardNonRelevantACDFTuples`.
  * 
  * @param {number[]} operations - An array of `PERMISSION_CATEGORY_*` constants
  *  defined in `@wildboar/x500`.
@@ -30,35 +27,9 @@ export
 function operationPermitted (
     operations: number[],
     tuple: ACDFTupleExtended,
-    request: ProtectedItem,
+    _request: ProtectedItem,
 ): boolean {
-    const items = tuple[2];
     const gad: GrantsAndDenials = tuple[3];
-    const adds = operations.includes(PERMISSION_CATEGORY_ADD);
-    const imports = operations.includes(PERMISSION_CATEGORY_IMPORT);
-    if (
-        (adds || imports)
-        && (items.maxImmSub !== undefined)
-        && ("entry" in request)
-        && typeof request.siblingsCount === "number"
-        && Number.isSafeInteger(request.siblingsCount)
-        && (request.siblingsCount > items.maxImmSub)
-    ) {
-        return false;
-    }
-    const maxValueCount: INTEGER | undefined = (("attributeType" in request) && (items.maxValueCount?.length))
-        ? items.maxValueCount.find((mvc) => mvc.type_.isEqualTo(request.attributeType))?.maxCount
-        : undefined;
-    if (
-        adds
-        && (maxValueCount !== undefined)
-        && ("attributeType" in request)
-        && typeof request.valuesCount === "number"
-        && Number.isSafeInteger(request.valuesCount)
-        && (request.valuesCount > Number(maxValueCount))
-    ) {
-        return false;
-    }
 
     /** 1E9DC3EB-E3DB-4CFA-A7BE-B86342F7EF75
      * Section 18.4.2.5.a of ITU Recommendation X.501 (2016) states that, if
