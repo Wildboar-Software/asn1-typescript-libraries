@@ -1,4 +1,4 @@
-import type { OBJECT_IDENTIFIER } from "@wildboar/asn1";
+import { compareBitStrings, type OBJECT_IDENTIFIER } from "@wildboar/asn1";
 import type EqualityMatcher from "../types/EqualityMatcher.mjs";
 import type {
     IssuerSerial,
@@ -22,6 +22,9 @@ function compareIssuerSerial (
     getEqualityMatcher?: (attributeType: OBJECT_IDENTIFIER) => EqualityMatcher | undefined,
 ): boolean {
     if (Boolean(a.issuerUID) !== Boolean(b.issuerUID)) {
+        return false;
+    }
+    if (a.issuerUID && b.issuerUID && !compareBitStrings(a.issuerUID, b.issuerUID)) {
         return false;
     }
     if (Buffer.compare(a.serial, b.serial)) {
