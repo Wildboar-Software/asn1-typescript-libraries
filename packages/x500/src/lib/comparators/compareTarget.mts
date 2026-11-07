@@ -23,6 +23,15 @@ export function compareTarget(
     b: Target,
     getEqualityMatcher?: (attributeType: OBJECT_IDENTIFIER) => EqualityMatcher | undefined,
 ): boolean {
+    if (("targetCert" in a) && ("targetCert" in b)) {
+        // Names can refer to several certificates, and digests can use different
+        // algorithms. The issuer-serial identifier determines certificate identity.
+        return compareIssuerSerial(
+            a.targetCert.targetCertificate,
+            b.targetCert.targetCertificate,
+            getEqualityMatcher,
+        );
+    }
     const aname: GeneralName | false | undefined =
         (("targetName" in a) && a.targetName)
         || (("targetCert" in a) && a.targetCert.targetName);
@@ -34,14 +43,6 @@ export function compareTarget(
         return compareGeneralName(aname, bname, getEqualityMatcher);
     } else if (("targetGroup" in a) && ("targetGroup" in b)) {
         return compareGeneralName(a.targetGroup, b.targetGroup, getEqualityMatcher);
-    } else if (("targetCert" in a) && ("targetCert" in b)) {
-        // We only compare the IssuerSerial.
-        // certDigestInfo could differ by being different hash algs or inputs.
-        // targetName could ambiguously refer to a certificate.
-        // but targetCertificate is always unique.
-        const certa = a.targetCert.targetCertificate;
-        const certb = b.targetCert.targetCertificate;
-        return compareIssuerSerial(certa, certb, getEqualityMatcher);
     } else if (("targetGroup" in a) && ("targetName" in b)) {
         // If one is a group and one is a name, we do a simple prefix check.
         const group = new GeneralSubtree(a.targetGroup);
