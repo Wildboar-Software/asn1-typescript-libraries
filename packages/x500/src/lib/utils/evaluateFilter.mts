@@ -225,18 +225,28 @@ interface EvaluateFilterSettings {
 
 type AnyFunction = (...args: any[]) => any;
 
-function handleErrors (matcher: AnyFunction | undefined): AnyFunction | undefined {
+interface MatchState {
+    indeterminate: boolean;
+}
+
+function handleErrors (matcher: AnyFunction | undefined, state?: MatchState): AnyFunction | undefined {
     if (!matcher) {
         return undefined;
     }
-    return (
-        assertion: ASN1Element,
-        value: ASN1Element,
-        ...other: any[]
-    ): boolean | undefined => {
+    return (...args: any[]): any => {
         try {
-            return matcher(assertion, value, ...other);
+            const result = matcher(...args);
+            if (result === undefined || (typeof result === "number" && Number.isNaN(result))) {
+                if (state) {
+                    state.indeterminate = true;
+                }
+                return undefined;
+            }
+            return result;
         } catch {
+            if (state) {
+                state.indeterminate = true;
+            }
             return undefined;
         }
     };
@@ -380,7 +390,9 @@ function evaluateEquality (
     entry: EntryInformation,
     options: EvaluateFilterSettings,
 ): MatchedValue[] | boolean | undefined {
-    const matcher: EqualityMatcher = handleErrors(options.getEqualityMatcher(ava.type_)) ?? compareElements;
+    const state: MatchState = { indeterminate: false };
+    const matcher: EqualityMatcher = handleErrors(options.getEqualityMatcher(ava.type_) ?? compareElements, state)!;
+    const contextsMatch = handleErrors(valueSatisfiesSelectedContexts, state)!;
     const attributes = getAttributesFromEntry(entry, options.dnAttribute);
     const friendTypes: OBJECT_IDENTIFIER[] = [
         ava.type_,
@@ -440,7 +452,7 @@ function evaluateEquality (
             if (!matcher!(ava.assertion, value)) {
                 continue;
             }
-            if (!valueSatisfiesSelectedContexts(selectedContexts, NO_CONTEXTS, attr, options, directMatchCache)) {
+            if (!contextsMatch(selectedContexts, NO_CONTEXTS, attr, options, directMatchCache)) {
                 continue;
             }
             matchedValues.push({
@@ -458,7 +470,7 @@ function evaluateEquality (
             if (!matcher!(ava.assertion, vwc.value)) {
                 continue;
             }
-            if (!valueSatisfiesSelectedContexts(selectedContexts, vwc.contextList, attr, options, directMatchCache)) {
+            if (!contextsMatch(selectedContexts, vwc.contextList, attr, options, directMatchCache)) {
                 continue;
             }
             matchedValues.push({
@@ -510,7 +522,7 @@ function evaluateEquality (
             }
         }
     }
-    return matchedValues;
+    return matchedValues.length === 0 && state.indeterminate ? undefined : matchedValues;
 }
 
 export
@@ -519,7 +531,9 @@ function evaluateApprox (
     entry: EntryInformation,
     options: EvaluateFilterSettings,
 ): MatchedValue[] | boolean | undefined {
-    const matcher: EqualityMatcher = handleErrors(options.getApproximateMatcher(ava.type_)) ?? compareElements;
+    const state: MatchState = { indeterminate: false };
+    const matcher: EqualityMatcher = handleErrors(options.getApproximateMatcher(ava.type_) ?? compareElements, state)!;
+    const contextsMatch = handleErrors(valueSatisfiesSelectedContexts, state)!;
     const attributes = getAttributesFromEntry(entry, options.dnAttribute);
     const friendTypes: OBJECT_IDENTIFIER[] = [
         ava.type_,
@@ -579,7 +593,7 @@ function evaluateApprox (
             if (!matcher!(ava.assertion, value)) {
                 continue;
             }
-            if (!valueSatisfiesSelectedContexts(selectedContexts, NO_CONTEXTS, attr, options, directMatchCache)) {
+            if (!contextsMatch(selectedContexts, NO_CONTEXTS, attr, options, directMatchCache)) {
                 continue;
             }
             matchedValues.push({
@@ -597,7 +611,7 @@ function evaluateApprox (
             if (!matcher!(ava.assertion, vwc.value)) {
                 continue;
             }
-            if (!valueSatisfiesSelectedContexts(selectedContexts, vwc.contextList, attr, options, directMatchCache)) {
+            if (!contextsMatch(selectedContexts, vwc.contextList, attr, options, directMatchCache)) {
                 continue;
             }
             matchedValues.push({
@@ -610,7 +624,7 @@ function evaluateApprox (
             }
         }
     }
-    return matchedValues;
+    return matchedValues.length === 0 && state.indeterminate ? undefined : matchedValues;
 }
 
 export
@@ -620,7 +634,9 @@ function evaluateOrdering (
     entry: EntryInformation,
     options: EvaluateFilterSettings,
 ): MatchedValue[] | boolean | undefined {
-    const orderer: OrderingMatcher | undefined = handleErrors(options.getOrderingMatcher(ava.type_));
+    const state: MatchState = { indeterminate: false };
+    const orderer: OrderingMatcher | undefined = handleErrors(options.getOrderingMatcher(ava.type_), state);
+    const contextsMatch = handleErrors(valueSatisfiesSelectedContexts, state)!;
     if (!orderer) {
         return undefined;
     }
@@ -686,7 +702,7 @@ function evaluateOrdering (
             if (!matcher!(ava.assertion, value)) {
                 continue;
             }
-            if (!valueSatisfiesSelectedContexts(selectedContexts, NO_CONTEXTS, attr, options, directMatchCache)) {
+            if (!contextsMatch(selectedContexts, NO_CONTEXTS, attr, options, directMatchCache)) {
                 continue;
             }
             matchedValues.push({
@@ -704,7 +720,7 @@ function evaluateOrdering (
             if (!matcher!(ava.assertion, vwc.value)) {
                 continue;
             }
-            if (!valueSatisfiesSelectedContexts(selectedContexts, vwc.contextList, attr, options, directMatchCache)) {
+            if (!contextsMatch(selectedContexts, vwc.contextList, attr, options, directMatchCache)) {
                 continue;
             }
             matchedValues.push({
@@ -717,7 +733,7 @@ function evaluateOrdering (
             }
         }
     }
-    return matchedValues;
+    return matchedValues.length === 0 && state.indeterminate ? undefined : matchedValues;
 }
 
 export
@@ -748,6 +764,18 @@ function evaluateSubstring (
             }
         })
         .filter((a): a is [ ASN1Element, SubstringSelection ] => !!a);
+    const state: MatchState = { indeterminate: false };
+    const matches = handleErrors((value: ASN1Element): boolean | undefined => {
+        let indeterminate = false;
+        for (const [ assertion, selection ] of assertions) {
+            const result = matcher(assertion, value, selection);
+            if (result === false) {
+                return false;
+            }
+            indeterminate ||= result === undefined;
+        }
+        return indeterminate ? undefined : true;
+    }, state)!;
     const matchedValues: MatchedValue[] = [];
     const friendTypes: OBJECT_IDENTIFIER[] = [
         sub.type_,
@@ -773,10 +801,7 @@ function evaluateSubstring (
                 if (!options.permittedToMatch(profile.attributeType, default_value)) {
                     continue;
                 }
-                if (!assertions.every(([ assertion, selection ]) => (
-                    options.permittedToMatch(profile.attributeType, default_value)
-                    && matcher!(assertion, default_value, selection)
-                ))) {
+                if (!matches(default_value)) {
                     continue;
                 }
                 matchedValues.push({
@@ -796,10 +821,7 @@ function evaluateSubstring (
     }
     for (const attr of relevantAttributes) {
         for (const value of attr.values) {
-            if (assertions.every(([ assertion, selection ]) => (
-                options.permittedToMatch(attr.type_, value)
-                && matcher!(assertion, value, selection)
-            ))) {
+            if (options.permittedToMatch(attr.type_, value) && matches(value)) {
                 matchedValues.push({
                     type: attr.type_,
                     value,
@@ -810,10 +832,7 @@ function evaluateSubstring (
             }
         }
         for (const vwc of attr.valuesWithContext ?? []) {
-            if (assertions.every(([ assertion, selection ]) => (
-                options.permittedToMatch(attr.type_, vwc.value)
-                && matcher!(assertion, vwc.value, selection)
-            ))) {
+            if (options.permittedToMatch(attr.type_, vwc.value) && matches(vwc.value)) {
                 matchedValues.push({
                     type: attr.type_,
                     value: vwc.value,
@@ -825,7 +844,7 @@ function evaluateSubstring (
             }
         }
     }
-    return matchedValues;
+    return matchedValues.length === 0 && state.indeterminate ? undefined : matchedValues;
 }
 
 export
@@ -868,6 +887,7 @@ function evaluateMatchingRuleAssertion (
         }
         return undefined; // DSA does not know how to combine rules.
     }
+    const state: MatchState = { indeterminate: false };
     let matcher = (
         options.getEqualityMatcher(mra.matchingRule[0])
         // REVIEW: How do you know if you are ordering GTE or LTE?
@@ -883,6 +903,7 @@ function evaluateMatchingRuleAssertion (
         }
         matcher = compareElements;
     }
+    matcher = handleErrors(matcher, state)!;
     /**
      * From ITU Recommendation X.511, Section 11.2.2:
      *
@@ -956,7 +977,7 @@ function evaluateMatchingRuleAssertion (
                 }
             }
         }
-        return [];
+        return state.indeterminate ? undefined : [];
     }
     for (const attr of relevantAttributes) {
         if (!options.permittedToMatch(attr.type_)) {
@@ -1033,7 +1054,7 @@ function evaluateMatchingRuleAssertion (
             }
         }
     }
-    return matchedValues;
+    return matchedValues.length === 0 && state.indeterminate ? undefined : matchedValues;
 }
 
 export
@@ -1061,19 +1082,21 @@ function evaluateAttributeTypeAssertion (
     if (!ata.assertedContexts || (ata.assertedContexts.length === 0)) {
         return true;
     }
+    const state: MatchState = { indeterminate: false };
+    const contextsMatch = handleErrors(valueSatisfiesSelectedContexts, state)!;
     const directMatchCache: DirectContextMatchCache = new WeakMap();
     for (const attr of relevantAttributes) {
         if (attr.values.length > 0
-            && valueSatisfiesSelectedContexts(ata.assertedContexts, NO_CONTEXTS, attr, options, directMatchCache)) {
+            && contextsMatch(ata.assertedContexts, NO_CONTEXTS, attr, options, directMatchCache)) {
             return true;
         }
         for (const vwc of attr.valuesWithContext ?? []) {
-            if (valueSatisfiesSelectedContexts(ata.assertedContexts, vwc.contextList, attr, options, directMatchCache)) {
+            if (contextsMatch(ata.assertedContexts, vwc.contextList, attr, options, directMatchCache)) {
                 return true;
             }
         }
     }
-    return false; // No values matched.
+    return state.indeterminate ? undefined : false;
 }
 
 export
@@ -1177,7 +1200,15 @@ function evaluateFilter (
         let matched: boolean = false;
         for (let i = 0; i < family.length; i++) {
             const member = family[i];
-            const result = evaluateFilterItem(filter.item, member, options);
+            let result: ReturnType<typeof evaluateFilterItem>;
+            try {
+                result = evaluateFilterItem(filter.item, member, options);
+            } catch (error) {
+                if (error instanceof CannotPerformExactly) {
+                    throw error;
+                }
+                result = undefined;
+            }
             if (result === false) {
                 continue;
             }
@@ -1293,7 +1324,7 @@ function evaluateFilter (
             };
         }
         const result = evaluateFilter(filter.not, family, options, contributingEntries);
-        if (result === undefined) {
+        if (result.matched === undefined) {
             return {
                 matched: undefined,
                 contributingEntries,
