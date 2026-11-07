@@ -8,8 +8,8 @@ import {
 } from "../../types/matching.mjs";
 import { readDecoded } from "../readValue.mjs";
 import {
-    id_ce_basicAttConstraints,
-} from "../../modules/AttributeCertificateDefinitions/id-ce-basicAttConstraints.va.mjs";
+    id_ce_authorityAttributeIdentifier,
+} from "../../modules/AttributeCertificateDefinitions/id-ce-authorityAttributeIdentifier.va.mjs";
 import {
     type AuthorityAttributeIdentifierSyntax,
     _decode_AuthorityAttributeIdentifierSyntax,
@@ -50,7 +50,7 @@ function authAttIdMatchTyped (
     const val = readDecoded(value, _decode_AttributeCertificate);
     const getEqualityMatcher = valueEqualityMatcher(getMatcher, flags);
     const ext: Extension | undefined = val.toBeSigned.extensions
-        ?.find((ext: Extension): boolean => (ext.extnId.isEqualTo(id_ce_basicAttConstraints)));
+        ?.find((ext: Extension): boolean => (ext.extnId.isEqualTo(id_ce_authorityAttributeIdentifier)));
     if (!ext) {
         return false;
     }
