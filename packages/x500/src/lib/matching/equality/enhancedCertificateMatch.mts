@@ -30,7 +30,7 @@ import {
 import compareAuthorityKeyIdentifier from "../../comparators/compareAuthorityKeyIdentifier.mjs";
 import { compareGeneralName } from "@wildboar/gn";
 import { getDateFromTime } from "@wildboar/pki-stub";
-import dnWithinSubtree from "../../utils/dnWithinSubtree.mjs";
+import { namesWithinNameConstraints } from "./nameConstraints.mjs";
 import { Buffer } from "node:buffer";
 import {
     id_ce_subjectKeyIdentifier,
@@ -291,44 +291,8 @@ function evaluateEnhancedCertificateAssertion (
 
     if (assertion.pathToName) {
         const nc = ext(NC_ID, decodeNC);
-        if (nc) {
-
-            if (!assertion.pathToName.every((path) => {
-                if (!("directoryName" in path)) {
-                    return true;
-                }
-                if (nc.excludedSubtrees?.some((sub): boolean => {
-                    if (!("directoryName" in sub.base)) {
-                        return false;
-                    }
-                    return dnWithinSubtree(
-                        path.directoryName.rdnSequence,
-                        sub.base.directoryName.rdnSequence,
-                        (sub.minimum !== undefined) ? Number(sub.minimum) : undefined,
-                        (sub.maximum !== undefined) ? Number(sub.maximum) : undefined,
-                    );
-                })) {
-                    return false;
-                }
-                if (nc.permittedSubtrees && !nc.permittedSubtrees.every((sub): boolean => {
-                    if (!("directoryName" in sub.base)) {
-                        return true;
-                    }
-                    return dnWithinSubtree(
-                        path.directoryName.rdnSequence,
-                        sub.base.directoryName.rdnSequence,
-                        (sub.minimum !== undefined) ? Number(sub.minimum) : undefined,
-                        (sub.maximum !== undefined) ? Number(sub.maximum) : undefined,
-                    );
-                })) {
-                    return false;
-                }
-                return true;
-            })) {
-                return false;
-            }
-
-
+        if (nc && !namesWithinNameConstraints(assertion.pathToName, nc, getEqualityMatcher)) {
+            return false;
         }
     }
 
@@ -339,73 +303,12 @@ function evaluateEnhancedCertificateAssertion (
     }
 
     if (assertion.nameConstraints) {
-        const nc = assertion.nameConstraints;
-        if (nc.excludedSubtrees?.some((sub): boolean => {
-            if (!("directoryName" in sub.base)) {
-                return false;
-            }
-            return dnWithinSubtree(
-                tbs.subject.rdnSequence,
-                sub.base.directoryName.rdnSequence,
-                (sub.minimum !== undefined) ? Number(sub.minimum) : undefined,
-                (sub.maximum !== undefined) ? Number(sub.maximum) : undefined,
-            );
-        })) {
-            return false;
-        }
-        if (nc.permittedSubtrees && !nc.permittedSubtrees.every((sub): boolean => {
-            if (!("directoryName" in sub.base)) {
-                return true;
-            }
-            return dnWithinSubtree(
-                tbs.subject.rdnSequence,
-                sub.base.directoryName.rdnSequence,
-                (sub.minimum !== undefined) ? Number(sub.minimum) : undefined,
-                (sub.maximum !== undefined) ? Number(sub.maximum) : undefined,
-            );
-        })) {
-            return false;
-        }
-
         const sans = ext(SAN_ID, decodeSAN);
-        if (sans) {
-            if (!sans.every((san): boolean => {
-                if (nc.excludedSubtrees?.some((sub): boolean => {
-                    if (!("directoryName" in sub.base)) {
-                        return false;
-                    }
-                    if (!("directoryName" in san)) {
-                        return false;
-                    }
-                    return dnWithinSubtree(
-                        san.directoryName.rdnSequence,
-                        sub.base.directoryName.rdnSequence,
-                        (sub.minimum !== undefined) ? Number(sub.minimum) : undefined,
-                        (sub.maximum !== undefined) ? Number(sub.maximum) : undefined,
-                    );
-                })) {
-                    return false;
-                }
-                if (nc.permittedSubtrees && !nc.permittedSubtrees.every((sub): boolean => {
-                    if (!("directoryName" in sub.base)) {
-                        return true;
-                    }
-                    if (!("directoryName" in san)) {
-                        return true;
-                    }
-                    return dnWithinSubtree(
-                        san.directoryName.rdnSequence,
-                        sub.base.directoryName.rdnSequence,
-                        (sub.minimum !== undefined) ? Number(sub.minimum) : undefined,
-                        (sub.maximum !== undefined) ? Number(sub.maximum) : undefined,
-                    );
-                })) {
-                    return false;
-                }
-                return true;
-            })) {
-                return false;
-            }
+        if (!namesWithinNameConstraints([
+            ...(tbs.subject.rdnSequence.length ? [{ directoryName: tbs.subject }] : []),
+            ...(sans ?? []),
+        ], assertion.nameConstraints, getEqualityMatcher)) {
+            return false;
         }
     }
 
