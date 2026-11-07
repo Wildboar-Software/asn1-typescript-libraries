@@ -118,6 +118,16 @@ function testOccurrences (
 }
 
 describe("occurrences", () => {
+    test("years plus timesOfDay restricts every day to its clock band (H6)", () => {
+        const p = new Period(NOON, undefined, undefined, undefined, [2026]);
+        testOccurrences(p, new Date(2026, 0, 1), new Date(2026, 0, 3, 23, 59, 59), [
+            atHours(2026, 0, 1, 12, 13),
+            atHours(2026, 0, 2, 12, 13),
+            atHours(2026, 0, 3, 12, 13),
+        ]);
+        expect(p.occurrences(new Date(2026, 0, 1), new Date(2026, 0, 1, 11), false).next().done).toBe(true);
+    });
+
     test("uncoalesced occurrences yield incrementally and stop at the requested end", () => {
         const p = new Period([new DayTimeBand()]);
         const spans = p.occurrences(START_2026, new Date(2026, 0, 2, 23, 59, 59), false);

@@ -19,12 +19,102 @@ import {
     DayTime,
 } from "../../modules/SelectedAttributeTypes/DayTime.ta.mjs";
 import { evaluateTemporalContext } from "./temporalContext.mjs";
-import { MATCH_FLAG_HIGH_WORK_BUDGET } from "../../types/matching.mjs";
+import { MATCH_FLAG_CONSTANT_TIME, MATCH_FLAG_HIGH_WORK_BUDGET } from "../../types/matching.mjs";
 import { DER } from "@wildboar/asn1/functional";
 import { TimeSpecification_time_absolute } from "../../modules/SelectedAttributeTypes/TimeSpecification-time-absolute.ta.mjs";
 import { TimeAssertion_between } from "../../modules/SelectedAttributeTypes/TimeAssertion-between.ta.mjs";
 
 describe("evaluateTemporalContext", () => {
+    describe("intervals against complemented stored time sets (H5)", () => {
+        const at = (hour: number): Date => new Date(2026, 0, 1, hour);
+        const storedTimes: TimeSpecification["time"][] = [
+            { absolute: new TimeSpecification_time_absolute(at(9), at(17)) },
+            { periodic: [new Period([new DayTimeBand(new DayTime(9), new DayTime(17))], undefined, undefined, undefined, [2026])] },
+        ];
+
+        // overlap = whether the assertion is expected to overlap with the stored time
+        // covered = whether the assertion is expected to be fully covered by the stored time
+        // complementOverlap = whether the assertion is expected to overlap with the complement of the stored time
+        // complementCovered = whether the assertion is expected to be fully covered by the complement of the stored time
+        it.each([
+            [6, 8, false, false, true, true], // entirely before the stored timespan
+            [10, 11, true, true, false, false], // entirely inside
+            [8, 10, true, false, true, false], // partially inside and outside
+            [8, 18, true, false, true, false], // encompassing the entire stored timespan
+            [18, 20, false, false, true, true], // entirely after the stored timespan
+            [8, 9, true, false, true, false], // touching the start of the stored timespan
+            [9, 17, true, true, false, false], // touching the end of the stored timespan
+        ] as const)("evaluates %i:00–%i:00 by set overlap and containment", (start, end, overlap, covered, complementOverlap, complementCovered) => {
+            for (const time of storedTimes) {
+                for (const flags of [0, MATCH_FLAG_CONSTANT_TIME]) {
+                    const innerTestCases = [
+                        [false, false, overlap], // this time, not entirely
+                        [false, true, covered], // this time, entirely
+                        [true, false, complementOverlap], // not this time, not entirely
+                        [true, true, complementCovered], // not this time, entirely
+                    ] as const;
+                    for (const [notThisTime, entirely, expected] of innerTestCases) {
+                        const assertion: TimeAssertion = { between: new TimeAssertion_between(at(start), at(end), entirely) };
+                        expect(evaluateTemporalContext(assertion, new TimeSpecification(time, notThisTime), flags)).toBe(expected);
+                    }
+                }
+            }
+        });
+
+        it("uses the complement of the entire periodic union, including gaps", () => {
+            const spec = new TimeSpecification({ periodic: [
+                new Period([new DayTimeBand(new DayTime(9), new DayTime(10))]),
+                new Period([new DayTimeBand(new DayTime(12), new DayTime(13))]),
+            ] }, true); // NOTE: notThisTime.
+
+            // Does not match because hour 12 touches one of the day time bands, so it fails the `entirely` requirement.
+            expect(evaluateTemporalContext({ between: new TimeAssertion_between(at(11), at(12), true) }, spec)).toBe(false);
+
+            // Matches the space between 10 and 12.
+            expect(evaluateTemporalContext({ between: new TimeAssertion_between(at(10), at(13)) }, spec)).toBe(true);
+
+            // Overlaps with both forbidden time bands, so it fails the `entirely` requirement.
+            expect(evaluateTemporalContext({ between: new TimeAssertion_between(at(9), at(13), true) }, spec)).toBe(false);
+
+            // 11 is not within either forbidden time band, so it matches, even `entirely`.
+            expect(evaluateTemporalContext({ between: new TimeAssertion_between(at(11), at(11), true) }, spec)).toBe(true);
+        });
+
+        it("does not turn invalid intervals into matches by negation", () => {
+            for (const time of storedTimes) {
+                for (const entirely of [false, true]) {
+                    expect(evaluateTemporalContext({ between: new TimeAssertion_between(at(17), at(9), entirely) }, new TimeSpecification(time, true))).toBe(false);
+                    expect(evaluateTemporalContext({ between: new TimeAssertion_between(new Date(NaN), at(9), entirely) }, new TimeSpecification(time, true))).toBe(false);
+                }
+                expect(evaluateTemporalContext({ at: new Date(NaN) }, new TimeSpecification(time, true))).toBe(false);
+            }
+        });
+
+        it("enforces time-of-day limits throughout an explicitly specified year (H6)", () => {
+            const spec = new TimeSpecification(storedTimes[1]);
+            expect(evaluateTemporalContext({ at: at(8) }, spec)).toBe(false);
+            expect(evaluateTemporalContext({ at: at(9) }, spec)).toBe(true);
+            expect(evaluateTemporalContext({ at: at(17) }, spec)).toBe(true);
+            expect(evaluateTemporalContext({ at: at(18) }, spec)).toBe(false);
+            expect(evaluateTemporalContext({ at: new Date(2027, 0, 1, 12) }, spec)).toBe(false);
+        });
+
+        it("does not negate exhausted coverage work into a complement overlap", () => {
+            const base = at(0).valueOf();
+            const instant = (second: number): Date => new Date(base + second * 1000);
+            const period = new Period();
+            period.occurrences = function* (): IterableIterator<[Date, Date]> {
+                for (let second = 0; second < 1001; second++) {
+                    yield [instant(second), instant(second)];
+                }
+            };
+            const assertion: TimeAssertion = { between: new TimeAssertion_between(instant(0), instant(1002)) };
+            const spec = new TimeSpecification({ periodic: [period] }, true);
+            expect(evaluateTemporalContext(assertion, spec)).toBe(false);
+            expect(evaluateTemporalContext(assertion, spec, MATCH_FLAG_HIGH_WORK_BUDGET)).toBe(true);
+        });
+    });
+
     it("matches an at-assertion against an absolute temporal context", () => {
         const assertion: TimeAssertion = {
             at: new Date(2026, 0, 1, 12, 13, 14),
@@ -155,7 +245,8 @@ describe("evaluateTemporalContext", () => {
             _encode_TimeAssertion(assertion, DER),
             _encode_TimeSpecification(negatedValue, DER),
         );
-        expect(matches).toBe(false);
+        // The assertion also overlaps the complement before the stored band.
+        expect(matches).toBe(true);
 
         const entirelyAssertion: TimeAssertion = {
             between: new TimeAssertion_between(
@@ -180,7 +271,7 @@ describe("evaluateTemporalContext", () => {
             _encode_TimeAssertion(entirelyAssertion, DER),
             _encode_TimeSpecification(entirelyValue, DER),
         );
-        expect(matches).toBe(true);
+        expect(matches).toBe(false);
     });
 
     it("matches a between assertion against a periodic temporal context", () => {
@@ -217,7 +308,10 @@ describe("evaluateTemporalContext", () => {
             _encode_TimeAssertion(assertion, DER),
             _encode_TimeSpecification(negatedValue, DER),
         );
-        expect(matches).toBe(false);
+        // Matches because the asserted time also covers the Sunday that belongs
+        // to the next week. The assertion overlaps both the stored time and
+        // its complement.
+        expect(matches).toBe(true);
 
         const entirelyAssertion: TimeAssertion = {
             between: new TimeAssertion_between(
@@ -242,7 +336,10 @@ describe("evaluateTemporalContext", () => {
             _encode_TimeAssertion(entirelyAssertion, DER),
             _encode_TimeSpecification(entirelyValue, DER),
         );
-        expect(matches).toBe(true);
+        // As stated above, the assertion overlaps both the stored time and
+        // its complement, meaning that it fails `entirely` within neither, so
+        // it fails to match if `entirely` is TRUE.
+        expect(matches).toBe(false);
     });
 
     // I live in Florida, in the United States, which is UTC-04:00.
@@ -280,7 +377,7 @@ describe("evaluateTemporalContext", () => {
             _encode_TimeAssertion(assertion, DER),
             _encode_TimeSpecification(negatedValue, DER),
         );
-        expect(matches).toBe(false);
+        expect(matches).toBe(true);
 
         const entirelyAssertion: TimeAssertion = {
             between: new TimeAssertion_between(
@@ -300,12 +397,13 @@ describe("evaluateTemporalContext", () => {
         const entirelyValue = new TimeSpecification(
             value.time,
             TRUE,
+            value.timeZone,
         );
         matches = evaluateTemporalContext(
             _encode_TimeAssertion(entirelyAssertion, DER),
             _encode_TimeSpecification(entirelyValue, DER),
         );
-        expect(matches).toBe(true);
+        expect(matches).toBe(false);
     });
 
     it("matches an at-assertion after an open-ended absolute startTime", () => {

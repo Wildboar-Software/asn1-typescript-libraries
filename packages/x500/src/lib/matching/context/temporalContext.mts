@@ -212,7 +212,10 @@ function timeFallsWithinTimeSpecification (
     spec: TimeSpecification,
     constantTime: boolean = false,
 ): boolean {
-    const result = ((): boolean => {
+    if (!Number.isFinite(time.valueOf())) {
+        return false;
+    }
+    const result = ((): boolean | undefined => {
         const timezone: number | undefined = (spec.timeZone !== undefined)
             ? Number(spec.timeZone)
             : undefined;
@@ -223,6 +226,9 @@ function timeFallsWithinTimeSpecification (
             const end = spec.time.absolute.endTime
                 ? addHours(spec.time.absolute.endTime, -(timezone ?? 0))
                 : MAX_DATE;
+            if (!Number.isFinite(start.valueOf()) || !Number.isFinite(end.valueOf()) || start > end) {
+                return undefined;
+            }
             return (
                 (time.valueOf() >= start.valueOf())
                 && (time.valueOf() <= end.valueOf())
@@ -242,14 +248,15 @@ function timeFallsWithinTimeSpecification (
             throw new Error(); // There is no other option.
         }
     })();
-    return xor(result, spec.notThisTime ?? TimeSpecification._default_value_for_notThisTime);
+    return result !== undefined
+        && xor(result, spec.notThisTime ?? TimeSpecification._default_value_for_notThisTime);
 }
 
 /**
  * `between` evaluation: overlap, or containment when `entirely` is
  * TRUE. Periodic `entirely` is a subset of the union of all `Period`
- * occurrences, not of a single occurrence. `notThisTime` inverts the
- * result (clause 10.2).
+ * occurrences, not of a single occurrence. Complementing the stored set
+ * exchanges overlap and containment before negating the result (clause 10.2).
  */
 function timeSpecificationContains (
     spec: TimeSpecification,
@@ -258,7 +265,39 @@ function timeSpecificationContains (
     entirely: boolean = false,
     flags: number = 0,
 ): boolean {
+    if (!Number.isFinite(start.valueOf()) || !Number.isFinite(end.valueOf()) || start > end) {
+        return false;
+    }
     const constantTime = Boolean(flags & MATCH_FLAG_CONSTANT_TIME);
+    const notThisTime = spec.notThisTime ?? TimeSpecification._default_value_for_notThisTime;
+    /*
+    I am leaving the AI-generated comment below for you in case you can
+    understand it, but here is my dumb-dumb explanation, written by a human:
+
+    notThisTime applies to the stored value, not the assertion. So you can store
+    a value like NOT between 9 AM to 5 PM (business hours), meaning "outside of
+    business hours."
+
+    entirely is part of the assertion, not the stored value. If a user asserts
+    `entirely` against the above stored value (outside of business hours), we
+    cannot simply check "entirely within business hours" then invert that. We
+    have to check that the assertion falls _entirely outside of business hours_.
+    The former tolerates some overlap, which is wrong.
+
+    OpenAI Sol 6.1's approach below is: if notThisTime, we invert `entirely` so
+    that we check if there _is_ overlap between the asserted time and the
+    stored timespan (e.g. no part of the assertion overlaps with business
+    hours). Then at the end, we invert that result, which makes it not match if
+    there is any overlap (hence, the assertion does not fall _entirely_ outside
+    of business hours).
+
+    I think this function could use better naming for variables. It is not
+    clear what `result` means exactly.
+    */
+    // I ⊆ complement(S) iff I does not overlap S. I overlaps complement(S)
+    // iff I is not entirely covered by S. Negating the same predicate is wrong
+    // for an interval that partly overlaps both S and its complement.
+    const requireEntireCoverage = notThisTime ? !entirely : entirely;
     const result = ((): boolean | undefined => {
         const timezone: number | undefined = (spec.timeZone !== undefined)
             ? Number(spec.timeZone)
@@ -270,7 +309,10 @@ function timeSpecificationContains (
             const endSpec = spec.time.absolute.endTime
                 ? addHours(spec.time.absolute.endTime, -(timezone ?? 0))
                 : MAX_DATE;
-            if (entirely) {
+            if (!Number.isFinite(startSpec.valueOf()) || !Number.isFinite(endSpec.valueOf()) || startSpec > endSpec) {
+                return undefined;
+            }
+            if (requireEntireCoverage) {
                 return (
                     (start.valueOf() >= startSpec.valueOf())
                     && (end.valueOf() <= endSpec.valueOf())
@@ -284,25 +326,17 @@ function timeSpecificationContains (
         } else if ("periodic" in spec.time) {
             const adjustedStart = inSpecTimeZone(start, timezone);
             const adjustedEnd = inSpecTimeZone(end, timezone);
-            if (entirely) {
+            if (requireEntireCoverage) {
                 return periodsEntirelyCoverInterval(spec.time.periodic, adjustedStart, adjustedEnd, flags);
             }
             let matched = false;
             for (const period of spec.time.periodic) {
-                const boundaries: [ Date, Date ] | null = period.occurrences(adjustedStart).next().value ?? null;
+                const boundaries: [ Date, Date ] | null = period.occurrences(adjustedStart, adjustedEnd, false).next().value ?? null;
                 if (!boundaries) {
                     continue;
                 }
                 const [ lower, upper ] = boundaries;
-                const startWithinBounds: boolean = (
-                    (adjustedStart.valueOf() >= lower.valueOf())
-                    && (adjustedStart.valueOf() <= upper.valueOf())
-                );
-                const endWithinBounds: boolean = (
-                    (adjustedEnd.valueOf() >= lower.valueOf())
-                    && (adjustedEnd.valueOf() <= upper.valueOf())
-                );
-                if (startWithinBounds || endWithinBounds) {
+                if (lower <= adjustedEnd && upper >= adjustedStart) {
                     if (!constantTime) {
                         return true;
                     }
@@ -315,7 +349,7 @@ function timeSpecificationContains (
         }
     })();
     return (result !== undefined)
-        && xor(result, spec.notThisTime ?? TimeSpecification._default_value_for_notThisTime);
+        && xor(result, notThisTime);
 }
 
 /**

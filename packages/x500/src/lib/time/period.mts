@@ -528,7 +528,7 @@ function *occurrencesInfinitely(p: Period, startInstant: Date, lastYear: number 
                 continue;
             }
             // If we are returning years alone...
-            if (!p.months && !p.weeks && !p.days) {
+            if (!p.months && !p.weeks && !p.days && !p.timesOfDay) {
                 const d = new Date(year, 0, 1);
                 yield [d, endOfYear(d)];
             } else {
