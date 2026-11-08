@@ -85,6 +85,7 @@ function approxContainsWord (
  * as a complete word in `haystack`. X.520 leaves the definition of
  * a "word" as a local matter; here a word is letters, digits, or
  * underscore, bounded by other characters or the string edges.
+ * An empty needle is not a word and never matches.
  */
 export
 function containsWord (
@@ -92,6 +93,14 @@ function containsWord (
     needle: string,
     flags: boolean | number = false,
 ): boolean {
+    if (needle.length === 0) {
+        if (flags & MATCH_FLAG_DEBUG) {
+            console.error(
+                "@wildboar/x500: debug: wordMatch: empty needle",
+            );
+        }
+        return false;
+    }
     const numFlags = typeof flags === "number" ? flags : (flags ? MATCH_FLAG_CONSTANT_TIME : 0);
     if (numFlags & MATCH_FLAG_APPROXIMATE) {
         return approxContainsWord(
@@ -129,7 +138,7 @@ function prepareWord (text: string): string | undefined {
 
 /**
  * Decode the presented word without preparing it. An empty word is
- * always rejected, because `containsWord` never terminates on one.
+ * always rejected, because it cannot designate a complete word.
  */
 export
 function decodeWordMatchAssertion (el: ASN1Element): string {
