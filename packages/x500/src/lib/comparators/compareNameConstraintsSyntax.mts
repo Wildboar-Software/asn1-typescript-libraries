@@ -14,8 +14,9 @@ interface CompareNameConstraintsSyntaxOptions {
      * When `true`, the order of `GeneralSubtree` values within
      * `permittedSubtrees` and within `excludedSubtrees` does not
      * affect the result. Each subtree must still pair with a distinct
-     * equal subtree. When omitted or `false`, subtrees are compared
-     * in encoding order.
+     * equal subtree using built-in name keys and bounds; custom equality
+     * matchers are ignored. When omitted or `false`, subtrees are compared
+     * in encoding order, honoring the supplied equality matcher.
      */
     ignoreSubtreeOrder?: boolean;
 }
@@ -27,13 +28,14 @@ interface CompareNameConstraintsSyntaxOptions {
  * `permittedSubtrees` and `excludedSubtrees` are compared separately
  * and are not interchangeable. By default, subtrees are compared in
  * encoding order. Pass `{ ignoreSubtreeOrder: true }` when that order
- * should not matter. Ignored order hashes each subtree with
- * `generalNameToKey` and compares the sets.
+ * should not matter. Ignored order preserves duplicate counts and
+ * uses built-in name-key normalization instead of custom equality rules.
  *
  * @param a One value
  * @param b The other
  * @param getEqualityMatcher A function that takes an attribute type and
- *  returns a function that can equality-match two values of that type
+ *  returns a function that can equality-match two values of that type.
+ *  Used only when subtree order is significant.
  * @param options Comparison options. `ignoreSubtreeOrder` skips
  *  subtree sequence order.
  * @returns {boolean} `true` if they match; `false` otherwise

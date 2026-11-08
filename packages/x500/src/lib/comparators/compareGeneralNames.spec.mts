@@ -1,5 +1,6 @@
 import compareGeneralNames from "./compareGeneralNames.mjs";
 import type { GeneralNames } from "../modules/CertificateExtensions/GeneralNames.ta.mjs";
+import { _encodeUTF8String } from "@wildboar/asn1/functional";
 
 /**
  * Equality is a multiset comparison, so both argument orders must agree.
@@ -10,6 +11,19 @@ function expectSymmetric (a: GeneralNames, b: GeneralNames, equal: boolean): voi
 }
 
 describe("compareGeneralNames()", () => {
+    it("preserves repeated names in multiset equality (M18)", () => {
+        expectSymmetric(
+            [{ dNSName: "a.example" }, { dNSName: "a.example" }, { dNSName: "b.example" }],
+            [{ dNSName: "b.example" }, { dNSName: "a.example" }, { dNSName: "a.example" }],
+            true,
+        );
+        expectSymmetric(
+            [{ dNSName: "a.example" }, { dNSName: "a.example" }, { dNSName: "b.example" }],
+            [{ dNSName: "a.example" }, { dNSName: "b.example" }, { dNSName: "b.example" }],
+            false,
+        );
+    });
+
     it("matches identical sequences", () => {
         const names: GeneralNames = [
             { dNSName: "a.example" },

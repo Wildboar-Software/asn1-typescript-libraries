@@ -19,11 +19,11 @@ import compareGeneralSubtree from "./compareGeneralSubtree.mjs";
  * so it does not collide with maximum 0.
  *
  * @param subtree The subtree to hash
- * @returns A string that can be stored in a set
+ * @returns A string that can be used as a multiset key
  * @function
  */
 function subtreeKey (subtree: GeneralSubtree): string {
-    const minimum: number = subtree.minimum ?? 0;
+    const minimum = subtree.minimum ?? 0;
     const maximum: string = subtree.maximum === undefined ? "" : String(subtree.maximum);
     return `${minimum}:${maximum}:${generalNameToKey(subtree.base)}`;
 }
@@ -34,19 +34,17 @@ function subtreeKey (subtree: GeneralSubtree): string {
  *
  * By default (`exactOrdering`) each subtree is compared with the
  * subtree in the same position. When `exactOrdering` is false, order
- * is not significant: keys from the first sequence go in a set. If
- * the number of keys differs from the number of subtrees in the
- * other sequence, they do not match. Otherwise each subtree on the
- * other side must have a key in that set. A repeated subtree
- * collapses to one key. That agrees with `compareGeneralSubtree`
- * when no equality matcher is supplied. A matcher can equate
- * directory names whose keys differ; only the ordered comparison
- * uses the matcher.
+ * is not significant, but multiplicities are: each subtree must pair
+ * with a distinct equal subtree on the other side. Unordered equality
+ * uses built-in `generalNameToKey` normalization and subtree bounds,
+ * not custom equality matchers. Counting keys takes expected O(n)
+ * time and O(n) space, excluding key generation and hashing costs.
  *
  * @param a One value
  * @param b The other
  * @param getEqualityMatcher A function that takes an attribute type and
- *  returns a function that can equality-match two values of that type
+ *  returns a function that can equality-match two values of that type.
+ *  Used only when `exactOrdering` is true.
  * @param exactOrdering When true, subtree order must match. When
  *  false, order is ignored. Defaults to true.
  * @returns {boolean} `true` if they match; `false` otherwise
@@ -70,17 +68,18 @@ function compareGeneralSubtrees (
         }
         return true;
     }
-    const keys: Set<string> = new Set();
+    const counts = new Map<string, number>();
     for (let i = 0; i < a.length; i++) {
-        keys.add(subtreeKey(a[i]));
-    }
-    if (keys.size !== b.length) {
-        return false;
+        const key = subtreeKey(a[i]);
+        counts.set(key, (counts.get(key) ?? 0) + 1);
     }
     for (let i = 0; i < b.length; i++) {
-        if (!keys.delete(subtreeKey(b[i]))) {
+        const key = subtreeKey(b[i]);
+        const count = counts.get(key);
+        if (!count) {
             return false;
         }
+        counts.set(key, count - 1);
     }
     return true;
 }

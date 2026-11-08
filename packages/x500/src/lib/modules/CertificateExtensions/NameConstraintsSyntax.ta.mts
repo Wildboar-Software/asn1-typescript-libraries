@@ -104,7 +104,9 @@ export class NameConstraintsSyntax {
      * @summary Compare this name constraints value with another
      * @param other The other name constraints
      * @param getEqualityMatcher A function that takes an attribute type and
-     *  returns a function that can equality-match two values of that type
+     *  returns a function that can equality-match two values of that type.
+     *  Ignored when `ignoreSubtreeOrder` is true; unordered comparison uses
+     *  built-in name-key normalization.
      * @param options Comparison options. Set `ignoreSubtreeOrder` so the
      *  order of permitted and excluded subtrees does not matter.
      * @returns `true` if they match
