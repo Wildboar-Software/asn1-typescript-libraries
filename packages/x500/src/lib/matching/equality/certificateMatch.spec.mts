@@ -35,6 +35,11 @@ import type { GeneralName } from "../../modules/CertificateExtensions/GeneralNam
 import { _encode_GeneralNames } from "../../modules/CertificateExtensions/GeneralNames.ta.mjs";
 import { id_ce_subjectAltName } from "../../modules/CertificateExtensions/id-ce-subjectAltName.va.mjs";
 import { caseIgnoreMatch } from "./caseIgnoreMatch.mjs";
+import { _encode_KeyUsage } from "../../modules/CertificateExtensions/KeyUsage.ta.mjs";
+import { id_ce_keyUsage } from "../../modules/CertificateExtensions/id-ce-keyUsage.va.mjs";
+import { AltName } from "../../modules/CertificateExtensions/AltName.ta.mjs";
+import { AltNameType_builtinNameForm_registeredId } from "../../modules/CertificateExtensions/AltNameType-builtinNameForm.ta.mjs";
+import { MATCH_FLAG_CONSTANT_TIME } from "../../types/matching.mjs";
 
 const ALG = new AlgorithmIdentifier(ObjectIdentifier.fromString("1.2.840.113549.1.1.11"));
 const POLICY_A = ObjectIdentifier.fromString("1.2.3.4.5");
@@ -110,6 +115,36 @@ function constraintMatches (nc: NameConstraintsSyntax, cert: Certificate): boole
     const [basic, enhanced] = constraintAssertions(nc);
     return [evaluateCertificateAssertion(basic, cert), evaluateEnhancedCertificateAssertion(enhanced, cert)];
 }
+
+describe.each([0, MATCH_FLAG_CONSTANT_TIME])("conforming certificate components (M31), flags %i", (flags) => {
+    it.each([
+        { description: "an absent key-usage extension", extensions: [], expected: true },
+        { description: "all asserted usage bits", extensions: [new Extension(id_ce_keyUsage, true,
+            _encode_KeyUsage(new Uint8ClampedArray([1, 0, 1]), DER).toBytes())], expected: true },
+        { description: "a missing asserted usage bit", extensions: [new Extension(id_ce_keyUsage, true,
+            _encode_KeyUsage(new Uint8ClampedArray([1]), DER).toBytes())], expected: false },
+    ])("handles $description", ({ extensions, expected }) => {
+        const basic = Object.assign(new CertificateAssertion(), { keyUsage: new Uint8ClampedArray([1, 0, 1]) });
+        const enhanced = Object.assign(new EnhancedCertificateAssertion(), { keyUsage: basic.keyUsage });
+        const cert = certificate(extensions);
+        expect(evaluateCertificateAssertion(basic, cert, undefined, flags)).toBe(expected);
+        expect(evaluateEnhancedCertificateAssertion(enhanced, cert, undefined, flags)).toBe(expected);
+        const stored = new AttributeTypeAndValue(commonName["&id"], _encode_Certificate(cert, DER));
+        expect(certificateMatch(_encode_CertificateAssertion(basic, DER), stored, undefined, flags)).toBe(expected);
+        expect(enhancedCertificateMatch(_encode_EnhancedCertificateAssertion(enhanced, DER), stored, undefined, flags)).toBe(expected);
+    });
+    it("recognizes the registeredID SAN choice in both matchers", () => {
+        const form = { builtinNameForm: AltNameType_builtinNameForm_registeredId };
+        const basic = Object.assign(new CertificateAssertion(), { subjectAltName: form });
+        const enhanced = Object.assign(new EnhancedCertificateAssertion(), { subjectAltName: new AltName(form) });
+        const cert = certificate([subjectAltNames({ registeredID: POLICY_A })]);
+        expect(evaluateCertificateAssertion(basic, cert, undefined, flags)).toBe(true);
+        expect(evaluateEnhancedCertificateAssertion(enhanced, cert, undefined, flags)).toBe(true);
+        const different = certificate([subjectAltNames({ dNSName: "example.com" })]);
+        expect(evaluateCertificateAssertion(basic, different, undefined, flags)).toBe(false);
+        expect(evaluateEnhancedCertificateAssertion(enhanced, different, undefined, flags)).toBe(false);
+    });
+});
 
 describe("certificate name-constraint enforcement (H7)", () => {
     const forms: [string, GeneralName, GeneralName, GeneralName][] = [

@@ -297,6 +297,12 @@ describe("MATCH_FLAG_APPROXIMATE", () => {
                 MATCH_FLAG_APPROXIMATE,
             )).toBe(true);
 
+            // X.511 7.8.2 permits a local approximateMatch algorithm. This
+            // does not assert that these JIDs are equal under X.520 8.9.4.
+            expect(jidMatch(
+                _encodeUTF8String("alicy@examplx.com/res1", DER),
+                atav(_encodeUTF8String("alice@example.com/res2", DER)),
+            )).toBe(false);
             expect(jidMatch(
                 _encodeUTF8String("alicy@examplx.com/res1", DER),
                 atav(_encodeUTF8String("alice@example.com/res2", DER)),

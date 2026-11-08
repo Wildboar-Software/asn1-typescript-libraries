@@ -179,10 +179,7 @@ function evaluateEnhancedCertificateAssertion (
 
     if (assertion.keyUsage) {
         const storedKU = ext(KU_ID, decodeKU);
-        if (!storedKU) {
-            return false;
-        }
-        if (!assertion.keyUsage.every((ku: number, index: number): boolean => (
+        if (storedKU && !assertion.keyUsage.every((ku: number, index: number): boolean => (
             (ku === FALSE_BIT)
             || Boolean(storedKU[index])
         ))) {
@@ -247,7 +244,7 @@ function evaluateEnhancedCertificateAssertion (
                 break;
             }
             case (AltNameType_builtinNameForm_registeredId as number): {
-                if (!sans.some((san): boolean => ("registeredId" in san))) {
+                if (!sans.some((san): boolean => ("registeredID" in san))) {
                     return false;
                 }
                 break;

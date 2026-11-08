@@ -200,6 +200,9 @@ const cases: Record<string, NormalizationCase> = {
         value: utf8("www.example.com"),
     },
     jidMatch: {
+        // Library API/precondition coverage, not a JID conformance fixture:
+        // the generic negative test deliberately supplies UNPREPARED data with
+        // ASSERTION_NORMALIZED, violating that optimization flag's precondition.
         matcher: equality.jidMatch,
         decode: equality.decodeJidMatchAssertion,
         normalize: equality.normalizeJidMatchAssertion,
