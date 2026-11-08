@@ -128,10 +128,7 @@ async function userWithinACIUserClass (
     ) {
         return 4;
     }
-    if (
-        (userClass.userGroup && (userClass.userGroup.length > 0))
-        && userClass.userGroup.some((ug) => isMemberOfGroup(ug, user))
-    ) {
+    if (userClass.userGroup && (userClass.userGroup.length > 0)) {
         for (const ug of userClass.userGroup) {
             const isMember = await isMemberOfGroup(ug, user);
             if (isMember === undefined) {

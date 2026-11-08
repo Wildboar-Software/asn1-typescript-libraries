@@ -80,10 +80,49 @@ function tuple (
     return [ userClass, authLevel, PROTECTED_ENTRY, grantsAndDenials, 100 ];
 }
 
-const noMatcher = () => undefined;
+const noMatcher = (): undefined => undefined;
 const neverMember = async () => false;
 
 describe("userWithinACIUserClass", () => {
+    it.each([
+        { membership: true, specificity: 3 },
+        { membership: false, specificity: 0 },
+        { membership: undefined, specificity: 0.5 },
+    ])("awaits one group lookup for membership $membership (M26)", async ({ membership, specificity }) => {
+        const groupTuple: ACDFTuple = [
+            new UserClasses(undefined, undefined, undefined, [GROUP_NAME]),
+            AUTH_NONE, PROTECTED_ENTRY, ALL_GRANTS, 100,
+        ];
+        const lookup = vi.fn(async () => membership);
+        expect(await userWithinACIUserClass(groupTuple, NAMED_USER, AUTH_NONE, ENTRY_DN, noMatcher, lookup))
+            .toBe(specificity);
+        expect(lookup).toHaveBeenCalledExactlyOnceWith(GROUP_NAME, NAMED_USER);
+    });
+
+    it("looks up each necessary group once and stops at the first confirmed membership (M26)", async () => {
+        const secondGroup = new NameAndOptionalUID([]);
+        const groupTuple: ACDFTuple = [
+            new UserClasses(undefined, undefined, undefined, [GROUP_NAME, secondGroup, GROUP_NAME]),
+            AUTH_NONE, PROTECTED_ENTRY, ALL_GRANTS, 100,
+        ];
+        const lookup = vi.fn().mockResolvedValueOnce(false).mockResolvedValueOnce(true);
+        expect(await userWithinACIUserClass(groupTuple, NAMED_USER, AUTH_NONE, ENTRY_DN, noMatcher, lookup)).toBe(3);
+        expect(lookup).toHaveBeenCalledTimes(2);
+        expect(lookup).toHaveBeenNthCalledWith(1, GROUP_NAME, NAMED_USER);
+        expect(lookup).toHaveBeenNthCalledWith(2, secondGroup, NAMED_USER);
+    });
+
+    it("propagates the single awaited membership rejection without a discarded Promise (M26)", async () => {
+        const groupTuple: ACDFTuple = [
+            new UserClasses(undefined, undefined, undefined, [GROUP_NAME]),
+            AUTH_NONE, PROTECTED_ENTRY, ALL_GRANTS, 100,
+        ];
+        const failure = new Error("Group service unavailable");
+        const lookup = vi.fn(async () => { throw failure; });
+        await expect(userWithinACIUserClass(groupTuple, NAMED_USER, AUTH_NONE, ENTRY_DN, noMatcher, lookup)).rejects.toBe(failure);
+        expect(lookup).toHaveBeenCalledExactlyOnceWith(GROUP_NAME, NAMED_USER);
+    });
+
     it("matches allUsers for an anonymous requestor", async () => {
         const specificity = await userWithinACIUserClass(
             tuple(new UserClasses(null), AUTH_NONE, ALL_GRANTS),
