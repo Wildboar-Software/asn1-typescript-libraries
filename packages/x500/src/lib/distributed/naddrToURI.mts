@@ -19,18 +19,19 @@ function naddrToURI (naddr: OCTET_STRING): string | undefined {
             }
         }
         const [ type, ipv4, port ] = ipv4FromNSAP(naddr);
+        const host = ipv4.join(".");
         switch (type) {
         case (0x11): { // LDAP
-            return `ldap://${ipv4}:${port ?? 389}`;
+            return `ldap://${host}:${port ?? 389}`;
         }
         case (0x10): { // IDM over IPv4
             if (!port) {
                 return undefined;
             }
-            return `idm://${ipv4}:${port}`;
+            return `idm://${host}:${port}`;
         }
         case (0x03): { // ITOT
-            return `itot://${ipv4}:${port ?? 102}`;
+            return `itot://${host}:${port ?? 102}`;
         }
         default: {
             return undefined;
