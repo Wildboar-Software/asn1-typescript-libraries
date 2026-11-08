@@ -28,7 +28,7 @@ import {
     IssuingDistPointSyntax,
     _decode_IssuingDistPointSyntax,
 } from "../../modules/CertificateExtensions/IssuingDistPointSyntax.ta.mjs";
-import { compareGeneralNames } from "../../comparators/compareGeneralNames.mjs";
+import { generalNameToKey } from "@wildboar/gn";
 import { compareRelativeDistinguishedName } from "@wildboar/dn";
 import compareElements from "../../comparators/compareElements.mjs";
 import { getDateFromTime } from "@wildboar/pki-stub";
@@ -65,19 +65,13 @@ function certificateListExactMatchTyped (
     if (!compareName(v.toBeSigned.issuer, a.issuer, getEqualityMatcher)) {
         return false;
     }
-    const time = ((): Date => {
-        if ("utcTime" in a.thisUpdate) {
-            return a.thisUpdate.utcTime;
-        } else {
-            return a.thisUpdate.generalizedTime;
-        }
-    })();
+    const time = getDateFromTime(a.thisUpdate);
+    const storedThisUpdate = getDateFromTime(v.toBeSigned.thisUpdate);
     if (flags & MATCH_FLAG_APPROXIMATE) {
-        const storedThisUpdate = getDateFromTime(v.toBeSigned.thisUpdate);
         if (Math.abs(Math.floor(time.getTime() / 1000) - Math.floor(storedThisUpdate.getTime() / 1000)) > 1) {
             return false;
         }
-    } else if (time.valueOf() !== v.toBeSigned.thisUpdate.valueOf()) {
+    } else if (time.valueOf() !== storedThisUpdate.valueOf()) {
         return false;
     }
     if (a.distributionPoint) {
@@ -97,7 +91,12 @@ function certificateListExactMatchTyped (
             if (!("fullName" in a.distributionPoint)) {
                 return false;
             }
-            if (!compareGeneralNames(stored.fullName, stored.fullName, getEqualityMatcher)) {
+            // X.509 13.3.5 requires equality in at least one name form, not
+            // equality of the entire GeneralNames collection. As with other
+            // unordered name comparisons, use built-in canonical keys rather
+            // than custom matchers; intersection takes expected O(n + m) work.
+            const storedNames = new Set(stored.fullName.map(generalNameToKey));
+            if (!a.distributionPoint.fullName.some((name) => storedNames.has(generalNameToKey(name)))) {
                 return false;
             }
         } else if ("nameRelativeToCRLIssuer" in stored) {
