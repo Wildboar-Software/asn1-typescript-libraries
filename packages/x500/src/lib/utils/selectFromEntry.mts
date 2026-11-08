@@ -103,8 +103,17 @@ function useAttributeTypesInFamilyEntries (entries: FamilyEntries): FamilyEntrie
                     };
                 }),
                 entry.family_info?.map((fi) => useAttributeTypesInFamilyEntries(fi)),
+                entry._unrecognizedExtensionsList,
             );
         }),
+        entries._unrecognizedExtensionsList,
+    );
+}
+
+function useAttributeTypesInFamilyValue (value: ASN1Element): ASN1Element {
+    return _encode_FamilyEntries(
+        useAttributeTypesInFamilyEntries(_decode_FamilyEntries(value)),
+        () => new DERElement(),
     );
 }
 
@@ -428,16 +437,17 @@ function selectFromEntry (
                                     if (!attr[1]) {
                                         return attr[1];
                                     }
-                                    const familyEntries = _decode_FamilyEntries(attr[1]);
-                                    const newFamilyEntries = useAttributeTypesInFamilyEntries(familyEntries);
-                                    return _encode_FamilyEntries(newFamilyEntries, () => new DERElement());
+                                    return useAttributeTypesInFamilyValue(attr[1]);
                                 })
                                 .filter((value: ASN1Element | undefined): value is ASN1Element => !!value),
+                            // Technically, family-information attributes are
+                            // not supposed to have contexts, but we'll handle
+                            // this anyway.
                             (eis.returnContexts)
                                 ? attrs
                                     .filter((attr): boolean => Boolean(attr[1]) && (attr[2].length > 0))
                                     .map((attr) => new Attribute_valuesWithContext_Item(
-                                        attr[1]!,
+                                        useAttributeTypesInFamilyValue(attr[1]!),
                                         attr[2],
                                     ))
                                 : undefined,

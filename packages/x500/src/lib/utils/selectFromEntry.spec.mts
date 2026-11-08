@@ -14,12 +14,57 @@ import { Attribute } from "../modules/InformationFramework/Attribute.ta.mjs";
 import { Attribute_valuesWithContext_Item } from "../modules/InformationFramework/Attribute-valuesWithContext-Item.ta.mjs";
 import { Context } from "../modules/InformationFramework/Context.ta.mjs";
 import type { Name } from "../modules/InformationFramework/Name.ta.mjs";
+import { FamilyEntries, _encode_FamilyEntries, _decode_FamilyEntries } from "../modules/DirectoryAbstractService/FamilyEntries.ta.mjs";
+import { FamilyEntry } from "../modules/DirectoryAbstractService/FamilyEntry.ta.mjs";
+import { AttributeTypeAndValue } from "../modules/InformationFramework/AttributeTypeAndValue.ta.mjs";
+import { family_information } from "../modules/DirectoryAbstractService/family-information.oa.mjs";
 import { selectFromEntry } from "./selectFromEntry.mjs";
 
 const commonName = ObjectIdentifier.fromString("2.5.4.3");
 const description = ObjectIdentifier.fromString("2.5.4.13");
 const createTimestamp = ObjectIdentifier.fromString("2.5.18.1");
 const languageContext = ObjectIdentifier.fromString("1.2.3.4");
+
+// I commented this out because `family-information` is technically not allowed
+// to have contexts at all, so this test ensures _forbidden_ behavior.
+// Still, I think it is a good test overall, so I felt like it was worth keeping
+// and skipping.
+describe.skip("contextual family-information selection (M25)", () => {
+    it.each([false, true])("applies types-only selection recursively, returnContexts = %s", (returnContexts) => {
+        const childRDN = [new AttributeTypeAndValue(commonName, _encodeUTF8String("child", DER))];
+        const nested = new FamilyEntries(ObjectIdentifier.fromString("2.5.6.6"), [new FamilyEntry(
+            childRDN, [{ attribute: new Attribute(description, [_encodeUTF8String("Nested secret", DER)]) }],
+        )]);
+        const family = new FamilyEntries(ObjectIdentifier.fromString("2.5.6.6"), [new FamilyEntry(
+            childRDN,
+            [{ attribute: new Attribute(commonName, [_encodeUTF8String("Secret value", DER)]) }],
+            [nested],
+        )]);
+        const value = _encode_FamilyEntries(family, DER);
+        const original = value.toBytes();
+        const contexts = [new Context(languageContext, [_encodeUTF8String("en", DER)])];
+        const entry = new EntryInformation({ rdnSequence: [] }, true, [{ attribute: new Attribute(
+            family_information["&id"], [value], [new Attribute_valuesWithContext_Item(value, contexts)],
+        ) }]);
+        const result = selectFromEntry(
+            new EntryInformationSelection(undefined, EntryInformationSelection_infoTypes_attributeTypesOnly,
+                undefined, undefined, returnContexts),
+            entry, () => false, () => [], () => undefined, () => true,
+        );
+        const info = result.information![0];
+        if (!("attribute" in info)) throw new Error("The family carrier must retain its values");
+        const values = [...info.attribute.values, ...(info.attribute.valuesWithContext ?? []).map((item) => item.value)];
+        expect(values).toHaveLength(2);
+        for (const encoded of values) {
+            const decoded = _decode_FamilyEntries(encoded);
+            expect(decoded.familyEntries[0].information).toEqual([{ attributeType: commonName }]);
+            expect(decoded.familyEntries[0].family_info![0].familyEntries[0].information)
+                .toEqual([{ attributeType: description }]);
+        }
+        if (returnContexts) expect(info.attribute.valuesWithContext![0].contextList).toEqual(contexts);
+        expect(value.toBytes()).toEqual(original);
+    });
+});
 
 describe("selectFromEntry defaults (M24)", () => {
     it("returns types and values when infoTypes is omitted, without modifying the input", () => {
