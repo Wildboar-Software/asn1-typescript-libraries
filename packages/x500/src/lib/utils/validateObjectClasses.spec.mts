@@ -61,6 +61,25 @@ const getSuperclassesDoS = (objectClass: OBJECT_IDENTIFIER) => {
 };
 
 describe("validateObjectClasses", () => {
+    it.each([
+        { order: "top first", classes: [top["&id"], person["&id"]] },
+        { order: "top last", classes: [person["&id"], top["&id"]] },
+    ])("returns person for the same short structural chain with $order (M23)", ({ classes }) => {
+        const originalOrder = [...classes];
+        const structuralClass = validateObjectClasses(classes, getKind, getSuperclasses);
+        expect(structuralClass?.isEqualTo(person["&id"])).toBe(true);
+        expect(classes).toEqual(originalOrder);
+    });
+
+    it.each([
+        [top["&id"], organizationalPerson["&id"]],
+        [organizationalPerson["&id"], top["&id"]],
+        [top["&id"], strongAuthenticationUser["&id"]],
+        [strongAuthenticationUser["&id"], top["&id"]],
+    ])("still rejects a missing structural superclass or an auxiliary-only chain (%#)", (...classes) => {
+        expect(validateObjectClasses(classes, getKind, getSuperclasses)).toBeNull();
+    });
+
     it("returns true for a valid set of object classes", () => {
         const objectClasses: OBJECT_IDENTIFIER[] = [
             person["&id"],

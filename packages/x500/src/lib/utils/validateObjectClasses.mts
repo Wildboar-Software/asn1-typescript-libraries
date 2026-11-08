@@ -37,7 +37,7 @@ function getSingleObjectClass(objectClasses: OBJECT_IDENTIFIER[]): OBJECT_IDENTI
         if (topIdx === -1) {
             return null;
         }
-        return objectClasses[top ? 0 : 1];
+        return objectClasses[1 - topIdx];
     }
     return null;
 }
