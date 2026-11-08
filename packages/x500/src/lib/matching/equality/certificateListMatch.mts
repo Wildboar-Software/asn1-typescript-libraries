@@ -40,8 +40,9 @@ import {
     IssuingDistPointSyntax,
     _decode_IssuingDistPointSyntax,
 } from "../../modules/CertificateExtensions/IssuingDistPointSyntax.ta.mjs";
-import { compareGeneralName } from "@wildboar/gn";
+import { generalNameToKey } from "@wildboar/gn";
 import { compareRelativeDistinguishedName } from "@wildboar/dn";
+import compareElements from "../../comparators/compareElements.mjs";
 
 /**
  * Rec. ITU-T X.509 (10/2019), clause 13.3.6 `certificateListMatch`.
@@ -98,7 +99,7 @@ function certificateListMatchTyped (
 
     const approximate = (flags & MATCH_FLAG_APPROXIMATE) !== 0;
 
-    if (a.minCRLNumber) {
+    if (a.minCRLNumber !== undefined) {
         if (crlNumber === undefined) {
             return false;
         }
@@ -108,7 +109,7 @@ function certificateListMatchTyped (
         }
     }
 
-    if (a.maxCRLNumber) {
+    if (a.maxCRLNumber !== undefined) {
         if (crlNumber === undefined) {
             return false;
         }
@@ -150,24 +151,34 @@ function certificateListMatchTyped (
         if (!distributionPoint) {
             return false;
         }
-        if (("fullName" in a.distributionPoint) && ("fullName" in distributionPoint)) {
-            if (
-                !a.distributionPoint.fullName.some((dpn1) => (
-                    ("fullName" in distributionPoint)
-                    && (distributionPoint.fullName
-                        .some((dpn2): boolean => compareGeneralName(dpn1, dpn2, getEqualityMatcher)))
-            ))) {
+        if ("fullName" in a.distributionPoint) {
+            if (!("fullName" in distributionPoint)) {
                 return false;
             }
-        } else if (
-            ("nameRelativeToCRLIssuer" in a.distributionPoint)
-            && ("nameRelativeToCRLIssuer" in distributionPoint)
-            && !compareRelativeDistinguishedName(
+            // X.509 13.3.6 requires a shared name in at least one name form.
+            // Use built-in keys for unordered matching, as in exact CRL
+            // matching, rather than a quadratic pairwise name search.
+            const storedNames = new Set(distributionPoint.fullName.map(generalNameToKey));
+            if (!a.distributionPoint.fullName.some((name) => storedNames.has(generalNameToKey(name)))) {
+                return false;
+            }
+        } else if ("nameRelativeToCRLIssuer" in a.distributionPoint) {
+            if (!("nameRelativeToCRLIssuer" in distributionPoint)) {
+                return false;
+            }
+            if (!compareRelativeDistinguishedName(
                 a.distributionPoint.nameRelativeToCRLIssuer,
                 distributionPoint.nameRelativeToCRLIssuer,
                 getEqualityMatcher,
-            )
+            )) {
+                return false;
+            }
+        } else if (
+            !ASN1Element.isElement(distributionPoint)
+            || !compareElements(a.distributionPoint, distributionPoint)
         ) {
+            // Unknown CHOICE alternatives must also agree, not fall through
+            // as a match against an unrelated (or recognized) alternative.
             return false;
         }
     }
