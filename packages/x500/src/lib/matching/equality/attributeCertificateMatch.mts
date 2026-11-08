@@ -84,7 +84,7 @@ function attributeCertificateMatchTyped (
                 return false;
             }
         } else {
-            if ((assertedTime < notBefore) && (assertedTime > notAfter)) {
+            if ((assertedTime < notBefore) || (assertedTime > notAfter)) {
                 return false;
             }
         }
