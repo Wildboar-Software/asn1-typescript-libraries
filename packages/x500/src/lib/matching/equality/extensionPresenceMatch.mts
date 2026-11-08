@@ -23,22 +23,39 @@ import {
  * TRUE iff the stored certificate contains the extension whose OID
  * is presented (`EXTENSION.&id`). The specification is written
  * against attribute certificates; this implementation also accepts
- * public-key certificates, CRLs, and AVLs.
+ * public-key certificates and CRLs.
+ *
+ * AVL limitation: TBSCertAVL calls its container-level field `avlExtensions`.
+ * That decoded property is not recognized below, and the encoded untagged
+ * branch has an attribute-certificate-specific field-count guard. There is
+ * currently no dedicated AVL decoding branch; do not infer AVL support merely
+ * because an AVL also uses SIGNED and an untagged Extensions sequence.
  */
 function extensionsOf (
     value: ASN1Element | Certificate | CertificateList | AttributeCertificate,
 ): Extensions | undefined {
     if (!ASN1Element.isElement(value)) {
+        // Already decoded SIGNED value: no ASN.1 tag wrappers remain to unwrap.
         const signed = value.toBeSigned;
         if ("crlExtensions" in signed) {
+            // CRL: CertificateListContent.crlExtensions, i.e. extensions on the
+            // whole list, not crlEntryExtensions on individual revoked entries.
             return signed.crlExtensions;
         }
         if ("extensions" in signed) {
+            // Public-key certificate (TBSCertificate) or attribute certificate
+            // (TBSAttributeCertificate): both decoded classes call this extensions.
             return signed.extensions;
         }
+        // No recognized container-level extension property.
         return undefined;
     }
+    // Encoded SIGNED { T }: its first SEQUENCE component is the to-be-signed T.
+    // Dispatch below uses the known layouts/tags; it does not validate the
+    // certificate type or signature, nor inspect per-entry extensions.
     const tbs: ASN1Element = value.sequence[0];
+    // Public-key certificate: TBSCertificate.extensions is [3] EXPLICIT
+    // Extensions (X.509 7.2.1). Search by tag rather than a fixed field position.
     const pkcExt: ASN1Element | undefined = tbs.sequence
         .find((el) => (
             (el.tagClass === ASN1TagClass.context)
@@ -46,6 +63,7 @@ function extensionsOf (
             && (el.tagNumber === 3)
         ));
     if (pkcExt) {
+        // Remove the [3] wrapper; its inner element is SEQUENCE OF Extension.
         return _decode_Extensions(pkcExt.inner);
     }
     const lastElement: ASN1Element = tbs.sequence[tbs.sequence.length - 1];
@@ -54,14 +72,28 @@ function extensionsOf (
         && (lastElement.construction === ASN1Construction.constructed)
         && (lastElement.tagNumber === 0)
     ) {
+        // CRL: CertificateListContent.crlExtensions is the trailing [0]
+        // EXPLICIT Extensions field (X.509 7.10.2). Remove that tag wrapper.
         return _decode_Extensions(lastElement.inner);
     } else if (
         (lastElement.tagClass === ASN1TagClass.universal)
         && (lastElement.construction === ASN1Construction.constructed)
         && (lastElement.tagNumber === ASN1UniversalType.sequence)
+        // Attribute certificate: seven mandatory TBS fields precede optional
+        // extensions (version, holder, issuer, signature, serial, validity,
+        // attributes). This guard avoids mistaking its attributes, a PKC's
+        // SPKI, or a CRL's revokedCertificates sequence for AC extensions.
+        && (tbs.sequence.length >= 8)
     ) {
-        return _decode_Extensions(lastElement.inner);
+        // AC: TBSAttributeCertificate.extensions is an UNTAGGED Extensions
+        // sequence, not an EXPLICIT wrapper. Decode the list itself (M30).
+        // Using .inner here would remove the SEQUENCE OF layer and select one
+        // Extension, or fail when the list has several Extension children.
+        return _decode_Extensions(lastElement);
     }
+    // No recognized extension container in the encoded layout. This includes
+    // supported certificate/CRL forms with no extensions; it is not a claim
+    // that all other SIGNED formats (notably AVLs) have no extensions.
     return undefined;
 }
 

@@ -156,14 +156,14 @@ describe("timeSpecificationMatch() period normalization", () => {
         expect(timeSpecificationMatch(asserted, ac)).toBe(true);
     });
 
-    it("passes MATCH_FLAG_HIGH_WORK_BUDGET through to SET OF Period pairing", () => {
+    it("matches larger SET OF Period values without needing a high-work-budget flag (M28)", () => {
         const periods: Period[] = [];
         for (let day = 1; day <= 14; day++) {
-            periods.push(new Period(undefined, { intDay: [day] }));
+            periods.push(new Period(undefined, { intDay: [day] }, undefined, undefined, [2026]));
         }
         const asserted = new TimeSpecification({ periodic: periods });
         const stored = new TimeSpecification({ periodic: periods.slice().reverse() });
-        expect(timeSpecificationMatchTyped(asserted, stored)).toBe(false);
+        expect(timeSpecificationMatchTyped(asserted, stored)).toBe(true);
         expect(timeSpecificationMatchTyped(
             asserted,
             stored,
