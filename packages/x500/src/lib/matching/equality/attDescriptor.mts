@@ -1,4 +1,4 @@
-import type { ASN1Element } from "@wildboar/asn1";
+import { DERElement, type ASN1Element } from "@wildboar/asn1";
 import type { AttributeType } from "../../modules/InformationFramework/index.mjs";
 import { readDecoded } from "../readValue.mjs";
 import { approximatelyEqualBytes, approximatelyEqualStrings } from "../approximate.mjs";
@@ -15,6 +15,11 @@ import {
     _decode_AttributeDescriptorSyntax,
 } from "../../modules/AttributeCertificateDefinitions/AttributeDescriptorSyntax.ta.mjs";
 import directoryStringToString from "../../stringifiers/directoryStringToString.mjs";
+import {
+    type AttributeCertificate,
+    _decode_AttributeCertificate,
+} from "../../modules/AttributeCertificateDefinitions/AttributeCertificate.ta.mjs";
+import { id_ce_attributeDescriptor } from "../../modules/AttributeCertificateDefinitions/id-ce-attributeDescriptor.va.mjs";
 
 /**
  * Rec. ITU-T X.509 (10/2019), clause 17.3.2.2.2 `attDescriptor`.
@@ -26,20 +31,28 @@ import directoryStringToString from "../../stringifiers/directoryStringToString.
  * component.
  */
 /**
- * `attDescriptor` on two decoded attribute descriptors.
+ * `attDescriptor` on a presented descriptor and a stored attribute certificate.
  *
  * @param a Presented descriptor.
- * @param value Stored descriptor, or that descriptor already decoded.
+ * @param value Stored attribute certificate, encoded or already decoded.
  * @returns `true` when the compared components match.
  */
 export
 function attDescriptorTyped (
     a: AttributeDescriptorSyntax,
-    value: AttributeDescriptorSyntax | ASN1Element,
+    value: AttributeCertificate | ASN1Element,
     _getEqualityMatcher?: (attributeType: AttributeType) => Matcher | undefined,
     flags: number = 0,
 ): boolean {
-    const v = readDecoded(value, _decode_AttributeDescriptorSyntax);
+    const certificate = readDecoded(value, _decode_AttributeCertificate);
+    const extension = certificate.toBeSigned.extensions
+        ?.find((ext) => ext.extnId.isEqualTo(id_ce_attributeDescriptor));
+    if (!extension) {
+        return false;
+    }
+    const encodedDescriptor = new DERElement();
+    encodedDescriptor.fromBytes(extension.extnValue);
+    const v = _decode_AttributeDescriptorSyntax(encodedDescriptor);
     const constantTime = flags & MATCH_FLAG_CONSTANT_TIME;
     const approximate = (flags & MATCH_FLAG_APPROXIMATE) !== 0;
     let matched = true;
@@ -92,7 +105,7 @@ function attDescriptorTyped (
         matched = false;
     }
 
-    if (a.dominationRule.privilegePolicy.isEqualTo(v.dominationRule.privilegePolicy)) {
+    if (!a.dominationRule.privilegePolicy.isEqualTo(v.dominationRule.privilegePolicy)) {
         if (!constantTime) {
             return false;
         }
@@ -138,6 +151,8 @@ export
 const attDescriptor: Matcher = createEqualityMatcher(
     _decode_AttributeDescriptorSyntax,
     attDescriptorTyped,
+    undefined,
+    true,
 );
 
 export default attDescriptor;

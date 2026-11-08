@@ -56,11 +56,13 @@ describe("NameConstraintsSyntax.isEqualTo()", () => {
             undefined,
             ignoreOrder,
         )).toBe(false);
+        // M18: both sides contain two equal occurrences. Ignoring order must
+        // preserve their multiplicity, not collapse them into a one-member Set.
         expect(duplicate.isEqualTo(
             new NameConstraintsSyntax([subtree("A.Example"), subtree("a.example")], [subtree("deny.example")]),
             undefined,
             ignoreOrder,
-        )).toBe(false);
+        )).toBe(true);
         expect(a.isEqualTo(
             new NameConstraintsSyntax(undefined, a.excludedSubtrees),
             undefined,
