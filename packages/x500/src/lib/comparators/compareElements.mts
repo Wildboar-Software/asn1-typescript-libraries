@@ -32,7 +32,6 @@ function compareElements (a: ASN1Element, b: ASN1Element): boolean {
     if (
         (a.tagClass !== b.tagClass)
         || (a.tagNumber !== b.tagNumber)
-        || (a.value.length !== b.value.length)
     ) {
         return false;
     }
@@ -59,6 +58,8 @@ function compareElements (a: ASN1Element, b: ASN1Element): boolean {
         if (!deconstructableTypes.has(a.tagNumber)) {
             return false;
         }
+        // Constructed content includes fragment TLV headers. Compare lengths
+        // and bytes only after deconstruction, not against those encoded octets.
         const primitiveAValue = (a.construction === ASN1Construction.constructed)
             ? a.deconstruct("?")
             : a.value;
