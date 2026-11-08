@@ -55,7 +55,8 @@ function supplierOrConsumerInformationMatchTyped (
     const getEqualityMatcher = valueEqualityMatcher(getMatcher, flags);
     const idMatches = (flags & MATCH_FLAG_APPROXIMATE)
         ? approximatelyEqualInts(readInteger(a.agreement_identifier), readInteger(v.agreementID.identifier))
-        : (a.agreement_identifier === v.agreementID.identifier);
+        // Intentional use of `==` to avoid the overhead of `BigInt` comparisons.
+        : (readInteger(a.agreement_identifier)) == readInteger(v.agreementID.identifier);
     if (!idMatches && !(flags & MATCH_FLAG_CONSTANT_TIME)) {
         return false;
     }
