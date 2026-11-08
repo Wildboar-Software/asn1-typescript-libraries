@@ -25,6 +25,27 @@ import { TimeSpecification_time_absolute } from "../../modules/SelectedAttribute
 import { TimeAssertion_between } from "../../modules/SelectedAttributeTypes/TimeAssertion-between.ta.mjs";
 
 describe("evaluateTemporalContext", () => {
+    it.each([0, MATCH_FLAG_CONSTANT_TIME])("matches days-only Monday contexts every week (M7), flags %i", (flags) => {
+        // X.520 clause 10.2: { days intDay:{2} } means every Monday, not
+        // January 2 each year. No weeks, months, or years are specified.
+        const everyMonday = new TimeSpecification({ periodic: [
+            new Period(undefined, { intDay: [2] }),
+        ] });
+
+        expect(evaluateTemporalContext(
+            { at: new Date(2026, 0, 2, 12) }, everyMonday, flags,
+        )).toBe(false); // Friday, despite being the second day of the year.
+        expect(evaluateTemporalContext(
+            { at: new Date(2026, 0, 5, 12) }, everyMonday, flags,
+        )).toBe(true); // First Monday of January.
+        expect(evaluateTemporalContext(
+            { at: new Date(2026, 0, 12, 12) }, everyMonday, flags,
+        )).toBe(true); // The following Monday must match too.
+        expect(evaluateTemporalContext(
+            { at: new Date(2026, 0, 6, 12) }, everyMonday, flags,
+        )).toBe(false); // Tuesday.
+    });
+
     describe("intervals against complemented stored time sets (H5)", () => {
         const at = (hour: number): Date => new Date(2026, 0, 1, hour);
         const storedTimes: TimeSpecification["time"][] = [

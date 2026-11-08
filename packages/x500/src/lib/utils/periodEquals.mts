@@ -183,8 +183,8 @@ function daysEqual (
         return ("intDay" in b) && integersEqual(a.intDay, b.intDay, constantTime);
     }
     if ("bitDay" in a) {
-        // In-range bitDay is converted to SET OF INTEGER by normalizePeriod,
-        // so both sides of an equivalent value are the same variant.
+        // normalizePeriod retains weekday bits when converting to INTEGERs
+        // would change them into ordinal days of a month or year.
         return ("bitDay" in b) && bytesEqual(a.bitDay, b.bitDay, constantTime);
     }
     if ("dayOf" in a) {

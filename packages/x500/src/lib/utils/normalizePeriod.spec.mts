@@ -5,7 +5,11 @@ import { DayTimeBand } from "../modules/SelectedAttributeTypes/DayTimeBand.ta.mj
 import { DayTime } from "../modules/SelectedAttributeTypes/DayTime.ta.mjs";
 import { NamedDay_intNamedDays_monday } from "../modules/SelectedAttributeTypes/NamedDay-intNamedDays.ta.mjs";
 import { NamedDay_bitNamedDays_monday, NamedDay_bitNamedDays_friday } from "../modules/SelectedAttributeTypes/NamedDay-bitNamedDays.ta.mjs";
-import { Period_days_bitDay_sunday, Period_days_bitDay_monday } from "../modules/SelectedAttributeTypes/Period-days-bitDay.ta.mjs";
+import {
+    Period_days_bitDay_sunday,
+    Period_days_bitDay_monday,
+    Period_days_bitDay_thursday,
+} from "../modules/SelectedAttributeTypes/Period-days-bitDay.ta.mjs";
 import {
     Period_weeks_bitWeek_week1,
     Period_weeks_bitWeek_week2,
@@ -66,6 +70,82 @@ function expectDifferent(a: Period, b: Period): void {
 }
 
 describe("normalizePeriod()", () => {
+    describe.each<{
+        context: string;
+        months: Period["months"];
+        years: Period["years"];
+    }>([
+        { context: "a selected month", months: { intMonth: [1] }, years: undefined },
+        { context: "a selected year", months: undefined, years: [2026] },
+        { context: "a selected month and year", months: { intMonth: [1] }, years: [2026] },
+        { context: "allMonths within a year", months: { allMonths: null }, years: [2026] },
+    ])("weekday normalization with $context (M8)", ({ months, years }) => {
+        it("preserves the actual Monday and Thursday occurrences, including January 1", () => {
+            const paddedWeekdays = new Uint8ClampedArray(7);
+            paddedWeekdays[Period_days_bitDay_monday] = TRUE_BIT;
+            paddedWeekdays[Period_days_bitDay_thursday] = TRUE_BIT;
+            const period = new Period(
+                [new DayTimeBand(new DayTime(9), new DayTime(17))],
+                { bitDay: paddedWeekdays },
+                undefined,
+                months,
+                years,
+            );
+            const originalDER = _encode_Period(period, DER).toBytes();
+            const normalized = normalizePeriod(period);
+
+            // With no weeks component, intDay [2, 5] would instead select the
+            // second and fifth days of the month/year. Keep named weekdays.
+            expect(normalized.days).toEqual({
+                bitDay: bits(Period_days_bitDay_monday, Period_days_bitDay_thursday),
+            });
+            const start = new Date(2026, 0, 1);
+            const end = new Date(2026, 0, 31, 23, 59, 59, 999);
+            const expected = [1, 5, 8, 12, 15, 19, 22, 26, 29].map((day) => [
+                new Date(2026, 0, day, 9),
+                new Date(2026, 0, day, 17),
+            ]);
+            // January 1 is Thursday. The first days of the year must not be
+            // lost by introducing a week-number restriction during normalization.
+            expect(Array.from(period.occurrences(start, end, false))).toEqual(expected);
+            expect(Array.from(normalized.occurrences(start, end, false))).toEqual(expected);
+            expect(_encode_Period(normalized, DER).toBytes()).toEqual(der(normalized));
+            expect(_encode_Period(period, DER).toBytes()).toEqual(originalDER);
+        });
+
+        it("does not equate Mondays with ordinal day 2", () => {
+            const mondays = new Period(
+                undefined, { bitDay: bits(Period_days_bitDay_monday) }, undefined, months, years,
+            );
+            const ordinalDay2 = new Period(undefined, { intDay: [2] }, undefined, months, years);
+            expectDifferent(mondays, ordinalDay2);
+        });
+
+        it("still collapses all seven named weekdays to all days of the enclosing unit", () => {
+            const everyWeekday = new Period(
+                undefined, { bitDay: new Uint8ClampedArray(7).fill(TRUE_BIT) }, undefined, months, years,
+            );
+            const allDays = new Period(undefined, undefined, undefined, months, years);
+            expectSame(everyWeekday, allDays);
+        });
+    });
+
+    it("still converts weekday bits to integers when an explicit weeks component makes that safe (M8)", () => {
+        expectSame(
+            new Period(undefined, { bitDay: bits(Period_days_bitDay_monday, Period_days_bitDay_thursday) },
+                { intWeek: [1] }, { intMonth: [1] }, [2026]),
+            new Period(undefined, { intDay: [2, 5] }, { intWeek: [1] }, { intMonth: [1] }, [2026]),
+        );
+    });
+
+    it("preserves an empty weekday selection within a year (M8)", () => {
+        const normalized = normalizePeriod(new Period(
+            undefined, { bitDay: new Uint8ClampedArray(7) }, undefined, undefined, [2026],
+        ));
+        expect(normalized.days).toEqual({ bitDay: new Uint8ClampedArray() });
+        expect(Array.from(normalized.occurrences(new Date(2026, 0, 1), new Date(2026, 0, 31), false))).toEqual([]);
+    });
+
     it("is a no-op when applied twice", () => {
         const period = new Period(
             undefined,

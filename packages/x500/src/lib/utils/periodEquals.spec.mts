@@ -42,6 +42,26 @@ function distinctDayPeriods(count: number): Period[] {
 }
 
 describe("periodsEquivalent()", () => {
+    describe.each([0, MATCH_FLAG_CONSTANT_TIME])("weekday versus ordinal semantics (M8), flags %i", (flags) => {
+        it.each<{
+            context: string;
+            months: Period["months"];
+            years: Period["years"];
+        }>([
+            { context: "days of a month", months: { intMonth: [1] }, years: [2026] },
+            { context: "days of a year", months: undefined, years: [2026] },
+        ])("distinguishes named Mondays from ordinal day 2 among $context", ({ months, years }) => {
+            const mondays = new Period(
+                undefined, { bitDay: bits(Period_days_bitDay_monday) }, undefined, months, years,
+            );
+            const ordinalDay2 = new Period(undefined, { intDay: [2] }, undefined, months, years);
+            expect(periodsEquivalent(mondays, ordinalDay2, flags)).toBe(false);
+            expect(periodsEquivalent(ordinalDay2, mondays, flags)).toBe(false);
+            expect(periodsEquivalent(mondays, mondays, flags)).toBe(true);
+            expect(periodSetsEquivalent([mondays], [ordinalDay2], flags)).toBe(false);
+        });
+    });
+
     it("matches bitDay monday against intDay 2", () => {
         expect(periodsEquivalent(
             new Period(undefined, { bitDay: bits(Period_days_bitDay_monday) }),

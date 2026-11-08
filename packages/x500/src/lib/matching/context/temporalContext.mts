@@ -331,6 +331,10 @@ function timeSpecificationContains (
             }
             let matched = false;
             for (const period of spec.time.periodic) {
+                // The iterator skips expired occurrences and stops at adjustedEnd,
+                // so its first result may be a later recurrence enclosed by the
+                // assertion. Test interval intersection, not whether an assertion
+                // endpoint falls inside the occurrence (X.520 clause 10.2).
                 const boundaries: [ Date, Date ] | null = period.occurrences(adjustedStart, adjustedEnd, false).next().value ?? null;
                 if (!boundaries) {
                     continue;

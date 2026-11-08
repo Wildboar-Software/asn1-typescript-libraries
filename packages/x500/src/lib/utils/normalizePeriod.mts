@@ -93,10 +93,11 @@ function sameSet(actual: readonly INTEGER[], expected: readonly number[]): boole
  * @summary Map named bits to 1-based INTEGER values.
  * @description
  *
- * X.520 clause 10.2 NOTE 3: INTEGER and BIT STRING forms are
- * interchangeable. Bit 0 is Sunday / week1 / January; INTEGER 1 is the
- * same named value. Returns `undefined` if a TRUE bit lies outside the
- * named range, so the original BIT STRING can be kept.
+ * Bit 0 is Sunday / week1 / January; the corresponding 1-based value
+ * is 1. For days, callers must check the coarser components: INTEGER
+ * values can denote ordinal dates rather than weekdays (X.520 clause 10.2).
+ * Returns `undefined` if a TRUE bit lies outside the named range, so
+ * the original BIT STRING can be kept.
  *
  * Bits are visited from 0 upward, so the result is already unique and
  * ascending. `integersEqual` in `periodEquals.mts` compares these arrays
@@ -147,7 +148,7 @@ function trimmedBits(bits: BIT_STRING): BIT_STRING {
 }
 
 /**
- * @summary Whether `days` is interpreted as days of the week.
+ * @summary Whether INTEGER `days` are interpreted as days of the week.
  * @description
  *
  * X.520 clause 10.2: `days` is days-of-week if it precedes `weeks`, or
@@ -269,17 +270,22 @@ function normalizeXDayOf(dayOf: XDayOf): XDayOf {
  * @summary Canonicalize `Period.days`.
  * @description
  *
- * Converts `bitDay` to sorted `intDay` when every TRUE bit is a named
- * day. `dayOf` keeps its occurrence tag. Unrecognized CHOICE
- * alternatives are left unchanged.
+ * Converts `bitDay` to sorted `intDay` only when every TRUE bit is a
+ * named day and INTEGER days would still denote weekdays. Otherwise
+ * it preserves the weekday BIT STRING, with trailing zeros removed.
+ * `dayOf` keeps its occurrence tag. Unrecognized CHOICE alternatives
+ * are left unchanged.
  *
  * @param {Period_days | undefined} days The `days` component, if present.
+ * @param {boolean} integerDaysAreWeekdays Whether the following coarser
+ *  components permit conversion without changing weekdays into ordinal dates.
  * @returns {Period_days | undefined} Canonical `days`, or `undefined`.
  * @function
  * @author Cursor Grok 4.6
  */
 function normalizeDays(
     days: Period_days | undefined,
+    integerDaysAreWeekdays: boolean,
 ): Period_days | undefined {
     if (!days) {
         return undefined;
@@ -292,11 +298,11 @@ function normalizeDays(
     }
     if ("bitDay" in days) {
         const ints = bitsToInts(days.bitDay, BIT_DAY_MAX);
-        if (!ints) {
+        if (!ints || !integerDaysAreWeekdays) {
             return { bitDay: trimmedBits(days.bitDay) };
         }
-        // In-range BIT STRING becomes SET OF INTEGER so period equality
-        // sees the same variant on both sides.
+        // Only unify the encodings when INTEGER values also denote weekdays.
+        // With months/years but no weeks, intDay would mean ordinal dates.
         return { intDay: ints };
     }
     return days;
@@ -397,6 +403,12 @@ function collapseCompleteDays(
     months: Period_months | undefined,
     years: INTEGER[] | undefined,
 ): Period_days | undefined {
+    if (days && ("bitDay" in days)) {
+        // All seven named weekdays cover every day of the enclosing unit,
+        // regardless of whether INTEGER days would mean weekdays or ordinals.
+        const ints = bitsToInts(days.bitDay, BIT_DAY_MAX);
+        return ints && sameSet(ints, DAYS_OF_WEEK) ? undefined : days;
+    }
     if (!days || !("intDay" in days)) {
         return days;
     }
@@ -629,10 +641,11 @@ function normalizeTimesOfDay(
  *
  * In particular:
  *
- * - `intDay` / `bitDay`, `intWeek` / `bitWeek`, `intMonth` / `bitMonth`,
+ * - `intDay` / `bitDay` are unified only where INTEGER days denote weekdays.
+ *   With months/years but no weeks, `bitDay` is retained to avoid changing
+ *   weekdays into ordinal dates. `intWeek` / `bitWeek`, `intMonth` / `bitMonth`,
  *   and `intNamedDays` / `bitNamedDays` (when a single named day is set)
- *   are reduced to the INTEGER / ENUMERATED form. Named-bit trailing zeros
- *   are dropped.
+ *   are reduced to INTEGER / ENUMERATED form. Named-bit trailing zeros are dropped.
  * - `SET OF INTEGER` members are sorted and de-duplicated.
  * - A complete set of days, weeks, or months is treated as "all of that
  *   unit", which X.520 says is the meaning of an omitted component (or of
@@ -657,12 +670,12 @@ function normalizeTimesOfDay(
  */
 export
 function normalizePeriod(period: Period): Period {
-    let days = normalizeDays(period.days);
     let weeks = normalizeWeeks(period.weeks);
     let months = normalizeMonths(period.months);
     const years = period.years?.length
         ? uniqueSorted(period.years)
         : period.years;
+    let days = normalizeDays(period.days, daysAreOfWeek(weeks, months, years));
 
     // X.520 10.2: if `dayOf` is specified, `weeks` is ignored.
     if (days && ("dayOf" in days)) {

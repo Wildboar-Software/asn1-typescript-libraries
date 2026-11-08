@@ -21,7 +21,7 @@ import { Period_days_bitDay_monday } from "../../modules/SelectedAttributeTypes/
 import timeSpecificationMatch_, {
     timeSpecificationMatchTyped,
 } from "./timeSpecificationMatch.mjs";
-import { MATCH_FLAG_HIGH_WORK_BUDGET } from "../../types/matching.mjs";
+import { MATCH_FLAG_CONSTANT_TIME, MATCH_FLAG_HIGH_WORK_BUDGET } from "../../types/matching.mjs";
 import { onStoredValue } from "./onStoredValue.spec.mjs";
 
 const timeSpecificationMatch = onStoredValue(timeSpecificationMatch_);
@@ -87,6 +87,23 @@ function assertionWithPeriod(period: Period) {
 }
 
 describe("timeSpecificationMatch() period normalization", () => {
+    describe.each([0, MATCH_FLAG_CONSTANT_TIME])("weekday normalization (M8), flags %i", (flags) => {
+        it.each<{
+            context: string;
+            months: Period["months"];
+        }>([
+            { context: "within a year", months: undefined },
+            { context: "within a selected month", months: { intMonth: [1] } },
+        ])("does not match a Monday assertion against ordinal day 2 $context", ({ months }) => {
+            const mondays = new Period(
+                undefined, { bitDay: bits(Period_days_bitDay_monday) }, undefined, months, [2026],
+            );
+            const ordinalDay2 = new Period(undefined, { intDay: [2] }, undefined, months, [2026]);
+            expect(timeSpecificationMatch(assertionWithPeriod(mondays), acWithPeriod(ordinalDay2), flags)).toBe(false);
+            expect(timeSpecificationMatch(assertionWithPeriod(mondays), acWithPeriod(mondays), flags)).toBe(true);
+        });
+    });
+
     it("matches bitDay monday against intDay 2", () => {
         expect(timeSpecificationMatch(
             assertionWithPeriod(new Period(undefined, { bitDay: bits(Period_days_bitDay_monday) })),
