@@ -1,4 +1,4 @@
-import { TRUE_BIT } from "@wildboar/asn1";
+import { TRUE_BIT, BERElement } from "@wildboar/asn1";
 import { Period } from "../modules/SelectedAttributeTypes/Period.ta.mjs";
 import { DayTimeBand } from "../modules/SelectedAttributeTypes/DayTimeBand.ta.mjs";
 import { DayTime } from "../modules/SelectedAttributeTypes/DayTime.ta.mjs";
@@ -36,7 +36,7 @@ function bits(...indices: number[]): Uint8ClampedArray {
 function distinctDayPeriods(count: number): Period[] {
     const periods: Period[] = [];
     for (let day = 1; day <= count; day++) {
-        periods.push(new Period(undefined, { intDay: [day] }));
+        periods.push(new Period(undefined, { intDay: [day] }, undefined, undefined, [2026]));
     }
     return periods;
 }
@@ -138,72 +138,28 @@ describe("periodSetsEquivalent()", () => {
         )).toBe(false);
     });
 
-    it("stops pairing after 100 inner-loop iterations", () => {
-        // A successful pairing of n distinct members visits n(n+1)/2
-        // indexes. 13 is 91 and finishes; 14 is 105 and stops.
-        const thirteen = distinctDayPeriods(13);
-        const fourteen = distinctDayPeriods(14);
-        expect(periodSetsEquivalent(thirteen, thirteen.slice().reverse())).toBe(true);
-        expect(periodSetsEquivalent(fourteen, fourteen.slice().reverse())).toBe(false);
+    it.each([14, 45, 128])("compares %i valid periods without a work-budget-dependent answer (M28)", (count) => {
+        const asserted = distinctDayPeriods(count);
+        const stored = [...asserted].reverse();
+        const original = [...asserted];
+        for (const flags of [0, MATCH_FLAG_CONSTANT_TIME, MATCH_FLAG_HIGH_WORK_BUDGET,
+            MATCH_FLAG_CONSTANT_TIME | MATCH_FLAG_HIGH_WORK_BUDGET | MATCH_FLAG_DEBUG]) {
+            expect(periodSetsEquivalent(asserted, stored, flags)).toBe(true);
+            expect(periodSetsEquivalent(asserted, [...stored.slice(1), stored[1]], flags)).toBe(false);
+        }
+        expect(asserted).toEqual(original);
     });
 
-    it("allows 1000 pairing iterations when MATCH_FLAG_HIGH_WORK_BUDGET is set", () => {
-        // 44 members is 990 iterations; 45 is 1035.
-        const fortyFour = distinctDayPeriods(44);
-        const fortyFive = distinctDayPeriods(45);
-        expect(periodSetsEquivalent(
-            fortyFour,
-            fortyFour.slice().reverse(),
-            MATCH_FLAG_HIGH_WORK_BUDGET,
-        )).toBe(true);
-        expect(periodSetsEquivalent(
-            fortyFive,
-            fortyFive.slice().reverse(),
-            MATCH_FLAG_HIGH_WORK_BUDGET,
-        )).toBe(false);
-        expect(periodSetsEquivalent(
-            fortyFour,
-            fortyFour.slice().reverse(),
-        )).toBe(false);
-    });
-
-    it("stops a constant-time mismatch that scans past the iteration cap", () => {
-        // 11 distinct mismatches are not rejected by the n(n+1)/2
-        // pre-check (66 <= 100). Constant-time scanning visits all
-        // 121 pairs and stops on the 101st.
-        const asserted = distinctDayPeriods(11);
-        const stored: Period[] = [];
-        for (let day = 21; day <= 31; day++) {
-            stored.push(new Period(undefined, { intDay: [day] }));
-        }
-        const spy = vi.spyOn(console, "error").mockImplementation(() => {});
-        try {
-            expect(periodSetsEquivalent(
-                asserted,
-                stored,
-                MATCH_FLAG_CONSTANT_TIME | MATCH_FLAG_DEBUG,
-            )).toBe(false);
-            expect(spy).toHaveBeenCalledTimes(1);
-            expect(String(spy.mock.calls[0][0])).toContain("100");
-        } finally {
-            spy.mockRestore();
-        }
-    });
-
-    it("logs when pairing exceeds the iteration cap and MATCH_FLAG_DEBUG is set", () => {
-        const spy = vi.spyOn(console, "error").mockImplementation(() => {});
-        try {
-            const fourteen = distinctDayPeriods(14);
-            expect(periodSetsEquivalent(
-                fourteen,
-                fourteen.slice().reverse(),
-                MATCH_FLAG_DEBUG,
-            )).toBe(false);
-            expect(spy).toHaveBeenCalledTimes(1);
-            expect(String(spy.mock.calls[0][0])).toContain("periodSetsEquivalent");
-            expect(String(spy.mock.calls[0][0])).toContain("100");
-        } finally {
-            spy.mockRestore();
-        }
+    it("canonicalizes open string extensions instead of hashing BER fragmentation (M28)", () => {
+        const primitive = new BERElement();
+        primitive.fromBytes(new Uint8Array([0x04, 0x02, 1, 2]));
+        const constructed = new BERElement();
+        constructed.fromBytes(new Uint8Array([0x24, 0x06, 0x04, 0x01, 1, 0x04, 0x01, 2]));
+        const a = new Period(undefined, { intDay: [2] }, undefined, undefined, undefined, [primitive]);
+        const b = new Period(undefined, { intDay: [2] }, undefined, undefined, undefined, [constructed]);
+        expect(periodsEquivalent(a, b)).toBe(true);
+        expect(periodSetsEquivalent([a], [b], MATCH_FLAG_CONSTANT_TIME)).toBe(true);
+        const changed = new Period(undefined, { intDay: [2] }, undefined, undefined, undefined, []);
+        expect(periodSetsEquivalent([a], [changed])).toBe(false);
     });
 });

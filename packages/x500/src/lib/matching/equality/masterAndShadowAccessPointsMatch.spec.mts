@@ -180,8 +180,7 @@ describe("masterAndShadowAccessPointsMatch", () => {
         )).toBe(true);
     });
 
-    it("stops constant-time matching after 1000 pair comparisons", () => {
-        // 31 * 31 = 961 comparisons, within the cap. 32 * 32 = 1024.
+    it("does not change equality at the former constant-time work cap (M28)", () => {
         const withinCap = Array.from(
             { length: 31 },
             (_, i) => name([ cn(`n${i}`) ]),
@@ -201,11 +200,19 @@ describe("masterAndShadowAccessPointsMatch", () => {
             points(overCap),
             undefined,
             MATCH_FLAG_CONSTANT_TIME,
-        )).toBe(false);
+        )).toBe(true);
         expect(masterAndShadowAccessPointsMatchTyped(
             overCap,
             points(overCap),
         )).toBe(true);
+    });
+
+    it("compares larger reordered multisets and preserves duplicate counts (M28)", () => {
+        const titles = Array.from({ length: 256 }, (_, i) => name([cn(`title-${i}`)]));
+        for (const flags of [0, MATCH_FLAG_CONSTANT_TIME]) {
+            expect(masterAndShadowAccessPointsMatchTyped(titles, points([...titles].reverse()), undefined, flags)).toBe(true);
+            expect(masterAndShadowAccessPointsMatchTyped(titles, points([...titles.slice(1), titles[1]]), undefined, flags)).toBe(false);
+        }
     });
 
     it("matches an encoded value and refuses name matching", () => {
