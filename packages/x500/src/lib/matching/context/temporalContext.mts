@@ -195,7 +195,9 @@ function periodsEntirelyCoverInterval (
 /** True if `time` falls in one occurrence of `period` (clause 10.2). */
 function timeFallsWithinPeriod (time: Date, period: Period, timezone: number | undefined): boolean {
     const adjustedTime = inSpecTimeZone(time, timezone);
-    const boundaries: [ Date, Date ] | null = period.occurrences(adjustedTime).next().value ?? null;
+    // A point query needs only its containing occurrence, not a coalesced
+    // recurrence extending into the future.
+    const boundaries: [ Date, Date ] | null = period.occurrences(adjustedTime, adjustedTime, false).next().value ?? null;
     if (!boundaries) {
         return false;
     }
