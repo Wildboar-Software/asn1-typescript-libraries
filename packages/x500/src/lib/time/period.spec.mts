@@ -31,7 +31,8 @@ import { occurrences } from "./period.mjs";
  * `intDay` meaning:
  * - `weeks` present → day of week (Sunday = 1)
  * - else `months` present (including `allMonths`) → day of month
- * - else → day of year
+ * - else `years` present → day of year
+ * - no coarser field present → recurring day of week (Sunday = 1)
  *
  * `bitDay` is always named weekdays (Sunday = 0). `dayOf` ignores `weeks`.
  * Week 1 is the Sunday–Saturday week containing the 4th; week 5 / 53 is
@@ -585,8 +586,9 @@ describe("occurrences", () => {
     // TODO: contiguous timespan tests
 
     describe("optional field combinations (timesOfDay, days, weeks, months, years)", () => {
-        // When weeks is present, intDay is Sunday = 1. Otherwise intDay 15 is
-        // the 15th of the month (if months) or day 15 of the year (if not).
+        // When weeks is present, intDay is Sunday = 1. With no weeks, intDay 15
+        // is the 15th of the month (if months) or day 15 of a specified year.
+        // With no coarser field at all, intDay is a recurring weekday instead.
         const daysDow = { intDay: [ 1 ] };
         const daysDomOrDoy = { intDay: [ 15 ] };
         const weeks1 = { intWeek: [ 1 ] };
@@ -632,12 +634,17 @@ describe("occurrences", () => {
             );
         });
 
-        test("days only (days of the year)", () => {
+        test("days only means every Monday, as in X.520 clause 10.2 (M7)", () => {
             testOccurrences(
-                new Period(undefined, daysDomOrDoy),
+                new Period(undefined, { intDay: [ 2 ] }), // Sunday = 1, Monday = 2.
                 START_2026,
-                START_OF_2028,
-                [ fullDay(2026, 0, 15), fullDay(2027, 0, 15) ],
+                new Date(2026, 0, 31, 23, 59, 59, 999),
+                [
+                    fullDay(2026, 0, 5),
+                    fullDay(2026, 0, 12),
+                    fullDay(2026, 0, 19),
+                    fullDay(2026, 0, 26),
+                ],
             );
         });
 
@@ -707,12 +714,17 @@ describe("occurrences", () => {
             );
         });
 
-        test("timesOfDay + days", () => {
+        test("timesOfDay + days applies the band to every Monday (M7)", () => {
             testOccurrences(
-                new Period(NOON, daysDomOrDoy),
+                new Period(NOON, { intDay: [ 2 ] }),
                 START_2026,
-                START_OF_2028,
-                [ atHours(2026, 0, 15, 12, 13), atHours(2027, 0, 15, 12, 13) ],
+                new Date(2026, 0, 31, 23, 59, 59, 999),
+                [
+                    atHours(2026, 0, 5, 12, 13),
+                    atHours(2026, 0, 12, 12, 13),
+                    atHours(2026, 0, 19, 12, 13),
+                    atHours(2026, 0, 26, 12, 13),
+                ],
             );
         });
 
@@ -776,6 +788,86 @@ describe("occurrences", () => {
                 START_2026,
                 START_OF_2028,
                 [ atHours(2026, 1, 1, 12, 13) ],
+            );
+        });
+    });
+
+    describe("days-only weekday recurrence (M7)", () => {
+        describe.each([true, false])("coalesce = %s", (coalesce) => {
+            test.each([
+                { weekday: "Sunday", intDay: 1, firstJanuaryDate: 4 },
+                { weekday: "Monday", intDay: 2, firstJanuaryDate: 5 },
+                { weekday: "Tuesday", intDay: 3, firstJanuaryDate: 6 },
+                { weekday: "Wednesday", intDay: 4, firstJanuaryDate: 7 },
+                { weekday: "Thursday", intDay: 5, firstJanuaryDate: 8 },
+                { weekday: "Friday", intDay: 6, firstJanuaryDate: 9 },
+                { weekday: "Saturday", intDay: 7, firstJanuaryDate: 10 },
+            ])("intDay $intDay selects $weekday every week", ({ intDay, firstJanuaryDate }) => {
+                const p = new Period(undefined, { intDay: [intDay] });
+                // A complete fortnight, starting Sunday 4 January 2026.
+                expect(Array.from(p.occurrences(
+                    new Date(2026, 0, 4),
+                    new Date(2026, 0, 17, 23, 59, 59, 999),
+                    coalesce,
+                ))).toEqual([
+                    fullDay(2026, 0, firstJanuaryDate),
+                    fullDay(2026, 0, firstJanuaryDate + 7),
+                ]);
+            });
+        });
+
+        test("Monday recurrence continues across a year boundary", () => {
+            testOccurrences(
+                new Period(undefined, { intDay: [2] }),
+                new Date(2026, 11, 27),
+                new Date(2027, 0, 12),
+                [
+                    fullDay(2026, 11, 28),
+                    fullDay(2027, 0, 4),
+                    fullDay(2027, 0, 11),
+                ],
+            );
+        });
+
+        test("Thursday recurrence includes leap day without shifting later weekdays", () => {
+            testOccurrences(
+                new Period(undefined, { intDay: [5] }),
+                new Date(2024, 1, 22),
+                new Date(2024, 2, 8),
+                [
+                    fullDay(2024, 1, 22),
+                    fullDay(2024, 1, 29),
+                    fullDay(2024, 2, 7),
+                ],
+            );
+        });
+
+        test("Sunday recurrence preserves civil days across a DST transition", () => {
+            // 8 March 2026 is a 23-hour day in America/New_York. Advancing by
+            // elapsed 24-hour increments would shift the following calendar days.
+            testOccurrences(
+                new Period(undefined, { intDay: [1] }),
+                new Date(2026, 2, 1),
+                new Date(2026, 2, 16),
+                [
+                    fullDay(2026, 2, 1),
+                    fullDay(2026, 2, 8),
+                    fullDay(2026, 2, 15),
+                ],
+            );
+        });
+
+        test("deduplicates unordered bigint weekdays and skips values outside 1–7", () => {
+            testOccurrences(
+                new Period(undefined, { intDay: [7n, 2n, 2n, 0n, 8n] }),
+                new Date(2026, 0, 4),
+                new Date(2026, 0, 17, 23, 59, 59, 999),
+                [
+                    fullDay(2026, 0, 5), // Monday.
+                    fullDay(2026, 0, 10), // Saturday.
+                    fullDay(2026, 0, 12), // Monday.
+                    fullDay(2026, 0, 17), // Saturday.
+                ],
             );
         });
     });
@@ -1210,8 +1302,14 @@ describe("occurrences", () => {
         });
 
         test("duplicate and out-of-range days of the year are skipped", () => {
+            const dayNumbers = [15, 15];
+            const p = new Period(undefined, { intDay: dayNumbers }, undefined, undefined, [2026]);
+            // Keep the year explicit so these are ordinal days, not weekdays.
+            // Inject invalid values after construction to exercise the iterator's
+            // defensive handling rather than the constructor's range checks.
+            dayNumbers.push(0, 400);
             testOccurrences(
-                new Period(undefined, { intDay: [ 15, 15, 0, 400 ] }),
+                p,
                 START_2026,
                 START_OF_2027,
                 [ fullDay(2026, 0, 15) ],

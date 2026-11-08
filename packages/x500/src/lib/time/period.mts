@@ -175,8 +175,11 @@ function startOfX520Week(p: Period, year: number, month?: number, week?: number)
 }
 
 function *intDays(p: Period, days: number[], year: number, month?: number, week?: number): IterableIterator<Date> {
-    if (p.weeks && week) {
-        // intDays is days of the week.
+    const daysAreCoarsest = !p.weeks && !p.months && !p.years;
+    if ((p.weeks && week) || daysAreCoarsest) {
+        // X.520 clause 10.2: with no following coarser field, intDay denotes
+        // recurring weekdays (its example days intDay:{2} means every Monday).
+        // An explicit weeks component also makes these days of the week.
         let dow = 0;
         for (const d of days) {
             if (d < 1 || d > 7) {
@@ -186,9 +189,13 @@ function *intDays(p: Period, days: number[], year: number, month?: number, week?
             // NOTE: integers are 1-indexed in the standard.
             dow |= (1 << (d - 1));
         }
-        const start = startOfX520Week(p, year, month, week);
-        for (let i = 0; i < 7; i++) {
-            const d = addDays(start, i);
+        const start = daysAreCoarsest
+            ? new Date(year, 0, 1)
+            : startOfX520Week(p, year, month, week);
+        const end = daysAreCoarsest
+            ? new Date(year + 1, 0, 1)
+            : addWeeks(start, 1);
+        for (let d = start; d < end; d = addDays(d, 1)) {
             if (dow & (1 << d.getDay())) {
                 yield d;
             }
@@ -449,7 +456,7 @@ function *occurrencesWithinYear(
         }
         if (p.days) {
             if (!p.weeks) {
-                // Days of the year
+                // Days of the year, or recurring weekdays if days is coarsest.
                 // TODO: Factor out this code: it is duplicated four times!
                 for (const day of days(p, year)) {
                     if (startInstant && endOfDay(day) < startInstant) {
