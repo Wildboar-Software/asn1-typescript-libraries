@@ -64,10 +64,11 @@ export type ExtensionInfo = {
     operations?: Partial<Operations>; // Undefined means "all"
 
     /**
-     * Whether this extension is critical (which makes you wonder why they are
-     * called critical extensions if this can be `false`)
+     * Whether this extension is critical. An operation map is used when
+     * criticality differs by operation; omitted entries are non-critical.
+     * Use `isExtensionCritical` to resolve the value for an operation.
      */
-    critical: boolean;
+    critical: boolean | Partial<Operations>;
 
     /**
      * The corresponding LDAP control `OBJECT IDENTIFIER`, if one is defined.
@@ -144,9 +145,7 @@ const extensions: Record<string, ExtensionInfo> = {
     },
     matchedValuesOnly: {
         identifier: EXT_BIT_MATCHED_VALUES_ONLY,
-        operations: {
-            read: true,
-        },
+        operations: SEARCH,
         critical: NON_CRITICAL,
         ldapControl: ObjectIdentifier.fromParts([ 1, 2, 826, 0, 1, 3344810, 2, 3 ]),
     },
@@ -263,7 +262,7 @@ const extensions: Record<string, ExtensionInfo> = {
             search: true,
             removeEntry: true,
         },
-        critical: CRITICAL, // TODO: Varies per operation
+        critical: { compare: false, search: false, removeEntry: true },
     },
     familyReturn: {
         identifier: EXT_BIT_FAMILY_RETURN,
@@ -312,5 +311,15 @@ const extensions: Record<string, ExtensionInfo> = {
         ldapControl: ObjectIdentifier.fromParts([ 1, 3, 6, 1, 1, 14 ]),
     },
 };
+
+/** Resolve criticality for an applicable operation (X.511 clause 7.3.1). */
+export function isExtensionCritical (extension: ExtensionInfo, operation: keyof Operations): boolean {
+    if (extension.operations && !extension.operations[operation]) {
+        return false;
+    }
+    return typeof extension.critical === "boolean"
+        ? extension.critical
+        : (extension.critical[operation] ?? false);
+}
 
 export default extensions;
