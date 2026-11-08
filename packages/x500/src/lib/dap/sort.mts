@@ -26,6 +26,8 @@ import getValueTuplesFromAttribute from "../utils/getValueTuplesFromAttribute.mj
  *
  * The specification does not mention how to handle attribute subtyping, so this
  * implementation does not use attribute subtyping.
+ * Missing sort values compare greater than present values (X.511 clause 7.9).
+ * If both entries lack a key, comparison continues with the next key.
  *
  * @param {SortKey[]} keys The keys by which to sort the entries.
  * @param {EntryInformation} a The entry that is compared to entry B.
@@ -55,14 +57,13 @@ function sort (
             .filter((attr): attr is Attribute => !!attr)
             .flatMap(getValueTuplesFromAttribute);
     const bvalues: ATVAC[] = onlyRDN
-        ? (b.name.rdnSequence[a.name.rdnSequence.length - 1]
+        ? (b.name.rdnSequence[b.name.rdnSequence.length - 1]
             ?.map((atav): ATVAC => [ atav.type_, atav.value, [] ]) ?? [])
         : (b.information ?? [])
             .map((info) => ("attribute" in info) ? info.attribute : undefined)
             .filter((attr): attr is Attribute => !!attr)
             .flatMap(getValueTuplesFromAttribute);
 
-    // const orderer = getOrderingMatcher()
     for (const key of keys) {
         const orderer = key.orderingRule
             ? getOrderingMatcher(key.orderingRule)
@@ -81,6 +82,17 @@ function sort (
                 key.type_.isEqualTo(tuple[0]) && tuple[1] !== undefined
             ))
             .map(([, value]) => value);
+
+        // Absence is an ordering case, not an ASN.1 value for the matcher.
+        if (relevantAValues.length === 0 && relevantBValues.length === 0) {
+            continue;
+        }
+        if (relevantAValues.length === 0) {
+            return 1;
+        }
+        if (relevantBValues.length === 0) {
+            return -1;
+        }
 
         const lowestAValue: ASN1Element = relevantAValues.sort((a, b) => orderer(a, b))[0];
         const lowestBValue: ASN1Element = relevantBValues.sort((a, b) => orderer(a, b))[0];
