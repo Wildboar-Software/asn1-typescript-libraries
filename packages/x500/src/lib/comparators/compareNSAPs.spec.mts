@@ -12,6 +12,35 @@ function expectBothModes (a: Uint8Array, b: Uint8Array, equal: boolean): void {
 }
 
 describe("compareNSAP()", () => {
+    it.each([
+        {
+            description: "username case",
+            a: "ldap://Alice:Secret@directory.example",
+            b: "ldap://alice:Secret@directory.example",
+            equal: false,
+        },
+        {
+            description: "password case",
+            a: "ldap://Alice:Secret@directory.example",
+            b: "ldap://Alice:secret@directory.example",
+            equal: false,
+        },
+        {
+            description: "both credentials' case",
+            a: "ldap://Alice:Secret@directory.example",
+            b: "ldap://alice:secret@directory.example",
+            equal: false,
+        },
+        {
+            description: "scheme and hostname case, with identical credentials",
+            a: "LDAP://Alice:Secret@DIRECTORY.EXAMPLE",
+            b: "ldap://Alice:Secret@directory.example",
+            equal: true,
+        },
+    ])("handles $description consistently in both timing modes (M21)", ({ a, b, equal }) => {
+        expectBothModes(uriToNSAP(a, false), uriToNSAP(b, false), equal);
+    });
+
     it("compares unrecognized NSAPs byte for byte", () => {
         const a = new Uint8Array([0x01, 0x02, 0x03]);
         const b = new Uint8Array([0x01, 0x02, 0x04]);
@@ -75,5 +104,6 @@ describe("compareNSAP()", () => {
         const ldap = uriToNSAP("ldap://dir.example", false);
         expectBothModes(bad, ldap, false);
         expectBothModes(bad, uriToNSAP("also not", false), false);
+        expectBothModes(bad, bad, false); // An identical invalid URI is still invalid.
     });
 });

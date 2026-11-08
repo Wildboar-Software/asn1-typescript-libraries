@@ -86,10 +86,9 @@ function compareNSAP (
                 if (uriScheme(uria) !== uriScheme(urib)) {
                     return false;
                 }
-                if (uria.toLowerCase() === urib.toLowerCase()) {
-                    return true;
-                }
             }
+            // Only scheme and hostname are case-insensitive. A whole-URI
+            // case-folded shortcut would also case-fold usernames and passwords.
             const ua = URL.parse(uria);
             const ub = URL.parse(urib);
             if (!ua || !ub) {
