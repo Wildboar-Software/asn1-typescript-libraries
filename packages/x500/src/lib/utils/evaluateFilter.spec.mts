@@ -181,3 +181,80 @@ describe("indeterminate filter evaluation (H8)", () => {
         expect(() => evaluateFilter(leaf("extensibleMatch"), family(["value"]), options)).toThrow(CannotPerformExactly);
     });
 });
+
+describe("bounded filter evaluation (M5)", () => {
+    function nested(kind: "and" | "or" | "not", depth: number): Filter {
+        let filter = leaf();
+        for (let i = 0; i < depth; i++) {
+            filter = kind === "not" ? { not: filter }
+                : kind === "and" ? { and: [filter] } : { or: [filter] };
+        }
+        return filter;
+    }
+
+    it.each(["and", "or", "not"] as const)("bounds 10,000 nested %s nodes without overflowing", (kind) => {
+        const entries = family(["true"]);
+        const filter = nested(kind, 10_000);
+        for (const candidate of [filter, { not: filter }, { not: { not: filter } }]) {
+            const result = evaluateFilter(candidate, entries, settings());
+            expect(result.matched).toBeUndefined();
+            expect(result.contributingEntries.size).toBe(0);
+            expect(result.matchedValues ?? []).toEqual([]);
+        }
+    });
+
+    it("evaluates all 128 allowed nodes, but not a 129th node", () => {
+        // 127 AND wrappers plus the equality leaf exactly fill the budget.
+        const entries = family(["true"]);
+        const withinBudget = evaluateFilter(nested("and", 127), entries, settings());
+        expect(withinBudget.matched).toBe(true);
+        expect([...withinBudget.contributingEntries]).toEqual([0]);
+        expect(withinBudget.matchedValues).toHaveLength(1);
+        expect(evaluateFilter(nested("and", 128), entries, settings()).matched).toBeUndefined();
+    });
+
+    it.each(["and", "or", "not"] as const)("honors a lower recursionTTL through %s nodes", (kind) => {
+        const filter = nested(kind, 2); // Two wrappers plus the equality leaf.
+        const entries = family(["true"]);
+        expect(evaluateFilter(filter, entries, settings(), undefined, 2).matched).toBeUndefined();
+        expect(evaluateFilter(filter, entries, settings(), undefined, 3).matched).toBe(true);
+    });
+
+    it.each(["and", "or", "not"] as const)("allows recursionTTL above the default through %s nodes", (kind) => {
+        const filter = nested(kind, 128); // 129 nodes, including the leaf.
+        const entries = family(["true"]);
+        expect(evaluateFilter(filter, entries, settings(), undefined, undefined).matched).toBeUndefined();
+        expect(evaluateFilter(filter, entries, settings(), undefined, 129).matched).toBe(true);
+    });
+
+    it.each([0, -1, NaN, Infinity, -Infinity, 1.5])("returns UNDEFINED for unusable recursionTTL %s", (recursionTTL) => {
+        const entries = family(["true"]);
+        for (const filter of [leaf(), { not: leaf() }, { not: { not: leaf() } }]) {
+            const result = evaluateFilter(filter, entries, settings(), undefined, recursionTTL);
+            expect(result.matched).toBeUndefined();
+            expect(result.contributingEntries.size).toBe(0);
+            expect(result.matchedValues ?? []).toEqual([]);
+        }
+    });
+
+    it("preserves three-valued AND/OR semantics around exhausted branches", () => {
+        const exhausted = nested("not", 10_000);
+        const trueFilter: Filter = { and: [] };
+        const falseFilter: Filter = { or: [] };
+        for (const reversed of [false, true]) {
+            const children = (other: Filter): Filter[] => reversed ? [other, exhausted] : [exhausted, other];
+            expect(evaluateFilter({ and: children(trueFilter) }, [], settings()).matched).toBeUndefined();
+            expect(evaluateFilter({ or: children(falseFilter) }, [], settings()).matched).toBeUndefined();
+            expect(evaluateFilter({ and: children(falseFilter) }, [], settings()).matched).toBe(false);
+            expect(evaluateFilter({ or: children(trueFilter) }, [], settings()).matched).toBe(true);
+            expect(evaluateFilter({ not: { and: children(trueFilter) } }, [], settings()).matched).toBeUndefined();
+            expect(evaluateFilter({ not: { or: children(falseFilter) } }, [], settings()).matched).toBeUndefined();
+        }
+    });
+
+    it("also bounds cyclic decoded filters", () => {
+        const cyclic: { not: Filter } = { not: leaf() };
+        cyclic.not = cyclic;
+        expect(evaluateFilter(cyclic, [], settings()).matched).toBeUndefined();
+    });
+});

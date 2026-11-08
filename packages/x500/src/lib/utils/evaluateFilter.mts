@@ -229,6 +229,9 @@ interface MatchState {
     indeterminate: boolean;
 }
 
+// Default maximum number of filter nodes on one recursive path, including the root.
+const MAX_FILTER_DEPTH = 128;
+
 function handleErrors (matcher: AnyFunction | undefined, state?: MatchState): AnyFunction | undefined {
     if (!matcher) {
         return undefined;
@@ -1173,12 +1176,20 @@ function evaluateFilterItem (
  *
  * NOTE: ITU Recommendation X.511, Section 7.8.2.{b,c,d} does not specify to consider contexts.
  *
+ * Evaluation defaults to a limit of 128 nested filter nodes per branch.
+ * Exhaustion evaluates to UNDEFINED, including under NOT, rather than treating
+ * incomplete evaluation as FALSE. Very large custom limits may exceed the
+ * JavaScript runtime's call stack.
+ *
  * @param {Filter} filter The filter against which the entry is to be evaluated.
  * @param {EntryInformation[]} family The entries of the family that is to be evaluated by the filter.
  * @param {Object} options An options object containing. Despite the name, this
  *  parameter, and most of its properties, are required.
  * @param {Set} contributingEntries The contributing entries. Do not supply this
  *  argument. Just leave this `undefined`.
+ * @param recursionTTL Maximum filter nodes on a recursive path, including the
+ *  root. Defaults to MAX_FILTER_DEPTH (128). Non-positive or non-safe-integer
+ *  budgets evaluate to UNDEFINED.
  * @returns `true` if the entry matches the filter, `false` if it does not, or
  *  `undefined` if it cannot be determined whether the entry matches or not.
  *  An array of matched values may be returned, containing the values that
@@ -1192,7 +1203,25 @@ function evaluateFilter (
     family: EntryInformation[],
     options: EvaluateFilterSettings,
     contributingEntries: Set<number> = new Set(),
+    recursionTTL: number = MAX_FILTER_DEPTH,
 ): EvaluateFilterReturn {
+    if (!Number.isSafeInteger(recursionTTL)) {
+        return { matched: undefined, contributingEntries, matchedValues: [] };
+    }
+    return evaluateFilterAtDepth(filter, family, options, contributingEntries, recursionTTL);
+}
+
+/** Evaluate one node, passing a decreasing depth budget to its children. */
+function evaluateFilterAtDepth (
+    filter: Filter,
+    family: EntryInformation[],
+    options: EvaluateFilterSettings,
+    contributingEntries: Set<number>,
+    remainingDepth: number,
+): EvaluateFilterReturn {
+    if (remainingDepth <= 0) {
+        return { matched: undefined, contributingEntries, matchedValues: [] };
+    }
     let subresult_undefined: boolean = false;
     if ("item" in filter) {
         const familyResults: MatchedEntryInfo[] = [];
@@ -1236,7 +1265,7 @@ function evaluateFilter (
         const newContributingEntries: Set<number> = new Set();
         const matchedValues: MatchedEntryInfo[] = [];
         for (const subfilter of filter.and) {
-            const result = evaluateFilter(subfilter, family, options);
+            const result = evaluateFilterAtDepth(subfilter, family, options, new Set(), remainingDepth - 1);
             if (result.matched === false) {
                 return {
                     matched: false,
@@ -1276,7 +1305,7 @@ function evaluateFilter (
         we can determine if other entries contribute to the match or if other
         values match. */
         for (const subfilter of filter.or) {
-            const result = evaluateFilter(subfilter, family, options);
+            const result = evaluateFilterAtDepth(subfilter, family, options, new Set(), remainingDepth - 1);
             if (result.matched === false) {
                 continue;
             }
@@ -1323,7 +1352,7 @@ function evaluateFilter (
                 contributingEntries,
             };
         }
-        const result = evaluateFilter(filter.not, family, options, contributingEntries);
+        const result = evaluateFilterAtDepth(filter.not, family, options, contributingEntries, remainingDepth - 1);
         if (result.matched === undefined) {
             return {
                 matched: undefined,
