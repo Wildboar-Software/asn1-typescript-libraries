@@ -1,5 +1,5 @@
 import { ASN1Element, type OBJECT_IDENTIFIER, DERElement } from "@wildboar/asn1";
-import type { EntryInformationSelection } from "../modules/DirectoryAbstractService/EntryInformationSelection.ta.mjs";
+import { EntryInformationSelection } from "../modules/DirectoryAbstractService/EntryInformationSelection.ta.mjs";
 import { EntryInformation } from "../modules/DirectoryAbstractService/EntryInformation.ta.mjs";
 import type {
     TypeAndContextAssertion,
@@ -207,6 +207,8 @@ function selectFromEntry (
     getContextMatcher: (contextType: OBJECT_IDENTIFIER) => ContextMatcher | undefined,
     determineAbsentMatch: (contextType: OBJECT_IDENTIFIER) => boolean,
 ): EntryInformation {
+    // Constructed selections may omit ASN.1 DEFAULT fields that the decoder fills.
+    const infoTypes = eis.infoTypes ?? EntryInformationSelection._default_value_for_infoTypes;
     const attributes: Set<string> | undefined = (eis.attributes && ("select" in eis.attributes))
         ? new Set(eis.attributes.select.map((attr) => attr.toString()))
         : undefined;
@@ -408,7 +410,7 @@ function selectFromEntry (
     // TODO: Iterate over protoAttributes.values() in for-of instead.
     const infos: EntryInformation_information_Item[] = Array.from(protoAttributes.values())
         .map((attrs: ATVAC[]): EntryInformation_information_Item | undefined => {
-            if (eis.infoTypes === EntryInformationSelection_infoTypes_attributeTypesOnly) {
+            if (infoTypes === EntryInformationSelection_infoTypes_attributeTypesOnly) {
                 /**
                  * From ITU Recommendation X.511, Section 7.6:
                  *
@@ -446,7 +448,7 @@ function selectFromEntry (
                 return {
                     attributeType: attrs[0][0],
                 };
-            } else if (eis.infoTypes === EntryInformationSelection_infoTypes_attributeTypesAndValues) {
+            } else if (infoTypes === EntryInformationSelection_infoTypes_attributeTypesAndValues) {
                 return {
                     attribute: new Attribute(
                         attrs[0][0],
