@@ -17,7 +17,10 @@ import type {
 export
 function compareCode (a: Code, b: Code): boolean {
     if (("local" in a) && ("local" in b)) {
-        return a.local === b.local;
+        if (typeof a.local === "number" && typeof b.local === "number") {
+            return a.local === b.local;
+        }
+        return BigInt(a.local) === BigInt(b.local);
     } else if (("global" in a) && ("global" in b)) {
         return a.global.isEqualTo(b.global);
     } else {
