@@ -553,16 +553,20 @@ function *occurrencesInfinitely(p: Period, startInstant: Date, lastYear: number 
 
 export
 function *occurrences(p: Period, startInstant: Date, endInstant: Date = MAX_GENERALIZED_TIME, coalesce: boolean = true): IterableIterator<[Date, Date]> {
+    if (coalesce) {
+        // Bound the raw stream before joining adjacent spans. Otherwise a
+        // continuous recurrence is consumed through year 9999 before yielding.
+        yield *contiguator(occurrences(p, startInstant, endInstant, false));
+        return;
+    }
     // Include the following year because its first X.520 week may start in
     // December. Bound even empty streams, which otherwise search through 9999.
-    const spans = occurrencesInfinitely(p, startInstant, coalesce
-        ? 9999
-        : Math.min(9999, endInstant.getFullYear() + 1));
-    for (const occur of (coalesce ? contiguator(spans) : spans)) {
+    const spans = occurrencesInfinitely(p, startInstant, Math.min(9999, endInstant.getFullYear() + 1));
+    for (const occur of spans) {
         if (occur[0] > endInstant) {
             break;
         }
-        if (!coalesce && occur[1] < startInstant) {
+        if (occur[1] < startInstant) {
             continue;
         }
         yield occur;

@@ -143,6 +143,49 @@ describe("occurrences", () => {
         expect(spans.next().done).toBe(true);
     });
 
+    test("coalescing bounds a continuous recurrence before consuming it (M9)", () => {
+        const band = new DayTimeBand(); // Every second of every day.
+        let reads = 0;
+        Object.defineProperty(band, "endDayTime", {
+            get: () => {
+                // Deterministic work guard: fail before an unbounded merge
+                // traverses millions of days, without a wall-clock assertion.
+                if (++reads > 10) {
+                    throw new Error("coalescing read beyond the bounded recurrence");
+                }
+                return undefined;
+            },
+        });
+        expect(Array.from(new Period([band]).occurrences(
+            new Date(2026, 0, 1, 12), new Date(2026, 0, 2, 12),
+        ))).toEqual([[
+            // Do not clip the first/last intersecting occurrence to the query.
+            START_2026, new Date(2026, 0, 2, 23, 59, 59),
+        ]]);
+    });
+
+    test("coalescing bounds even an empty recurrence stream by year (M9)", () => {
+        const p = new Period();
+        let reads = 0;
+        Object.defineProperty(p, "months", {
+            get: () => {
+                // No month can yield a span, so a span-level end check alone
+                // would still search every future year through 9999.
+                if (++reads > 32) {
+                    throw new Error("empty recurrence searched unbounded years");
+                }
+                return { intMonth: [] };
+            },
+        });
+        expect(Array.from(p.occurrences(START_2026, new Date(2026, 0, 2)))).toEqual([]);
+    });
+
+    test("coalescing excludes occurrences ending before the requested start (M9)", () => {
+        const p = new Period(undefined, undefined, undefined, { allMonths: null });
+        expect(Array.from(p.occurrences(new Date(2026, 5, 15), new Date(2026, 5, 16))))
+            .toEqual([fullSpan(2026, 5, 1, 2026, 5, 30)]);
+    });
+
     test("uncoalesced occurrences exclude spans ending before the start", () => {
         const spans = new Period(undefined, undefined, undefined, { allMonths: null })
             .occurrences(new Date(2026, 5, 15), new Date(2026, 5, 16), false);
