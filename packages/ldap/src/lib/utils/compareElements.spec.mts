@@ -1,11 +1,17 @@
 import {
-    BERElement,
-    ASN1TagClass,
     ASN1Construction,
+    ASN1TagClass,
     ASN1UniversalType,
+    BERElement,
     ObjectIdentifier,
 } from "@wildboar/asn1";
 import compareElements from "./compareElements.mjs";
+
+function element (bytes: number[]): BERElement {
+    const el = new BERElement();
+    el.fromBytes(new Uint8Array(bytes));
+    return el;
+}
 
 function primitiveUtf8 (str: string): BERElement {
     return new BERElement(
@@ -14,20 +20,6 @@ function primitiveUtf8 (str: string): BERElement {
         ASN1UniversalType.utf8String,
         str,
     );
-}
-
-function constructedUtf8 (parts: string[]): BERElement {
-    const el = new BERElement();
-    el.tagClass = ASN1TagClass.universal;
-    el.tagNumber = ASN1UniversalType.utf8String;
-    // X.690 constructed character strings concatenate OCTET STRING fragments.
-    el.sequence = parts.map((part) => new BERElement(
-        ASN1TagClass.universal,
-        ASN1Construction.primitive,
-        ASN1UniversalType.octetString,
-        Buffer.from(part),
-    ));
-    return el;
 }
 
 function integerElement (value: Uint8Array): BERElement {
@@ -53,92 +45,85 @@ function constructedBitString (fragments: number[][]): BERElement {
     return el;
 }
 
-function octetStringElement (bytes: Uint8Array): BERElement {
-    const el = new BERElement();
-    el.octetString = bytes;
-    el.tagNumber = ASN1UniversalType.octetString;
-    return el;
-}
-
-function constructedOctetString (parts: Uint8Array[]): BERElement {
-    const el = new BERElement();
-    el.sequence = parts.map((part) => octetStringElement(part));
-    el.tagNumber = ASN1UniversalType.octetString;
-    return el;
-}
-
-function generalizedTimeFromText (text: string): BERElement {
-    const el = new BERElement();
-    el.tagClass = ASN1TagClass.universal;
-    el.construction = ASN1Construction.primitive;
-    el.tagNumber = ASN1UniversalType.generalizedTime;
-    el.value = Buffer.from(text);
-    return el;
-}
-
-function utcTimeFromText (text: string): BERElement {
-    const el = new BERElement();
-    el.tagClass = ASN1TagClass.universal;
-    el.construction = ASN1Construction.primitive;
-    el.tagNumber = ASN1UniversalType.utcTime;
-    el.value = Buffer.from(text);
-    return el;
-}
-
 describe("compareElements", () => {
-    it("matches two primitive encodings of the same string", () => {
+    it.each([
+        {
+            description: "fragmented OCTET STRING",
+            primitive: [0x04, 0x03, 1, 2, 3],
+            // Two OCTET STRING fragments: [1] and [2, 3]. Their TLV headers
+            // make the constructed content longer than the primitive content.
+            constructed: [0x24, 0x07, 0x04, 0x01, 1, 0x04, 0x02, 2, 3],
+        },
+        {
+            description: "nested constructed OCTET STRING",
+            primitive: [0x04, 0x03, 1, 2, 3],
+            constructed: [0x24, 0x09, 0x04, 0x01, 1, 0x24, 0x04, 0x04, 0x02, 2, 3],
+        },
+        {
+            description: "empty OCTET STRING",
+            primitive: [0x04, 0x00],
+            constructed: [0x24, 0x00],
+        },
+        {
+            description: "UTF8String with the codec's OCTET STRING fragments",
+            primitive: [0x0c, 0x02, 0x68, 0x69], // "hi"
+            constructed: [0x2c, 0x04, 0x04, 0x02, 0x68, 0x69],
+        },
+    ])("compares normalized contents of a $description", ({ primitive, constructed }) => {
+        const a = element(primitive);
+        const b = element(constructed);
+        expect(compareElements(a, b)).toBe(true);
+        expect(compareElements(b, a)).toBe(true);
+    });
+
+    it.each([
+        {
+            description: "different deconstructed contents",
+            a: [0x04, 0x03, 1, 2, 4],
+            b: [0x24, 0x07, 0x04, 0x01, 1, 0x04, 0x02, 2, 3],
+        },
+        { description: "different primitive lengths", a: [0x04, 0x01, 1], b: [0x04, 0x02, 1, 2] },
+        { description: "different universal tags", a: [0x04, 0x01, 1], b: [0x0c, 0x01, 1] },
+        { description: "different tag classes", a: [0x04, 0x01, 1], b: [0x84, 0x01, 1] },
+        {
+            description: "mixed construction of an unknown context-specific type",
+            a: [0x80, 0x01, 1],
+            b: [0xa0, 0x03, 0x04, 0x01, 1],
+        },
+        {
+            description: "a non-string type that cannot be deconstructed",
+            a: [0x02, 0x01, 1],
+            b: [0x22, 0x03, 0x02, 0x01, 1],
+        },
+        {
+            description: "constructed OCTET STRINGs that differ only by fragmentation",
+            a: [0x24, 0x07, 0x04, 0x01, 1, 0x04, 0x02, 2, 3],
+            b: [0x24, 0x07, 0x04, 0x02, 1, 2, 0x04, 0x01, 3],
+        },
+    ])("still rejects $description", ({ a, b }) => {
+        expect(compareElements(element(a), element(b))).toBe(false);
+        expect(compareElements(element(b), element(a))).toBe(false);
+    });
+
+    it("preserves exact comparisons when both constructions are the same", () => {
+        expect(compareElements(element([0x04, 0x02, 1, 2]), element([0x04, 0x02, 1, 2]))).toBe(true);
+        const constructed = [0x24, 0x04, 0x04, 0x02, 1, 2];
+        expect(compareElements(element(constructed), element(constructed))).toBe(true);
+    });
+
+    it("does not case-fold, trim, or otherwise prepare strings", () => {
         expect(compareElements(primitiveUtf8("Hello"), primitiveUtf8("Hello"))).toBe(true);
+        expect(compareElements(primitiveUtf8("Hello"), primitiveUtf8("hello"))).toBe(false);
+        expect(compareElements(primitiveUtf8("Hello"), primitiveUtf8(" Hello"))).toBe(false);
         expect(compareElements(primitiveUtf8("Hello"), primitiveUtf8("Helo"))).toBe(false);
     });
 
-    it("matches a primitive string to a constructed encoding of the same value", () => {
-        expect(compareElements(
-            primitiveUtf8("Hello"),
-            constructedUtf8([ "Hel", "lo" ]),
-        )).toBe(true);
-        expect(compareElements(
-            constructedUtf8([ "Hel", "lo" ]),
-            primitiveUtf8("Hello"),
-        )).toBe(true);
-    });
-
-    it("matches constructed strings that use different substring partitions", () => {
-        expect(compareElements(
-            constructedUtf8([ "Hel", "lo" ]),
-            constructedUtf8([ "H", "ello" ]),
-        )).toBe(true);
-        expect(compareElements(
-            constructedUtf8([ "He", "l", "lo" ]),
-            constructedUtf8([ "Hello" ]),
-        )).toBe(true);
-    });
-
-    it("does not match constructed strings with different contents", () => {
-        expect(compareElements(
-            constructedUtf8([ "Hel", "lo" ]),
-            constructedUtf8([ "Hel", "p" ]),
-        )).toBe(false);
-    });
-
-    it("approximates caseIgnoreMatch by trimming and case-folding strings", () => {
-        expect(compareElements(primitiveUtf8("Hello"), primitiveUtf8("hello"))).toBe(true);
-        expect(compareElements(primitiveUtf8("  Hello  "), primitiveUtf8("hello"))).toBe(true);
-        expect(compareElements(
-            primitiveUtf8("Hello   World"),
-            primitiveUtf8("hello world"),
-        )).toBe(true);
-        expect(compareElements(
-            constructedUtf8([ "Hel", "lo" ]),
-            primitiveUtf8("HELLO"),
-        )).toBe(true);
-        expect(compareElements(primitiveUtf8("Hello"), primitiveUtf8("Help"))).toBe(false);
-    });
-
-    it("does not case-fold octet strings", () => {
-        const a = octetStringElement(Buffer.from("Hello"));
-        const b = octetStringElement(Buffer.from("hello"));
-        expect(compareElements(a, b)).toBe(false);
-        expect(compareElements(a, a)).toBe(true);
+    it("does not treat UTCTime and GeneralizedTime as the same type", () => {
+        const utc = element([0x17, 0x0d, ...Buffer.from("240115123045Z")]);
+        const gen = element([0x18, 0x0f, ...Buffer.from("20240115123045Z")]);
+        expect(compareElements(utc, gen)).toBe(false);
+        expect(compareElements(gen, utc)).toBe(false);
+        expect(compareElements(gen, element([0x18, 0x0f, ...Buffer.from("20240115123045Z")]))).toBe(true);
     });
 
     it("compares INTEGER, OID, and NULL by contents octets", () => {
@@ -173,73 +158,17 @@ describe("compareElements", () => {
         expect(compareElements(nullA, integerElement(new Uint8Array([ 0x05 ])))).toBe(false);
     });
 
-    it("compares BIT STRING values bit-by-bit after deconstruction", () => {
+    it("does not deconstruct BIT STRING", () => {
         const primitive = bitStringElement([ 1, 0, 1, 1, 0, 1, 1, 1, 1, 0 ]);
         const constructed = constructedBitString([
             [ 1, 0, 1, 1, 0, 1, 1, 1 ],
             [ 1, 0 ],
         ]);
-        expect(compareElements(primitive, constructed)).toBe(true);
+        expect(compareElements(primitive, constructed)).toBe(false);
+        expect(compareElements(primitive, primitive)).toBe(true);
         expect(compareElements(
             bitStringElement([ 1, 0, 1 ]),
             bitStringElement([ 1, 0, 0 ]),
         )).toBe(false);
-        expect(compareElements(
-            bitStringElement([ 1, 0, 1 ]),
-            bitStringElement([ 1, 0, 1, 0 ]),
-        )).toBe(false);
-    });
-
-    it("compares OCTET STRING values byte-for-byte after deconstruction", () => {
-        const primitive = octetStringElement(Buffer.from("Hello"));
-        const constructed = constructedOctetString([
-            Buffer.from("Hel"),
-            Buffer.from("lo"),
-        ]);
-        expect(compareElements(primitive, constructed)).toBe(true);
-        expect(compareElements(
-            constructedOctetString([ Buffer.from("He"), Buffer.from("llo") ]),
-            constructedOctetString([ Buffer.from("H"), Buffer.from("ello") ]),
-        )).toBe(true);
-        expect(compareElements(
-            octetStringElement(Buffer.from("Hello")),
-            octetStringElement(Buffer.from("Help")),
-        )).toBe(false);
-    });
-
-    it("compares UTCTime and GeneralizedTime to the second, including mixed types", () => {
-        const utc = utcTimeFromText("240115123045Z");
-        const gen = generalizedTimeFromText("20240115123045Z");
-        const genFrac = generalizedTimeFromText("20240115123045.999Z");
-        const nextSecond = generalizedTimeFromText("20240115123046Z");
-        expect(compareElements(utc, gen)).toBe(true);
-        expect(compareElements(gen, utc)).toBe(true);
-        expect(compareElements(gen, genFrac)).toBe(true);
-        expect(compareElements(utc, genFrac)).toBe(true);
-        expect(compareElements(gen, nextSecond)).toBe(false);
-        expect(compareElements(utc, nextSecond)).toBe(false);
-    });
-
-    it("trims and lowercases OID-IRI and RELATIVE-OID-IRI", () => {
-        const oidA = new BERElement();
-        oidA.oidIRI = "/ISO/Example";
-        oidA.tagNumber = ASN1UniversalType.oidIRI;
-        const oidB = new BERElement();
-        oidB.oidIRI = "  /iso/example  ";
-        oidB.tagNumber = ASN1UniversalType.oidIRI;
-        const oidC = new BERElement();
-        oidC.oidIRI = "/ISO/Other";
-        oidC.tagNumber = ASN1UniversalType.oidIRI;
-        expect(compareElements(oidA, oidB)).toBe(true);
-        expect(compareElements(oidA, oidC)).toBe(false);
-
-        const relA = new BERElement();
-        relA.relativeOIDIRI = "Example";
-        relA.tagNumber = ASN1UniversalType.roidIRI;
-        const relB = new BERElement();
-        relB.relativeOIDIRI = "  example  ";
-        relB.tagNumber = ASN1UniversalType.roidIRI;
-        expect(compareElements(relA, relB)).toBe(true);
-        expect(compareElements(oidA, relA)).toBe(false);
     });
 });

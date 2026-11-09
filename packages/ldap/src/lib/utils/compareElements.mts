@@ -1,138 +1,38 @@
-import {
-    ASN1Element,
-    ASN1TagClass,
-    ASN1UniversalType,
-} from "@wildboar/asn1";
-import type { BIT_STRING } from "@wildboar/asn1";
-import compareUint8Arrays from "./compareUint8Arrays.mjs";
+import { ASN1Element, ASN1Construction, ASN1TagClass, ASN1UniversalType } from "@wildboar/asn1";
+import { Buffer } from "node:buffer";
 
-/**
- * UNIVERSAL types compared by contents octets, with no decoding.
- */
-const byteComparedTypes: Set<number> = new Set([
-    ASN1UniversalType.objectIdentifier,
-    ASN1UniversalType.relativeOID,
-    ASN1UniversalType.enumerated,
-    ASN1UniversalType.date,
-    ASN1UniversalType.timeOfDay,
-    ASN1UniversalType.external,
-    ASN1UniversalType.embeddedPDV,
-    ASN1UniversalType.integer,
-    ASN1UniversalType.characterString,
-    ASN1UniversalType.set,
-    ASN1UniversalType.sequence,
-    ASN1UniversalType.realNumber,
-    ASN1UniversalType.nill,
-    ASN1UniversalType.duration,
+const deconstructableTypes: Set<ASN1UniversalType> = new Set([
+    // ASN1UniversalType.bitString,
+    ASN1UniversalType.octetString,
+    ASN1UniversalType.objectDescriptor,
+    ASN1UniversalType.utf8String,
+    ASN1UniversalType.numericString,
+    ASN1UniversalType.printableString,
+    ASN1UniversalType.teletexString,
+    ASN1UniversalType.videotexString,
+    ASN1UniversalType.ia5String,
+    ASN1UniversalType.utcTime,
+    ASN1UniversalType.generalizedTime,
+    ASN1UniversalType.graphicString,
+    ASN1UniversalType.visibleString,
+    ASN1UniversalType.generalString,
+    ASN1UniversalType.universalString,
+    ASN1UniversalType.bmpString,
 ]);
-
-function isTimeType (tagNumber: number): boolean {
-    return (
-        (tagNumber === ASN1UniversalType.utcTime)
-        || (tagNumber === ASN1UniversalType.generalizedTime)
-    );
-}
-
-function isIriType (tagNumber: number): boolean {
-    return (
-        (tagNumber === ASN1UniversalType.oidIRI)
-        || (tagNumber === ASN1UniversalType.roidIRI)
-    );
-}
-
-function readTime (el: ASN1Element): Date {
-    return (el.tagNumber === ASN1UniversalType.utcTime)
-        ? el.utcTime
-        : el.generalizedTime;
-}
-
-function readIri (el: ASN1Element): string {
-    return (el.tagNumber === ASN1UniversalType.oidIRI)
-        ? el.oidIRI
-        : el.relativeOIDIRI;
-}
-
-/**
- * Compare two decoded `BIT STRING` values bit-by-bit. `BIT STRING` is a
- * `Uint8ClampedArray` of 0/1 elements, one per bit, after deconstruction.
- */
-function compareBits (a: BIT_STRING, b: BIT_STRING): boolean {
-    if (a.length !== b.length) {
-        return false;
-    }
-    for (let i: number = 0; i < a.length; i++) {
-        if (a[i] !== b[i]) {
-            return false;
-        }
-    }
-    return true;
-}
-
-function timesEqualToTheSecond (a: Date, b: Date): boolean {
-    const ta: number = a.getTime();
-    const tb: number = b.getTime();
-    if (Number.isNaN(ta) || Number.isNaN(tb)) {
-        return false;
-    }
-    return (Math.floor(ta / 1000) === Math.floor(tb / 1000));
-}
-
-// Copied from `@wildboar/x500` `prepString` (X.520 §7).
-const mappedToNothing: RegExp = /[\u00AD\u1806\u034F\u180B-\u180D\uFE0F-\uFF00\uFFFC\u200B\p{Cc}]+/ug;
-const prohibitedCharacters: RegExp = /[\uD800-\uDFFF\uFFFD]+/;
-
-/**
- * Prepare a string for case-ignore matching, following X.520 §7 as in
- * `prepString`, then lowercase as `caseIgnoreMatch` does.
- */
-function prepCaseIgnore (str: string): string | undefined {
-    if (prohibitedCharacters.test(str)) {
-        return undefined;
-    }
-    return str
-        .trim()
-        .replace(mappedToNothing, "")
-        .replace(/\s+/g, " ")
-        .normalize("NFKC")
-        .toLowerCase();
-}
-
-function comparePreparedStrings (a: ASN1Element, b: ASN1Element): boolean {
-    const jsonA: unknown = a.toJSON();
-    const jsonB: unknown = b.toJSON();
-    if ((typeof jsonA !== "string") || (typeof jsonB !== "string")) {
-        return (jsonA === jsonB);
-    }
-    const preparedA: string | undefined = prepCaseIgnore(jsonA);
-    const preparedB: string | undefined = prepCaseIgnore(jsonB);
-    if ((preparedA === undefined) || (preparedB === undefined)) {
-        return false;
-    }
-    return (preparedA === preparedB);
-}
 
 /**
  * @summary Compare two ASN.1 elements
  * @description
  *
- * Used as the LDAP filter fallback when no matching rule is registered.
+ * Fallback equality for an LDAP filter when no matching rule is registered.
+ * The same comparison as `compareElements` in `@wildboar/x500` and
+ * `@wildboar/gn`.
  *
- * UNIVERSAL `OBJECT IDENTIFIER`, `RELATIVE-OID`, `ENUMERATED`, `DATE`,
- * `TIME-OF-DAY`, `EXTERNAL`, `EMBEDDED PDV`, `INTEGER`, `CHARACTER STRING`,
- * `SET`, `SEQUENCE`, `REAL`, `NULL`, and `DURATION` are compared by contents
- * octets.
+ * Tags must match. Two values of the same construction are equal when their
+ * content octets are equal. A primitive value and a constructed value match
+ * only for universal string, octet, and time types, and only after the
+ * constructed value is deconstructed. `BIT STRING` is not deconstructed.
  *
- * `BIT STRING` values are decoded (deconstructing constructed encodings) and
- * compared bit-by-bit. `OCTET STRING` values are decoded and compared
- * byte-for-byte. `UTCTime` and `GeneralizedTime` (which may be mixed) are
- * converted to `Date` and compared to one-second precision. `OID-IRI` and
- * `RELATIVE-OID-IRI` are trimmed and case-folded. Remaining UNIVERSAL types
- * are treated as strings: `toJSON()`, then X.520 stringprep and lowercasing.
- *
- * Non-UNIVERSAL tags of the same class and number are compared by contents
- * octets.
- *
- * @author Cursor Grok 4.6
  * @param a One value
  * @param b The other
  * @returns {boolean} `true` if they match; `false` otherwise
@@ -141,57 +41,44 @@ function comparePreparedStrings (a: ASN1Element, b: ASN1Element): boolean {
 export
 function compareElements (a: ASN1Element, b: ASN1Element): boolean {
     if (
-        (a.tagClass !== ASN1TagClass.universal)
-        || (b.tagClass !== ASN1TagClass.universal)
-    ) {
-        return (
-            (a.tagClass === b.tagClass)
-            && (a.tagNumber === b.tagNumber)
-            && compareUint8Arrays(a.value, b.value)
-        );
-    }
-    const ta: number = a.tagNumber;
-    const tb: number = b.tagNumber;
-    if (byteComparedTypes.has(ta) && (ta === tb)) {
-        return compareUint8Arrays(a.value, b.value);
-    }
-    if (
-        (ta === ASN1UniversalType.bitString)
-        && (tb === ASN1UniversalType.bitString)
-    ) {
-        return compareBits(a.bitString, b.bitString);
-    }
-    if (
-        (ta === ASN1UniversalType.octetString)
-        && (tb === ASN1UniversalType.octetString)
-    ) {
-        return compareUint8Arrays(a.octetString, b.octetString);
-    }
-    if (isTimeType(ta) && isTimeType(tb)) {
-        return timesEqualToTheSecond(readTime(a), readTime(b));
-    }
-    if (isIriType(ta) && (ta === tb)) {
-        return (
-            readIri(a).trim().toLowerCase()
-            === readIri(b).trim().toLowerCase()
-        );
-    }
-    if (byteComparedTypes.has(ta) || byteComparedTypes.has(tb)) {
-        return false;
-    }
-    if (
-        (ta === ASN1UniversalType.bitString)
-        || (tb === ASN1UniversalType.bitString)
-        || (ta === ASN1UniversalType.octetString)
-        || (tb === ASN1UniversalType.octetString)
-        || isTimeType(ta)
-        || isTimeType(tb)
-        || isIriType(ta)
-        || isIriType(tb)
+        (a.tagClass !== b.tagClass)
+        || (a.tagNumber !== b.tagNumber)
     ) {
         return false;
     }
-    return comparePreparedStrings(a, b);
+    if (
+        (a.construction === ASN1Construction.primitive)
+        && (b.construction === ASN1Construction.primitive)
+    ) {
+        return (Buffer.compare(a.value, b.value) === 0);
+    }
+    else if (
+        (a.construction === ASN1Construction.constructed)
+        && (b.construction === ASN1Construction.constructed)
+    ) {
+        return (Buffer.compare(a.value, b.value) === 0);
+    }
+    else { // If one is constructed and the other is not, and...
+        // The elements are not of tag class UNIVERSAL...
+        if (a.tagClass !== ASN1TagClass.universal) {
+            // We have no understood way of comparing them.
+            return false;
+        }
+        // If we cannot deconstruct a constructed value of this type, we cannot
+        // compare them.
+        if (!deconstructableTypes.has(a.tagNumber)) {
+            return false;
+        }
+        // Constructed content includes fragment TLV headers. Compare lengths
+        // and bytes only after deconstruction, not against those encoded octets.
+        const primitiveAValue = (a.construction === ASN1Construction.constructed)
+            ? a.deconstruct("?")
+            : a.value;
+        const primitiveBValue = (b.construction === ASN1Construction.constructed)
+            ? b.deconstruct("?")
+            : b.value;
+        return !Buffer.compare(primitiveAValue, primitiveBValue);
+    }
 }
 
 export default compareElements;

@@ -62,7 +62,9 @@ and host are case-insensitive and the rest is exact, so a `mailto:` URI (which
 has no host) only ignores case in the scheme. An `iPAddress` is compared as
 bytes, including the 8- and 32-octet range form. Without an equality matcher
 for directory names, `compareGeneralName(a, b)` is the same answer as
-`generalNameToKey(a) === generalNameToKey(b)`. An X.400 address is the
+`generalNameToKey(a) === generalNameToKey(b)`, except for two constructed
+encodings of the same string, octet, or time value that use different
+fragments. Those share a key and compare unequal. An X.400 address is the
 documented exception to the cheap comparison: both values are DER-encoded and
 then compared, because `@wildboar/or-address` has no field-by-field equality.
 

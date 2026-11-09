@@ -36,9 +36,11 @@ import { dnsEqual, rfc822Equal, uriEqual } from "./stringMatch.mjs";
  * enough that this is cheaper than reimplementing O/R address equality here.
  *
  * With no `getMatcher`, the result agrees with
- * `generalNameToKey(a) === generalNameToKey(b)`. `getMatcher` is only used
- * for distinguished values inside a `directoryName`, and supplying one can
- * make two names compare equal even when their keys differ.
+ * `generalNameToKey(a) === generalNameToKey(b)`, except for two constructed
+ * encodings of the same string, octet, or time value that use different
+ * fragments. Those share a key and compare unequal. `getMatcher` is only used for
+ * distinguished values inside a `directoryName`, and supplying one can make
+ * two names compare equal even when their keys differ.
  *
  * @param a One general name
  * @param b The other general name

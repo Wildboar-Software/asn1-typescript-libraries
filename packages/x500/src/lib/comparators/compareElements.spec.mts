@@ -57,6 +57,11 @@ describe("compareElements (M19)", () => {
             a: [0x02, 0x01, 1],
             b: [0x22, 0x03, 0x02, 0x01, 1],
         },
+        {
+            description: "constructed OCTET STRINGs that differ only by fragmentation",
+            a: [0x24, 0x07, 0x04, 0x01, 1, 0x04, 0x02, 2, 3],
+            b: [0x24, 0x07, 0x04, 0x02, 1, 2, 0x04, 0x01, 3],
+        },
     ])("still rejects $description", ({ a, b }) => {
         expect(compareElements(element(a), element(b))).toBe(false);
         expect(compareElements(element(b), element(a))).toBe(false);

@@ -14,8 +14,10 @@ import { dnsKey, rfc822Key, uriKey } from "./stringMatch.mjs";
  * For a `Map` or a `Set`. Building the string allocates, and that is
  * expected: this is the many-to-many path. The key is the CHOICE alternative,
  * a colon, and a value normalized the same way {@link compareGeneralName}
- * compares that alternative, so two names compare equal (with no equality
- * matcher) exactly when their keys are equal.
+ * compares that alternative. With no equality matcher, two names compare
+ * equal exactly when their keys are equal, except for two constructed
+ * encodings of the same string, octet, or time value that use different
+ * fragments. Those share a key and compare unequal.
  *
  * `rfc822Name` keeps the local-part as written and lowercases only `A`-`Z` in
  * the domain. `dNSName` lowercases `A`-`Z`. A URI lowercases `A`-`Z` in the

@@ -22,6 +22,15 @@ const deconstructableTypes: Set<ASN1UniversalType> = new Set([
 
 /**
  * @summary Compare two ASN.1 elements
+ * @description
+ *
+ * The same comparison as `compareElements` in `@wildboar/gn` and
+ * `@wildboar/ldap`. Tags must match. Two values of the same construction are
+ * equal when their content octets are equal. A primitive value and a
+ * constructed value match only for universal string, octet, and time types,
+ * and only after the constructed value is deconstructed. `BIT STRING` is not
+ * deconstructed.
+ *
  * @param a One value
  * @param b The other
  * @returns {boolean} `true` if they match; `false` otherwise
