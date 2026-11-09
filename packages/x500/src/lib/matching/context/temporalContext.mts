@@ -255,10 +255,119 @@ function timeFallsWithinTimeSpecification (
 }
 
 /**
- * `between` evaluation: overlap, or containment when `entirely` is
- * TRUE. Periodic `entirely` is a subset of the union of all `Period`
- * occurrences, not of a single occurrence. Complementing the stored set
- * exchanges overlap and containment before negating the result (clause 10.2).
+ * @summary Whether `[start, end]` overlaps or is covered by the stored times.
+ * @description
+ *
+ * X.520 clause 10.2 `between`, before `notThisTime` is applied.
+ * `requireEntireCoverage` selects containment in the stored times;
+ * otherwise the band only has to overlap them. For `periodic`,
+ * containment is against the union of all `Period` occurrences.
+ *
+ * `undefined` means the relation cannot be decided: the absolute span
+ * is not a finite interval, or periodic containment exhausted its work
+ * budget. Callers must not treat that as a match under negation.
+ *
+ * @param {TimeSpecification} spec Stored temporal context.
+ *  `notThisTime` is ignored.
+ * @param {Date} start Inclusive start of the asserted band.
+ * @param {Date} end Inclusive end of the asserted band.
+ * @param {boolean} requireEntireCoverage Containment when true, overlap
+ *  when false.
+ * @param {number} flags `MATCH_FLAG_CONSTANT_TIME`, `MATCH_FLAG_DEBUG`,
+ *  and `MATCH_FLAG_HIGH_WORK_BUDGET`.
+ * @returns The relation, or `undefined` when it cannot be decided.
+ * @function
+ */
+function intervalMatchesStoredTimes (
+    spec: TimeSpecification,
+    start: Date,
+    end: Date,
+    requireEntireCoverage: boolean,
+    flags: number,
+): boolean | undefined {
+    const constantTime = Boolean(flags & MATCH_FLAG_CONSTANT_TIME);
+    const timezone: number | undefined = (spec.timeZone !== undefined)
+        ? Number(spec.timeZone)
+        : undefined;
+    if ("absolute" in spec.time) {
+        const startSpec = spec.time.absolute.startTime
+            ? addHours(spec.time.absolute.startTime, -(timezone ?? 0))
+            : MIN_DATE;
+        const endSpec = spec.time.absolute.endTime
+            ? addHours(spec.time.absolute.endTime, -(timezone ?? 0))
+            : MAX_DATE;
+        if (!Number.isFinite(startSpec.valueOf()) || !Number.isFinite(endSpec.valueOf()) || startSpec > endSpec) {
+            return undefined;
+        }
+        if (requireEntireCoverage) {
+            return (
+                (start.valueOf() >= startSpec.valueOf())
+                && (end.valueOf() <= endSpec.valueOf())
+            );
+        }
+        const startsAfterStoredEnd = start.valueOf() > endSpec.valueOf();
+        const endsBeforeStoredStart = end.valueOf() < startSpec.valueOf();
+        return !startsAfterStoredEnd && !endsBeforeStoredStart;
+    } else if ("periodic" in spec.time) {
+        const adjustedStart = inSpecTimeZone(start, timezone);
+        const adjustedEnd = inSpecTimeZone(end, timezone);
+        if (requireEntireCoverage) {
+            return periodsEntirelyCoverInterval(spec.time.periodic, adjustedStart, adjustedEnd, flags);
+        }
+        let matched = false;
+        for (const period of spec.time.periodic) {
+            // The iterator skips expired occurrences and stops at adjustedEnd,
+            // so its first result may be a later recurrence enclosed by the
+            // assertion. Test interval intersection, not whether an assertion
+            // endpoint falls inside the occurrence (X.520 clause 10.2).
+            const boundaries: [ Date, Date ] | null = period.occurrences(adjustedStart, adjustedEnd, false).next().value ?? null;
+            if (!boundaries) {
+                continue;
+            }
+            const [ lower, upper ] = boundaries;
+            if (lower <= adjustedEnd && upper >= adjustedStart) {
+                if (!constantTime) {
+                    return true;
+                }
+                matched = true;
+            }
+        }
+        return matched;
+    } else {
+        throw new Error(); // There is no other option.
+    }
+}
+
+/**
+ * @summary `between` evaluation against a stored `TimeSpecification`.
+ * @description
+ *
+ * X.520 clause 10.2: the asserted band matches when it overlaps the
+ * stored times, or when `entirely` is TRUE and the whole band lies
+ * inside them. For `periodic`, "inside" is the union of all `Period`
+ * occurrences.
+ *
+ * `notThisTime` complements the stored value, not the assertion. A
+ * stored NOT 09:00–17:00 means "outside business hours." Asserting
+ * `entirely` against that value requires the band to fall entirely
+ * outside business hours. Checking "entirely inside business hours"
+ * and then negating that boolean accepts a band that only partly
+ * overlaps them.
+ *
+ * A band lies entirely in the complement when it does not overlap the
+ * stored times, and it overlaps the complement when the stored times
+ * do not cover it. This inverts `entirely` when `notThisTime` is set,
+ * evaluates that relation against the stored times, then negates the
+ * answer. An indeterminate answer stays a non-match.
+ *
+ * @param {TimeSpecification} spec Stored temporal context.
+ * @param {Date} start Inclusive start of the asserted band.
+ * @param {Date} end Inclusive end of the asserted band.
+ * @param {boolean} entirely Assertion `between.entirely`.
+ * @param {number} flags `MATCH_FLAG_CONSTANT_TIME`, `MATCH_FLAG_DEBUG`,
+ *  and `MATCH_FLAG_HIGH_WORK_BUDGET`.
+ * @returns Whether the asserted band matches the specification.
+ * @function
  */
 function timeSpecificationContains (
     spec: TimeSpecification,
@@ -270,7 +379,6 @@ function timeSpecificationContains (
     if (!Number.isFinite(start.valueOf()) || !Number.isFinite(end.valueOf()) || start > end) {
         return false;
     }
-    const constantTime = Boolean(flags & MATCH_FLAG_CONSTANT_TIME);
     const notThisTime = spec.notThisTime ?? TimeSpecification._default_value_for_notThisTime;
     /*
     I am leaving the AI-generated comment below for you in case you can
@@ -300,62 +408,15 @@ function timeSpecificationContains (
     // iff I is not entirely covered by S. Negating the same predicate is wrong
     // for an interval that partly overlaps both S and its complement.
     const requireEntireCoverage = notThisTime ? !entirely : entirely;
-    const result = ((): boolean | undefined => {
-        const timezone: number | undefined = (spec.timeZone !== undefined)
-            ? Number(spec.timeZone)
-            : undefined;
-        if ("absolute" in spec.time) {
-            const startSpec = spec.time.absolute.startTime
-                ? addHours(spec.time.absolute.startTime, -(timezone ?? 0))
-                : MIN_DATE;
-            const endSpec = spec.time.absolute.endTime
-                ? addHours(spec.time.absolute.endTime, -(timezone ?? 0))
-                : MAX_DATE;
-            if (!Number.isFinite(startSpec.valueOf()) || !Number.isFinite(endSpec.valueOf()) || startSpec > endSpec) {
-                return undefined;
-            }
-            if (requireEntireCoverage) {
-                return (
-                    (start.valueOf() >= startSpec.valueOf())
-                    && (end.valueOf() <= endSpec.valueOf())
-                );
-            } else {
-                return (!(
-                    (start.valueOf() > endSpec.valueOf())
-                    || (end.valueOf() < startSpec.valueOf())
-                ));
-            }
-        } else if ("periodic" in spec.time) {
-            const adjustedStart = inSpecTimeZone(start, timezone);
-            const adjustedEnd = inSpecTimeZone(end, timezone);
-            if (requireEntireCoverage) {
-                return periodsEntirelyCoverInterval(spec.time.periodic, adjustedStart, adjustedEnd, flags);
-            }
-            let matched = false;
-            for (const period of spec.time.periodic) {
-                // The iterator skips expired occurrences and stops at adjustedEnd,
-                // so its first result may be a later recurrence enclosed by the
-                // assertion. Test interval intersection, not whether an assertion
-                // endpoint falls inside the occurrence (X.520 clause 10.2).
-                const boundaries: [ Date, Date ] | null = period.occurrences(adjustedStart, adjustedEnd, false).next().value ?? null;
-                if (!boundaries) {
-                    continue;
-                }
-                const [ lower, upper ] = boundaries;
-                if (lower <= adjustedEnd && upper >= adjustedStart) {
-                    if (!constantTime) {
-                        return true;
-                    }
-                    matched = true;
-                }
-            }
-            return matched;
-        } else {
-            throw new Error(); // There is no other option.
-        }
-    })();
-    return (result !== undefined)
-        && xor(result, notThisTime);
+    const matchesStoredTimes = intervalMatchesStoredTimes(
+        spec,
+        start,
+        end,
+        requireEntireCoverage,
+        flags,
+    );
+    return matchesStoredTimes !== undefined
+        && xor(matchesStoredTimes, notThisTime);
 }
 
 /**
