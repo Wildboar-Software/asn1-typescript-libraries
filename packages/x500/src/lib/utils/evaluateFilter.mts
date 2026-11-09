@@ -45,7 +45,6 @@ import { CannotPerformExactly } from "../errors.mjs";
 import type { Context } from "../modules/InformationFramework/Context.ta.mjs";
 import getAttributeTypesFromFilterItem from "./getAttributeTypesFromFilterItem.mjs";
 import { RequestAttribute } from "../modules/ServiceAdministration/RequestAttribute.ta.mjs";
-import compareElements from "../comparators/compareElements.mjs";
 
 interface MatchedValue {
     type: AttributeType;
@@ -394,7 +393,12 @@ function evaluateEquality (
     options: EvaluateFilterSettings,
 ): MatchedValue[] | boolean | undefined {
     const state: MatchState = { indeterminate: false };
-    const matcher: EqualityMatcher = handleErrors(options.getEqualityMatcher(ava.type_) ?? compareElements, state)!;
+    const matcher: EqualityMatcher | undefined = handleErrors(options.getEqualityMatcher(ava.type_), state);
+    // X.511 7.8.2: an unavailable equality rule makes the assertion UNDEFINED,
+    // even if the presented and stored encodings happen to be identical.
+    if (!matcher) {
+        return undefined;
+    }
     const contextsMatch = handleErrors(valueSatisfiesSelectedContexts, state)!;
     const attributes = getAttributesFromEntry(entry, options.dnAttribute);
     const friendTypes: OBJECT_IDENTIFIER[] = [
@@ -535,7 +539,15 @@ function evaluateApprox (
     options: EvaluateFilterSettings,
 ): MatchedValue[] | boolean | undefined {
     const state: MatchState = { indeterminate: false };
-    const matcher: EqualityMatcher = handleErrors(options.getApproximateMatcher(ava.type_) ?? compareElements, state)!;
+    // X.511 7.8.2(f): unsupported approximate matching falls back to the
+    // attribute's equality rule, never to raw encoding equality.
+    const matcher: EqualityMatcher | undefined = handleErrors(
+        options.getApproximateMatcher(ava.type_) ?? options.getEqualityMatcher(ava.type_),
+        state,
+    );
+    if (!matcher) {
+        return undefined;
+    }
     const contextsMatch = handleErrors(valueSatisfiesSelectedContexts, state)!;
     const attributes = getAttributesFromEntry(entry, options.dnAttribute);
     const friendTypes: OBJECT_IDENTIFIER[] = [
@@ -904,9 +916,18 @@ function evaluateMatchingRuleAssertion (
                 + mra.matchingRule[0].toString()
             );
         }
-        matcher = compareElements;
+        return undefined;
     }
     matcher = handleErrors(matcher, state)!;
+    const rule = mra.matchingRule[0];
+    // Applicability is required even if the asserted type is absent from the
+    // entry, or a friend/subtype would otherwise supply a matching value.
+    if (mra.type_ && !options.isMatchingRuleCompatibleWithAttributeType(rule, mra.type_)) {
+        if (options.performExactly) {
+            throw new CannotPerformExactly(rule.toString());
+        }
+        return undefined;
+    }
     /**
      * From ITU Recommendation X.511, Section 11.2.2:
      *
@@ -920,66 +941,84 @@ function evaluateMatchingRuleAssertion (
             ...(options.getFriends?.(mra.type_) ?? []),
         ]
         : [];
-    /**
-     * From ITU Recommendation X.511, Section 7.8.2.g:
-     *
-     * > If type is omitted, the match is made against all attribute types which
-     * > are compatible with that matching rule.
-     */
-    const relevantAttributes = ((mra.type_)
+    let incompatibleCandidateFound = false;
+    const isCompatibleCandidate = (type: AttributeType): boolean => {
+        const compatible = options.isMatchingRuleCompatibleWithAttributeType(rule, type);
+        incompatibleCandidateFound ||= !compatible;
+        return compatible;
+    };
+    // X.511 7.8.2: validate each selected attribute's actual type as well as
+    // the asserted type, including friends, subtypes, and DN attributes.
+    const selectedAttributes = mra.type_
         ? attributes
             .filter((attr): boolean => friendTypes.some((f) => options.isAttributeSubtype(attr.type_, f)))
-        : attributes
-            .filter((attr: Attribute): boolean => (
-                options.permittedToMatch(attr.type_)
-                && options.isMatchingRuleCompatibleWithAttributeType(
-                    mra.matchingRule[0],
-                    attr.type_,
-                )
-            )))
-            ;
+        : attributes;
+    const relevantAttributes = selectedAttributes.filter((attr) => (
+        options.permittedToMatch(attr.type_) && isCompatibleCandidate(attr.type_)
+    ));
     const matchedValues: MatchedValue[] = [];
     if (relevantAttributes.length === 0) {
-        if (options.performExactly && !mra.type_ && (attributes.length > 0)) {
-            // None of the attributes were compatible with the matching rule.
-            throw new CannotPerformExactly(mra.matchingRule[0].toString());
-        }
-        if (options?.requestAttributes?.size) {
-            const req_attrs = options.requestAttributes;
-            // NOTE: This does NOT check parent types of the asserted value.
-            const profiled_type: AttributeType | undefined = friendTypes
-                .find((rattr) => req_attrs.has(rattr.toString()));
-            // "" will never match anything. It's just to make this a one-liner.
-            const profile = req_attrs.get(profiled_type?.toString() ?? "");
-            if (profile?.defaultValues) {
-                if (profile.defaultValues.length === 0) {
-                    // No matched values are returned intentionally, since these are defaults.
-                    return true;
+        // Service-profile defaults must satisfy the same applicability check.
+        // Skip an incompatible friend's profile rather than accepting its
+        // values (or its unconditional, empty default-value set).
+        const profile = friendTypes
+            .map((type) => options.requestAttributes?.get(type.toString()))
+            .find((candidate) => candidate
+                && options.permittedToMatch(candidate.attributeType)
+                && isCompatibleCandidate(candidate.attributeType));
+        if (profile?.defaultValues) {
+            if (profile.defaultValues.length === 0) {
+                // No matched values are returned intentionally, since these are defaults.
+                return true;
+            }
+            // NOTE: This does not consider entryType at all, because it is undocumented entirely.
+            const default_values = profile.defaultValues.flatMap((dv) => dv.values);
+            for (const default_value of default_values) {
+                if (!options.permittedToMatch(profile.attributeType, default_value)) {
+                    continue;
                 }
-                // NOTE: This does not consider entryType at all, because it is undocumented entirely.
-                const default_values = profile.defaultValues.flatMap((dv) => dv.values);
-                for (const default_value of default_values) {
-                    if (!options.permittedToMatch(profile.attributeType, default_value)) {
-                        continue;
-                    }
-                    if (!matcher!(mra.matchValue, default_value)) {
-                        continue;
-                    }
-                    matchedValues.push({
-                        type: profile.attributeType,
-                        value: default_value,
-                    });
-                    if (!options.matchedValuesOnly) {
-                        // No matched values are returned intentionally, since these are defaults.
-                        return true;
-                    }
+                if (!matcher!(mra.matchValue, default_value)) {
+                    continue;
                 }
-                if (matchedValues.length > 0) {
+                matchedValues.push({
+                    type: profile.attributeType,
+                    value: default_value,
+                });
+                if (!options.matchedValuesOnly) {
                     // No matched values are returned intentionally, since these are defaults.
                     return true;
                 }
             }
+            if (matchedValues.length > 0) {
+                // No matched values are returned intentionally, since these are defaults.
+                return true;
+            }
         }
+        // I, Jonathan M. Wilbur, do not understand the following AI-generated
+        // code (region with heavy comments). I am still going to let this in
+        // just on the grounds that this is a rarely used code path: using
+        // extensibleMatch and getting it very wrong.
+
+        // No permitted, compatible stored attributes reached this branch.
+        // !profile also rules out a permitted, compatible service profile.
+        // With neither, applicability has not been established if:
+        // - a selected attribute/profile was explicitly rejected as incompatible; or
+        // - type_ was omitted, so no asserted type was checked up front.
+        // This is different from a defined comparison that simply found no match.
+        if (!profile && (incompatibleCandidateFound || !mra.type_)) {
+            // performExactly rejects observed incompatibility. For an untyped
+            // assertion, also retain the existing error when entry/DN attributes
+            // were present but none could be used. An empty untyped search with
+            // no incompatible profile has no observed use to reject.
+            if (options.performExactly && (incompatibleCandidateFound || attributes.length > 0)) {
+                throw new CannotPerformExactly(rule.toString());
+            }
+            // Return UNDEFINED, not [] (FALSE), so NOT cannot turn this lack
+            // of an applicable comparison into a successful match.
+            return undefined;
+        }
+        // A compatible explicit type or profile established applicability;
+        // preserve an ordinary non-match, or an indeterminate matcher result.
         return state.indeterminate ? undefined : [];
     }
     for (const attr of relevantAttributes) {

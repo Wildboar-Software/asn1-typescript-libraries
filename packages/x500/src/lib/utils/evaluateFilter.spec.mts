@@ -1,6 +1,6 @@
 import { ObjectIdentifier, type ASN1Element } from "@wildboar/asn1";
 import { DER, _encodeUTF8String } from "@wildboar/asn1/functional";
-import { evaluateFilter, type EvaluateFilterSettings } from "./evaluateFilter.mjs";
+import { evaluateEquality, evaluateApprox, evaluateMatchingRuleAssertion, evaluateFilter, type EvaluateFilterSettings } from "./evaluateFilter.mjs";
 import { CannotPerformExactly } from "../errors.mjs";
 import type EqualityMatcher from "../types/EqualityMatcher.mjs";
 import type SubstringsMatcher from "../types/SubstringsMatcher.mjs";
@@ -16,6 +16,7 @@ import { FilterItem_substrings } from "../modules/DirectoryAbstractService/Filte
 import { MatchingRuleAssertion } from "../modules/DirectoryAbstractService/MatchingRuleAssertion.ta.mjs";
 import { RequestAttribute } from "../modules/ServiceAdministration/RequestAttribute.ta.mjs";
 import { RequestAttribute_defaultValues_Item } from "../modules/ServiceAdministration/RequestAttribute-defaultValues-Item.ta.mjs";
+import { AttributeTypeAndValue } from "../modules/InformationFramework/AttributeTypeAndValue.ta.mjs";
 
 const TYPE = ObjectIdentifier.fromString("2.5.4.3");
 const RULE = ObjectIdentifier.fromString("1.2.3.4");
@@ -256,5 +257,213 @@ describe("bounded filter evaluation (M5)", () => {
         const cyclic: { not: Filter } = { not: leaf() };
         cyclic.not = cyclic;
         expect(evaluateFilter(cyclic, [], settings()).matched).toBeUndefined();
+    });
+});
+
+describe("unavailable filter matching rules (M2)", () => {
+    describe.each<Kind>(["equality", "approximateMatch", "extensibleMatch"])("%s", (kind) => {
+        it.each([false, true])("does not compare raw encodings, matchedValuesOnly=%s", (matchedValuesOnly) => {
+            const options: EvaluateFilterSettings = {
+                ...settings(kind, matchedValuesOnly),
+                getEqualityMatcher: () => undefined,
+                getApproximateMatcher: () => undefined,
+                getSubstringsMatcher: () => undefined,
+            };
+            // Both identical and different encodings are UNDEFINED without
+            // the required rule. In particular, NOT must not grant a match.
+            for (const text of ["assertion", "different"]) {
+                for (const entries of [family([text]), family([], [text])]) {
+                    const filter = leaf(kind);
+                    const result = evaluateFilter(filter, entries, options);
+                    expect(result.matched).toBeUndefined();
+                    expect(result.matchedValues).toEqual([]);
+                    expect(result.contributingEntries.size).toBe(0);
+                    expect(evaluateFilter({ not: filter }, entries, options).matched).toBeUndefined();
+                }
+            }
+        });
+
+        it("does not let default values bypass an unavailable rule", () => {
+            for (const defaultValues of [[], [new RequestAttribute_defaultValues_Item(undefined, [value("assertion")])]]) {
+                const profile = new RequestAttribute(TYPE, undefined, undefined, defaultValues);
+                const options: EvaluateFilterSettings = {
+                    ...settings(kind),
+                    getEqualityMatcher: () => undefined,
+                    getApproximateMatcher: () => undefined,
+                    getSubstringsMatcher: () => undefined,
+                    requestAttributes: new Map([[TYPE.toString(), profile]]),
+                };
+                const entries = [new EntryInformation({ rdnSequence: [] })];
+                expect(evaluateFilter(leaf(kind), entries, options).matched).toBeUndefined();
+                expect(evaluateFilter({ not: leaf(kind) }, entries, options).matched).toBeUndefined();
+            }
+        });
+    });
+
+    it("returns UNDEFINED directly, rather than relying on the outer evaluator to catch an error", () => {
+        const assertion = new AttributeValueAssertion(TYPE, value("assertion"));
+        const extensible = new MatchingRuleAssertion([RULE], TYPE, value("assertion"));
+        const options: EvaluateFilterSettings = {
+            ...settings(),
+            getEqualityMatcher: () => undefined,
+            getApproximateMatcher: () => undefined,
+            getSubstringsMatcher: () => undefined,
+        };
+        const entry = family(["assertion"])[0];
+        expect(evaluateEquality(assertion, entry, options)).toBeUndefined();
+        expect(evaluateApprox(assertion, entry, options)).toBeUndefined();
+        expect(evaluateMatchingRuleAssertion(extensible, entry, options)).toBeUndefined();
+        expect(() => evaluateMatchingRuleAssertion(extensible, entry, { ...options, performExactly: true })).toThrow(CannotPerformExactly);
+    });
+
+    it.each([false, true])("falls back from unsupported approximate matching to the equality rule, matchedValuesOnly=%s", (matchedValuesOnly) => {
+        // X.511 7.8.2(f) permits equality fallback, not byte equality.
+        const options: EvaluateFilterSettings = { ...settings("approximateMatch", matchedValuesOnly), getApproximateMatcher: () => undefined };
+        expect(evaluateFilter(leaf("approximateMatch"), family(["true"]), options).matched).toBe(true);
+        expect(evaluateFilter(leaf("approximateMatch"), family([], ["true"]), options).matched).toBe(true);
+        expect(evaluateFilter(leaf("approximateMatch"), family(["assertion"]), options).matched).toBe(false);
+    });
+
+    it("still supports an explicitly resolved extensible rule from the substrings-rule lookup", () => {
+        const options: EvaluateFilterSettings = { ...settings(), getEqualityMatcher: () => undefined };
+        expect(evaluateFilter(leaf("extensibleMatch"), family(["true"]), options).matched).toBe(true);
+    });
+});
+
+describe("extensible matching-rule applicability (M4)", () => {
+    const subtype = ObjectIdentifier.fromString("1.2.3.10");
+    const friend = ObjectIdentifier.fromString("1.2.3.11");
+    const selectedTypes = [TYPE, subtype, friend];
+
+    function extensible(dnAttributes = false): Filter {
+        return { item: { extensibleMatch: new MatchingRuleAssertion([RULE], TYPE, value("assertion"), dnAttributes) } };
+    }
+
+    function applicabilitySettings(compatible: typeof TYPE[], performExactly = false, matchedValuesOnly = false): EvaluateFilterSettings {
+        return {
+            ...settings("extensibleMatch", matchedValuesOnly),
+            getFriends: () => [friend],
+            isAttributeSubtype: (a, b) => a.isEqualTo(b) || (a.isEqualTo(subtype) && b.isEqualTo(TYPE)),
+            isMatchingRuleCompatibleWithAttributeType: (rule, type) => rule.isEqualTo(RULE) && compatible.some((allowed) => allowed.isEqualTo(type)),
+            performExactly,
+        };
+    }
+
+    function entry(type: typeof TYPE, text = "true", contextual = false): EntryInformation {
+        return new EntryInformation({ rdnSequence: [] }, true, [{ attribute: new Attribute(
+            type,
+            contextual ? [] : [value(text)],
+            contextual ? [new Attribute_valuesWithContext_Item(value(text), [new Context(RULE, [value("context")])])] : undefined,
+        ) }]);
+    }
+
+    it.each([false, true])("rejects an incompatible explicitly asserted type even with no stored attribute, performExactly=%s", (performExactly) => {
+        const options = applicabilitySettings([subtype, friend], performExactly);
+        for (const entries of [[entry(TYPE)], [entry(subtype)], [new EntryInformation({ rdnSequence: [] })]]) {
+            if (performExactly) {
+                expect(() => evaluateFilter(extensible(), entries, options)).toThrow(CannotPerformExactly);
+            } else {
+                expect(evaluateFilter(extensible(), entries, options).matched).toBeUndefined();
+                expect(evaluateFilter({ not: extensible() }, entries, options).matched).toBeUndefined();
+            }
+        }
+    });
+
+    describe.each([false, true])("performExactly=%s", (performExactly) => {
+        it.each([subtype, friend])("checks the actual selected attribute type %s", (selected) => {
+            const matcher = vi.fn(() => true);
+            const options = { ...applicabilitySettings([TYPE], performExactly), getEqualityMatcher: () => matcher };
+            for (const contextual of [false, true]) {
+                const entries = [entry(selected, "true", contextual)];
+                if (performExactly) {
+                    expect(() => evaluateFilter(extensible(), entries, options)).toThrow(CannotPerformExactly);
+                } else {
+                    expect(evaluateFilter(extensible(), entries, options).matched).toBeUndefined();
+                    expect(evaluateFilter({ not: extensible() }, entries, options).matched).toBeUndefined();
+                }
+            }
+            expect(matcher).not.toHaveBeenCalled();
+        });
+
+        it("rejects an untyped assertion with no compatible attribute", () => {
+            const filter: Filter = { item: { extensibleMatch: new MatchingRuleAssertion([RULE], undefined, value("assertion")) } };
+            const options = applicabilitySettings([], performExactly);
+            if (performExactly) {
+                expect(() => evaluateFilter(filter, [entry(TYPE)], options)).toThrow(CannotPerformExactly);
+            } else {
+                expect(evaluateFilter(filter, [entry(TYPE)], options).matched).toBeUndefined();
+                expect(evaluateFilter({ not: filter }, [entry(TYPE)], options).matched).toBeUndefined();
+            }
+        });
+
+        it("checks default-profile compatibility, including empty default-value sets", () => {
+            for (const defaultValues of [[], [new RequestAttribute_defaultValues_Item(undefined, [value("true")])]]) {
+                const options = {
+                    ...applicabilitySettings([TYPE], performExactly),
+                    requestAttributes: new Map([[friend.toString(), new RequestAttribute(friend, undefined, undefined, defaultValues)]]),
+                };
+                const entries = [new EntryInformation({ rdnSequence: [] })];
+                if (performExactly) {
+                    expect(() => evaluateFilter(extensible(), entries, options)).toThrow(CannotPerformExactly);
+                } else {
+                    expect(evaluateFilter(extensible(), entries, options).matched).toBeUndefined();
+                }
+            }
+        });
+
+        it("checks selected distinguished-name attributes too", () => {
+            const namedEntry = new EntryInformation({ rdnSequence: [[new AttributeTypeAndValue(subtype, value("true"))]] });
+            const options = applicabilitySettings([TYPE], performExactly);
+            if (performExactly) {
+                expect(() => evaluateFilter(extensible(true), [namedEntry], options)).toThrow(CannotPerformExactly);
+            } else {
+                expect(evaluateFilter(extensible(true), [namedEntry], options).matched).toBeUndefined();
+            }
+        });
+    });
+
+    it.each([false, true])("does not invoke the matcher on incompatible siblings, matchedValuesOnly=%s", (matchedValuesOnly) => {
+        for (const performExactly of [false, true]) {
+            const options = applicabilitySettings([TYPE], performExactly, matchedValuesOnly);
+            for (const reverse of [false, true]) {
+                const attributes = [entry(TYPE, "false").information![0], entry(friend, "true").information![0]];
+                const mixedEntry = new EntryInformation({ rdnSequence: [] }, true, reverse ? attributes.reverse() : attributes);
+                expect(evaluateFilter(extensible(), [mixedEntry], options).matched).toBe(false);
+            }
+        }
+    });
+
+    it.each(selectedTypes)("still matches compatible selected type %s and reports its actual type", (selected) => {
+        const result = evaluateFilter(extensible(), [entry(selected)], applicabilitySettings(selectedTypes, true, true));
+        expect(result.matched).toBe(true);
+        expect(result.matchedValues).toHaveLength(1);
+        expect(result.matchedValues![0].type.isEqualTo(selected)).toBe(true);
+        expect([...result.contributingEntries]).toEqual([0]);
+    });
+
+    it("still permits compatible default profiles", () => {
+        const options = {
+            ...applicabilitySettings(selectedTypes, true),
+            requestAttributes: new Map([[friend.toString(), new RequestAttribute(friend, undefined, undefined, [
+                new RequestAttribute_defaultValues_Item(undefined, [value("true")]),
+            ])]]),
+        };
+        expect(evaluateFilter(extensible(), [new EntryInformation({ rdnSequence: [] })], options).matched).toBe(true);
+    });
+
+    it.each([false, true])("can use a compatible default profile after skipping an incompatible friend, performExactly=%s", (performExactly) => {
+        const options = {
+            ...applicabilitySettings([TYPE, subtype], performExactly),
+            getFriends: () => [friend, subtype],
+            requestAttributes: new Map([
+                [friend.toString(), new RequestAttribute(friend, undefined, undefined, [
+                    new RequestAttribute_defaultValues_Item(undefined, [value("false")]),
+                ])],
+                [subtype.toString(), new RequestAttribute(subtype, undefined, undefined, [
+                    new RequestAttribute_defaultValues_Item(undefined, [value("true")]),
+                ])],
+            ]),
+        };
+        expect(evaluateFilter(extensible(), [new EntryInformation({ rdnSequence: [] })], options).matched).toBe(true);
     });
 });

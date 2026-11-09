@@ -615,7 +615,7 @@ describe("evaluateFilter", () => {
         expect(evaluateFilter(filter, [entry], options).matched).toBeTruthy();
     });
 
-    it("matches unrecognized attribute types by comparing encodings", () => {
+    it("returns UNDEFINED for unrecognized attribute types instead of comparing encodings", () => {
         const filter: Filter = {
             item: BASIC_BOOLEAN_FILTER_ITEM,
         };
@@ -662,7 +662,9 @@ describe("evaluateFilter", () => {
             isAttributeSubtype: NO_SUBTYPING,
             permittedToMatch: ALWAYS_PERMITTED,
         };
-        expect(evaluateFilter(filter, [matchingEntry], options).matched).toBe(true);
-        expect(evaluateFilter(filter, [nonMatchingEntry], options).matched).toBe(false);
+        expect(evaluateFilter(filter, [matchingEntry], options).matched).toBeUndefined();
+        expect(evaluateFilter(filter, [nonMatchingEntry], options).matched).toBeUndefined();
+        expect(evaluateFilter({ not: filter }, [matchingEntry], options).matched).toBeUndefined();
+        expect(evaluateFilter({ not: filter }, [nonMatchingEntry], options).matched).toBeUndefined();
     });
 });
