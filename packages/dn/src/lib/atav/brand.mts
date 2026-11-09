@@ -28,7 +28,7 @@ function isAttributeTypeAndValueOf <T extends DotDelimitedOidBrand>(
     atav: AttributeTypeAndValue,
     types: T | readonly T[],
 ): atav is AttributeTypeAndValueOf<T> {
-    const type_ = atav.type_.toString();
+    const type_: string = atav.type_.toString();
     return Array.isArray(types)
         ? (types as readonly string[]).includes(type_)
         : (type_ === types);
