@@ -39,8 +39,9 @@ import compareElements from "../comparators/compareElements.mjs";
  * @param {function} getEqualityMatcher A function that takes an object
  *  identifier and returns another function (if one can be found) that can be
  *  used to compare two values of the same attribute type.
- * @returns {boolean} A `boolean` that is `true` if the requested item is
- *  protected by the `ProtectedItems` and `false` if it is not.
+ * @returns `true` if the requested item is protected by the `ProtectedItems`,
+ *  `false` if it is not, or `undefined` if the class refinement cannot be
+ *  determined (for example, because its recursion budget is exhausted).
  * @function
  */
 export
@@ -49,7 +50,7 @@ function itemIsProtected (
     protectedItems: ProtectedItems,
     requester: NameAndOptionalUID | undefined | null,
     settings: EvaluateFilterSettings,
-): boolean {
+): boolean | undefined {
     if ("entry" in request) {
         if (protectedItems.classes) {
             return objectClassesWithinRefinement(request.entry, protectedItems.classes);

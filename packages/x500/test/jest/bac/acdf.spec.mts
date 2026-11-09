@@ -59,6 +59,7 @@ import {
 import splitGrantsAndDenials from "../../../src/lib/bac/splitGrantsAndDenials.mjs";
 import getACDFTuplesFromACIItem from "../../../src/lib/bac/getACDFTuplesFromACIItem.mjs";
 import itemIsProtected from "../../../src/lib/bac/itemIsProtected.mjs";
+import type { Refinement } from "../../../src/lib/modules/InformationFramework/Refinement.ta.mjs";
 import type { EvaluateFilterSettings } from "../../../src/lib/utils/evaluateFilter.mjs";
 import {
     NameAndOptionalUID,
@@ -359,6 +360,31 @@ describe("itemIsProtected()", () => {
             entry: [ ObjectIdentifier.fromParts([ 2, 5, 4, 3 ]) ],
         }, pi, requester, getSettings(ALWAYS_EQUAL));
         expect(protected_).toBe(true);
+    });
+
+    it("retains a definite class-refinement non-match as false", () => {
+        const pi = Object.assign(new ProtectedItems(), {
+            classes: { item: ObjectIdentifier.fromString("2.5.6.6") },
+        });
+        expect(itemIsProtected({ entry: [] }, pi, requester, getSettings(ALWAYS_EQUAL))).toBe(false);
+    });
+
+    it.each([20, 21])("preserves UNDEFINED for an exhausted refinement with %i NOT nodes", (depth) => {
+        const objectClass = ObjectIdentifier.fromString("2.5.6.6");
+        let refinement: Refinement = { item: objectClass };
+        for (let i = 0; i < depth; i++) {
+            refinement = { not: refinement };
+        }
+        const pi = Object.assign(new ProtectedItems(), { classes: refinement });
+        expect(itemIsProtected({ entry: [objectClass] }, pi, requester, getSettings(ALWAYS_EQUAL))).toBeUndefined();
+    });
+
+    it("preserves UNDEFINED for unsupported class refinements, including under NOT", () => {
+        const unsupported = new DERElement();
+        for (const refinement of [unsupported, { not: unsupported }]) {
+            const pi = Object.assign(new ProtectedItems(), { classes: refinement });
+            expect(itemIsProtected({ entry: [] }, pi, requester, getSettings(ALWAYS_EQUAL))).toBeUndefined();
+        }
     });
 
     it("does not return true for an unrecognized request type", () => {
