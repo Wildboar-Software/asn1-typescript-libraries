@@ -6,7 +6,7 @@ import {
     type OBJECT_IDENTIFIER,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import type EqualityMatcher from "../../types/EqualityMatcher.mjs";
+import type { Matcher } from "../../types/matching.mjs";
 import compareGeneralSubtree from "../../comparators/compareGeneralSubtree.mjs";
 import {
     type BaseDistance,
@@ -131,7 +131,7 @@ export class GeneralSubtree {
      */
     public isEqualTo(
         other: GeneralSubtree,
-        getEqualityMatcher?: (attributeType: OBJECT_IDENTIFIER) => EqualityMatcher | undefined,
+        getEqualityMatcher?: (attributeType: OBJECT_IDENTIFIER) => Matcher | undefined,
     ): boolean {
         return compareGeneralSubtree(this, other, getEqualityMatcher);
     }

@@ -1,5 +1,5 @@
 import type { OBJECT_IDENTIFIER } from "@wildboar/asn1";
-import type EqualityMatcher from "../types/EqualityMatcher.mjs";
+import type { Matcher } from "../types/matching.mjs";
 import {
     type GeneralNames,
     generalNameToKey,
@@ -27,7 +27,7 @@ export
 function compareGeneralNames (
     a: GeneralNames,
     b: GeneralNames,
-    _getEqualityMatcher?: (attributeType: OBJECT_IDENTIFIER) => EqualityMatcher | undefined,
+    _getEqualityMatcher?: (attributeType: OBJECT_IDENTIFIER) => Matcher | undefined,
 ): boolean {
     if (a.length !== b.length) {
         return false;

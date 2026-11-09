@@ -1,4 +1,4 @@
-import { ObjectIdentifier } from "@wildboar/asn1";
+import { ObjectIdentifier, type ASN1Element } from "@wildboar/asn1";
 import { DER, _encodeUTF8String } from "@wildboar/asn1/functional";
 import { EntryInformation } from "../modules/DirectoryAbstractService/EntryInformation.ta.mjs";
 import { SortKey } from "../modules/DirectoryAbstractService/SortKey.ta.mjs";
@@ -6,16 +6,16 @@ import { Attribute } from "../modules/InformationFramework/Attribute.ta.mjs";
 import { AttributeTypeAndValue } from "../modules/InformationFramework/AttributeTypeAndValue.ta.mjs";
 import { Attribute_valuesWithContext_Item } from "../modules/InformationFramework/Attribute-valuesWithContext-Item.ta.mjs";
 import { Context } from "../modules/InformationFramework/Context.ta.mjs";
-import type OrderingMatcher from "../types/OrderingMatcher.mjs";
+import type { Matcher } from "../types/matching.mjs";
 import { sort } from "./sort.mjs";
 
 const commonName = ObjectIdentifier.fromString("2.5.4.3");
 const organizationName = ObjectIdentifier.fromString("2.5.4.10");
 const unknownType = ObjectIdentifier.fromString("1.2.3.4");
-const alphabetically: OrderingMatcher = (a, b) => {
-    const left = a.utf8String;
-    const right = b.utf8String;
-    return left < right ? -1 : left > right ? 1 : 0;
+const alphabetically: Matcher = (assertion, valueOrValues) => {
+    const left = (assertion as ASN1Element).utf8String;
+    const right = ("values" in valueOrValues ? valueOrValues.values[0] : valueOrValues.value).utf8String;
+    return right < left;
 };
 
 describe("sort (M22)", () => {

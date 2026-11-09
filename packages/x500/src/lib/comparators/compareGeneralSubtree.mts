@@ -1,5 +1,6 @@
 import type { OBJECT_IDENTIFIER } from "@wildboar/asn1";
-import type EqualityMatcher from "../types/EqualityMatcher.mjs";
+import type { Matcher } from "../types/matching.mjs";
+import { valueEqualityMatcher } from "../matching/valueEqualityMatcher.mjs";
 import type {
     GeneralSubtree,
 } from "../modules/CertificateExtensions/GeneralSubtree.ta.mjs";
@@ -20,7 +21,7 @@ export
 function compareGeneralSubtree (
     a: GeneralSubtree,
     b: GeneralSubtree,
-    getEqualityMatcher?: (attributeType: OBJECT_IDENTIFIER) => EqualityMatcher | undefined,
+    getEqualityMatcher?: (attributeType: OBJECT_IDENTIFIER) => Matcher | undefined,
 ): boolean {
     if ((a.minimum ?? DEFAULT_MINIMUM) != (b.minimum ?? DEFAULT_MINIMUM)) {
         return false;
@@ -28,7 +29,7 @@ function compareGeneralSubtree (
     if (a.maximum != b.maximum) {
         return false;
     }
-    return compareGeneralName(a.base, b.base, getEqualityMatcher);
+    return compareGeneralName(a.base, b.base, valueEqualityMatcher(getEqualityMatcher));
 }
 
 export default compareGeneralSubtree;

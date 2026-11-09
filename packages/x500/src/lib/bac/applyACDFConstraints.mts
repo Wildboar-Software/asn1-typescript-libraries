@@ -9,6 +9,7 @@ import type ProtectedItem from "../types/ProtectedItem.mjs";
 import type { EvaluateFilterSettings } from "../utils/evaluateFilter.mjs";
 import evaluateContextAssertion from "../utils/evaluateContextAssertion.mjs";
 import compareElements from "../comparators/compareElements.mjs";
+import { AttributeTypeAndValue } from "../modules/InformationFramework/AttributeTypeAndValue.ta.mjs";
 
 function countWithinLimit (count: number | undefined, limit: INTEGER): boolean {
     return typeof count === "number"
@@ -98,11 +99,10 @@ function applyACDFConstraints (
 
     addGranted = (permissions[grantAdd] === TRUE_BIT);
     if (adds && ("value" in request)) {
-        // At least in Meerkat DSA, we don't always have all the entry
-        // attributes available when evaluating restrictedBy. If this is not
-        // passed in, we do not evaluate this. If we didn't do this, any ACI
-        // item that had a restrictedBy constraint would deny every add.
-        const restrictedBy = (addGranted && request.entryAttributes)
+        // A constrained grant is discarded if restrictedBy cannot be
+        // established, including when post-operation entry attributes are
+        // not supplied.
+        const restrictedBy = addGranted
             ? (items.restrictedBy ?? [])
             : [];
         for (const restriction of restrictedBy) {
@@ -111,12 +111,19 @@ function applyACDFConstraints (
             }
             let present = false;
             try {
-                const matcher = settings.getEqualityMatcher(restriction.valuesIn) ?? compareElements;
+                const matcher = settings.getEqualityMatcher(restriction.valuesIn);
+                const matchesStored = (value: typeof request.value.value) => matcher
+                    ? matcher(
+                        request.value.value,
+                        new AttributeTypeAndValue(restriction.valuesIn, value),
+                        settings.getEqualityMatcher,
+                    ) === true
+                    : compareElements(request.value.value, value);
                 present = request.entryAttributes?.some((attribute) => (
                     attribute.type_.isEqualTo(restriction.valuesIn)
                     && (
-                        attribute.values.some((value) => matcher(request.value.value, value) === true)
-                        || attribute.valuesWithContext?.some((vwc) => matcher(request.value.value, vwc.value) === true)
+                        attribute.values.some((value) => matchesStored(value))
+                        || attribute.valuesWithContext?.some((vwc) => matchesStored(vwc.value))
                     )
                 )) ?? false;
             } catch {
@@ -136,6 +143,7 @@ function applyACDFConstraints (
                     request.contexts ?? [],
                     settings.getContextMatcher,
                     settings.determineAbsentMatch,
+                    settings.getEqualityMatcher,
                 ));
             } catch {
                 // On failure retain denials and remove grants, never vice versa.

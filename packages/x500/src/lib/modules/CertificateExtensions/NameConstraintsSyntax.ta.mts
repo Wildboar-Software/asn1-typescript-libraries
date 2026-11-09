@@ -6,7 +6,7 @@ import {
     type OBJECT_IDENTIFIER,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import type EqualityMatcher from "../../types/EqualityMatcher.mjs";
+import type { Matcher } from "../../types/matching.mjs";
 import compareNameConstraintsSyntax, {
     type CompareNameConstraintsSyntaxOptions,
 } from "../../comparators/compareNameConstraintsSyntax.mjs";
@@ -115,7 +115,7 @@ export class NameConstraintsSyntax {
      */
     public isEqualTo(
         other: NameConstraintsSyntax,
-        getEqualityMatcher?: (attributeType: OBJECT_IDENTIFIER) => EqualityMatcher | undefined,
+        getEqualityMatcher?: (attributeType: OBJECT_IDENTIFIER) => Matcher | undefined,
         options?: CompareNameConstraintsSyntaxOptions,
     ): boolean {
         return compareNameConstraintsSyntax(this, other, getEqualityMatcher, options);

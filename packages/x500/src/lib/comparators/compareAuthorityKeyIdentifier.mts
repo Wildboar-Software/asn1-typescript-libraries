@@ -1,4 +1,4 @@
-import type EqualityMatcher from "../types/EqualityMatcher.mjs";
+import type { Matcher } from "../types/matching.mjs";
 import type { OBJECT_IDENTIFIER } from "@wildboar/asn1";
 import type {
     AuthorityKeyIdentifier,
@@ -19,7 +19,7 @@ export
 function compareAttCertIssuer (
     a: AuthorityKeyIdentifier,
     b: AuthorityKeyIdentifier,
-    getEqualityMatcher?: (attributeType: OBJECT_IDENTIFIER) => EqualityMatcher | undefined,
+    getEqualityMatcher?: (attributeType: OBJECT_IDENTIFIER) => Matcher | undefined,
 ): boolean {
     if (Boolean(a.keyIdentifier) !== Boolean(b.keyIdentifier)) {
         return false;

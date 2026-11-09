@@ -6,7 +6,7 @@ import {
     type OBJECT_IDENTIFIER,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import type EqualityMatcher from "../../types/EqualityMatcher.mjs";
+import type { Matcher } from "../../types/matching.mjs";
 import compareRoleSpecCertIdentifier from "../../comparators/compareRoleSpecCertIdentifier.mjs";
 import {
     type CertificateSerialNumber,
@@ -123,7 +123,7 @@ export class RoleSpecCertIdentifier {
      */
     public isEqualTo(
         other: RoleSpecCertIdentifier,
-        getEqualityMatcher?: (attributeType: OBJECT_IDENTIFIER) => EqualityMatcher | undefined,
+        getEqualityMatcher?: (attributeType: OBJECT_IDENTIFIER) => Matcher | undefined,
     ): boolean {
         return compareRoleSpecCertIdentifier(this, other, getEqualityMatcher);
     }

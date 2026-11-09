@@ -2,8 +2,7 @@ import { ObjectIdentifier, type ASN1Element } from "@wildboar/asn1";
 import { DER, _encodeUTF8String } from "@wildboar/asn1/functional";
 import { evaluateEquality, evaluateApprox, evaluateMatchingRuleAssertion, evaluateFilter, type EvaluateFilterSettings } from "./evaluateFilter.mjs";
 import { CannotPerformExactly } from "../errors.mjs";
-import type EqualityMatcher from "../types/EqualityMatcher.mjs";
-import type SubstringsMatcher from "../types/SubstringsMatcher.mjs";
+import type { ContextMatcher, Matcher } from "../types/matching.mjs";
 import type { Filter } from "../modules/DirectoryAbstractService/Filter.ta.mjs";
 import { AttributeValueAssertion } from "../modules/InformationFramework/AttributeValueAssertion.ta.mjs";
 import { AttributeTypeAssertion } from "../modules/InformationFramework/AttributeTypeAssertion.ta.mjs";
@@ -43,6 +42,10 @@ function family (values: string[], contextual: string[] = []): EntryInformation[
     }])];
 }
 
+function storedValue (valueOrValues: AttributeTypeAndValue | Attribute): ASN1Element {
+    return "values" in valueOrValues ? valueOrValues.values[0] : valueOrValues.value;
+}
+
 function compare (_assertion: ASN1Element, stored: ASN1Element): boolean | undefined {
     if (stored.utf8String === "throw") {
         throw new Error("Cannot decode or evaluate this value");
@@ -50,18 +53,16 @@ function compare (_assertion: ASN1Element, stored: ASN1Element): boolean | undef
     return stored.utf8String === "unknown" ? undefined : stored.utf8String === "true";
 }
 
-function settings (kind: Kind = "equality", matchedValuesOnly: boolean = false): EvaluateFilterSettings {
-    // The legacy callback types omit UNDEFINED, but runtime matchers return it.
-    const matcher = compare as EqualityMatcher;
+const compareStored: Matcher = (_assertion, valueOrValues) => compare(value("unused"), storedValue(valueOrValues));
+const alwaysTrueContext: ContextMatcher = () => true;
+
+function settings (_kind: Kind = "equality", matchedValuesOnly: boolean = false): EvaluateFilterSettings {
     return {
-        getEqualityMatcher: () => matcher,
-        getApproximateMatcher: () => matcher,
-        getOrderingMatcher: () => (assertion, stored) => {
-            const result = compare(assertion, stored);
-            return result === undefined ? NaN : result ? 0 : kind === "lessOrEqual" ? -1 : 1;
-        },
-        getSubstringsMatcher: () => compare as SubstringsMatcher,
-        getContextMatcher: () => () => true,
+        getEqualityMatcher: () => compareStored,
+        getApproximateMatcher: () => compareStored,
+        getOrderingMatcher: () => compareStored,
+        getSubstringsMatcher: () => compareStored,
+        getContextMatcher: () => alwaysTrueContext,
         determineAbsentMatch: () => true,
         isMatchingRuleCompatibleWithAttributeType: () => true,
         isAttributeSubtype: (a, b) => a.isEqualTo(b),
@@ -138,7 +139,28 @@ describe("indeterminate filter evaluation (H8)", () => {
         ]) } };
         const options: EvaluateFilterSettings = {
             ...settings(),
-            getSubstringsMatcher: () => ((assertion) => assertion.utf8String === "unknown" ? undefined : false) as SubstringsMatcher,
+            getSubstringsMatcher: () => (assertion) => {
+                const items = Array.isArray(assertion) ? assertion : [];
+                let indeterminate = false;
+                for (const item of items) {
+                    const el = "any_" in item
+                        ? item.any_
+                        : "initial" in item
+                            ? item.initial
+                            : "final" in item
+                                ? item.final
+                                : undefined;
+                    if (!el) {
+                        continue;
+                    }
+                    if (el.utf8String === "unknown") {
+                        indeterminate = true;
+                        continue;
+                    }
+                    return false;
+                }
+                return indeterminate ? undefined : true;
+            },
         };
         expect(evaluateFilter(filter, family(["value"]), options).matched).toBe(false);
     });
@@ -158,9 +180,11 @@ describe("indeterminate filter evaluation (H8)", () => {
             : leaf(kind, { selectedContexts: [assertion] });
         const options: EvaluateFilterSettings = {
             ...settings(kind === "contextPresent" ? "equality" : kind, true),
-            getContextMatcher: () => (_assertion, stored) => {
-                if (stored.utf8String === "bad") {
-                    throw new Error("invalid context");
+            getContextMatcher: () => (_assertion, values) => {
+                for (const stored of values) {
+                    if (stored.utf8String === "bad") {
+                        throw new Error("invalid context");
+                    }
                 }
                 return true;
             },

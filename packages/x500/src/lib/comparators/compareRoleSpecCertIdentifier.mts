@@ -1,5 +1,6 @@
 import type { OBJECT_IDENTIFIER } from "@wildboar/asn1";
-import type EqualityMatcher from "../types/EqualityMatcher.mjs";
+import type { Matcher } from "../types/matching.mjs";
+import { valueEqualityMatcher } from "../matching/valueEqualityMatcher.mjs";
 import type {
     RoleSpecCertIdentifier,
 } from "../modules/AttributeCertificateDefinitions/RoleSpecCertIdentifier.ta.mjs";
@@ -20,12 +21,13 @@ export
 function compareRoleSpecCertIdentifier (
     a: RoleSpecCertIdentifier,
     b: RoleSpecCertIdentifier,
-    getEqualityMatcher?: (attributeType: OBJECT_IDENTIFIER) => EqualityMatcher | undefined,
+    getEqualityMatcher?: (attributeType: OBJECT_IDENTIFIER) => Matcher | undefined,
 ): boolean {
-    if (!compareGeneralName(a.roleName, b.roleName, getEqualityMatcher)) {
+    const namingMatcher = valueEqualityMatcher(getEqualityMatcher);
+    if (!compareGeneralName(a.roleName, b.roleName, namingMatcher)) {
         return false;
     }
-    if (!compareGeneralName(a.roleCertIssuer, b.roleCertIssuer, getEqualityMatcher)) {
+    if (!compareGeneralName(a.roleCertIssuer, b.roleCertIssuer, namingMatcher)) {
         return false;
     }
     if (Boolean(a.roleCertSerialNumber) !== Boolean(b.roleCertSerialNumber)) {

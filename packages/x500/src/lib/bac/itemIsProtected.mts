@@ -16,6 +16,7 @@ import {
     _decode_DistinguishedName,
 } from "../modules/InformationFramework/DistinguishedName.ta.mjs";
 import { compareRDNSequence } from "@wildboar/dn";
+import { valueEqualityMatcher } from "../matching/valueEqualityMatcher.mjs";
 import { evaluateFilter, type EvaluateFilterSettings } from "../utils/evaluateFilter.mjs";
 import {
     EntryInformation,
@@ -85,8 +86,10 @@ function itemIsProtected (
                     if (!request.value.type_.isEqualTo(av.type_)) {
                         return false;
                     }
-                    const matcher = settings.getEqualityMatcher(av.type_) ?? compareElements;
-                    return matcher(av.value, request.value.value);
+                    const matcher = settings.getEqualityMatcher(av.type_);
+                    return matcher
+                        ? matcher(av.value, request.value, settings.getEqualityMatcher) === true
+                        : compareElements(av.value, request.value.value);
                 })
             || (
                 requester
@@ -105,7 +108,7 @@ function itemIsProtected (
                         return compareRDNSequence(
                             dn,
                             requester.dn,
-                            settings.getEqualityMatcher,
+                            valueEqualityMatcher(settings.getEqualityMatcher),
                         );
                     } catch {
                         return false;

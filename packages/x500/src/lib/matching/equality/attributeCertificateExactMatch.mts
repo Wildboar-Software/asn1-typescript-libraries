@@ -1,6 +1,5 @@
 import type { ASN1Element } from "@wildboar/asn1";
 import type { AttributeType } from "../../modules/InformationFramework/index.mjs";
-import { valueEqualityMatcher } from "../valueEqualityMatcher.mjs";
 import { bytesEqual } from "../constantTime.mjs";
 import {
     createEqualityMatcher,
@@ -55,7 +54,6 @@ function attributeCertificateExactMatchTyped (
 ): boolean {
     const stored = readDecoded(value, _decode_AttributeCertificate);
     const constantTime = flags & MATCH_FLAG_CONSTANT_TIME;
-    const getEqualityMatcher = valueEqualityMatcher(getMatcher, flags);
     const serialMatches = bytesEqual(
         assertion.serialNumber,
         stored.toBeSigned.serialNumber,
@@ -67,7 +65,7 @@ function attributeCertificateExactMatchTyped (
     const issuerMatches = compareAttCertIssuer(
         assertion.issuer,
         stored.toBeSigned.issuer,
-        getEqualityMatcher,
+        getMatcher,
     );
     return serialMatches && issuerMatches;
 }

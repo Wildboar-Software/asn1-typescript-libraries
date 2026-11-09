@@ -60,24 +60,19 @@
 export * from "./lib/errors.mjs";
 export type { ACDFTupleExtended } from "./lib/types/ACDFTupleExtended.mjs";
 export type { ACDFTuple } from "./lib/types/ACDFTuple.mjs";
-export type { ApproxMatcher } from "./lib/types/ApproxMatcher.mjs";
 export type { ATVAC } from "./lib/types/AttributeTypeValueAndContextsTuple.mjs";
 export type { ChainedRequest } from "./lib/types/ChainedRequest.mjs";
 export type { ChainedResultOrError } from "./lib/types/ChainedResultOrError.mjs";
 export type { ChainedResult } from "./lib/types/ChainedResult.mjs";
 export type { Chained } from "./lib/types/Chained.mjs";
-export type { ContextMatcher } from "./lib/types/ContextMatcher.mjs";
-export type { EqualityMatcher } from "./lib/types/EqualityMatcher.mjs";
 export type { Error_ } from "./lib/types/Error_.mjs";
-export type { OrderingMatcher } from "./lib/types/OrderingMatcher.mjs";
 export type { ProtectedItem } from "./lib/types/ProtectedItem.mjs";
 export type { Request } from "./lib/types/Request.mjs";
 export type { ResultOrError } from "./lib/types/ResultOrError.mjs";
 export type { Result } from "./lib/types/Result.mjs";
 export type { StringDecoder } from "./lib/types/StringDecoder.mjs";
 export type { StringEncoder } from "./lib/types/StringEncoder.mjs";
-export { SubstringSelection } from "./lib/types/SubstringSelection.mjs";
-export type { SubstringsMatcher } from "./lib/types/SubstringsMatcher.mjs";
+export * from "./lib/types/matching.mjs";
 export {
     bacACDF,
     PERMISSION_CATEGORY_ADD,

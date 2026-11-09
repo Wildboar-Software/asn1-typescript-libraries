@@ -286,7 +286,7 @@ function evaluateCertificateAssertion (
     const pathToName = assertion.pathToName;
     if (pathToName) {
         const nc = ext(NC_ID, decodeNC);
-        if (nc && !namesWithinNameConstraints([{ directoryName: pathToName }], nc, getEqualityMatcher)) {
+        if (nc && !namesWithinNameConstraints([{ directoryName: pathToName }], nc, getMatcher)) {
             return false;
         }
     }
@@ -302,7 +302,7 @@ function evaluateCertificateAssertion (
         if (!namesWithinNameConstraints([
             ...(tbs.subject.rdnSequence.length ? [{ directoryName: tbs.subject }] : []),
             ...(sans ?? []),
-        ], assertion.nameConstraints, getEqualityMatcher)) {
+        ], assertion.nameConstraints, getMatcher)) {
             return false;
         }
     }

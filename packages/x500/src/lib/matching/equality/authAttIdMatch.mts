@@ -1,6 +1,5 @@
 import type { ASN1Element } from "@wildboar/asn1";
 import type { AttributeType } from "../../modules/InformationFramework/index.mjs";
-import { valueEqualityMatcher } from "../valueEqualityMatcher.mjs";
 import {
     createEqualityMatcher,
     type Matcher,
@@ -48,7 +47,6 @@ function authAttIdMatchTyped (
     flags: number = 0,
 ): boolean {
     const val = readDecoded(value, _decode_AttributeCertificate);
-    const getEqualityMatcher = valueEqualityMatcher(getMatcher, flags);
     const ext: Extension | undefined = val.toBeSigned.extensions
         ?.find((ext: Extension): boolean => (ext.extnId.isEqualTo(id_ce_authorityAttributeIdentifier)));
     if (!ext) {
@@ -69,7 +67,7 @@ function authAttIdMatchTyped (
     const aSorted = ass.sort((a, b) => (
         a.serial.reduce((p, c) => (p + c), 0) - b.serial.reduce((p, c) => (p + c), 0)
     ));
-    return aSorted.every((a, i) => compareIssuerSerial(a, bSorted[i], getEqualityMatcher));
+    return aSorted.every((a, i) => compareIssuerSerial(a, bSorted[i], getMatcher));
 }
 
 authAttIdMatchTyped satisfies TypedEquationFunction<AuthorityAttributeIdentifierSyntax>;

@@ -1,10 +1,11 @@
-import type EqualityMatcher from "../types/EqualityMatcher.mjs";
 import type { OBJECT_IDENTIFIER } from "@wildboar/asn1";
 import type {
     DistinguishedName,
 } from "../modules/InformationFramework/DistinguishedName.ta.mjs";
 import { compareRDNSequence } from "@wildboar/dn";
 import compareElements from "../comparators/compareElements.mjs";
+import type { Matcher } from "../types/matching.mjs";
+import { valueEqualityMatcher } from "../matching/valueEqualityMatcher.mjs";
 
 /**
  * @summary Determine whether a distinguished name falls within a subtree of the DIT
@@ -30,7 +31,7 @@ function dnWithinSubtree (
     dit: DistinguishedName,
     minimum: number = 0,
     maximum: number = Number.MAX_SAFE_INTEGER,
-    getEqualityMatcher?: (attributeType: OBJECT_IDENTIFIER) => EqualityMatcher | undefined,
+    getEqualityMatcher?: (attributeType: OBJECT_IDENTIFIER) => Matcher | undefined,
 ): boolean {
     if (dn.length < (dit.length + minimum)) {
         return false;
@@ -42,7 +43,7 @@ function dnWithinSubtree (
     return compareRDNSequence(
         dit,
         dn.slice(0, dit.length),
-        getEqualityMatcher ?? (() => compareElements),
+        valueEqualityMatcher(getEqualityMatcher) ?? (() => compareElements),
     );
 }
 

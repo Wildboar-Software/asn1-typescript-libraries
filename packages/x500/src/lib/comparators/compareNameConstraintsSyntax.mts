@@ -1,5 +1,5 @@
 import type { OBJECT_IDENTIFIER } from "@wildboar/asn1";
-import type EqualityMatcher from "../types/EqualityMatcher.mjs";
+import type { Matcher } from "../types/matching.mjs";
 import type {
     NameConstraintsSyntax,
 } from "../modules/CertificateExtensions/NameConstraintsSyntax.ta.mjs";
@@ -45,7 +45,7 @@ export
 function compareNameConstraintsSyntax (
     a: NameConstraintsSyntax,
     b: NameConstraintsSyntax,
-    getEqualityMatcher?: (attributeType: OBJECT_IDENTIFIER) => EqualityMatcher | undefined,
+    getEqualityMatcher?: (attributeType: OBJECT_IDENTIFIER) => Matcher | undefined,
     options?: CompareNameConstraintsSyntaxOptions,
 ): boolean {
     const exactOrdering: boolean = options?.ignoreSubtreeOrder !== true;
