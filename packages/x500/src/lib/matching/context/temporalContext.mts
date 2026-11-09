@@ -380,6 +380,33 @@ function timeSpecificationContains (
         return false;
     }
     const notThisTime = spec.notThisTime ?? TimeSpecification._default_value_for_notThisTime;
+    /*
+    I am leaving the AI-generated comment below for you in case you can
+    understand it, but here is my dumb-dumb explanation, written by a human:
+
+    notThisTime applies to the stored value, not the assertion. So you can store
+    a value like NOT between 9 AM to 5 PM (business hours), meaning "outside of
+    business hours."
+
+    entirely is part of the assertion, not the stored value. If a user asserts
+    `entirely` against the above stored value (outside of business hours), we
+    cannot simply check "entirely within business hours" then invert that. We
+    have to check that the assertion falls _entirely outside of business hours_.
+    The former tolerates some overlap, which is wrong.
+
+    OpenAI Sol 6.1's approach below is: if notThisTime, we invert `entirely` so
+    that we check if there _is_ overlap between the asserted time and the
+    stored timespan (e.g. no part of the assertion overlaps with business
+    hours). Then at the end, we invert that result, which makes it not match if
+    there is any overlap (hence, the assertion does not fall _entirely_ outside
+    of business hours).
+
+    I think this function could use better naming for variables. It is not
+    clear what `result` means exactly.
+    */
+    // I ⊆ complement(S) iff I does not overlap S. I overlaps complement(S)
+    // iff I is not entirely covered by S. Negating the same predicate is wrong
+    // for an interval that partly overlaps both S and its complement.
     const requireEntireCoverage = notThisTime ? !entirely : entirely;
     const matchesStoredTimes = intervalMatchesStoredTimes(
         spec,
