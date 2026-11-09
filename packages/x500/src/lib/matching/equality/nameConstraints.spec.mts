@@ -61,4 +61,92 @@ describe("name-constraint failure handling (H7)", () => {
         expect(namesWithinNameConstraints([{ uniformResourceIdentifier: "https://example.com/" }], domain)).toBe(false);
         expect(namesWithinNameConstraints([{ uniformResourceIdentifier: "https://sub.example.com/" }], domain)).toBe(true);
     });
+
+    it("reuses per-form subtrees for every name in one call", () => {
+        const constraints = new NameConstraintsSyntax(
+            [
+                new GeneralSubtree({ dNSName: "example.com" }),
+                new GeneralSubtree({ uniformResourceIdentifier: ".example.com" }),
+            ],
+            [ new GeneralSubtree({ dNSName: "blocked.example.com" }) ],
+        );
+        expect(namesWithinNameConstraints([
+            { dNSName: "good.example.com" },
+            { uniformResourceIdentifier: "https://a.example.com/x" },
+            { rfc822Name: "alice@other.net" },
+        ], constraints)).toBe(true);
+        expect(namesWithinNameConstraints([
+            { dNSName: "good.example.com" },
+            { dNSName: "blocked.example.com" },
+            { rfc822Name: "alice@other.net" },
+        ], constraints)).toBe(false);
+        expect(namesWithinNameConstraints([
+            { uniformResourceIdentifier: "https://a.example.com/x" },
+            { uniformResourceIdentifier: "https://example.com/x" },
+        ], constraints)).toBe(false);
+        expect(namesWithinNameConstraints([], constraints)).toBe(true);
+    });
+
+    it("applies a cached URI base to each name's own distance", () => {
+        const constraints = new NameConstraintsSyntax([
+            new GeneralSubtree({ uniformResourceIdentifier: ".example.com" }, 2),
+        ], [
+            new GeneralSubtree({ uniformResourceIdentifier: "blocked.example.com" }),
+        ]);
+        expect(namesWithinNameConstraints([
+            { uniformResourceIdentifier: "https://a.b.example.com/" },
+            { uniformResourceIdentifier: "https://c.d.example.com/path" },
+        ], constraints)).toBe(true);
+        expect(namesWithinNameConstraints([
+            { uniformResourceIdentifier: "https://a.b.example.com/" },
+            { uniformResourceIdentifier: "https://a.example.com/" },
+        ], constraints)).toBe(false);
+        expect(namesWithinNameConstraints([
+            { uniformResourceIdentifier: "https://ok.example.com/" },
+            { uniformResourceIdentifier: "https://blocked.example.com/" },
+        ], new NameConstraintsSyntax(
+            [ new GeneralSubtree({ uniformResourceIdentifier: ".example.com" }) ],
+            [ new GeneralSubtree({ uniformResourceIdentifier: "blocked.example.com" }) ],
+        ))).toBe(false);
+    });
+
+    it("accepts a URI that matches an earlier base when a later base is invalid", () => {
+        const constraints = new NameConstraintsSyntax([
+            new GeneralSubtree({ uniformResourceIdentifier: "example.com" }),
+            new GeneralSubtree({ uniformResourceIdentifier: "has space" }),
+        ]);
+        const eitherHost = new NameConstraintsSyntax([
+            new GeneralSubtree({ uniformResourceIdentifier: "other.net" }),
+            new GeneralSubtree({ uniformResourceIdentifier: "example.com" }),
+        ]);
+        expect(namesWithinNameConstraints([
+            { uniformResourceIdentifier: "https://example.com/a" },
+        ], eitherHost)).toBe(true);
+        expect(namesWithinNameConstraints([
+            { uniformResourceIdentifier: "https://example.com/a" },
+            { uniformResourceIdentifier: "https://example.com/b" },
+        ], constraints)).toBe(true);
+        const invalidFirst = new NameConstraintsSyntax([
+            new GeneralSubtree({ uniformResourceIdentifier: "has space" }),
+            new GeneralSubtree({ uniformResourceIdentifier: "example.com" }),
+        ]);
+        expect(namesWithinNameConstraints([
+            { uniformResourceIdentifier: "https://example.com/a" },
+        ], invalidFirst)).toBe(false);
+    });
+
+    it("fails closed when one base or one name has no name form", () => {
+        const unknown = new BERElement(ASN1TagClass.context, ASN1Construction.primitive, 9, new Uint8Array([1]));
+        const constraints = new NameConstraintsSyntax([
+            new GeneralSubtree({ dNSName: "example.com" }),
+            new GeneralSubtree(unknown),
+        ]);
+        expect(namesWithinNameConstraints([{ dNSName: "a.example.com" }], constraints)).toBe(false);
+        expect(namesWithinNameConstraints([], constraints)).toBe(false);
+        const dnsOnly = new NameConstraintsSyntax([new GeneralSubtree({ dNSName: "example.com" })]);
+        expect(namesWithinNameConstraints([
+            { dNSName: "a.example.com" },
+            unknown,
+        ], dnsOnly)).toBe(false);
+    });
 });

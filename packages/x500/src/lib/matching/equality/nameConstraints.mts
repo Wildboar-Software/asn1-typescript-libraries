@@ -10,11 +10,6 @@ import {
     normalizeDNSName,
 } from "../../utils/gnWithinGeneralSubtree.mjs";
 
-const NAME_FORMS = [
-    "otherName", "rfc822Name", "dNSName", "x400Address", "directoryName",
-    "ediPartyName", "uniformResourceIdentifier", "iPAddress", "registeredID",
-] as const;
-
 type KeysOfUnion<T> = T extends unknown ? keyof T : never;
 
 type NameFormKey =
@@ -48,64 +43,175 @@ function supportedNameForm (form: NameFormKey): boolean {
         || form === srvNameFormKey; // SRVName
 }
 
+type FormSubtrees = {
+    permitted: GeneralSubtree[];
+    excluded: GeneralSubtree[];
+};
+
+/**
+ * Group constraint subtrees by name form once. Each name looks up that form.
+ * Order within each list is preserved so the first match still wins.
+ * `undefined` means a base is not a GeneralName choice; the caller fails closed.
+ */
+function subtreesByForm (
+    permitted: readonly GeneralSubtree[],
+    excluded: readonly GeneralSubtree[],
+): Map<NameFormKey, FormSubtrees> | undefined {
+    const byForm: Map<NameFormKey, FormSubtrees> = new Map();
+    const add = (subtree: GeneralSubtree, side: keyof FormSubtrees): boolean => {
+        const form = nameForm(subtree.base);
+        if (!form) {
+            return false;
+        }
+        let group = byForm.get(form);
+        if (!group) {
+            group = { permitted: [], excluded: [] };
+            byForm.set(form, group);
+        }
+        group[side].push(subtree);
+        return true;
+    };
+    for (const subtree of permitted) {
+        if (!add(subtree, "permitted")) {
+            return undefined;
+        }
+    }
+    for (const subtree of excluded) {
+        if (!add(subtree, "excluded")) {
+            return undefined;
+        }
+    }
+    return byForm;
+}
+
+type PreparedUriBase = {
+    readonly subdomainsOnly: boolean;
+    readonly base: string | undefined;
+    readonly labels: number;
+};
+
+type PreparedUriHost = {
+    readonly host: string;
+    readonly labels: number;
+};
+
+type NameConstraintCache = {
+    readonly byForm: Map<NameFormKey, FormSubtrees>;
+    readonly uriBases: Map<GeneralSubtree, PreparedUriBase>;
+    readonly uriHosts: Map<string, PreparedUriHost>;
+};
+
+function prepareUriBase (constraint: string): PreparedUriBase {
+    if (!constraint || /[\s/@:\\?#]/.test(constraint)) {
+        throw new Error("Invalid URI name constraint");
+    }
+    const subdomainsOnly = constraint.startsWith(".");
+    const base = normalizeDNSName(subdomainsOnly ? constraint.slice(1) : constraint);
+    return {
+        subdomainsOnly,
+        base,
+        labels: base ? countDNSLabels(base) : 0,
+    };
+}
+
+/**
+ * URI bases are independent of the name being tested, so each subtree is
+ * normalized the first time it is actually compared. Subtrees that `.some()`
+ * never reaches stay unparsed, including invalid ones behind an earlier match.
+ */
+function cachedUriBase (
+    subtree: GeneralSubtree,
+    constraint: string,
+    cache: Map<GeneralSubtree, PreparedUriBase>,
+): PreparedUriBase {
+    const cached = cache.get(subtree);
+    if (cached) {
+        return cached;
+    }
+    const prepared = prepareUriBase(constraint);
+    // An unusable base is not cached. The caller parses the name next, so a
+    // broken URI still fails before the DNS-host error.
+    if (prepared.base) {
+        cache.set(subtree, prepared);
+    }
+    return prepared;
+}
+
+function cachedUriHost (
+    uri: string,
+    cache: Map<string, PreparedUriHost>,
+): PreparedUriHost {
+    const cached = cache.get(uri);
+    if (cached) {
+        return cached;
+    }
+    const host = normalizeDNSName(new URL(uri).hostname);
+    if (!host || /^[\d.]+$/.test(host) || host.includes(":")) {
+        throw new Error("URI name constraints require a DNS host");
+    }
+    const prepared: PreparedUriHost = {
+        host,
+        labels: countDNSLabels(host),
+    };
+    cache.set(uri, prepared);
+    return prepared;
+}
+
 function withinSubtree (
     name: GeneralName,
     subtree: GeneralSubtree,
+    cache: NameConstraintCache,
     getEqualityMatcher?: (type: OBJECT_IDENTIFIER) => Matcher | undefined,
 ): boolean {
     if ("uniformResourceIdentifier" in name && "uniformResourceIdentifier" in subtree.base) {
         // RFC 5280 §4.2.1.10 constrains URI DNS hosts, not complete URI strings.
-        const constraint = subtree.base.uniformResourceIdentifier;
-        if (!constraint || /[\s/@:\\?#]/.test(constraint)) {
-            throw new Error("Invalid URI name constraint");
-        }
-        const subdomainsOnly = constraint.startsWith(".");
-        const base = normalizeDNSName(subdomainsOnly ? constraint.slice(1) : constraint);
-        const host = normalizeDNSName(new URL(name.uniformResourceIdentifier).hostname);
-        if (!base || !host || /^[\d.]+$/.test(host) || host.includes(":")) {
+        const base = cachedUriBase(subtree, subtree.base.uniformResourceIdentifier, cache.uriBases);
+        const host = cachedUriHost(name.uniformResourceIdentifier, cache.uriHosts);
+        if (!base.base) {
             throw new Error("URI name constraints require a DNS host");
         }
-        const distance = countDNSLabels(host) - countDNSLabels(base);
+        const distance = host.labels - base.labels;
         if (distance < Number(subtree.minimum ?? 0)
             || distance > Number(subtree.maximum ?? Infinity)) {
             return false;
         }
-        return subdomainsOnly
-            ? host !== base && dnsNameEqualsOrSubdomain(host, base)
-            : host === base;
+        return base.subdomainsOnly
+            ? host.host !== base.base && dnsNameEqualsOrSubdomain(host.host, base.base)
+            : host.host === base.base;
     }
     return gnWithinGeneralSubtree(name, subtree, getEqualityMatcher);
 }
 
 function nameWithinNameConstraints (
     name: GeneralName,
-    permitted: readonly GeneralSubtree[],
-    excluded: readonly GeneralSubtree[],
+    cache: NameConstraintCache,
     getEqualityMatcher?: (type: OBJECT_IDENTIFIER) => Matcher | undefined,
 ): boolean {
     const form = nameForm(name);
     if (!form) {
         return false;
     }
-    const permittedForForm = permitted.filter((subtree) => nameForm(subtree.base) === form);
-    const excludedForForm = excluded.filter((subtree) => nameForm(subtree.base) === form);
-    if (permittedForForm.length === 0 && excludedForForm.length === 0) {
+    const group = cache.byForm.get(form);
+    if (!group) {
         return true;
     }
     if (!supportedNameForm(form)) {
         return false;
     }
-    if (excludedForForm.some((subtree) => withinSubtree(name, subtree, getEqualityMatcher))) {
+    if (group.excluded.some((subtree) => withinSubtree(name, subtree, cache, getEqualityMatcher))) {
         return false;
     }
-    return permittedForForm.length === 0
-        || permittedForForm.some((subtree) => withinSubtree(name, subtree, getEqualityMatcher));
+    return group.permitted.length === 0
+        || group.permitted.some((subtree) => withinSubtree(name, subtree, cache, getEqualityMatcher));
 }
 
 /**
  * X.509 §9.4.2.2: every name must avoid all exclusions and belong to at least
  * one permitted subtree of its own form, if that form is constrained.
  * Unsupported applicable constraints and decoding failures fail closed.
+ *
+ * Subtrees are grouped by name form once per call and reused for every name.
+ * URI constraint bases and name hosts are normalized once and reused too.
  */
 export
 function namesWithinNameConstraints (
@@ -116,11 +222,17 @@ function namesWithinNameConstraints (
     const permitted = constraints.permittedSubtrees ?? [];
     const excluded = constraints.excludedSubtrees ?? [];
     try {
-        if ([ ...permitted, ...excluded ].some((subtree) => nameForm(subtree.base) === undefined)) {
-            // If the subtree is not a supported name form, fail closed.
+        const byForm = subtreesByForm(permitted, excluded);
+        if (!byForm) {
+            // A base that is not a GeneralName choice fails closed.
             return false;
         }
-        return names.every((name) => nameWithinNameConstraints(name, permitted, excluded, getEqualityMatcher));
+        const cache: NameConstraintCache = {
+            byForm,
+            uriBases: new Map(),
+            uriHosts: new Map(),
+        };
+        return names.every((name) => nameWithinNameConstraints(name, cache, getEqualityMatcher));
     } catch {
         return false;
     }
