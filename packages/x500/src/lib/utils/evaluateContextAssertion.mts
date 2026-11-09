@@ -57,15 +57,22 @@ function evaluateContextAssertion (
 ): boolean {
     const matcher = getContextMatcher(ca.contextType) ?? compareElementsContextMatcher;
     const isAbsentMatch: boolean = determineAbsentMatch(ca.contextType);
-    const storedValues: ASN1Element[] = [];
+    let storedValues: ASN1Element[] | undefined;
     for (const context of contexts) {
-        if (context.contextType.isEqualTo(ca.contextType)) {
-            storedValues.push(...context.contextValues);
+        if (!context.contextType.isEqualTo(ca.contextType)) {
+            continue;
+        }
+        if (!storedValues) {
+            // Reuse the first matching context's array; copy only if another
+            // context of this type appears, so the original is never mutated.
+            storedValues = context.contextValues;
+        } else {
+            storedValues = storedValues.concat(context.contextValues);
         }
     }
     // A ContextAssertion is true for a particular attribute value if:
     // b) the attribute value contains no contexts of the asserted contextType; or
-    if (storedValues.length === 0) {
+    if (!storedValues || storedValues.length === 0) {
         /**
          * This is not documented in the section describing `ContextAssertion`s,
          * but rather, in the definition of a context type, in Section 13.9.2 of

@@ -450,10 +450,11 @@ describe("BAC constraints before precedence (H1)", () => {
             ])],
         };
 
+        // omitted entryAttributes: restrictedBy is not evaluated, so the grant stands
         expect(bacACDF(
             [descriptionRestrictedAddGrant], undefined, additionWithoutEntryData,
             [PERMISSION_CATEGORY_ADD], matchingSettings,
-        ).authorized).toBe(false);
+        ).authorized).toBe(true);
         expect(bacACDF(
             [descriptionRestrictedAddGrant], undefined, additionWithAnEmptyEntry,
             [PERMISSION_CATEGORY_ADD], matchingSettings,

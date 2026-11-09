@@ -99,10 +99,11 @@ function applyACDFConstraints (
 
     addGranted = (permissions[grantAdd] === TRUE_BIT);
     if (adds && ("value" in request)) {
-        // A constrained grant is discarded if restrictedBy cannot be
-        // established, including when post-operation entry attributes are
-        // not supplied.
-        const restrictedBy = addGranted
+        // At least in Meerkat DSA, we don't always have all the entry
+        // attributes available when evaluating restrictedBy. If this is not
+        // passed in, we do not evaluate this. If we didn't do this, any ACI
+        // item that had a restrictedBy constraint would deny every add.
+        const restrictedBy = (addGranted && request.entryAttributes)
             ? (items.restrictedBy ?? [])
             : [];
         for (const restriction of restrictedBy) {
@@ -115,7 +116,7 @@ function applyACDFConstraints (
                 const matchesStored = (value: typeof request.value.value) => matcher
                     ? matcher(
                         request.value.value,
-                        new AttributeTypeAndValue(restriction.valuesIn, value),
+                        new AttributeTypeAndValue(request.value.type_, value),
                         settings.getEqualityMatcher,
                     ) === true
                     : compareElements(request.value.value, value);
