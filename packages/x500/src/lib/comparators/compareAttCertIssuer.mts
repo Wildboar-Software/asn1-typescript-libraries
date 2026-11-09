@@ -1,4 +1,4 @@
-import type EqualityMatcher from "../types/EqualityMatcher.mjs";
+import type { Matcher } from "../types/matching.mjs";
 import { type OBJECT_IDENTIFIER, compareBitStrings } from "@wildboar/asn1";
 import type {
     AttCertIssuer,
@@ -20,7 +20,7 @@ export
 function compareAttCertIssuer (
     a: AttCertIssuer,
     b: AttCertIssuer,
-    getEqualityMatcher?: (attributeType: OBJECT_IDENTIFIER) => EqualityMatcher | undefined,
+    getEqualityMatcher?: (attributeType: OBJECT_IDENTIFIER) => Matcher | undefined,
 ): boolean {
     if (Boolean(a.baseCertificateID) !== Boolean(b.baseCertificateID)) {
         return false;

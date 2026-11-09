@@ -1,4 +1,5 @@
-import type EqualityMatcher from "../types/EqualityMatcher.mjs";
+import type { Matcher } from "../types/matching.mjs";
+import { valueEqualityMatcher } from "../matching/valueEqualityMatcher.mjs";
 import type { OBJECT_IDENTIFIER, External } from "@wildboar/asn1";
 import { ObjectIdentifier, ASN1Element, BERElement } from "@wildboar/asn1";
 import type {
@@ -283,13 +284,14 @@ export
 function gnWithinGeneralSubtree (
     gn: GeneralName,
     subtree: GeneralSubtree,
-    getEqualityMatcher?: (attributeType: OBJECT_IDENTIFIER) => EqualityMatcher | undefined,
+    getEqualityMatcher?: (attributeType: OBJECT_IDENTIFIER) => Matcher | undefined,
 ): boolean {
     const minimum: number = Number(subtree.minimum ?? 0);
     const maximum: number = (subtree.maximum === undefined) ? Infinity : Number(subtree.maximum);
     if (maximum < minimum) {
         return false;
     }
+    const namingMatcher = valueEqualityMatcher(getEqualityMatcher) ?? (() => compareElements);
     if (("otherName" in gn) && ("otherName" in subtree.base)) {
         if (minimum > 0) {
             return false;
@@ -316,7 +318,7 @@ function gnWithinGeneralSubtree (
         return compareGeneralName(
             gn,
             subtree.base,
-            getEqualityMatcher ?? (() => compareElements),
+            namingMatcher,
         );
     }
     else if (("dNSName" in gn) && ("dNSName" in subtree.base)) {
@@ -360,7 +362,7 @@ function gnWithinGeneralSubtree (
         return compareRDNSequence(
             base,
             entry.slice(0, base.length),
-            getEqualityMatcher ?? (() => compareElements),
+            namingMatcher,
         );
     } else if (("registeredID" in gn) && ("registeredID" in subtree.base)) {
         const gn_arcs: number[] = gn.registeredID.nodes;
@@ -386,7 +388,7 @@ function gnWithinGeneralSubtree (
         return compareGeneralName(
             gn,
             subtree.base,
-            getEqualityMatcher ?? (() => compareElements),
+            namingMatcher,
         );
     }
 }

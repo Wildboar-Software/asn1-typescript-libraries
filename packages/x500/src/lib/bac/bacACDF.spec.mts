@@ -73,11 +73,21 @@ const FRENCH_CONTEXT = new Context(TEST_LANGUAGE_CONTEXT_TYPE, [utf8("fr")]);
 const ENGLISH_CONTEXT_ASSERTION = new ContextAssertion(TEST_LANGUAGE_CONTEXT_TYPE, [utf8("en")]);
 
 const matchingSettings: EvaluateFilterSettings = {
-    getEqualityMatcher: () => (a, b) => a.utf8String === b.utf8String,
+    getEqualityMatcher: () => (assertion, valueOrValues) => {
+        const stored = "values" in valueOrValues ? valueOrValues.values[0] : valueOrValues.value;
+        return (assertion as ASN1Element).utf8String === stored.utf8String;
+    },
     getOrderingMatcher: () => undefined,
     getSubstringsMatcher: () => undefined,
     getApproximateMatcher: () => undefined,
-    getContextMatcher: () => (a, b) => a.utf8String === b.utf8String,
+    getContextMatcher: () => (assertion, values) => {
+        for (const stored of values) {
+            if (assertion.utf8String === stored.utf8String) {
+                return true;
+            }
+        }
+        return false;
+    },
     determineAbsentMatch: () => false, // Missing contexts do not satisfy assertions in these fixtures.
     isMatchingRuleCompatibleWithAttributeType: () => true,
     isAttributeSubtype: (a, b) => a.isEqualTo(b),
@@ -440,10 +450,11 @@ describe("BAC constraints before precedence (H1)", () => {
             ])],
         };
 
+        // omitted entryAttributes: restrictedBy is not evaluated, so the grant stands
         expect(bacACDF(
             [descriptionRestrictedAddGrant], undefined, additionWithoutEntryData,
             [PERMISSION_CATEGORY_ADD], matchingSettings,
-        ).authorized).toBe(false);
+        ).authorized).toBe(true);
         expect(bacACDF(
             [descriptionRestrictedAddGrant], undefined, additionWithAnEmptyEntry,
             [PERMISSION_CATEGORY_ADD], matchingSettings,

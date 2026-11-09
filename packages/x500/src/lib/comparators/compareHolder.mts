@@ -1,5 +1,5 @@
 import { type OBJECT_IDENTIFIER, compareBitStrings } from "@wildboar/asn1";
-import type EqualityMatcher from "../types/EqualityMatcher.mjs";
+import type { Matcher } from "../types/matching.mjs";
 import type {
     Holder,
 } from "../modules/AttributeCertificateDefinitions/Holder.ta.mjs";
@@ -20,7 +20,7 @@ export
 function compareHolder (
     a: Holder,
     b: Holder,
-    getEqualityMatcher?: (attributeType: OBJECT_IDENTIFIER) => EqualityMatcher | undefined,
+    getEqualityMatcher?: (attributeType: OBJECT_IDENTIFIER) => Matcher | undefined,
 ): boolean {
     if (Boolean(a.baseCertificateID) !== Boolean(b.baseCertificateID)) {
         return false;

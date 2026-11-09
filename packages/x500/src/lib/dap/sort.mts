@@ -1,5 +1,5 @@
 import type { OBJECT_IDENTIFIER, ASN1Element } from "@wildboar/asn1";
-import type OrderingMatcher from "../types/OrderingMatcher.mjs";
+import type { Matcher } from "../types/matching.mjs";
 import type {
     SortKey,
 } from "../modules/DirectoryAbstractService/SortKey.ta.mjs";
@@ -9,8 +9,37 @@ import type {
 import type {
     Attribute,
 } from "../modules/InformationFramework/Attribute.ta.mjs";
+import { AttributeTypeAndValue } from "../modules/InformationFramework/AttributeTypeAndValue.ta.mjs";
 import type ATVAC from "../types/AttributeTypeValueAndContextsTuple.mjs";
 import getValueTuplesFromAttribute from "../utils/getValueTuplesFromAttribute.mjs";
+
+/**
+ * TRUE iff `value` is strictly less than `assertion` under `orderer`.
+ * The default ordering matcher is TRUE when the stored value is less
+ * than the presented value.
+ */
+function valueLessThan (
+    orderer: Matcher,
+    type: OBJECT_IDENTIFIER,
+    assertion: ASN1Element,
+    value: ASN1Element,
+): boolean {
+    return orderer(assertion, new AttributeTypeAndValue(type, value)) === true;
+}
+
+function lowestValue (
+    orderer: Matcher,
+    type: OBJECT_IDENTIFIER,
+    values: ASN1Element[],
+): ASN1Element {
+    let lowest = values[0];
+    for (let i = 1; i < values.length; i++) {
+        if (valueLessThan(orderer, type, lowest, values[i])) {
+            lowest = values[i];
+        }
+    }
+    return lowest;
+}
 
 /**
  * @summary Sort entries via sort keys of a paged results request.
@@ -46,7 +75,7 @@ function sort (
     keys: SortKey[],
     a: EntryInformation,
     b: EntryInformation,
-    getOrderingMatcher: (attributeType: OBJECT_IDENTIFIER) => OrderingMatcher | undefined,
+    getOrderingMatcher: (attributeType: OBJECT_IDENTIFIER) => Matcher | undefined,
     onlyRDN: boolean = false,
 ): number {
     const avalues: ATVAC[] = onlyRDN
@@ -94,12 +123,14 @@ function sort (
             return -1;
         }
 
-        const lowestAValue: ASN1Element = relevantAValues.sort((a, b) => orderer(a, b))[0];
-        const lowestBValue: ASN1Element = relevantBValues.sort((a, b) => orderer(a, b))[0];
+        const lowestAValue: ASN1Element = lowestValue(orderer, key.type_, relevantAValues);
+        const lowestBValue: ASN1Element = lowestValue(orderer, key.type_, relevantBValues);
 
-        const result: number = orderer(lowestAValue, lowestBValue);
-        if (result !== 0) {
-            return result;
+        if (valueLessThan(orderer, key.type_, lowestBValue, lowestAValue)) {
+            return -1;
+        }
+        if (valueLessThan(orderer, key.type_, lowestAValue, lowestBValue)) {
+            return 1;
         }
     }
     return 0;

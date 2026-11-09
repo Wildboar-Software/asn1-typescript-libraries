@@ -1,6 +1,6 @@
 import type { OBJECT_IDENTIFIER } from "@wildboar/asn1";
+import type { GetDistinguishedValueMatcher } from "@wildboar/dn";
 import { AttributeTypeAndValue } from "../modules/InformationFramework/AttributeTypeAndValue.ta.mjs";
-import type EqualityMatcher from "../types/EqualityMatcher.mjs";
 import {
     MATCH_FLAG_USED_FOR_NAME,
     type Matcher,
@@ -19,7 +19,7 @@ export
 function valueEqualityMatcher (
     getEqualityMatcher?: (attributeType: OBJECT_IDENTIFIER) => Matcher | undefined,
     flags: number = 0,
-): ((attributeType: OBJECT_IDENTIFIER) => EqualityMatcher | undefined) | undefined {
+): GetDistinguishedValueMatcher | undefined {
     if (!getEqualityMatcher) {
         return undefined;
     }

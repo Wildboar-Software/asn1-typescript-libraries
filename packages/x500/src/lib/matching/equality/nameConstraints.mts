@@ -1,5 +1,5 @@
 import { ASN1Element, type DotDelimitedOidString, type OBJECT_IDENTIFIER, ObjectIdentifier } from "@wildboar/asn1";
-import type EqualityMatcher from "../../types/EqualityMatcher.mjs";
+import type { Matcher } from "../../types/matching.mjs";
 import type { GeneralName } from "../../modules/CertificateExtensions/GeneralName.ta.mjs";
 import type { GeneralSubtree } from "../../modules/CertificateExtensions/GeneralSubtree.ta.mjs";
 import type { NameConstraintsSyntax } from "../../modules/CertificateExtensions/NameConstraintsSyntax.ta.mjs";
@@ -51,7 +51,7 @@ function supportedNameForm (form: NameFormKey): boolean {
 function withinSubtree (
     name: GeneralName,
     subtree: GeneralSubtree,
-    getEqualityMatcher?: (type: OBJECT_IDENTIFIER) => EqualityMatcher | undefined,
+    getEqualityMatcher?: (type: OBJECT_IDENTIFIER) => Matcher | undefined,
 ): boolean {
     if ("uniformResourceIdentifier" in name && "uniformResourceIdentifier" in subtree.base) {
         // RFC 5280 §4.2.1.10 constrains URI DNS hosts, not complete URI strings.
@@ -81,7 +81,7 @@ function nameWithinNameConstraints (
     name: GeneralName,
     permitted: readonly GeneralSubtree[],
     excluded: readonly GeneralSubtree[],
-    getEqualityMatcher?: (type: OBJECT_IDENTIFIER) => EqualityMatcher | undefined,
+    getEqualityMatcher?: (type: OBJECT_IDENTIFIER) => Matcher | undefined,
 ): boolean {
     const form = nameForm(name);
     if (!form) {
@@ -111,7 +111,7 @@ export
 function namesWithinNameConstraints (
     names: readonly GeneralName[],
     constraints: NameConstraintsSyntax,
-    getEqualityMatcher?: (type: OBJECT_IDENTIFIER) => EqualityMatcher | undefined,
+    getEqualityMatcher?: (type: OBJECT_IDENTIFIER) => Matcher | undefined,
 ): boolean {
     const permitted = constraints.permittedSubtrees ?? [];
     const excluded = constraints.excludedSubtrees ?? [];

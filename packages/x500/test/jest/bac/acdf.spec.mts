@@ -29,7 +29,7 @@ import {
     AuthenticationLevel_basicLevels_level_simple,
     AuthenticationLevel_basicLevels_level_strong,
 } from "../../../src/lib/modules/BasicAccessControl/AuthenticationLevel-basicLevels-level.ta.mjs";
-import type EqualityMatcher from "../../../src/lib/types/EqualityMatcher.mjs";
+import type { Matcher } from "../../../src/lib/types/matching.mjs";
 import {
     ACIItem, type ACIItem_itemOrUserFirst
 } from "../../../src/lib/modules/BasicAccessControl/index.mjs";
@@ -237,14 +237,14 @@ const AUTH_LEVEL_NONE: AuthenticationLevel = {
     ),
 };
 
-type EqualityMatcherGetter = (attributeType: OBJECT_IDENTIFIER) => EqualityMatcher | undefined;
+type EqualityMatcherGetter = (attributeType: OBJECT_IDENTIFIER) => Matcher | undefined;
 
 const ALWAYS_EQUAL: EqualityMatcherGetter = () => () => true;
 const ALWAYS_UNEQUAL: EqualityMatcherGetter = () => () => false;
-const UTF8_EQUAL: EqualityMatcherGetter = () => (
-    assertion: ASN1Element,
-    value: ASN1Element,
-) => (assertion.utf8String.toLowerCase() === value.utf8String.toLowerCase());
+const UTF8_EQUAL: EqualityMatcherGetter = () => (assertion, valueOrValues) => {
+    const stored = "values" in valueOrValues ? valueOrValues.values[0] : valueOrValues.value;
+    return (assertion as ASN1Element).utf8String.toLowerCase() === stored.utf8String.toLowerCase();
+};
 const ALWAYS_UNRECOGNIZED: EqualityMatcherGetter = () => undefined;
 
 const PROTECTED_ITEMS_ENTRY: ProtectedItems = new ProtectedItems(
@@ -285,11 +285,11 @@ const ALL_DENY_ALL_USERS = new ItemPermission(
 );
 
 function getSettings (
-    matcherGetter: (attributeType: OBJECT_IDENTIFIER) => EqualityMatcher | undefined,
+    matcherGetter: (attributeType: OBJECT_IDENTIFIER) => Matcher | undefined,
 ): EvaluateFilterSettings {
     return {
         getEqualityMatcher: matcherGetter,
-        getOrderingMatcher: () => () => 1,
+        getOrderingMatcher: () => () => true,
         getSubstringsMatcher: () => () => true,
         getApproximateMatcher: () => () => true,
         getContextMatcher: () => () => true,

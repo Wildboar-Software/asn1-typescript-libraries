@@ -1,11 +1,8 @@
-import type EqualityMatcher from "../types/EqualityMatcher.mjs";
-import type { OBJECT_IDENTIFIER } from "@wildboar/asn1";
 import {
     type DistinguishedName,
     type RelativeDistinguishedName,
     AttributeTypeAndValue,
 } from "../modules/InformationFramework/index.mjs";
-import { compareRDNSequence } from "@wildboar/dn";
 import { commonName } from "../modules/SelectedAttributeTypes/index.mjs";
 import { DER } from "@wildboar/asn1/functional";
 import dnWithinSubtree from "./dnWithinSubtree.mjs";

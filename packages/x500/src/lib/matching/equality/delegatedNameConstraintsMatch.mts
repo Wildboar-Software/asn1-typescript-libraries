@@ -1,6 +1,5 @@
 import type { ASN1Element } from "@wildboar/asn1";
 import type { AttributeType } from "../../modules/InformationFramework/index.mjs";
-import { valueEqualityMatcher } from "../valueEqualityMatcher.mjs";
 import {
     createEqualityMatcher,
     type Matcher,
@@ -49,7 +48,6 @@ function delegatedNameConstraintsMatchTyped (
     flags: number = 0,
 ): boolean {
     const v = readDecoded(value, _decode_AttributeCertificate);
-    const getEqualityMatcher = valueEqualityMatcher(getMatcher, flags);
     const ext: Extension | undefined = v.toBeSigned.extensions
         ?.find((ext: Extension): boolean => (ext.extnId.isEqualTo(id_ce_delegatedNameConstraints)));
     if (!ext) {
@@ -58,7 +56,7 @@ function delegatedNameConstraintsMatchTyped (
     const el: DERElement = new DERElement();
     el.fromBytes(ext.extnValue);
     const storedValue: NameConstraintsSyntax = _decode_NameConstraintsSyntax(el);
-    return compareNameConstraintsSyntax(a, storedValue, getEqualityMatcher);
+    return compareNameConstraintsSyntax(a, storedValue, getMatcher);
 }
 
 delegatedNameConstraintsMatchTyped satisfies TypedEquationFunction<NameConstraintsSyntax>;

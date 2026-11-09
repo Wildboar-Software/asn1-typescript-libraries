@@ -1,7 +1,7 @@
-import type { ASN1Element, OBJECT_IDENTIFIER } from "@wildboar/asn1";
+import type { ASN1Element } from "@wildboar/asn1";
 import type { AttributeType } from "../../modules/InformationFramework/index.mjs";
 import { valueEqualityMatcher } from "../valueEqualityMatcher.mjs";
-import type EqualityMatcher from "../../types/EqualityMatcher.mjs";
+import { compareName, type GetDistinguishedValueMatcher } from "@wildboar/dn";
 import { bytesEqual, ctBytesEqual } from "../constantTime.mjs";
 import {
     createEqualityMatcher,
@@ -11,7 +11,6 @@ import {
     type TypedEquationFunction,
 } from "../../types/matching.mjs";
 import { readDecoded } from "../readValue.mjs";
-import { compareName } from "@wildboar/dn";
 import {
     CertificatePairExactAssertion,
     _decode_CertificatePairExactAssertion,
@@ -21,7 +20,7 @@ import {
     _decode_CertificatePair,
 } from "../../modules/AuthenticationFramework/CertificatePair.ta.mjs";
 
-type GetValueMatcher = ((attributeType: OBJECT_IDENTIFIER) => EqualityMatcher | undefined) | undefined;
+type GetValueMatcher = GetDistinguishedValueMatcher | undefined;
 
 function matchCertificatePairFast (
     a: CertificatePairExactAssertion,

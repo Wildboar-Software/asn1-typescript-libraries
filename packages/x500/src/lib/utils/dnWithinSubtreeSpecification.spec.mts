@@ -5,10 +5,17 @@ import {
     AttributeTypeAndValue,
     SubtreeSpecification,
 } from "../modules/InformationFramework/index.mjs";
+import type { ASN1Element } from "@wildboar/asn1";
 import compareElements from "../comparators/compareElements.mjs";
+import type { Matcher } from "../types/matching.mjs";
 import { dnWithinSubtreeSpecification as withinSubtree } from "./dnWithinSubtreeSpecification.mjs";
 import { commonName } from "../modules/SelectedAttributeTypes/index.mjs";
 import { DER } from "@wildboar/asn1/functional";
+
+const compareElementsMatcher: Matcher = (assertion, valueOrValues) => {
+    const stored = "values" in valueOrValues ? valueOrValues.values[0] : valueOrValues.value;
+    return compareElements(assertion as ASN1Element, stored);
+};
 
 function rdn(index: number): RelativeDistinguishedName {
     return [
@@ -30,7 +37,7 @@ const baseTest = (use_scope: boolean) => () => {
     const scope: DistinguishedName = use_scope
         ? [rdn(9)]
         : [];
-    const getMatcher = () => compareElements;
+    const getMatcher = () => compareElementsMatcher;
     let result = withinSubtree(dn, ocs, sts, scope, getMatcher);
     expect(result).toBe(true);
 
@@ -76,7 +83,7 @@ const minimumAndMaximumTest = (use_scope: boolean) => () => {
     const scope: DistinguishedName = use_scope
         ? [rdn(9)]
         : [];
-    const getMatcher = () => compareElements;
+    const getMatcher = () => compareElementsMatcher;
 
     // DN matches the base, but the minimum is not met
     let result = withinSubtree(dn, ocs, sts, scope, getMatcher);
@@ -114,7 +121,7 @@ const specificExclusionsTest = (use_scope: boolean, before: boolean) => () => {
     const scope: DistinguishedName = use_scope
         ? [rdn(9)]
         : [];
-    const getMatcher = () => compareElements;
+    const getMatcher = () => compareElementsMatcher;
 
     let result = withinSubtree(dn, ocs, sts, scope, getMatcher);
     expect(result).toBe(true); // Not chopped yet.

@@ -8,7 +8,6 @@ import {
     ASN1UniversalType,
 } from "@wildboar/asn1";
 import sort from "../../src/lib/dap/sort.mjs";
-import type OrderingMatcher from "../../src/lib/types/OrderingMatcher.mjs";
 import {
     SortKey,
 } from "../../src/lib/modules/DirectoryAbstractService/SortKey.ta.mjs";
@@ -72,10 +71,11 @@ const COMMON_NAME_2: Attribute = new Attribute(
     undefined,
 );
 
-const ALPHABETICAL_ORDERER: Parameters<typeof sort>[3] = () => (assertion: ASN1Element, value: ASN1Element): number => {
-    const a = assertion.utf8String.toLowerCase().charCodeAt(0);
-    const v = value.utf8String.toLowerCase().charCodeAt(0);
-    return (a - v);
+const ALPHABETICAL_ORDERER: Parameters<typeof sort>[3] = () => (assertion, valueOrValues): boolean => {
+    const a = (assertion as ASN1Element).utf8String.toLowerCase().charCodeAt(0);
+    const v = ("values" in valueOrValues ? valueOrValues.values[0] : valueOrValues.value)
+        .utf8String.toLowerCase().charCodeAt(0);
+    return v < a;
 };
 
 describe("sort()", () => {

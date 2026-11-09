@@ -1,6 +1,5 @@
 import type { ASN1Element } from "@wildboar/asn1";
 import type { AttributeType } from "../../modules/InformationFramework/index.mjs";
-import { valueEqualityMatcher } from "../valueEqualityMatcher.mjs";
 import {
     createEqualityMatcher,
     type Matcher,
@@ -44,11 +43,10 @@ function holderIssuerMatchTyped (
     flags: number = 0,
 ): boolean {
     const v = readDecoded(value, _decode_AttributeCertificate);
-    const getEqualityMatcher = valueEqualityMatcher(getMatcher, flags);
-    if (a.holder && !compareHolder(a.holder, v.toBeSigned.holder, getEqualityMatcher)) {
+    if (a.holder && !compareHolder(a.holder, v.toBeSigned.holder, getMatcher)) {
         return false;
     }
-    if (a.issuer && !compareAttCertIssuer(a.issuer, v.toBeSigned.issuer, getEqualityMatcher)) {
+    if (a.issuer && !compareAttCertIssuer(a.issuer, v.toBeSigned.issuer, getMatcher)) {
         return false;
     }
     return true;
