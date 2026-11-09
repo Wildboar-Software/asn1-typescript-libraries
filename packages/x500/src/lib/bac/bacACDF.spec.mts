@@ -30,18 +30,19 @@ import { Attribute } from "../modules/InformationFramework/Attribute.ta.mjs";
 import { Attribute_valuesWithContext_Item } from "../modules/InformationFramework/Attribute-valuesWithContext-Item.ta.mjs";
 import { Context } from "../modules/InformationFramework/Context.ta.mjs";
 import { ContextAssertion } from "../modules/InformationFramework/ContextAssertion.ta.mjs";
-import type ACDFTupleExtended from "../types/ACDFTupleExtended.mjs";
+import ACDFTupleExtended from "../types/ACDFTupleExtended.mjs";
 import type ProtectedItem from "../types/ProtectedItem.mjs";
 import type { EvaluateFilterSettings } from "../utils/evaluateFilter.mjs";
 
 /*
  * These tests supply preprocessed ACDF tuples, not ACIItem objects. Each tuple
- * represents one permission clause expanded from an ACIItem, in this order:
+ * represents one permission clause expanded from an ACIItem. Constructor
+ * arguments are:
  *
- * [ userClasses, authenticationLevel, protectedItems, grantsAndDenials,
- *   precedence, userClassSpecificity ]
+ * userClasses, authenticationLevel, protectedItems, grantsAndDenials,
+ * precedence, userClassSpecificity
  *
- * The last field is computed by user-class matching before calling bacACDF.
+ * `userClassSpecificity` is computed by user-class matching before calling bacACDF.
  * Most fixtures use allUsers (specificity 1) and require no authentication, so
  * the anonymous requester passed as `undefined` is eligible for those tuples.
  * The H2 tests deliberately inject synthetic scores to isolate the ranking step.
@@ -100,7 +101,7 @@ type ValueRequest = Extract<ProtectedItem, { value: AttributeTypeAndValue }>;
 describe("BAC constraints before precedence (H1)", () => {
     it("does not let an attribute selector bypass a context constraint", () => {
         // Policy: anyone may add commonName values, but only with English context.
-        const englishOnlyAddGrant: ACDFTupleExtended = [
+        const englishOnlyAddGrant = new ACDFTupleExtended(
             ALL_USERS,
             AUTH_NONE,
             Object.assign(new ProtectedItems(), {
@@ -111,7 +112,7 @@ describe("BAC constraints before precedence (H1)", () => {
             permissions(grantAdd),
             100, // precedence
             1, // allUsers specificity
-        ];
+        );
         const frenchAddition: ValueRequest = {
             value: ALICE_COMMON_NAME,
             contexts: [FRENCH_CONTEXT],
@@ -143,7 +144,7 @@ describe("BAC constraints before precedence (H1)", () => {
     it("requires all context assertions and respects absentMatch", () => {
         const markerContextType = ObjectIdentifier.fromString("1.2.3.5");
         // Policy: both the English assertion and a separate marker must be satisfied.
-        const twoContextAddGrant: ACDFTupleExtended = [
+        const twoContextAddGrant = new ACDFTupleExtended(
             ALL_USERS,
             AUTH_NONE,
             Object.assign(new ProtectedItems(), {
@@ -157,7 +158,7 @@ describe("BAC constraints before precedence (H1)", () => {
             permissions(grantAdd),
             100, // precedence
             1, // allUsers specificity
-        ];
+        );
         const additionMissingTheMarker: ValueRequest = {
             value: ALICE_COMMON_NAME,
             contexts: [ENGLISH_CONTEXT],
@@ -181,7 +182,7 @@ describe("BAC constraints before precedence (H1)", () => {
     it("does not use contexts as a protected-item selector", () => {
         // This clause grants read, but selects no entries, attribute types, or values.
         // A context constraint alone must not make it apply to a protected item.
-        const readGrantWithoutASelector: ACDFTupleExtended = [
+        const readGrantWithoutASelector = new ACDFTupleExtended(
             ALL_USERS,
             AUTH_NONE,
             Object.assign(new ProtectedItems(), {
@@ -191,7 +192,7 @@ describe("BAC constraints before precedence (H1)", () => {
             permissions(grantRead),
             100, // precedence
             1, // allUsers specificity
-        ];
+        );
         const englishValueToRead: ValueRequest = {
             value: ALICE_COMMON_NAME,
             contexts: [ENGLISH_CONTEXT],
@@ -204,7 +205,7 @@ describe("BAC constraints before precedence (H1)", () => {
     });
 
     it("does not apply add constraints to a read permission", () => {
-        const commonNameReadGrant: ACDFTupleExtended = [
+        const commonNameReadGrant = new ACDFTupleExtended(
             ALL_USERS,
             AUTH_NONE,
             Object.assign(new ProtectedItems(), {
@@ -215,7 +216,7 @@ describe("BAC constraints before precedence (H1)", () => {
             permissions(grantRead),
             100, // precedence
             1, // allUsers specificity
-        ];
+        );
         const frenchValueToRead: ValueRequest = {
             value: ALICE_COMMON_NAME,
             contexts: [FRENCH_CONTEXT],
@@ -229,7 +230,7 @@ describe("BAC constraints before precedence (H1)", () => {
     });
 
     it("disables denyAdd only when all context constraints match", () => {
-        const unconditionalAddGrant: ACDFTupleExtended = [
+        const unconditionalAddGrant = new ACDFTupleExtended(
             ALL_USERS,
             AUTH_NONE,
             Object.assign(new ProtectedItems(), {
@@ -239,8 +240,8 @@ describe("BAC constraints before precedence (H1)", () => {
             permissions(grantAdd),
             100, // lower precedence: used if the denial is disabled
             1, // allUsers specificity
-        ];
-        const higherPrecedenceContextualDenial: ACDFTupleExtended = [
+        );
+        const higherPrecedenceContextualDenial = new ACDFTupleExtended(
             ALL_USERS,
             AUTH_NONE,
             Object.assign(new ProtectedItems(), {
@@ -251,7 +252,7 @@ describe("BAC constraints before precedence (H1)", () => {
             permissions(denyAdd),
             200, // wins over the grant if denyAdd remains set
             1, // allUsers specificity
-        ];
+        );
         const englishAddition: ValueRequest = { value: ALICE_COMMON_NAME, contexts: [ENGLISH_CONTEXT] };
         const frenchAddition: ValueRequest = { value: ALICE_COMMON_NAME, contexts: [FRENCH_CONTEXT] };
 
@@ -275,7 +276,7 @@ describe("BAC constraints before precedence (H1)", () => {
                 throw new Error("unavailable");
             },
         };
-        const englishOnlyAddGrant: ACDFTupleExtended = [
+        const englishOnlyAddGrant = new ACDFTupleExtended(
             ALL_USERS,
             AUTH_NONE,
             Object.assign(new ProtectedItems(), {
@@ -286,8 +287,8 @@ describe("BAC constraints before precedence (H1)", () => {
             permissions(grantAdd),
             100, // precedence
             1, // allUsers specificity
-        ];
-        const unconditionalAddGrant: ACDFTupleExtended = [
+        );
+        const unconditionalAddGrant = new ACDFTupleExtended(
             ALL_USERS,
             AUTH_NONE,
             Object.assign(new ProtectedItems(), {
@@ -297,8 +298,8 @@ describe("BAC constraints before precedence (H1)", () => {
             permissions(grantAdd),
             100, // lower precedence than the denial below
             1, // allUsers specificity
-        ];
-        const higherPrecedenceContextualDenial: ACDFTupleExtended = [
+        );
+        const higherPrecedenceContextualDenial = new ACDFTupleExtended(
             ALL_USERS,
             AUTH_NONE,
             Object.assign(new ProtectedItems(), {
@@ -309,7 +310,7 @@ describe("BAC constraints before precedence (H1)", () => {
             permissions(denyAdd),
             200, // must still override the unconditional grant
             1, // allUsers specificity
-        ];
+        );
         const englishAddition: ValueRequest = { value: ALICE_COMMON_NAME, contexts: [ENGLISH_CONTEXT] };
 
         // An evaluation error proves neither that a constrained grant is usable
@@ -327,7 +328,7 @@ describe("BAC constraints before precedence (H1)", () => {
     it("checks the post-add count on individual attribute values", () => {
         // Policy: grant addition only if there will be at most two commonName values.
         // A bigint limit also checks that ASN.1 INTEGER representations interoperate.
-        const atMostTwoValuesAddGrant: ACDFTupleExtended = [
+        const atMostTwoValuesAddGrant = new ACDFTupleExtended(
             ALL_USERS,
             AUTH_NONE,
             Object.assign(new ProtectedItems(), {
@@ -338,8 +339,8 @@ describe("BAC constraints before precedence (H1)", () => {
             permissions(grantAdd),
             100, // precedence
             1, // allUsers specificity
-        ];
-        const zeroValuesAllowedAddGrant: ACDFTupleExtended = [
+        );
+        const zeroValuesAllowedAddGrant = new ACDFTupleExtended(
             ALL_USERS,
             AUTH_NONE,
             Object.assign(new ProtectedItems(), {
@@ -350,7 +351,7 @@ describe("BAC constraints before precedence (H1)", () => {
             permissions(grantAdd),
             100, // precedence
             1, // allUsers specificity
-        ];
+        );
         const additionProducingTwoValues: ValueRequest = {
             value: ALICE_COMMON_NAME, contexts: [ENGLISH_CONTEXT], valuesCount: 2,
         };
@@ -377,7 +378,7 @@ describe("BAC constraints before precedence (H1)", () => {
     });
 
     it.each([undefined, NaN, Infinity, -1, 1.5])("does not grant a counted addition with invalid or missing count %s", (count) => {
-        const countedAddGrant: ACDFTupleExtended = [
+        const countedAddGrant = new ACDFTupleExtended(
             ALL_USERS,
             AUTH_NONE,
             Object.assign(new ProtectedItems(), {
@@ -388,7 +389,7 @@ describe("BAC constraints before precedence (H1)", () => {
             permissions(grantAdd),
             100, // precedence
             1, // allUsers specificity
-        ];
+        );
         const additionWithUnusableCount: ValueRequest = {
             value: ALICE_COMMON_NAME,
             contexts: [ENGLISH_CONTEXT],
@@ -404,7 +405,7 @@ describe("BAC constraints before precedence (H1)", () => {
 
     it("checks restrictedBy against every value, including contextual values", () => {
         // Policy: a commonName value may be added only if it also appears in description.
-        const descriptionRestrictedAddGrant: ACDFTupleExtended = [
+        const descriptionRestrictedAddGrant = new ACDFTupleExtended(
             ALL_USERS,
             AUTH_NONE,
             Object.assign(new ProtectedItems(), {
@@ -415,7 +416,7 @@ describe("BAC constraints before precedence (H1)", () => {
             permissions(grantAdd),
             100, // precedence
             1, // allUsers specificity
-        ];
+        );
         const additionWithoutEntryData: ValueRequest = {
             value: ALICE_COMMON_NAME, contexts: [ENGLISH_CONTEXT],
         };
@@ -464,7 +465,7 @@ describe("BAC constraints before precedence (H1)", () => {
     });
 
     it("does not apply restrictions for a different attribute type", () => {
-        const addGrantWithADescriptionOnlyRestriction: ACDFTupleExtended = [
+        const addGrantWithADescriptionOnlyRestriction = new ACDFTupleExtended(
             ALL_USERS,
             AUTH_NONE,
             Object.assign(new ProtectedItems(), {
@@ -475,7 +476,7 @@ describe("BAC constraints before precedence (H1)", () => {
             permissions(grantAdd),
             100, // precedence
             1, // allUsers specificity
-        ];
+        );
         const commonNameAddition: ValueRequest = { value: ALICE_COMMON_NAME, contexts: [ENGLISH_CONTEXT] };
 
         // The restriction's type is description, not the commonName being added.
@@ -490,7 +491,7 @@ describe("BAC constraints before precedence (H1)", () => {
         const contextMatcherLookup = vi.fn(matchingSettings.getContextMatcher);
         // Deliberately mixed permissions: call the constraint helper directly,
         // before bacACDF would split grants and denials into separate tuples.
-        const mixedPermissionTuple: ACDFTupleExtended = [
+        const mixedPermissionTuple = new ACDFTupleExtended(
             ALL_USERS,
             AUTH_NONE,
             Object.assign(new ProtectedItems(), {
@@ -505,7 +506,7 @@ describe("BAC constraints before precedence (H1)", () => {
             permissions(grantAdd, denyAdd, grantRead),
             100, // precedence
             1, // allUsers specificity
-        ];
+        );
         const englishAdditionWithNoSourceValues: ValueRequest = {
             value: ALICE_COMMON_NAME,
             contexts: [ENGLISH_CONTEXT],
@@ -515,7 +516,7 @@ describe("BAC constraints before precedence (H1)", () => {
         const constrainedTuple = applyACDFConstraints(mixedPermissionTuple, englishAdditionWithNoSourceValues, [PERMISSION_CATEGORY_ADD], {
             ...matchingSettings, getContextMatcher: contextMatcherLookup,
         });
-        const updatedPermissions = constrainedTuple[3];
+        const updatedPermissions = constrainedTuple.grantsAndDenials;
         // restrictedBy disables the add grant; English contexts separately disable
         // the add denial. The unrelated read grant must survive both steps.
         expect(updatedPermissions[grantAdd]).toBe(FALSE_BIT);
@@ -523,12 +524,12 @@ describe("BAC constraints before precedence (H1)", () => {
         expect(updatedPermissions[grantRead]).toBe(TRUE_BIT);
         expect(contextMatcherLookup).toHaveBeenCalledExactlyOnceWith(TEST_LANGUAGE_CONTEXT_TYPE);
         // The original tuple is reusable for another request and must not be mutated.
-        expect(mixedPermissionTuple[3][grantAdd]).toBe(TRUE_BIT);
-        expect(mixedPermissionTuple[3][denyAdd]).toBe(TRUE_BIT);
+        expect(mixedPermissionTuple.grantsAndDenials[grantAdd]).toBe(TRUE_BIT);
+        expect(mixedPermissionTuple.grantsAndDenials[denyAdd]).toBe(TRUE_BIT);
     });
 
     it("does not remove count or restrictedBy denials", () => {
-        const unconditionalAddGrant: ACDFTupleExtended = [
+        const unconditionalAddGrant = new ACDFTupleExtended(
             ALL_USERS,
             AUTH_NONE,
             Object.assign(new ProtectedItems(), {
@@ -538,8 +539,8 @@ describe("BAC constraints before precedence (H1)", () => {
             permissions(grantAdd),
             100, // lower precedence
             1, // allUsers specificity
-        ];
-        const higherPrecedenceAddDenial: ACDFTupleExtended = [
+        );
+        const higherPrecedenceAddDenial = new ACDFTupleExtended(
             ALL_USERS,
             AUTH_NONE,
             Object.assign(new ProtectedItems(), {
@@ -551,7 +552,7 @@ describe("BAC constraints before precedence (H1)", () => {
             permissions(denyAdd),
             200, // denial should still win
             1, // allUsers specificity
-        ];
+        );
         const additionWithoutCountOrSourceData: ValueRequest = {
             value: ALICE_COMMON_NAME,
             contexts: [ENGLISH_CONTEXT],
@@ -570,7 +571,7 @@ describe("BAC constraints before precedence (H1)", () => {
         { operationName: "import", operation: PERMISSION_CATEGORY_IMPORT, grantedBit: grantImport },
     ])("checks immediate-subordinate counts for $operationName", ({ operation, grantedBit }) => {
         // Policy: add/import an entry only if its superior will have at most two children.
-        const entryGrantWithTwoChildLimit: ACDFTupleExtended = [
+        const entryGrantWithTwoChildLimit = new ACDFTupleExtended(
             ALL_USERS,
             AUTH_NONE,
             Object.assign(new ProtectedItems(), {
@@ -581,7 +582,7 @@ describe("BAC constraints before precedence (H1)", () => {
             permissions(grantedBit), // explicitly grantAdd or grantImport, as listed above
             100, // precedence
             1, // allUsers specificity
-        ];
+        );
         const resultingTwoChildren: ProtectedItem = { entry: [], siblingsCount: 2 };
         const resultingThreeChildren: ProtectedItem = { entry: [], siblingsCount: 3 };
         const unknownChildCount: ProtectedItem = { entry: [] };
@@ -610,7 +611,7 @@ describe("BAC constraints before precedence (H1)", () => {
     });
 
     it("discards a constrained grant before selecting the highest precedence", () => {
-        const lowerPrecedenceUnconditionalGrant: ACDFTupleExtended = [
+        const lowerPrecedenceUnconditionalGrant = new ACDFTupleExtended(
             ALL_USERS,
             AUTH_NONE,
             Object.assign(new ProtectedItems(), {
@@ -620,8 +621,8 @@ describe("BAC constraints before precedence (H1)", () => {
             permissions(grantAdd),
             100, // remains eligible when the higher grant fails its constraint
             1, // allUsers specificity
-        ];
-        const higherPrecedenceZeroValueGrant: ACDFTupleExtended = [
+        );
+        const higherPrecedenceZeroValueGrant = new ACDFTupleExtended(
             ALL_USERS,
             AUTH_NONE,
             Object.assign(new ProtectedItems(), {
@@ -632,7 +633,7 @@ describe("BAC constraints before precedence (H1)", () => {
             permissions(grantAdd),
             200, // would win precedence, but must be discarded first
             1, // allUsers specificity
-        ];
+        );
         const firstValueAddition: ValueRequest = {
             value: ALICE_COMMON_NAME,
             contexts: [ENGLISH_CONTEXT],
@@ -649,7 +650,7 @@ describe("BAC constraints before precedence (H1)", () => {
         // A failed conditional grant is not an explicit denial: the lower grant wins.
         expect(result.authorized).toBe(true);
         expect(result.relevantTuples).toHaveLength(1);
-        expect(higherPrecedenceZeroValueGrant[3][grantAdd]).toBe(TRUE_BIT);
+        expect(higherPrecedenceZeroValueGrant.grantsAndDenials[grantAdd]).toBe(TRUE_BIT);
     });
 });
 
@@ -657,7 +658,7 @@ describe("BAC specificity (H2)", () => {
     it.each([1, 2])("retains denials at the same floored specificity %i in either input order", (specificity) => {
         // Supply synthetic specificity results directly; user/group matching is
         // outside this test. The .5 marker must not create a new specificity rank.
-        const readGrantWithUncertainMembership: ACDFTupleExtended = [
+        const readGrantWithUncertainMembership = new ACDFTupleExtended(
             ALL_USERS,
             AUTH_NONE,
             Object.assign(new ProtectedItems(), {
@@ -667,8 +668,8 @@ describe("BAC specificity (H2)", () => {
             permissions(grantRead),
             100, // same precedence as the denial
             specificity + 0.5, // uncertainty marker added to the base rank
-        ];
-        const readDenialAtTheSameBaseRank: ACDFTupleExtended = [
+        );
+        const readDenialAtTheSameBaseRank = new ACDFTupleExtended(
             ALL_USERS,
             AUTH_NONE,
             Object.assign(new ProtectedItems(), {
@@ -678,7 +679,7 @@ describe("BAC specificity (H2)", () => {
             permissions(denyRead),
             100, // same precedence as the grant
             specificity,
-        ];
+        );
         const valueToRead: ValueRequest = { value: ALICE_COMMON_NAME, contexts: [ENGLISH_CONTEXT] };
 
         // Both tuples survive specificity selection, so the denial wins in either order.
@@ -725,7 +726,7 @@ describe("BAC permission splitting (H3)", () => {
     it("does not lose an invoke denial during ACDF preprocessing", () => {
         // The read bits force this mixed clause down the splitting path. Its
         // denyInvoke bit must survive even though it lies beyond the old 24-bit limit.
-        const mixedReadPermissionsAndInvokeDenial: ACDFTupleExtended = [
+        const mixedReadPermissionsAndInvokeDenial = new ACDFTupleExtended(
             ALL_USERS,
             AUTH_NONE,
             Object.assign(new ProtectedItems(), {
@@ -735,8 +736,8 @@ describe("BAC permission splitting (H3)", () => {
             permissions(grantRead, denyRead, denyInvoke),
             100, // same precedence as the invoke grant
             1, // allUsers specificity
-        ];
-        const invokeGrant: ACDFTupleExtended = [
+        );
+        const invokeGrant = new ACDFTupleExtended(
             ALL_USERS,
             AUTH_NONE,
             Object.assign(new ProtectedItems(), {
@@ -746,7 +747,7 @@ describe("BAC permission splitting (H3)", () => {
             permissions(grantInvoke),
             100, // same precedence as the denial
             1, // allUsers specificity
-        ];
+        );
         const valueForInvocation: ValueRequest = { value: ALICE_COMMON_NAME, contexts: [ENGLISH_CONTEXT] };
 
         expect(bacACDF(

@@ -78,9 +78,9 @@ async function userWithinACIUserClass (
     getEqualityMatcher: (attributeType: OBJECT_IDENTIFIER) => EqualityMatcher | undefined,
     isMemberOfGroup: (userGroup: NameAndOptionalUID, user: NameAndOptionalUID) => Promise<boolean | undefined>,
 ): Promise<number> {
-    const userClass: UserClasses = tuple[0];
-    const requiredAuthLevel: AuthenticationLevel = tuple[1];
-    const denies = deniesAccess(tuple[3]);
+    const userClass: UserClasses = tuple.userClasses;
+    const requiredAuthLevel: AuthenticationLevel = tuple.authenticationLevel;
+    const denies = deniesAccess(tuple.grantsAndDenials);
     if (
         denies
         && ("basicLevels" in authLevel)

@@ -58,8 +58,8 @@
  * @module
  */
 export * from "./lib/errors.mjs";
-export type { ACDFTupleExtended } from "./lib/types/ACDFTupleExtended.mjs";
-export type { ACDFTuple } from "./lib/types/ACDFTuple.mjs";
+export { ACDFTupleExtended } from "./lib/types/ACDFTupleExtended.mjs";
+export { ACDFTuple } from "./lib/types/ACDFTuple.mjs";
 export type { ApproxMatcher } from "./lib/types/ApproxMatcher.mjs";
 export type { ATVAC } from "./lib/types/AttributeTypeValueAndContextsTuple.mjs";
 export type { ChainedRequest } from "./lib/types/ChainedRequest.mjs";

@@ -1,6 +1,6 @@
 import { TRUE_BIT, FALSE_BIT } from "@wildboar/asn1";
 import userWithinACIUserClass from "./userWithinACIUserClass.mjs";
-import type ACDFTuple from "../types/ACDFTuple.mjs";
+import ACDFTuple from "../types/ACDFTuple.mjs";
 import {
     UserClasses,
 } from "../modules/BasicAccessControl/UserClasses.ta.mjs";
@@ -77,7 +77,7 @@ function tuple (
     authLevel: AuthenticationLevel,
     grantsAndDenials: GrantsAndDenials,
 ): ACDFTuple {
-    return [ userClass, authLevel, PROTECTED_ENTRY, grantsAndDenials, 100 ];
+    return new ACDFTuple(userClass, authLevel, PROTECTED_ENTRY, grantsAndDenials, 100);
 }
 
 const noMatcher = (): undefined => undefined;
@@ -89,10 +89,10 @@ describe("userWithinACIUserClass", () => {
         { membership: false, specificity: 0 },
         { membership: undefined, specificity: 0.5 },
     ])("awaits one group lookup for membership $membership (M26)", async ({ membership, specificity }) => {
-        const groupTuple: ACDFTuple = [
+        const groupTuple = new ACDFTuple(
             new UserClasses(undefined, undefined, undefined, [GROUP_NAME]),
             AUTH_NONE, PROTECTED_ENTRY, ALL_GRANTS, 100,
-        ];
+        );
         const lookup = vi.fn(async () => membership);
         expect(await userWithinACIUserClass(groupTuple, NAMED_USER, AUTH_NONE, ENTRY_DN, noMatcher, lookup))
             .toBe(specificity);
@@ -101,10 +101,10 @@ describe("userWithinACIUserClass", () => {
 
     it("looks up each necessary group once and stops at the first confirmed membership (M26)", async () => {
         const secondGroup = new NameAndOptionalUID([]);
-        const groupTuple: ACDFTuple = [
+        const groupTuple = new ACDFTuple(
             new UserClasses(undefined, undefined, undefined, [GROUP_NAME, secondGroup, GROUP_NAME]),
             AUTH_NONE, PROTECTED_ENTRY, ALL_GRANTS, 100,
-        ];
+        );
         const lookup = vi.fn().mockResolvedValueOnce(false).mockResolvedValueOnce(true);
         expect(await userWithinACIUserClass(groupTuple, NAMED_USER, AUTH_NONE, ENTRY_DN, noMatcher, lookup)).toBe(3);
         expect(lookup).toHaveBeenCalledTimes(2);
@@ -113,10 +113,10 @@ describe("userWithinACIUserClass", () => {
     });
 
     it("propagates the single awaited membership rejection without a discarded Promise (M26)", async () => {
-        const groupTuple: ACDFTuple = [
+        const groupTuple = new ACDFTuple(
             new UserClasses(undefined, undefined, undefined, [GROUP_NAME]),
             AUTH_NONE, PROTECTED_ENTRY, ALL_GRANTS, 100,
-        ];
+        );
         const failure = new Error("Group service unavailable");
         const lookup = vi.fn(async () => { throw failure; });
         await expect(userWithinACIUserClass(groupTuple, NAMED_USER, AUTH_NONE, ENTRY_DN, noMatcher, lookup)).rejects.toBe(failure);

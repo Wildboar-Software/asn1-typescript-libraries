@@ -105,8 +105,8 @@ interface BACACDFReturn extends ACDFReturn {
  * For this reason, this function does not accept ACI items directly, but the
  * pre-processed ACDF tuples that are trivially produced from ACI items to avoid
  * recomputing these tuples. In addition, these tuples are expected to be
- * pre-filtered by their applicability to the current user, and extended by a
- * sixth element, which is a `number` indicating the specificity with which the
+ * pre-filtered by their applicability to the current user, and annotated with
+ * `userClassSpecificity`, a `number` indicating the specificity with which the
  * user matched the corresponding `UserClasses`. The former is implemented
  * so that the tuples can be filtered by their applicability to the current user
  * one time and re-used between calls to this function; the latter is
@@ -133,9 +133,9 @@ interface BACACDFReturn extends ACDFReturn {
  * ### Parameters
  *
  * @param {ACDFTupleExtended[]} tuples The tuples of inputs to the ACDF as described in
- *  ITU Recommendation X.501, Section 18.8.2. An array of five items:
- *  `( userClasses, authenticationLevel, protectedItems, grantsAndDenials, precedence )`
- *  with the addition of a user class specificity `number` tacked on the end.
+ *  ITU Recommendation X.501, Section 18.8.2: `userClasses`,
+ *  `authenticationLevel`, `protectedItems`, `grantsAndDenials`, and
+ *  `precedence`, plus `userClassSpecificity`.
  *  The tuples that are irrelevant according to ITU Recommendation X.501 (2016),
  *  Section 18.8.3, bullet point #1 are expected to be discarded from this
  *  array **BEFORE** calling this function.
@@ -164,8 +164,8 @@ function bacACDF (
     const tuplesSplitByGrantOrDenial = tuplesAlreadySplit
         ? tuples
         : tuples
-            .flatMap((tuple) => splitGrantsAndDenials(tuple[3])
-                .map((gad): ACDFTupleExtended => [ tuple[0], tuple[1], tuple[2], gad, tuple[4], tuple[5] ]));
+            .flatMap((tuple) => splitGrantsAndDenials(tuple.grantsAndDenials)
+                .map((gad) => tuple.withGrantsAndDenials(gad)));
     const relevantTuples: ACDFTupleExtended[] = discardNonRelevantACDFTuples(
         tuplesSplitByGrantOrDenial,
         requester,
@@ -187,9 +187,9 @@ function bacACDF (
     }
 
     // SORT BY PRECEDENCE
-    const sortedByDescendingPrecedence = relevantTuples.sort((a, b) => Number(b[4]) - Number(a[4]));
-    const highestPrecedence = sortedByDescendingPrecedence[0][4];
-    const betaIndex = sortedByDescendingPrecedence.findIndex((t) => (t[4] < highestPrecedence));
+    const sortedByDescendingPrecedence = relevantTuples.sort((a, b) => Number(b.precedence) - Number(a.precedence));
+    const highestPrecedence = sortedByDescendingPrecedence[0].precedence;
+    const betaIndex = sortedByDescendingPrecedence.findIndex((t) => (t.precedence < highestPrecedence));
     const tuplesThatSurvivedStage1 = (betaIndex < 0)
         ? sortedByDescendingPrecedence // All were of the same precedence.
         : sortedByDescendingPrecedence.slice(0, betaIndex); // Select the most precedent.
@@ -207,10 +207,10 @@ function bacACDF (
 
     // SORT BY USER CLASS SPECIFICITY
     const sortedByDescendingUserClassSpecificity: ACDFTupleExtended[] = tuplesThatSurvivedStage1
-        .sort((a, b) => Math.floor(b[5]) - Math.floor(a[5])); // Must be floored. Search for: 1E9DC3EB-E3DB-4CFA-A7BE-B86342F7EF75
-    const highestUserClassSpecificity: number = Math.floor(sortedByDescendingUserClassSpecificity[0][5]);
+        .sort((a, b) => Math.floor(b.userClassSpecificity) - Math.floor(a.userClassSpecificity)); // Must be floored. Search for: 1E9DC3EB-E3DB-4CFA-A7BE-B86342F7EF75
+    const highestUserClassSpecificity: number = Math.floor(sortedByDescendingUserClassSpecificity[0].userClassSpecificity);
     const charlieIndex = sortedByDescendingUserClassSpecificity
-        .findIndex((t) => (Math.floor(t[5]) < highestUserClassSpecificity));
+        .findIndex((t) => (Math.floor(t.userClassSpecificity) < highestUserClassSpecificity));
     const tuplesThatSurvivedStage2: ACDFTupleExtended[] = ((charlieIndex < 0)
         ? sortedByDescendingUserClassSpecificity // All were of the same specificity.
         : sortedByDescendingUserClassSpecificity.slice(0, charlieIndex)); // Select the most specific.
@@ -229,7 +229,7 @@ function bacACDF (
     const sortedByDescedingProtectedItemSpecificity: [ ACDFTupleExtended, number ][] = tuplesThatSurvivedStage2
         .map((tuple): [ ACDFTupleExtended, number ] => [
             tuple,
-            specificityOfProtectedItem(request, tuple[2]),
+            specificityOfProtectedItem(request, tuple.protectedItems),
         ])
         .sort((a, b) => b[1] - a[1]);
     const highestProtectedItemSpecificity: number = sortedByDescedingProtectedItemSpecificity[0][1];

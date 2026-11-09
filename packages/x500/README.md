@@ -75,25 +75,26 @@ const acdfTuples: ACDFTuple[] = relevantACIItems
 
 // We determine which ACDF tuples are relevant to the user + request + subject, etc.
 const relevantTuples: ACDFTupleExtended[] = (await Promise.all(
-    acdfTuples.map(async (tuple): Promise<ACDFTupleExtended> => [
-        ...tuple,
-        await userWithinACIUserClass( // The resolved value of this is tuple[5].
-            tuple[0],
+    acdfTuples.map(async (tuple) => new ACDFTupleExtended(
+        tuple,
+        await userWithinACIUserClass(
+            tuple,
             boundNameAndUID,
+            authLevel,
             targetDN,
             equalityMatcherGetter, // Takes an attribute type and returns a function that can compare two values.
             isMemberOfGroup, // An async function that takes a user group and user and resolves if the user is a member.
         ),
-    ]),
+    )),
 ))
-    .filter((tuple) => (tuple[5] > 0)); // Only keep extended tuples for which the user fell within the `UserClasses`.
+    .filter((tuple) => (tuple.userClassSpecificity > 0)); // Only keep extended tuples for which the user fell within the `UserClasses`.
 
 // Finally, we can evaluate if the request is authorized, based on the relevant
 // ACDF tuples.
 const {
     authorized,
 } = bacACDF(
-    relevantTuples, // NOTE: These are not of type `ACDFTuple`. They are `ACDFTupleExtended`.
+    relevantTuples, // ACDFTupleExtended instances, which include userClassSpecificity.
     authLevel, // The AuthenticationLevel of the request.
     {
         // objectClasses is an array of object identifiers that identify the
@@ -221,7 +222,7 @@ There are more types than what follows, but the types excluded from this list
 are either deprecated or not intended for external use:
 
 - `ACDFTuple.mts` - An ACDF Tuple, as defined in ITU Recommendation X.501.
-- `ACDFTupleExtended.mts` - An extension of an ACDF Tuple, with another element for indicating which user class matched.
+- `ACDFTupleExtended.mts` - An extension of an ACDF Tuple, with `userClassSpecificity` for indicating which user class matched.
 - `ApproxMatcher.mts` - A function that _approximately_ evaluates an equality matching rule against a value.
 - `AttributeTypeValueAndContextsTuple.mts` - A three-element array containing an attribute type, value, and contexts.
 - `ContextMatcher.mts` - A function that evaluates an assertion against a context.

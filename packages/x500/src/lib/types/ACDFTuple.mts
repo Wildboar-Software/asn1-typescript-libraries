@@ -19,12 +19,16 @@ import type {
  * ITU Recommendation X.501 (2016), Section 18.8.2.
  */
 export
-type ACDFTuple = [
-    UserClasses,
-    AuthenticationLevel,
-    ProtectedItems,
-    GrantsAndDenials,
-    Precedence,
-];
+class ACDFTuple {
 
-export type { ACDFTuple as default };
+    constructor (
+        public readonly userClasses: UserClasses,
+        public readonly authenticationLevel: AuthenticationLevel,
+        public readonly protectedItems: ProtectedItems,
+        public readonly grantsAndDenials: GrantsAndDenials,
+        public readonly precedence: Precedence,
+    ) {}
+
+}
+
+export default ACDFTuple;

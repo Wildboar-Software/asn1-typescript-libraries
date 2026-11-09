@@ -13,7 +13,7 @@ import {
     ASN1Element,
     External,
 } from "@wildboar/asn1";
-import type ACDFTupleExtended from "../../../src/lib/types/ACDFTupleExtended.mjs";
+import ACDFTupleExtended from "../../../src/lib/types/ACDFTupleExtended.mjs";
 import type ProtectedItem from "../../../src/lib/types/ProtectedItem.mjs";
 import {
     ProtectedItems,
@@ -399,8 +399,8 @@ describe("bacACDF()", () => {
         const acis: ACIItem[] = [];
         const tuples: ACDFTupleExtended[] = acis
             .flatMap((aci) => getACDFTuplesFromACIItem(aci))
-            .map((tuple): ACDFTupleExtended => [ ...tuple, 3 ])
-            .filter((tuple): boolean => (tuple[5] > 0));
+            .map((tuple) => new ACDFTupleExtended(tuple, 3))
+            .filter((tuple) => (tuple.userClassSpecificity > 0));
         const request: ProtectedItem = {
             entry: [],
         };
@@ -439,8 +439,8 @@ describe("bacACDF()", () => {
         ];
         const tuples: ACDFTupleExtended[] = acis
             .flatMap((aci) => getACDFTuplesFromACIItem(aci))
-            .map((tuple): ACDFTupleExtended => [ ...tuple, 3 ])
-            .filter((tuple): boolean => (tuple[5] > 0));
+            .map((tuple) => new ACDFTupleExtended(tuple, 3))
+            .filter((tuple) => (tuple.userClassSpecificity > 0));
         const request: ProtectedItem = {
             entry: [],
         };
@@ -477,8 +477,8 @@ describe("bacACDF()", () => {
         ];
         const tuples: ACDFTupleExtended[] = acis
             .flatMap((aci) => getACDFTuplesFromACIItem(aci))
-            .map((tuple): ACDFTupleExtended => [ ...tuple, 3 ])
-            .filter((tuple): boolean => (tuple[5] > 0));
+            .map((tuple) => new ACDFTupleExtended(tuple, 3))
+            .filter((tuple) => (tuple.userClassSpecificity > 0));
         const request: ProtectedItem = {
             entry: [],
         };
@@ -520,8 +520,8 @@ describe("bacACDF()", () => {
         ];
         const tuples: ACDFTupleExtended[] = acis
             .flatMap((aci) => getACDFTuplesFromACIItem(aci))
-            .map((tuple): ACDFTupleExtended => [ ...tuple, 3 ])
-            .filter((tuple): boolean => (tuple[5] > 0));
+            .map((tuple) => new ACDFTupleExtended(tuple, 3))
+            .filter((tuple) => (tuple.userClassSpecificity > 0));
         const request: ProtectedItem = {
             entry: [],
         };
@@ -564,8 +564,8 @@ describe("bacACDF()", () => {
         ];
         const tuples: ACDFTupleExtended[] = acis
             .flatMap((aci) => getACDFTuplesFromACIItem(aci))
-            .map((tuple): ACDFTupleExtended => [ ...tuple, 3 ])
-            .filter((tuple): boolean => (tuple[5] > 0));
+            .map((tuple) => new ACDFTupleExtended(tuple, 3))
+            .filter((tuple) => (tuple.userClassSpecificity > 0));
         const request: ProtectedItem = {
             entry: [],
         };
@@ -603,8 +603,8 @@ describe("bacACDF()", () => {
         ];
         const tuples: ACDFTupleExtended[] = acis
             .flatMap((aci) => getACDFTuplesFromACIItem(aci))
-            .map((tuple): ACDFTupleExtended => [ ...tuple, 3 ])
-            .filter((tuple): boolean => (tuple[5] > 0));
+            .map((tuple) => new ACDFTupleExtended(tuple, 3))
+            .filter((tuple) => (tuple.userClassSpecificity > 0));
         const request: ProtectedItem = {
             entry: [],
         };
@@ -642,8 +642,8 @@ describe("bacACDF()", () => {
         ];
         const tuples: ACDFTupleExtended[] = acis
             .flatMap((aci) => getACDFTuplesFromACIItem(aci))
-            .map((tuple): ACDFTupleExtended => [ ...tuple, 3 ])
-            .filter((tuple): boolean => (tuple[5] > 0));
+            .map((tuple) => new ACDFTupleExtended(tuple, 3))
+            .filter((tuple) => (tuple.userClassSpecificity > 0));
         const request: ProtectedItem = {
             entry: [],
         };
@@ -693,8 +693,8 @@ describe("bacACDF()", () => {
         ];
         const tuples: ACDFTupleExtended[] = acis
             .flatMap((aci) => getACDFTuplesFromACIItem(aci))
-            .map((tuple): ACDFTupleExtended => [ ...tuple, 3 ])
-            .filter((tuple): boolean => (tuple[5] > 0));
+            .map((tuple) => new ACDFTupleExtended(tuple, 3))
+            .filter((tuple) => (tuple.userClassSpecificity > 0));
         const request: ProtectedItem = {
             attributeType: ObjectIdentifier.fromParts([ 2, 5, 4, 3 ]),
         };
@@ -711,8 +711,8 @@ describe("bacACDF()", () => {
         itemOrUserFirst.itemFirst.itemPermissions[0] = ALL_DENY_ALL_USERS;
         const tuples2: ACDFTupleExtended[] = acis
             .flatMap((aci) => getACDFTuplesFromACIItem(aci))
-            .map((tuple): ACDFTupleExtended => [ ...tuple, 3 ])
-            .filter((tuple): boolean => (tuple[5] > 0));
+            .map((tuple) => new ACDFTupleExtended(tuple, 3))
+            .filter((tuple) => (tuple.userClassSpecificity > 0));
         {
             const {
                 authorized,
@@ -753,8 +753,8 @@ describe("bacACDF()", () => {
         ];
         const tuples: ACDFTupleExtended[] = acis
             .flatMap((aci) => getACDFTuplesFromACIItem(aci))
-            .map((tuple): ACDFTupleExtended => [ ...tuple, 3 ])
-            .filter((tuple): boolean => (tuple[5] > 0));
+            .map((tuple) => new ACDFTupleExtended(tuple, 3))
+            .filter((tuple) => (tuple.userClassSpecificity > 0));
         const request: ProtectedItem = {
             attributeType: ID_COMMON_NAME,
         };
@@ -771,8 +771,8 @@ describe("bacACDF()", () => {
         itemOrUserFirst.itemFirst.itemPermissions[0] = ALL_DENY_ALL_USERS;
         const tuples2: ACDFTupleExtended[] = acis
             .flatMap((aci) => getACDFTuplesFromACIItem(aci))
-            .map((tuple): ACDFTupleExtended => [ ...tuple, 3 ])
-            .filter((tuple): boolean => (tuple[5] > 0));
+            .map((tuple) => new ACDFTupleExtended(tuple, 3))
+            .filter((tuple) => (tuple.userClassSpecificity > 0));
         {
             const {
                 authorized,
@@ -813,8 +813,8 @@ describe("bacACDF()", () => {
         ];
         const tuples: ACDFTupleExtended[] = acis
             .flatMap((aci) => getACDFTuplesFromACIItem(aci))
-            .map((tuple): ACDFTupleExtended => [ ...tuple, 3 ])
-            .filter((tuple): boolean => (tuple[5] > 0));
+            .map((tuple) => new ACDFTupleExtended(tuple, 3))
+            .filter((tuple) => (tuple.userClassSpecificity > 0));
         const request: ProtectedItem = {
             attributeType: ID_COMMON_NAME,
         };
@@ -831,8 +831,8 @@ describe("bacACDF()", () => {
         itemOrUserFirst.itemFirst.itemPermissions[0] = ALL_DENY_ALL_USERS;
         const tuples2: ACDFTupleExtended[] = acis
             .flatMap((aci) => getACDFTuplesFromACIItem(aci))
-            .map((tuple): ACDFTupleExtended => [ ...tuple, 3 ])
-            .filter((tuple): boolean => (tuple[5] > 0));
+            .map((tuple) => new ACDFTupleExtended(tuple, 3))
+            .filter((tuple) => (tuple.userClassSpecificity > 0));
         {
             const {
                 authorized,
@@ -873,8 +873,8 @@ describe("bacACDF()", () => {
         ];
         const tuples: ACDFTupleExtended[] = acis
             .flatMap((aci) => getACDFTuplesFromACIItem(aci))
-            .map((tuple): ACDFTupleExtended => [ ...tuple, 3 ])
-            .filter((tuple): boolean => (tuple[5] > 0));
+            .map((tuple) => new ACDFTupleExtended(tuple, 3))
+            .filter((tuple) => (tuple.userClassSpecificity > 0));
         const request: ProtectedItem = {
             attributeType: ID_COMMON_NAME,
         };
@@ -891,8 +891,8 @@ describe("bacACDF()", () => {
         itemOrUserFirst.itemFirst.itemPermissions[0] = ALL_DENY_ALL_USERS;
         const tuples2: ACDFTupleExtended[] = acis
             .flatMap((aci) => getACDFTuplesFromACIItem(aci))
-            .map((tuple): ACDFTupleExtended => [ ...tuple, 3 ])
-            .filter((tuple): boolean => (tuple[5] > 0));
+            .map((tuple) => new ACDFTupleExtended(tuple, 3))
+            .filter((tuple) => (tuple.userClassSpecificity > 0));
         {
             const {
                 authorized,
@@ -933,8 +933,8 @@ describe("bacACDF()", () => {
         ];
         const tuples: ACDFTupleExtended[] = acis
             .flatMap((aci) => getACDFTuplesFromACIItem(aci))
-            .map((tuple): ACDFTupleExtended => [ ...tuple, 3 ])
-            .filter((tuple): boolean => (tuple[5] > 0));
+            .map((tuple) => new ACDFTupleExtended(tuple, 3))
+            .filter((tuple) => (tuple.userClassSpecificity > 0));
         const request: ProtectedItem = {
             attributeType: ID_COMMON_NAME,
         };
@@ -951,8 +951,8 @@ describe("bacACDF()", () => {
         itemOrUserFirst.itemFirst.itemPermissions[0] = ALL_DENY_ALL_USERS;
         const tuples2: ACDFTupleExtended[] = acis
             .flatMap((aci) => getACDFTuplesFromACIItem(aci))
-            .map((tuple): ACDFTupleExtended => [ ...tuple, 3 ])
-            .filter((tuple): boolean => (tuple[5] > 0));
+            .map((tuple) => new ACDFTupleExtended(tuple, 3))
+            .filter((tuple) => (tuple.userClassSpecificity > 0));
         {
             const {
                 authorized,
@@ -993,8 +993,8 @@ describe("bacACDF()", () => {
         ];
         const tuples: ACDFTupleExtended[] = acis
             .flatMap((aci) => getACDFTuplesFromACIItem(aci))
-            .map((tuple): ACDFTupleExtended => [ ...tuple, 3 ])
-            .filter((tuple): boolean => (tuple[5] > 0));
+            .map((tuple) => new ACDFTupleExtended(tuple, 3))
+            .filter((tuple) => (tuple.userClassSpecificity > 0));
         const request: ProtectedItem = {
             value: ORG_NAME,
         };
@@ -1040,8 +1040,8 @@ describe("bacACDF()", () => {
         ];
         const tuples: ACDFTupleExtended[] = acis
             .flatMap((aci) => getACDFTuplesFromACIItem(aci))
-            .map((tuple): ACDFTupleExtended => [ ...tuple, 3 ])
-            .filter((tuple): boolean => (tuple[5] > 0));
+            .map((tuple) => new ACDFTupleExtended(tuple, 3))
+            .filter((tuple) => (tuple.userClassSpecificity > 0));
         const operations: number[] = [
             PERMISSION_CATEGORY_ADD,
         ];
@@ -1115,8 +1115,8 @@ describe("bacACDF()", () => {
         );
         const tuples: ACDFTupleExtended[] = [grantAll, denyValue]
             .flatMap((aci) => getACDFTuplesFromACIItem(aci))
-            .map((tuple): ACDFTupleExtended => [ ...tuple, 3 ])
-            .filter((tuple): boolean => (tuple[5] > 0));
+            .map((tuple) => new ACDFTupleExtended(tuple, 3))
+            .filter((tuple) => (tuple.userClassSpecificity > 0));
         const {
             authorized,
         } = bacACDF(
@@ -1161,8 +1161,8 @@ describe("bacACDF()", () => {
         ];
         const tuples: ACDFTupleExtended[] = acis
             .flatMap((aci) => getACDFTuplesFromACIItem(aci))
-            .map((tuple): ACDFTupleExtended => [ ...tuple, 3 ])
-            .filter((tuple): boolean => (tuple[5] > 0));
+            .map((tuple) => new ACDFTupleExtended(tuple, 3))
+            .filter((tuple) => (tuple.userClassSpecificity > 0));
         const request: ProtectedItem = {
             value: COMMON_NAME,
         };
@@ -1179,8 +1179,8 @@ describe("bacACDF()", () => {
         itemOrUserFirst.itemFirst.itemPermissions[0] = ALL_DENY_ALL_USERS;
         const tuples2: ACDFTupleExtended[] = acis
             .flatMap((aci) => getACDFTuplesFromACIItem(aci))
-            .map((tuple): ACDFTupleExtended => [ ...tuple, 3 ])
-            .filter((tuple): boolean => (tuple[5] > 0));
+            .map((tuple) => new ACDFTupleExtended(tuple, 3))
+            .filter((tuple) => (tuple.userClassSpecificity > 0));
         {
             const {
                 authorized,
@@ -1221,8 +1221,8 @@ describe("bacACDF()", () => {
         ];
         const tuples: ACDFTupleExtended[] = acis
             .flatMap((aci) => getACDFTuplesFromACIItem(aci))
-            .map((tuple): ACDFTupleExtended => [ ...tuple, 3 ])
-            .filter((tuple): boolean => (tuple[5] > 0));
+            .map((tuple) => new ACDFTupleExtended(tuple, 3))
+            .filter((tuple) => (tuple.userClassSpecificity > 0));
         const request: ProtectedItem = {
             value: COMMON_NAME,
         };
@@ -1239,8 +1239,8 @@ describe("bacACDF()", () => {
         itemOrUserFirst.itemFirst.itemPermissions[0] = ALL_DENY_ALL_USERS;
         const tuples2: ACDFTupleExtended[] = acis
             .flatMap((aci) => getACDFTuplesFromACIItem(aci))
-            .map((tuple): ACDFTupleExtended => [ ...tuple, 3 ])
-            .filter((tuple): boolean => (tuple[5] > 0));
+            .map((tuple) => new ACDFTupleExtended(tuple, 3))
+            .filter((tuple) => (tuple.userClassSpecificity > 0));
         {
             const {
                 authorized,
@@ -1281,8 +1281,8 @@ describe("bacACDF()", () => {
         ];
         const tuples: ACDFTupleExtended[] = acis
             .flatMap((aci) => getACDFTuplesFromACIItem(aci))
-            .map((tuple): ACDFTupleExtended => [ ...tuple, 3 ])
-            .filter((tuple): boolean => (tuple[5] > 0));
+            .map((tuple) => new ACDFTupleExtended(tuple, 3))
+            .filter((tuple) => (tuple.userClassSpecificity > 0));
         const request: ProtectedItem = {
             value: COMMON_NAME,
         };
@@ -1299,8 +1299,8 @@ describe("bacACDF()", () => {
         itemOrUserFirst.itemFirst.itemPermissions[0] = ALL_DENY_ALL_USERS;
         const tuples2: ACDFTupleExtended[] = acis
             .flatMap((aci) => getACDFTuplesFromACIItem(aci))
-            .map((tuple): ACDFTupleExtended => [ ...tuple, 3 ])
-            .filter((tuple): boolean => (tuple[5] > 0));
+            .map((tuple) => new ACDFTupleExtended(tuple, 3))
+            .filter((tuple) => (tuple.userClassSpecificity > 0));
         {
             const {
                 authorized,
@@ -1341,8 +1341,8 @@ describe("bacACDF()", () => {
         ];
         const tuples: ACDFTupleExtended[] = acis
             .flatMap((aci) => getACDFTuplesFromACIItem(aci))
-            .map((tuple): ACDFTupleExtended => [ ...tuple, 3 ])
-            .filter((tuple): boolean => (tuple[5] > 0));
+            .map((tuple) => new ACDFTupleExtended(tuple, 3))
+            .filter((tuple) => (tuple.userClassSpecificity > 0));
         const request: ProtectedItem = {
             value: COMMON_NAME,
         };
@@ -1389,8 +1389,8 @@ describe("bacACDF()", () => {
         ];
         const tuples: ACDFTupleExtended[] = acis
             .flatMap((aci) => getACDFTuplesFromACIItem(aci))
-            .map((tuple): ACDFTupleExtended => [ ...tuple, 3 ])
-            .filter((tuple): boolean => (tuple[5] > 0));
+            .map((tuple) => new ACDFTupleExtended(tuple, 3))
+            .filter((tuple) => (tuple.userClassSpecificity > 0));
         const request: ProtectedItem = {
             entry: [],
         };
@@ -1445,8 +1445,8 @@ describe("bacACDF()", () => {
         ];
         const tuples: ACDFTupleExtended[] = acis
             .flatMap((aci) => getACDFTuplesFromACIItem(aci))
-            .map((tuple): ACDFTupleExtended => [ ...tuple, 3 ])
-            .filter((tuple): boolean => (tuple[5] > 0));
+            .map((tuple) => new ACDFTupleExtended(tuple, 3))
+            .filter((tuple) => (tuple.userClassSpecificity > 0));
         const request: ProtectedItem = {
             entry: [],
         };
@@ -1519,8 +1519,8 @@ describe("bacACDF()", () => {
         ];
         const tuples: ACDFTupleExtended[] = acis
             .flatMap((aci) => getACDFTuplesFromACIItem(aci))
-            .map((tuple): ACDFTupleExtended => [ ...tuple, 3 ])
-            .filter((tuple): boolean => (tuple[5] > 0));
+            .map((tuple) => new ACDFTupleExtended(tuple, 3))
+            .filter((tuple) => (tuple.userClassSpecificity > 0));
         const request: ProtectedItem = {
             attributeType: ID_COMMON_NAME,
         };
@@ -1593,8 +1593,8 @@ describe("bacACDF()", () => {
         ];
         const tuples: ACDFTupleExtended[] = acis
             .flatMap((aci) => getACDFTuplesFromACIItem(aci))
-            .map((tuple): ACDFTupleExtended => [ ...tuple, 3 ])
-            .filter((tuple): boolean => (tuple[5] > 0));
+            .map((tuple) => new ACDFTupleExtended(tuple, 3))
+            .filter((tuple) => (tuple.userClassSpecificity > 0));
         const request: ProtectedItem = {
             value: COMMON_NAME,
         };

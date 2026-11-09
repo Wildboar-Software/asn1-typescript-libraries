@@ -45,8 +45,8 @@ function operationRelevant (operations: number[], gad: GrantsAndDenials): boolea
  * ### Parameters
  *
  * @param {ACDFTupleExtended[]} tuples The tuples of inputs to the ACDF as described in
- *  ITU Recommendation X.501, Section 18.8.2. An array of five items:
- *  `( userClasses, authenticationLevel, protectedItems, grantsAndDenials, precedence )`
+ *  ITU Recommendation X.501, Section 18.8.2 (`userClasses`,
+ *  `authenticationLevel`, `protectedItems`, `grantsAndDenials`, `precedence`).
  * @param {ProtectedItem} request The thing that is being requested, which can
  *  be an entry, attribute type, or attribute value.
  * @param {number[]} operations The bit indices of the permissions that are
@@ -91,19 +91,19 @@ function discardNonRelevantACDFTuples (
         //      * relevant, because it is the expectation of this function that all
         //      * tuples supplied to the bacACDF function are relevant to the user.
         //      */
-        //     if (deniesAccess(tuple[3])) {
+        //     if (deniesAccess(tuple.grantsAndDenials)) {
         //         return true;
         //     }
-        //     const aci = tuple[1];
+        //     const aci = tuple.authenticationLevel;
         //     if (!("basicLevels" in aci) || !("basicLevels" in authLevel)) {
         //         return false; // We do not know how to compare EXTERNALs.
         //     }
         //     const authenticationLevelIsHigherThanRequester = authLevelHigher(aci.basicLevels, authLevel.basicLevels);
         //     return !authenticationLevelIsHigherThanRequester;
         // })
-        .filter((tuple) => itemIsProtected(request, tuple[2], requester, settings))
+        .filter((tuple) => itemIsProtected(request, tuple.protectedItems, requester, settings))
         .map((tuple) => applyACDFConstraints(tuple, request, operations, settings))
-        .filter((tuple) => operationRelevant(operations, tuple[3]));
+        .filter((tuple) => operationRelevant(operations, tuple.grantsAndDenials));
 }
 
 export default discardNonRelevantACDFTuples;
