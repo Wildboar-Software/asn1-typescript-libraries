@@ -1,6 +1,5 @@
 import type { ASN1Element, OBJECT_IDENTIFIER } from "@wildboar/asn1";
 import type { AttributeType } from "../../modules/InformationFramework/index.mjs";
-import { valueEqualityMatcher } from "../valueEqualityMatcher.mjs";
 import {
     createEqualityMatcher,
     MATCH_FLAG_APPROXIMATE,
@@ -49,7 +48,6 @@ function attributeCertificateMatchTyped (
     flags: number = 0,
 ): boolean {
     const v = readDecoded(value, _decode_AttributeCertificate);
-    const getEqualityMatcher = valueEqualityMatcher(getMatcher, flags);
     if (a.holder) {
         if (("baseCertificateID" in a.holder)) {
             if (!v.toBeSigned.holder.baseCertificateID) {
@@ -58,7 +56,7 @@ function attributeCertificateMatchTyped (
             if (!compareIssuerSerial(
                 a.holder.baseCertificateID,
                 v.toBeSigned.holder.baseCertificateID,
-                getEqualityMatcher
+                getMatcher
             )) {
                 return false;
             }
@@ -66,13 +64,13 @@ function attributeCertificateMatchTyped (
             if (!v.toBeSigned.holder.entityName) {
                 return false;
             }
-            if (!compareGeneralNames(a.holder.holderName, v.toBeSigned.holder.entityName, getEqualityMatcher)) {
+            if (!compareGeneralNames(a.holder.holderName, v.toBeSigned.holder.entityName, getMatcher)) {
                 return false;
             }
         }
     }
     const issuerName = v.toBeSigned.issuer.issuerName;
-    if (a.issuer && (!issuerName || !compareGeneralNames(a.issuer, issuerName, getEqualityMatcher))) {
+    if (a.issuer && (!issuerName || !compareGeneralNames(a.issuer, issuerName, getMatcher))) {
         return false;
     }
     if (a.attCertValidity) {

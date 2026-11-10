@@ -36,11 +36,16 @@ import type {
     Name,
 } from "../../src/lib/modules/InformationFramework/Name.ta.mjs";
 import { evaluateFilter, type EvaluateFilterSettings } from "../../src/lib/utils/evaluateFilter.mjs";
-import type EqualityMatcher from "../../src/lib/types/EqualityMatcher.mjs";
-import type OrderingMatcher from "../../src/lib/types/OrderingMatcher.mjs";
-import type SubstringsMatcher from "../../src/lib/types/SubstringsMatcher.mjs";
-import SubstringSelection from "../../src/lib/types/SubstringSelection.mjs";
-import { type OBJECT_IDENTIFIER } from "@wildboar/asn1";
+import {
+    MATCH_FLAG_ORDERING_GREATER,
+    MATCH_FLAG_ORDERING_OR_EQUAL,
+    type ContextMatcher,
+    type Matcher,
+} from "../../src/lib/types/matching.mjs";
+import { type OBJECT_IDENTIFIER, type ASN1Element } from "@wildboar/asn1";
+import {
+    AttributeTypeAndValue,
+} from "../../src/lib/modules/InformationFramework/AttributeTypeAndValue.ta.mjs";
 
 const TRUE_ELEMENT = new asn1.DERElement(
     asn1.ASN1TagClass.universal,
@@ -88,28 +93,53 @@ const FILLER_CONTEXT_TYPE_1 = asn1.ObjectIdentifier.fromParts([2, 1, 1, 1]);
 
 const FILLER_MATCHING_RULE_TYPE_1 = asn1.ObjectIdentifier.fromParts([0, 1, 1, 1]);
 
-const BOOLEAN_EQUALITY_MATCHING_RULE: EqualityMatcher = (assertion, value) => (assertion.value[0] === value.value[0]);
+function storedValue(valueOrValues: AttributeTypeAndValue | Attribute): ASN1Element {
+    return "values" in valueOrValues ? valueOrValues.values[0] : valueOrValues.value;
+}
+
+const BOOLEAN_EQUALITY_MATCHING_RULE: Matcher = (assertion, valueOrValues) => (
+    (assertion as ASN1Element).value[0] === storedValue(valueOrValues).value[0]
+);
+
+const BOOLEAN_CONTEXT_MATCHING_RULE: ContextMatcher = (assertion, values) => {
+    for (const stored of values) {
+        if (assertion.value[0] === stored.value[0]) {
+            return true;
+        }
+    }
+    return false;
+};
 
 // This will only work for INTEGERs within [0,127].
-const INTEGER_ORDERING_RULE: OrderingMatcher = (assertion, value) => (assertion.value[0] - value.value[0]);
+const INTEGER_ORDERING_RULE: Matcher = (assertion, valueOrValues, _get, flags = 0) => {
+    const a = (assertion as ASN1Element).value[0];
+    const v = storedValue(valueOrValues).value[0];
+    const greater = Boolean(flags & MATCH_FLAG_ORDERING_GREATER);
+    const orEqual = Boolean(flags & MATCH_FLAG_ORDERING_OR_EQUAL);
+    if (greater) {
+        return orEqual ? v >= a : v > a;
+    }
+    return orEqual ? v <= a : v < a;
+};
 
-const UTF8_SUBSTRING_RULE: SubstringsMatcher = (assertion, value, selection) => {
-    switch (selection) {
-    case (SubstringSelection.initial): {
-        return (value.utf8String.startsWith(assertion.utf8String));
+const UTF8_SUBSTRING_RULE: Matcher = (assertion, valueOrValues) => {
+    const val = storedValue(valueOrValues).utf8String;
+    const items = Array.isArray(assertion) ? assertion : [];
+    for (const item of items) {
+        if ("initial" in item && !val.startsWith(item.initial.utf8String)) {
+            return false;
+        }
+        if ("any_" in item && val.indexOf(item.any_.utf8String) < 0) {
+            return false;
+        }
+        if ("final" in item) {
+            const ass = item.final.utf8String;
+            if (val.indexOf(ass) !== (val.length - ass.length - 1)) {
+                return false;
+            }
+        }
     }
-    case (SubstringSelection.any_): {
-        return (value.utf8String.indexOf(assertion.utf8String) > -1);
-    }
-    case (SubstringSelection.final): {
-        const val = value.utf8String;
-        const ass = assertion.utf8String;
-        return (val.indexOf(ass) === (val.length - ass.length - 1));
-    }
-    default: {
-        throw new Error();
-    }
-    }
+    return true;
 };
 
 const ALWAYS_COMPATIBLE: EvaluateFilterSettings["isMatchingRuleCompatibleWithAttributeType"] = () => true;
@@ -604,7 +634,7 @@ describe("evaluateFilter", () => {
             getEqualityMatcher: () => BOOLEAN_EQUALITY_MATCHING_RULE,
             getOrderingMatcher: () => undefined,
             getSubstringsMatcher: () => undefined,
-            getContextMatcher: () => BOOLEAN_EQUALITY_MATCHING_RULE,
+            getContextMatcher: () => BOOLEAN_CONTEXT_MATCHING_RULE,
             determineAbsentMatch: () => true, // TRUE is the default for &absentMatch.
             getApproximateMatcher: () => undefined,
             isMatchingRuleCompatibleWithAttributeType: ALWAYS_COMPATIBLE,

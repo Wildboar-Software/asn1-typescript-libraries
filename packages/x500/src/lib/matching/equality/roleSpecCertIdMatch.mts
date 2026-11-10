@@ -1,8 +1,7 @@
-import type { ASN1Element, OBJECT_IDENTIFIER } from "@wildboar/asn1";
+import type { ASN1Element } from "@wildboar/asn1";
 import type { AttributeType } from "../../modules/InformationFramework/index.mjs";
 import { valueEqualityMatcher } from "../valueEqualityMatcher.mjs";
 import { bytesEqual } from "../constantTime.mjs";
-import type EqualityMatcher from "../../types/EqualityMatcher.mjs";
 import {
     createEqualityMatcher,
     MATCH_FLAG_CONSTANT_TIME,
@@ -50,9 +49,11 @@ import { compareGeneralNames } from "../../comparators/compareGeneralNames.mjs";
 function assertRoleSpecCertIdentifier (
     a: RoleSpecCertIdentifier,
     b: RoleSpecCertIdentifier,
-    getEqualityMatcher?: (attributeType: OBJECT_IDENTIFIER) => EqualityMatcher | undefined,
-    constantTime: boolean | number = 0,
+    getMatcher?: (attributeType: AttributeType) => Matcher | undefined,
+    flags: number = 0,
 ): boolean {
+    const getEqualityMatcher = valueEqualityMatcher(getMatcher, flags);
+    const constantTime = flags & MATCH_FLAG_CONSTANT_TIME;
     let matched = true;
     if (!compareGeneralName(a.roleName, b.roleName, getEqualityMatcher)) {
         if (!constantTime) {
@@ -82,7 +83,7 @@ function assertRoleSpecCertIdentifier (
         a.roleCertLocator
         && !(
             b.roleCertLocator
-            && compareGeneralNames(a.roleCertLocator, b.roleCertLocator, getEqualityMatcher)
+            && compareGeneralNames(a.roleCertLocator, b.roleCertLocator, getMatcher)
         )
     ) {
         if (!constantTime) {
@@ -118,8 +119,6 @@ function roleSpecCertIdMatchTyped (
     flags: number = 0,
 ): boolean {
     const v = readDecoded(value, _decode_AttributeCertificate);
-    const constantTime = flags & MATCH_FLAG_CONSTANT_TIME;
-    const getEqualityMatcher = valueEqualityMatcher(getMatcher, flags);
     const rsci: Extension | undefined = v.toBeSigned.extensions
         ?.find((ext: Extension): boolean => ext.extnId.isEqualTo(id_ce_roleSpecCertIdentifier));
     if (!rsci) {
@@ -133,8 +132,8 @@ function roleSpecCertIdMatchTyped (
     }
     let matched = true;
     for (let i = 0; i < a.length; i++) {
-        if (!assertRoleSpecCertIdentifier(a[i], storedValue[i], getEqualityMatcher, constantTime)) {
-            if (!constantTime) {
+        if (!assertRoleSpecCertIdentifier(a[i], storedValue[i], getMatcher, flags)) {
+            if (!(flags & MATCH_FLAG_CONSTANT_TIME)) {
                 return false;
             }
             matched = false;

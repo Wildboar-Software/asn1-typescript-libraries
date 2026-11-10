@@ -1,5 +1,6 @@
 import type { OBJECT_IDENTIFIER } from "@wildboar/asn1";
-import type { EqualityMatcher } from "../types/EqualityMatcher.mjs";
+import type { Matcher } from "../types/matching.mjs";
+import { valueEqualityMatcher } from "../matching/valueEqualityMatcher.mjs";
 import type { GeneralName } from "../modules/CertificateExtensions/index.mjs";
 import { GeneralSubtree } from "../modules/CertificateExtensions/GeneralSubtree.ta.mjs";
 import {
@@ -21,7 +22,7 @@ import { gnWithinGeneralSubtree } from "../utils/gnWithinGeneralSubtree.mjs";
 export function compareTarget(
     a: Target,
     b: Target,
-    getEqualityMatcher?: (attributeType: OBJECT_IDENTIFIER) => EqualityMatcher | undefined,
+    getEqualityMatcher?: (attributeType: OBJECT_IDENTIFIER) => Matcher | undefined,
 ): boolean {
     if (("targetCert" in a) && ("targetCert" in b)) {
         // Names can refer to several certificates, and digests can use different
@@ -40,9 +41,9 @@ export function compareTarget(
         || (("targetCert" in b) && b.targetCert.targetName);
     // For our purposes, we match targetName and targetGroup the same.
     if (aname && bname) {
-        return compareGeneralName(aname, bname, getEqualityMatcher);
+        return compareGeneralName(aname, bname, valueEqualityMatcher(getEqualityMatcher));
     } else if (("targetGroup" in a) && ("targetGroup" in b)) {
-        return compareGeneralName(a.targetGroup, b.targetGroup, getEqualityMatcher);
+        return compareGeneralName(a.targetGroup, b.targetGroup, valueEqualityMatcher(getEqualityMatcher));
     } else if (("targetGroup" in a) && ("targetName" in b)) {
         // If one is a group and one is a name, we do a simple prefix check.
         const group = new GeneralSubtree(a.targetGroup);

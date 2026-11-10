@@ -1,6 +1,5 @@
 import type { ASN1Element } from "@wildboar/asn1";
 import type { AttributeType } from "../../modules/InformationFramework/index.mjs";
-import { valueEqualityMatcher } from "../valueEqualityMatcher.mjs";
 import {
     createEqualityMatcher,
     MATCH_FLAG_CONSTANT_TIME,
@@ -59,14 +58,13 @@ function delegationPathMatchTyped (
         }
         return false;
     }
-    const getEqualityMatcher = valueEqualityMatcher(getMatcher, flags);
     const firstCert: AttributeCertificate = v[0];
     const lastCert: AttributeCertificate = v[v.length - 1];
-    const firstMatches = compareAttCertIssuer(a.firstIssuer, firstCert.toBeSigned.issuer, getEqualityMatcher);
+    const firstMatches = compareAttCertIssuer(a.firstIssuer, firstCert.toBeSigned.issuer, getMatcher);
     if (!firstMatches && !(flags & MATCH_FLAG_CONSTANT_TIME)) {
         return false;
     }
-    const lastMatches = compareHolder(a.lastHolder, lastCert.toBeSigned.holder, getEqualityMatcher);
+    const lastMatches = compareHolder(a.lastHolder, lastCert.toBeSigned.holder, getMatcher);
     return firstMatches && lastMatches;
 }
 

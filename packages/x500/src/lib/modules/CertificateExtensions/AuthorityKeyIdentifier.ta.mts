@@ -6,7 +6,7 @@ import {
     type OBJECT_IDENTIFIER,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import type EqualityMatcher from "../../types/EqualityMatcher.mjs";
+import type { Matcher } from "../../types/matching.mjs";
 import compareAuthorityKeyIdentifier from "../../comparators/compareAuthorityKeyIdentifier.mjs";
 import {
     type CertificateSerialNumber,
@@ -134,7 +134,7 @@ export class AuthorityKeyIdentifier {
      */
     public isEqualTo(
         other: AuthorityKeyIdentifier,
-        getEqualityMatcher?: (attributeType: OBJECT_IDENTIFIER) => EqualityMatcher | undefined,
+        getEqualityMatcher?: (attributeType: OBJECT_IDENTIFIER) => Matcher | undefined,
     ): boolean {
         return compareAuthorityKeyIdentifier(this, other, getEqualityMatcher);
     }

@@ -1,5 +1,6 @@
 import { type OBJECT_IDENTIFIER, compareBitStrings } from "@wildboar/asn1";
-import type EqualityMatcher from "../types/EqualityMatcher.mjs";
+import type { Matcher } from "../types/matching.mjs";
+import { valueEqualityMatcher } from "../matching/valueEqualityMatcher.mjs";
 import type {
     DistinguishedName,
 } from "../modules/InformationFramework/DistinguishedName.ta.mjs";
@@ -75,7 +76,7 @@ async function userWithinACIUserClass (
     user: NameAndOptionalUID | undefined | null,
     authLevel: AuthenticationLevel,
     entryDN: DistinguishedName,
-    getEqualityMatcher: (attributeType: OBJECT_IDENTIFIER) => EqualityMatcher | undefined,
+    getEqualityMatcher: (attributeType: OBJECT_IDENTIFIER) => Matcher | undefined,
     isMemberOfGroup: (userGroup: NameAndOptionalUID, user: NameAndOptionalUID) => Promise<boolean | undefined>,
 ): Promise<number> {
     const userClass: UserClasses = tuple.userClasses;
@@ -112,14 +113,14 @@ async function userWithinACIUserClass (
     let couldNotDetermineGroupMembership: boolean = false;
     if (
         (userClass.thisEntry === null)
-        && compareRDNSequence(user.dn, entryDN, getEqualityMatcher)
+        && compareRDNSequence(user.dn, entryDN, valueEqualityMatcher(getEqualityMatcher))
     ) {
         return 4;
     }
     if (
         (userClass.name && (userClass.name.length > 0))
         && (userClass.name.some((n) => (
-            compareRDNSequence(user.dn, n.dn, getEqualityMatcher)
+            compareRDNSequence(user.dn, n.dn, valueEqualityMatcher(getEqualityMatcher))
             && (
                 !n.uid // If there is no uid, all entries with this name are relevant.
                 || (user.uid && compareBitStrings(user.uid, n.uid))

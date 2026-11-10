@@ -1,4 +1,3 @@
-import type EqualityMatcher from "../../types/EqualityMatcher.mjs";
 import { TRUE, DERElement, ASN1TagClass, ASN1Construction, ASN1UniversalType } from "@wildboar/asn1";
 import {
     TimeSpecification,

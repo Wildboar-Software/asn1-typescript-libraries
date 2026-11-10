@@ -1,6 +1,6 @@
 import type { OBJECT_IDENTIFIER } from "@wildboar/asn1";
 import { generalNameToKey } from "@wildboar/gn";
-import type EqualityMatcher from "../types/EqualityMatcher.mjs";
+import type { Matcher } from "../types/matching.mjs";
 import type {
     GeneralSubtree,
 } from "../modules/CertificateExtensions/GeneralSubtree.ta.mjs";
@@ -54,7 +54,7 @@ export
 function compareGeneralSubtrees (
     a: GeneralSubtrees,
     b: GeneralSubtrees,
-    getEqualityMatcher?: (attributeType: OBJECT_IDENTIFIER) => EqualityMatcher | undefined,
+    getEqualityMatcher?: (attributeType: OBJECT_IDENTIFIER) => Matcher | undefined,
     exactOrdering: boolean = true,
 ): boolean {
     if (a.length !== b.length) {

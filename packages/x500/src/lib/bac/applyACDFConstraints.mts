@@ -9,6 +9,7 @@ import type ProtectedItem from "../types/ProtectedItem.mjs";
 import type { EvaluateFilterSettings } from "../utils/evaluateFilter.mjs";
 import evaluateContextAssertion from "../utils/evaluateContextAssertion.mjs";
 import compareElements from "../comparators/compareElements.mjs";
+import { AttributeTypeAndValue } from "../modules/InformationFramework/AttributeTypeAndValue.ta.mjs";
 
 function countWithinLimit (count: number | undefined, limit: INTEGER): boolean {
     return typeof count === "number"
@@ -111,12 +112,19 @@ function applyACDFConstraints (
             }
             let present = false;
             try {
-                const matcher = settings.getEqualityMatcher(restriction.valuesIn) ?? compareElements;
+                const matcher = settings.getEqualityMatcher(restriction.valuesIn);
+                const matchesStored = (value: typeof request.value.value) => matcher
+                    ? matcher(
+                        request.value.value,
+                        new AttributeTypeAndValue(request.value.type_, value),
+                        settings.getEqualityMatcher,
+                    ) === true
+                    : compareElements(request.value.value, value);
                 present = request.entryAttributes?.some((attribute) => (
                     attribute.type_.isEqualTo(restriction.valuesIn)
                     && (
-                        attribute.values.some((value) => matcher(request.value.value, value) === true)
-                        || attribute.valuesWithContext?.some((vwc) => matcher(request.value.value, vwc.value) === true)
+                        attribute.values.some((value) => matchesStored(value))
+                        || attribute.valuesWithContext?.some((vwc) => matchesStored(vwc.value))
                     )
                 )) ?? false;
             } catch {
@@ -136,6 +144,7 @@ function applyACDFConstraints (
                     request.contexts ?? [],
                     settings.getContextMatcher,
                     settings.determineAbsentMatch,
+                    settings.getEqualityMatcher,
                 ));
             } catch {
                 // On failure retain denials and remove grants, never vice versa.

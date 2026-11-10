@@ -1,4 +1,5 @@
-import type EqualityMatcher from "../types/EqualityMatcher.mjs";
+import type { Matcher } from "../types/matching.mjs";
+import { valueEqualityMatcher } from "../matching/valueEqualityMatcher.mjs";
 import type { OBJECT_IDENTIFIER } from "@wildboar/asn1";
 import type {
     DistinguishedName,
@@ -72,7 +73,7 @@ function dnWithinSubtreeSpecification (
     entryObjectClasses: OBJECT_CLASS["&id"][],
     sts: SubtreeSpecification,
     scope: DistinguishedName,
-    getEqualityMatcher?: (attributeType: OBJECT_IDENTIFIER) => EqualityMatcher | undefined,
+    getEqualityMatcher?: (attributeType: OBJECT_IDENTIFIER) => Matcher | undefined,
 ): boolean | undefined {
     const base: DistinguishedName = [
         ...scope,
@@ -93,7 +94,7 @@ function dnWithinSubtreeSpecification (
     ) {
         return false;
     }
-    const namingMatcher = getEqualityMatcher ?? (() => compareElements);
+    const namingMatcher = valueEqualityMatcher(getEqualityMatcher) ?? (() => compareElements);
     const baseMatches = compareDN(base, entryDN.slice(0, base.length), namingMatcher);
     if (!baseMatches) {
         return false;

@@ -181,20 +181,15 @@ There are four sub-folders within: `equality`, `ordering`, `substring`, and
 substring matching rules, respectively. `context` contains code for comparing
 context values.
 
-Each function within `equality` has type `EqualityMatcher`. Each function takes
-two `ASN1Element`s and returns a `boolean` indicating whether the two values are
-equal.
-
-Each function within `ordering` has type `OrderingMatcher`. Each function takes
-two `ASN1Element`s and returns a `number` that indicates whether two values are
-equal, or whether the first or second value is greater. This `number` is used
-in the same way that the return value from the predicate function used in
-JavaScript's `Array.sort(predicate)` is used.
-
-Each function within `substring` has type `SubstringsMatcher`. Each function
-takes two `ASN1Elements`s and the type of substring selection (`initial`,
-`final`, `any`, etc.) and returns a `boolean` indicating whether that substring
-is present.
+Each function within `equality`, `ordering`, and `substring` has type
+`Matcher`. A matcher takes an assertion (an encoded value, or the strings of a
+`substrings` filter item), a stored `AttributeTypeAndValue` or `Attribute`,
+optional nested equality-matcher lookup, and match flags. It returns `true`,
+`false`, or `undefined` (an X.500 `UNDEFINED` match outcome). Ordering uses
+flags such as `MATCH_FLAG_ORDERING_GREATER` and `MATCH_FLAG_ORDERING_OR_EQUAL`
+instead of a numeric comparator. Approximate matching uses
+`MATCH_FLAG_APPROXIMATE`. Context matchers have type `ContextMatcher` and
+compare an assertion against all stored values of that context type.
 
 ## Stringifiers
 
@@ -223,16 +218,11 @@ are either deprecated or not intended for external use:
 
 - `ACDFTuple.mts` - An ACDF Tuple, as defined in ITU Recommendation X.501.
 - `ACDFTupleExtended.mts` - An extension of an ACDF Tuple, with `userClassSpecificity` for indicating which user class matched.
-- `ApproxMatcher.mts` - A function that _approximately_ evaluates an equality matching rule against a value.
 - `AttributeTypeValueAndContextsTuple.mts` - A three-element array containing an attribute type, value, and contexts.
-- `ContextMatcher.mts` - A function that evaluates an assertion against a context.
-- `EqualityMatcher.mts` - A function that evaluates an equality matching rule against a value.
-- `OrderingMatcher.mts` - A function that evaluates an ordering matching rule against a value.
+- `matching.mts` - Unified matching APIs: `Matcher`, `ContextMatcher`, match flags, and matcher factories.
 - `ProtectedItem.mts` - A type representing the object of an authorization request.
 - `StringDecoder.mts` - A function that converts an LDAP string into an `ASN1Element`
 - `StringEncoder.mts` - A function that converts an `ASN1Element` to an LDAP string
-- `SubstringSelection.mts` - An enum describing a subset of a string to be matched in a substrings match.
-- `SubstringsMatcher.mts` - A function that evaluates an substrings matching rule against a value.
 
 ## Utilities
 

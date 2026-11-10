@@ -1,6 +1,5 @@
 import selectFromEntry from "../../src/lib/utils/selectFromEntry.mjs";
 import {
-    ASN1Element,
     ObjectIdentifier,
     type OBJECT_IDENTIFIER,
     DERElement,
@@ -65,7 +64,14 @@ const NO_SUPERTYPES: Parameters<typeof selectFromEntry>[3] = () => [];
 const NAME_SUPERTYPE: Parameters<typeof selectFromEntry>[3] = () => [ ID_NAME ];
 const ALWAYS_MATCHES: Parameters<typeof selectFromEntry>[4] = () => () => true;
 const NEVER_MATCHES: Parameters<typeof selectFromEntry>[4] = () => () => false;
-const STRING_MATCHES: Parameters<typeof selectFromEntry>[4] = () => (assertion: ASN1Element, value: ASN1Element) => (assertion.utf8String === value.utf8String);
+const STRING_MATCHES: Parameters<typeof selectFromEntry>[4] = () => (assertion, values) => {
+    for (const value of values) {
+        if (assertion.utf8String === value.utf8String) {
+            return true;
+        }
+    }
+    return false;
+};
 
 const COMMON_NAME: Attribute = new Attribute(
     ID_COMMON_NAME,

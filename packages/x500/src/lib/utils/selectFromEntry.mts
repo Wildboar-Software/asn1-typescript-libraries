@@ -20,7 +20,7 @@ import {
 import {
     Attribute_valuesWithContext_Item,
 } from "../modules/InformationFramework/Attribute-valuesWithContext-Item.ta.mjs";
-import type ContextMatcher from "../types/ContextMatcher.mjs";
+import type { ContextMatcher } from "../types/matching.mjs";
 import {
     id_oa_allAttributeTypes,
 } from "../modules/InformationFramework/id-oa-allAttributeTypes.va.mjs";
