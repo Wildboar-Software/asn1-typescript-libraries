@@ -32,7 +32,6 @@ import type {
     FilterItem_substrings,
 } from "../modules/DirectoryAbstractService/FilterItem-substrings.ta.mjs";
 import type { ASN1Element, OBJECT_IDENTIFIER } from "@wildboar/asn1";
-import { AttributeTypeAndValue } from "../modules/InformationFramework/AttributeTypeAndValue.ta.mjs";
 import type {
     FilterItem_substrings_strings_Item,
 } from "../modules/DirectoryAbstractService/FilterItem-substrings-strings-Item.ta.mjs";
@@ -74,7 +73,7 @@ interface EvaluateFilterSettings {
     /**
      * A function that accepts an attribute type and returns a function
      * that can perform an equality comparison on an asserted value against an
-     * attribute value.
+     * attribute (or a distinguished ATAV).
      *
      * @readonly
      * @property
@@ -84,7 +83,7 @@ interface EvaluateFilterSettings {
     /**
      * A function that accepts an attribute type and returns a function
      * that can perform a ordering matching on an asserted value against an
-     * attribute value.
+     * attribute (or a distinguished ATAV).
      *
      * @readonly
      * @property
@@ -94,7 +93,7 @@ interface EvaluateFilterSettings {
     /**
      * A function that accepts an attribute type and returns a function
      * that can perform a substrings matching on an asserted value against an
-     * attribute value.
+     * attribute (or a distinguished ATAV).
      *
      * @readonly
      * @property
@@ -104,8 +103,9 @@ interface EvaluateFilterSettings {
     /**
      * A function that accepts an attribute type and returns a function
      * that can perform an approximate matching on an asserted value against an
-     * attribute value. When this returns `undefined`, approximate matching
-     * falls back to the equality matcher with `MATCH_FLAG_APPROXIMATE`.
+     * attribute (or a distinguished ATAV). When this returns `undefined`,
+     * approximate matching falls back to the equality matcher with
+     * `MATCH_FLAG_APPROXIMATE`.
      */
     readonly getApproximateMatcher: (attributeType: OBJECT_IDENTIFIER) => Matcher | undefined;
 
@@ -236,27 +236,6 @@ interface MatchState {
 
 // Default maximum number of filter nodes on one recursive path, including the root.
 const MAX_FILTER_DEPTH = 128;
-
-/**
- * Invoke a `Matcher` against one stored value by wrapping it as an
- * `AttributeTypeAndValue`. Nested distinguished-name matching uses
- * `options.getEqualityMatcher`.
- */
-function matchValue (
-    matcher: Matcher,
-    assertion: ASN1Element | FilterItem_substrings_strings_Item[],
-    type: AttributeType,
-    value: ASN1Element,
-    options: EvaluateFilterSettings,
-    flags: number = 0,
-): boolean | undefined {
-    return matcher(
-        assertion,
-        new AttributeTypeAndValue(type, value),
-        options.getEqualityMatcher,
-        flags,
-    );
-}
 
 function handleErrors (matcher: AnyFunction | undefined, state?: MatchState): AnyFunction | undefined {
     if (!matcher) {
@@ -424,6 +403,214 @@ function assertedContexts (ava: AttributeValueAssertion): ContextAssertion[] | u
         : undefined;
 }
 
+type ContextsMatch = (
+    selectedContexts: ContextAssertion[] | undefined,
+    valueContexts: readonly Context[],
+    attribute: Attribute,
+    options: EvaluateFilterSettings,
+    directMatchCache: DirectContextMatchCache,
+) => boolean;
+
+/**
+ * Invoke a `Matcher` against a whole `Attribute` so the assertion syntax is
+ * decoded once for every stored value. Nested distinguished-name matching uses
+ * `options.getEqualityMatcher`. Matching values are written to `matchedValues`
+ * when the implementation honors that out-parameter.
+ */
+function matchAttribute (
+    matcher: Matcher,
+    assertion: FilterAssertion,
+    attr: Attribute,
+    options: EvaluateFilterSettings,
+    flags: number = 0,
+    matchedValues?: Attribute,
+): boolean | undefined {
+    return matcher(
+        assertion,
+        attr,
+        options.getEqualityMatcher,
+        flags,
+        matchedValues,
+    );
+}
+
+function emptyMatchedValues (type: AttributeType): Attribute {
+    return new Attribute(type, [], []);
+}
+
+function hasReportedMatches (reported: Attribute): boolean {
+    return (reported.values.length > 0)
+        || ((reported.valuesWithContext?.length ?? 0) > 0);
+}
+
+/**
+ * Drop values the caller is not permitted to filter on. An empty result is
+ * `undefined` so the matcher is not invoked on an attribute with no usable
+ * values (which would be UNDEFINED rather than FALSE).
+ */
+function selectPermittedAttribute (
+    attr: Attribute,
+    options: EvaluateFilterSettings,
+    requireTypePermission: boolean,
+): Attribute | undefined {
+    if (requireTypePermission && !options.permittedToMatch(attr.type_)) {
+        return undefined;
+    }
+    const values = attr.values.filter((value) => options.permittedToMatch(attr.type_, value));
+    const vwcs = (attr.valuesWithContext ?? []).filter((vwc) => (
+        options.permittedToMatch(attr.type_, vwc.value)
+    ));
+    if ((values.length === 0) && (vwcs.length === 0)) {
+        return undefined;
+    }
+    if (
+        (values.length === attr.values.length)
+        && (vwcs.length === (attr.valuesWithContext?.length ?? 0))
+    ) {
+        return attr;
+    }
+    return new Attribute(attr.type_, values, vwcs.length ? vwcs : undefined);
+}
+
+interface ReportedCandidate {
+    value: ASN1Element;
+    contexts?: Context[];
+}
+
+function reportedCandidates (reported: Attribute, fallback: Attribute): ReportedCandidate[] {
+    const source = hasReportedMatches(reported) ? reported : fallback;
+    const candidates: ReportedCandidate[] = [];
+    for (const value of source.values) {
+        candidates.push({ value });
+    }
+    for (const vwc of source.valuesWithContext ?? []) {
+        candidates.push({ value: vwc.value, contexts: vwc.contextList });
+    }
+    return candidates;
+}
+
+/**
+ * Convert matcher-reported values into `MatchedValue`s, applying selected
+ * context assertions against the original stored attribute. Returns `true`
+ * when the caller should stop because `matchedValuesOnly` is unset.
+ */
+function appendReportedMatches (
+    originalAttr: Attribute,
+    permitted: Attribute,
+    reported: Attribute,
+    selectedContexts: ContextAssertion[] | undefined,
+    options: EvaluateFilterSettings,
+    contextsMatch: ContextsMatch,
+    directMatchCache: DirectContextMatchCache,
+    matchedValues: MatchedValue[],
+    matchedValuesOnly: boolean,
+): boolean {
+    const candidates = reportedCandidates(reported, permitted);
+    for (const candidate of candidates) {
+        if (!contextsMatch(
+            selectedContexts,
+            candidate.contexts ?? NO_CONTEXTS,
+            originalAttr,
+            options,
+            directMatchCache,
+        )) {
+            continue;
+        }
+        matchedValues.push({
+            type: originalAttr.type_,
+            value: candidate.value,
+            contexts: candidate.contexts,
+        });
+        if (!matchedValuesOnly) {
+            return true;
+        }
+    }
+    return false;
+}
+
+/**
+ * Match every permitted value of `attr` in one matcher call. Returns `true`
+ * when a match was recorded and the caller should stop.
+ */
+function matchStoredAttribute (
+    matcher: Matcher,
+    assertion: FilterAssertion,
+    attr: Attribute,
+    options: EvaluateFilterSettings,
+    flags: number,
+    selectedContexts: ContextAssertion[] | undefined,
+    requireTypePermission: boolean,
+    contextsMatch: ContextsMatch,
+    directMatchCache: DirectContextMatchCache,
+    matchedValues: MatchedValue[],
+): boolean {
+    const permitted = selectPermittedAttribute(attr, options, requireTypePermission);
+    if (!permitted) {
+        return false;
+    }
+    const reported = emptyMatchedValues(attr.type_);
+    const result = matchAttribute(matcher, assertion, permitted, options, flags, reported);
+    if (result !== true) {
+        return false;
+    }
+    return appendReportedMatches(
+        attr,
+        permitted,
+        reported,
+        selectedContexts,
+        options,
+        contextsMatch,
+        directMatchCache,
+        matchedValues,
+        Boolean(options.matchedValuesOnly),
+    );
+}
+
+/**
+ * Match service-profile default values as a single attribute. When
+ * `matchedValues` is omitted, a match is not enumerated (used for defaults
+ * that fill in a missing attribute).
+ */
+function matchDefaultValues (
+    matcher: Matcher,
+    assertion: FilterAssertion,
+    type: AttributeType,
+    values: ASN1Element[],
+    options: EvaluateFilterSettings,
+    flags: number,
+    matchedValues?: MatchedValue[],
+): boolean {
+    const permitted = values.filter((value) => options.permittedToMatch(type, value));
+    if (permitted.length === 0) {
+        return false;
+    }
+    const reported = matchedValues ? emptyMatchedValues(type) : undefined;
+    const result = matchAttribute(
+        matcher,
+        assertion,
+        new Attribute(type, permitted),
+        options,
+        flags,
+        reported,
+    );
+    if (result !== true) {
+        return false;
+    }
+    if (matchedValues) {
+        const sources = (reported && hasReportedMatches(reported)) ? reported.values : permitted;
+        for (const value of sources) {
+            matchedValues.push({
+                type,
+                value,
+            });
+            if (!options.matchedValuesOnly) {
+                break;
+            }
+        }
+    }
+    return true;
+}
+
 /**
  * The ordering and approximate flags select which rule is applied. A
  * substrings item is recognized by its `strings` sequence rather than a flag.
@@ -482,7 +669,7 @@ function evaluateFilterAssertion (
     if (Array.isArray(assertion) && !options.permittedToMatch(type_)) {
         return undefined;
     }
-    const contextsMatch = handleErrors(valueSatisfiesSelectedContexts, state)!;
+    const contextsMatch = handleErrors(valueSatisfiesSelectedContexts, state)! as ContextsMatch;
     const attributes = getAttributesFromEntry(entry, options.dnAttribute);
     const friendTypes: OBJECT_IDENTIFIER[] = [
         type_,
@@ -511,23 +698,14 @@ function evaluateFilterAssertion (
             }
             // NOTE: This does not consider entryType at all, because it is undocumented entirely.
             const default_values = profile.defaultValues.flatMap((dv) => dv.values);
-            for (const default_value of default_values) {
-                if (!options.permittedToMatch(profile.attributeType, default_value)) {
-                    continue;
-                }
-                if (!matchValue(matcher, assertion, profile.attributeType, default_value, options, flags)) {
-                    continue;
-                }
-                matchedValues.push({
-                    type: profile.attributeType,
-                    value: default_value,
-                });
-                if (!options.matchedValuesOnly) {
-                    // No matched values are returned intentionally, since these are defaults.
-                    return true;
-                }
-            }
-            if (matchedValues.length > 0) {
+            if (matchDefaultValues(
+                matcher,
+                assertion,
+                profile.attributeType,
+                default_values,
+                options,
+                flags,
+            )) {
                 // No matched values are returned intentionally, since these are defaults.
                 return true;
             }
@@ -537,45 +715,19 @@ function evaluateFilterAssertion (
     for (const attr of relevantAttributes) {
         // Substrings checks permission per value. The other items also
         // require permission on the stored attribute type.
-        if (!substrings && !options.permittedToMatch(attr.type_)) {
-            continue;
-        }
-        for (const value of attr.values) {
-            if (!options.permittedToMatch(attr.type_, value)) {
-                continue;
-            }
-            if (!matchValue(matcher, assertion, attr.type_, value, options, flags)) {
-                continue;
-            }
-            if (!contextsMatch(selectedContexts, NO_CONTEXTS, attr, options, directMatchCache)) {
-                continue;
-            }
-            matchedValues.push({
-                type: attr.type_,
-                value,
-            });
-            if (!options.matchedValuesOnly) {
-                return matchedValues;
-            }
-        }
-        for (const vwc of attr.valuesWithContext ?? []) {
-            if (!options.permittedToMatch(attr.type_, vwc.value)) {
-                continue;
-            }
-            if (!matchValue(matcher, assertion, attr.type_, vwc.value, options, flags)) {
-                continue;
-            }
-            if (!contextsMatch(selectedContexts, vwc.contextList, attr, options, directMatchCache)) {
-                continue;
-            }
-            matchedValues.push({
-                type: attr.type_,
-                value: vwc.value,
-                contexts: vwc.contextList,
-            });
-            if (!options.matchedValuesOnly) {
-                return matchedValues;
-            }
+        if (matchStoredAttribute(
+            matcher,
+            assertion,
+            attr,
+            options,
+            flags,
+            selectedContexts,
+            !substrings,
+            contextsMatch,
+            directMatchCache,
+            matchedValues,
+        )) {
+            return matchedValues;
         }
         if (relaxPresentAttribute && matchedValues.length === 0) {
             const profile = options?.requestAttributes?.get(attr.type_.toString());
@@ -598,20 +750,16 @@ function evaluateFilterAssertion (
                 } else {
                     // NOTE: This does not consider entryType at all, because it is undocumented entirely.
                     const default_values = profile.defaultValues.flatMap((dv) => dv.values);
-                    for (const default_value of default_values) {
-                        if (!options.permittedToMatch(attr.type_, default_value)) {
-                            continue;
-                        }
-                        if (!matchValue(matcher, assertion, attr.type_, default_value, options, flags)) {
-                            continue;
-                        }
-                        matchedValues.push({
-                            type: attr.type_,
-                            value: default_value,
-                        });
-                        if (!options.matchedValuesOnly) {
-                            return matchedValues;
-                        }
+                    if (matchDefaultValues(
+                        matcher,
+                        assertion,
+                        attr.type_,
+                        default_values,
+                        options,
+                        flags,
+                        matchedValues,
+                    ) && !options.matchedValuesOnly) {
+                        return matchedValues;
                     }
                 }
             }
@@ -789,23 +937,14 @@ function evaluateMatchingRuleAssertion (
             }
             // NOTE: This does not consider entryType at all, because it is undocumented entirely.
             const default_values = profile.defaultValues.flatMap((dv) => dv.values);
-            for (const default_value of default_values) {
-                if (!options.permittedToMatch(profile.attributeType, default_value)) {
-                    continue;
-                }
-                if (!matchValue(matcher, mra.matchValue, profile.attributeType, default_value, options)) {
-                    continue;
-                }
-                matchedValues.push({
-                    type: profile.attributeType,
-                    value: default_value,
-                });
-                if (!options.matchedValuesOnly) {
-                    // No matched values are returned intentionally, since these are defaults.
-                    return true;
-                }
-            }
-            if (matchedValues.length > 0) {
+            if (matchDefaultValues(
+                matcher,
+                mra.matchValue,
+                profile.attributeType,
+                default_values,
+                options,
+                0,
+            )) {
                 // No matched values are returned intentionally, since these are defaults.
                 return true;
             }
@@ -837,40 +976,21 @@ function evaluateMatchingRuleAssertion (
         // preserve an ordinary non-match, or an indeterminate matcher result.
         return state.indeterminate ? undefined : [];
     }
+    const directMatchCache: DirectContextMatchCache = new WeakMap();
     for (const attr of relevantAttributes) {
-        if (!options.permittedToMatch(attr.type_)) {
-            continue;
-        }
-        for (const value of attr.values) {
-            if (!options.permittedToMatch(attr.type_, value)) {
-                continue;
-            }
-            if (!matchValue(matcher, mra.matchValue, attr.type_, value, options)) {
-                continue;
-            }
-            matchedValues.push({
-                type: attr.type_,
-                value,
-            });
-            if (!options.matchedValuesOnly) {
-                return matchedValues;
-            }
-        }
-        for (const vwc of attr.valuesWithContext ?? []) {
-            if (!options.permittedToMatch(attr.type_, vwc.value)) {
-                continue;
-            }
-            if (!matchValue(matcher, mra.matchValue, attr.type_, vwc.value, options)) {
-                continue;
-            }
-            matchedValues.push({
-                type: attr.type_,
-                value: vwc.value,
-                contexts: vwc.contextList,
-            });
-            if (!options.matchedValuesOnly) {
-                return matchedValues;
-            }
+        if (matchStoredAttribute(
+            matcher,
+            mra.matchValue,
+            attr,
+            options,
+            0,
+            undefined,
+            true,
+            valueSatisfiesSelectedContexts,
+            directMatchCache,
+            matchedValues,
+        )) {
+            return matchedValues;
         }
         if (matchedValues.length === 0) {
             const profile = options?.requestAttributes?.get(attr.type_.toString());
@@ -893,20 +1013,16 @@ function evaluateMatchingRuleAssertion (
                 } else {
                     // NOTE: This does not consider entryType at all, because it is undocumented entirely.
                     const default_values = profile.defaultValues.flatMap((dv) => dv.values);
-                    for (const default_value of default_values) {
-                        if (!options.permittedToMatch(attr.type_, default_value)) {
-                            continue;
-                        }
-                        if (!matchValue(matcher, mra.matchValue, attr.type_, default_value, options)) {
-                            continue;
-                        }
-                        matchedValues.push({
-                            type: attr.type_,
-                            value: default_value,
-                        });
-                        if (!options.matchedValuesOnly) {
-                            return matchedValues;
-                        }
+                    if (matchDefaultValues(
+                        matcher,
+                        mra.matchValue,
+                        attr.type_,
+                        default_values,
+                        options,
+                        0,
+                        matchedValues,
+                    ) && !options.matchedValuesOnly) {
+                        return matchedValues;
                     }
                 }
             }

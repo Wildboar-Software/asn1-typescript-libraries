@@ -6,6 +6,7 @@ import {
     MATCH_FLAG_APPROXIMATE,
     MATCH_FLAG_ORDERING_GREATER,
     MATCH_FLAG_ORDERING_OR_EQUAL,
+    createEqualityMatcher,
     type ContextMatcher,
     type Matcher,
 } from "../types/matching.mjs";
@@ -48,10 +49,6 @@ function family (values: string[], contextual: string[] = []): EntryInformation[
     }])];
 }
 
-function storedValue (valueOrValues: AttributeTypeAndValue | Attribute): ASN1Element {
-    return "values" in valueOrValues ? valueOrValues.values[0] : valueOrValues.value;
-}
-
 function compare (_assertion: ASN1Element, stored: ASN1Element): boolean | undefined {
     if (stored.utf8String === "throw") {
         throw new Error("Cannot decode or evaluate this value");
@@ -59,7 +56,11 @@ function compare (_assertion: ASN1Element, stored: ASN1Element): boolean | undef
     return stored.utf8String === "unknown" ? undefined : stored.utf8String === "true";
 }
 
-const compareStored: Matcher = (_assertion, valueOrValues) => compare(value("unused"), storedValue(valueOrValues));
+const compareStored: Matcher = createEqualityMatcher(
+    (el) => el,
+    (_assertion: ASN1Element, stored: ASN1Element) => compare(_assertion, stored),
+    () => value("unused"),
+);
 const alwaysTrueContext: ContextMatcher = () => true;
 
 function settings (_kind: Kind = "equality", matchedValuesOnly: boolean = false): EvaluateFilterSettings {
@@ -538,5 +539,51 @@ describe("extensible matching-rule applicability (M4)", () => {
             ]),
         };
         expect(evaluateFilter(extensible(), [new EntryInformation({ rdnSequence: [] })], options).matched).toBe(true);
+    });
+});
+
+describe("whole-attribute matching", () => {
+    it("decodes the assertion once per attribute, not once per value", () => {
+        let decodes = 0;
+        const matcher = createEqualityMatcher(
+            (el) => {
+                decodes++;
+                return el.utf8String;
+            },
+            (assertion: string, stored: ASN1Element) => stored.utf8String === assertion,
+        );
+        const options: EvaluateFilterSettings = {
+            ...settings(),
+            getEqualityMatcher: () => matcher,
+            matchedValuesOnly: true,
+        };
+        const result = evaluateFilter(leaf("equality"), family(["a", "assertion", "b", "assertion"]), options);
+        expect(result.matched).toBe(true);
+        expect(result.matchedValues).toHaveLength(2);
+        expect(decodes).toBe(1);
+        decodes = 0;
+        expect(evaluateFilter(leaf("equality"), family([], ["x", "assertion", "y"]), options).matched).toBe(true);
+        expect(decodes).toBe(1);
+    });
+
+    it("does not present unpermitted values to the matcher", () => {
+        const seen: string[] = [];
+        const matcher = createEqualityMatcher(
+            (el) => el.utf8String,
+            (assertion: string, stored: ASN1Element) => {
+                seen.push(stored.utf8String);
+                return stored.utf8String === assertion;
+            },
+        );
+        const options: EvaluateFilterSettings = {
+            ...settings(),
+            getEqualityMatcher: () => matcher,
+            permittedToMatch: (_type, stored) => !stored || stored.utf8String !== "secret",
+            matchedValuesOnly: true,
+        };
+        const result = evaluateFilter(leaf("equality"), family(["secret", "assertion", "secret"]), options);
+        expect(seen).toEqual(["assertion"]);
+        expect(result.matched).toBe(true);
+        expect(result.matchedValues).toHaveLength(1);
     });
 });

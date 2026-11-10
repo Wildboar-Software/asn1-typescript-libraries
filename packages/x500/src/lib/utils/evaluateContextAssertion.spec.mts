@@ -14,7 +14,7 @@ import { EntryInformation } from "../modules/DirectoryAbstractService/EntryInfor
 import { AttributeValueAssertion } from "../modules/InformationFramework/AttributeValueAssertion.ta.mjs";
 import type { Filter } from "../modules/DirectoryAbstractService/Filter.ta.mjs";
 import type { Name } from "../modules/InformationFramework/Name.ta.mjs";
-import type { ContextMatcher, Matcher } from "../types/matching.mjs";
+import { createEqualityMatcher, type ContextMatcher, type Matcher } from "../types/matching.mjs";
 
 const CONTEXT_TYPE = ObjectIdentifier.fromString("1.2.3.4.5");
 const ATTR_TYPE = ObjectIdentifier.fromString("2.5.4.3");
@@ -44,10 +44,10 @@ const WORLD = new DERElement(
     "world",
 );
 
-const stringEquality: Matcher = (assertion, valueOrValues) => {
-    const stored = "values" in valueOrValues ? valueOrValues.values[0] : valueOrValues.value;
-    return (assertion as DERElement).utf8String === stored.utf8String;
-};
+const stringEquality: Matcher = createEqualityMatcher(
+    (el) => el.utf8String,
+    (assertion: string, stored) => assertion === stored.utf8String,
+);
 const stringContext: ContextMatcher = (assertion, values) => {
     for (const v of values) {
         if (assertion.utf8String === v.utf8String) {
