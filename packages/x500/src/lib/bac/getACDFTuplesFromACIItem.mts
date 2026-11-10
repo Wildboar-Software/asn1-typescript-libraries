@@ -1,4 +1,4 @@
-import type ACDFTuple from "../types/ACDFTuple.mjs";
+import ACDFTuple from "../types/ACDFTuple.mjs";
 import type {
     ACIItem,
 } from "../modules/BasicAccessControl/ACIItem.ta.mjs";
@@ -20,23 +20,23 @@ function getACDFTuplesFromACIItem (aci: ACIItem): ACDFTuple[] {
     if ("userFirst" in aci.itemOrUserFirst) {
         const userFirst = aci.itemOrUserFirst.userFirst;
         return userFirst.userPermissions
-            .map((user) => [
+            .map((user) => new ACDFTuple(
                 userFirst.userClasses,
                 aci.authenticationLevel,
                 user.protectedItems,
                 user.grantsAndDenials,
                 user.precedence ?? aci.precedence,
-            ]);
+            ));
     } else if ("itemFirst" in aci.itemOrUserFirst) {
         const itemFirst = aci.itemOrUserFirst.itemFirst;
         return itemFirst.itemPermissions
-            .map((item) => [
+            .map((item) => new ACDFTuple(
                 item.userClasses,
                 aci.authenticationLevel,
                 itemFirst.protectedItems,
                 item.grantsAndDenials,
                 item.precedence ?? aci.precedence,
-            ]);
+            ));
     } else {
         return []; // We just ignore other options.
     }

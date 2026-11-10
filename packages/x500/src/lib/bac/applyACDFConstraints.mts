@@ -52,8 +52,8 @@ function applyACDFConstraints (
     operations: number[],
     settings: EvaluateFilterSettings,
 ): ACDFTupleExtended {
-    const items = tuple[2];
-    let permissions = tuple[3];
+    const items = tuple.protectedItems;
+    let permissions = tuple.grantsAndDenials;
     const adds = operations.includes(grantAdd / 2);
     const imports = operations.includes(grantImport / 2);
     const removePermission = (bit: number): void => {
@@ -61,7 +61,7 @@ function applyACDFConstraints (
             // The bit is already FALSE, so there is nothing to do.
             return;
         }
-        if (permissions === tuple[3]) {
+        if (permissions === tuple.grantsAndDenials) {
             // Make a copy to avoid mutating the original tuple.
             permissions = permissions.slice();
         }
@@ -162,9 +162,9 @@ function applyACDFConstraints (
     // any bit is mutated. If no bits were mutated, we can just return the
     // original tuple, which contains the original permissions `BIT STRING`.
     // Otherwise, we return a new tuple with the new permissions `BIT STRING`.
-    return permissions === tuple[3]
+    return permissions === tuple.grantsAndDenials
         ? tuple
-        : [ tuple[0], tuple[1], tuple[2], permissions, tuple[4], tuple[5] ];
+        : tuple.withGrantsAndDenials(permissions);
 }
 
 export default applyACDFConstraints;
