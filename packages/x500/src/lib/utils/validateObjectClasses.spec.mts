@@ -66,7 +66,7 @@ describe("validateObjectClasses", () => {
         { order: "top last", classes: [person["&id"], top["&id"]] },
     ])("returns person for the same short structural chain with $order (M23)", ({ classes }) => {
         const originalOrder = [...classes];
-        const structuralClass = validateObjectClasses(classes, getKind, getSuperclasses);
+        const structuralClass = validateObjectClasses(classes.values(), getKind, getSuperclasses);
         expect(structuralClass?.isEqualTo(person["&id"])).toBe(true);
         expect(classes).toEqual(originalOrder);
     });
@@ -77,7 +77,7 @@ describe("validateObjectClasses", () => {
         [top["&id"], strongAuthenticationUser["&id"]],
         [strongAuthenticationUser["&id"], top["&id"]],
     ])("still rejects a missing structural superclass or an auxiliary-only chain (%#)", (...classes) => {
-        expect(validateObjectClasses(classes, getKind, getSuperclasses)).toBeNull();
+        expect(validateObjectClasses(classes.values(), getKind, getSuperclasses)).toBeNull();
     });
 
     it("returns true for a valid set of object classes", () => {
@@ -86,28 +86,28 @@ describe("validateObjectClasses", () => {
             organizationalPerson["&id"],
             top["&id"],
         ];
-        let isValid = validateObjectClasses(objectClasses, getKind, getSuperclasses);
+        let isValid = validateObjectClasses(objectClasses.values(), getKind, getSuperclasses);
         expect(isValid).toBeTruthy();
 
         objectClasses.pop(); // Remove the `top` class
-        isValid = validateObjectClasses(objectClasses, getKind, getSuperclasses);
+        isValid = validateObjectClasses(objectClasses.values(), getKind, getSuperclasses);
         // It should still be valid. The `top` class should be ignored.
         expect(isValid).toBeTruthy();
 
         objectClasses.push(strongAuthenticationUser["&id"]);
-        isValid = validateObjectClasses(objectClasses, getKind, getSuperclasses);
+        isValid = validateObjectClasses(objectClasses.values(), getKind, getSuperclasses);
         expect(isValid).toBeTruthy();
 
         objectClasses.push(parent["&id"]);
-        isValid = validateObjectClasses(objectClasses, getKind, getSuperclasses);
+        isValid = validateObjectClasses(objectClasses.values(), getKind, getSuperclasses);
         expect(isValid).toBeTruthy();
 
         objectClasses.push(child["&id"]);
-        isValid = validateObjectClasses(objectClasses, getKind, getSuperclasses);
+        isValid = validateObjectClasses(objectClasses.values(), getKind, getSuperclasses);
         expect(isValid).toBeTruthy();
 
         objectClasses.push(top["&id"]);
-        isValid = validateObjectClasses(objectClasses, getKind, getSuperclasses);
+        isValid = validateObjectClasses(objectClasses.values(), getKind, getSuperclasses);
         expect(isValid).toBeTruthy();
     });
 
@@ -116,28 +116,28 @@ describe("validateObjectClasses", () => {
             organizationalPerson["&id"],
             top["&id"],
         ];
-        let isValid = validateObjectClasses(objectClasses, getKind, getSuperclasses);
+        let isValid = validateObjectClasses(objectClasses.values(), getKind, getSuperclasses);
         expect(isValid).toBeNull();
 
         objectClasses.pop(); // Remove the `top` class
-        isValid = validateObjectClasses(objectClasses, getKind, getSuperclasses);
+        isValid = validateObjectClasses(objectClasses.values(), getKind, getSuperclasses);
         // It should still be invalid. The `top` class should be ignored.
         expect(isValid).toBeNull();
 
         objectClasses.push(strongAuthenticationUser["&id"]);
-        isValid = validateObjectClasses(objectClasses, getKind, getSuperclasses);
+        isValid = validateObjectClasses(objectClasses.values(), getKind, getSuperclasses);
         expect(isValid).toBeNull();
 
         objectClasses.push(parent["&id"]);
-        isValid = validateObjectClasses(objectClasses, getKind, getSuperclasses);
+        isValid = validateObjectClasses(objectClasses.values(), getKind, getSuperclasses);
         expect(isValid).toBeNull();
 
         objectClasses.push(child["&id"]);
-        isValid = validateObjectClasses(objectClasses, getKind, getSuperclasses);
+        isValid = validateObjectClasses(objectClasses.values(), getKind, getSuperclasses);
         expect(isValid).toBeNull();
 
         objectClasses.push(top["&id"]);
-        isValid = validateObjectClasses(objectClasses, getKind, getSuperclasses);
+        isValid = validateObjectClasses(objectClasses.values(), getKind, getSuperclasses);
         expect(isValid).toBeNull();
     });
 
@@ -146,28 +146,28 @@ describe("validateObjectClasses", () => {
             organizationalPerson["&id"],
             top["&id"],
         ];
-        let isValid = validateObjectClasses(objectClasses, getKind, getSuperclassesDoS);
+        let isValid = validateObjectClasses(objectClasses.values(), getKind, getSuperclassesDoS);
         expect(isValid).toBeNull();
 
         objectClasses.pop(); // Remove the `top` class
-        isValid = validateObjectClasses(objectClasses, getKind, getSuperclassesDoS);
+        isValid = validateObjectClasses(objectClasses.values(), getKind, getSuperclassesDoS);
         // It should still be invalid. The `top` class should be ignored.
         expect(isValid).toBeNull();
 
         objectClasses.push(strongAuthenticationUser["&id"]);
-        isValid = validateObjectClasses(objectClasses, getKind, getSuperclassesDoS);
+        isValid = validateObjectClasses(objectClasses.values(), getKind, getSuperclassesDoS);
         expect(isValid).toBeNull();
 
         objectClasses.push(parent["&id"]);
-        isValid = validateObjectClasses(objectClasses, getKind, getSuperclassesDoS);
+        isValid = validateObjectClasses(objectClasses.values(), getKind, getSuperclassesDoS);
         expect(isValid).toBeNull();
 
         objectClasses.push(child["&id"]);
-        isValid = validateObjectClasses(objectClasses, getKind, getSuperclassesDoS);
+        isValid = validateObjectClasses(objectClasses.values(), getKind, getSuperclassesDoS);
         expect(isValid).toBeNull();
 
         objectClasses.push(top["&id"]);
-        isValid = validateObjectClasses(objectClasses, getKind, getSuperclassesDoS);
+        isValid = validateObjectClasses(objectClasses.values(), getKind, getSuperclassesDoS);
         expect(isValid).toBeNull();
     });
 
@@ -179,28 +179,28 @@ describe("validateObjectClasses", () => {
             dSA["&id"],
             top["&id"],
         ];
-        let isValid = validateObjectClasses(objectClasses, getKind, getSuperclasses);
+        let isValid = validateObjectClasses(objectClasses.values(), getKind, getSuperclasses);
         expect(isValid).toBeNull();
 
         objectClasses.pop(); // Remove the `top` class
-        isValid = validateObjectClasses(objectClasses, getKind, getSuperclasses);
+        isValid = validateObjectClasses(objectClasses.values(), getKind, getSuperclasses);
         // It should still be invalid. The `top` class should be ignored.
         expect(isValid).toBeNull();
 
         objectClasses.push(strongAuthenticationUser["&id"]);
-        isValid = validateObjectClasses(objectClasses, getKind, getSuperclasses);
+        isValid = validateObjectClasses(objectClasses.values(), getKind, getSuperclasses);
         expect(isValid).toBeNull();
 
         objectClasses.push(parent["&id"]);
-        isValid = validateObjectClasses(objectClasses, getKind, getSuperclasses);
+        isValid = validateObjectClasses(objectClasses.values(), getKind, getSuperclasses);
         expect(isValid).toBeNull();
 
         objectClasses.push(child["&id"]);
-        isValid = validateObjectClasses(objectClasses, getKind, getSuperclasses);
+        isValid = validateObjectClasses(objectClasses.values(), getKind, getSuperclasses);
         expect(isValid).toBeNull();
 
         objectClasses.push(top["&id"]);
-        isValid = validateObjectClasses(objectClasses, getKind, getSuperclasses);
+        isValid = validateObjectClasses(objectClasses.values(), getKind, getSuperclasses);
         expect(isValid).toBeNull();
     });
 
@@ -213,28 +213,28 @@ describe("validateObjectClasses", () => {
             certificationAuthority_V2["&id"],
             top["&id"],
         ];
-        let isValid = validateObjectClasses(objectClasses, getKind, getSuperclasses);
+        let isValid = validateObjectClasses(objectClasses.values(), getKind, getSuperclasses);
         expect(isValid).toBeNull();
 
         objectClasses.pop(); // Remove the `top` class
-        isValid = validateObjectClasses(objectClasses, getKind, getSuperclasses);
+        isValid = validateObjectClasses(objectClasses.values(), getKind, getSuperclasses);
         // It should still be invalid. The `top` class should be ignored.
         expect(isValid).toBeNull();
 
         objectClasses.push(strongAuthenticationUser["&id"]);
-        isValid = validateObjectClasses(objectClasses, getKind, getSuperclasses);
+        isValid = validateObjectClasses(objectClasses.values(), getKind, getSuperclasses);
         expect(isValid).toBeNull();
 
         objectClasses.push(parent["&id"]);
-        isValid = validateObjectClasses(objectClasses, getKind, getSuperclasses);
+        isValid = validateObjectClasses(objectClasses.values(), getKind, getSuperclasses);
         expect(isValid).toBeNull();
 
         objectClasses.push(child["&id"]);
-        isValid = validateObjectClasses(objectClasses, getKind, getSuperclasses);
+        isValid = validateObjectClasses(objectClasses.values(), getKind, getSuperclasses);
         expect(isValid).toBeNull();
 
         objectClasses.push(top["&id"]);
-        isValid = validateObjectClasses(objectClasses, getKind, getSuperclasses);
+        isValid = validateObjectClasses(objectClasses.values(), getKind, getSuperclasses);
         expect(isValid).toBeNull();
     });
 
@@ -242,24 +242,24 @@ describe("validateObjectClasses", () => {
         const objectClasses: OBJECT_IDENTIFIER[] = [
             top["&id"],
         ];
-        let isValid = validateObjectClasses(objectClasses, getKind, getSuperclasses);
+        let isValid = validateObjectClasses(objectClasses.values(), getKind, getSuperclasses);
         expect(isValid).toBeNull();
 
         objectClasses.pop(); // Remove the `top` class
-        isValid = validateObjectClasses(objectClasses, getKind, getSuperclasses);
+        isValid = validateObjectClasses(objectClasses.values(), getKind, getSuperclasses);
         // It should still be invalid. The `top` class should be ignored.
         expect(isValid).toBeNull();
 
         objectClasses.push(parent["&id"]);
-        isValid = validateObjectClasses(objectClasses, getKind, getSuperclasses);
+        isValid = validateObjectClasses(objectClasses.values(), getKind, getSuperclasses);
         expect(isValid).toBeNull();
 
         objectClasses.push(strongAuthenticationUser["&id"]);
-        isValid = validateObjectClasses(objectClasses, getKind, getSuperclasses);
+        isValid = validateObjectClasses(objectClasses.values(), getKind, getSuperclasses);
         expect(isValid).toBeNull();
 
         objectClasses.push(child["&id"]);
-        isValid = validateObjectClasses(objectClasses, getKind, getSuperclasses);
+        isValid = validateObjectClasses(objectClasses.values(), getKind, getSuperclasses);
         expect(isValid).toBeNull();
     });
 
@@ -269,30 +269,122 @@ describe("validateObjectClasses", () => {
             organizationalPerson["&id"],
             top["&id"],
         ];
-        let isValid = validateObjectClasses(objectClasses, getKind, getSuperclasses);
+        let isValid = validateObjectClasses(objectClasses.values(), getKind, getSuperclasses);
         expect(isValid).toBeTruthy();
 
         objectClasses.push(organizationalPerson["&id"]);
-        isValid = validateObjectClasses(objectClasses, getKind, getSuperclasses);
+        isValid = validateObjectClasses(objectClasses.values(), getKind, getSuperclasses);
         expect(isValid).toBeNull();
         objectClasses.pop();
 
         objectClasses.push(parent["&id"]);
         objectClasses.push(parent["&id"]);
-        isValid = validateObjectClasses(objectClasses, getKind, getSuperclasses);
+        isValid = validateObjectClasses(objectClasses.values(), getKind, getSuperclasses);
         expect(isValid).toBeNull();
         objectClasses.pop();
         objectClasses.pop();
 
         objectClasses.push(child["&id"]);
         objectClasses.push(child["&id"]);
-        isValid = validateObjectClasses(objectClasses, getKind, getSuperclasses);
+        isValid = validateObjectClasses(objectClasses.values(), getKind, getSuperclasses);
         expect(isValid).toBeNull();
         objectClasses.pop();
         objectClasses.pop();
 
         objectClasses.push(top["&id"]);
-        isValid = validateObjectClasses(objectClasses, getKind, getSuperclasses);
+        isValid = validateObjectClasses(objectClasses.values(), getKind, getSuperclasses);
         expect(isValid).toBeNull();
+    });
+
+    it("reads object classes from a generator", () => {
+        const single = validateObjectClasses((function* () {
+            yield person["&id"];
+        })(), getKind, getSuperclasses);
+        expect(single?.isEqualTo(person["&id"])).toBe(true);
+
+        const withTop = validateObjectClasses((function* () {
+            yield top["&id"];
+            yield person["&id"];
+        })(), getKind, getSuperclasses);
+        expect(withTop?.isEqualTo(person["&id"])).toBe(true);
+
+        const chain = validateObjectClasses((function* () {
+            yield person["&id"];
+            yield organizationalPerson["&id"];
+            yield strongAuthenticationUser["&id"];
+        })(), getKind, getSuperclasses);
+        expect(chain?.isEqualTo(organizationalPerson["&id"])).toBe(true);
+
+        const empty = validateObjectClasses((function* () {
+            // No object classes.
+        })(), getKind, getSuperclasses);
+        expect(empty).toBeNull();
+    });
+
+    it("pulls each object class once", () => {
+        const countPulls = (source: OBJECT_IDENTIFIER[]): {
+            iterator: IterableIterator<OBJECT_IDENTIFIER>;
+            pulls: () => number;
+        } => {
+            const values = source.values();
+            let pulls = 0;
+            return {
+                iterator: {
+                    next () {
+                        pulls += 1;
+                        return values.next();
+                    },
+                    [Symbol.iterator] () {
+                        return this;
+                    },
+                },
+                pulls: () => pulls,
+            };
+        };
+
+        const one = countPulls([person["&id"]]);
+        expect(validateObjectClasses(one.iterator, getKind, getSuperclasses)?.isEqualTo(person["&id"])).toBe(true);
+        // The class, then the iterator reports that it is done.
+        expect(one.pulls()).toBe(2);
+
+        const two = countPulls([top["&id"], person["&id"]]);
+        expect(validateObjectClasses(two.iterator, getKind, getSuperclasses)?.isEqualTo(person["&id"])).toBe(true);
+        expect(two.pulls()).toBe(3);
+
+        const many = countPulls([
+            person["&id"],
+            organizationalPerson["&id"],
+            strongAuthenticationUser["&id"],
+        ]);
+        expect(
+            validateObjectClasses(many.iterator, getKind, getSuperclasses)
+                ?.isEqualTo(organizationalPerson["&id"]),
+        ).toBe(true);
+        expect(many.pulls()).toBe(4);
+    });
+
+    it("does not restart a partially consumed iterator", () => {
+        const source = [
+            person["&id"],
+            organizationalPerson["&id"],
+            strongAuthenticationUser["&id"],
+        ].values();
+        let restarted = false;
+        const objectClasses: IterableIterator<OBJECT_IDENTIFIER> = {
+            next () {
+                return source.next();
+            },
+            [Symbol.iterator] () {
+                restarted = true;
+                return [
+                    person["&id"],
+                    organizationalPerson["&id"],
+                    strongAuthenticationUser["&id"],
+                ].values();
+            },
+        };
+        const structuralClass = validateObjectClasses(objectClasses, getKind, getSuperclasses);
+        expect(structuralClass?.isEqualTo(organizationalPerson["&id"])).toBe(true);
+        expect(restarted).toBe(false);
     });
 });

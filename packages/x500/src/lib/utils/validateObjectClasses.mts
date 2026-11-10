@@ -24,22 +24,62 @@ function getAncestorObjectClasses (
     });
 }
 
-function getSingleObjectClass(objectClasses: OBJECT_IDENTIFIER[]): OBJECT_IDENTIFIER | null {
-    // Moved to caller to avoid a function call.
-    // if (objectClasses.length === 1) {
-    //     return objectClasses[0];
-    // }
-    if (objectClasses.length === 2) {
-        if (objectClasses[0].isEqualTo(objectClasses[1])) {
-            return null;
-        }
-        const topIdx = objectClasses.findIndex((oc) => oc.isEqualTo(top["&id"]));
-        if (topIdx === -1) {
-            return null;
-        }
-        return objectClasses[1 - topIdx];
+/**
+ * The non-`top` class when the iterator yielded exactly two classes and one
+ * of them is `top`. Duplicates and any other pair are not a short chain.
+ */
+function getSingleObjectClass (
+    first: OBJECT_IDENTIFIER,
+    second: OBJECT_IDENTIFIER,
+): OBJECT_IDENTIFIER | null {
+    if (first.isEqualTo(second)) {
+        return null;
+    }
+    if (first.isEqualTo(top["&id"])) {
+        return second;
+    }
+    if (second.isEqualTo(top["&id"])) {
+        return first;
     }
     return null;
+}
+
+/**
+ * A single structural class, or that class alongside `top`, is valid only
+ * when its one superclass is `top` (or it has none).
+ */
+function validateShortChain (
+    objectClass: OBJECT_IDENTIFIER,
+    getKind: (objectClass: OBJECT_IDENTIFIER) => ObjectClassKind | undefined | null,
+    getSuperclasses: (objectClass: OBJECT_IDENTIFIER) => OBJECT_IDENTIFIER[],
+): OBJECT_IDENTIFIER | null {
+    if (getKind(objectClass) !== ObjectClassKind_structural) {
+        return null; // If only one object class, it MUST be structural.
+    }
+    const superclasses = getSuperclasses(objectClass);
+    if (superclasses.length > 1) {
+        return null; // There were missing superclasses.
+    }
+    if (superclasses.length === 1 && !superclasses[0].isEqualTo(top["&id"])) {
+        return null; // Again, missing superclasses.
+    }
+    return objectClass;
+}
+
+function* iterateObjectClasses (
+    prefix: readonly OBJECT_IDENTIFIER[],
+    remainder: IterableIterator<OBJECT_IDENTIFIER>,
+): IterableIterator<OBJECT_IDENTIFIER> {
+    for (const objectClass of prefix) {
+        yield objectClass;
+    }
+    // Keep pulling the same iterator. `yield*` would call `@@iterator`, which
+    // can restart a partially consumed iterator.
+    let step = remainder.next();
+    while (!step.done) {
+        yield step.value;
+        step = remainder.next();
+    }
 }
 
 /**
@@ -67,7 +107,9 @@ function getSingleObjectClass(objectClasses: OBJECT_IDENTIFIER[]): OBJECT_IDENTI
  * without introducing O(n^2) time complexity, since each object class must be
  * compared against other object classes in the set. You need at least one `Set`.
  *
- * @param {OBJECT_IDENTIFIER[]} objectClasses The object classes to be validated
+ * @param {IterableIterator<OBJECT_IDENTIFIER>} objectClasses The object classes to be validated.
+ *  Each class is pulled at most once. A one- or two-class chain is decided from
+ *  the first values; a longer chain is read until it is valid or rejected.
  * @param {Function} getKind A function that returns the object class' kind given its OID
  * @param {Function} getSuperclasses A function that returns the object class' superclasses
  *   given its OID
@@ -77,38 +119,37 @@ function getSingleObjectClass(objectClasses: OBJECT_IDENTIFIER[]): OBJECT_IDENTI
  */
 export
 function validateObjectClasses (
-    objectClasses: OBJECT_IDENTIFIER[],
+    objectClasses: IterableIterator<OBJECT_IDENTIFIER>,
     getKind: (objectClass: OBJECT_IDENTIFIER) => ObjectClassKind | undefined | null,
     getSuperclasses: (objectClass: OBJECT_IDENTIFIER) => OBJECT_IDENTIFIER[],
 ): OBJECT_IDENTIFIER | null {
-    if (objectClasses.length === 0) {
+    const first = objectClasses.next();
+    if (first.done) {
         return null; // No structural object class. Automatically invalid.
     }
+    const second = objectClasses.next();
     // This is a short-circuit: many DSEs have pretty short structural chains.
     // This short-circuits for both a single structural object class and the
     // single structural object class along with `top`.
-    const shortChain = (objectClasses.length === 1)
-        ? objectClasses[0] // Just to avoid a function call.
-        : getSingleObjectClass(objectClasses);
-    if (shortChain) {
-        if (getKind(shortChain) !== ObjectClassKind_structural) {
-            return null; // If only one object class, it MUST be structural.
-        }
-        const superclasses = getSuperclasses(shortChain);
-        if (superclasses.length > 1) {
-            return null; // There were missing superclasses.
-        }
-        if (superclasses.length === 1 && !superclasses[0].isEqualTo(top["&id"])) {
-            return null; // Again, missing superclasses.
-        }
-        return shortChain;
+    if (second.done) {
+        return validateShortChain(first.value, getKind, getSuperclasses);
     }
+    const third = objectClasses.next();
+    if (third.done) {
+        const shortChain = getSingleObjectClass(first.value, second.value);
+        if (shortChain) {
+            return validateShortChain(shortChain, getKind, getSuperclasses);
+        }
+    }
+    const pending = third.done
+        ? iterateObjectClasses([first.value, second.value], objectClasses)
+        : iterateObjectClasses([first.value, second.value, third.value], objectClasses);
 
     const structural: Set<string> = new Set();
     const abstract_: Set<string> = new Set();
     const auxiliary: Set<string> = new Set();
     const parents: Set<string> = new Set(); // Object classes with subclasses
-    for (const objectClass of objectClasses) {
+    for (const objectClass of pending) {
         const kind = getKind(objectClass);
         const OC: string = objectClass.toString();
         if ((kind === undefined) || (kind === null)) {
