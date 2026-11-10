@@ -59,7 +59,9 @@
  */
 export * from "./lib/errors.mjs";
 export { ACDFTupleExtended } from "./lib/types/ACDFTupleExtended.mjs";
+export type { ACDFTupleExtendedJSON } from "./lib/types/ACDFTupleExtended.mjs";
 export { ACDFTuple } from "./lib/types/ACDFTuple.mjs";
+export type { ACDFTupleJSON } from "./lib/types/ACDFTuple.mjs";
 export type { ATVAC } from "./lib/types/AttributeTypeValueAndContextsTuple.mjs";
 export type { ChainedRequest } from "./lib/types/ChainedRequest.mjs";
 export type { ChainedResultOrError } from "./lib/types/ChainedResultOrError.mjs";
@@ -120,6 +122,21 @@ export { compareRoleSpecCertIdentifier } from "./lib/comparators/compareRoleSpec
 export { compareTarget } from "./lib/comparators/compareTarget.mjs";
 export { codeToString } from "./lib/stringifiers/codeToString.mjs";
 export { directoryStringToString } from "./lib/stringifiers/directoryStringToString.mjs";
+export {
+    filterItemToJSON,
+    filterItemToString,
+    filterToJSON,
+    filterToString,
+} from "./lib/stringifiers/filterToString.mjs";
+export type {
+    AttributeTypeAssertionJSON,
+    AttributeValueAssertionJSON,
+    FilterItemJSON,
+    FilterItemSubstringsJSON,
+    FilterItemSubstringsStringJSON,
+    FilterJSON,
+    MatchingRuleAssertionJSON,
+} from "./lib/stringifiers/filterToString.mjs";
 export { IPV4_AFI_IDI } from "./lib/distributed/IPV4_AFI_IDI.mjs";
 export * from "./lib/distributed/ipv4.mjs";
 export { naddrToURI } from "./lib/distributed/naddrToURI.mjs";

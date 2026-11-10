@@ -11,6 +11,15 @@ import {
     _decode_AttributeType,
     _encode_AttributeType,
 } from "../InformationFramework/AttributeType.ta.mjs";
+import { integerToJSON, integerToString, gserSequence } from "../../json.mjs";
+
+/**
+ * JSON Encoding Rules encoding of {@link MaxValueCount}.
+ */
+export type MaxValueCountJSON = {
+    type: string;
+    maxCount: number | string;
+};
 /**
  * @summary MaxValueCount
  * @description
@@ -80,6 +89,42 @@ export class MaxValueCount {
             _o.maxCount,
             _o._unrecognizedExtensionsList
         );
+    }
+
+    /**
+     * @summary ASN.1 value notation for this maximum value count
+     * @description
+     *
+     * `type` is a dotted decimal. Unrecognized extensions are omitted.
+     *
+     * @returns `{ type 2.5.4.3, maxCount 2 }`
+     * @function
+     * @public
+     */
+    public toString(): string {
+        return gserSequence([
+            `type ${this.type_.toString()}`,
+            `maxCount ${integerToString(this.maxCount)}`,
+        ]);
+    }
+
+    /**
+     * @summary Convert this value to a JSON encoding loosely following ITU-T X.697 (JER)
+     * @description
+     *
+     * `type` is a dotted decimal. INTEGER `maxCount` is a JSON number,
+     * or a decimal string when it is not JSON-safe. Unrecognized
+     * extensions are not represented.
+     *
+     * @returns The JSON Encoding Rules encoding of this value
+     * @function
+     * @public
+     */
+    public toJSON(): MaxValueCountJSON {
+        return {
+            type: this.type_.toString(),
+            maxCount: integerToJSON(this.maxCount),
+        };
     }
 }
 

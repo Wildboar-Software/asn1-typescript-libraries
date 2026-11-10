@@ -6,6 +6,16 @@ import {
     type OBJECT_IDENTIFIER,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
+import { gserSequence } from "../../json.mjs";
+
+/**
+ * JSON Encoding Rules encoding of {@link ContextAssertion}.
+ * `contextValues` are the JSON of each open-type element.
+ */
+export type ContextAssertionJSON = {
+    contextType: string;
+    contextValues: unknown[];
+};
 /**
  * @summary ContextAssertion
  * @description
@@ -70,6 +80,44 @@ export class ContextAssertion {
             _o.contextValues,
             _o._unrecognizedExtensionsList
         );
+    }
+
+    /**
+     * @summary ASN.1 value notation for this context assertion
+     * @description
+     *
+     * `contextType` is a dotted decimal. Each `contextValues` element
+     * uses the element's value notation. Unrecognized extensions are
+     * omitted.
+     *
+     * @returns `{ contextType 1.2.3, contextValues { "en" } }`
+     * @function
+     * @public
+     */
+    public toString(): string {
+        return gserSequence([
+            `contextType ${this.contextType.toString()}`,
+            `contextValues ${gserSequence(this.contextValues.map((el) => el.toString()))}`,
+        ]);
+    }
+
+    /**
+     * @summary Convert this value to a JSON encoding loosely following ITU-T X.697 (JER)
+     * @description
+     *
+     * `contextType` is a dotted decimal. `contextValues` are the JSON
+     * of each open-type element. Unrecognized extensions are not
+     * represented.
+     *
+     * @returns The JSON Encoding Rules encoding of this value
+     * @function
+     * @public
+     */
+    public toJSON(): ContextAssertionJSON {
+        return {
+            contextType: this.contextType.toString(),
+            contextValues: this.contextValues.map((el) => el.toJSON()),
+        };
     }
 }
 

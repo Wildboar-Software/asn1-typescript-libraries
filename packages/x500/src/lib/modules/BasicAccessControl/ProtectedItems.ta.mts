@@ -8,13 +8,16 @@ import {
     type OBJECT_IDENTIFIER,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
+import type { AttributeTypeAndValueJSON } from "@wildboar/dn";
 import {
     MaxValueCount,
+    type MaxValueCountJSON,
     _decode_MaxValueCount,
     _encode_MaxValueCount,
 } from "../BasicAccessControl/MaxValueCount.ta.mjs";
 import {
     RestrictedValue,
+    type RestrictedValueJSON,
     _decode_RestrictedValue,
     _encode_RestrictedValue,
 } from "../BasicAccessControl/RestrictedValue.ta.mjs";
@@ -35,6 +38,7 @@ import {
 } from "../InformationFramework/AttributeTypeAndValue.ta.mjs";
 import {
     ContextAssertion,
+    type ContextAssertionJSON,
     _decode_ContextAssertion,
     _encode_ContextAssertion,
 } from "../InformationFramework/ContextAssertion.ta.mjs";
@@ -43,6 +47,43 @@ import {
     _decode_Refinement,
     _encode_Refinement,
 } from "../InformationFramework/Refinement.ta.mjs";
+import {
+    refinementToGser,
+    refinementToJSON,
+    type RefinementJSON,
+} from "../InformationFramework/SubtreeSpecification.ta.mjs";
+import {
+    filterToJSON,
+    filterToString,
+    type FilterJSON,
+} from "../../stringifiers/filterToString.mjs";
+import {
+    gserSequence,
+    integerToJSON,
+    integerToString,
+    quoteGserString,
+} from "../../json.mjs";
+
+/**
+ * JSON Encoding Rules encoding of {@link ProtectedItems}.
+ * Absent or empty axes are omitted.
+ */
+export type ProtectedItemsJSON = {
+    entry?: null;
+    allUserAttributeTypes?: null;
+    attributeType?: string[];
+    allAttributeValues?: string[];
+    allUserAttributeTypesAndValues?: null;
+    attributeValue?: AttributeTypeAndValueJSON[];
+    selfValue?: string[];
+    rangeOfValues?: FilterJSON;
+    maxValueCount?: MaxValueCountJSON[];
+    maxImmSub?: number | string;
+    restrictedBy?: RestrictedValueJSON[];
+    contexts?: ContextAssertionJSON[];
+    classes?: RefinementJSON;
+    entryMethods?: string[];
+};
 /**
  * @summary ProtectedItems
  * @description
@@ -286,6 +327,140 @@ export class ProtectedItems {
             && this.classes === undefined
             && (this.entryMethods === undefined || this.entryMethods.length === 0)
         );
+    }
+
+    /**
+     * @summary ASN.1 value notation for these protected items
+     * @description
+     *
+     * Present axes only. `NULL` axes are `NULL`. Object identifiers
+     * are dotted decimals. `attributeValue` quotes
+     * {@link AttributeTypeAndValue.toString}. `rangeOfValues` is
+     * {@link filterToString}. `classes` is {@link refinementToGser}.
+     * Empty `SET SIZE (1..MAX)` components are treated as absent.
+     * Unrecognized extensions are omitted. An empty value is `{}`.
+     *
+     * @returns `{ entry NULL, attributeType { 2.5.4.3 } }` or a subset
+     * @function
+     * @public
+     */
+    public toString(): string {
+        const parts: string[] = [];
+        if (this.entry !== undefined) {
+            parts.push("entry NULL");
+        }
+        if (this.allUserAttributeTypes !== undefined) {
+            parts.push("allUserAttributeTypes NULL");
+        }
+        if (this.attributeType !== undefined && this.attributeType.length > 0) {
+            parts.push(`attributeType ${gserSequence(this.attributeType.map((oid) => oid.toString()))}`);
+        }
+        if (this.allAttributeValues !== undefined && this.allAttributeValues.length > 0) {
+            parts.push(`allAttributeValues ${gserSequence(this.allAttributeValues.map((oid) => oid.toString()))}`);
+        }
+        if (this.allUserAttributeTypesAndValues !== undefined) {
+            parts.push("allUserAttributeTypesAndValues NULL");
+        }
+        if (this.attributeValue !== undefined && this.attributeValue.length > 0) {
+            parts.push(`attributeValue ${gserSequence(this.attributeValue.map((atav) => quoteGserString(atav.toString())))}`);
+        }
+        if (this.selfValue !== undefined && this.selfValue.length > 0) {
+            parts.push(`selfValue ${gserSequence(this.selfValue.map((oid) => oid.toString()))}`);
+        }
+        if (this.rangeOfValues !== undefined) {
+            const filter = filterToString(this.rangeOfValues);
+            if (filter !== undefined) {
+                parts.push(`rangeOfValues ${filter}`);
+            }
+        }
+        if (this.maxValueCount !== undefined && this.maxValueCount.length > 0) {
+            parts.push(`maxValueCount ${gserSequence(this.maxValueCount.map((mvc) => mvc.toString()))}`);
+        }
+        if (this.maxImmSub !== undefined) {
+            parts.push(`maxImmSub ${integerToString(this.maxImmSub)}`);
+        }
+        if (this.restrictedBy !== undefined && this.restrictedBy.length > 0) {
+            parts.push(`restrictedBy ${gserSequence(this.restrictedBy.map((rv) => rv.toString()))}`);
+        }
+        if (this.contexts !== undefined && this.contexts.length > 0) {
+            parts.push(`contexts ${gserSequence(this.contexts.map((ctx) => ctx.toString()))}`);
+        }
+        if (this.classes !== undefined) {
+            const classes = refinementToGser(this.classes);
+            if (classes !== undefined) {
+                parts.push(`classes ${classes}`);
+            }
+        }
+        if (this.entryMethods !== undefined && this.entryMethods.length > 0) {
+            parts.push(`entryMethods ${gserSequence(this.entryMethods.map((oid) => oid.toString()))}`);
+        }
+        return gserSequence(parts);
+    }
+
+    /**
+     * @summary Convert this value to a JSON encoding loosely following ITU-T X.697 (JER)
+     * @description
+     *
+     * Present axes only. `NULL` axes are JSON `null`. Object
+     * identifiers are dotted decimals. Empty `SET SIZE (1..MAX)`
+     * components are treated as absent. Unrecognized extensions are
+     * not represented.
+     *
+     * @returns The JSON Encoding Rules encoding of this value
+     * @function
+     * @public
+     */
+    public toJSON(): ProtectedItemsJSON {
+        const json: ProtectedItemsJSON = {};
+        if (this.entry !== undefined) {
+            json.entry = null;
+        }
+        if (this.allUserAttributeTypes !== undefined) {
+            json.allUserAttributeTypes = null;
+        }
+        if (this.attributeType !== undefined && this.attributeType.length > 0) {
+            json.attributeType = this.attributeType.map((oid) => oid.toString());
+        }
+        if (this.allAttributeValues !== undefined && this.allAttributeValues.length > 0) {
+            json.allAttributeValues = this.allAttributeValues.map((oid) => oid.toString());
+        }
+        if (this.allUserAttributeTypesAndValues !== undefined) {
+            json.allUserAttributeTypesAndValues = null;
+        }
+        if (this.attributeValue !== undefined && this.attributeValue.length > 0) {
+            json.attributeValue = this.attributeValue.map((atav) => atav.toJSON());
+        }
+        if (this.selfValue !== undefined && this.selfValue.length > 0) {
+            json.selfValue = this.selfValue.map((oid) => oid.toString());
+        }
+        if (this.rangeOfValues !== undefined) {
+            const filter = filterToJSON(this.rangeOfValues);
+            if (filter !== undefined) {
+                json.rangeOfValues = filter;
+            }
+        }
+        if (this.maxValueCount !== undefined && this.maxValueCount.length > 0) {
+            json.maxValueCount = this.maxValueCount.map((mvc) => mvc.toJSON());
+        }
+        if (this.maxImmSub !== undefined) {
+            json.maxImmSub = integerToJSON(this.maxImmSub);
+        }
+        if (this.restrictedBy !== undefined && this.restrictedBy.length > 0) {
+            json.restrictedBy = this.restrictedBy.map((rv) => rv.toJSON());
+        }
+        if (this.contexts !== undefined && this.contexts.length > 0) {
+            json.contexts = this.contexts.map((ctx) => ctx.toJSON());
+        }
+        if (this.classes !== undefined) {
+            const classes = refinementToJSON(this.classes);
+            if (classes !== undefined) {
+                json.classes = classes;
+            }
+        }
+        if (this.entryMethods !== undefined && this.entryMethods.length > 0) {
+            json.entryMethods = this.entryMethods.map((oid) => oid.toString());
+        }
+        return json;
     }
 }
 

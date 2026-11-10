@@ -106,6 +106,22 @@ export function octetStringToJSON(octets: OCTET_STRING): string {
 }
 
 /**
+ * [RFC 3641](https://www.rfc-editor.org/rfc/rfc3641) `StringValue`:
+ * double quotes around the text, and each embedded quote doubled.
+ */
+export function quoteGserString(text: string): string {
+    return `"${text.replaceAll("\"", "\"\"")}"`;
+}
+
+/**
+ * ASN.1 value notation / GSER for a SEQUENCE or SET.
+ * An empty list is `{}`.
+ */
+export function gserSequence(parts: string[]): string {
+    return parts.length ? `{ ${parts.join(", ")} }` : "{}";
+}
+
+/**
  * RFC 4517 `bitstring`: `'01…'B`.
  */
 export function bitStringToRfc4517(bits: BIT_STRING): string {

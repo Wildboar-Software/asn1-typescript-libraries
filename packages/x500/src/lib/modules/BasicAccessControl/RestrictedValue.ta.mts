@@ -10,6 +10,15 @@ import {
     _decode_AttributeType,
     _encode_AttributeType,
 } from "../InformationFramework/AttributeType.ta.mjs";
+import { gserSequence } from "../../json.mjs";
+
+/**
+ * JSON Encoding Rules encoding of {@link RestrictedValue}.
+ */
+export type RestrictedValueJSON = {
+    type: string;
+    valuesIn: string;
+};
 /**
  * @summary RestrictedValue
  * @description
@@ -79,6 +88,42 @@ export class RestrictedValue {
             _o.valuesIn,
             _o._unrecognizedExtensionsList
         );
+    }
+
+    /**
+     * @summary ASN.1 value notation for this restricted value
+     * @description
+     *
+     * Both attribute types are dotted decimals. Unrecognized
+     * extensions are omitted.
+     *
+     * @returns `{ type 2.5.4.3, valuesIn 2.5.4.13 }`
+     * @function
+     * @public
+     */
+    public toString(): string {
+        return gserSequence([
+            `type ${this.type_.toString()}`,
+            `valuesIn ${this.valuesIn.toString()}`,
+        ]);
+    }
+
+    /**
+     * @summary Convert this value to a JSON encoding loosely following ITU-T X.697 (JER)
+     * @description
+     *
+     * Object identifiers are dotted-decimal strings. Unrecognized
+     * extensions are not represented.
+     *
+     * @returns The JSON Encoding Rules encoding of this value
+     * @function
+     * @public
+     */
+    public toJSON(): RestrictedValueJSON {
+        return {
+            type: this.type_.toString(),
+            valuesIn: this.valuesIn.toString(),
+        };
     }
 }
 
