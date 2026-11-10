@@ -2,7 +2,13 @@ import { ObjectIdentifier, type ASN1Element } from "@wildboar/asn1";
 import { DER, _encodeUTF8String } from "@wildboar/asn1/functional";
 import { evaluateEquality, evaluateApprox, evaluateMatchingRuleAssertion, evaluateFilter, type EvaluateFilterSettings } from "./evaluateFilter.mjs";
 import { CannotPerformExactly } from "../errors.mjs";
-import type { ContextMatcher, Matcher } from "../types/matching.mjs";
+import {
+    MATCH_FLAG_APPROXIMATE,
+    MATCH_FLAG_ORDERING_GREATER,
+    MATCH_FLAG_ORDERING_OR_EQUAL,
+    type ContextMatcher,
+    type Matcher,
+} from "../types/matching.mjs";
 import type { Filter } from "../modules/DirectoryAbstractService/Filter.ta.mjs";
 import { AttributeValueAssertion } from "../modules/InformationFramework/AttributeValueAssertion.ta.mjs";
 import { AttributeTypeAssertion } from "../modules/InformationFramework/AttributeTypeAssertion.ta.mjs";
@@ -338,6 +344,49 @@ describe("unavailable filter matching rules (M2)", () => {
         expect(evaluateApprox(assertion, entry, options)).toBeUndefined();
         expect(evaluateMatchingRuleAssertion(extensible, entry, options)).toBeUndefined();
         expect(() => evaluateMatchingRuleAssertion(extensible, entry, { ...options, performExactly: true })).toThrow(CannotPerformExactly);
+    });
+
+    it("selects each value-filter item with matching flags", () => {
+        const seen: { kind: string, flags: number, array: boolean }[] = [];
+        const record = (kind: string): Matcher => (assertion, _value, _get, flags = 0) => {
+            seen.push({ kind, flags, array: Array.isArray(assertion) });
+            return true;
+        };
+        const options: EvaluateFilterSettings = {
+            ...settings(),
+            getEqualityMatcher: () => record("equality"),
+            getOrderingMatcher: () => record("ordering"),
+            getApproximateMatcher: () => record("approximate"),
+            getSubstringsMatcher: () => record("substrings"),
+        };
+        for (const kind of ["equality", "lessOrEqual", "greaterOrEqual", "approximateMatch", "substrings"] as const) {
+            expect(evaluateFilter(leaf(kind), family(["true"]), options).matched).toBe(true);
+        }
+        expect(seen).toEqual([
+            { kind: "equality", flags: 0, array: false },
+            { kind: "ordering", flags: MATCH_FLAG_ORDERING_OR_EQUAL, array: false },
+            {
+                kind: "ordering",
+                flags: MATCH_FLAG_ORDERING_GREATER | MATCH_FLAG_ORDERING_OR_EQUAL,
+                array: false,
+            },
+            { kind: "approximate", flags: MATCH_FLAG_APPROXIMATE, array: false },
+            { kind: "substrings", flags: 0, array: true },
+        ]);
+    });
+
+    it("passes MATCH_FLAG_APPROXIMATE when approximate matching falls back to equality", () => {
+        let flags = -1;
+        const options: EvaluateFilterSettings = {
+            ...settings(),
+            getApproximateMatcher: () => undefined,
+            getEqualityMatcher: () => (_assertion, _value, _get, seen = 0) => {
+                flags = seen;
+                return true;
+            },
+        };
+        expect(evaluateFilter(leaf("approximateMatch"), family(["true"]), options).matched).toBe(true);
+        expect(flags).toBe(MATCH_FLAG_APPROXIMATE);
     });
 
     it.each([false, true])("falls back from unsupported approximate matching to the equality rule, matchedValuesOnly=%s", (matchedValuesOnly) => {
