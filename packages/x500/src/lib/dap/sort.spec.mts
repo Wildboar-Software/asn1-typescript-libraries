@@ -1,21 +1,22 @@
 import { ObjectIdentifier, type ASN1Element } from "@wildboar/asn1";
-import { DER, _encodeUTF8String } from "@wildboar/asn1/functional";
+import { DER, _encodeInteger, _encodeUTF8String } from "@wildboar/asn1/functional";
 import { EntryInformation } from "../modules/DirectoryAbstractService/EntryInformation.ta.mjs";
 import { SortKey } from "../modules/DirectoryAbstractService/SortKey.ta.mjs";
 import { Attribute } from "../modules/InformationFramework/Attribute.ta.mjs";
 import { AttributeTypeAndValue } from "../modules/InformationFramework/AttributeTypeAndValue.ta.mjs";
 import { Attribute_valuesWithContext_Item } from "../modules/InformationFramework/Attribute-valuesWithContext-Item.ta.mjs";
 import { Context } from "../modules/InformationFramework/Context.ta.mjs";
-import type { Matcher } from "../types/matching.mjs";
+import type { TypedOrderingFunction } from "../types/matching.mjs";
+import { integerOrderingMatchTyped } from "../matching/ordering/integerOrderingMatch.mjs";
 import { sort } from "./sort.mjs";
 
 const commonName = ObjectIdentifier.fromString("2.5.4.3");
 const organizationName = ObjectIdentifier.fromString("2.5.4.10");
 const unknownType = ObjectIdentifier.fromString("1.2.3.4");
-const alphabetically: Matcher = (assertion, valueOrValues) => {
-    const left = (assertion as ASN1Element).utf8String;
-    const right = ("values" in valueOrValues ? valueOrValues.values[0] : valueOrValues.value).utf8String;
-    return right < left;
+const alphabetically: TypedOrderingFunction<ASN1Element> = (assertion, value) => {
+    const left = assertion.utf8String;
+    const right = (value as ASN1Element).utf8String;
+    return left < right ? -1 : left > right ? 1 : 0;
 };
 
 describe("sort (M22)", () => {
@@ -58,6 +59,49 @@ describe("sort (M22)", () => {
         expect(orderer).not.toHaveBeenCalled();
     });
 
+    it("invokes the ordering function once to compare two present values", () => {
+        const a = new EntryInformation({ rdnSequence: [] }, true, [
+            { attribute: new Attribute(commonName, [_encodeUTF8String("Alpha", DER)]) },
+        ]);
+        const b = new EntryInformation({ rdnSequence: [] }, true, [
+            { attribute: new Attribute(commonName, [_encodeUTF8String("Zulu", DER)]) },
+        ]);
+        const orderer = vi.fn(alphabetically);
+        expect(sort([new SortKey(commonName)], a, b, () => orderer)).toBeLessThan(0);
+        expect(orderer).toHaveBeenCalledTimes(1);
+        expect(sort([new SortKey(commonName)], b, a, () => orderer)).toBeGreaterThan(0);
+        expect(orderer).toHaveBeenCalledTimes(2);
+    });
+
+    it("uses a TypedOrderingFunction numeric result without wrapping it as a Matcher", () => {
+        const a = new EntryInformation({ rdnSequence: [] }, true, [
+            { attribute: new Attribute(commonName, [_encodeInteger(1, DER)]) },
+        ]);
+        const b = new EntryInformation({ rdnSequence: [] }, true, [
+            { attribute: new Attribute(commonName, [_encodeInteger(9, DER)]) },
+        ]);
+        const orderer = vi.fn(integerOrderingMatchTyped);
+        expect(sort([new SortKey(commonName)], a, b, () => orderer)).toBeLessThan(0);
+        expect(orderer).toHaveBeenCalledTimes(1);
+        expect(sort([new SortKey(commonName)], a, a, () => orderer)).toBe(0);
+        expect(orderer).toHaveBeenCalledTimes(2);
+    });
+
+    it("treats an undefined ordering result as equal and continues to the next key", () => {
+        const a = new EntryInformation({ rdnSequence: [] }, true, [
+            { attribute: new Attribute(commonName, [_encodeUTF8String("Zulu", DER)]) },
+            { attribute: new Attribute(organizationName, [_encodeUTF8String("Alpha", DER)]) },
+        ]);
+        const b = new EntryInformation({ rdnSequence: [] }, true, [
+            { attribute: new Attribute(commonName, [_encodeUTF8String("Alpha", DER)]) },
+            { attribute: new Attribute(organizationName, [_encodeUTF8String("Zulu", DER)]) },
+        ]);
+        const lookup = (type: ObjectIdentifier) => (
+            type.isEqualTo(commonName) ? () => undefined : alphabetically
+        );
+        expect(sort([new SortKey(commonName), new SortKey(organizationName)], a, b, lookup)).toBeLessThan(0);
+    });
+
     it("compares each entry's own final RDN when DN depths differ", () => {
         const a = new EntryInformation({ rdnSequence: [
             [new AttributeTypeAndValue(commonName, _encodeUTF8String("Middle", DER))],
@@ -92,7 +136,10 @@ describe("sort (M22)", () => {
         const b = new EntryInformation({ rdnSequence: [] }, true, [
             { attribute: new Attribute(commonName, [_encodeUTF8String("Middle", DER)]) },
         ]);
-        expect(sort([new SortKey(commonName)], a, b, () => alphabetically)).toBeLessThan(0);
+        const orderer = vi.fn(alphabetically);
+        expect(sort([new SortKey(commonName)], a, b, () => orderer)).toBeLessThan(0);
+        // One compare to pick the least of A's two values, then one to order the entries.
+        expect(orderer).toHaveBeenCalledTimes(2);
     });
 
     it("ignores an unknown ordering rule before considering missing-value ordering", () => {
