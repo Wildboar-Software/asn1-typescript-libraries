@@ -29,7 +29,7 @@ function operationPermitted (
     tuple: ACDFTupleExtended,
     _request: ProtectedItem,
 ): boolean {
-    const gad: GrantsAndDenials = tuple[3];
+    const gad: GrantsAndDenials = tuple.grantsAndDenials;
 
     /** 1E9DC3EB-E3DB-4CFA-A7BE-B86342F7EF75
      * Section 18.4.2.5.a of ITU Recommendation X.501 (2016) states that, if
@@ -48,7 +48,7 @@ function operationPermitted (
      * So here, if membership is the only means by which the user matches, and
      * even that could not be determined, we return `false` to deny access.
      */
-    if (!Number.isSafeInteger(tuple[5]) && (tuple[5] < 1)) {
+    if (!Number.isSafeInteger(tuple.userClassSpecificity) && (tuple.userClassSpecificity < 1)) {
         return false;
     }
     return (
