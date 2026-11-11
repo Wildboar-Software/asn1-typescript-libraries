@@ -146,6 +146,88 @@ export class Context {
         }
         return json;
     }
+
+    /**
+     * @summary Whether this context has no values.
+     * @description
+     *
+     * `contextValues` is a `SET SIZE (1..MAX)` in a valid encoding.
+     * A constructed context may still have none. Empty when that set
+     * has no members. `fallback` and unrecognized extensions are not
+     * values, so they do not count.
+     *
+     * @public
+     * @method
+     * @returns {boolean} `true` if there are no context values.
+     */
+    public isEmpty(): boolean {
+        return this.contextValues.length === 0;
+    }
+
+    /**
+     * @summary Combine this context with another of the same type.
+     * @description
+     *
+     * Concatenates `contextValues` in receiver-then-argument order.
+     * Duplicate values are not removed: equality of the open type
+     * depends on the context syntax.
+     *
+     * `fallback` becomes `TRUE` when either context has it `TRUE`.
+     * Otherwise the receiver's `fallback` is kept, so an absent
+     * DEFAULT stays absent unless the other side turns it on.
+     * Unrecognized extensions are concatenated in the same order.
+     *
+     * Returns `this` when `other` contributes no values, no
+     * unrecognized extensions, and does not change `fallback`.
+     * Returns `other` when this context contributes neither and
+     * `fallback` is already `other`'s. Neither operand is mutated.
+     *
+     * @param {Context} other A context with the same `contextType`.
+     * @returns {Context} The combined context.
+     * @throws {Error} If `contextType` differs.
+     * @public
+     * @method
+     */
+    public merge(other: Context): Context {
+        if (!this.contextType.isEqualTo(other.contextType)) {
+            throw new Error("Context.merge: context types differ");
+        }
+        const fallback = (
+            !!this.fallback
+            || !!other.fallback
+        )
+            ? true
+            : this.fallback
+            ;
+        const otherExtensions = other._unrecognizedExtensionsList;
+        if (
+            other.isEmpty()
+            && (otherExtensions.length === 0)
+            && (fallback === this.fallback)
+        ) {
+            return this;
+        }
+        const thisExtensions = this._unrecognizedExtensionsList;
+        if (
+            this.isEmpty()
+            && (thisExtensions.length === 0)
+            && (fallback === other.fallback)
+        ) {
+            return other;
+        }
+        return new Context(
+            this.contextType,
+            [
+                ...this.contextValues,
+                ...other.contextValues,
+            ],
+            fallback,
+            [
+                ...thisExtensions,
+                ...otherExtensions,
+            ],
+        );
+    }
 }
 
 /**

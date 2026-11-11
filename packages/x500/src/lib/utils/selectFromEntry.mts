@@ -47,30 +47,6 @@ const ALL_ATTRIBUTE_TYPES: string = id_oa_allAttributeTypes.toString();
 
 type DirectContextMatchCache = Map<string, Map<ContextAssertion, boolean>>;
 
-/**
- * Combine attributes of the same type. Type-only information items become
- * empty {@link Attribute}s, so this also folds them into valued attributes
- * of the same type.
- */
-function mergeAttributes (attrs: Attribute[]): Attribute {
-    if (attrs.length === 1) {
-        return attrs[0];
-    }
-    const values: ASN1Element[] = [];
-    const valuesWithContext: Attribute_valuesWithContext_Item[] = [];
-    for (const attr of attrs) {
-        values.push(...attr.values);
-        if (attr.valuesWithContext) {
-            valuesWithContext.push(...attr.valuesWithContext);
-        }
-    }
-    return new Attribute(
-        attrs[0].type_,
-        values,
-        valuesWithContext.length > 0 ? valuesWithContext : undefined,
-    );
-}
-
 function informationItemToAttribute (
     info: EntryInformation_information_Item,
 ): Attribute | undefined {
@@ -100,14 +76,18 @@ function filterAttribute (
     if (valuesWithContext.length === attr.valuesWithContext.length) {
         return attr;
     }
-    if ((attr.values.length === 0) && (valuesWithContext.length === 0)) {
-        return undefined;
-    }
-    return new Attribute(
+    const filtered = new Attribute(
         attr.type_,
         attr.values,
-        valuesWithContext.length > 0 ? valuesWithContext : undefined,
+        (valuesWithContext.length > 0) ? valuesWithContext : undefined,
+        attr._unrecognizedExtensionsList,
     );
+    // A type-only attribute is empty and was returned above. An
+    // attribute that had values and lost them all is dropped.
+    if (filtered.isEmpty()) {
+        return undefined;
+    }
+    return filtered;
 }
 
 function* iterContextsOfAttribute (attr: Attribute): IterableIterator<Context[]> {
@@ -410,9 +390,11 @@ function selectFromEntry (
         .map(informationItemToAttribute)
         .filter((attr): attr is Attribute => !!attr);
 
+    // Type-only items are empty attributes. Merging folds them into
+    // the valued attribute of the same type.
     const selectedAttributes: Attribute[] = Array.from(
         groupByOID(selectedByType, (attr) => attr.type_).values(),
-        mergeAttributes,
+        (attrs) => attrs.reduce((merged, attr) => merged.merge(attr)),
     );
 
     const preferences: Map<ContextAssertion[], number> = new Map();

@@ -148,4 +148,26 @@ describe("selectFromEntry defaults (M24)", () => {
             : new Attribute(commonName, [plainValue, contextualValue]),
         }]);
     });
+
+    it("merges values of the same attribute type, including a type-only item", () => {
+        const alice = _encodeUTF8String("Alice", DER);
+        const bob = _encodeUTF8String("Bob", DER);
+        const entry = new EntryInformation({ rdnSequence: [] }, true, [
+            { attribute: new Attribute(commonName, [alice]) },
+            { attributeType: commonName },
+            { attribute: new Attribute(commonName, [bob]) },
+        ]);
+        const result = selectFromEntry(
+            new EntryInformationSelection(),
+            entry,
+            () => false,
+            () => [],
+            () => undefined,
+            () => true,
+        );
+        expect(result.information).toEqual([{
+            attribute: new Attribute(commonName, [alice, bob]),
+        }]);
+        expect(entry.information).toHaveLength(3);
+    });
 });
