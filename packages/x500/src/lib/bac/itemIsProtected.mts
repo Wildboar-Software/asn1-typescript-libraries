@@ -61,104 +61,119 @@ function itemIsProtected (
             return false;
         }
     } else if ("attributeType" in request) {
-        return Boolean(
-            (
-                (protectedItems.allUserAttributeTypes === null)
-                && !request.operational
-            )
-            || protectedItems.attributeType
-                ?.some((at) => request.attributeType.isEqualTo(at))
-            || (
-                (protectedItems.allUserAttributeTypesAndValues === null)
-                && !request.operational
-            )
+        if (
+            (protectedItems.allUserAttributeTypes === null)
+            && !request.operational
+        ) {
+            return true;
+        }
+        const attributeTypes = protectedItems.attributeType;
+        if (attributeTypes) {
+            const typeCount = attributeTypes.length;
+            for (let i = 0; i < typeCount; i++) {
+                if (request.attributeType.isEqualTo(attributeTypes[i])) {
+                    return true;
+                }
+            }
+        }
+        return (
+            (protectedItems.allUserAttributeTypesAndValues === null)
+            && !request.operational
         );
     } else if ("value" in request) {
-        return Boolean(
-            protectedItems.allAttributeValues
-                ?.some((av) => request.value.type_.isEqualTo(av))
-            || (
-                (protectedItems.allUserAttributeTypesAndValues === null)
-                && !request.operational
-            )
-            || protectedItems.attributeValue
-                ?.some((av) => {
-                    if (!request.value.type_.isEqualTo(av.type_)) {
-                        return false;
-                    }
-                    const matcher = settings.getEqualityMatcher(av.type_);
-                    return matcher
+        const allAttributeValues = protectedItems.allAttributeValues;
+        if (allAttributeValues) {
+            const typeCount = allAttributeValues.length;
+            for (let i = 0; i < typeCount; i++) {
+                if (request.value.type_.isEqualTo(allAttributeValues[i])) {
+                    return true;
+                }
+            }
+        }
+        if (
+            (protectedItems.allUserAttributeTypesAndValues === null)
+            && !request.operational
+        ) {
+            return true;
+        }
+        const attributeValues = protectedItems.attributeValue;
+        if (attributeValues) {
+            const valueCount = attributeValues.length;
+            for (let i = 0; i < valueCount; i++) {
+                const av = attributeValues[i];
+                if (!request.value.type_.isEqualTo(av.type_)) {
+                    continue;
+                }
+                const matcher = settings.getEqualityMatcher(av.type_);
+                if (
+                    matcher
                         ? matcher(av.value, request.value, settings.getEqualityMatcher) === true
-                        : compareElements(av.value, request.value.value);
-                })
-            || (
-                requester
-                && protectedItems.selfValue?.some((type_) => type_.isEqualTo(request.value.type_))
-                && ((): boolean => {
-                    try {
-                        const elements = request.value.value.sequence;
-                        const valueIsNameAndOptionalUID: boolean = (
-                            (elements.length >= 1)
-                            && (elements[0].tagClass === ASN1TagClass.universal)
-                            && (elements[0].tagNumber === ASN1UniversalType.sequence)
-                        );
-                        const dn: DistinguishedName = valueIsNameAndOptionalUID
-                            ? _decode_NameAndOptionalUID(request.value.value).dn
-                            : _decode_DistinguishedName(request.value.value);
-                        return compareRDNSequence(
-                            dn,
-                            requester.dn,
-                            valueEqualityMatcher(settings.getEqualityMatcher),
-                        );
-                    } catch {
-                        return false;
+                        : compareElements(av.value, request.value.value)
+                ) {
+                    return true;
+                }
+            }
+        }
+        const selfValue = protectedItems.selfValue;
+        if (requester && selfValue) {
+            const selfCount = selfValue.length;
+            let typeMatches = false;
+            for (let i = 0; i < selfCount; i++) {
+                if (selfValue[i].isEqualTo(request.value.type_)) {
+                    typeMatches = true;
+                    break;
+                }
+            }
+            if (typeMatches) {
+                try {
+                    const elements = request.value.value.sequence;
+                    const valueIsNameAndOptionalUID: boolean = (
+                        (elements.length >= 1)
+                        && (elements[0].tagClass === ASN1TagClass.universal)
+                        && (elements[0].tagNumber === ASN1UniversalType.sequence)
+                    );
+                    const dn: DistinguishedName = valueIsNameAndOptionalUID
+                        ? _decode_NameAndOptionalUID(request.value.value).dn
+                        : _decode_DistinguishedName(request.value.value);
+                    if (compareRDNSequence(
+                        dn,
+                        requester.dn,
+                        valueEqualityMatcher(settings.getEqualityMatcher),
+                    )) {
+                        return true;
                     }
-                })()
-            )
-            || (
-                protectedItems.rangeOfValues
-                && evaluateFilter(
-                    protectedItems.rangeOfValues,
-                    [
-                        new EntryInformation(
+                } catch {
+                    // Not a name, so selfValue does not match. Other selectors may.
+                }
+            }
+        }
+        if (protectedItems.rangeOfValues) {
+            return Boolean(evaluateFilter(
+                protectedItems.rangeOfValues,
+                [
+                    new EntryInformation(
+                        {
+                            rdnSequence: [],
+                        },
+                        undefined,
+                        [
                             {
-                                rdnSequence: [],
+                                attribute: new Attribute(
+                                    request.value.type_,
+                                    [ request.value.value ],
+                                    undefined,
+                                ),
                             },
-                            undefined,
-                            [
-                                {
-                                    attribute: new Attribute(
-                                        request.value.type_,
-                                        [ request.value.value ],
-                                        undefined,
-                                    ),
-                                },
-                            ],
-                        ),
-                    ],
-                    settings,
-                )?.matched
-            )
-            // restrictedBy is supported, but not in this function.
-            /*
-            Kept commented out to clarify here that this field is not used in
-            determining whether the item is protected. ITU-T Recommendation
-            X.501 (2019), Section 18.4.2.4, states that:
-
-            "This is only relevant when the permission sought is add, and all
-            context assertions shall be satisfied. It does not provide for
-            general use of contexts to differentiate protected items for other
-            permissions."
-            */
-            // || (
-            //     contexts?.length
-            //     && protectedItems.contexts?.every((ca) => evaluateContextAssertion(
-            //         ca,
-            //         contexts,
-            //         settings.getContextMatcher,
-            //         settings.determineAbsentMatch,
-            //     )))
-        );
+                        ],
+                    ),
+                ],
+                settings,
+            )?.matched);
+        }
+        // restrictedBy is not a selector. X.501 (2019) §18.4.2.4: it applies
+        // only when the permission sought is add, and it does not differentiate
+        // protected items for other permissions. Contexts are likewise not selectors.
+        return false;
     } else {
         return false; // For lack of knowing what to do.
     }

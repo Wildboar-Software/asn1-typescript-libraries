@@ -51,10 +51,15 @@ function operationPermitted (
     if (!Number.isSafeInteger(tuple.userClassSpecificity) && (tuple.userClassSpecificity < 1)) {
         return false;
     }
-    return (
-        operations.every((op) => gad[(op * 2)] === TRUE_BIT) // Every required "grant" bit is set.
-        && !operations.some((op) => gad[(op * 2) + 1] === TRUE_BIT) // None of the corresponding "deny" bits are set.
-    );
+    // Every required grant bit is set, and none of the corresponding deny bits are.
+    const operationCount = operations.length;
+    for (let i = 0; i < operationCount; i++) {
+        const bit = operations[i] * 2;
+        if ((gad[bit] !== TRUE_BIT) || (gad[bit + 1] === TRUE_BIT)) {
+            return false;
+        }
+    }
+    return true;
 }
 
 export default operationPermitted;

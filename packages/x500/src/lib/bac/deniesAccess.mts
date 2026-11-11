@@ -8,8 +8,14 @@ import type { BIT_STRING } from "@wildboar/asn1";
  */
 export
 function deniesAccess (permissions: BIT_STRING): boolean {
-    // All the odd bits are denials.
-    return Array.from(permissions).some((perm, index) => (index % 2) ? Boolean(perm) : false);
+    // Odd bits are denials. Walk them directly so this does not allocate a copy.
+    const length = permissions.length;
+    for (let i = 1; i < length; i += 2) {
+        if (permissions[i]) {
+            return true;
+        }
+    }
+    return false;
 }
 
 export default deniesAccess;

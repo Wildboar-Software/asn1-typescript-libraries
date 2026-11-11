@@ -9,8 +9,14 @@ import type ACDFTupleExtended from "../types/ACDFTupleExtended.mjs";
 export
 function grantsAccess (tuple: ACDFTupleExtended): boolean {
     const permissions = tuple.grantsAndDenials;
-    // All the even bits are grants.
-    return Array.from(permissions).some((perm, index) => (index % 2) ? false : Boolean(perm));
+    // Even bits are grants. Walk them directly so this does not allocate a copy.
+    const length = permissions.length;
+    for (let i = 0; i < length; i += 2) {
+        if (permissions[i]) {
+            return true;
+        }
+    }
+    return false;
 }
 
 export default grantsAccess;

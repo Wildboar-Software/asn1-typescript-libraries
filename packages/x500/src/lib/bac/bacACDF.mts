@@ -123,6 +123,11 @@ interface BACACDFReturn extends ACDFReturn {
  * **Performance Tip: Ensure that all precedence values for all ACI items are
  * unique to avoid the more computationally-expensive code paths.**
  *
+ * Array walks below are indexed loops. Ranking lists of at most eight tuples
+ * uses insertion sort, which is faster than `Array.prototype.sort` at that
+ * size; longer lists still use `Array.prototype.sort`. A ranking key that is
+ * the same on every tuple is not sorted. See `bacACDF.bench.mts`.
+ *
  * ### Compliance
  *
  * Constraints are evaluated before precedence and specificity. Requests must
@@ -152,6 +157,145 @@ interface BACACDFReturn extends ACDFReturn {
  *
  * @function
  */
+
+/**
+ * Insertion sort beats `Array.prototype.sort` for the tuple lists at or below
+ * this length, and loses above it. Measured in `bacACDF.bench.mts`.
+ */
+const INSERTION_RANK_LIMIT: number = 8;
+
+function precedenceKey (tuple: ACDFTupleExtended): number {
+    return Number(tuple.precedence);
+}
+
+function userClassKey (tuple: ACDFTupleExtended): number {
+    // Must be floored. Search for: 1E9DC3EB-E3DB-4CFA-A7BE-B86342F7EF75
+    return Math.floor(tuple.userClassSpecificity);
+}
+
+/**
+ * Stable descending sort. Uniform keys are left in place: a stable sort would
+ * not reorder them, and skipping the sort is the faster equivalent.
+ */
+function sortDescendingInPlace (
+    items: ACDFTupleExtended[],
+    keyOf: (item: ACDFTupleExtended) => number,
+): void {
+    const count = items.length;
+    if (count < 2) {
+        return;
+    }
+    if (count > INSERTION_RANK_LIMIT) {
+        const first = keyOf(items[0]);
+        for (let i = 1; i < count; i++) {
+            if (keyOf(items[i]) !== first) {
+                items.sort((a, b) => keyOf(b) - keyOf(a));
+                return;
+            }
+        }
+        return;
+    }
+    const keys = new Float64Array(count);
+    keys[0] = keyOf(items[0]);
+    let uniform = true;
+    for (let i = 1; i < count; i++) {
+        const key = keyOf(items[i]);
+        keys[i] = key;
+        if (key !== keys[0]) {
+            uniform = false;
+        }
+    }
+    if (uniform) {
+        return;
+    }
+    for (let i = 1; i < count; i++) {
+        const item = items[i];
+        const key = keys[i];
+        let j = i - 1;
+        while ((j >= 0) && (keys[j] < key)) {
+            items[j + 1] = items[j];
+            keys[j + 1] = keys[j];
+            j--;
+        }
+        items[j + 1] = item;
+        keys[j + 1] = key;
+    }
+}
+
+/**
+ * `items` must already be ordered so the greatest key is at index 0, or every
+ * key must be equal. Returns the leading run of that greatest key.
+ */
+function takeHighest (
+    items: ACDFTupleExtended[],
+    keyOf: (item: ACDFTupleExtended) => number,
+): ACDFTupleExtended[] {
+    const count = items.length;
+    const highest = keyOf(items[0]);
+    let end = 1;
+    while ((end < count) && (keyOf(items[end]) === highest)) {
+        end++;
+    }
+    return (end === count) ? items : items.slice(0, end);
+}
+
+function everyPermitted (
+    operations: number[],
+    tuples: ACDFTupleExtended[],
+    request: ProtectedItem,
+): boolean {
+    const count = tuples.length;
+    for (let i = 0; i < count; i++) {
+        if (!operationPermitted(operations, tuples[i], request)) {
+            return false;
+        }
+    }
+    return true;
+}
+
+/**
+ * Separate mixed grant/deny bit strings into two tuples. Pure tuples — the
+ * common case — are reused, and so is the input array when every tuple is pure.
+ * `discardNonRelevantACDFTuples` copies whatever it keeps, so this does not
+ * reorder the caller's array.
+ */
+function splitByGrantAndDenial (tuples: ACDFTupleExtended[]): ACDFTupleExtended[] {
+    const count = tuples.length;
+    for (let i = 0; i < count; i++) {
+        if (splitGrantsAndDenials(tuples[i].grantsAndDenials).length === 2) {
+            const split: ACDFTupleExtended[] = [];
+            for (let j = 0; j < count; j++) {
+                const tuple = tuples[j];
+                const parts = splitGrantsAndDenials(tuple.grantsAndDenials);
+                if (parts.length === 1) {
+                    split.push(tuple);
+                } else {
+                    split.push(tuple.withGrantsAndDenials(parts[0]));
+                    split.push(tuple.withGrantsAndDenials(parts[1]));
+                }
+            }
+            return split;
+        }
+    }
+    return tuples;
+}
+
+function rankByProtectedItem (
+    tuples: ACDFTupleExtended[],
+    request: ProtectedItem,
+): ACDFTupleExtended[] {
+    const count = tuples.length;
+    const copy = new Array<ACDFTupleExtended>(count);
+    for (let i = 0; i < count; i++) {
+        copy[i] = tuples[i];
+    }
+    const keyOf = (tuple: ACDFTupleExtended): number => (
+        specificityOfProtectedItem(request, tuple.protectedItems)
+    );
+    sortDescendingInPlace(copy, keyOf);
+    return takeHighest(copy, keyOf);
+}
+
 export
 function bacACDF (
     tuples: ACDFTupleExtended[],
@@ -163,9 +307,7 @@ function bacACDF (
 ): BACACDFReturn {
     const tuplesSplitByGrantOrDenial = tuplesAlreadySplit
         ? tuples
-        : tuples
-            .flatMap((tuple) => splitGrantsAndDenials(tuple.grantsAndDenials)
-                .map((gad) => tuple.withGrantsAndDenials(gad)));
+        : splitByGrantAndDenial(tuples);
     const relevantTuples: ACDFTupleExtended[] = discardNonRelevantACDFTuples(
         tuplesSplitByGrantOrDenial,
         requester,
@@ -185,14 +327,17 @@ function bacACDF (
             relevantTuples,
         };
     }
+    if (relevantTuples.length === 1) {
+        return {
+            authorized: operationPermitted(operations, relevantTuples[0], request),
+            relevantTuples,
+            precedentTuples: relevantTuples,
+        };
+    }
 
     // SORT BY PRECEDENCE
-    const sortedByDescendingPrecedence = relevantTuples.sort((a, b) => Number(b.precedence) - Number(a.precedence));
-    const highestPrecedence = sortedByDescendingPrecedence[0].precedence;
-    const betaIndex = sortedByDescendingPrecedence.findIndex((t) => (t.precedence < highestPrecedence));
-    const tuplesThatSurvivedStage1 = (betaIndex < 0)
-        ? sortedByDescendingPrecedence // All were of the same precedence.
-        : sortedByDescendingPrecedence.slice(0, betaIndex); // Select the most precedent.
+    sortDescendingInPlace(relevantTuples, precedenceKey);
+    const tuplesThatSurvivedStage1 = takeHighest(relevantTuples, precedenceKey);
 
     if (tuplesThatSurvivedStage1.length <= 1) {
         return {
@@ -206,19 +351,12 @@ function bacACDF (
     }
 
     // SORT BY USER CLASS SPECIFICITY
-    const sortedByDescendingUserClassSpecificity: ACDFTupleExtended[] = tuplesThatSurvivedStage1
-        .sort((a, b) => Math.floor(b.userClassSpecificity) - Math.floor(a.userClassSpecificity)); // Must be floored. Search for: 1E9DC3EB-E3DB-4CFA-A7BE-B86342F7EF75
-    const highestUserClassSpecificity: number = Math.floor(sortedByDescendingUserClassSpecificity[0].userClassSpecificity);
-    const charlieIndex = sortedByDescendingUserClassSpecificity
-        .findIndex((t) => (Math.floor(t.userClassSpecificity) < highestUserClassSpecificity));
-    const tuplesThatSurvivedStage2: ACDFTupleExtended[] = ((charlieIndex < 0)
-        ? sortedByDescendingUserClassSpecificity // All were of the same specificity.
-        : sortedByDescendingUserClassSpecificity.slice(0, charlieIndex)); // Select the most specific.
+    sortDescendingInPlace(tuplesThatSurvivedStage1, userClassKey);
+    const tuplesThatSurvivedStage2 = takeHighest(tuplesThatSurvivedStage1, userClassKey);
 
     if (tuplesThatSurvivedStage2.length === 1) {
         return {
-            authorized: tuplesThatSurvivedStage2
-                .every((tuple) => operationPermitted(operations, tuple, request)),
+            authorized: operationPermitted(operations, tuplesThatSurvivedStage2[0], request),
             relevantTuples,
             precedentTuples: tuplesThatSurvivedStage1,
             mostUserSpecificTuples: tuplesThatSurvivedStage2,
@@ -226,23 +364,10 @@ function bacACDF (
     }
 
     // SORT BY PROTECTED ITEM SPECIFICITY
-    const sortedByDescedingProtectedItemSpecificity: [ ACDFTupleExtended, number ][] = tuplesThatSurvivedStage2
-        .map((tuple): [ ACDFTupleExtended, number ] => [
-            tuple,
-            specificityOfProtectedItem(request, tuple.protectedItems),
-        ])
-        .sort((a, b) => b[1] - a[1]);
-    const highestProtectedItemSpecificity: number = sortedByDescedingProtectedItemSpecificity[0][1];
-    const deltaIndex = sortedByDescedingProtectedItemSpecificity
-        .findIndex((t) => (t[1] < highestProtectedItemSpecificity));
-    const tuplesThatSurvivedStage3: ACDFTupleExtended[] = ((deltaIndex < 0)
-        ? sortedByDescedingProtectedItemSpecificity // All were of the same specificity.
-        : sortedByDescedingProtectedItemSpecificity.slice(0, deltaIndex)) // Select the most specific.
-        .map(([ tuple, ]) => tuple);
+    const tuplesThatSurvivedStage3 = rankByProtectedItem(tuplesThatSurvivedStage2, request);
 
     return {
-        authorized: tuplesThatSurvivedStage3
-            .every((tuple) => operationPermitted(operations, tuple, request)),
+        authorized: everyPermitted(operations, tuplesThatSurvivedStage3, request),
         relevantTuples,
         precedentTuples: tuplesThatSurvivedStage1,
         mostUserSpecificTuples: tuplesThatSurvivedStage2,

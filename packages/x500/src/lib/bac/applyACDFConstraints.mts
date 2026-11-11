@@ -87,12 +87,16 @@ function applyACDFConstraints (
     // attribute-value additions specified by X.501.
     if (adds && addGranted && (("value" in request) || ("attributeType" in request))) {
         const type = ("value" in request) ? request.value.type_ : request.attributeType;
-        for (const constraint of items.maxValueCount ?? []) {
-            if (
-                constraint.type_.isEqualTo(type)
-                && !countWithinLimit(request.valuesCount, constraint.maxCount)
-            ) {
-                removePermission(grantAdd);
+        const limits = items.maxValueCount;
+        if (limits) {
+            for (let i = 0; i < limits.length; i++) {
+                const constraint = limits[i];
+                if (
+                    constraint.type_.isEqualTo(type)
+                    && !countWithinLimit(request.valuesCount, constraint.maxCount)
+                ) {
+                    removePermission(grantAdd);
+                }
             }
         }
     }
@@ -106,7 +110,10 @@ function applyACDFConstraints (
         const restrictedBy = (addGranted && request.entryAttributes)
             ? (items.restrictedBy ?? [])
             : [];
-        for (const restriction of restrictedBy) {
+        const entryAttributes = request.entryAttributes;
+        const restrictionCount = restrictedBy.length;
+        for (let r = 0; r < restrictionCount; r++) {
+            const restriction = restrictedBy[r];
             if (!restriction.type_.isEqualTo(request.value.type_)) {
                 continue;
             }
@@ -120,13 +127,38 @@ function applyACDFConstraints (
                         settings.getEqualityMatcher,
                     ) === true
                     : compareElements(request.value.value, value);
-                present = request.entryAttributes?.some((attribute) => (
-                    attribute.type_.isEqualTo(restriction.valuesIn)
-                    && (
-                        attribute.values.some((value) => matchesStored(value))
-                        || attribute.valuesWithContext?.some((vwc) => matchesStored(vwc.value))
-                    )
-                )) ?? false;
+                if (entryAttributes) {
+                    const attributeCount = entryAttributes.length;
+                    for (let a = 0; a < attributeCount; a++) {
+                        const attribute = entryAttributes[a];
+                        if (!attribute.type_.isEqualTo(restriction.valuesIn)) {
+                            continue;
+                        }
+                        const values = attribute.values;
+                        const valueCount = values.length;
+                        for (let v = 0; v < valueCount; v++) {
+                            if (matchesStored(values[v])) {
+                                present = true;
+                                break;
+                            }
+                        }
+                        if (!present) {
+                            const contextual = attribute.valuesWithContext;
+                            if (contextual) {
+                                const contextCount = contextual.length;
+                                for (let c = 0; c < contextCount; c++) {
+                                    if (matchesStored(contextual[c].value)) {
+                                        present = true;
+                                        break;
+                                    }
+                                }
+                            }
+                        }
+                        if (present) {
+                            break;
+                        }
+                    }
+                }
             } catch {
                 // Unknown membership in valuesIn cannot establish an add grant.
             }
@@ -139,13 +171,23 @@ function applyACDFConstraints (
         if (items.contexts) {
             let contextsMatch = false;
             try {
-                contextsMatch = items.contexts.every((assertion) => evaluateContextAssertion(
-                    assertion,
-                    request.contexts ?? [],
-                    settings.getContextMatcher,
-                    settings.determineAbsentMatch,
-                    settings.getEqualityMatcher,
-                ));
+                const assertions = items.contexts;
+                const requestContexts = request.contexts ?? [];
+                const assertionCount = assertions.length;
+                let allMatch = true;
+                for (let i = 0; i < assertionCount; i++) {
+                    if (!evaluateContextAssertion(
+                        assertions[i],
+                        requestContexts,
+                        settings.getContextMatcher,
+                        settings.determineAbsentMatch,
+                        settings.getEqualityMatcher,
+                    )) {
+                        allMatch = false;
+                        break;
+                    }
+                }
+                contextsMatch = allMatch;
             } catch {
                 // On failure retain denials and remove grants, never vice versa.
             }
