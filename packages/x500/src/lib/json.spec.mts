@@ -27,7 +27,6 @@ import {
     grantsAndDenialsToString,
 } from "./modules/BasicAccessControl/GrantsAndDenials.ta.mjs";
 import { MaxValueCount } from "./modules/BasicAccessControl/MaxValueCount.ta.mjs";
-import { ProtectedItems } from "./modules/BasicAccessControl/ProtectedItems.ta.mjs";
 import { RestrictedValue } from "./modules/BasicAccessControl/RestrictedValue.ta.mjs";
 import { ContextAssertion } from "./modules/InformationFramework/ContextAssertion.ta.mjs";
 import { BasicConstraintsSyntax } from "./modules/CertificateExtensions/BasicConstraintsSyntax.ta.mjs";
@@ -364,44 +363,33 @@ describe("AuthenticationLevel CHOICE toString / toJSON", () => {
     });
 });
 
-describe("ProtectedItems toString / toJSON", () => {
-    it("prints present axes and quotes attribute values", () => {
-        const description = ObjectIdentifier.fromString("2.5.4.13");
-        const person = ObjectIdentifier.fromParts([ 2, 5, 6, 6 ]);
-        const languageContext = ObjectIdentifier.fromString("1.2.3.4");
-        const items = Object.assign(new ProtectedItems(), {
-            entry: null,
-            attributeType: [ commonName ],
-            attributeValue: [
-                new AttributeTypeAndValue(commonName, utf8Element("Alice")),
-            ],
-            maxValueCount: [ new MaxValueCount(commonName, 2) ],
-            restrictedBy: [ new RestrictedValue(commonName, description) ],
-            contexts: [ new ContextAssertion(languageContext, [ utf8Element("en") ]) ],
-            classes: { item: person },
-            _unrecognizedExtensionsList: [],
-        });
-        expect(items.toString()).toBe(
-            "{ entry NULL, attributeType { 2.5.4.3 },"
-            + " attributeValue { \"cn=Alice\" },"
-            + " maxValueCount { { type 2.5.4.3, maxCount 2 } },"
-            + " restrictedBy { { type 2.5.4.3, valuesIn 2.5.4.13 } },"
-            + " contexts { { contextType 1.2.3.4, contextValues { \"en\" } } },"
-            + " classes item:2.5.6.6 }",
-        );
-        expect(items.toJSON()).toEqual({
-            entry: null,
-            attributeType: [ "2.5.4.3" ],
-            attributeValue: [{ type: "2.5.4.3", value: "#0c05416c696365" }],
-            maxValueCount: [{ type: "2.5.4.3", maxCount: 2 }],
-            restrictedBy: [{ type: "2.5.4.3", valuesIn: "2.5.4.13" }],
-            contexts: [{ contextType: "1.2.3.4", contextValues: [ "en" ] }],
-            classes: { item: "2.5.6.6" },
-        });
+describe("MaxValueCount toString / toJSON", () => {
+    it("prints type and maxCount", () => {
+        const value = new MaxValueCount(commonName, 2);
+        expect(value.toString()).toBe("{ type 2.5.4.3, maxCount 2 }");
+        expect(value.toJSON()).toEqual({ type: "2.5.4.3", maxCount: 2 });
     });
+});
 
-    it("prints an empty ProtectedItems as {}", () => {
-        expect(new ProtectedItems().toString()).toBe("{}");
-        expect(new ProtectedItems().toJSON()).toEqual({});
+describe("RestrictedValue toString / toJSON", () => {
+    it("prints type and valuesIn as dotted decimals", () => {
+        const description = ObjectIdentifier.fromString("2.5.4.13");
+        const value = new RestrictedValue(commonName, description);
+        expect(value.toString()).toBe("{ type 2.5.4.3, valuesIn 2.5.4.13 }");
+        expect(value.toJSON()).toEqual({ type: "2.5.4.3", valuesIn: "2.5.4.13" });
+    });
+});
+
+describe("ContextAssertion toString / toJSON", () => {
+    it("prints contextType and open-type contextValues", () => {
+        const languageContext = ObjectIdentifier.fromString("1.2.3.4");
+        const value = new ContextAssertion(languageContext, [ utf8Element("en") ]);
+        expect(value.toString()).toBe(
+            "{ contextType 1.2.3.4, contextValues { \"en\" } }",
+        );
+        expect(value.toJSON()).toEqual({
+            contextType: "1.2.3.4",
+            contextValues: [ "en" ],
+        });
     });
 });

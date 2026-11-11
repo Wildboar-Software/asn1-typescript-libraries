@@ -106,7 +106,7 @@ function localNameToGser (name: LocalName): string {
 /**
  * @summary GSER of a `Refinement`, or `undefined` if unrecognized
  */
-export function refinementToGser (refinement: Refinement): string | undefined {
+function refinementToGser (refinement: Refinement): string | undefined {
     if ("item" in refinement) {
         return `item:${refinement.item.toString()}`;
     }
@@ -144,7 +144,7 @@ export function refinementToGser (refinement: Refinement): string | undefined {
 /**
  * @summary JSON of a `Refinement`, or `undefined` if unrecognized
  */
-export function refinementToJSON (refinement: Refinement): RefinementJSON | undefined {
+function refinementToJSON (refinement: Refinement): RefinementJSON | undefined {
     if ("item" in refinement) {
         return { item: refinement.item.toString() };
     }
