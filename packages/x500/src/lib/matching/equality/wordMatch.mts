@@ -91,7 +91,7 @@ export
 function containsWord (
     haystack: string,
     needle: string,
-    flags: boolean | number = false,
+    flags: number = 0,
 ): boolean {
     if (needle.length === 0) {
         if (flags & MATCH_FLAG_DEBUG) {

@@ -33,8 +33,6 @@ import { compareRelativeDistinguishedName } from "@wildboar/dn";
 import compareElements from "../../comparators/compareElements.mjs";
 import { getDateFromTime } from "@wildboar/pki-stub";
 
-const SOUGHT_EXTENSION_OID: string = id_ce_issuingDistributionPoint.toString();
-
 /**
  * Rec. ITU-T X.509 (10/2019), clause 13.3.5
  * `certificateListExactMatch`.

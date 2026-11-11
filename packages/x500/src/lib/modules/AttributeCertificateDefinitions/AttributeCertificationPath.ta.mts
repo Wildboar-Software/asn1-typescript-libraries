@@ -123,7 +123,7 @@ export class AttributeCertificationPath {
         delegationPath: [AttributeCertificate, ...AttributeCertificate[]],
     ): AttributeCertificationPath {
         const path = [ ...delegationPath ].reverse();
-        return new AttributeCertificationPath(path.pop()!, path.slice(0, -1));
+        return new AttributeCertificationPath(path.pop()!, path.slice(0, -1).map((ac) => new ACPathData(undefined, ac)));
     }
 }
 

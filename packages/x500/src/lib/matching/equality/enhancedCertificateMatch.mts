@@ -1,4 +1,4 @@
-import { ASN1Element, FALSE_BIT, type DERElement } from "@wildboar/asn1";
+import { ASN1Element, FALSE_BIT, type DERElement, type OCTET_STRING } from "@wildboar/asn1";
 import type { AttributeType } from "../../modules/InformationFramework/index.mjs";
 import { valueEqualityMatcher } from "../valueEqualityMatcher.mjs";
 import {
@@ -67,14 +67,21 @@ import {
 } from "../../modules/CertificateExtensions/GeneralNames.ta.mjs";
 import {
     _decode_CertificatePoliciesSyntax,
+    type CertificatePoliciesSyntax,
 } from "../../modules/CertificateExtensions/CertificatePoliciesSyntax.ta.mjs";
 import {
     _decode_NameConstraintsSyntax,
+    NameConstraintsSyntax,
 } from "../../modules/CertificateExtensions/NameConstraintsSyntax.ta.mjs";
 import {
     certificateExtensionReader,
     certificatePoliciesIntersect,
 } from "./certificateExtensionIndex.mjs";
+import type { GeneralNames } from "../../modules/CertificateExtensions/GeneralNames.ta.mjs";
+import type { PrivateKeyUsagePeriod } from "../../modules/CertificateExtensions/PrivateKeyUsagePeriod.ta.mjs";
+import type { KeyUsage } from "../../modules/CertificateExtensions/KeyUsage.ta.mjs";
+import type { SubjectKeyIdentifier } from "../../modules/CertificateExtensions/SubjectKeyIdentifier.ta.mjs";
+import type { AuthorityKeyIdentifier } from "../../modules/CertificateExtensions/AuthorityKeyIdentifier.ta.mjs";
 
 const SKI_ID = id_ce_subjectKeyIdentifier;
 const AKI_ID = id_ce_authorityKeyIdentifier;
@@ -127,13 +134,13 @@ function evaluateEnhancedCertificateAssertion (
     }
     const ext = extensionReader(tbs.extensions);
     if (assertion.subjectKeyIdentifier) {
-        const ski = ext(SKI_ID, decodeSKI);
+        const ski = ext(SKI_ID, decodeSKI) as SubjectKeyIdentifier;
         if (!ski || Buffer.compare(ski, assertion.subjectKeyIdentifier)) {
             return false;
         }
     }
     if (assertion.authorityKeyIdentifier) {
-        const storedAKI = ext(AKI_ID, decodeAKI);
+        const storedAKI = ext(AKI_ID, decodeAKI) as AuthorityKeyIdentifier;
         if (!storedAKI || !compareAuthorityKeyIdentifier(assertion.authorityKeyIdentifier, storedAKI)) {
             return false;
         }
@@ -154,7 +161,7 @@ function evaluateEnhancedCertificateAssertion (
     }
 
     if (assertion.privateKeyValid) {
-        const pkup = ext(PKUP_ID, decodePKUP);
+        const pkup = ext(PKUP_ID, decodePKUP) as PrivateKeyUsagePeriod;
         if (pkup) {
             if (
                 pkup.notBefore
@@ -178,7 +185,7 @@ function evaluateEnhancedCertificateAssertion (
     }
 
     if (assertion.keyUsage) {
-        const storedKU = ext(KU_ID, decodeKU);
+        const storedKU = ext(KU_ID, decodeKU) as KeyUsage;
         if (storedKU && !assertion.keyUsage.every((ku: number, index: number): boolean => (
             (ku === FALSE_BIT)
             || Boolean(storedKU[index])
@@ -189,7 +196,7 @@ function evaluateEnhancedCertificateAssertion (
 
     const subjectAltName = assertion.subjectAltName;
     if (subjectAltName) {
-        const sans = ext(SAN_ID, decodeSAN);
+        const sans = ext(SAN_ID, decodeSAN) as GeneralNames;
         if (!sans) {
             return false;
         }
@@ -280,14 +287,14 @@ function evaluateEnhancedCertificateAssertion (
     }
 
     if (assertion.policy) {
-        const cp = ext(CP_ID, decodeCP);
+        const cp = ext(CP_ID, decodeCP) as CertificatePoliciesSyntax;
         if (!cp || !policiesIntersect(assertion.policy, cp)) {
             return false;
         }
     }
 
     if (assertion.pathToName) {
-        const nc = ext(NC_ID, decodeNC);
+        const nc = ext(NC_ID, decodeNC) as NameConstraintsSyntax;
         if (nc && !namesWithinNameConstraints(assertion.pathToName, nc, getMatcher)) {
             return false;
         }
@@ -300,7 +307,7 @@ function evaluateEnhancedCertificateAssertion (
     }
 
     if (assertion.nameConstraints) {
-        const sans = ext(SAN_ID, decodeSAN);
+        const sans = ext(SAN_ID, decodeSAN) as GeneralNames;
         if (!namesWithinNameConstraints([
             ...(tbs.subject.rdnSequence.length ? [{ directoryName: tbs.subject }] : []),
             ...(sans ?? []),

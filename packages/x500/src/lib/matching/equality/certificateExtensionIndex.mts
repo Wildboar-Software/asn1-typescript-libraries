@@ -80,12 +80,12 @@ function decodeCertificateExtension <T> (
  * @author Cursor Grok 4.6
  */
 export
-function certificateExtensionReader (
+function certificateExtensionReader <T> (
     extensions: Extension[] | undefined,
-): <T>(oid: OBJECT_IDENTIFIER, decoder: (el: DERElement) => T) => T | undefined {
+): (oid: OBJECT_IDENTIFIER, decoder: (el: DERElement) => T) => T | undefined {
     const map = certificateExtensionMap(extensions);
     const decoded: Map<string, unknown> = new Map();
-    return <T>(oid: OBJECT_IDENTIFIER, decoder: (el: DERElement) => T): T | undefined => (
+    return (oid: OBJECT_IDENTIFIER, decoder: (el: DERElement) => T): T | undefined => (
         decodeCertificateExtension(map, oid, decoder, decoded)
     );
 }

@@ -61,8 +61,8 @@ function canDeconstruct(el: ASN1Element): boolean {
  *
  * @internal
  */
-export function elementContent(el: ASN1Element): Uint8Array {
-    if (canDeconstruct(el) && el.construction === ASN1Construction.constructed) {
+function elementContent(el: ASN1Element, decon: boolean): Uint8Array {
+    if (decon && el.construction === ASN1Construction.constructed) {
         return el.deconstruct(el.name || "string");
     }
     return el.value;
@@ -79,8 +79,9 @@ export function compareElements(a: ASN1Element, b: ASN1Element): boolean {
     ) {
         return false;
     }
-    if (canDeconstruct(a)) {
-        return compareBytes(elementContent(a), elementContent(b)) === 0;
+    const decon = canDeconstruct(a);
+    if (decon) {
+        return compareBytes(elementContent(a, true), elementContent(b, true)) === 0;
     }
     if (a.construction !== b.construction) {
         return false;
@@ -99,8 +100,9 @@ export function compareElements(a: ASN1Element, b: ASN1Element): boolean {
  * @internal
  */
 export function elementKey(el: ASN1Element): string {
-    const content: Uint8Array = elementContent(el);
-    const construction: string = canDeconstruct(el) ? "" : `.${el.construction}`;
+    const decon = canDeconstruct(el);
+    const content: Uint8Array = elementContent(el, decon);
+    const construction: string = decon ? "" : `.${el.construction}`;
     return `${el.tagClass}${construction}.${el.tagNumber}#${bytesToHex(content)}`;
 }
 

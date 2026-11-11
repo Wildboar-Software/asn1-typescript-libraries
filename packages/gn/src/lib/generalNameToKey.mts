@@ -1,4 +1,4 @@
-import type { ASN1Element, External } from "@wildboar/asn1";
+import type { External } from "@wildboar/asn1";
 import { DER } from "@wildboar/asn1/functional";
 import { nameToKey } from "@wildboar/dn";
 import { _encode_ORAddress } from "@wildboar/or-address";
@@ -55,7 +55,7 @@ export function generalNameToKey(gn: GeneralName): string {
     if ("registeredID" in gn) {
         return `registeredID:${gn.registeredID.toString()}`;
     }
-    return `_unrecognized:${elementKey(gn as ASN1Element)}`;
+    return `_unrecognized:${elementKey(gn)}`;
 }
 
 function otherNameKey(otherName: External): string {
