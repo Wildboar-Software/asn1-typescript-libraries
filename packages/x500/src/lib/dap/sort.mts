@@ -10,8 +10,6 @@ import type {
     Attribute,
 } from "../modules/InformationFramework/Attribute.ta.mjs";
 import { AttributeTypeAndValue } from "../modules/InformationFramework/AttributeTypeAndValue.ta.mjs";
-import type ATVAC from "../types/AttributeTypeValueAndContextsTuple.mjs";
-import getValueTuplesFromAttribute from "../utils/getValueTuplesFromAttribute.mjs";
 
 /**
  * TRUE iff `value` is strictly less than `assertion` under `orderer`.
@@ -39,6 +37,42 @@ function lowestValue (
         }
     }
     return lowest;
+}
+
+function attributesFromEntry (entry: EntryInformation): Attribute[] {
+    const attributes: Attribute[] = [];
+    for (const info of entry.information ?? []) {
+        if ("attribute" in info) {
+            attributes.push(info.attribute);
+        }
+    }
+    return attributes;
+}
+
+function valuesOfType (
+    type: OBJECT_IDENTIFIER,
+    attributes: Attribute[],
+    rdn: AttributeTypeAndValue[] | undefined,
+): ASN1Element[] {
+    if (rdn) {
+        const values: ASN1Element[] = [];
+        for (const atav of rdn) {
+            if (type.isEqualTo(atav.type_)) {
+                values.push(atav.value);
+            }
+        }
+        return values;
+    }
+    const values: ASN1Element[] = [];
+    for (const attr of attributes) {
+        if (!type.isEqualTo(attr.type_)) {
+            continue;
+        }
+        for (const value of attr.iterValuesOmittingContexts()) {
+            values.push(value);
+        }
+    }
+    return values;
 }
 
 /**
@@ -78,20 +112,14 @@ function sort (
     getOrderingMatcher: (attributeType: OBJECT_IDENTIFIER) => Matcher | undefined,
     onlyRDN: boolean = false,
 ): number {
-    const avalues: ATVAC[] = onlyRDN
-        ? (a.name.rdnSequence[a.name.rdnSequence.length - 1]
-            ?.map((atav): ATVAC => [ atav.type_, atav.value, [] ]) ?? [])
-        : (a.information ?? [])
-            .map((info) => ("attribute" in info) ? info.attribute : undefined)
-            .filter((attr): attr is Attribute => !!attr)
-            .flatMap(getValueTuplesFromAttribute);
-    const bvalues: ATVAC[] = onlyRDN
-        ? (b.name.rdnSequence[b.name.rdnSequence.length - 1]
-            ?.map((atav): ATVAC => [ atav.type_, atav.value, [] ]) ?? [])
-        : (b.information ?? [])
-            .map((info) => ("attribute" in info) ? info.attribute : undefined)
-            .filter((attr): attr is Attribute => !!attr)
-            .flatMap(getValueTuplesFromAttribute);
+    const aRDN = onlyRDN
+        ? (a.name.rdnSequence[a.name.rdnSequence.length - 1] ?? [])
+        : undefined;
+    const bRDN = onlyRDN
+        ? (b.name.rdnSequence[b.name.rdnSequence.length - 1] ?? [])
+        : undefined;
+    const aAttributes = onlyRDN ? [] : attributesFromEntry(a);
+    const bAttributes = onlyRDN ? [] : attributesFromEntry(b);
 
     for (const key of keys) {
         const orderer = key.orderingRule
@@ -101,16 +129,8 @@ function sort (
             continue; // Ignore the sort key if the matching rule is not understood.
         }
 
-        const relevantAValues: ASN1Element[] = avalues
-            .filter((tuple): tuple is [OBJECT_IDENTIFIER, ASN1Element, ATVAC[2]] => (
-                key.type_.isEqualTo(tuple[0]) && tuple[1] !== undefined
-            ))
-            .map(([, value]) => value);
-        const relevantBValues: ASN1Element[] = bvalues
-            .filter((tuple): tuple is [OBJECT_IDENTIFIER, ASN1Element, ATVAC[2]] => (
-                key.type_.isEqualTo(tuple[0]) && tuple[1] !== undefined
-            ))
-            .map(([, value]) => value);
+        const relevantAValues: ASN1Element[] = valuesOfType(key.type_, aAttributes, aRDN);
+        const relevantBValues: ASN1Element[] = valuesOfType(key.type_, bAttributes, bRDN);
 
         // Absence is an ordering case, not an ASN.1 value for the matcher.
         if (relevantAValues.length === 0 && relevantBValues.length === 0) {
