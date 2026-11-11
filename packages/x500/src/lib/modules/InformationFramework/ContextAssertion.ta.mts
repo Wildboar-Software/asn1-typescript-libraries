@@ -6,7 +6,6 @@ import {
     type OBJECT_IDENTIFIER,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { gserSequence } from "../../json.mjs";
 
 /**
  * JSON Encoding Rules encoding of {@link ContextAssertion}.
@@ -95,10 +94,8 @@ export class ContextAssertion {
      * @public
      */
     public toString(): string {
-        return gserSequence([
-            `contextType ${this.contextType.toString()}`,
-            `contextValues ${gserSequence(this.contextValues.map((el) => el.toString()))}`,
-        ]);
+        const values = this.contextValues.map((el) => el.toString()).join(", ");
+        return `{ contextType ${this.contextType.toString()}, contextValues { ${values} } }`;
     }
 
     /**

@@ -13,21 +13,7 @@ import type {
 import type {
     Precedence,
 } from "../modules/BasicAccessControl/Precedence.ta.mjs";
-import ACDFTuple, { type ACDFTupleJSON } from "./ACDFTuple.mjs";
-import {
-    gserSequence,
-    integerToJSON,
-    integerToString,
-} from "../json.mjs";
-
-/**
- * JSON encoding of an {@link ACDFTupleExtended}: an {@link ACDFTupleJSON}
- * plus the user-class specificity from ITU Recommendation X.501 (2016),
- * Section 18.8.4.
- */
-export type ACDFTupleExtendedJSON = ACDFTupleJSON & {
-    userClassSpecificity: number | string;
-};
+import ACDFTuple from "./ACDFTuple.mjs";
 
 /**
  * The Access Control Decision Function (ACDF) tuple type documented in
@@ -103,43 +89,6 @@ class ACDFTupleExtended extends ACDFTuple {
             this.precedence,
             this.userClassSpecificity,
         );
-    }
-
-    /**
-     * @summary ASN.1 value notation for the extended ACDF tuple
-     * @description
-     *
-     * The five Section 18.8.2 components, then
-     * `userClassSpecificity` from Section 18.8.4 (`allUsers` <
-     * `subtree` < `userGroup` < `name` / `thisEntry`). Zero means the
-     * user class did not match.
-     *
-     * @returns `{ userClasses { allUsers NULL }, ..., userClassSpecificity 1 }`
-     * @function
-     * @public
-     */
-    public override toString(): string {
-        return gserSequence([
-            ...this.gserComponents(),
-            `userClassSpecificity ${integerToString(this.userClassSpecificity)}`,
-        ]);
-    }
-
-    /**
-     * @summary Convert this extended tuple to JSON, loosely following ITU-T X.697
-     * @description
-     *
-     * {@link ACDFTuple.toJSON} plus `userClassSpecificity`.
-     *
-     * @returns The JSON encoding of this tuple
-     * @function
-     * @public
-     */
-    public override toJSON(): ACDFTupleExtendedJSON {
-        return {
-            ...super.toJSON(),
-            userClassSpecificity: integerToJSON(this.userClassSpecificity),
-        };
     }
 
 }

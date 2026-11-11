@@ -10,7 +10,6 @@ import {
     _decode_AttributeType,
     _encode_AttributeType,
 } from "../InformationFramework/AttributeType.ta.mjs";
-import { gserSequence } from "../../json.mjs";
 
 /**
  * JSON Encoding Rules encoding of {@link RestrictedValue}.
@@ -102,10 +101,7 @@ export class RestrictedValue {
      * @public
      */
     public toString(): string {
-        return gserSequence([
-            `type ${this.type_.toString()}`,
-            `valuesIn ${this.valuesIn.toString()}`,
-        ]);
+        return `{ type ${this.type_.toString()}, valuesIn ${this.valuesIn.toString()} }`;
     }
 
     /**

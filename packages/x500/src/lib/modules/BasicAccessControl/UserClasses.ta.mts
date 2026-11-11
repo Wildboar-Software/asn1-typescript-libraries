@@ -8,29 +8,14 @@ import {
 import * as $ from "@wildboar/asn1/functional";
 import {
     SubtreeSpecification,
-    type SubtreeSpecificationJSON,
     _decode_SubtreeSpecification,
     _encode_SubtreeSpecification,
 } from "../InformationFramework/SubtreeSpecification.ta.mjs";
 import {
     NameAndOptionalUID,
-    type NameAndOptionalUIDJSON,
     _decode_NameAndOptionalUID,
     _encode_NameAndOptionalUID,
 } from "../SelectedAttributeTypes/NameAndOptionalUID.ta.mjs";
-import { gserSequence, quoteGserString } from "../../json.mjs";
-
-/**
- * JSON Encoding Rules encoding of {@link UserClasses}.
- * Absent or empty selectors are omitted.
- */
-export type UserClassesJSON = {
-    allUsers?: null;
-    thisEntry?: null;
-    name?: NameAndOptionalUIDJSON[];
-    userGroup?: NameAndOptionalUIDJSON[];
-    subtree?: SubtreeSpecificationJSON[];
-};
 /**
  * @summary UserClasses
  * @description
@@ -162,72 +147,6 @@ export class UserClasses {
             && (this.userGroup === undefined || this.userGroup.length === 0)
             && (this.subtree === undefined || this.subtree.length === 0)
         );
-    }
-
-    /**
-     * @summary ASN.1 value notation for these user classes
-     * @description
-     *
-     * Present selectors only. `NULL` axes are `NULL`. `name` and
-     * `userGroup` quote {@link NameAndOptionalUID.toString}. `subtree`
-     * uses {@link SubtreeSpecification.toString}. Empty `SET SIZE
-     * (1..MAX)` components are treated as absent. Unrecognized
-     * extensions are omitted. An empty value is `{}`.
-     *
-     * @returns `{ allUsers NULL }` or a subset
-     * @function
-     * @public
-     */
-    public toString(): string {
-        const parts: string[] = [];
-        if (this.allUsers !== undefined) {
-            parts.push("allUsers NULL");
-        }
-        if (this.thisEntry !== undefined) {
-            parts.push("thisEntry NULL");
-        }
-        if (this.name !== undefined && this.name.length > 0) {
-            parts.push(`name ${gserSequence(this.name.map((n) => quoteGserString(n.toString())))}`);
-        }
-        if (this.userGroup !== undefined && this.userGroup.length > 0) {
-            parts.push(`userGroup ${gserSequence(this.userGroup.map((n) => quoteGserString(n.toString())))}`);
-        }
-        if (this.subtree !== undefined && this.subtree.length > 0) {
-            parts.push(`subtree ${gserSequence(this.subtree.map((s) => s.toString()))}`);
-        }
-        return gserSequence(parts);
-    }
-
-    /**
-     * @summary Convert this value to a JSON encoding loosely following ITU-T X.697 (JER)
-     * @description
-     *
-     * Present selectors only. `NULL` axes are JSON `null`. Empty
-     * `SET SIZE (1..MAX)` components are treated as absent.
-     * Unrecognized extensions are not represented.
-     *
-     * @returns The JSON Encoding Rules encoding of this value
-     * @function
-     * @public
-     */
-    public toJSON(): UserClassesJSON {
-        const json: UserClassesJSON = {};
-        if (this.allUsers !== undefined) {
-            json.allUsers = null;
-        }
-        if (this.thisEntry !== undefined) {
-            json.thisEntry = null;
-        }
-        if (this.name !== undefined && this.name.length > 0) {
-            json.name = this.name.map((n) => n.toJSON());
-        }
-        if (this.userGroup !== undefined && this.userGroup.length > 0) {
-            json.userGroup = this.userGroup.map((n) => n.toJSON());
-        }
-        if (this.subtree !== undefined && this.subtree.length > 0) {
-            json.subtree = this.subtree.map((s) => s.toJSON());
-        }
-        return json;
     }
 }
 

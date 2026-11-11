@@ -11,7 +11,7 @@ import {
     _decode_AttributeType,
     _encode_AttributeType,
 } from "../InformationFramework/AttributeType.ta.mjs";
-import { integerToJSON, integerToString, gserSequence } from "../../json.mjs";
+import { integerToJSON, integerToString } from "../../json.mjs";
 
 /**
  * JSON Encoding Rules encoding of {@link MaxValueCount}.
@@ -102,10 +102,7 @@ export class MaxValueCount {
      * @public
      */
     public toString(): string {
-        return gserSequence([
-            `type ${this.type_.toString()}`,
-            `maxCount ${integerToString(this.maxCount)}`,
-        ]);
+        return `{ type ${this.type_.toString()}, maxCount ${integerToString(this.maxCount)} }`;
     }
 
     /**

@@ -53,11 +53,6 @@ import {
     type RefinementJSON,
 } from "../InformationFramework/SubtreeSpecification.ta.mjs";
 import {
-    filterToJSON,
-    filterToString,
-    type FilterJSON,
-} from "../../stringifiers/filterToString.mjs";
-import {
     gserSequence,
     integerToJSON,
     integerToString,
@@ -66,7 +61,7 @@ import {
 
 /**
  * JSON Encoding Rules encoding of {@link ProtectedItems}.
- * Absent or empty axes are omitted.
+ * Absent or empty axes are omitted. `rangeOfValues` is omitted.
  */
 export type ProtectedItemsJSON = {
     entry?: null;
@@ -76,7 +71,6 @@ export type ProtectedItemsJSON = {
     allUserAttributeTypesAndValues?: null;
     attributeValue?: AttributeTypeAndValueJSON[];
     selfValue?: string[];
-    rangeOfValues?: FilterJSON;
     maxValueCount?: MaxValueCountJSON[];
     maxImmSub?: number | string;
     restrictedBy?: RestrictedValueJSON[];
@@ -335,9 +329,9 @@ export class ProtectedItems {
      *
      * Present axes only. `NULL` axes are `NULL`. Object identifiers
      * are dotted decimals. `attributeValue` quotes
-     * {@link AttributeTypeAndValue.toString}. `rangeOfValues` is
-     * {@link filterToString}. `classes` is {@link refinementToGser}.
-     * Empty `SET SIZE (1..MAX)` components are treated as absent.
+     * {@link AttributeTypeAndValue.toString}. `classes` is
+     * {@link refinementToGser}. `rangeOfValues` is omitted. Empty
+     * `SET SIZE (1..MAX)` components are treated as absent.
      * Unrecognized extensions are omitted. An empty value is `{}`.
      *
      * @returns `{ entry NULL, attributeType { 2.5.4.3 } }` or a subset
@@ -366,12 +360,6 @@ export class ProtectedItems {
         }
         if (this.selfValue !== undefined && this.selfValue.length > 0) {
             parts.push(`selfValue ${gserSequence(this.selfValue.map((oid) => oid.toString()))}`);
-        }
-        if (this.rangeOfValues !== undefined) {
-            const filter = filterToString(this.rangeOfValues);
-            if (filter !== undefined) {
-                parts.push(`rangeOfValues ${filter}`);
-            }
         }
         if (this.maxValueCount !== undefined && this.maxValueCount.length > 0) {
             parts.push(`maxValueCount ${gserSequence(this.maxValueCount.map((mvc) => mvc.toString()))}`);
@@ -403,8 +391,8 @@ export class ProtectedItems {
      *
      * Present axes only. `NULL` axes are JSON `null`. Object
      * identifiers are dotted decimals. Empty `SET SIZE (1..MAX)`
-     * components are treated as absent. Unrecognized extensions are
-     * not represented.
+     * components are treated as absent. `rangeOfValues` is omitted.
+     * Unrecognized extensions are not represented.
      *
      * @returns The JSON Encoding Rules encoding of this value
      * @function
@@ -432,12 +420,6 @@ export class ProtectedItems {
         }
         if (this.selfValue !== undefined && this.selfValue.length > 0) {
             json.selfValue = this.selfValue.map((oid) => oid.toString());
-        }
-        if (this.rangeOfValues !== undefined) {
-            const filter = filterToJSON(this.rangeOfValues);
-            if (filter !== undefined) {
-                json.rangeOfValues = filter;
-            }
         }
         if (this.maxValueCount !== undefined && this.maxValueCount.length > 0) {
             json.maxValueCount = this.maxValueCount.map((mvc) => mvc.toJSON());
