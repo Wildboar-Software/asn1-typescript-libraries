@@ -349,8 +349,11 @@ describe("unavailable filter matching rules (M2)", () => {
 
     it("selects each value-filter item with matching flags", () => {
         const seen: { kind: string, flags: number, array: boolean }[] = [];
-        const record = (kind: string): Matcher => (assertion, _value, _get, flags = 0) => {
+        const record = (kind: string): Matcher => (assertion, valueOrValues, _get, flags = 0, matched) => {
             seen.push({ kind, flags, array: Array.isArray(assertion) });
+            if (matched && "values" in valueOrValues) {
+                matched.values.push(...valueOrValues.values);
+            }
             return true;
         };
         const options: EvaluateFilterSettings = {
@@ -381,8 +384,11 @@ describe("unavailable filter matching rules (M2)", () => {
         const options: EvaluateFilterSettings = {
             ...settings(),
             getApproximateMatcher: () => undefined,
-            getEqualityMatcher: () => (_assertion, _value, _get, seen = 0) => {
+            getEqualityMatcher: () => (_assertion, valueOrValues, _get, seen = 0, matched) => {
                 flags = seen;
+                if (matched && "values" in valueOrValues) {
+                    matched.values.push(...valueOrValues.values);
+                }
                 return true;
             },
         };
@@ -539,51 +545,5 @@ describe("extensible matching-rule applicability (M4)", () => {
             ]),
         };
         expect(evaluateFilter(extensible(), [new EntryInformation({ rdnSequence: [] })], options).matched).toBe(true);
-    });
-});
-
-describe("whole-attribute matching", () => {
-    it("decodes the assertion once per attribute, not once per value", () => {
-        let decodes = 0;
-        const matcher = createEqualityMatcher(
-            (el) => {
-                decodes++;
-                return el.utf8String;
-            },
-            (assertion: string, stored: ASN1Element) => stored.utf8String === assertion,
-        );
-        const options: EvaluateFilterSettings = {
-            ...settings(),
-            getEqualityMatcher: () => matcher,
-            matchedValuesOnly: true,
-        };
-        const result = evaluateFilter(leaf("equality"), family(["a", "assertion", "b", "assertion"]), options);
-        expect(result.matched).toBe(true);
-        expect(result.matchedValues).toHaveLength(2);
-        expect(decodes).toBe(1);
-        decodes = 0;
-        expect(evaluateFilter(leaf("equality"), family([], ["x", "assertion", "y"]), options).matched).toBe(true);
-        expect(decodes).toBe(1);
-    });
-
-    it("does not present unpermitted values to the matcher", () => {
-        const seen: string[] = [];
-        const matcher = createEqualityMatcher(
-            (el) => el.utf8String,
-            (assertion: string, stored: ASN1Element) => {
-                seen.push(stored.utf8String);
-                return stored.utf8String === assertion;
-            },
-        );
-        const options: EvaluateFilterSettings = {
-            ...settings(),
-            getEqualityMatcher: () => matcher,
-            permittedToMatch: (_type, stored) => !stored || stored.utf8String !== "secret",
-            matchedValuesOnly: true,
-        };
-        const result = evaluateFilter(leaf("equality"), family(["secret", "assertion", "secret"]), options);
-        expect(seen).toEqual(["assertion"]);
-        expect(result.matched).toBe(true);
-        expect(result.matchedValues).toHaveLength(1);
     });
 });

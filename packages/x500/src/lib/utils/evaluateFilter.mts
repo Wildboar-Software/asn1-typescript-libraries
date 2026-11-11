@@ -403,14 +403,6 @@ function assertedContexts (ava: AttributeValueAssertion): ContextAssertion[] | u
         : undefined;
 }
 
-type ContextsMatch = (
-    selectedContexts: ContextAssertion[] | undefined,
-    valueContexts: readonly Context[],
-    attribute: Attribute,
-    options: EvaluateFilterSettings,
-    directMatchCache: DirectContextMatchCache,
-) => boolean;
-
 /**
  * Invoke a `Matcher` against a whole `Attribute` so the assertion syntax is
  * decoded once for every stored value. Nested distinguished-name matching uses
@@ -436,11 +428,6 @@ function matchAttribute (
 
 function emptyMatchedValues (type: AttributeType): Attribute {
     return new Attribute(type, [], []);
-}
-
-function hasReportedMatches (reported: Attribute): boolean {
-    return (reported.values.length > 0)
-        || ((reported.valuesWithContext?.length ?? 0) > 0);
 }
 
 /**
@@ -472,23 +459,6 @@ function selectPermittedAttribute (
     return new Attribute(attr.type_, values, vwcs.length ? vwcs : undefined);
 }
 
-interface ReportedCandidate {
-    value: ASN1Element;
-    contexts?: Context[];
-}
-
-function reportedCandidates (reported: Attribute, fallback: Attribute): ReportedCandidate[] {
-    const source = hasReportedMatches(reported) ? reported : fallback;
-    const candidates: ReportedCandidate[] = [];
-    for (const value of source.values) {
-        candidates.push({ value });
-    }
-    for (const vwc of source.valuesWithContext ?? []) {
-        candidates.push({ value: vwc.value, contexts: vwc.contextList });
-    }
-    return candidates;
-}
-
 /**
  * Convert matcher-reported values into `MatchedValue`s, applying selected
  * context assertions against the original stored attribute. Returns `true`
@@ -496,41 +466,67 @@ function reportedCandidates (reported: Attribute, fallback: Attribute): Reported
  */
 function appendReportedMatches (
     originalAttr: Attribute,
-    permitted: Attribute,
     reported: Attribute,
     selectedContexts: ContextAssertion[] | undefined,
     options: EvaluateFilterSettings,
-    contextsMatch: ContextsMatch,
+    contextsMatch: AnyFunction,
     directMatchCache: DirectContextMatchCache,
     matchedValues: MatchedValue[],
     matchedValuesOnly: boolean,
 ): boolean {
-    const candidates = reportedCandidates(reported, permitted);
-    for (const candidate of candidates) {
+    for (const value of reported.values) {
         if (!contextsMatch(
             selectedContexts,
-            candidate.contexts ?? NO_CONTEXTS,
+            NO_CONTEXTS,
             originalAttr,
             options,
             directMatchCache,
         )) {
             continue;
         }
-        matchedValues.push({
-            type: originalAttr.type_,
-            value: candidate.value,
-            contexts: candidate.contexts,
-        });
         if (!matchedValuesOnly) {
+            matchedValues.push({
+                type: originalAttr.type_,
+                value,
+            });
             return true;
         }
+        matchedValues.push({
+            type: originalAttr.type_,
+            value,
+        });
+    }
+    for (const vwc of reported.valuesWithContext ?? []) {
+        if (!contextsMatch(
+            selectedContexts,
+            vwc.contextList,
+            originalAttr,
+            options,
+            directMatchCache,
+        )) {
+            continue;
+        }
+        if (!matchedValuesOnly) {
+            matchedValues.push({
+                type: originalAttr.type_,
+                value: vwc.value,
+                contexts: vwc.contextList,
+            });
+            return true;
+        }
+        matchedValues.push({
+            type: originalAttr.type_,
+            value: vwc.value,
+            contexts: vwc.contextList,
+        });
     }
     return false;
 }
 
 /**
  * Match every permitted value of `attr` in one matcher call. Returns `true`
- * when a match was recorded and the caller should stop.
+ * when a match was recorded and the caller should stop, `false` when this
+ * attribute does not match, or `undefined` when the matcher is UNDEFINED.
  */
 function matchStoredAttribute (
     matcher: Matcher,
@@ -540,30 +536,29 @@ function matchStoredAttribute (
     flags: number,
     selectedContexts: ContextAssertion[] | undefined,
     requireTypePermission: boolean,
-    contextsMatch: ContextsMatch,
+    contextsMatch: AnyFunction,
     directMatchCache: DirectContextMatchCache,
     matchedValues: MatchedValue[],
-): boolean {
+): boolean | undefined {
     const permitted = selectPermittedAttribute(attr, options, requireTypePermission);
     if (!permitted) {
         return false;
     }
     const reported = emptyMatchedValues(attr.type_);
     const result = matchAttribute(matcher, assertion, permitted, options, flags, reported);
-    if (result !== true) {
-        return false;
+    if (result === true) {
+        return appendReportedMatches(
+            attr,
+            reported,
+            selectedContexts,
+            options,
+            contextsMatch,
+            directMatchCache,
+            matchedValues,
+            Boolean(options.matchedValuesOnly),
+        );
     }
-    return appendReportedMatches(
-        attr,
-        permitted,
-        reported,
-        selectedContexts,
-        options,
-        contextsMatch,
-        directMatchCache,
-        matchedValues,
-        Boolean(options.matchedValuesOnly),
-    );
+    return result;
 }
 
 /**
@@ -579,7 +574,7 @@ function matchDefaultValues (
     options: EvaluateFilterSettings,
     flags: number,
     matchedValues?: MatchedValue[],
-): boolean {
+): boolean | undefined {
     const permitted = values.filter((value) => options.permittedToMatch(type, value));
     if (permitted.length === 0) {
         return false;
@@ -593,22 +588,22 @@ function matchDefaultValues (
         flags,
         reported,
     );
-    if (result !== true) {
-        return false;
-    }
-    if (matchedValues) {
-        const sources = (reported && hasReportedMatches(reported)) ? reported.values : permitted;
-        for (const value of sources) {
+    if (result === true && matchedValues && reported && reported.values.length > 0) {
+        if (options.matchedValuesOnly) {
+            for (const value of reported.values) {
+                matchedValues.push({
+                    type,
+                    value,
+                });
+            }
+        } else {
             matchedValues.push({
                 type,
-                value,
+                value: reported.values[0],
             });
-            if (!options.matchedValuesOnly) {
-                break;
-            }
         }
     }
-    return true;
+    return result;
 }
 
 /**
@@ -669,7 +664,7 @@ function evaluateFilterAssertion (
     if (Array.isArray(assertion) && !options.permittedToMatch(type_)) {
         return undefined;
     }
-    const contextsMatch = handleErrors(valueSatisfiesSelectedContexts, state)! as ContextsMatch;
+    const contextsMatch = handleErrors(valueSatisfiesSelectedContexts, state)!;
     const attributes = getAttributesFromEntry(entry, options.dnAttribute);
     const friendTypes: OBJECT_IDENTIFIER[] = [
         type_,
@@ -705,7 +700,7 @@ function evaluateFilterAssertion (
                 default_values,
                 options,
                 flags,
-            )) {
+            ) === true) {
                 // No matched values are returned intentionally, since these are defaults.
                 return true;
             }
@@ -726,7 +721,7 @@ function evaluateFilterAssertion (
             contextsMatch,
             directMatchCache,
             matchedValues,
-        )) {
+        ) === true) {
             return matchedValues;
         }
         if (relaxPresentAttribute && matchedValues.length === 0) {
@@ -758,7 +753,7 @@ function evaluateFilterAssertion (
                         options,
                         flags,
                         matchedValues,
-                    ) && !options.matchedValuesOnly) {
+                    ) === true && !options.matchedValuesOnly) {
                         return matchedValues;
                     }
                 }
@@ -944,7 +939,7 @@ function evaluateMatchingRuleAssertion (
                 default_values,
                 options,
                 0,
-            )) {
+            ) === true) {
                 // No matched values are returned intentionally, since these are defaults.
                 return true;
             }
@@ -989,7 +984,7 @@ function evaluateMatchingRuleAssertion (
             valueSatisfiesSelectedContexts,
             directMatchCache,
             matchedValues,
-        )) {
+        ) === true) {
             return matchedValues;
         }
         if (matchedValues.length === 0) {
@@ -1021,7 +1016,7 @@ function evaluateMatchingRuleAssertion (
                         options,
                         0,
                         matchedValues,
-                    ) && !options.matchedValuesOnly) {
+                    ) === true && !options.matchedValuesOnly) {
                         return matchedValues;
                     }
                 }
