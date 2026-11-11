@@ -71,11 +71,10 @@ const COMMON_NAME_2: Attribute = new Attribute(
     undefined,
 );
 
-const ALPHABETICAL_ORDERER: Parameters<typeof sort>[3] = () => (assertion, valueOrValues): boolean => {
-    const a = (assertion as ASN1Element).utf8String.toLowerCase().charCodeAt(0);
-    const v = ("values" in valueOrValues ? valueOrValues.values[0] : valueOrValues.value)
-        .utf8String.toLowerCase().charCodeAt(0);
-    return v < a;
+const ALPHABETICAL_ORDERER: Parameters<typeof sort>[3] = () => (assertion, value): number => {
+    const a = assertion.utf8String.toLowerCase().charCodeAt(0);
+    const v = (value as ASN1Element).utf8String.toLowerCase().charCodeAt(0);
+    return a - v;
 };
 
 describe("sort()", () => {

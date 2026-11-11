@@ -6,16 +6,16 @@ import { Attribute } from "../modules/InformationFramework/Attribute.ta.mjs";
 import { AttributeTypeAndValue } from "../modules/InformationFramework/AttributeTypeAndValue.ta.mjs";
 import { Attribute_valuesWithContext_Item } from "../modules/InformationFramework/Attribute-valuesWithContext-Item.ta.mjs";
 import { Context } from "../modules/InformationFramework/Context.ta.mjs";
-import type { Matcher } from "../types/matching.mjs";
+import type { TypedOrderingFunction } from "../types/matching.mjs";
 import { sort } from "./sort.mjs";
 
 const commonName = ObjectIdentifier.fromString("2.5.4.3");
 const organizationName = ObjectIdentifier.fromString("2.5.4.10");
 const unknownType = ObjectIdentifier.fromString("1.2.3.4");
-const alphabetically: Matcher = (assertion, valueOrValues) => {
-    const left = (assertion as ASN1Element).utf8String;
-    const right = ("values" in valueOrValues ? valueOrValues.values[0] : valueOrValues.value).utf8String;
-    return right < left;
+const alphabetically: TypedOrderingFunction<ASN1Element> = (assertion, value) => {
+    const left = assertion.utf8String;
+    const right = (value as ASN1Element).utf8String;
+    return left < right ? -1 : left > right ? 1 : 0;
 };
 
 describe("sort (M22)", () => {
