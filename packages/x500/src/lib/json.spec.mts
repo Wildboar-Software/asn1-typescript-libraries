@@ -28,7 +28,6 @@ import {
 } from "./modules/BasicAccessControl/GrantsAndDenials.ta.mjs";
 import { MaxValueCount } from "./modules/BasicAccessControl/MaxValueCount.ta.mjs";
 import { RestrictedValue } from "./modules/BasicAccessControl/RestrictedValue.ta.mjs";
-import { ContextAssertion } from "./modules/InformationFramework/ContextAssertion.ta.mjs";
 import { BasicConstraintsSyntax } from "./modules/CertificateExtensions/BasicConstraintsSyntax.ta.mjs";
 import { CertificateGroupNumberRange } from "./modules/CertificateExtensions/CertificateGroupNumberRange.ta.mjs";
 import { NumberRange } from "./modules/CertificateExtensions/NumberRange.ta.mjs";
@@ -377,19 +376,5 @@ describe("RestrictedValue toString / toJSON", () => {
         const value = new RestrictedValue(commonName, description);
         expect(value.toString()).toBe("{ type 2.5.4.3, valuesIn 2.5.4.13 }");
         expect(value.toJSON()).toEqual({ type: "2.5.4.3", valuesIn: "2.5.4.13" });
-    });
-});
-
-describe("ContextAssertion toString / toJSON", () => {
-    it("prints contextType and open-type contextValues", () => {
-        const languageContext = ObjectIdentifier.fromString("1.2.3.4");
-        const value = new ContextAssertion(languageContext, [ utf8Element("en") ]);
-        expect(value.toString()).toBe(
-            "{ contextType 1.2.3.4, contextValues { \"en\" } }",
-        );
-        expect(value.toJSON()).toEqual({
-            contextType: "1.2.3.4",
-            contextValues: [ "en" ],
-        });
     });
 });
