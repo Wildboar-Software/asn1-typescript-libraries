@@ -1,9 +1,12 @@
 import type { OBJECT_IDENTIFIER } from "@wildboar/asn1";
 import type { Matcher } from "../types/matching.mjs";
 import {
+    compareGeneralName,
     type GeneralNames,
     generalNameToKey,
 } from "@wildboar/gn";
+import type { AttributeType } from "../modules/InformationFramework/AttributeType.ta.mjs";
+import { valueEqualityMatcher } from "../matching/valueEqualityMatcher.mjs";
 
 /**
  * @summary Compare two `GeneralNames` values
@@ -18,7 +21,8 @@ import {
  *
  * @param a One value
  * @param b The other
- * @param _getEqualityMatcher Retained for call compatibility; ignored.
+ * @param getMatcher A function that takes an attribute type and
+ *  returns a function that can equality-match two values of that type
  *  Custom equality matchers are not used for unordered comparison.
  * @returns {boolean} `true` if they match; `false` otherwise
  * @function
@@ -27,10 +31,13 @@ export
 function compareGeneralNames (
     a: GeneralNames,
     b: GeneralNames,
-    _getEqualityMatcher?: (attributeType: OBJECT_IDENTIFIER) => Matcher | undefined,
+    getMatcher?: (attributeType: AttributeType) => Matcher | undefined,
 ): boolean {
     if (a.length !== b.length) {
         return false;
+    }
+    if (a.length === 1) {
+        return compareGeneralName(a[0], b[0], valueEqualityMatcher(getMatcher));
     }
     // Count keys instead of collapsing duplicates into a Set.
     const counts = new Map<string, number>();
