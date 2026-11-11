@@ -218,7 +218,6 @@ are either deprecated or not intended for external use:
 
 - `ACDFTuple.mts` - An ACDF Tuple, as defined in ITU Recommendation X.501.
 - `ACDFTupleExtended.mts` - An extension of an ACDF Tuple, with `userClassSpecificity` for indicating which user class matched.
-- `AttributeTypeValueAndContextsTuple.mts` - A three-element array containing an attribute type, value, and contexts.
 - `matching.mts` - Unified matching APIs: `Matcher`, `ContextMatcher`, match flags, and matcher factories.
 - `ProtectedItem.mts` - A type representing the object of an authorization request.
 - `StringDecoder.mts` - A function that converts an LDAP string into an `ASN1Element`
@@ -246,7 +245,6 @@ are either deprecated or not intended for external use:
 - `iterateListResultSubordinates.mts` - Yield subordinate entries from a `ListResult`, recursing into `uncorrelatedListInfo` up to 100 results deep
 - `iterateSearchResultEntries.mts` - Yield entries from a `SearchResult`, recursing into `uncorrelatedSearchInfo` up to 100 results deep
 - `getRDN.mts` - Get the relative distinguished name from a distinguished name.
-- `getValueTuplesFromAttribute.mts` - Get type-value-context tuples for an attribute
 - `groupByOID.mts` - Group items by object identifier
 - `isModificationOperation.mts` - Determine whether an operation is a modification operation
 - `objectClassesWithinRefinement.mts` - Determine whether object classes match a refinement

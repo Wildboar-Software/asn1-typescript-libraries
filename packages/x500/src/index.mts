@@ -60,7 +60,6 @@
 export * from "./lib/errors.mjs";
 export { ACDFTupleExtended } from "./lib/types/ACDFTupleExtended.mjs";
 export { ACDFTuple } from "./lib/types/ACDFTuple.mjs";
-export type { ATVAC } from "./lib/types/AttributeTypeValueAndContextsTuple.mjs";
 export type { ChainedRequest } from "./lib/types/ChainedRequest.mjs";
 export type { ChainedResultOrError } from "./lib/types/ChainedResultOrError.mjs";
 export type { ChainedResult } from "./lib/types/ChainedResult.mjs";
@@ -144,7 +143,6 @@ export { getOptionallyProtectedValue } from "./lib/utils/getOptionallyProtectedV
 export { iterateListResultSubordinates } from "./lib/utils/iterateListResultSubordinates.mjs";
 export { iterateSearchResultEntries } from "./lib/utils/iterateSearchResultEntries.mjs";
 export { getRDN } from "./lib/utils/getRDN.mjs";
-export { getValueTuplesFromAttribute } from "./lib/utils/getValueTuplesFromAttribute.mjs";
 export { groupByOID } from "./lib/utils/groupByOID.mjs";
 export { isModificationOperation } from "./lib/utils/isModificationOperation.mjs";
 export { objectClassesWithinRefinement } from "./lib/utils/objectClassesWithinRefinement.mjs";

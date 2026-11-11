@@ -8,9 +8,13 @@ import type {
     ContextAssertion,
 } from "../modules/InformationFramework/ContextAssertion.ta.mjs";
 import type {
+    Context,
+} from "../modules/InformationFramework/Context.ta.mjs";
+import type {
     EntryInformation_information_Item,
 } from "../modules/DirectoryAbstractService/EntryInformation-information-Item.ta.mjs";
 import {
+    type EntryInformationSelection_infoTypes,
     EntryInformationSelection_infoTypes_attributeTypesAndValues,
     EntryInformationSelection_infoTypes_attributeTypesOnly,
 } from "../modules/DirectoryAbstractService/EntryInformationSelection-infoTypes.ta.mjs";
@@ -38,11 +42,86 @@ import {
 import {
     FamilyEntry,
 } from "../modules/DirectoryAbstractService/FamilyEntry.ta.mjs";
-import type ATVAC from "../types/AttributeTypeValueAndContextsTuple.mjs";
 
 const ALL_ATTRIBUTE_TYPES: string = id_oa_allAttributeTypes.toString();
 
 type DirectContextMatchCache = Map<string, Map<ContextAssertion, boolean>>;
+
+/**
+ * Combine attributes of the same type. Type-only information items become
+ * empty {@link Attribute}s, so this also folds them into valued attributes
+ * of the same type.
+ */
+function mergeAttributes (attrs: Attribute[]): Attribute {
+    if (attrs.length === 1) {
+        return attrs[0];
+    }
+    const values: ASN1Element[] = [];
+    const valuesWithContext: Attribute_valuesWithContext_Item[] = [];
+    for (const attr of attrs) {
+        values.push(...attr.values);
+        if (attr.valuesWithContext) {
+            valuesWithContext.push(...attr.valuesWithContext);
+        }
+    }
+    return new Attribute(
+        attrs[0].type_,
+        values,
+        valuesWithContext.length > 0 ? valuesWithContext : undefined,
+    );
+}
+
+function informationItemToAttribute (
+    info: EntryInformation_information_Item,
+): Attribute | undefined {
+    if ("attributeType" in info) {
+        return new Attribute(info.attributeType, []);
+    }
+    if ("attribute" in info) {
+        return info.attribute;
+    }
+    return undefined;
+}
+
+/**
+ * Values without contexts always survive context selection (X.501 §8.9.2.4
+ * (b)), so only `valuesWithContext` is filtered. An attribute that had values
+ * and loses them all is dropped; a type-only empty attribute is kept.
+ */
+function filterAttribute (
+    attr: Attribute,
+    keep: (contexts: Context[]) => boolean,
+): Attribute | undefined {
+    if (!attr.valuesWithContext?.length) {
+        return attr;
+    }
+    const valuesWithContext = attr.valuesWithContext
+        .filter((vwc) => keep(vwc.contextList));
+    if (valuesWithContext.length === attr.valuesWithContext.length) {
+        return attr;
+    }
+    if ((attr.values.length === 0) && (valuesWithContext.length === 0)) {
+        return undefined;
+    }
+    return new Attribute(
+        attr.type_,
+        attr.values,
+        valuesWithContext.length > 0 ? valuesWithContext : undefined,
+    );
+}
+
+function* iterContextsOfAttribute (attr: Attribute): IterableIterator<Context[]> {
+    // One empty list stands for every context-less value: X.501 §8.9.2.4 (b)
+    // does not distinguish them, and the sibling walk stops at the first match.
+    if (attr.values.length > 0) {
+        yield [];
+    }
+    if (attr.valuesWithContext) {
+        for (const item of attr.valuesWithContext) {
+            yield item.contextList;
+        }
+    }
+}
 
 /**
  * Whether any selected value of `type_` already satisfies `ca` via
@@ -50,7 +129,7 @@ type DirectContextMatchCache = Map<string, Map<ContextAssertion, boolean>>;
  * walk runs once per pair.
  */
 function typeHasDirectContextMatch (
-    selectedAttributes: ATVAC[],
+    selectedAttributes: Attribute[],
     type_: OBJECT_IDENTIFIER,
     ca: ContextAssertion,
     getContextMatcher: (contextType: OBJECT_IDENTIFIER) => ContextMatcher | undefined,
@@ -69,18 +148,22 @@ function typeHasDirectContextMatch (
         }
     }
     let matched = false;
-    for (let i = 0; i < selectedAttributes.length; i++) {
-        const other = selectedAttributes[i];
-        if (!other[0].isEqualTo(type_) || !other[1]) {
+    for (const attr of selectedAttributes) {
+        if (!attr.type_.isEqualTo(type_)) {
             continue;
         }
-        if (evaluateContextAssertion(
-            ca,
-            other[2],
-            getContextMatcher,
-            determineAbsentMatch,
-        )) {
-            matched = true;
+        for (const contexts of iterContextsOfAttribute(attr)) {
+            if (evaluateContextAssertion(
+                ca,
+                contexts,
+                getContextMatcher,
+                determineAbsentMatch,
+            )) {
+                matched = true;
+                break;
+            }
+        }
+        if (matched) {
             break;
         }
     }
@@ -115,6 +198,64 @@ function useAttributeTypesInFamilyValue (value: ASN1Element): ASN1Element {
         useAttributeTypesInFamilyEntries(_decode_FamilyEntries(value)),
         () => new DERElement(),
     );
+}
+
+function attributeToInformationItem (
+    attr: Attribute,
+    infoTypes: EntryInformationSelection_infoTypes,
+    returnContexts: boolean | undefined,
+): EntryInformation_information_Item | undefined {
+    const isFamily = family_information["&id"].isEqualTo(attr.type_);
+    if (infoTypes === EntryInformationSelection_infoTypes_attributeTypesOnly && !isFamily) {
+        return {
+            attributeType: attr.type_,
+        };
+    }
+    if (
+        (infoTypes !== EntryInformationSelection_infoTypes_attributeTypesOnly)
+        && (infoTypes !== EntryInformationSelection_infoTypes_attributeTypesAndValues)
+    ) {
+        return undefined;
+    }
+    /**
+     * From ITU Recommendation X.511, Section 7.6:
+     *
+     * > If an attribute is of a type that is a carrier of other attributes,
+     * > e.g., a family-information attribute, then the value(s) shall be
+     * > returned independent of the setting of the infoTypes component, but
+     * > the infoTypes specification shall be applied to the contained
+     * > attributes.
+     */
+    const transform = (
+        isFamily
+        && (infoTypes === EntryInformationSelection_infoTypes_attributeTypesOnly)
+    )
+        ? useAttributeTypesInFamilyValue
+        : undefined;
+    if (!returnContexts) {
+        const values: ASN1Element[] = [];
+        for (const value of attr.iterValuesOmittingContexts()) {
+            values.push(transform ? transform(value) : value);
+        }
+        return {
+            attribute: new Attribute(attr.type_, values),
+        };
+    }
+    if (!transform) {
+        return {
+            attribute: attr,
+        };
+    }
+    return {
+        attribute: new Attribute(
+            attr.type_,
+            attr.values.map(transform),
+            attr.valuesWithContext?.map((vwc) => new Attribute_valuesWithContext_Item(
+                transform(vwc.value),
+                vwc.contextList,
+            )),
+        ),
+    };
 }
 
 /**
@@ -231,8 +372,7 @@ function selectFromEntry (
         ? groupByOID(eis.contextSelection.selectedContexts, (sc) => sc.type_)
         : undefined;
 
-    // FIXME: You split attributes into values... only to regroup them back into attributes.
-    const selectedAttributes: ATVAC[] = (entry.information ?? [])
+    const selectedByType: Attribute[] = (entry.information ?? [])
         .filter((info): boolean => {
             let attributeType!: OBJECT_IDENTIFIER;
             if ("attributeType" in info) {
@@ -267,39 +407,30 @@ function selectFromEntry (
                 }
             }
         })
-        .flatMap((info): ATVAC[] => {
-            if ("attributeType" in info) {
-                return [[ info.attributeType, undefined, [] ]];
-            } else if ("attribute" in info) {
-                const attr: Attribute = info.attribute;
-                return [
-                    ...attr.values
-                        .map((value: ASN1Element): ATVAC => [ attr.type_, value, [] ]),
-                    ...(attr.valuesWithContext ?? [])
-                        .map((vwc: Attribute_valuesWithContext_Item): ATVAC => [ attr.type_, vwc.value, vwc.contextList ]),
-                ];
-            } else {
-                return [];
-            }
-        });
+        .map(informationItemToAttribute)
+        .filter((attr): attr is Attribute => !!attr);
+
+    const selectedAttributes: Attribute[] = Array.from(
+        groupByOID(selectedByType, (attr) => attr.type_).values(),
+        mergeAttributes,
+    );
 
     const preferences: Map<ContextAssertion[], number> = new Map();
     const directMatchCache: DirectContextMatchCache = new Map();
 
     const attributesSelectedByContext = selectedContexts
         ? selectedAttributes
-            .filter((atvac: ATVAC): boolean => {
-                const [ type_, value, contexts ] = atvac;
+            .map((attr): Attribute | undefined => filterAttribute(attr, (contexts: Context[]): boolean => {
                 // A ContextAssertion is true for a particular attribute value if:
                 // ...the attribute value contains no contexts of the asserted contextType
-                if (!value || (contexts.length === 0)) {
+                if (contexts.length === 0) {
                     return true;
                 }
-                const TYPE_OID: string = type_.toString();
+                const TYPE_OID: string = attr.type_.toString();
                 const typeAndSuperTypes: Set<string> = new Set([
                     TYPE_OID,
                     ALL_ATTRIBUTE_TYPES,
-                    ...getAttributeSupertypes(type_).map((oid) => oid.toString()),
+                    ...getAttributeSupertypes(attr.type_).map((oid) => oid.toString()),
                 ]);
                 const typeAndContextAssertions = Array.from(typeAndSuperTypes)
                     .flatMap((oid) => selectedContexts.get(oid) ?? []);
@@ -334,7 +465,7 @@ function selectFromEntry (
                             // already matched via (a)/(b).
                             if (typeHasDirectContextMatch(
                                 selectedAttributes,
-                                type_,
+                                attr.type_,
                                 ca,
                                 getContextMatcher,
                                 determineAbsentMatch,
@@ -370,19 +501,19 @@ function selectFromEntry (
                         return false; // We do not understand any other type of context assertion.
                     }
                 });
-            })
-            .filter((atvac: ATVAC): boolean => {
-                const [ type_, value, contexts ] = atvac;
+            }))
+            .filter((attr): attr is Attribute => !!attr)
+            .map((attr): Attribute | undefined => filterAttribute(attr, (contexts: Context[]): boolean => {
                 // A ContextAssertion is true for a particular attribute value if:
                 // ...the attribute value contains no contexts of the asserted contextType
-                if (!value || (contexts.length === 0)) {
+                if (contexts.length === 0) {
                     return true;
                 }
-                const TYPE_OID: string = type_.toString();
+                const TYPE_OID: string = attr.type_.toString();
                 const typeAndSuperTypes: Set<string> = new Set([
                     TYPE_OID,
                     ALL_ATTRIBUTE_TYPES,
-                    ...getAttributeSupertypes(type_).map((oid) => oid.toString()),
+                    ...getAttributeSupertypes(attr.type_).map((oid) => oid.toString()),
                 ]);
                 const typeAndContextAssertions = Array.from(typeAndSuperTypes)
                     .flatMap((oid) => selectedContexts.get(oid) ?? []);
@@ -412,76 +543,17 @@ function selectFromEntry (
                         determineAbsentMatch,
                     );
                 });
-            })
+            }))
+            .filter((attr): attr is Attribute => !!attr)
         : selectedAttributes;
 
-    const protoAttributes = groupByOID(attributesSelectedByContext, (atvac) => atvac[0]);
-    // TODO: Iterate over protoAttributes.values() in for-of instead.
-    const infos: EntryInformation_information_Item[] = Array.from(protoAttributes.values())
-        .map((attrs: ATVAC[]): EntryInformation_information_Item | undefined => {
-            if (infoTypes === EntryInformationSelection_infoTypes_attributeTypesOnly) {
-                /**
-                 * From ITU Recommendation X.511, Section 7.6:
-                 *
-                 * > If an attribute is of a type that is a carrier of other attributes, e.g., a family-information
-                 * > attribute, then the value(s) shall be returned independent of the setting of the infoTypes
-                 * > component, but the infoTypes specification shall be applied to the contained attributes.
-                 */
-                if ((family_information["&id"].isEqualTo(attrs[0][0]))) {
-                    return {
-                        attribute: new Attribute(
-                            attrs[0][0],
-                            attrs
-                                .filter((attr): boolean => (eis.returnContexts ? (attr[2].length === 0) : true))
-                                .map((attr: ATVAC) => {
-                                    if (!attr[1]) {
-                                        return attr[1];
-                                    }
-                                    return useAttributeTypesInFamilyValue(attr[1]);
-                                })
-                                .filter((value: ASN1Element | undefined): value is ASN1Element => !!value),
-                            // Technically, family-information attributes are
-                            // not supposed to have contexts, but we'll handle
-                            // this anyway.
-                            (eis.returnContexts)
-                                ? attrs
-                                    .filter((attr): boolean => Boolean(attr[1]) && (attr[2].length > 0))
-                                    .map((attr) => new Attribute_valuesWithContext_Item(
-                                        useAttributeTypesInFamilyValue(attr[1]!),
-                                        attr[2],
-                                    ))
-                                : undefined,
-                            undefined,
-                        ),
-                    };
-                }
-                return {
-                    attributeType: attrs[0][0],
-                };
-            } else if (infoTypes === EntryInformationSelection_infoTypes_attributeTypesAndValues) {
-                return {
-                    attribute: new Attribute(
-                        attrs[0][0],
-                        attrs
-                            .filter((attr): boolean => (eis.returnContexts ? (attr[2].length === 0) : true))
-                            .map((attr: ATVAC) => attr[1])
-                            .filter((value: ASN1Element | undefined): value is ASN1Element => !!value),
-                        (eis.returnContexts)
-                            ? attrs
-                                .filter((attr): boolean => Boolean(attr[1]) && (attr[2].length > 0))
-                                .map((attr) => new Attribute_valuesWithContext_Item(
-                                    attr[1]!,
-                                    attr[2],
-                                ))
-                            : undefined,
-                        undefined,
-                    ),
-                }
-            } else {
-                return undefined;
-            }
-        })
-        .filter((info): info is EntryInformation_information_Item => !!info);
+    const infos: EntryInformation_information_Item[] = [];
+    for (const attr of attributesSelectedByContext) {
+        const info = attributeToInformationItem(attr, infoTypes, eis.returnContexts);
+        if (info) {
+            infos.push(info);
+        }
+    }
 
     return new EntryInformation(
         entry.name,
