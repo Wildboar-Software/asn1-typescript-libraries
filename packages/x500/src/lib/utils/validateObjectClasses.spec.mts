@@ -295,4 +295,23 @@ describe("validateObjectClasses", () => {
         isValid = validateObjectClasses(objectClasses, getKind, getSuperclasses);
         expect(isValid).toBeNull();
     });
+
+    it("validates an iterator with the general chain check", () => {
+        const chain = validateObjectClasses((function* () {
+            yield person["&id"];
+            yield organizationalPerson["&id"];
+            yield strongAuthenticationUser["&id"];
+        })(), getKind, getSuperclasses);
+        expect(chain?.isEqualTo(organizationalPerson["&id"])).toBe(true);
+
+        // The same short chain an array would resolve on the fast path.
+        const shortChain = validateObjectClasses(
+            [top["&id"], person["&id"]].values(),
+            getKind,
+            getSuperclasses,
+        );
+        expect(shortChain?.isEqualTo(person["&id"])).toBe(true);
+
+        expect(validateObjectClasses((function* () {})(), getKind, getSuperclasses)).toBeNull();
+    });
 });

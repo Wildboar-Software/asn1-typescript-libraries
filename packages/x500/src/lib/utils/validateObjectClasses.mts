@@ -67,7 +67,9 @@ function getSingleObjectClass(objectClasses: OBJECT_IDENTIFIER[]): OBJECT_IDENTI
  * without introducing O(n^2) time complexity, since each object class must be
  * compared against other object classes in the set. You need at least one `Set`.
  *
- * @param {OBJECT_IDENTIFIER[]} objectClasses The object classes to be validated
+ * @param {OBJECT_IDENTIFIER[] | IterableIterator<OBJECT_IDENTIFIER>} objectClasses The object classes to be validated.
+ *  An array of one class, or of one class plus `top`, uses the short path. Any
+ *  other array, and any iterator, is read once by the general check.
  * @param {Function} getKind A function that returns the object class' kind given its OID
  * @param {Function} getSuperclasses A function that returns the object class' superclasses
  *   given its OID
@@ -77,38 +79,46 @@ function getSingleObjectClass(objectClasses: OBJECT_IDENTIFIER[]): OBJECT_IDENTI
  */
 export
 function validateObjectClasses (
-    objectClasses: OBJECT_IDENTIFIER[],
+    objectClasses: OBJECT_IDENTIFIER[] | IterableIterator<OBJECT_IDENTIFIER>,
     getKind: (objectClass: OBJECT_IDENTIFIER) => ObjectClassKind | undefined | null,
     getSuperclasses: (objectClass: OBJECT_IDENTIFIER) => OBJECT_IDENTIFIER[],
 ): OBJECT_IDENTIFIER | null {
-    if (objectClasses.length === 0) {
-        return null; // No structural object class. Automatically invalid.
-    }
-    // This is a short-circuit: many DSEs have pretty short structural chains.
-    // This short-circuits for both a single structural object class and the
-    // single structural object class along with `top`.
-    const shortChain = (objectClasses.length === 1)
-        ? objectClasses[0] // Just to avoid a function call.
-        : getSingleObjectClass(objectClasses);
-    if (shortChain) {
-        if (getKind(shortChain) !== ObjectClassKind_structural) {
-            return null; // If only one object class, it MUST be structural.
+    // The short path needs a length and random access, so it is only for arrays.
+    // Every other input is consumed as an iterator by the general check below.
+    let iterator: IterableIterator<OBJECT_IDENTIFIER>;
+    if (Array.isArray(objectClasses)) {
+        if (objectClasses.length === 0) {
+            return null; // No structural object class. Automatically invalid.
         }
-        const superclasses = getSuperclasses(shortChain);
-        if (superclasses.length > 1) {
-            return null; // There were missing superclasses.
+        // This is a short-circuit: many DSEs have pretty short structural chains.
+        // This short-circuits for both a single structural object class and the
+        // single structural object class along with `top`.
+        const shortChain = (objectClasses.length === 1)
+            ? objectClasses[0] // Just to avoid a function call.
+            : getSingleObjectClass(objectClasses);
+        if (shortChain) {
+            if (getKind(shortChain) !== ObjectClassKind_structural) {
+                return null; // If only one object class, it MUST be structural.
+            }
+            const superclasses = getSuperclasses(shortChain);
+            if (superclasses.length > 1) {
+                return null; // There were missing superclasses.
+            }
+            if (superclasses.length === 1 && !superclasses[0].isEqualTo(top["&id"])) {
+                return null; // Again, missing superclasses.
+            }
+            return shortChain;
         }
-        if (superclasses.length === 1 && !superclasses[0].isEqualTo(top["&id"])) {
-            return null; // Again, missing superclasses.
-        }
-        return shortChain;
+        iterator = objectClasses.values();
+    } else {
+        iterator = objectClasses;
     }
 
     const structural: Set<string> = new Set();
     const abstract_: Set<string> = new Set();
     const auxiliary: Set<string> = new Set();
     const parents: Set<string> = new Set(); // Object classes with subclasses
-    for (const objectClass of objectClasses) {
+    for (const objectClass of iterator) {
         const kind = getKind(objectClass);
         const OC: string = objectClass.toString();
         if ((kind === undefined) || (kind === null)) {
