@@ -80,7 +80,6 @@ function filterAttribute (
         attr.type_,
         attr.values,
         (valuesWithContext.length > 0) ? valuesWithContext : undefined,
-        attr._unrecognizedExtensionsList,
     );
     // A type-only attribute is empty and was returned above. An
     // attribute that had values and lost them all is dropped.

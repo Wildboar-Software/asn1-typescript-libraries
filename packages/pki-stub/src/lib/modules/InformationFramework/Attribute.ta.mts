@@ -195,48 +195,26 @@ export class Attribute {
     }
 
     /**
-     * @summary Combine this attribute with another of the same type.
+     * @summary Combine this attribute with another.
      * @description
      *
      * Concatenates `values`, then `valuesWithContext`, in
      * receiver-then-argument order. The result omits
-     * `valuesWithContext` when that set is empty. Unrecognized
-     * extensions are concatenated in the same order.
+     * `valuesWithContext` when that set is empty. The result's
+     * `type_` is this attribute's. Whether `other.type_` is equal
+     * is unchecked, so a subtype can be combined with its
+     * supertype. Unrecognized extensions are ignored. Neither
+     * operand is mutated.
      *
-     * Both value components are `SET OF`, but equality of an open
-     * type depends on the attribute syntax, so this does not remove
-     * duplicate values.
+     * Duplicate values are not removed: equality of an open type
+     * depends on the attribute syntax.
      *
-     * Returns `this` when `other` contributes no values and no
-     * unrecognized extensions. Returns `other` when this attribute
-     * contributes neither and `other` does. Neither operand is
-     * mutated. A type-only attribute is empty, so merging it with a
-     * valued attribute of the same type yields the valued one.
-     *
-     * @param {Attribute} other An attribute with the same `type_`.
+     * @param {Attribute} other The attribute to combine.
      * @returns {Attribute} The combined attribute.
-     * @throws {Error} If `type_` differs.
      * @public
      * @method
      */
     public merge(other: Attribute): Attribute {
-        if (!this.type_.isEqualTo(other.type_)) {
-            throw new Error("Attribute.merge: attribute types differ");
-        }
-        const otherExtensions = other._unrecognizedExtensionsList;
-        if (
-            other.isEmpty()
-            && (otherExtensions.length === 0)
-        ) {
-            return this;
-        }
-        const thisExtensions = this._unrecognizedExtensionsList;
-        if (
-            this.isEmpty()
-            && (thisExtensions.length === 0)
-        ) {
-            return other;
-        }
         const valuesWithContext = [
             ...(this.valuesWithContext ?? []),
             ...(other.valuesWithContext ?? []),
@@ -250,10 +228,6 @@ export class Attribute {
             (valuesWithContext.length > 0)
                 ? valuesWithContext
                 : undefined,
-            [
-                ...thisExtensions,
-                ...otherExtensions,
-            ],
         );
     }
 }
