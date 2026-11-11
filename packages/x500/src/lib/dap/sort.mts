@@ -104,7 +104,7 @@ function sort (
     keys: SortKey[],
     a: EntryInformation,
     b: EntryInformation,
-    getOrderingFunction: (attributeType: OBJECT_IDENTIFIER) => TypedOrderingFunction<ASN1Element> | undefined,
+    getOrderingFunction: (attrTypeOrMatchRuleOid: OBJECT_IDENTIFIER) => TypedOrderingFunction<ASN1Element> | undefined,
     onlyRDN: boolean = false,
 ): number {
     const aRDN = onlyRDN
