@@ -1,9 +1,11 @@
 import { type OBJECT_IDENTIFIER, compareBitStrings } from "@wildboar/asn1";
 import type { Matcher } from "../types/matching.mjs";
 import { valueEqualityMatcher } from "../matching/valueEqualityMatcher.mjs";
-import type {
-    DistinguishedName,
-} from "../modules/InformationFramework/DistinguishedName.ta.mjs";
+import {
+    asDITDescending,
+    compareRDNSequence,
+    type RDNSequenceDescending,
+} from "@wildboar/dn";
 import type {
     NameAndOptionalUID,
 } from "../modules/SelectedAttributeTypes/NameAndOptionalUID.ta.mjs";
@@ -14,7 +16,6 @@ import type {
     AuthenticationLevel,
 } from "../modules/BasicAccessControl/AuthenticationLevel.ta.mjs";
 import type ACDFTuple from "../types/ACDFTuple.mjs";
-import { compareRDNSequence } from "@wildboar/dn";
 import dnWithinSubtreeSpecification from "../utils/dnWithinSubtreeSpecification.mjs";
 import compareAuthenticationLevel from "../comparators/compareAuthenticationLevel.mjs";
 import deniesAccess from "./deniesAccess.mjs";
@@ -55,9 +56,11 @@ import deniesAccess from "./deniesAccess.mjs";
  * @param {NameAndOptionalUID} user The distinguished name and optional unique
  *  identifier of the user whose authorization is determined by the ACDF.
  * @param {AuthenticationLevel} authLevel The authentication level of the user.
- * @param {DistinguishedName} entryDN The entry that is the predicate of the
+ * @param {RDNSequenceDescending} entryDN The entry that is the predicate of the
  *  ACDF, or whose attributes are. The entry to whose entirety or whose
- *  attributes the subject is seeking authorization.
+ *  attributes the subject is seeking authorization. DIT-descending, as
+ *  every X.500 distinguished name is: the first RDN is under the root
+ *  and the last RDN is this entry. Brand it with `asDITDescending`.
  * @param {function} getEqualityMatcher A function that takes an object
  *  identifier and returns another function (if one can be found) that can be
  *  used to compare two values of the same attribute type.
@@ -75,7 +78,7 @@ async function userWithinACIUserClass (
     tuple: ACDFTuple,
     user: NameAndOptionalUID | undefined | null,
     authLevel: AuthenticationLevel,
-    entryDN: DistinguishedName,
+    entryDN: RDNSequenceDescending,
     getEqualityMatcher: (attributeType: OBJECT_IDENTIFIER) => Matcher | undefined,
     isMemberOfGroup: (userGroup: NameAndOptionalUID, user: NameAndOptionalUID) => Promise<boolean | undefined>,
 ): Promise<number> {
@@ -142,10 +145,12 @@ async function userWithinACIUserClass (
     if (
         (userClass.subtree && (userClass.subtree.length > 0))
         && userClass.subtree.some((subtree) => dnWithinSubtreeSpecification(
-            user.dn,
+            // A bound name is an X.500 distinguished name: DIT-descending.
+            asDITDescending(user.dn),
             [], // ITU Recommendation X.501 specifically says: this subtree is to be unrefined.
             subtree,
-            [], // Note that, with ACIItems, the subtree is always relative to the root.
+            // With ACIItems, the subtree is always relative to the root.
+            asDITDescending([]),
             getEqualityMatcher,
         ))
     ) {

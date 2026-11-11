@@ -26,6 +26,7 @@ import {
 } from "../modules/InformationFramework/AttributeTypeAndValue.ta.mjs";
 import { commonName } from "../modules/SelectedAttributeTypes/commonName.oa.mjs";
 import { DER } from "@wildboar/asn1/functional";
+import { asDITDescending } from "@wildboar/dn";
 
 const ALL_GRANTS: GrantsAndDenials = new Uint8ClampedArray(Array.from({ length: 26 }, (_, i) => (
     (i % 2 === 0) ? TRUE_BIT : FALSE_BIT
@@ -43,14 +44,14 @@ const AUTH_SIMPLE: AuthenticationLevel = {
     basicLevels: new AuthenticationLevel_basicLevels(AuthenticationLevel_basicLevels_level_simple),
 };
 
-const ENTRY_DN = [
+const ENTRY_DN = asDITDescending([
     [
         new AttributeTypeAndValue(
             commonName["&id"],
             commonName.encoderFor["&Type"]!({ printableString: "entry" }, DER),
         ),
     ],
-];
+]);
 
 const NAMED_USER = new NameAndOptionalUID([
     [

@@ -10,6 +10,8 @@ import type {
     Attribute,
 } from "../modules/InformationFramework/Attribute.ta.mjs";
 import { AttributeTypeAndValue } from "../modules/InformationFramework/AttributeTypeAndValue.ta.mjs";
+import { asDITDescending } from "@wildboar/dn";
+import { getRDN } from "../utils/getRDN.mjs";
 
 /**
  * The least value of `values` under `orderer`. A negative result means the
@@ -107,11 +109,13 @@ function sort (
     getOrderingFunction: (attrTypeOrMatchRuleOid: OBJECT_IDENTIFIER) => TypedOrderingFunction<ASN1Element> | undefined,
     onlyRDN: boolean = false,
 ): number {
+    // DAP and DSP entry names are X.500 distinguished names, so the
+    // entry's own RDN is the last one.
     const aRDN = onlyRDN
-        ? (a.name.rdnSequence[a.name.rdnSequence.length - 1] ?? [])
+        ? (getRDN(asDITDescending(a.name.rdnSequence)) ?? [])
         : undefined;
     const bRDN = onlyRDN
-        ? (b.name.rdnSequence[b.name.rdnSequence.length - 1] ?? [])
+        ? (getRDN(asDITDescending(b.name.rdnSequence)) ?? [])
         : undefined;
     const aAttributes = onlyRDN ? [] : attributesFromEntry(a);
     const bAttributes = onlyRDN ? [] : attributesFromEntry(b);

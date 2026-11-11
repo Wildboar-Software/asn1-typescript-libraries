@@ -1,10 +1,10 @@
 import {
-    type DistinguishedName,
     type RelativeDistinguishedName,
     type OBJECT_CLASS,
     AttributeTypeAndValue,
     SubtreeSpecification,
 } from "../modules/InformationFramework/index.mjs";
+import { asDITDescending } from "@wildboar/dn";
 import type { ASN1Element } from "@wildboar/asn1";
 import compareElements from "../comparators/compareElements.mjs";
 import type { Matcher } from "../types/matching.mjs";
@@ -30,13 +30,13 @@ function rdn(index: number): RelativeDistinguishedName {
 
 const baseTest = (use_scope: boolean) => () => {
     const sts = new SubtreeSpecification([]);
-    const dn: DistinguishedName = use_scope
+    const dn = asDITDescending(use_scope
         ? [rdn(9)]
-        : [];
+        : []);
     const ocs: OBJECT_CLASS["&id"][] = [];
-    const scope: DistinguishedName = use_scope
+    const scope = asDITDescending(use_scope
         ? [rdn(9)]
-        : [];
+        : []);
     const getMatcher = () => compareElementsMatcher;
     let result = withinSubtree(dn, ocs, sts, scope, getMatcher);
     expect(result).toBe(true);
@@ -76,13 +76,13 @@ const baseTest = (use_scope: boolean) => () => {
 
 const minimumAndMaximumTest = (use_scope: boolean) => () => {
     const sts = new SubtreeSpecification([], undefined, 1, 3);
-    const dn: DistinguishedName = use_scope
+    const dn = asDITDescending(use_scope
         ? [rdn(9)]
-        : [];
+        : []);
     const ocs: OBJECT_CLASS["&id"][] = [];
-    const scope: DistinguishedName = use_scope
+    const scope = asDITDescending(use_scope
         ? [rdn(9)]
-        : [];
+        : []);
     const getMatcher = () => compareElementsMatcher;
 
     // DN matches the base, but the minimum is not met
@@ -114,13 +114,13 @@ const specificExclusionsTest = (use_scope: boolean, before: boolean) => () => {
                 chopAfter: [rdn(0), rdn(1)],
             },
     ]);
-    const dn: DistinguishedName = use_scope
+    const dn = asDITDescending(use_scope
         ? [rdn(9)]
-        : [];
+        : []);
     const ocs: OBJECT_CLASS["&id"][] = [];
-    const scope: DistinguishedName = use_scope
+    const scope = asDITDescending(use_scope
         ? [rdn(9)]
-        : [];
+        : []);
     const getMatcher = () => compareElementsMatcher;
 
     let result = withinSubtree(dn, ocs, sts, scope, getMatcher);
@@ -145,10 +145,10 @@ const specificExclusionsTest = (use_scope: boolean, before: boolean) => () => {
 
 describe("dnWithinSubtreeSpecification", () => {
     it.each([0, 0n])("limits maximum %s to the base, including under an administrative scope", (maximum) => {
-        const scope = [rdn(9)];
+        const scope = asDITDescending([rdn(9)]);
         const subtree = new SubtreeSpecification([rdn(0)], undefined, 0, maximum);
-        expect(withinSubtree([...scope, rdn(0)], [], subtree, scope)).toBe(true);
-        expect(withinSubtree([...scope, rdn(0), rdn(1)], [], subtree, scope)).toBe(false);
+        expect(withinSubtree(asDITDescending([...scope, rdn(0)]), [], subtree, scope)).toBe(true);
+        expect(withinSubtree(asDITDescending([...scope, rdn(0), rdn(1)]), [], subtree, scope)).toBe(false);
     });
 
     it("correctly assesses whether a DN falls within the subtree's base", baseTest(false));

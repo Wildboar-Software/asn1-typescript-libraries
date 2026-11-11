@@ -1,32 +1,64 @@
-import type {
-    DistinguishedName,
-} from "../modules/InformationFramework/DistinguishedName.ta.mjs";
-import type {
-    RelativeDistinguishedName,
-} from "../modules/InformationFramework/RelativeDistinguishedName.ta.mjs";
+import {
+    getRDNFromDITDescending,
+    type RDNSequenceDescending,
+    type RDNSequenceEndingWith,
+    type RDNSequenceOf,
+    type RDNSequenceOfLength,
+    type RelativeDistinguishedName,
+    type RelativeDistinguishedNameOf,
+} from "@wildboar/dn";
 
 /**
- * @summary Get the relative distinguished name from a distinguished name.
+ * @summary The RDN of the entry named by a descending distinguished name.
  * @description
  *
- * This function may seem pointlessly simple, but it exists for clarification.
- * In the X.500 specifications, a distinguished name is sorted in order that
- * descends the DIT, meaning that the entries at the start of the DN are closer
- * to the root of the DIT, and entries at the end of the DN are closer to the
- * leaves of the DIT.
+ * `D` is interpreted as an X.500 distinguished name: DIT-descending, so
+ * the last RDN is the entry named.
  *
- * This is the opposite in LDAP distinguished names.
+ * - An empty name, the root, has no RDN: `undefined`.
+ * - A name known to end with RDN `R` yields `R`.
+ * - A name whose every RDN is one value of attribute type `T` yields
+ *   that RDN, or `undefined` when the name may be empty.
+ * - Any other name yields the entry's RDN, or `undefined` for the root.
  *
- * This unintuitive reversal warrants a function specifically for clarification.
+ * @template D A distinguished name in DIT-descending order.
+ */
+export type RDNFromDN<D> =
+    D extends RDNSequenceOfLength<0>
+        ? undefined
+        : D extends RDNSequenceEndingWith<infer R>
+            ? R
+            : D extends RDNSequenceOf<infer T>
+                ? RelativeDistinguishedNameOf<T> | undefined
+                : RelativeDistinguishedName | undefined;
+
+/**
+ * @summary Get the RDN of the entry named by a distinguished name.
+ * @description
  *
- * @param {DistinguishedName} dn The distinguished name from whence to extract the relative
- *  distinguished name.
- * @returns {RelativeDistinguishedName | undefined} The relative distinguished
- *  name or `undefined` if the distinguished name is zero-length.
+ * In an X.500 distinguished name the RDNs descend the DIT. The first RDN
+ * belongs to an entry immediately under the root, and the last RDN is the
+ * entry named. LDAP strings (IETF RFC 4514) are the other way around.
+ *
+ * `dn` is a {@link RDNSequenceDescending}. Brand a sequence that is
+ * already in this order with `asDITDescending` from `@wildboar/dn`, or
+ * reverse an LDAP-order sequence with `toDITDescending`. A sequence
+ * whose order is unknown, and a sequence in DIT-ascending order, are
+ * rejected at compile time.
+ *
+ * This is {@link getRDNFromDITDescending}. The return type narrows when
+ * the shape of `dn` is known; see {@link RDNFromDN}.
+ *
+ * @param dn The distinguished name, in DIT-descending order.
+ * @returns The RDN of the entry named, or `undefined` if `dn` names
+ *  the root.
+ * @function
  */
 export
-function getRDN (dn: DistinguishedName): RelativeDistinguishedName | undefined {
-    return dn[dn.length - 1];
+function getRDN <D extends RDNSequenceDescending> (
+    dn: D,
+): RDNFromDN<D> {
+    return getRDNFromDITDescending(dn) as RDNFromDN<D>;
 }
 
 export default getRDN;

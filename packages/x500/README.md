@@ -81,7 +81,7 @@ const relevantTuples: ACDFTupleExtended[] = (await Promise.all(
             tuple,
             boundNameAndUID,
             authLevel,
-            targetDN,
+            targetDN, // RDNSequenceDescending: top-level RDN first
             equalityMatcherGetter, // Takes an attribute type and returns a function that can compare two values.
             isMemberOfGroup, // An async function that takes a user group and user and resolves if the user is a member.
         ),
@@ -224,6 +224,16 @@ are either deprecated or not intended for external use:
 - `StringEncoder.mts` - A function that converts an `ASN1Element` to an LDAP string
 
 ## Utilities
+
+Where one of these functions takes a distinguished name, that name is in
+X.500 DIT-descending order: the first RDN is immediately below the root, and
+the last RDN is the entry named. The parameter type is `RDNSequenceDescending`.
+Brand a sequence that is already in that order with `asDITDescending`, or
+reverse an LDAP (DIT-ascending) sequence with `toDITDescending`. Both are
+exported from this package and from `@wildboar/dn`. `getRDN` returns the
+entry's own RDN, and its return type narrows when the distinguished name's
+shape is known (for example, when the name is known to end with a
+`commonName` RDN).
 
 - `boundariesOfPeriodOccurrence.mts` - Get bounds of an occurrence in a period in which a point in time occurs.
 - `checkNameForm.mts` - Evaluate the compliance of an RDN to a name form
