@@ -142,6 +142,7 @@ export { getMatchingRulesFromFilter } from "./lib/utils/getMatchingRulesFromFilt
 export { getOptionallyProtectedValue } from "./lib/utils/getOptionallyProtectedValue.mjs";
 export { iterateListResultSubordinates } from "./lib/utils/iterateListResultSubordinates.mjs";
 export { iterateSearchResultEntries } from "./lib/utils/iterateSearchResultEntries.mjs";
+export { mergePOQ } from "./lib/utils/mergePOQ.mjs";
 export { getRDN } from "./lib/utils/getRDN.mjs";
 export { groupByOID } from "./lib/utils/groupByOID.mjs";
 export { isModificationOperation } from "./lib/utils/isModificationOperation.mjs";
