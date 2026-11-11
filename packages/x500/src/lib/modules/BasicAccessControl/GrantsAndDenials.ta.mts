@@ -378,6 +378,97 @@ export const grantExecuteMethod: number = GrantsAndDenials_grantExecuteMethod;
 export const GrantsAndDenials_denyExecuteMethod: number = 31;
 export const denyExecuteMethod: number = GrantsAndDenials_denyExecuteMethod;
 
+/**
+ * Named bits of {@link GrantsAndDenials}. Unnamed positions are omitted.
+ * ITU-T Q.1228 / Q.1238 / Q.1248 names bits 30 and 31.
+ */
+const GRANTS_AND_DENIALS_BIT_NAME: { readonly [bit: number]: string } = {
+    [GrantsAndDenials_grantAdd]: "grantAdd",
+    [GrantsAndDenials_denyAdd]: "denyAdd",
+    [GrantsAndDenials_grantDiscloseOnError]: "grantDiscloseOnError",
+    [GrantsAndDenials_denyDiscloseOnError]: "denyDiscloseOnError",
+    [GrantsAndDenials_grantRead]: "grantRead",
+    [GrantsAndDenials_denyRead]: "denyRead",
+    [GrantsAndDenials_grantRemove]: "grantRemove",
+    [GrantsAndDenials_denyRemove]: "denyRemove",
+    [GrantsAndDenials_grantBrowse]: "grantBrowse",
+    [GrantsAndDenials_denyBrowse]: "denyBrowse",
+    [GrantsAndDenials_grantExport]: "grantExport",
+    [GrantsAndDenials_denyExport]: "denyExport",
+    [GrantsAndDenials_grantImport]: "grantImport",
+    [GrantsAndDenials_denyImport]: "denyImport",
+    [GrantsAndDenials_grantModify]: "grantModify",
+    [GrantsAndDenials_denyModify]: "denyModify",
+    [GrantsAndDenials_grantRename]: "grantRename",
+    [GrantsAndDenials_denyRename]: "denyRename",
+    [GrantsAndDenials_grantReturnDN]: "grantReturnDN",
+    [GrantsAndDenials_denyReturnDN]: "denyReturnDN",
+    [GrantsAndDenials_grantCompare]: "grantCompare",
+    [GrantsAndDenials_denyCompare]: "denyCompare",
+    [GrantsAndDenials_grantFilterMatch]: "grantFilterMatch",
+    [GrantsAndDenials_denyFilterMatch]: "denyFilterMatch",
+    [GrantsAndDenials_grantInvoke]: "grantInvoke",
+    [GrantsAndDenials_denyInvoke]: "denyInvoke",
+    [GrantsAndDenials_grantExecuteMethod]: "grantExecuteMethod",
+    [GrantsAndDenials_denyExecuteMethod]: "denyExecuteMethod",
+};
+
+/**
+ * JSON Encoding Rules encoding of {@link GrantsAndDenials}.
+ *
+ * ITU-T X.697 clause 24.4 NamedBitList: identifiers of bits that are
+ * set, in bit-position order. An unnamed set bit is the integer
+ * position.
+ */
+export type GrantsAndDenialsJSON = Array<string | number>;
+
+function grantsAndDenialsSetBits(
+    bits: GrantsAndDenials,
+): Array<string | number> {
+    const names: Array<string | number> = [];
+    for (let i = 0; i < bits.length; i++) {
+        if (!bits[i]) {
+            continue;
+        }
+        names.push(GRANTS_AND_DENIALS_BIT_NAME[i] ?? i);
+    }
+    return names;
+}
+
+/**
+ * @summary GSER of a `GrantsAndDenials` named bit list
+ * @description
+ *
+ * [RFC 3641](https://www.rfc-editor.org/rfc/rfc3641) `IdentifierList`
+ * of the bits that are set. An unnamed set bit is the decimal
+ * position. Unset bits are omitted. An empty string is `{}`.
+ *
+ * @param bits The grants and denials
+ * @returns `{ grantAdd, denyRead }` or `{}`
+ * @function
+ * @public
+ */
+export function grantsAndDenialsToString(bits: GrantsAndDenials): string {
+    const names = grantsAndDenialsSetBits(bits).map((name) => String(name));
+    return names.length ? `{ ${names.join(", ")} }` : "{}";
+}
+
+/**
+ * @summary Convert `GrantsAndDenials` to JSON, loosely following ITU-T X.697
+ * @description
+ *
+ * NamedBitList form (clause 24.4): an array of identifiers of bits
+ * that are set. An unnamed set bit is the integer position.
+ *
+ * @param bits The grants and denials
+ * @returns The JSON Encoding Rules encoding of this value
+ * @function
+ * @public
+ */
+export function grantsAndDenialsToJSON(bits: GrantsAndDenials): GrantsAndDenialsJSON {
+    return grantsAndDenialsSetBits(bits);
+}
+
 export const _decode_GrantsAndDenials: $.ASN1Decoder<BIT_STRING> = $._decodeBitString;
 
 

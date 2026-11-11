@@ -4,14 +4,30 @@ import {
     ASN1UniversalType,
     DERElement,
     ObjectIdentifier,
+    TRUE_BIT,
+    type BIT_STRING,
 } from "@wildboar/asn1";
 import { AttributeTypeAndValue } from "@wildboar/dn";
 import { DSS_Parms } from "./modules/AlgorithmObjectIdentifiers/DSS-Parms.ta.mjs";
 import { DualStringSyntax } from "./modules/AttributeCertificateDefinitions/DualStringSyntax.ta.mjs";
 import { NoticeReference } from "./modules/AttributeCertificateDefinitions/NoticeReference.ta.mjs";
 import { UserNotice } from "./modules/AttributeCertificateDefinitions/UserNotice.ta.mjs";
+import {
+    authenticationLevelToJSON,
+    authenticationLevelToString,
+    type AuthenticationLevel,
+} from "./modules/BasicAccessControl/AuthenticationLevel.ta.mjs";
 import { AuthenticationLevel_basicLevels } from "./modules/BasicAccessControl/AuthenticationLevel-basicLevels.ta.mjs";
 import { AuthenticationLevel_basicLevels_level_strong } from "./modules/BasicAccessControl/AuthenticationLevel-basicLevels-level.ta.mjs";
+import {
+    denyRead,
+    grantAdd,
+    grantRead,
+    grantsAndDenialsToJSON,
+    grantsAndDenialsToString,
+} from "./modules/BasicAccessControl/GrantsAndDenials.ta.mjs";
+import { MaxValueCount } from "./modules/BasicAccessControl/MaxValueCount.ta.mjs";
+import { RestrictedValue } from "./modules/BasicAccessControl/RestrictedValue.ta.mjs";
 import { BasicConstraintsSyntax } from "./modules/CertificateExtensions/BasicConstraintsSyntax.ta.mjs";
 import { CertificateGroupNumberRange } from "./modules/CertificateExtensions/CertificateGroupNumberRange.ta.mjs";
 import { NumberRange } from "./modules/CertificateExtensions/NumberRange.ta.mjs";
@@ -291,5 +307,74 @@ describe("AuthenticationLevel_basicLevels toString / toJSON", () => {
         expect(new AuthenticationLevel_basicLevels(
             AuthenticationLevel_basicLevels_level_strong,
         ).toJSON()).toEqual({ level: "strong" });
+    });
+});
+
+function permissions (...bits: number[]): BIT_STRING {
+    const result = new Uint8ClampedArray(Math.max(26, ...bits.map((bit) => bit + 1)));
+    for (const bit of bits) {
+        result[bit] = TRUE_BIT;
+    }
+    return result;
+}
+
+describe("GrantsAndDenials toString / toJSON", () => {
+    it("prints named bits that are set, in bit-position order", () => {
+        const bits = permissions(grantAdd, grantRead, denyRead);
+        expect(grantsAndDenialsToString(bits)).toBe(
+            "{ grantAdd, grantRead, denyRead }",
+        );
+        expect(grantsAndDenialsToJSON(bits)).toEqual([
+            "grantAdd",
+            "grantRead",
+            "denyRead",
+        ]);
+    });
+
+    it("prints an empty bit string as {} and unnamed bits as integers", () => {
+        expect(grantsAndDenialsToString(new Uint8ClampedArray(0))).toBe("{}");
+        expect(grantsAndDenialsToJSON(new Uint8ClampedArray(0))).toEqual([]);
+        const unnamed = permissions(26);
+        expect(grantsAndDenialsToString(unnamed)).toBe("{ 26 }");
+        expect(grantsAndDenialsToJSON(unnamed)).toEqual([ 26 ]);
+    });
+});
+
+describe("AuthenticationLevel CHOICE toString / toJSON", () => {
+    it("prefixes basicLevels with the CHOICE identifier", () => {
+        const value: AuthenticationLevel = {
+            basicLevels: new AuthenticationLevel_basicLevels(
+                AuthenticationLevel_basicLevels_level_strong,
+                3,
+                true,
+            ),
+        };
+        expect(authenticationLevelToString(value)).toBe(
+            "basicLevels:{ level strong, localQualifier 3, signed TRUE }",
+        );
+        expect(authenticationLevelToJSON(value)).toEqual({
+            basicLevels: {
+                level: "strong",
+                localQualifier: 3,
+                signed: true,
+            },
+        });
+    });
+});
+
+describe("MaxValueCount toString / toJSON", () => {
+    it("prints type and maxCount", () => {
+        const value = new MaxValueCount(commonName, 2);
+        expect(value.toString()).toBe("{ type 2.5.4.3, maxCount 2 }");
+        expect(value.toJSON()).toEqual({ type: "2.5.4.3", maxCount: 2 });
+    });
+});
+
+describe("RestrictedValue toString / toJSON", () => {
+    it("prints type and valuesIn as dotted decimals", () => {
+        const description = ObjectIdentifier.fromString("2.5.4.13");
+        const value = new RestrictedValue(commonName, description);
+        expect(value.toString()).toBe("{ type 2.5.4.3, valuesIn 2.5.4.13 }");
+        expect(value.toJSON()).toEqual({ type: "2.5.4.3", valuesIn: "2.5.4.13" });
     });
 });

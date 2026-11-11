@@ -3,6 +3,7 @@ import { ASN1Element as _Element, type EXTERNAL } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
     AuthenticationLevel_basicLevels,
+    type AuthenticationLevel_basicLevelsJSON,
     _decode_AuthenticationLevel_basicLevels,
     _encode_AuthenticationLevel_basicLevels,
 } from "../BasicAccessControl/AuthenticationLevel-basicLevels.ta.mjs";
@@ -35,6 +36,65 @@ export type AuthenticationLevel =
     | { basicLevels: AuthenticationLevel_basicLevels } /* CHOICE_ALT_ROOT */
     | { other: EXTERNAL } /* CHOICE_ALT_ROOT */
     | _Element /* CHOICE_ALT_UNRECOGNIZED_EXT */;
+
+/**
+ * JSON Encoding Rules encoding of {@link AuthenticationLevel}.
+ * An unrecognized alternative is `{ _unrecognized }`.
+ */
+export type AuthenticationLevelJSON =
+    | { basicLevels: AuthenticationLevel_basicLevelsJSON }
+    | { other: unknown }
+    | { _unrecognized: unknown };
+
+/**
+ * @summary GSER of an `AuthenticationLevel` CHOICE
+ * @description
+ *
+ * `basicLevels:` plus the nested SEQUENCE, or `other:` plus the
+ * `EXTERNAL` value notation. An unrecognized alternative is
+ * `unrecognized:` and the element's value notation.
+ *
+ * @param value The authentication level
+ * @returns `basicLevels:{ level none }` or another alternative
+ * @function
+ * @public
+ */
+export function authenticationLevelToString(
+    value: AuthenticationLevel,
+): string {
+    if ("basicLevels" in value) {
+        return `basicLevels:${value.basicLevels.toString()}`;
+    }
+    if ("other" in value) {
+        return `other:${value.other.toString()}`;
+    }
+    return `unrecognized:${value.toString()}`;
+}
+
+/**
+ * @summary Convert `AuthenticationLevel` to JSON, loosely following ITU-T X.697
+ * @description
+ *
+ * A one-member object whose key is the CHOICE alternative.
+ * `other` is the `EXTERNAL` JSON. An unrecognized alternative is
+ * `{ _unrecognized }`.
+ *
+ * @param value The authentication level
+ * @returns The JSON Encoding Rules encoding of this value
+ * @function
+ * @public
+ */
+export function authenticationLevelToJSON(
+    value: AuthenticationLevel,
+): AuthenticationLevelJSON {
+    if ("basicLevels" in value) {
+        return { basicLevels: value.basicLevels.toJSON() };
+    }
+    if ("other" in value) {
+        return { other: value.other.toJSON() };
+    }
+    return { _unrecognized: value.toJSON() };
+}
 
 let _cached_decoder_for_AuthenticationLevel: $.ASN1Decoder<AuthenticationLevel> | null = null;
 
