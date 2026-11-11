@@ -193,6 +193,43 @@ export class Attribute {
             )
         );
     }
+
+    /**
+     * @summary Combine this attribute with another.
+     * @description
+     *
+     * Concatenates `values`, then `valuesWithContext`, in
+     * receiver-then-argument order. The result omits
+     * `valuesWithContext` when that set is empty. The result's
+     * `type_` is this attribute's. Whether `other.type_` is equal
+     * is unchecked, so a subtype can be combined with its
+     * supertype. Unrecognized extensions are ignored. Neither
+     * operand is mutated.
+     *
+     * Duplicate values are not removed: equality of an open type
+     * depends on the attribute syntax.
+     *
+     * @param {Attribute} other The attribute to combine.
+     * @returns {Attribute} The combined attribute.
+     * @public
+     * @method
+     */
+    public merge(other: Attribute): Attribute {
+        const valuesWithContext = [
+            ...(this.valuesWithContext ?? []),
+            ...(other.valuesWithContext ?? []),
+        ];
+        return new Attribute(
+            this.type_,
+            [
+                ...this.values,
+                ...other.values,
+            ],
+            (valuesWithContext.length > 0)
+                ? valuesWithContext
+                : undefined,
+        );
+    }
 }
 
 /**
