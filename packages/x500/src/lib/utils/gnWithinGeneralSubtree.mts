@@ -8,8 +8,9 @@ import type {
 import type {
     GeneralSubtree,
 } from "../modules/CertificateExtensions/GeneralSubtree.ta.mjs";
-import { compareRDNSequence } from "@wildboar/dn";
+import { asDITDescending } from "@wildboar/dn";
 import { compareElements } from "../comparators/compareElements.mjs";
+import dnWithinSubtree from "./dnWithinSubtree.mjs";
 import { compareGeneralName } from "@wildboar/gn";
 
 const ID_SRV_NAME = ObjectIdentifier.fromString("1.3.6.1.5.5.7.8.7");
@@ -351,18 +352,14 @@ function gnWithinGeneralSubtree (
         }
         return ipAddressWithinSubtree(gn.iPAddress, subtree.base.iPAddress);
     } else if (("directoryName" in gn) && ("directoryName" in subtree.base)) {
-        const base = subtree.base.directoryName.rdnSequence;
-        const entry = gn.directoryName.rdnSequence;
-        if (entry.length < (base.length + minimum)) {
-            return false;
-        }
-        if (entry.length > (base.length + maximum)) {
-            return false;
-        }
-        return compareRDNSequence(
-            base,
-            entry.slice(0, base.length),
-            namingMatcher,
+        // A directory name in a GeneralName is an X.500 Name: the
+        // RDN sequence is DIT-descending.
+        return dnWithinSubtree(
+            asDITDescending(gn.directoryName.rdnSequence),
+            asDITDescending(subtree.base.directoryName.rdnSequence),
+            minimum,
+            maximum,
+            getEqualityMatcher,
         );
     } else if (("registeredID" in gn) && ("registeredID" in subtree.base)) {
         const gn_arcs: number[] = gn.registeredID.nodes;

@@ -1,4 +1,3 @@
-import type { DistinguishedName } from "../modules/InformationFramework/DistinguishedName.ta.mjs";
 import type { Refinement } from "../modules/InformationFramework/Refinement.ta.mjs";
 import { SubtreeSpecification } from "../modules/InformationFramework/SubtreeSpecification.ta.mjs";
 import { dnStartsWith, type RDNSequenceDescending, asDITDescending } from "@wildboar/dn";
@@ -20,11 +19,13 @@ import { valueEqualityMatcher } from "../matching/valueEqualityMatcher.mjs";
  * @param ctx The context object
  * @param a A subtree specification
  * @param b A subtree specification
- * @param a_root The context prefix of the first subtree specification
- * @param b_root The context prefix of the second subtree specification
+ * @param a_root The context prefix of the first subtree specification, in
+ *  DIT-descending order.
+ * @param b_root The context prefix of the second subtree specification, in
+ *  DIT-descending order.
  * @returns The subtree specification and the DN of the root of said subtree
  *  specification that constitutes of the intersection of the supplied subtrees,
- *  or `null` if there is no overlap.
+ *  in DIT-descending order, or `null` if there is no overlap.
  *
  * @function
  */
@@ -35,7 +36,7 @@ function subtreeIntersection (
     b: SubtreeSpecification,
     a_root: RDNSequenceDescending = asDITDescending([]),
     b_root: RDNSequenceDescending = asDITDescending([]),
-): [ SubtreeSpecification, DistinguishedName ] | null {
+): [ SubtreeSpecification, RDNSequenceDescending ] | null {
     const matcher = valueEqualityMatcher(getEqualityMatcher);
     const a_base_dn: RDNSequenceDescending = asDITDescending([ ...a_root, ...(a.base ?? []) ]);
     const b_base_dn: RDNSequenceDescending = asDITDescending([ ...b_root, ...(b.base ?? []) ]);

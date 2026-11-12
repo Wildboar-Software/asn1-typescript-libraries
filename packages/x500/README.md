@@ -81,7 +81,7 @@ const relevantTuples: ACDFTupleExtended[] = (await Promise.all(
             tuple,
             boundNameAndUID,
             authLevel,
-            targetDN,
+            targetDN, // RDNSequenceDescending: top-level RDN first
             equalityMatcherGetter, // Takes an attribute type and returns a function that can compare two values.
             isMemberOfGroup, // An async function that takes a user group and user and resolves if the user is a member.
         ),
@@ -225,6 +225,14 @@ are either deprecated or not intended for external use:
 
 ## Utilities
 
+Where one of these functions takes a distinguished name, that name is in
+X.500 DIT-descending order: the first RDN is immediately below the root, and
+the last RDN is the entry named. The parameter type is `RDNSequenceDescending`.
+Brand a sequence that is already in that order with `asDITDescending`, or
+reverse an LDAP (DIT-ascending) sequence with `toDITDescending`. The entry's
+own RDN is the last one: `getRDNFromDITDescending` from `@wildboar/dn`, also
+re-exported here.
+
 - `boundariesOfPeriodOccurrence.mts` - Get bounds of an occurrence in a period in which a point in time occurs.
 - `checkNameForm.mts` - Evaluate the compliance of an RDN to a name form
 - `compareCode.mts` - Compare two Remote Operation Service Element (ROSE) Operation Codes
@@ -244,7 +252,6 @@ are either deprecated or not intended for external use:
 - `getOptionallyProtectedValue.mts` - Where `op` is `OPTIONALLY_PROTECTED<T>`, get `T`
 - `iterateListResultSubordinates.mts` - Yield subordinate entries from a `ListResult`, recursing into `uncorrelatedListInfo` up to 100 results deep
 - `iterateSearchResultEntries.mts` - Yield entries from a `SearchResult`, recursing into `uncorrelatedSearchInfo` up to 100 results deep
-- `getRDN.mts` - Get the relative distinguished name from a distinguished name.
 - `groupByOID.mts` - Group items by object identifier
 - `isModificationOperation.mts` - Determine whether an operation is a modification operation
 - `objectClassesWithinRefinement.mts` - Determine whether object classes match a refinement

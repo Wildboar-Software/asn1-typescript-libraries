@@ -143,7 +143,15 @@ export { getOptionallyProtectedValue } from "./lib/utils/getOptionallyProtectedV
 export { iterateListResultSubordinates } from "./lib/utils/iterateListResultSubordinates.mjs";
 export { iterateSearchResultEntries } from "./lib/utils/iterateSearchResultEntries.mjs";
 export { mergePOQ } from "./lib/utils/mergePOQ.mjs";
-export { getRDN } from "./lib/utils/getRDN.mjs";
+export {
+    asDITAscending,
+    asDITDescending,
+    getRDNFromDITDescending,
+    toDITAscending,
+    toDITDescending,
+    type RDNSequenceAscending,
+    type RDNSequenceDescending,
+} from "@wildboar/dn";
 export { groupByOID } from "./lib/utils/groupByOID.mjs";
 export { isModificationOperation } from "./lib/utils/isModificationOperation.mjs";
 export { objectClassesWithinRefinement } from "./lib/utils/objectClassesWithinRefinement.mjs";
