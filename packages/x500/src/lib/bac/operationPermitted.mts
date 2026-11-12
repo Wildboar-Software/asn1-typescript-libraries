@@ -51,19 +51,25 @@ function operationPermitted (
     if (!Number.isSafeInteger(tuple.userClassSpecificity) && (tuple.userClassSpecificity < 1)) {
         return false;
     }
-    // One pass covers both the grant bits and the deny bits. An empty
-    // list permits, matching `every` on an empty array.
-    let allGranted: boolean = true;
-    let anyDenied: boolean = false;
-    for (const op of operations) {
-        if (gad[(op * 2)] !== TRUE_BIT) {
-            allGranted = false;
+    // Every required grant bit is set, and none of the corresponding deny bits are.
+    // An empty list permits. An array keeps the indexed walk; an iterator is read once.
+    if (Array.isArray(operations)) {
+        const operationCount = operations.length;
+        for (let i = 0; i < operationCount; i++) {
+            const bit = operations[i] * 2;
+            if ((gad[bit] !== TRUE_BIT) || (gad[bit + 1] === TRUE_BIT)) {
+                return false;
+            }
         }
-        if (gad[(op * 2) + 1] === TRUE_BIT) {
-            anyDenied = true;
+        return true;
+    }
+    for (const op of operations) {
+        const bit = op * 2;
+        if ((gad[bit] !== TRUE_BIT) || (gad[bit + 1] === TRUE_BIT)) {
+            return false;
         }
     }
-    return allGranted && !anyDenied;
+    return true;
 }
 
 export default operationPermitted;

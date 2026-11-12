@@ -29,10 +29,14 @@ function operationRelevant (operations: number[], gad: GrantsAndDenials): boolea
      * As I read that, it means that we have to include any tuple that has a bit
      * set that affects the operation, whether it grants it or denies it.
      */
-    return operations.some((op) => (
-        (gad[(op * 2)] === TRUE_BIT) // If the grant bit is set.
-        || (gad[(op * 2) + 1] === TRUE_BIT) // If the deny bit is set.
-    ));
+    const operationCount = operations.length;
+    for (let i = 0; i < operationCount; i++) {
+        const bit = operations[i] * 2;
+        if ((gad[bit] === TRUE_BIT) || (gad[bit + 1] === TRUE_BIT)) {
+            return true;
+        }
+    }
+    return false;
 }
 
 /**
@@ -71,8 +75,15 @@ function discardNonRelevantACDFTuples (
 ): ACDFTupleExtended[] {
     // Authentication-level filtering is applied once before this function.
     // `operations` stays an array: each tuple consults it again.
+    // An array keeps the indexed walk. An iterator is read once into an array
+    // so both inputs share that walk.
+    const list = Array.isArray(tuples) ? tuples : Array.from(tuples);
     const relevant: ACDFTupleExtended[] = [];
-    for (const tuple of tuples) {
+    const tupleCount = list.length;
+    for (let i = 0; i < tupleCount; i++) {
+        const tuple = list[i];
+        // `undefined` means a class refinement could not be decided. Drop it,
+        // as the previous `.filter()` did.
         if (!itemIsProtected(request, tuple.protectedItems, requester, settings)) {
             continue;
         }

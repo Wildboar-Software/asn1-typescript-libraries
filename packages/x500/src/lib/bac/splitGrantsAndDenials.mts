@@ -25,25 +25,39 @@ import type {
  */
 export
 function splitGrantsAndDenials (gad: GrantsAndDenials): [ GrantsAndDenials ] | [ GrantsAndDenials, GrantsAndDenials ] {
-    const grants: GrantsAndDenials = new Uint8ClampedArray(gad.length);
-    const denials: GrantsAndDenials = new Uint8ClampedArray(gad.length);
+    const len: number = gad.length;
     let grantsEncountered: boolean = false;
     let denialsEncountered: boolean = false;
-    const len: number = gad.length;
-    for (let i = 0; i < len; i++) {
-        if ((i % 2) && gad[i]) { // Odd bits are denials. If it is set...
-            denials[i] = TRUE_BIT;
-            denialsEncountered = true;
-        } else if (gad[i]) { // Even bits are grants.
-            grants[i] = TRUE_BIT;
+    // Even bits are grants and odd bits are denials. A pure value is the
+    // common case, so do not allocate the two result strings until both kinds
+    // of bit have actually been seen.
+    for (let i = 0; i < len; i += 2) {
+        if (gad[i]) {
             grantsEncountered = true;
         }
+        const denialIndex = i + 1;
+        if ((denialIndex < len) && gad[denialIndex]) {
+            denialsEncountered = true;
+        }
+        if (grantsEncountered && denialsEncountered) {
+            break;
+        }
     }
-    if (grantsEncountered && denialsEncountered) {
-        return [ grants, denials ];
-    } else {
+    if (!grantsEncountered || !denialsEncountered) {
         return [ gad ];
     }
+    const grants: GrantsAndDenials = new Uint8ClampedArray(len);
+    const denials: GrantsAndDenials = new Uint8ClampedArray(len);
+    for (let i = 0; i < len; i += 2) {
+        if (gad[i]) {
+            grants[i] = TRUE_BIT;
+        }
+        const denialIndex = i + 1;
+        if ((denialIndex < len) && gad[denialIndex]) {
+            denials[denialIndex] = TRUE_BIT;
+        }
+    }
+    return [ grants, denials ];
 }
 
 export default splitGrantsAndDenials;

@@ -5,6 +5,9 @@ const ASCII_UNIT_SEPARATOR: "\x1F" = "\x1F";
 
 // Polyfill for Node.js so we can use fewer Node.js-specific APIs.
 function domainToASCII(domain: string): string {
+    if (domain === "." || domain === "") {
+        return "";
+    }
     return new URL(`http://${domain}`).hostname;
 }
 
