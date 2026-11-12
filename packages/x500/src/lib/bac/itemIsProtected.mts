@@ -67,6 +67,12 @@ function itemIsProtected (
         ) {
             return true;
         }
+        if (
+            (protectedItems.allUserAttributeTypesAndValues === null)
+            && !request.operational
+        ) {
+            return true;
+        }
         const attributeTypes = protectedItems.attributeType ?? [];
         const typeCount = attributeTypes.length;
         for (let i = 0; i < typeCount; i++) {
@@ -74,23 +80,20 @@ function itemIsProtected (
                 return true;
             }
         }
-        return (
+        return false;
+    } else if ("value" in request) {
+        if (
             (protectedItems.allUserAttributeTypesAndValues === null)
             && !request.operational
-        );
-    } else if ("value" in request) {
+        ) {
+            return true;
+        }
         const allAttributeValues = protectedItems.allAttributeValues ?? [];
         const allValueCount = allAttributeValues.length;
         for (let i = 0; i < allValueCount; i++) {
             if (request.value.type_.isEqualTo(allAttributeValues[i])) {
                 return true;
             }
-        }
-        if (
-            (protectedItems.allUserAttributeTypesAndValues === null)
-            && !request.operational
-        ) {
-            return true;
         }
         const attributeValues = protectedItems.attributeValue ?? [];
         const valueCount = attributeValues.length;
@@ -164,25 +167,16 @@ function itemIsProtected (
                 settings,
             )?.matched);
         }
-        // restrictedBy is supported, but not in this function.
         /*
-        Kept commented out to clarify here that this field is not used in
-        determining whether the item is protected. ITU-T Recommendation
-        X.501 (2019), Section 18.4.2.4, states that:
+        restrictedBy is supported, but not in this function: to clarify, this
+        field is not used in determining whether the item is protected. ITU-T
+        Recommendation X.501 (2019), Section 18.4.2.4, states that:
 
         "This is only relevant when the permission sought is add, and all
         context assertions shall be satisfied. It does not provide for
         general use of contexts to differentiate protected items for other
         permissions."
         */
-        // || (
-        //     contexts?.length
-        //     && protectedItems.contexts?.every((ca) => evaluateContextAssertion(
-        //         ca,
-        //         contexts,
-        //         settings.getContextMatcher,
-        //         settings.determineAbsentMatch,
-        //     )))
         return false;
     } else {
         return false; // For lack of knowing what to do.
