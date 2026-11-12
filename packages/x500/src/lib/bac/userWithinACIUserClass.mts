@@ -117,61 +117,48 @@ async function userWithinACIUserClass (
     ) {
         return 4;
     }
-    const names = userClass.name;
-    if (names && (names.length > 0)) {
-        const matchName = valueEqualityMatcher(getEqualityMatcher);
-        const nameCount = names.length;
-        for (let i = 0; i < nameCount; i++) {
-            const named = names[i];
-            if (
-                compareRDNSequence(user.dn, named.dn, matchName)
-                && (
-                    !named.uid // If there is no uid, all entries with this name are relevant.
-                    || (user.uid && compareBitStrings(user.uid, named.uid))
-                )
-            ) {
-                return 4;
-            }
+    const names = userClass.name ?? [];
+    const matchName = valueEqualityMatcher(getEqualityMatcher);
+    const nameCount = names.length;
+    for (let i = 0; i < nameCount; i++) {
+        const named = names[i];
+        if (
+            compareRDNSequence(user.dn, named.dn, matchName)
+            && (
+                !named.uid // If there is no uid, all entries with this name are relevant.
+                || (user.uid && compareBitStrings(user.uid, named.uid))
+            )
+        ) {
+            return 4;
         }
     }
-    const groups = userClass.userGroup;
-    if (groups && (groups.length > 0)) {
-        const groupCount = groups.length;
-        for (let i = 0; i < groupCount; i++) {
-            const isMember = await isMemberOfGroup(groups[i], user);
-            if (isMember === undefined) {
-                couldNotDetermineGroupMembership = true;
-            } else if (isMember) {
-                return 3;
-            }
+    const groups = userClass.userGroup ?? [];
+    const groupCount = groups.length;
+    for (let i = 0; i < groupCount; i++) {
+        const isMember = await isMemberOfGroup(groups[i], user);
+        if (isMember === undefined) {
+            couldNotDetermineGroupMembership = true;
+        } else if (isMember) {
+            return 3;
         }
     }
-    const subtrees = userClass.subtree;
-    if (subtrees && (subtrees.length > 0)) {
-        // X.501 says this subtree is unrefined, and an ACI subtree is relative
-        // to the root. One empty list is enough for every candidate.
-        const noObjectClasses: OBJECT_IDENTIFIER[] = [];
-        const rootScope: DistinguishedName = [];
-        const subtreeCount = subtrees.length;
-        let inSubtree = false;
-        for (let i = 0; i < subtreeCount; i++) {
-            if (dnWithinSubtreeSpecification(
-                user.dn,
-                noObjectClasses,
-                subtrees[i],
-                rootScope,
-                getEqualityMatcher,
-            )) {
-                inSubtree = true;
-                break;
-            }
+    const subtrees = userClass.subtree ?? [];
+    const subtreeCount = subtrees.length;
+    let inSubtree = false;
+    for (let i = 0; i < subtreeCount; i++) {
+        if (dnWithinSubtreeSpecification(
+            user.dn,
+            [], // ITU Recommendation X.501 specifically says: this subtree is to be unrefined.
+            subtrees[i],
+            [], // Note that, with ACIItems, the subtree is always relative to the root.
+            getEqualityMatcher,
+        )) {
+            inSubtree = true;
+            break;
         }
-        if (inSubtree) {
-            if (couldNotDetermineGroupMembership) {
-                return 2.5;
-            }
-            return 2;
-        }
+    }
+    if (inSubtree) {
+        return couldNotDetermineGroupMembership ? 2.5 : 2;
     }
     if (userClass.allUsers === null) {
         if (couldNotDetermineGroupMembership) {

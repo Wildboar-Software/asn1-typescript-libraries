@@ -165,7 +165,14 @@ interface BACACDFReturn extends ACDFReturn {
 const INSERTION_RANK_LIMIT: number = 8;
 
 function precedenceKey (tuple: ACDFTupleExtended): number {
-    return Number(tuple.precedence);
+    const precedence = Number(tuple.precedence);
+    // Values outside the safe-integer range do not survive `Number()` with
+    // their order intact. Collapse each side to one infinity so a huge
+    // extension precedence still outranks every ordinary 0..255 value.
+    if (Number.isSafeInteger(precedence)) {
+        return precedence;
+    }
+    return precedence < 0 ? Number.NEGATIVE_INFINITY : Number.POSITIVE_INFINITY;
 }
 
 function userClassKey (tuple: ACDFTupleExtended): number {
@@ -185,40 +192,36 @@ function sortDescendingInPlace (
     if (count < 2) {
         return;
     }
-    if (count > INSERTION_RANK_LIMIT) {
-        const first = keyOf(items[0]);
-        for (let i = 1; i < count; i++) {
-            if (keyOf(items[i]) !== first) {
-                items.sort((a, b) => keyOf(b) - keyOf(a));
-                return;
+    const first = keyOf(items[0]);
+    for (let i = 1; i < count; i++) {
+        if (keyOf(items[i]) === first) {
+            continue;
+        }
+        if (count > INSERTION_RANK_LIMIT) {
+            items.sort((a, b) => keyOf(b) - keyOf(a));
+            return;
+        }
+        const keys = new Float64Array(count);
+        for (let k = 0; k < i; k++) {
+            keys[k] = first;
+        }
+        keys[i] = keyOf(items[i]);
+        for (let k = i + 1; k < count; k++) {
+            keys[k] = keyOf(items[k]);
+        }
+        for (let n = 1; n < count; n++) {
+            const item = items[n];
+            const key = keys[n];
+            let j = n - 1;
+            while ((j >= 0) && (keys[j] < key)) {
+                items[j + 1] = items[j];
+                keys[j + 1] = keys[j];
+                j--;
             }
+            items[j + 1] = item;
+            keys[j + 1] = key;
         }
         return;
-    }
-    const keys = new Float64Array(count);
-    keys[0] = keyOf(items[0]);
-    let uniform = true;
-    for (let i = 1; i < count; i++) {
-        const key = keyOf(items[i]);
-        keys[i] = key;
-        if (key !== keys[0]) {
-            uniform = false;
-        }
-    }
-    if (uniform) {
-        return;
-    }
-    for (let i = 1; i < count; i++) {
-        const item = items[i];
-        const key = keys[i];
-        let j = i - 1;
-        while ((j >= 0) && (keys[j] < key)) {
-            items[j + 1] = items[j];
-            keys[j + 1] = keys[j];
-            j--;
-        }
-        items[j + 1] = item;
-        keys[j + 1] = key;
     }
 }
 
@@ -254,30 +257,43 @@ function everyPermitted (
 }
 
 /**
+ * A mixed grant/deny bit string becomes one grant tuple and one denial tuple.
+ * A pure bit string has no pair.
+ */
+function grantAndDenialTuples (
+    tuple: ACDFTupleExtended,
+): [ ACDFTupleExtended, ACDFTupleExtended ] | undefined {
+    const parts = splitGrantsAndDenials(tuple.grantsAndDenials);
+    if (parts.length === 1) {
+        return undefined;
+    }
+    return [
+        tuple.withGrantsAndDenials(parts[0]),
+        tuple.withGrantsAndDenials(parts[1]),
+    ];
+}
+
+/**
  * Separate mixed grant/deny bit strings into two tuples. Pure tuples — the
  * common case — are reused, and so is the input array when every tuple is pure.
  * `discardNonRelevantACDFTuples` copies whatever it keeps, so this does not
- * reorder the caller's array.
+ * reorder the caller's array. A mixed tuple found later in the list still keeps
+ * every pure tuple that preceded it.
  */
 function splitByGrantAndDenial (tuples: ACDFTupleExtended[]): ACDFTupleExtended[] {
     const count = tuples.length;
+    let split: ACDFTupleExtended[] | undefined;
     for (let i = 0; i < count; i++) {
-        if (splitGrantsAndDenials(tuples[i].grantsAndDenials).length === 2) {
-            const split: ACDFTupleExtended[] = [];
-            for (let j = 0; j < count; j++) {
-                const tuple = tuples[j];
-                const parts = splitGrantsAndDenials(tuple.grantsAndDenials);
-                if (parts.length === 1) {
-                    split.push(tuple);
-                } else {
-                    split.push(tuple.withGrantsAndDenials(parts[0]));
-                    split.push(tuple.withGrantsAndDenials(parts[1]));
-                }
-            }
-            return split;
+        const tuple = tuples[i];
+        const pair = grantAndDenialTuples(tuple);
+        if (!pair) {
+            split?.push(tuple);
+            continue;
         }
+        split ??= tuples.slice(0, i);
+        split.push(pair[0], pair[1]);
     }
-    return tuples;
+    return split ?? tuples;
 }
 
 function rankByProtectedItem (

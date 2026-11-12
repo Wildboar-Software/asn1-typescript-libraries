@@ -67,13 +67,11 @@ function itemIsProtected (
         ) {
             return true;
         }
-        const attributeTypes = protectedItems.attributeType;
-        if (attributeTypes) {
-            const typeCount = attributeTypes.length;
-            for (let i = 0; i < typeCount; i++) {
-                if (request.attributeType.isEqualTo(attributeTypes[i])) {
-                    return true;
-                }
+        const attributeTypes = protectedItems.attributeType ?? [];
+        const typeCount = attributeTypes.length;
+        for (let i = 0; i < typeCount; i++) {
+            if (request.attributeType.isEqualTo(attributeTypes[i])) {
+                return true;
             }
         }
         return (
@@ -81,13 +79,11 @@ function itemIsProtected (
             && !request.operational
         );
     } else if ("value" in request) {
-        const allAttributeValues = protectedItems.allAttributeValues;
-        if (allAttributeValues) {
-            const typeCount = allAttributeValues.length;
-            for (let i = 0; i < typeCount; i++) {
-                if (request.value.type_.isEqualTo(allAttributeValues[i])) {
-                    return true;
-                }
+        const allAttributeValues = protectedItems.allAttributeValues ?? [];
+        const allValueCount = allAttributeValues.length;
+        for (let i = 0; i < allValueCount; i++) {
+            if (request.value.type_.isEqualTo(allAttributeValues[i])) {
+                return true;
             }
         }
         if (
@@ -96,26 +92,24 @@ function itemIsProtected (
         ) {
             return true;
         }
-        const attributeValues = protectedItems.attributeValue;
-        if (attributeValues) {
-            const valueCount = attributeValues.length;
-            for (let i = 0; i < valueCount; i++) {
-                const av = attributeValues[i];
-                if (!request.value.type_.isEqualTo(av.type_)) {
-                    continue;
-                }
-                const matcher = settings.getEqualityMatcher(av.type_);
-                if (
-                    matcher
-                        ? matcher(av.value, request.value, settings.getEqualityMatcher) === true
-                        : compareElements(av.value, request.value.value)
-                ) {
-                    return true;
-                }
+        const attributeValues = protectedItems.attributeValue ?? [];
+        const valueCount = attributeValues.length;
+        for (let i = 0; i < valueCount; i++) {
+            const av = attributeValues[i];
+            if (!request.value.type_.isEqualTo(av.type_)) {
+                continue;
+            }
+            const matcher = settings.getEqualityMatcher(av.type_);
+            if (
+                matcher
+                    ? matcher(av.value, request.value, settings.getEqualityMatcher) === true
+                    : compareElements(av.value, request.value.value)
+            ) {
+                return true;
             }
         }
-        const selfValue = protectedItems.selfValue;
-        if (requester && selfValue) {
+        const selfValue = protectedItems.selfValue ?? [];
+        if (requester) {
             const selfCount = selfValue.length;
             let typeMatches = false;
             for (let i = 0; i < selfCount; i++) {
@@ -170,9 +164,25 @@ function itemIsProtected (
                 settings,
             )?.matched);
         }
-        // restrictedBy is not a selector. X.501 (2019) §18.4.2.4: it applies
-        // only when the permission sought is add, and it does not differentiate
-        // protected items for other permissions. Contexts are likewise not selectors.
+        // restrictedBy is supported, but not in this function.
+        /*
+        Kept commented out to clarify here that this field is not used in
+        determining whether the item is protected. ITU-T Recommendation
+        X.501 (2019), Section 18.4.2.4, states that:
+
+        "This is only relevant when the permission sought is add, and all
+        context assertions shall be satisfied. It does not provide for
+        general use of contexts to differentiate protected items for other
+        permissions."
+        */
+        // || (
+        //     contexts?.length
+        //     && protectedItems.contexts?.every((ca) => evaluateContextAssertion(
+        //         ca,
+        //         contexts,
+        //         settings.getContextMatcher,
+        //         settings.determineAbsentMatch,
+        //     )))
         return false;
     } else {
         return false; // For lack of knowing what to do.

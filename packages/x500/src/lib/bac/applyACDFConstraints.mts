@@ -110,7 +110,7 @@ function applyACDFConstraints (
         const restrictedBy = (addGranted && request.entryAttributes)
             ? (items.restrictedBy ?? [])
             : [];
-        const entryAttributes = request.entryAttributes;
+        const entryAttributes = request.entryAttributes ?? [];
         const restrictionCount = restrictedBy.length;
         for (let r = 0; r < restrictionCount; r++) {
             const restriction = restrictedBy[r];
@@ -127,36 +127,30 @@ function applyACDFConstraints (
                         settings.getEqualityMatcher,
                     ) === true
                     : compareElements(request.value.value, value);
-                if (entryAttributes) {
-                    const attributeCount = entryAttributes.length;
-                    for (let a = 0; a < attributeCount; a++) {
-                        const attribute = entryAttributes[a];
-                        if (!attribute.type_.isEqualTo(restriction.valuesIn)) {
-                            continue;
-                        }
-                        const values = attribute.values;
-                        const valueCount = values.length;
-                        for (let v = 0; v < valueCount; v++) {
-                            if (matchesStored(values[v])) {
-                                present = true;
-                                break;
-                            }
-                        }
-                        if (!present) {
-                            const contextual = attribute.valuesWithContext;
-                            if (contextual) {
-                                const contextCount = contextual.length;
-                                for (let c = 0; c < contextCount; c++) {
-                                    if (matchesStored(contextual[c].value)) {
-                                        present = true;
-                                        break;
-                                    }
-                                }
-                            }
-                        }
-                        if (present) {
+                const attributeCount = entryAttributes.length;
+                for (let a = 0; a < attributeCount; a++) {
+                    const attribute = entryAttributes[a];
+                    if (!attribute.type_.isEqualTo(restriction.valuesIn)) {
+                        continue;
+                    }
+                    const values = attribute.values;
+                    const valueCount = values.length;
+                    for (let v = 0; v < valueCount; v++) {
+                        if (matchesStored(values[v])) {
+                            present = true;
                             break;
                         }
+                    }
+                    const contextual = attribute.valuesWithContext ?? [];
+                    const contextCount = present ? 0 : contextual.length;
+                    for (let c = 0; c < contextCount; c++) {
+                        if (matchesStored(contextual[c].value)) {
+                            present = true;
+                            break;
+                        }
+                    }
+                    if (present) {
+                        break;
                     }
                 }
             } catch {

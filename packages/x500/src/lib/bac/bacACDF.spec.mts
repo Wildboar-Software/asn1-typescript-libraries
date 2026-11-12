@@ -780,7 +780,7 @@ describe("BAC permission splitting (H3)", () => {
 
 describe("BAC ranking", () => {
     function entryTuple (
-        precedence: number,
+        precedence: number | bigint,
         specificity: number,
         bits: number[],
     ): ACDFTupleExtended {
@@ -841,5 +841,43 @@ describe("BAC ranking", () => {
         expect(result.authorized).toBe(true);
         expect(result.relevantTuples[0]).toBe(tuples[0]);
         expect(result.relevantTuples[9]).toBe(tuples[9]);
+    });
+
+    it("keeps pure tuples that precede a mixed grant and denial", () => {
+        const earlier = entryTuple(10, 1, [ grantRead ]);
+        const mixed = entryTuple(5, 1, [ grantRead, denyRead ]);
+        const later = entryTuple(1, 1, [ grantRead ]);
+        const result = bacACDF([ earlier, mixed, later ], undefined, entryRequest, read, matchingSettings);
+
+        expect(result.relevantTuples[0]).toBe(earlier);
+        expect(result.relevantTuples).toHaveLength(4);
+        expect(result.relevantTuples[3]).toBe(later);
+        expect(result.authorized).toBe(true);
+    });
+
+    it("ranks an unsafe integer precedence beyond every safe precedence", () => {
+        const hugeDenial = entryTuple(BigInt(Number.MAX_SAFE_INTEGER) + 2n, 1, [ denyRead ]);
+        const ordinaryGrant = entryTuple(255, 1, [ grantRead ]);
+        const denied = bacACDF(
+            [ ordinaryGrant, hugeDenial ],
+            undefined,
+            entryRequest,
+            read,
+            matchingSettings,
+        );
+        expect(denied.authorized).toBe(false);
+        expect(denied.precedentTuples).toEqual([ hugeDenial ]);
+
+        const hugeNegativeDenial = entryTuple(BigInt(Number.MIN_SAFE_INTEGER) - 2n, 1, [ denyRead ]);
+        const weakestGrant = entryTuple(0, 1, [ grantRead ]);
+        const allowed = bacACDF(
+            [ hugeNegativeDenial, weakestGrant ],
+            undefined,
+            entryRequest,
+            read,
+            matchingSettings,
+        );
+        expect(allowed.authorized).toBe(true);
+        expect(allowed.precedentTuples).toEqual([ weakestGrant ]);
     });
 });

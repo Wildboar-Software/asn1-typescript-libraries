@@ -73,12 +73,37 @@ function discardNonRelevantACDFTuples (
     operations: number[],
     settings: EvaluateFilterSettings,
 ): ACDFTupleExtended[] {
-    // Authentication-level filtering is intentionally not done here. Callers
-    // do that once, before the ACDF, so the tuples passed in already apply to
-    // this user. ITU Recommendation X.501 (2016), Section 18.8.3, also says to
-    // retain denials whose authentication level is higher than the requestor's,
-    // because the requestor has not proved non-membership in that user class.
-    // That case is represented by the precomputed `userClassSpecificity`.
+    // This section was commented out entirely, because this should just be
+    // done once prior to calling the ACDF functions.
+    // .filter((tuple) => {
+    //     /**
+    //      * ITU Recommendation X.501 (2016), Section 18.8.3, states that
+    //      *
+    //      * > Also retain all tuples that deny access and which specify an
+    //      * > authentication level higher than that associated with the
+    //      * > requestor in accordance with 18.4.2.3. All other tuples that
+    //      * > deny access are discarded.
+    //      *
+    //      * The rationale for doing this is in the footnote right below it:
+    //      *
+    //      * > The second requirement [...]  reflects the fact that the
+    //      * > requestor has not adequately proved non-membership in the user
+    //      * > class for which the denial is specified.
+    //      *
+    //      * If the tuple denies access, we automatically consider it
+    //      * relevant, because it is the expectation of this function that all
+    //      * tuples supplied to the bacACDF function are relevant to the user.
+    //      */
+    //     if (deniesAccess(tuple.grantsAndDenials)) {
+    //         return true;
+    //     }
+    //     const aci = tuple.authenticationLevel;
+    //     if (!("basicLevels" in aci) || !("basicLevels" in authLevel)) {
+    //         return false; // We do not know how to compare EXTERNALs.
+    //     }
+    //     const authenticationLevelIsHigherThanRequester = authLevelHigher(aci.basicLevels, authLevel.basicLevels);
+    //     return !authenticationLevelIsHigherThanRequester;
+    // })
     const relevant: ACDFTupleExtended[] = [];
     const tupleCount = tuples.length;
     for (let i = 0; i < tupleCount; i++) {
