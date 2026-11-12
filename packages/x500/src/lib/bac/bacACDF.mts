@@ -172,13 +172,6 @@ function userClassKey (tuple: ACDFTupleExtended): number {
     return Math.floor(tuple.userClassSpecificity);
 }
 
-function sortDescendingInPlace (
-    items: ACDFTupleExtended[],
-    keyOf: (item: ACDFTupleExtended) => number,
-): void {
-    items.sort((a, b) => keyOf(b) - keyOf(a));
-}
-
 /**
  * `items` must already be ordered so the greatest key is at index 0, or every
  * key must be equal. Returns the leading run of that greatest key.
@@ -262,7 +255,7 @@ function rankByProtectedItem (
     const keyOf = (tuple: ACDFTupleExtended): number => (
         specificityOfProtectedItem(request, tuple.protectedItems)
     );
-    sortDescendingInPlace(copy, keyOf);
+    copy.sort((a, b) => keyOf(b) - keyOf(a));
     return takeHighest(copy, keyOf);
 }
 
@@ -306,7 +299,7 @@ function bacACDF (
     }
 
     // SORT BY PRECEDENCE
-    sortDescendingInPlace(relevantTuples, precedenceKey);
+    relevantTuples.sort((a, b) => precedenceKey(b) - precedenceKey(a));
     const tuplesThatSurvivedStage1 = takeHighest(relevantTuples, precedenceKey);
 
     if (tuplesThatSurvivedStage1.length <= 1) {
@@ -321,7 +314,7 @@ function bacACDF (
     }
 
     // SORT BY USER CLASS SPECIFICITY
-    sortDescendingInPlace(tuplesThatSurvivedStage1, userClassKey);
+    tuplesThatSurvivedStage1.sort((a, b) => userClassKey(b) - userClassKey(a));
     const tuplesThatSurvivedStage2 = takeHighest(tuplesThatSurvivedStage1, userClassKey);
 
     if (tuplesThatSurvivedStage2.length === 1) {
