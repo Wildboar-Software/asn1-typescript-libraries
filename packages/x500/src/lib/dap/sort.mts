@@ -10,8 +10,10 @@ import type {
     Attribute,
 } from "../modules/InformationFramework/Attribute.ta.mjs";
 import { AttributeTypeAndValue } from "../modules/InformationFramework/AttributeTypeAndValue.ta.mjs";
-import { asDITDescending } from "@wildboar/dn";
-import { getRDN } from "../utils/getRDN.mjs";
+import {
+    asDITDescending,
+    getRDNFromDITDescending as getRDN,
+} from "@wildboar/dn";
 
 /**
  * The least value of `values` under `orderer`. A negative result means the

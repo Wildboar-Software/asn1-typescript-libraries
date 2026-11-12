@@ -142,22 +142,23 @@ async function userWithinACIUserClass (
             }
         }
     }
-    if (
-        (userClass.subtree && (userClass.subtree.length > 0))
-        && userClass.subtree.some((subtree) => dnWithinSubtreeSpecification(
-            // A bound name is an X.500 distinguished name: DIT-descending.
-            asDITDescending(user.dn),
+    if (userClass.subtree && (userClass.subtree.length > 0)) {
+        // A bound name is an X.500 distinguished name: DIT-descending.
+        // ACI subtree specifications are always relative to the root.
+        const userDN = asDITDescending(user.dn);
+        const rootDN = asDITDescending([]);
+        if (userClass.subtree.some((subtree) => dnWithinSubtreeSpecification(
+            userDN,
             [], // ITU Recommendation X.501 specifically says: this subtree is to be unrefined.
             subtree,
-            // With ACIItems, the subtree is always relative to the root.
-            asDITDescending([]),
+            rootDN,
             getEqualityMatcher,
-        ))
-    ) {
-        if (couldNotDetermineGroupMembership) {
-            return 2.5;
+        ))) {
+            if (couldNotDetermineGroupMembership) {
+                return 2.5;
+            }
+            return 2;
         }
-        return 2;
     }
     if (userClass.allUsers === null) {
         if (couldNotDetermineGroupMembership) {
