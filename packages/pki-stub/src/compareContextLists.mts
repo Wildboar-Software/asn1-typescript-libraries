@@ -23,23 +23,30 @@ import { Buffer } from "node:buffer";
  * contexts must ALL be present and identical in the holder's attributes.
  * Contexts are not likely to see wide usage in attributes in PMI, but
  * 
- * @param a The first contexts list
+ * @param a The first contexts list. When both arguments are arrays, unequal
+ *  lengths return before sorting. An array is then read via `values()`, and
+ *  an iterator is read directly, so both share the comparison below.
  * @param b The second context list
  * @returns `true` if the context lists are the same
  * 
  * @function
  */
 export function compareContextLists(
-    a: Context[],
-    b: Context[],
+    a: Context[] | IterableIterator<Context>,
+    b: Context[] | IterableIterator<Context>,
 ): boolean {
-    if (a.length !== b.length) {
+    if (Array.isArray(a) && Array.isArray(b) && a.length !== b.length) {
         return false; // The contexts did not match exactly.
     }
-    const asorted = [ ...a ]
+    const aIterator = Array.isArray(a) ? a.values() : a;
+    const bIterator = Array.isArray(b) ? b.values() : b;
+    const asorted = [ ...aIterator ]
         .sort((a, b) => a.contextType.toString().localeCompare(b.contextType.toString()));
-    const bsorted = [ ...b ]
+    const bsorted = [ ...bIterator ]
         .sort((a, b) => a.contextType.toString().localeCompare(b.contextType.toString()));
+    if (asorted.length !== bsorted.length) {
+        return false; // The contexts did not match exactly.
+    }
     for (let i = 0; i < asorted.length; i++) {
         const ctxa = asorted[i];
         const ctxb = bsorted[i];

@@ -220,16 +220,18 @@ function readDirectoryString (
 
 /**
  * `PostalAddress`, `CaseIgnoreList`, a list of directory strings
- * and/or native strings, or the encoded SEQUENCE OF.
+ * and/or native strings, an iterator of those strings, or the encoded
+ * SEQUENCE OF.
  */
 export type DirectoryStringListInput =
     | ASN1Element
     | PostalAddress
     | CaseIgnoreList
-    | readonly (UnboundedDirectoryString | DirectoryString | string)[];
+    | readonly (UnboundedDirectoryString | DirectoryString | string)[]
+    | IterableIterator<UnboundedDirectoryString | DirectoryString | string>;
 
 /**
- * @param value Encoded list or an already-decoded list.
+ * @param value Encoded list, an already-decoded list, or an iterator of its elements.
  * @returns One string per list element, in order.
  */
 export
@@ -242,9 +244,10 @@ function readDirectoryStringList (value: DirectoryStringListInput): string[] {
         }
         return out;
     }
-    const out = new Array<string>(value.length);
-    for (let i = 0; i < value.length; i++) {
-        out[i] = readDirectoryString(value[i]);
+    const out: string[] = [];
+    const items = Array.isArray(value) ? value.values() : value;
+    for (const item of items) {
+        out.push(readDirectoryString(item));
     }
     return out;
 }
@@ -360,23 +363,27 @@ type SubstringAlternative<T> = {
     readonly control?: unknown;
 };
 
-/** Encoded `SubstringAssertion`, decoded items, or prepared pieces. */
+type SubstringAssertionItem =
+    | SubstringAssertion_Item
+    | PreparedSubstring
+    | SubstringAlternative<UnboundedDirectoryString | string>;
+
+/** Encoded `SubstringAssertion`, decoded items, prepared pieces, or an iterator of those. */
 export type SubstringAssertionInput =
     | ASN1Element
-    | readonly (
-        | SubstringAssertion_Item
-        | PreparedSubstring
-        | SubstringAlternative<UnboundedDirectoryString | string>
-    )[];
+    | readonly SubstringAssertionItem[]
+    | IterableIterator<SubstringAssertionItem>;
 
-/** Encoded `OctetSubstringAssertion`, decoded items, or byte pieces. */
+type OctetSubstringAssertionItem =
+    | OctetSubstringAssertion_Item
+    | PreparedOctetSubstring
+    | SubstringAlternative<Uint8Array>;
+
+/** Encoded `OctetSubstringAssertion`, decoded items, byte pieces, or an iterator of those. */
 export type OctetSubstringAssertionInput =
     | ASN1Element
-    | readonly (
-        | OctetSubstringAssertion_Item
-        | PreparedOctetSubstring
-        | SubstringAlternative<Uint8Array>
-    )[];
+    | readonly OctetSubstringAssertionItem[]
+    | IterableIterator<OctetSubstringAssertionItem>;
 
 /**
  * Normalize one substring CHOICE, whether the payload is characters
@@ -408,12 +415,14 @@ function readSubstringPiece<TIn, TOut> (
 }
 
 function readSubstringPieces<TIn, TOut> (
-    items: readonly (ASN1Element | PreparedSubstringPiece<TOut> | SubstringAlternative<TIn>)[],
+    items: readonly (ASN1Element | PreparedSubstringPiece<TOut> | SubstringAlternative<TIn>)[]
+        | IterableIterator<ASN1Element | PreparedSubstringPiece<TOut> | SubstringAlternative<TIn>>,
     convert: (component: TIn) => TOut,
 ): PreparedSubstringPiece<TOut>[] {
-    const out = new Array<PreparedSubstringPiece<TOut>>(items.length);
-    for (let i = 0; i < items.length; i++) {
-        out[i] = readSubstringPiece(items[i], convert);
+    const out: PreparedSubstringPiece<TOut>[] = [];
+    const iterator = Array.isArray(items) ? items.values() : items;
+    for (const item of iterator) {
+        out.push(readSubstringPiece(item, convert));
     }
     return out;
 }

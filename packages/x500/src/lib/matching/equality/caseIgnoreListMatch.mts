@@ -28,19 +28,19 @@ function decodeCaseIgnoreListMatchAssertion (el: ASN1Element): readonly string[]
  */
 export
 function normalizeCaseIgnoreListMatchAssertion (
-    lines: readonly string[],
+    lines: readonly string[] | IterableIterator<string>,
     el?: ASN1Element,
 ): readonly string[] {
-    const prepared = new Array<string>(lines.length);
-    for (let i = 0; i < lines.length; i++) {
-        const line = prepString(lines[i], { caseFold: true });
+    const prepared: string[] = [];
+    for (const raw of lines) {
+        const line = prepString(raw, { caseFold: true });
         if (line === undefined) {
             throw new ASN1CharactersError(
                 "caseIgnoreListMatch assertion failed string preparation",
                 el,
             );
         }
-        prepared[i] = line;
+        prepared.push(line);
     }
     return prepared;
 }

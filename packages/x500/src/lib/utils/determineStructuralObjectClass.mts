@@ -15,7 +15,8 @@ import {
  * If non-sense object classes are provided, the return value of this function
  * is undefined behavior.
  *
- * @param {OBJECT_IDENTIFIER[]} objectClasses The object classes the entry has
+ * @param {OBJECT_IDENTIFIER[] | IterableIterator<OBJECT_IDENTIFIER>} objectClasses The object classes the entry has.
+ *  An array or an iterator is read once.
  * @param {Function} getKind A function that can retrieve the object class kind
  *  by its object identifier
  * @param {Function} getSuperclasses A function that can retrieve an object
@@ -27,7 +28,7 @@ import {
  */
 export
 function determineStructuralObjectClass (
-    objectClasses: OBJECT_IDENTIFIER[],
+    objectClasses: OBJECT_IDENTIFIER[] | IterableIterator<OBJECT_IDENTIFIER>,
     getKind: (objectClass: OBJECT_IDENTIFIER) => ObjectClassKind | undefined | null,
     getSuperclasses: (objectClass: OBJECT_IDENTIFIER) => OBJECT_IDENTIFIER[],
 ): OBJECT_IDENTIFIER {

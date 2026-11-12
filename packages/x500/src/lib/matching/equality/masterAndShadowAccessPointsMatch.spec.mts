@@ -92,6 +92,11 @@ describe("masterAndShadowAccessPointsMatch", () => {
         const asserted = [ alice, bob, carol ];
         const stored = points([ carol, alice, bob ]);
         expect(masterAndShadowAccessPointsMatchTyped(asserted, stored)).toBe(true);
+        expect(masterAndShadowAccessPointsMatchTyped(asserted.values(), stored.values())).toBe(true);
+        expect(masterAndShadowAccessPointsMatchTyped(
+            [ alice ].values(),
+            points([ alice, bob ]).values(),
+        )).toBe(false);
         expect(masterAndShadowAccessPointsMatchTyped(
             asserted,
             stored,

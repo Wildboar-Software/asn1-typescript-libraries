@@ -126,4 +126,23 @@ describe("determineStructuralObjectClass", () => {
         const structuralObjectClass2 = determineStructuralObjectClass(objectClasses, getKind, getSuperclasses);
         expect(structuralObjectClass2.toString()).toBe(person["&id"].toString());
     });
+
+    it("reads object classes from an iterator", () => {
+        const getKind = () => ObjectClassKind_structural;
+        const getSuperclasses = (objectClass: OBJECT_IDENTIFIER) => {
+            if (objectClass.isEqualTo(organizationalPerson["&id"])) {
+                return [ person["&id"] ];
+            }
+            if (objectClass.isEqualTo(person["&id"])) {
+                return [ top["&id"] ];
+            }
+            return [ top["&id"] ];
+        };
+        const found = determineStructuralObjectClass(
+            [ top["&id"], person["&id"], organizationalPerson["&id"] ].values(),
+            getKind,
+            getSuperclasses,
+        );
+        expect(found.isEqualTo(organizationalPerson["&id"])).toBe(true);
+    });
 });

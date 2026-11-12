@@ -9,6 +9,8 @@ import {
 } from "./bacACDF.mjs";
 import { splitGrantsAndDenials } from "./splitGrantsAndDenials.mjs";
 import { applyACDFConstraints } from "./applyACDFConstraints.mjs";
+import { operationPermitted } from "./operationPermitted.mjs";
+import { discardNonRelevantACDFTuples } from "./discardNonRelevantACDFTuples.mjs";
 import { ProtectedItems } from "../modules/BasicAccessControl/ProtectedItems.ta.mjs";
 import {
     denyAdd,
@@ -775,5 +777,43 @@ describe("BAC permission splitting (H3)", () => {
             expect(result).toHaveLength(1);
             expect(result[0]).toBe(input); // Already-pure permissions reuse the original array.
         }
+    });
+
+    it("reads operations and tuples from iterators", () => {
+        const addGrant = new ACDFTupleExtended(
+            ALL_USERS,
+            AUTH_NONE,
+            Object.assign(new ProtectedItems(), {
+                allAttributeValues: [COMMON_NAME_TYPE],
+                _unrecognizedExtensionsList: [],
+            }),
+            permissions(grantAdd),
+            100,
+            1,
+        );
+        const valueRequest: ValueRequest = { value: ALICE_COMMON_NAME };
+        expect(operationPermitted(
+            [PERMISSION_CATEGORY_ADD].values(),
+            addGrant,
+            valueRequest,
+        )).toBe(true);
+        expect(operationPermitted(
+            [PERMISSION_CATEGORY_READ].values(),
+            addGrant,
+            valueRequest,
+        )).toBe(false);
+        expect(applyACDFConstraints(
+            addGrant,
+            valueRequest,
+            [PERMISSION_CATEGORY_ADD, PERMISSION_CATEGORY_IMPORT].values(),
+            matchingSettings,
+        )).toBe(addGrant);
+        expect(discardNonRelevantACDFTuples(
+            [addGrant].values(),
+            undefined,
+            valueRequest,
+            [PERMISSION_CATEGORY_ADD],
+            matchingSettings,
+        )).toHaveLength(1);
     });
 });

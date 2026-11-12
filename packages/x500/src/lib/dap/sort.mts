@@ -87,7 +87,8 @@ function valuesOfType (
  * Missing sort values compare greater than present values (X.511 clause 7.9).
  * If both entries lack a key, comparison continues with the next key.
  *
- * @param {SortKey[]} keys The keys by which to sort the entries.
+ * @param {SortKey[] | IterableIterator<SortKey>} keys The keys by which to sort the entries.
+ *  An array or an iterator is read once, in order.
  * @param {EntryInformation} a The entry that is compared to entry B.
  * @param {EntryInformation} b The entry that is compared to entry A.
  * @param {function} getOrderingFunction A function that takes an object
@@ -105,7 +106,7 @@ function valuesOfType (
  */
 export
 function sort (
-    keys: SortKey[],
+    keys: SortKey[] | IterableIterator<SortKey>,
     a: EntryInformation,
     b: EntryInformation,
     getOrderingFunction: (attrTypeOrMatchRuleOid: OBJECT_IDENTIFIER) => TypedOrderingFunction<ASN1Element> | undefined,

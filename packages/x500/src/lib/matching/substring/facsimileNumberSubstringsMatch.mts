@@ -107,7 +107,7 @@ function decodeFacsimileNumberSubstringsMatchFilterPieces (
  */
 export
 function normalizeFacsimileNumberSubstringsMatchAssertion (
-    assertion: AssertedSubstring<string>[],
+    assertion: readonly AssertedSubstring<string>[] | IterableIterator<AssertedSubstring<string>>,
     el?: ASN1Element,
 ): AssertedSubstring<string>[] {
     return normalizePieces(assertion, prepareTelephone, RULE, el);

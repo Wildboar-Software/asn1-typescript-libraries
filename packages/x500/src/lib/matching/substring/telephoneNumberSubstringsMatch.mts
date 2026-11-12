@@ -89,7 +89,7 @@ function decodeTelephoneNumberSubstringsMatchFilterPieces (
  */
 export
 function normalizeTelephoneNumberSubstringsMatchAssertion (
-    assertion: AssertedSubstring<string>[],
+    assertion: readonly AssertedSubstring<string>[] | IterableIterator<AssertedSubstring<string>>,
     el?: ASN1Element,
 ): AssertedSubstring<string>[] {
     return normalizePieces(assertion, prepareTelephone, RULE, el);

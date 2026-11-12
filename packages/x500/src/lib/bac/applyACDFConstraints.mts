@@ -39,7 +39,8 @@ function countWithinLimit (count: number | undefined, limit: INTEGER): boolean {
  * 
  * @param {ACDFTupleExtended} tuple - The ACDF tuple to apply constraints to.
  * @param {ProtectedItem} request - The request to apply constraints to.
- * @param {number[]} operations - The operations to apply constraints to.
+ * @param {number[] | IterableIterator<number>} operations - The operations to apply constraints to.
+ *  An array or an iterator is read once.
  * @param {EvaluateFilterSettings} settings - The settings to apply constraints to.
  * @returns {ACDFTupleExtended} The ACDF tuple with constraints applied.
  * @function
@@ -49,13 +50,20 @@ export
 function applyACDFConstraints (
     tuple: ACDFTupleExtended,
     request: ProtectedItem,
-    operations: number[],
+    operations: number[] | IterableIterator<number>,
     settings: EvaluateFilterSettings,
 ): ACDFTupleExtended {
     const items = tuple.protectedItems;
     let permissions = tuple.grantsAndDenials;
-    const adds = operations.includes(grantAdd / 2);
-    const imports = operations.includes(grantImport / 2);
+    let adds: boolean = false;
+    let imports: boolean = false;
+    for (const op of operations) {
+        if (op === grantAdd / 2) {
+            adds = true;
+        } else if (op === grantImport / 2) {
+            imports = true;
+        }
+    }
     const removePermission = (bit: number): void => {
         if (permissions[bit] !== TRUE_BIT) {
             // The bit is already FALSE, so there is nothing to do.

@@ -44,7 +44,7 @@ function operationRelevant (operations: number[], gad: GrantsAndDenials): boolea
  *
  * ### Parameters
  *
- * @param {ACDFTupleExtended[]} tuples The tuples of inputs to the ACDF as described in
+ * @param {ACDFTupleExtended[] | IterableIterator<ACDFTupleExtended>} tuples The tuples of inputs to the ACDF as described in
  *  ITU Recommendation X.501, Section 18.8.2 (`userClasses`,
  *  `authenticationLevel`, `protectedItems`, `grantsAndDenials`, `precedence`).
  * @param {ProtectedItem} request The thing that is being requested, which can
@@ -63,47 +63,25 @@ function operationRelevant (operations: number[], gad: GrantsAndDenials): boolea
  */
 export
 function discardNonRelevantACDFTuples (
-    tuples: ACDFTupleExtended[],
+    tuples: ACDFTupleExtended[] | IterableIterator<ACDFTupleExtended>,
     requester: NameAndOptionalUID | undefined | null,
     request: ProtectedItem,
     operations: number[],
     settings: EvaluateFilterSettings,
 ): ACDFTupleExtended[] {
-    return tuples
-        // This section was commented out entirely, because this should just be
-        // done once prior to calling the ACDF functions.
-        // .filter((tuple) => {
-        //     /**
-        //      * ITU Recommendation X.501 (2016), Section 18.8.3, states that
-        //      *
-        //      * > Also retain all tuples that deny access and which specify an
-        //      * > authentication level higher than that associated with the
-        //      * > requestor in accordance with 18.4.2.3. All other tuples that
-        //      * > deny access are discarded.
-        //      *
-        //      * The rationale for doing this is in the footnote right below it:
-        //      *
-        //      * > The second requirement [...]  reflects the fact that the
-        //      * > requestor has not adequately proved non-membership in the user
-        //      * > class for which the denial is specified.
-        //      *
-        //      * If the tuple denies access, we automatically consider it
-        //      * relevant, because it is the expectation of this function that all
-        //      * tuples supplied to the bacACDF function are relevant to the user.
-        //      */
-        //     if (deniesAccess(tuple.grantsAndDenials)) {
-        //         return true;
-        //     }
-        //     const aci = tuple.authenticationLevel;
-        //     if (!("basicLevels" in aci) || !("basicLevels" in authLevel)) {
-        //         return false; // We do not know how to compare EXTERNALs.
-        //     }
-        //     const authenticationLevelIsHigherThanRequester = authLevelHigher(aci.basicLevels, authLevel.basicLevels);
-        //     return !authenticationLevelIsHigherThanRequester;
-        // })
-        .filter((tuple) => itemIsProtected(request, tuple.protectedItems, requester, settings))
-        .map((tuple) => applyACDFConstraints(tuple, request, operations, settings))
-        .filter((tuple) => operationRelevant(operations, tuple.grantsAndDenials));
+    // Authentication-level filtering is applied once before this function.
+    // `operations` stays an array: each tuple consults it again.
+    const relevant: ACDFTupleExtended[] = [];
+    for (const tuple of tuples) {
+        if (!itemIsProtected(request, tuple.protectedItems, requester, settings)) {
+            continue;
+        }
+        const constrained = applyACDFConstraints(tuple, request, operations, settings);
+        if (operationRelevant(operations, constrained.grantsAndDenials)) {
+            relevant.push(constrained);
+        }
+    }
+    return relevant;
 }
 
 export default discardNonRelevantACDFTuples;

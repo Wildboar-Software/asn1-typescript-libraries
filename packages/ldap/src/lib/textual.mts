@@ -103,10 +103,12 @@ function isBytes(value: unknown): value is Uint8Array {
  * requires, even if the SEQUENCE lists them differently. Stars separate the
  * pieces; a missing side still contributes its star (`foo*`, `*bar`, `*baz*`).
  *
- * @param substrings The substring choices
+ * @param substrings The substring choices. An array or an iterator is read once.
  * @returns The RFC 4515 substring value
  */
-export function rfc4515Substrings(substrings: readonly object[]): string {
+export function rfc4515Substrings(
+    substrings: readonly object[] | IterableIterator<object>,
+): string {
     let initial: Uint8Array | undefined;
     const anys: Uint8Array[] = [];
     let final_: Uint8Array | undefined;
@@ -150,12 +152,12 @@ export function rfc4515Substrings(substrings: readonly object[]): string {
  * An RFC 4515 substring filter, including the surrounding parentheses.
  *
  * @param type_ The attribute description
- * @param substrings The substring choices
+ * @param substrings The substring choices. An array or an iterator is read once.
  * @returns The filter string
  */
 export function rfc4515SubstringFilter(
     type_: Uint8Array,
-    substrings: readonly object[],
+    substrings: readonly object[] | IterableIterator<object>,
 ): string {
     return `(${ldapString(type_)}=${rfc4515Substrings(substrings)})`;
 }
@@ -322,16 +324,18 @@ export function formatLdifAttribute(
  * values: LDIF has no spelling of a zero-value attribute.
  *
  * @param description The attribute description
- * @param values The values
+ * @param values The values. An array or an iterator is read once.
  * @returns The lines joined by `\n`, or `""`
  */
 export function formatLdifAttributes(
     description: string,
-    values: readonly Uint8Array[],
+    values: readonly Uint8Array[] | IterableIterator<Uint8Array>,
 ): string {
-    return values
-        .map((value) => formatLdifAttribute(description, value))
-        .join("\n");
+    const lines: string[] = [];
+    for (const value of values) {
+        lines.push(formatLdifAttribute(description, value));
+    }
+    return lines.join("\n");
 }
 
 /**

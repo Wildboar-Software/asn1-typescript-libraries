@@ -98,6 +98,11 @@ describe("periodSetsEquivalent()", () => {
         const monday = new Period(undefined, { intDay: [2] });
         const friday = new Period(undefined, { intDay: [6] });
         expect(periodSetsEquivalent([ monday, friday ], [ friday, monday ])).toBe(true);
+        expect(periodSetsEquivalent(
+            [ monday, friday ].values(),
+            [ friday, monday ].values(),
+        )).toBe(true);
+        expect(periodSetsEquivalent([ monday ].values(), [ monday, monday ].values())).toBe(false);
     });
 
     it("matches a BIT STRING encoding of one member against INTEGER in the other SET", () => {

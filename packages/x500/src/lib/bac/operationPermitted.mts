@@ -15,8 +15,8 @@ import { TRUE_BIT } from "@wildboar/asn1";
  * grants access and that none deny access.
  * Constraints must already have been applied by `discardNonRelevantACDFTuples`.
  * 
- * @param {number[]} operations - An array of `PERMISSION_CATEGORY_*` constants
- *  defined in `@wildboar/x500`.
+ * @param {number[] | IterableIterator<number>} operations - `PERMISSION_CATEGORY_*`
+ *  constants defined in `@wildboar/x500`. An array or an iterator is read once.
  * @param {ACDFTupleExtended} tuple - The Access Control Decision Function
  *  (ACDF) tuple.
  * @param {ProtectedItem} request 
@@ -25,7 +25,7 @@ import { TRUE_BIT } from "@wildboar/asn1";
  */
 export
 function operationPermitted (
-    operations: number[],
+    operations: number[] | IterableIterator<number>,
     tuple: ACDFTupleExtended,
     _request: ProtectedItem,
 ): boolean {
@@ -51,10 +51,19 @@ function operationPermitted (
     if (!Number.isSafeInteger(tuple.userClassSpecificity) && (tuple.userClassSpecificity < 1)) {
         return false;
     }
-    return (
-        operations.every((op) => gad[(op * 2)] === TRUE_BIT) // Every required "grant" bit is set.
-        && !operations.some((op) => gad[(op * 2) + 1] === TRUE_BIT) // None of the corresponding "deny" bits are set.
-    );
+    // One pass covers both the grant bits and the deny bits. An empty
+    // list permits, matching `every` on an empty array.
+    let allGranted: boolean = true;
+    let anyDenied: boolean = false;
+    for (const op of operations) {
+        if (gad[(op * 2)] !== TRUE_BIT) {
+            allGranted = false;
+        }
+        if (gad[(op * 2) + 1] === TRUE_BIT) {
+            anyDenied = true;
+        }
+    }
+    return allGranted && !anyDenied;
 }
 
 export default operationPermitted;

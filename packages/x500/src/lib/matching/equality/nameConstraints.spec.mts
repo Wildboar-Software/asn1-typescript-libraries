@@ -16,6 +16,7 @@ describe("name-constraint failure handling (H7)", () => {
         outside[3] = 0xb9;
         const constraints = new NameConstraintsSyntax([new GeneralSubtree({ iPAddress: prefix })]);
         expect(namesWithinNameConstraints([{ iPAddress: inside }], constraints)).toBe(true);
+        expect(namesWithinNameConstraints([{ iPAddress: inside }].values(), constraints)).toBe(true);
         expect(namesWithinNameConstraints([{ iPAddress: outside }], constraints)).toBe(false);
     });
 
