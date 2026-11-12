@@ -777,3 +777,107 @@ describe("BAC permission splitting (H3)", () => {
         }
     });
 });
+
+describe("BAC ranking", () => {
+    function entryTuple (
+        precedence: number | bigint,
+        specificity: number,
+        bits: number[],
+    ): ACDFTupleExtended {
+        return new ACDFTupleExtended(
+            ALL_USERS,
+            AUTH_NONE,
+            Object.assign(new ProtectedItems(), {
+                entry: null,
+                _unrecognizedExtensionsList: [],
+            }),
+            permissions(...bits),
+            precedence,
+            specificity,
+        );
+    }
+
+    const entryRequest: ProtectedItem = { entry: [] };
+    const read = [ PERMISSION_CATEGORY_READ ];
+
+    it("does not reorder the caller's tuples and keeps equal precedences stable", () => {
+        const low = entryTuple(10, 1, [ grantRead ]);
+        const highFirst = entryTuple(50, 1, [ grantRead ]);
+        const mid = entryTuple(30, 1, [ grantRead ]);
+        const highSecond = entryTuple(50, 4, [ grantRead ]);
+        const input = [ low, highFirst, mid, highSecond ];
+        const result = bacACDF(input, undefined, entryRequest, read, matchingSettings);
+
+        expect(input.map((tuple) => tuple.precedence)).toEqual([ 10, 50, 30, 50 ]);
+        expect(result.relevantTuples.map((tuple) => tuple.userClassSpecificity)).toEqual([ 1, 4, 1, 1 ]);
+        expect(result.relevantTuples[0]).toBe(highFirst);
+        expect(result.relevantTuples[1]).toBe(highSecond);
+        expect(result.mostUserSpecificTuples).toEqual([ highSecond ]);
+        expect(result.authorized).toBe(true);
+    });
+
+    it("ranks more than eight tuples by descending precedence", () => {
+        const precedences = [ 3, 9, 1, 8, 2, 7, 4, 6, 5, 0 ];
+        const tuples = precedences.map((precedence) => entryTuple(
+            precedence,
+            1,
+            precedence === 9 ? [ denyRead ] : [ grantRead ],
+        ));
+        const inputOrder = tuples.slice();
+        const result = bacACDF(tuples, undefined, entryRequest, read, matchingSettings);
+
+        expect(tuples).toEqual(inputOrder);
+        expect(result.relevantTuples.map((tuple) => tuple.precedence)).toEqual(
+            [ 9, 8, 7, 6, 5, 4, 3, 2, 1, 0 ],
+        );
+        expect(result.authorized).toBe(false);
+        expect(result.precedentTuples).toEqual([ result.relevantTuples[0] ]);
+    });
+
+    it("reuses pure tuples when every precedence is the same", () => {
+        const tuples = [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 ].map(() => entryTuple(40, 1, [ grantRead ]));
+        const result = bacACDF(tuples, undefined, entryRequest, read, matchingSettings);
+
+        expect(result.authorized).toBe(true);
+        expect(result.relevantTuples[0]).toBe(tuples[0]);
+        expect(result.relevantTuples[9]).toBe(tuples[9]);
+    });
+
+    it("keeps pure tuples that precede a mixed grant and denial", () => {
+        const earlier = entryTuple(10, 1, [ grantRead ]);
+        const mixed = entryTuple(5, 1, [ grantRead, denyRead ]);
+        const later = entryTuple(1, 1, [ grantRead ]);
+        const result = bacACDF([ earlier, mixed, later ], undefined, entryRequest, read, matchingSettings);
+
+        expect(result.relevantTuples[0]).toBe(earlier);
+        expect(result.relevantTuples).toHaveLength(4);
+        expect(result.relevantTuples[3]).toBe(later);
+        expect(result.authorized).toBe(true);
+    });
+
+    it("ranks an unsafe integer precedence beyond every safe precedence", () => {
+        const hugeDenial = entryTuple(BigInt(Number.MAX_SAFE_INTEGER) + 2n, 1, [ denyRead ]);
+        const ordinaryGrant = entryTuple(255, 1, [ grantRead ]);
+        const denied = bacACDF(
+            [ ordinaryGrant, hugeDenial ],
+            undefined,
+            entryRequest,
+            read,
+            matchingSettings,
+        );
+        expect(denied.authorized).toBe(false);
+        expect(denied.precedentTuples).toEqual([ hugeDenial ]);
+
+        const hugeNegativeDenial = entryTuple(BigInt(Number.MIN_SAFE_INTEGER) - 2n, 1, [ denyRead ]);
+        const weakestGrant = entryTuple(0, 1, [ grantRead ]);
+        const allowed = bacACDF(
+            [ hugeNegativeDenial, weakestGrant ],
+            undefined,
+            entryRequest,
+            read,
+            matchingSettings,
+        );
+        expect(allowed.authorized).toBe(true);
+        expect(allowed.precedentTuples).toEqual([ weakestGrant ]);
+    });
+});

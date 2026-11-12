@@ -123,6 +123,8 @@ interface BACACDFReturn extends ACDFReturn {
  * **Performance Tip: Ensure that all precedence values for all ACI items are
  * unique to avoid the more computationally-expensive code paths.**
  *
+ * Array walks below are indexed loops. Ranking uses `Array.prototype.sort`.
+ *
  * ### Compliance
  *
  * Constraints are evaluated before precedence and specificity. Requests must
@@ -152,6 +154,110 @@ interface BACACDFReturn extends ACDFReturn {
  *
  * @function
  */
+
+function precedenceKey (tuple: ACDFTupleExtended): number {
+    const precedence = Number(tuple.precedence);
+    // Values outside the safe-integer range do not survive `Number()` with
+    // their order intact. Collapse each side to one infinity so a huge
+    // extension precedence still outranks every ordinary 0..255 value.
+    if (Number.isSafeInteger(precedence)) {
+        return precedence;
+    }
+    return precedence < 0 ? Number.NEGATIVE_INFINITY : Number.POSITIVE_INFINITY;
+}
+
+function userClassKey (tuple: ACDFTupleExtended): number {
+    // Must be floored. Search for: 1E9DC3EB-E3DB-4CFA-A7BE-B86342F7EF75
+    return Math.floor(tuple.userClassSpecificity);
+}
+
+/**
+ * `items` must already be ordered so the greatest key is at index 0, or every
+ * key must be equal. Returns the leading run of that greatest key.
+ */
+function takeHighest (
+    items: ACDFTupleExtended[],
+    keyOf: (item: ACDFTupleExtended) => number,
+): ACDFTupleExtended[] {
+    const count = items.length;
+    const highest = keyOf(items[0]);
+    let end = 1;
+    while ((end < count) && (keyOf(items[end]) === highest)) {
+        end++;
+    }
+    return (end === count) ? items : items.slice(0, end);
+}
+
+function everyPermitted (
+    operations: number[],
+    tuples: ACDFTupleExtended[],
+    request: ProtectedItem,
+): boolean {
+    const count = tuples.length;
+    for (let i = 0; i < count; i++) {
+        if (!operationPermitted(operations, tuples[i], request)) {
+            return false;
+        }
+    }
+    return true;
+}
+
+/**
+ * A mixed grant/deny bit string becomes one grant tuple and one denial tuple.
+ * A pure bit string has no pair.
+ */
+function grantAndDenialTuples (
+    tuple: ACDFTupleExtended,
+): [ ACDFTupleExtended, ACDFTupleExtended ] | undefined {
+    const parts = splitGrantsAndDenials(tuple.grantsAndDenials);
+    if (parts.length === 1) {
+        return undefined;
+    }
+    return [
+        tuple.withGrantsAndDenials(parts[0]),
+        tuple.withGrantsAndDenials(parts[1]),
+    ];
+}
+
+/**
+ * Separate mixed grant/deny bit strings into two tuples. Pure tuples — the
+ * common case — are reused, and so is the input array when every tuple is pure.
+ * `discardNonRelevantACDFTuples` copies whatever it keeps, so this does not
+ * reorder the caller's array. A mixed tuple found later in the list still keeps
+ * every pure tuple that preceded it.
+ */
+function splitByGrantAndDenial (tuples: ACDFTupleExtended[]): ACDFTupleExtended[] {
+    const count = tuples.length;
+    let split: ACDFTupleExtended[] | undefined;
+    for (let i = 0; i < count; i++) {
+        const tuple = tuples[i];
+        const pair = grantAndDenialTuples(tuple);
+        if (!pair) {
+            split?.push(tuple);
+            continue;
+        }
+        split ??= tuples.slice(0, i);
+        split.push(pair[0], pair[1]);
+    }
+    return split ?? tuples;
+}
+
+function rankByProtectedItem (
+    tuples: ACDFTupleExtended[],
+    request: ProtectedItem,
+): ACDFTupleExtended[] {
+    const count = tuples.length;
+    const copy = new Array<ACDFTupleExtended>(count);
+    for (let i = 0; i < count; i++) {
+        copy[i] = tuples[i];
+    }
+    const keyOf = (tuple: ACDFTupleExtended): number => (
+        specificityOfProtectedItem(request, tuple.protectedItems)
+    );
+    copy.sort((a, b) => keyOf(b) - keyOf(a));
+    return takeHighest(copy, keyOf);
+}
+
 export
 function bacACDF (
     tuples: ACDFTupleExtended[],
@@ -163,9 +269,7 @@ function bacACDF (
 ): BACACDFReturn {
     const tuplesSplitByGrantOrDenial = tuplesAlreadySplit
         ? tuples
-        : tuples
-            .flatMap((tuple) => splitGrantsAndDenials(tuple.grantsAndDenials)
-                .map((gad) => tuple.withGrantsAndDenials(gad)));
+        : splitByGrantAndDenial(tuples);
     const relevantTuples: ACDFTupleExtended[] = discardNonRelevantACDFTuples(
         tuplesSplitByGrantOrDenial,
         requester,
@@ -185,14 +289,17 @@ function bacACDF (
             relevantTuples,
         };
     }
+    if (relevantTuples.length === 1) {
+        return {
+            authorized: operationPermitted(operations, relevantTuples[0], request),
+            relevantTuples,
+            precedentTuples: relevantTuples,
+        };
+    }
 
     // SORT BY PRECEDENCE
-    const sortedByDescendingPrecedence = relevantTuples.sort((a, b) => Number(b.precedence) - Number(a.precedence));
-    const highestPrecedence = sortedByDescendingPrecedence[0].precedence;
-    const betaIndex = sortedByDescendingPrecedence.findIndex((t) => (t.precedence < highestPrecedence));
-    const tuplesThatSurvivedStage1 = (betaIndex < 0)
-        ? sortedByDescendingPrecedence // All were of the same precedence.
-        : sortedByDescendingPrecedence.slice(0, betaIndex); // Select the most precedent.
+    relevantTuples.sort((a, b) => precedenceKey(b) - precedenceKey(a));
+    const tuplesThatSurvivedStage1 = takeHighest(relevantTuples, precedenceKey);
 
     if (tuplesThatSurvivedStage1.length <= 1) {
         return {
@@ -206,19 +313,12 @@ function bacACDF (
     }
 
     // SORT BY USER CLASS SPECIFICITY
-    const sortedByDescendingUserClassSpecificity: ACDFTupleExtended[] = tuplesThatSurvivedStage1
-        .sort((a, b) => Math.floor(b.userClassSpecificity) - Math.floor(a.userClassSpecificity)); // Must be floored. Search for: 1E9DC3EB-E3DB-4CFA-A7BE-B86342F7EF75
-    const highestUserClassSpecificity: number = Math.floor(sortedByDescendingUserClassSpecificity[0].userClassSpecificity);
-    const charlieIndex = sortedByDescendingUserClassSpecificity
-        .findIndex((t) => (Math.floor(t.userClassSpecificity) < highestUserClassSpecificity));
-    const tuplesThatSurvivedStage2: ACDFTupleExtended[] = ((charlieIndex < 0)
-        ? sortedByDescendingUserClassSpecificity // All were of the same specificity.
-        : sortedByDescendingUserClassSpecificity.slice(0, charlieIndex)); // Select the most specific.
+    tuplesThatSurvivedStage1.sort((a, b) => userClassKey(b) - userClassKey(a));
+    const tuplesThatSurvivedStage2 = takeHighest(tuplesThatSurvivedStage1, userClassKey);
 
     if (tuplesThatSurvivedStage2.length === 1) {
         return {
-            authorized: tuplesThatSurvivedStage2
-                .every((tuple) => operationPermitted(operations, tuple, request)),
+            authorized: operationPermitted(operations, tuplesThatSurvivedStage2[0], request),
             relevantTuples,
             precedentTuples: tuplesThatSurvivedStage1,
             mostUserSpecificTuples: tuplesThatSurvivedStage2,
@@ -226,23 +326,10 @@ function bacACDF (
     }
 
     // SORT BY PROTECTED ITEM SPECIFICITY
-    const sortedByDescedingProtectedItemSpecificity: [ ACDFTupleExtended, number ][] = tuplesThatSurvivedStage2
-        .map((tuple): [ ACDFTupleExtended, number ] => [
-            tuple,
-            specificityOfProtectedItem(request, tuple.protectedItems),
-        ])
-        .sort((a, b) => b[1] - a[1]);
-    const highestProtectedItemSpecificity: number = sortedByDescedingProtectedItemSpecificity[0][1];
-    const deltaIndex = sortedByDescedingProtectedItemSpecificity
-        .findIndex((t) => (t[1] < highestProtectedItemSpecificity));
-    const tuplesThatSurvivedStage3: ACDFTupleExtended[] = ((deltaIndex < 0)
-        ? sortedByDescedingProtectedItemSpecificity // All were of the same specificity.
-        : sortedByDescedingProtectedItemSpecificity.slice(0, deltaIndex)) // Select the most specific.
-        .map(([ tuple, ]) => tuple);
+    const tuplesThatSurvivedStage3 = rankByProtectedItem(tuplesThatSurvivedStage2, request);
 
     return {
-        authorized: tuplesThatSurvivedStage3
-            .every((tuple) => operationPermitted(operations, tuple, request)),
+        authorized: everyPermitted(operations, tuplesThatSurvivedStage3, request),
         relevantTuples,
         precedentTuples: tuplesThatSurvivedStage1,
         mostUserSpecificTuples: tuplesThatSurvivedStage2,
