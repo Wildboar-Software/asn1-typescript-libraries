@@ -87,16 +87,14 @@ function applyACDFConstraints (
     // attribute-value additions specified by X.501.
     if (adds && addGranted && (("value" in request) || ("attributeType" in request))) {
         const type = ("value" in request) ? request.value.type_ : request.attributeType;
-        const limits = items.maxValueCount;
-        if (limits) {
-            for (let i = 0; i < limits.length; i++) {
-                const constraint = limits[i];
-                if (
-                    constraint.type_.isEqualTo(type)
-                    && !countWithinLimit(request.valuesCount, constraint.maxCount)
-                ) {
-                    removePermission(grantAdd);
-                }
+        const limits = items.maxValueCount ?? [];
+        for (let i = 0; i < limits.length; i++) {
+            const constraint = limits[i];
+            if (
+                constraint.type_.isEqualTo(type)
+                && !countWithinLimit(request.valuesCount, constraint.maxCount)
+            ) {
+                removePermission(grantAdd);
             }
         }
     }
