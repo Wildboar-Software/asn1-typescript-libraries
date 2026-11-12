@@ -13,6 +13,7 @@ import {
     _encode_Attribute_valuesWithContext_Item as _encode_VWC,
 } from "../InformationFramework/Attribute-valuesWithContext-Item.ta.mjs";
 import type { Attribute_valuesWithContext_ItemJSON } from "../InformationFramework/Attribute-valuesWithContext-Item.ta.mjs";
+import type { AttributeTypeAndValue } from "../PKI-Stub/AttributeTypeAndValue.ta.mjs";
 
 /**
  * JSON Encoding Rules encoding of {@link Attribute}.
@@ -229,6 +230,52 @@ export class Attribute {
                 ? valuesWithContext
                 : undefined,
         );
+    }
+
+    /**
+     * @summary Convert an AttributeTypeAndValue to an Attribute.
+     * @description
+     *
+     * This converts an `AttributeTypeAndValue` to an `Attribute` with a single
+     * value.
+     *
+     * @param {AttributeTypeAndValue} atav The AttributeTypeAndValue to convert.
+     * @returns {Attribute} The converted `Attribute`.
+     * @public
+     * @static
+     * @method
+     */
+    public static fromATAV (atav: AttributeTypeAndValue): Attribute {
+        return new Attribute(
+            atav.type_,
+            [atav.value],
+            undefined,
+        );
+    }
+
+    /**
+     * @summary Convert an entry information item to an attribute.
+     * @description
+     *
+     * This converts an entry information item to an attribute.
+     *
+     * @param item The entry information item to convert.
+     * @returns The converted `Attribute`, or `undefined` if the item is not a
+     *  recognized entry information item variant.
+     * @public
+     * @static
+     * @method
+     */
+    public static fromEntryInfoItem (
+        item: { attribute: Attribute } | { attributeType: OBJECT_IDENTIFIER } | _Element
+    ): Attribute | undefined {
+        if ("attribute" in item) {
+            return item.attribute;
+        }
+        if ("attributeType" in item) {
+            return new Attribute(item.attributeType, []);
+        }
+        return undefined;
     }
 }
 
