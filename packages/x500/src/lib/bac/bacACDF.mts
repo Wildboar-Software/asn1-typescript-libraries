@@ -124,7 +124,6 @@ interface BACACDFReturn extends ACDFReturn {
  * unique to avoid the more computationally-expensive code paths.**
  *
  * Array walks below are indexed loops. Ranking uses `Array.prototype.sort`.
- * See `bacACDF.bench.mts`.
  *
  * ### Compliance
  *
