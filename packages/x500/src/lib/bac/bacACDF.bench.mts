@@ -184,57 +184,6 @@ function attributeTypeWithSome (
     );
 }
 
-type Keyed = { key: number; id: number };
-
-/** Insertion sort used for lists of at most eight. Same comparison as bacACDF. */
-function insertionSortDescending (items: Keyed[]): void {
-    const count = items.length;
-    const keys = new Float64Array(count);
-    for (let i = 0; i < count; i++) {
-        keys[i] = items[i].key;
-    }
-    for (let i = 1; i < count; i++) {
-        const item = items[i];
-        const key = keys[i];
-        let j = i - 1;
-        while ((j >= 0) && (keys[j] < key)) {
-            items[j + 1] = items[j];
-            keys[j + 1] = keys[j];
-            j--;
-        }
-        items[j + 1] = item;
-        keys[j + 1] = key;
-    }
-}
-
-function nativeSortDescending (items: Keyed[]): void {
-    items.sort((a, b) => b.key - a.key);
-}
-
-function keyed (count: number): Keyed[] {
-    const items = new Array<Keyed>(count);
-    for (let i = 0; i < count; i++) {
-        items[i] = { key: (i * 17) % Math.max(count, 1), id: i };
-    }
-    return items;
-}
-
-function copyKeyed (source: Keyed[]): Keyed[] {
-    const items = new Array<Keyed>(source.length);
-    for (let i = 0; i < source.length; i++) {
-        items[i] = source[i];
-    }
-    return items;
-}
-
-function idsOf (items: Keyed[]): string {
-    let out = "";
-    for (let i = 0; i < items.length; i++) {
-        out += `${items[i].id},`;
-    }
-    return out;
-}
-
 const PURE_GRANT = permissions(grantRead);
 const PURE_DENY = permissions(denyRead);
 const MIXED = permissions(grantRead, denyRead);
@@ -440,52 +389,6 @@ describe("bacACDF", () => {
             }),
         );
         expect(result.get(AFTER)).toBeFasterThan(result.get(BEFORE));
-    });
-});
-
-describe("ranking sort", () => {
-    test("8 keys: insertion sort is faster than Array.sort", async ({ bench }) => {
-        const source = keyed(8);
-        const inserted = copyKeyed(source);
-        const native = copyKeyed(source);
-        insertionSortDescending(inserted);
-        nativeSortDescending(native);
-        expect(idsOf(inserted)).toBe(idsOf(native));
-        const result = await bench.compare(
-            bench("Array.sort", () => {
-                const copy = copyKeyed(source);
-                nativeSortDescending(copy);
-                sink += copy.length;
-            }),
-            bench("insertion sort", () => {
-                const copy = copyKeyed(source);
-                insertionSortDescending(copy);
-                sink += copy.length;
-            }),
-        );
-        expect(result.get("insertion sort")).toBeFasterThan(result.get("Array.sort"));
-    });
-
-    test("256 keys: Array.sort is faster than insertion sort", async ({ bench }) => {
-        const source = keyed(256);
-        const inserted = copyKeyed(source);
-        const native = copyKeyed(source);
-        insertionSortDescending(inserted);
-        nativeSortDescending(native);
-        expect(idsOf(inserted)).toBe(idsOf(native));
-        const result = await bench.compare(
-            bench("insertion sort", () => {
-                const copy = copyKeyed(source);
-                insertionSortDescending(copy);
-                sink += copy.length;
-            }),
-            bench("Array.sort", () => {
-                const copy = copyKeyed(source);
-                nativeSortDescending(copy);
-                sink += copy.length;
-            }),
-        );
-        expect(result.get("Array.sort")).toBeFasterThan(result.get("insertion sort"));
     });
 });
 

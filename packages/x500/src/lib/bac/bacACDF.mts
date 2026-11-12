@@ -123,10 +123,8 @@ interface BACACDFReturn extends ACDFReturn {
  * **Performance Tip: Ensure that all precedence values for all ACI items are
  * unique to avoid the more computationally-expensive code paths.**
  *
- * Array walks below are indexed loops. Ranking lists of at most eight tuples
- * uses insertion sort, which is faster than `Array.prototype.sort` at that
- * size; longer lists still use `Array.prototype.sort`. A ranking key that is
- * the same on every tuple is not sorted. See `bacACDF.bench.mts`.
+ * Array walks below are indexed loops. Ranking uses `Array.prototype.sort`.
+ * See `bacACDF.bench.mts`.
  *
  * ### Compliance
  *
@@ -158,12 +156,6 @@ interface BACACDFReturn extends ACDFReturn {
  * @function
  */
 
-/**
- * Insertion sort beats `Array.prototype.sort` for the tuple lists at or below
- * this length, and loses above it. Measured in `bacACDF.bench.mts`.
- */
-const INSERTION_RANK_LIMIT: number = 8;
-
 function precedenceKey (tuple: ACDFTupleExtended): number {
     const precedence = Number(tuple.precedence);
     // Values outside the safe-integer range do not survive `Number()` with
@@ -180,49 +172,11 @@ function userClassKey (tuple: ACDFTupleExtended): number {
     return Math.floor(tuple.userClassSpecificity);
 }
 
-/**
- * Stable descending sort. Uniform keys are left in place: a stable sort would
- * not reorder them, and skipping the sort is the faster equivalent.
- */
 function sortDescendingInPlace (
     items: ACDFTupleExtended[],
     keyOf: (item: ACDFTupleExtended) => number,
 ): void {
-    const count = items.length;
-    if (count < 2) {
-        return;
-    }
-    const first = keyOf(items[0]);
-    for (let i = 1; i < count; i++) {
-        if (keyOf(items[i]) === first) {
-            continue;
-        }
-        if (count > INSERTION_RANK_LIMIT) {
-            items.sort((a, b) => keyOf(b) - keyOf(a));
-            return;
-        }
-        const keys = new Float64Array(count);
-        for (let k = 0; k < i; k++) {
-            keys[k] = first;
-        }
-        keys[i] = keyOf(items[i]);
-        for (let k = i + 1; k < count; k++) {
-            keys[k] = keyOf(items[k]);
-        }
-        for (let n = 1; n < count; n++) {
-            const item = items[n];
-            const key = keys[n];
-            let j = n - 1;
-            while ((j >= 0) && (keys[j] < key)) {
-                items[j + 1] = items[j];
-                keys[j + 1] = keys[j];
-                j--;
-            }
-            items[j + 1] = item;
-            keys[j + 1] = key;
-        }
-        return;
-    }
+    items.sort((a, b) => keyOf(b) - keyOf(a));
 }
 
 /**
