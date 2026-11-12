@@ -146,6 +146,23 @@ export class Context {
         }
         return json;
     }
+
+    /**
+     * @summary Whether this context has no values.
+     * @description
+     *
+     * `contextValues` is a `SET SIZE (1..MAX)` in a valid encoding.
+     * A constructed context may still have none. Empty when that set
+     * has no members. `fallback` and unrecognized extensions are not
+     * values, so they do not count.
+     *
+     * @public
+     * @method
+     * @returns {boolean} `true` if there are no context values.
+     */
+    public isEmpty(): boolean {
+        return this.contextValues.length === 0;
+    }
 }
 
 /**

@@ -34,7 +34,6 @@ import {
     asDITDescending,
     rdnSequenceToJSON,
     rdnSequenceToString,
-    type DistinguishedName,
     type RDNSequenceDescending,
     type RDNSequenceJSON,
 } from "@wildboar/dn";
@@ -403,8 +402,9 @@ export class SubtreeSpecification implements ChopSpecification {
      *  specification. Defaults to the DIT root.
      * @param {RDNSequenceDescending} otherRoot Context prefix of
      *  `other`. Defaults to the DIT root.
-     * @returns {[SubtreeSpecification, DistinguishedName] | null} The
-     *  overlap and its base distinguished name, or `null`.
+     * @returns {[SubtreeSpecification, RDNSequenceDescending] | null} The
+     *  overlap and its base distinguished name, in DIT-descending
+     *  order, or `null`.
      * @function
      * @public
      */
@@ -415,7 +415,7 @@ export class SubtreeSpecification implements ChopSpecification {
         ) => EqualityMatcher | undefined,
         root: RDNSequenceDescending = asDITDescending([]),
         otherRoot: RDNSequenceDescending = asDITDescending([]),
-    ): [SubtreeSpecification, DistinguishedName] | null {
+    ): [SubtreeSpecification, RDNSequenceDescending] | null {
         return subtreeIntersection(
             getEqualityMatcher,
             this,
