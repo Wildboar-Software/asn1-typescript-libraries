@@ -120,45 +120,52 @@ async function userWithinACIUserClass (
     ) {
         return 4;
     }
-    if (
-        (userClass.name && (userClass.name.length > 0))
-        && (userClass.name.some((n) => (
-            compareRDNSequence(user.dn, n.dn, valueEqualityMatcher(getEqualityMatcher))
+    const names = userClass.name ?? [];
+    const matchName = valueEqualityMatcher(getEqualityMatcher);
+    const nameCount = names.length;
+    for (let i = 0; i < nameCount; i++) {
+        const named = names[i];
+        if (
+            compareRDNSequence(user.dn, named.dn, matchName)
             && (
-                !n.uid // If there is no uid, all entries with this name are relevant.
-                || (user.uid && compareBitStrings(user.uid, n.uid))
+                !named.uid // If there is no uid, all entries with this name are relevant.
+                || (user.uid && compareBitStrings(user.uid, named.uid))
             )
-        )))
-    ) {
-        return 4;
-    }
-    if (userClass.userGroup && (userClass.userGroup.length > 0)) {
-        for (const ug of userClass.userGroup) {
-            const isMember = await isMemberOfGroup(ug, user);
-            if (isMember === undefined) {
-                couldNotDetermineGroupMembership = true;
-            } else if (isMember) {
-                return 3;
-            }
+        ) {
+            return 4;
         }
     }
-    if (userClass.subtree && (userClass.subtree.length > 0)) {
-        // A bound name is an X.500 distinguished name: DIT-descending.
-        // ACI subtree specifications are always relative to the root.
-        const userDN = asDITDescending(user.dn);
-        const rootDN = asDITDescending([]);
-        if (userClass.subtree.some((subtree) => dnWithinSubtreeSpecification(
+    const groups = userClass.userGroup ?? [];
+    const groupCount = groups.length;
+    for (let i = 0; i < groupCount; i++) {
+        const isMember = await isMemberOfGroup(groups[i], user);
+        if (isMember === undefined) {
+            couldNotDetermineGroupMembership = true;
+        } else if (isMember) {
+            return 3;
+        }
+    }
+    const subtrees = userClass.subtree ?? [];
+    const subtreeCount = subtrees.length;
+    // A bound name is an X.500 distinguished name: DIT-descending.
+    // ACI subtree specifications are always relative to the root.
+    const userDN = asDITDescending(user.dn);
+    const rootDN = asDITDescending([]);
+    let inSubtree = false;
+    for (let i = 0; i < subtreeCount; i++) {
+        if (dnWithinSubtreeSpecification(
             userDN,
             [], // ITU Recommendation X.501 specifically says: this subtree is to be unrefined.
-            subtree,
+            subtrees[i],
             rootDN,
             getEqualityMatcher,
-        ))) {
-            if (couldNotDetermineGroupMembership) {
-                return 2.5;
-            }
-            return 2;
+        )) {
+            inSubtree = true;
+            break;
         }
+    }
+    if (inSubtree) {
+        return couldNotDetermineGroupMembership ? 2.5 : 2;
     }
     if (userClass.allUsers === null) {
         if (couldNotDetermineGroupMembership) {
