@@ -71,18 +71,6 @@ function mergeAttributes (attrs: Attribute[]): Attribute {
     );
 }
 
-function informationItemToAttribute (
-    info: EntryInformation_information_Item,
-): Attribute | undefined {
-    if ("attributeType" in info) {
-        return new Attribute(info.attributeType, []);
-    }
-    if ("attribute" in info) {
-        return info.attribute;
-    }
-    return undefined;
-}
-
 /**
  * Values without contexts always survive context selection (X.501 §8.9.2.4
  * (b)), so only `valuesWithContext` is filtered. An attribute that had values
@@ -407,7 +395,7 @@ function selectFromEntry (
                 }
             }
         })
-        .map(informationItemToAttribute)
+        .map(Attribute.fromEntryInfoItem)
         .filter((attr): attr is Attribute => !!attr);
 
     const selectedAttributes: Attribute[] = Array.from(
