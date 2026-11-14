@@ -197,6 +197,7 @@ export function checkOfRequestAttributeProfileInFilter(
         }
         else if ("contextPresent" in item) {
             type_oid = item.contextPresent.type_;
+            asserted_contexts = item.contextPresent.assertedContexts;
         }
         if (!type_oid) {
             return;

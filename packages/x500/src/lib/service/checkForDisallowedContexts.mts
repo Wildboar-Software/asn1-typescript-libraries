@@ -32,7 +32,8 @@ import type { ContextAssertion } from "@wildboar/x500/InformationFramework";
 export function checkForDisallowedContexts(
     filter: Filter,
     profiles: Map<DotDelimitedOidString, Map<DotDelimitedOidString, ContextProfile>>,
-    violating_context_types: Set<DotDelimitedOidString>): void {
+    violating_context_types: Set<DotDelimitedOidString>
+): void {
     if ("item" in filter) {
         let type_oid: OBJECT_IDENTIFIER | undefined;
         let asserted_contexts: ContextAssertion[] | undefined;
@@ -73,6 +74,7 @@ export function checkForDisallowedContexts(
         }
         else if ("contextPresent" in item) {
             type_oid = item.contextPresent.type_;
+            asserted_contexts = item.contextPresent.assertedContexts;
         }
         if (!type_oid) {
             return;
