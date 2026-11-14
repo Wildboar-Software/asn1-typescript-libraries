@@ -76,7 +76,8 @@ export interface SearchRuleGeneralCheckState {
  * @param rule The governing search rule
  * @returns A tuple containing the step this function failed on, followed by the
  *  function's internal state, in that order. The first value will be 0 if no
- *  steps failed.
+ *  steps failed. It will be 16102 if requested attribute types are empty and
+ *  the filter is not default, per ITU-T Recommendation X.511, Section 16.10.2.
  *
  * @function
  * @see {@link SearchRuleGeneralCheckState}
@@ -100,16 +101,11 @@ export function generalCheckOfSearchFilter(
     }
     const filter = search.extendedFilter ?? search.filter;
     // TODO: You might have to normalize the filter.
+    const isDefaultFilter = !filter
+        || (("and" in filter) && (filter.and.length === 0)); // and:{}
     // This behavior is specified in X.501, Section 16.10.2.
-    if ((rule.inputAttributeTypes.length === 0)
-        && (
-            filter
-            && (
-                !("and" in filter)
-                || (filter.and.length !== 0)
-            )
-        )) {
-        return [0, state];
+    if ((rule.inputAttributeTypes.length === 0) && !isDefaultFilter) {
+        return [16102, state];
     }
     const permitted_attrs: Map<DotDelimitedOidString, RequestAttribute> = new Map();
     for (const attr of rule.inputAttributeTypes) {
