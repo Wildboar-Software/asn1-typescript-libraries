@@ -7,13 +7,8 @@ import type { Filter } from "@wildboar/x500/DirectoryAbstractService";
 import { AttributeValueAssertion, ContextAssertion } from "@wildboar/x500/InformationFramework";
 import { checkOfRequestAttributeProfiles } from "./checkOfRequestAttributeProfiles.mjs";
 import { BER } from "@wildboar/asn1/functional";
-import { type AttributeType } from "@wildboar/x500/InformationFramework";
-import { type AttributeTypeAndValue } from "@wildboar/x500/InformationFramework";
-import { type CONTEXT } from "@wildboar/x500/InformationFramework";
-import { type Context } from "@wildboar/x500/InformationFramework";
 
 const rule_oid = ObjectIdentifier.fromString("1.2.3.4");
-
 
 describe("checkOfRequestAttributeProfiles", () => {
     it("should not find any violations in the simplest compliant case", () => {

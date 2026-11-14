@@ -5,16 +5,10 @@ import {
 import {
     RequestAttribute,
 } from "@wildboar/x500/ServiceAdministration";
-import { SearchArgumentData, TypeAndContextAssertion } from "@wildboar/x500/DirectoryAbstractService";
-import { ObjectIdentifier, TRUE_BIT } from "@wildboar/asn1";
+import { SearchArgumentData } from "@wildboar/x500/DirectoryAbstractService";
+import { ObjectIdentifier } from "@wildboar/asn1";
 import { ContextProfile } from "@wildboar/x500/ServiceAdministration";
-import { getAttributeTypeNegationFromFilter } from "./getAttributeTypeNegationFromFilter.mjs";
-import { getRequiredAttributesFromAttributeCombination } from "./getRequiredAttributesFromAttributeCombination.mjs";
-import { checkAttributeCombination } from "./checkAttributeCombination.mjs";
-import { checkForDisallowedSearchValues } from "./checkForDisallowedSearchValues.mjs";
-import { checkForDisallowedContexts } from "./checkForDisallowedContexts.mjs";
 import type { AttributeCombination } from "@wildboar/x500/ServiceAdministration";
-import { type FilterItem } from "@wildboar/x500/DirectoryAbstractService";
 import { type AttributeType, AttributeValueAssertion, ContextAssertion } from "@wildboar/x500/InformationFramework";
 import { generalCheckOfSearchFilter } from "./generalCheckOfSearchFilter.mjs";
 import { commonName, languageContext, streetAddress } from "@wildboar/x500/SelectedAttributeTypes";
