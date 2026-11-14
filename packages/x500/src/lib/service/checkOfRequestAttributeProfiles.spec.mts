@@ -1,14 +1,15 @@
 import { ContextProfile, SearchRule } from "@wildboar/x500/ServiceAdministration";
-import { SearchArgumentData } from "@wildboar/x500/DirectoryAbstractService";
+import { FilterItem_substrings, SearchArgumentData } from "@wildboar/x500/DirectoryAbstractService";
 import { RequestAttribute } from "@wildboar/x500/ServiceAdministration";
-import { ObjectIdentifier } from "@wildboar/asn1";
+import { type ASN1Element, ObjectIdentifier } from "@wildboar/asn1";
 import { name, commonName, languageContext, localeContext } from "@wildboar/x500/SelectedAttributeTypes";
-import type { Filter } from "@wildboar/x500/DirectoryAbstractService";
+import type { Filter, FilterItem_substrings_strings_Item } from "@wildboar/x500/DirectoryAbstractService";
 import { type AttributeType, AttributeValueAssertion, ContextAssertion } from "@wildboar/x500/InformationFramework";
 import { checkOfRequestAttributeProfiles } from "./checkOfRequestAttributeProfiles.mjs";
 import { BER } from "@wildboar/asn1/functional";
 import type { ContextMatcher, Matcher } from "@wildboar/x500";
 import { generalCheckOfSearchFilter } from "./generalCheckOfSearchFilter.mjs";
+import { caseIgnoreSubstringsMatch } from "@wildboar/x500/matching/substring";
 
 const rule_oid = ObjectIdentifier.fromString("1.2.3.4");
 
@@ -482,6 +483,156 @@ describe("checkOfRequestAttributeProfiles", () => {
             expect(state.searchContextViolations).toEqual([]);
             expect(state.searchContextValueViolations).toEqual([]);
         }
+    });
+
+    describe("substring selected-value checks", () => {
+        const encode = (value: string): ASN1Element => commonName.encoderFor["&Type"]!({ uTF8String: value }, BER);
+        const alice = encode("Alice");
+        const bob = encode("Bob");
+
+        function substringFilter(strings: FilterItem_substrings_strings_Item[]): { item: { substrings: FilterItem_substrings } } {
+            return { item: { substrings: new FilterItem_substrings(commonName["&id"], strings) } };
+        }
+
+        function check(
+            filter: Filter,
+            selected_values: ASN1Element[] | undefined,
+            getSubstringsMatcher?: (attributeType: AttributeType) => Matcher | undefined,
+            profile_type: AttributeType = commonName["&id"],
+        ): ReturnType<typeof checkOfRequestAttributeProfiles> {
+            const search = new SearchArgumentData({ rdnSequence: [] }, undefined, filter);
+            const rule = new SearchRule(1, rule_oid, undefined, undefined, [
+                new RequestAttribute(profile_type, true, selected_values),
+            ]);
+            return checkOfRequestAttributeProfiles(
+                search, rule, getAttributeParentTypes, undefined, undefined, getSubstringsMatcher,
+            );
+        }
+
+        const cases: [string, FilterItem_substrings_strings_Item[], number][] = [
+            ["matching initial", [{ initial: encode("AL") }], 0],
+            ["non-matching initial", [{ initial: encode("Bo") }], 2],
+            ["matching any", [{ any_: encode("LI") }], 0],
+            ["non-matching any", [{ any_: encode("bo") }], 2],
+            ["matching final", [{ final: encode("ICE") }], 0],
+            ["non-matching final", [{ final: encode("bob") }], 2],
+            ["matching combination", [{ initial: encode("A") }, { any_: encode("li") }, { final: encode("ce") }], 0],
+            ["non-matching combination", [{ initial: encode("A") }, { any_: encode("ce") }, { final: encode("li") }], 2],
+        ];
+
+        it.each(cases)("checks %s substrings against selected values", (_description, strings, expected_step) => {
+            const filter = substringFilter(strings);
+            const [step, state] = check(filter, [alice], () => caseIgnoreSubstringsMatch);
+            expect(step).toBe(expected_step);
+            expect(state.searchValuesRequired).toEqual([]);
+            expect(state.invalidSearchValues).toEqual(expected_step ? [filter.item] : []);
+        });
+
+        it("matches the presented substring assertion against each selected value", () => {
+            const strings: FilterItem_substrings_strings_Item[] = [{ initial: encode("Bo") }];
+            const filter = substringFilter(strings);
+            const search = new SearchArgumentData({ rdnSequence: [] }, undefined, filter);
+            const rule = new SearchRule(1, rule_oid, undefined, undefined, [
+                new RequestAttribute(commonName["&id"], true, [alice, bob]),
+            ]);
+            const getEqualityMatcher = vi.fn(() => undefined);
+            const matcher = vi.fn<Matcher>(caseIgnoreSubstringsMatch);
+            const lookup = vi.fn(() => matcher);
+            const [step] = checkOfRequestAttributeProfiles(
+                search, rule, getAttributeParentTypes, getEqualityMatcher, undefined, lookup,
+            );
+            expect(step).toBe(0);
+            expect(lookup).toHaveBeenCalledWith(commonName["&id"]);
+            expect(matcher).toHaveBeenCalledTimes(2);
+            expect(matcher).toHaveBeenNthCalledWith(1, strings, expect.objectContaining({
+                type_: commonName["&id"], value: alice,
+            }), getEqualityMatcher);
+            expect(matcher).toHaveBeenNthCalledWith(2, strings, expect.objectContaining({
+                type_: commonName["&id"], value: bob,
+            }), getEqualityMatcher);
+            expect(getEqualityMatcher).not.toHaveBeenCalled();
+        });
+
+        it.each([
+            ["omitted", undefined],
+            ["unavailable", () => undefined],
+        ] as const)("rejects restricted substrings when the matcher is %s", (_description, lookup) => {
+            const filter = substringFilter([{ initial: encode("Al") }]);
+            const [step, state] = check(filter, [alice], lookup);
+            expect(step).toBe(2);
+            expect(state.invalidSearchValues).toEqual([filter.item]);
+        });
+
+        it("does not fall back to an equality matcher for restricted substrings", () => {
+            const filter = substringFilter([{ initial: encode("Al") }]);
+            const search = new SearchArgumentData({ rdnSequence: [] }, undefined, filter);
+            const rule = new SearchRule(1, rule_oid, undefined, undefined, [
+                new RequestAttribute(commonName["&id"], true, [alice]),
+            ]);
+            const getEqualityMatcher = vi.fn((): Matcher => () => true);
+            const [step, state] = checkOfRequestAttributeProfiles(search, rule, getAttributeParentTypes, getEqualityMatcher);
+            expect(step).toBe(2);
+            expect(state.invalidSearchValues).toEqual([filter.item]);
+            expect(getEqualityMatcher).not.toHaveBeenCalled();
+        });
+
+        it("accepts a matching selected value before later non-matching values", () => {
+            const filter = substringFilter([{ initial: encode("Al") }]);
+            const [step] = check(filter, [alice, bob], () => caseIgnoreSubstringsMatch);
+            expect(step).toBe(0);
+        });
+
+        it.each([false, undefined])("does not accept a substring match result of %s", (result) => {
+            const filter = substringFilter([{ initial: encode("Al") }]);
+            const [step, state] = check(filter, [alice], () => () => result);
+            expect(step).toBe(2);
+            expect(state.invalidSearchValues).toEqual([filter.item]);
+        });
+
+        it("does not require a substring matcher when selectedValues is absent", () => {
+            const [step] = check(substringFilter([{ initial: encode("Bo") }]), undefined);
+            expect(step).toBe(0);
+        });
+
+        it("applies substring restrictions inherited from an ancestor profile", () => {
+            const lookup = vi.fn(() => caseIgnoreSubstringsMatch);
+            const filter = substringFilter([{ initial: encode("Bo") }]);
+            const [step, state] = check(filter, [alice], lookup, name["&id"]);
+            expect(step).toBe(2);
+            expect(lookup).toHaveBeenCalledWith(commonName["&id"]);
+            expect(state.invalidSearchValues).toEqual([filter.item]);
+        });
+
+        it.each([
+            ["and", (filter: Filter): Filter => ({ and: [filter] })],
+            ["or", (filter: Filter): Filter => ({ or: [filter] })],
+            ["double negation", (filter: Filter): Filter => ({ not: { not: filter } })],
+        ] as const)("forwards the substring matcher inside %s", (_operator, wrap) => {
+            const filter = wrap(substringFilter([{ initial: encode("Al") }]));
+            const [step] = check(filter, [alice], () => caseIgnoreSubstringsMatch);
+            expect(step).toBe(0);
+        });
+
+        it("propagates malformed substring assertion errors", () => {
+            const filter = substringFilter([{ initial: encode("Al") }, { initial: encode("ice") }]);
+            expect(() => check(filter, [alice], () => caseIgnoreSubstringsMatch)).toThrow();
+        });
+
+        it("also passes equality assertions before the selected stored value", () => {
+            const assertion = encode("ALICE");
+            const filter: Filter = { item: { equality: new AttributeValueAssertion(commonName["&id"], assertion) } };
+            const search = new SearchArgumentData({ rdnSequence: [] }, undefined, filter);
+            const rule = new SearchRule(1, rule_oid, undefined, undefined, [
+                new RequestAttribute(commonName["&id"], true, [alice]),
+            ]);
+            const matcher = vi.fn<Matcher>(() => true);
+            const getEqualityMatcher = vi.fn(() => matcher);
+            const [step] = checkOfRequestAttributeProfiles(search, rule, getAttributeParentTypes, getEqualityMatcher);
+            expect(step).toBe(0);
+            expect(matcher).toHaveBeenCalledWith(assertion, expect.objectContaining({
+                type_: commonName["&id"], value: alice,
+            }), getEqualityMatcher);
+        });
     });
 
     describe("inherited request attribute profiles", () => {

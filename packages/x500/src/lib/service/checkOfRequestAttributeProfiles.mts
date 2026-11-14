@@ -17,7 +17,7 @@ import { type Filter } from "@wildboar/x500/DirectoryAbstractService";
 import { ContextProfile } from "@wildboar/x500/ServiceAdministration";
 import { getRequiredContextsFromContextCombination } from "./getRequiredContextsFromContextCombination.mjs";
 import { checkContextCombination } from "./checkContextCombination.mjs";
-import type { FilterItem } from "@wildboar/x500/DirectoryAbstractService";
+import type { FilterItem, FilterItem_substrings_strings_Item } from "@wildboar/x500/DirectoryAbstractService";
 import { AttributeTypeAndValue, ContextAssertion, type CONTEXT } from "@wildboar/x500/InformationFramework";
 import { type ContextCombination } from "@wildboar/x500/ServiceAdministration";
 import { type AttributeType } from "@wildboar/x500/InformationFramework";
@@ -134,6 +134,8 @@ export interface CheckRequestAttributeState {
  *  the iterator may also include the asserted attribute type itself
  * @param getEqualityMatcher Look up an equality matcher for the asserted type
  * @param getContextMatcher Look up a context matcher for a context type
+ * @param getSubstringsMatcher Look up a substring matcher for the asserted type.
+ *  If unavailable, substring items cannot satisfy non-empty selectedValues.
  * @returns Nothing. `state` is modified by reference.
  *
  * @function
@@ -145,11 +147,12 @@ export function checkOfRequestAttributeProfileInFilter(
     attr_profiles: Map<DotDelimitedOidString, RequestAttribute>,
     getAttributeParentTypes: (attributeType: AttributeType) => IterableIterator<AttributeType>,
     getEqualityMatcher?: (attributeType: AttributeType) => Matcher | undefined,
-    getContextMatcher?: (contextType: CONTEXT["&id"]) => ContextMatcher | undefined
+    getContextMatcher?: (contextType: CONTEXT["&id"]) => ContextMatcher | undefined,
+    getSubstringsMatcher?: (attributeType: AttributeType) => Matcher | undefined,
 ): void {
     if ("item" in filter) {
         let type_oid: OBJECT_IDENTIFIER | undefined;
-        let asserted_value: ASN1Element | undefined;
+        let asserted_value: ASN1Element | FilterItem_substrings_strings_Item[] | undefined;
         let asserted_contexts: ContextAssertion[] | undefined;
         const item = filter.item;
         if ("equality" in item) {
@@ -161,6 +164,7 @@ export function checkOfRequestAttributeProfileInFilter(
         }
         else if ("substrings" in item) {
             type_oid = item.substrings.type_;
+            asserted_value = item.substrings.strings;
         }
         else if ("greaterOrEqual" in item) {
             type_oid = item.greaterOrEqual.type_;
@@ -215,11 +219,20 @@ export function checkOfRequestAttributeProfileInFilter(
         // Step 2
         if (profile.selectedValues?.length && asserted_value) {
             let matched: boolean | undefined = false;
-            const matcher = getEqualityMatcher?.(type_oid) ?? anyTypeMatch;
-            for (const permitted_value of profile.selectedValues) {
-                matched = matcher(permitted_value, new AttributeTypeAndValue(type_oid, asserted_value));
-                if (matched) {
-                    break;
+            // Substring assertions require their own matching rule, not equality.
+            const matcher = ("substrings" in item)
+                ? getSubstringsMatcher?.(type_oid)
+                : (getEqualityMatcher?.(type_oid) ?? anyTypeMatch);
+            if (matcher) {
+                for (const permitted_value of profile.selectedValues) {
+                    matched = matcher(
+                        asserted_value,
+                        new AttributeTypeAndValue(type_oid, permitted_value),
+                        getEqualityMatcher,
+                    );
+                    if (matched === true) {
+                        break;
+                    }
                 }
             }
             if (!matched) {
@@ -326,14 +339,23 @@ export function checkOfRequestAttributeProfileInFilter(
         }
     } else if ("and" in filter) {
         for (const sub of filter.and) {
-            checkOfRequestAttributeProfileInFilter(state, sub, attr_profiles, getAttributeParentTypes, getEqualityMatcher, getContextMatcher);
+            checkOfRequestAttributeProfileInFilter(
+                state, sub, attr_profiles, getAttributeParentTypes,
+                getEqualityMatcher, getContextMatcher, getSubstringsMatcher,
+            );
         }
     } else if ("or" in filter) {
         for (const sub of filter.or) {
-            checkOfRequestAttributeProfileInFilter(state, sub, attr_profiles, getAttributeParentTypes, getEqualityMatcher, getContextMatcher);
+            checkOfRequestAttributeProfileInFilter(
+                state, sub, attr_profiles, getAttributeParentTypes,
+                getEqualityMatcher, getContextMatcher, getSubstringsMatcher,
+            );
         }
     } else if ("not" in filter) {
-        checkOfRequestAttributeProfileInFilter(state, filter.not, attr_profiles, getAttributeParentTypes, getEqualityMatcher, getContextMatcher);
+        checkOfRequestAttributeProfileInFilter(
+            state, filter.not, attr_profiles, getAttributeParentTypes,
+            getEqualityMatcher, getContextMatcher, getSubstringsMatcher,
+        );
     }
 }
 
@@ -353,6 +375,8 @@ export function checkOfRequestAttributeProfileInFilter(
  *  the iterator may also include the asserted attribute type itself
  * @param getEqualityMatcher Look up an equality matcher for the asserted type
  * @param getContextMatcher Look up a context matcher for a context type
+ * @param getSubstringsMatcher Look up a substring matcher for the asserted type.
+ *  If unavailable, substring items cannot satisfy non-empty selectedValues.
  * @returns A tuple containing the step on which validation failed (or 0 if
  *  none) and the internal function state, in that order.
  *
@@ -364,7 +388,8 @@ export function checkOfRequestAttributeProfiles(
     rule: SearchRule,
     getAttributeParentTypes: (attributeType: AttributeType) => IterableIterator<AttributeType>,
     getEqualityMatcher?: (attributeType: AttributeType) => Matcher | undefined,
-    getContextMatcher?: (contextType: CONTEXT["&id"]) => ContextMatcher | undefined
+    getContextMatcher?: (contextType: CONTEXT["&id"]) => ContextMatcher | undefined,
+    getSubstringsMatcher?: (attributeType: AttributeType) => Matcher | undefined,
 ): [number, CheckRequestAttributeState] {
     const state: CheckRequestAttributeState = {
         searchValuesRequired: [],
@@ -382,7 +407,10 @@ export function checkOfRequestAttributeProfiles(
     for (const attr of rule.inputAttributeTypes ?? []) {
         permitted_attrs.set(attr.attributeType.toString(), attr);
     }
-    checkOfRequestAttributeProfileInFilter(state, filter, permitted_attrs, getAttributeParentTypes, getEqualityMatcher, getContextMatcher);
+    checkOfRequestAttributeProfileInFilter(
+        state, filter, permitted_attrs, getAttributeParentTypes,
+        getEqualityMatcher, getContextMatcher, getSubstringsMatcher,
+    );
     if (state.searchValuesRequired.length > 0) {
         return [1, state];
     }
