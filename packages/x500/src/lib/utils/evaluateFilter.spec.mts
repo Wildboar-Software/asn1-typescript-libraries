@@ -6,6 +6,7 @@ import {
     MATCH_FLAG_APPROXIMATE,
     MATCH_FLAG_ORDERING_GREATER,
     MATCH_FLAG_ORDERING_OR_EQUAL,
+    createEqualityMatcher,
     type ContextMatcher,
     type Matcher,
 } from "../types/matching.mjs";
@@ -40,16 +41,12 @@ function leaf (kind: Kind = "equality", assertedContexts?: AttributeValueAsserti
     }
 }
 
-function family (values: string[], contextual: string[] = []): EntryInformation[] {
+function family (values: string[], contextual: string[] = []): [EntryInformation] {
     return [new EntryInformation({ rdnSequence: [] }, true, [{
         attribute: new Attribute(TYPE, values.map(value), contextual.map((text) => (
             new Attribute_valuesWithContext_Item(value(text), [new Context(RULE, [value("context")])])
         ))),
     }])];
-}
-
-function storedValue (valueOrValues: AttributeTypeAndValue | Attribute): ASN1Element {
-    return "values" in valueOrValues ? valueOrValues.values[0] : valueOrValues.value;
 }
 
 function compare (_assertion: ASN1Element, stored: ASN1Element): boolean | undefined {
@@ -59,7 +56,7 @@ function compare (_assertion: ASN1Element, stored: ASN1Element): boolean | undef
     return stored.utf8String === "unknown" ? undefined : stored.utf8String === "true";
 }
 
-const compareStored: Matcher = (_assertion, valueOrValues) => compare(value("unused"), storedValue(valueOrValues));
+const compareStored = createEqualityMatcher((el) => el, compare, () => value("unused"));
 const alwaysTrueContext: ContextMatcher = () => true;
 
 function settings (_kind: Kind = "equality", matchedValuesOnly: boolean = false): EvaluateFilterSettings {
@@ -76,6 +73,454 @@ function settings (_kind: Kind = "equality", matchedValuesOnly: boolean = false)
         matchedValuesOnly,
     };
 }
+
+describe("attribute-level filter matching", () => {
+    function instrumented (kind: Kind, matchedValuesOnly: boolean) {
+        const decode = vi.fn((el: ASN1Element) => el);
+        const convert = vi.fn(() => value("unused"));
+        const normalize = vi.fn((el: ASN1Element) => el);
+        const compareValue = vi.fn(compare);
+        const matcher = vi.fn(createEqualityMatcher(decode, compareValue, convert, false, normalize));
+        const options: EvaluateFilterSettings = {
+            ...settings(kind, matchedValuesOnly),
+            getEqualityMatcher: () => matcher,
+            getOrderingMatcher: () => matcher,
+            getApproximateMatcher: () => matcher,
+            getSubstringsMatcher: () => matcher,
+        };
+        return { decode, convert, normalize, compareValue, matcher, options };
+    }
+
+    describe.each<Kind>(["equality", "approximateMatch", "greaterOrEqual", "lessOrEqual", "substrings", "extensibleMatch"])("%s", (kind) => {
+        it.each([false, true])("decodes/prepares once for mixed plain and contextual values, matchedValuesOnly=%s", (matchedValuesOnly) => {
+            const { decode, convert, normalize, compareValue, matcher, options } = instrumented(kind, matchedValuesOnly);
+            const entries = family(["false", "unknown", "true"], ["false", "true", "throw"]);
+            const result = evaluateFilter(leaf(kind), entries, options);
+            expect(result.matched).toBe(true);
+            expect(result.matchedValues).toHaveLength(matchedValuesOnly ? 2 : 0);
+            expect(result.matchedValues!.map((match) => match.value.utf8String)).toEqual(matchedValuesOnly ? ["true", "true"] : []);
+            expect([...result.contributingEntries]).toEqual([0]);
+            expect(matcher).toHaveBeenCalledTimes(1);
+            const attribute = matcher.mock.calls[0][1];
+            expect(attribute).toBeInstanceOf(Attribute);
+            expect((attribute as Attribute).values).toHaveLength(3);
+            expect((attribute as Attribute).valuesWithContext).toHaveLength(3);
+            expect(matcher.mock.calls[0][2]).toBe(options.getEqualityMatcher);
+            expect(decode).toHaveBeenCalledTimes(kind === "substrings" ? 0 : 1);
+            expect(convert).toHaveBeenCalledTimes(kind === "substrings" ? 1 : 0);
+            expect(normalize).toHaveBeenCalledTimes(1);
+            expect(compareValue).toHaveBeenCalledTimes(matchedValuesOnly ? 6 : 3);
+            if (matchedValuesOnly) {
+                expect(matcher.mock.calls[0][4]).toBeInstanceOf(Attribute);
+                const original = (entries[0].information![0] as { attribute: Attribute }).attribute;
+                expect(result.matchedValues![1].contexts).toBe(original.valuesWithContext![1].contextList);
+            } else {
+                expect(matcher.mock.calls[0]).toHaveLength(4);
+            }
+        });
+
+        it.each([false, true])("stops comparing at the first match without an output attribute, contextual=%s", (contextual) => {
+            const { matcher, compareValue, normalize, options } = instrumented(kind, false);
+            const texts = ["true", ...Array.from({ length: 100 }, () => "throw")];
+            const entries = contextual ? family([], texts) : family(texts, ["throw"]);
+            // Empty selectedContexts does not require identifying matched values.
+            const filter = leaf(kind, { selectedContexts: [] });
+            const result = evaluateFilter(filter, entries, { ...options, matchedValuesOnly: undefined });
+            expect(result.matched).toBe(true);
+            expect(result.matchedValues).toEqual([]);
+            expect([...result.contributingEntries]).toEqual([0]);
+            expect(matcher).toHaveBeenCalledTimes(1);
+            expect(matcher.mock.calls[0]).toHaveLength(4);
+            expect(compareValue).toHaveBeenCalledTimes(1);
+            expect(normalize).toHaveBeenCalledTimes(1);
+        });
+
+        it.each([false, true])("excludes denied values before matching without modifying the entry, matchedValuesOnly=%s", (matchedValuesOnly) => {
+            const { matcher, compareValue, options } = instrumented(kind, matchedValuesOnly);
+            const entries = family(["true", "unknown", "false"], ["throw", "true"]);
+            const result = evaluateFilter(leaf(kind), entries, {
+                ...options,
+                permittedToMatch: (_type, stored) => !stored || stored.utf8String === "false",
+            });
+            expect(result.matched).toBe(false);
+            expect(result.matchedValues).toEqual([]);
+            expect(matcher).toHaveBeenCalledTimes(1);
+            expect(compareValue).toHaveBeenCalledTimes(1);
+            const original = (entries[0].information![0] as { attribute: Attribute }).attribute;
+            expect(original.values).toHaveLength(3);
+            expect(original.valuesWithContext).toHaveLength(2);
+        });
+
+        it("does not turn empty or entirely denied attributes into UNDEFINED", () => {
+            const { matcher, options } = instrumented(kind, true);
+            expect(evaluateFilter(leaf(kind), family([]), options).matched).toBe(false);
+            const denied = { ...options, permittedToMatch: (_type: typeof TYPE, stored?: ASN1Element) => !stored };
+            expect(evaluateFilter(leaf(kind), family(["unknown"], ["throw"]), denied).matched).toBe(false);
+            expect(evaluateFilter({ not: leaf(kind) }, family(["unknown"], ["throw"]), denied).matched).toBe(true);
+            expect(matcher).not.toHaveBeenCalled();
+        });
+
+        it.each([false, true])("batches absent-attribute defaults, matchedValuesOnly=%s", (matchedValuesOnly) => {
+            const { matcher, normalize, compareValue, options } = instrumented(kind, matchedValuesOnly);
+            const profile = new RequestAttribute(TYPE, undefined, undefined, [
+                new RequestAttribute_defaultValues_Item(undefined, [value("false"), value("unknown")]),
+                new RequestAttribute_defaultValues_Item(undefined, [value("true"), value("throw")]),
+            ]);
+            const result = evaluateFilter(leaf(kind), [new EntryInformation({ rdnSequence: [] })], {
+                ...options,
+                requestAttributes: new Map([[TYPE.toString(), profile]]),
+            });
+            expect(result.matched).toBe(true);
+            expect(result.matchedValues).toEqual([]);
+            expect([...result.contributingEntries]).toEqual([0]);
+            expect(matcher).toHaveBeenCalledTimes(1);
+            expect(matcher.mock.calls[0]).toHaveLength(4);
+            expect(compareValue).toHaveBeenCalledTimes(3);
+            expect(normalize).toHaveBeenCalledTimes(1);
+            expect((matcher.mock.calls[0][1] as Attribute).values).toHaveLength(4);
+        });
+
+        it.each([false, true])("preserves ternary results for absent-attribute defaults without returning them, matchedValuesOnly=%s", (matchedValuesOnly) => {
+            for (const [defaultText, expected] of [["false", false], ["unknown", undefined], ["throw", undefined], ["true", true]] as const) {
+                const { matcher, compareValue, options } = instrumented(kind, matchedValuesOnly);
+                const profile = new RequestAttribute(TYPE, undefined, undefined, [
+                    new RequestAttribute_defaultValues_Item(undefined, [value(defaultText)]),
+                ]);
+                const withDefaults = { ...options, requestAttributes: new Map([[TYPE.toString(), profile]]) };
+                const entries = [new EntryInformation({ rdnSequence: [] })];
+                const result = evaluateFilter(leaf(kind), entries, withDefaults);
+                expect(result.matched).toBe(expected);
+                expect(result.matchedValues).toEqual([]);
+                expect([...result.contributingEntries]).toEqual(expected === true ? [0] : []);
+                expect(matcher).toHaveBeenCalledTimes(1);
+                expect(matcher.mock.calls[0]).toHaveLength(4);
+                expect(compareValue).toHaveBeenCalledTimes(1);
+                expect(evaluateFilter({ not: leaf(kind) }, entries, withDefaults).matched).toBe(expected === undefined ? undefined : !expected);
+            }
+        });
+
+        it("keeps UNDEFINED when the assertion decoder throws", () => {
+            const { decode, options } = instrumented(kind, true);
+            const matcher = createEqualityMatcher(
+                (el) => { decode(el); throw new Error("invalid assertion"); },
+                compare,
+                () => { throw new Error("invalid substrings"); },
+            );
+            const broken = {
+                ...options,
+                getEqualityMatcher: () => matcher,
+                getOrderingMatcher: () => matcher,
+                getApproximateMatcher: () => matcher,
+                getSubstringsMatcher: () => matcher,
+            };
+            expect(evaluateFilter({ not: leaf(kind) }, family(["true", "true"], ["true"]), broken).matched).toBeUndefined();
+            expect(decode).toHaveBeenCalledTimes(kind === "substrings" ? 0 : 1);
+        });
+    });
+
+    describe.each<Kind>(["equality", "approximateMatch", "greaterOrEqual", "lessOrEqual", "substrings", "extensibleMatch"])("%s present-attribute defaults", (kind) => {
+        it.each([false, true])("ignores defaults when the attribute is present, matchedValuesOnly=%s", (matchedValuesOnly) => {
+            const { matcher, compareValue, normalize, options } = instrumented(kind, matchedValuesOnly);
+            const defaults = [value("false"), value("unknown"), value("true"), value("throw")];
+            const profile = new RequestAttribute(TYPE, undefined, undefined, [
+                new RequestAttribute_defaultValues_Item(undefined, defaults),
+            ]);
+            const result = evaluateFilter(leaf(kind), family(["false"]), {
+                ...options,
+                requestAttributes: new Map([[TYPE.toString(), profile]]),
+            });
+            expect(result.matched).toBe(false);
+            expect(result.matchedValues).toEqual([]);
+            expect(result.contributingEntries.size).toBe(0);
+            expect(matcher).toHaveBeenCalledTimes(1);
+            expect(compareValue).toHaveBeenCalledTimes(1);
+            expect(normalize).toHaveBeenCalledTimes(1);
+            expect((matcher.mock.calls[0][1] as Attribute).values.map((el) => el.utf8String)).toEqual(["false"]);
+        });
+
+        it.each([false, true])("preserves stored-value results regardless of defaults, matchedValuesOnly=%s", (matchedValuesOnly) => {
+            for (const [stored, defaultText, expected] of [
+                ["false", "true", false],
+                ["false", "unknown", false],
+                ["false", "throw", false],
+                ["unknown", "false", undefined],
+                ["unknown", "true", undefined],
+                ["throw", "true", undefined],
+                ["true", "false", true],
+                ["true", "throw", true],
+                ["false", undefined, false],
+                ["unknown", undefined, undefined],
+                ["throw", undefined, undefined],
+                ["true", undefined, true],
+            ] as const) {
+                for (const contextual of [false, true]) {
+                    const { matcher, compareValue, options } = instrumented(kind, matchedValuesOnly);
+                    // An empty default set is also inapplicable to a present attribute.
+                    const defaults = defaultText === undefined ? [] : [new RequestAttribute_defaultValues_Item(undefined, [value(defaultText)])];
+                    const profile = new RequestAttribute(TYPE, undefined, undefined, defaults);
+                    const withDefaults = { ...options, requestAttributes: new Map([[TYPE.toString(), profile]]) };
+                    const entries = contextual ? family([], [stored]) : family([stored]);
+                    const result = evaluateFilter(leaf(kind), entries, withDefaults);
+                    expect(result.matched).toBe(expected);
+                    expect(result.matchedValues).toHaveLength(expected === true && matchedValuesOnly ? 1 : 0);
+                    if (result.matchedValues!.length > 0) {
+                        const original = (entries[0].information![0] as { attribute: Attribute }).attribute;
+                        expect(result.matchedValues![0].value).toBe(contextual ? original.valuesWithContext![0].value : original.values[0]);
+                    }
+                    expect([...result.contributingEntries]).toEqual(expected === true ? [0] : []);
+                    expect(matcher).toHaveBeenCalledTimes(1);
+                    expect(compareValue).toHaveBeenCalledTimes(1);
+                    expect(evaluateFilter({ not: leaf(kind) }, entries, withDefaults).matched).toBe(expected === undefined ? undefined : !expected);
+                }
+            }
+        });
+
+        it.each([false, true])("does not use defaults for an empty or entirely denied present attribute, matchedValuesOnly=%s", (matchedValuesOnly) => {
+            for (const defaults of [[], [new RequestAttribute_defaultValues_Item(undefined, [value("true")])]]) {
+                const { matcher, options } = instrumented(kind, matchedValuesOnly);
+                const profile = new RequestAttribute(TYPE, undefined, undefined, defaults);
+                for (const entries of [family([]), family(["unknown"], ["throw"])]) {
+                    const result = evaluateFilter(leaf(kind), entries, {
+                        ...options,
+                        permittedToMatch: (_type, stored) => !stored,
+                        requestAttributes: new Map([[TYPE.toString(), profile]]),
+                    });
+                    expect(result.matched).toBe(false);
+                    expect(result.matchedValues).toEqual([]);
+                    expect(result.contributingEntries.size).toBe(0);
+                }
+                expect(matcher).not.toHaveBeenCalled();
+            }
+        });
+
+        it("reports only genuine stored matches when defaults are configured", () => {
+            const { matcher, options } = instrumented(kind, true);
+            const friend = ObjectIdentifier.fromString("1.2.3.11");
+            const defaultValue = value("true");
+            const storedValue = value("true");
+            const profile = new RequestAttribute(TYPE, undefined, undefined, [
+                new RequestAttribute_defaultValues_Item(undefined, [defaultValue]),
+            ]);
+            const entry = new EntryInformation({ rdnSequence: [] }, true, [
+                { attribute: new Attribute(TYPE, [value("false")]) },
+                { attribute: new Attribute(friend, [storedValue]) },
+            ]);
+            const result = evaluateFilter(leaf(kind), [entry], {
+                ...options,
+                getFriends: () => [friend],
+                requestAttributes: new Map([[TYPE.toString(), profile]]),
+            });
+            expect(result.matched).toBe(true);
+            expect(result.matchedValues).toHaveLength(1);
+            expect(result.matchedValues![0].value).toBe(storedValue);
+            expect(result.matchedValues![0].type).toBe(friend);
+            expect(result.matchedValues![0].entryIndex).toBe(0);
+            expect([...result.contributingEntries]).toEqual([0]);
+            expect(matcher).toHaveBeenCalledTimes(2);
+            expect(matcher.mock.calls[1][4]).toBeInstanceOf(Attribute);
+        });
+    });
+
+    describe.each(["equality", "approximateMatch", "greaterOrEqual", "lessOrEqual"] as const)("%s contexts", (kind) => {
+        const filter = leaf(kind, { selectedContexts: [new ContextAssertion(RULE, [value("context")])] });
+        const contextMatcher: ContextMatcher = (_assertion, values) => {
+            for (const stored of values) {
+                if (stored.utf8String === "error") {
+                    throw new Error("invalid context");
+                }
+                if (stored.utf8String === "accept") {
+                    return true;
+                }
+            }
+            return false;
+        };
+
+        function contextualFamily (items: [string, string][], plain: string[] = []): EntryInformation[] {
+            return [new EntryInformation({ rdnSequence: [] }, true, [{ attribute: new Attribute(TYPE, plain.map(value), items.map(([text, context]) => (
+                new Attribute_valuesWithContext_Item(value(text), [new Context(RULE, [value(context)])])
+            ))) }])];
+        }
+
+        it.each([false, true])("matches one context-filtered attribute, including both value arrays, matchedValuesOnly=%s", (matchedValuesOnly) => {
+            const { matcher, compareValue, normalize, options } = instrumented(kind, matchedValuesOnly);
+            const matchContext = vi.fn(contextMatcher);
+            const entries = contextualFamily([["throw", "reject"], ["true", "accept"], ["false", "accept"]], ["true", "false"]);
+            const original = (entries[0].information![0] as { attribute: Attribute }).attribute;
+            const result = evaluateFilter(filter, entries, { ...options, getContextMatcher: () => matchContext });
+            expect(result.matched).toBe(true);
+            expect(result.matchedValues).toHaveLength(matchedValuesOnly ? 2 : 0);
+            expect(matcher).toHaveBeenCalledTimes(1);
+            expect(normalize).toHaveBeenCalledTimes(1);
+            expect(compareValue).toHaveBeenCalledTimes(matchedValuesOnly ? 4 : 1);
+            expect(matchContext.mock.invocationCallOrder.at(-1)).toBeLessThan(matcher.mock.invocationCallOrder[0]);
+            const selected = matcher.mock.calls[0][1] as Attribute;
+            expect(selected.values).toEqual(original.values);
+            expect(selected.valuesWithContext).toEqual(original.valuesWithContext!.slice(1));
+            expect(compareValue.mock.calls.some((call) => call[1] === original.valuesWithContext![0].value)).toBe(false);
+            expect(matcher.mock.calls[0]).toHaveLength(matchedValuesOnly ? 5 : 4);
+            if (matchedValuesOnly) {
+                expect(result.matchedValues![1].contexts).toBe(original.valuesWithContext![1].contextList);
+            }
+            expect(original.valuesWithContext).toHaveLength(3);
+        });
+
+        it.each([false, true])("never evaluates values rejected by contexts, matchedValuesOnly=%s", (matchedValuesOnly) => {
+            const { matcher, compareValue, normalize, options } = instrumented(kind, matchedValuesOnly);
+            const rejected = { ...options, getContextMatcher: () => () => false, determineAbsentMatch: () => false };
+            for (const unknown of ["unknown", "throw"]) {
+                for (const entries of [family([unknown], ["true"]), family([], ["true", unknown]), family([], [unknown, "true"])]) {
+                    expect(evaluateFilter(filter, entries, rejected).matched).toBe(false);
+                    expect(evaluateFilter({ not: filter }, entries, rejected).matched).toBe(true);
+                }
+            }
+            expect(matcher).not.toHaveBeenCalled();
+            expect(compareValue).not.toHaveBeenCalled();
+            expect(normalize).not.toHaveBeenCalled();
+        });
+
+        it.each([false, true])("does not activate defaults when contexts reject a present attribute's values, matchedValuesOnly=%s", (matchedValuesOnly) => {
+            for (const defaults of [[], [new RequestAttribute_defaultValues_Item(undefined, [value("true")])]]) {
+                const { matcher, options } = instrumented(kind, matchedValuesOnly);
+                const profile = new RequestAttribute(TYPE, undefined, undefined, defaults);
+                const result = evaluateFilter(filter, contextualFamily([["unknown", "reject"]]), {
+                    ...options,
+                    getContextMatcher: () => contextMatcher,
+                    requestAttributes: new Map([[TYPE.toString(), profile]]),
+                });
+                expect(result.matched).toBe(false);
+                expect(result.matchedValues).toEqual([]);
+                expect(matcher).not.toHaveBeenCalled();
+            }
+        });
+
+        it.each([false, true])("preserves UNDEFINED for eligible values without a second pass, matchedValuesOnly=%s", (matchedValuesOnly) => {
+            for (const unknown of ["unknown", "throw"]) {
+                const { matcher, normalize, options } = instrumented(kind, matchedValuesOnly);
+                const entries = contextualFamily([["true", "reject"], [unknown, "accept"]]);
+                expect(evaluateFilter(filter, entries, { ...options, getContextMatcher: () => contextMatcher }).matched).toBeUndefined();
+                expect(matcher).toHaveBeenCalledTimes(1);
+                expect(normalize).toHaveBeenCalledTimes(1);
+            }
+        });
+
+        it("stops at the first context-selected value match without collecting output", () => {
+            const { matcher, compareValue, normalize, options } = instrumented(kind, false);
+            const items: [string, string][] = [["throw", "reject"], ["true", "accept"], ...Array.from({ length: 100 }, (): [string, string] => ["throw", "accept"])];
+            const result = evaluateFilter(filter, contextualFamily(items), { ...options, getContextMatcher: () => contextMatcher });
+            expect(result.matched).toBe(true);
+            expect(matcher).toHaveBeenCalledTimes(1);
+            expect(matcher.mock.calls[0]).toHaveLength(4);
+            expect(compareValue).toHaveBeenCalledTimes(1);
+            expect(normalize).toHaveBeenCalledTimes(1);
+        });
+
+        it.each([false, true])("checks contexts once for all plain values, matchedValuesOnly=%s", (matchedValuesOnly) => {
+            const { matcher, compareValue, options } = instrumented(kind, matchedValuesOnly);
+            const absentMatch = vi.fn(() => true);
+            const result = evaluateFilter(filter, family(Array.from({ length: 100 }, () => "true")), {
+                ...options, determineAbsentMatch: absentMatch,
+            });
+            expect(result.matched).toBe(true);
+            expect(absentMatch).toHaveBeenCalledTimes(1);
+            expect(matcher).toHaveBeenCalledTimes(1);
+            expect(compareValue).toHaveBeenCalledTimes(matchedValuesOnly ? 100 : 1);
+        });
+
+        it.each([false, true])("handles context errors with ternary logic, matchedValuesOnly=%s", (matchedValuesOnly) => {
+            for (const [text, expected] of [["false", false], ["true", undefined], ["unknown", undefined], ["throw", undefined]] as const) {
+                const { matcher, options } = instrumented(kind, matchedValuesOnly);
+                const entries = contextualFamily([[text, "error"]]);
+                const result = evaluateFilter(filter, entries, { ...options, getContextMatcher: () => contextMatcher });
+                expect(result.matched).toBe(expected);
+                expect(result.matchedValues).toEqual([]);
+                expect(result.contributingEntries.size).toBe(0);
+                expect(matcher).toHaveBeenCalledTimes(1);
+                expect(matcher.mock.calls[0]).toHaveLength(4);
+                expect(evaluateFilter({ not: filter }, entries, { ...options, getContextMatcher: () => contextMatcher }).matched).toBe(expected === false ? true : undefined);
+            }
+        });
+
+        it.each([false, true])("checks uncertain plain contexts once without collecting matches, matchedValuesOnly=%s", (matchedValuesOnly) => {
+            for (const [text, expected] of [["false", false], ["true", undefined], ["unknown", undefined]] as const) {
+                const { matcher, options } = instrumented(kind, matchedValuesOnly);
+                const absentMatch = vi.fn(() => { throw new Error("unknown absentMatch"); });
+                const entries = family([text, ...Array.from({ length: 100 }, () => "false")]);
+                const result = evaluateFilter(filter, entries, { ...options, determineAbsentMatch: absentMatch });
+                expect(result.matched).toBe(expected);
+                expect(absentMatch).toHaveBeenCalledTimes(1);
+                expect(matcher).toHaveBeenCalledTimes(1);
+                expect(matcher.mock.calls[0]).toHaveLength(4);
+            }
+        });
+
+        it("does not allow fallback when a known direct match follows an uncertain sibling", () => {
+            const { options } = instrumented(kind, true);
+            for (const items of [
+                [["false", "error"], ["false", "accept"], ["true", "reject"]],
+                [["false", "accept"], ["false", "error"], ["true", "reject"]],
+            ]) {
+                const entries = contextualFamily(items as [string, string][]);
+                const attribute = (entries[0].information![0] as { attribute: Attribute }).attribute;
+                attribute.valuesWithContext![2].contextList[0] = new Context(RULE, [value("reject")], true);
+                expect(evaluateFilter(filter, entries, { ...options, getContextMatcher: () => contextMatcher }).matched).toBe(false);
+            }
+        });
+
+        it("does not assume fallback is available when a sibling context cannot be evaluated", () => {
+            for (const [text, expected] of [["true", undefined], ["false", false]] as const) {
+                const { options } = instrumented(kind, true);
+                const entries = contextualFamily([["false", "error"], [text, "reject"]]);
+                const attribute = (entries[0].information![0] as { attribute: Attribute }).attribute;
+                attribute.valuesWithContext![1].contextList[0] = new Context(RULE, [value("reject")], true);
+                expect(evaluateFilter(filter, entries, { ...options, getContextMatcher: () => contextMatcher }).matched).toBe(expected);
+            }
+        });
+
+        it("caches uncertain sibling scans instead of repeating them for each fallback value", () => {
+            const { options } = instrumented(kind, false);
+            const items: [string, string][] = [["false", "error"], ...Array.from({ length: 50 }, (): [string, string] => ["false", "reject"])];
+            const entries = contextualFamily(items);
+            const attribute = (entries[0].information![0] as { attribute: Attribute }).attribute;
+            for (const vwc of attribute.valuesWithContext!.slice(1)) {
+                vwc.contextList[0] = new Context(RULE, [value("reject")], true);
+            }
+            const matchContext = vi.fn(contextMatcher);
+            const result = evaluateFilter(filter, entries, { ...options, getContextMatcher: () => matchContext });
+            expect(result.matched).toBe(false);
+            // One direct evaluation per value and one shared sibling scan.
+            expect(matchContext).toHaveBeenCalledTimes(2 * items.length);
+        });
+    });
+
+    it("does not require matcher output to establish a context-constrained match", () => {
+        const filter = leaf("equality", { selectedContexts: [new ContextAssertion(RULE, [value("context")])] });
+        const options = { ...settings(), getEqualityMatcher: () => () => true };
+        expect(evaluateFilter(filter, family(["true"]), options).matched).toBe(true);
+        expect(evaluateFilter({ not: filter }, family(["true"]), options).matched).toBe(false);
+    });
+
+    it("retains ternary precedence and actual types across attributes, friends, DN values, and family members", () => {
+        const friend = ObjectIdentifier.fromString("1.2.3.11");
+        const subtype = ObjectIdentifier.fromString("1.2.3.12");
+        const options = {
+            ...settings("equality", true),
+            getFriends: () => [friend],
+            isAttributeSubtype: (a: typeof TYPE, b: typeof TYPE) => a.isEqualTo(b) || (a.isEqualTo(subtype) && b.isEqualTo(TYPE)),
+            dnAttribute: true,
+        };
+        const entry = new EntryInformation({ rdnSequence: [[new AttributeTypeAndValue(subtype, value("true"))]] }, true, [
+            { attribute: new Attribute(TYPE, [value("false"), value("false")]) },
+            { attribute: new Attribute(friend, [value("unknown"), value("false")]) },
+        ]);
+        expect(evaluateFilter(leaf(), [entry], { ...options, dnAttribute: false }).matched).toBeUndefined();
+        const result = evaluateFilter(leaf(), [...family(["unknown"]), entry], options);
+        expect(result.matched).toBe(true);
+        expect([...result.contributingEntries]).toEqual([1]);
+        expect(result.matchedValues).toHaveLength(1);
+        expect(result.matchedValues![0].type).toBe(subtype);
+        expect(result.matchedValues![0].entryIndex).toBe(1);
+    });
+});
 
 describe("indeterminate filter evaluation (H8)", () => {
     describe.each<Kind>(["equality", "approximateMatch", "greaterOrEqual", "lessOrEqual", "substrings", "extensibleMatch"])("%s", (kind) => {
@@ -237,7 +682,7 @@ describe("bounded filter evaluation (M5)", () => {
     it("evaluates all 128 allowed nodes, but not a 129th node", () => {
         // 127 AND wrappers plus the equality leaf exactly fill the budget.
         const entries = family(["true"]);
-        const withinBudget = evaluateFilter(nested("and", 127), entries, settings());
+        const withinBudget = evaluateFilter(nested("and", 127), entries, settings("equality", true));
         expect(withinBudget.matched).toBe(true);
         expect([...withinBudget.contributingEntries]).toEqual([0]);
         expect(withinBudget.matchedValues).toHaveLength(1);

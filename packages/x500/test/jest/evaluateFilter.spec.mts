@@ -37,15 +37,12 @@ import type {
 } from "../../src/lib/modules/InformationFramework/Name.ta.mjs";
 import { evaluateFilter, type EvaluateFilterSettings } from "../../src/lib/utils/evaluateFilter.mjs";
 import {
-    MATCH_FLAG_ORDERING_GREATER,
-    MATCH_FLAG_ORDERING_OR_EQUAL,
+    createEqualityMatcher,
+    createOrderingMatcher,
+    createSubstringsMatcher,
     type ContextMatcher,
-    type Matcher,
 } from "../../src/lib/types/matching.mjs";
 import { type OBJECT_IDENTIFIER, type ASN1Element } from "@wildboar/asn1";
-import {
-    AttributeTypeAndValue,
-} from "../../src/lib/modules/InformationFramework/AttributeTypeAndValue.ta.mjs";
 
 const TRUE_ELEMENT = new asn1.DERElement(
     asn1.ASN1TagClass.universal,
@@ -93,12 +90,9 @@ const FILLER_CONTEXT_TYPE_1 = asn1.ObjectIdentifier.fromParts([2, 1, 1, 1]);
 
 const FILLER_MATCHING_RULE_TYPE_1 = asn1.ObjectIdentifier.fromParts([0, 1, 1, 1]);
 
-function storedValue(valueOrValues: AttributeTypeAndValue | Attribute): ASN1Element {
-    return "values" in valueOrValues ? valueOrValues.values[0] : valueOrValues.value;
-}
-
-const BOOLEAN_EQUALITY_MATCHING_RULE: Matcher = (assertion, valueOrValues) => (
-    (assertion as ASN1Element).value[0] === storedValue(valueOrValues).value[0]
+const BOOLEAN_EQUALITY_MATCHING_RULE = createEqualityMatcher(
+    (assertion) => assertion.value[0],
+    (assertion, stored) => assertion === stored.value[0],
 );
 
 const BOOLEAN_CONTEXT_MATCHING_RULE: ContextMatcher = (assertion, values) => {
@@ -111,36 +105,33 @@ const BOOLEAN_CONTEXT_MATCHING_RULE: ContextMatcher = (assertion, values) => {
 };
 
 // This will only work for INTEGERs within [0,127].
-const INTEGER_ORDERING_RULE: Matcher = (assertion, valueOrValues, _get, flags = 0) => {
-    const a = (assertion as ASN1Element).value[0];
-    const v = storedValue(valueOrValues).value[0];
-    const greater = Boolean(flags & MATCH_FLAG_ORDERING_GREATER);
-    const orEqual = Boolean(flags & MATCH_FLAG_ORDERING_OR_EQUAL);
-    if (greater) {
-        return orEqual ? v >= a : v > a;
-    }
-    return orEqual ? v <= a : v < a;
-};
+const INTEGER_ORDERING_RULE = createOrderingMatcher(
+    (assertion) => assertion.value[0],
+    (assertion, stored) => assertion - (stored as ASN1Element).value[0],
+);
 
-const UTF8_SUBSTRING_RULE: Matcher = (assertion, valueOrValues) => {
-    const val = storedValue(valueOrValues).utf8String;
-    const items = Array.isArray(assertion) ? assertion : [];
-    for (const item of items) {
-        if ("initial" in item && !val.startsWith(item.initial.utf8String)) {
-            return false;
-        }
-        if ("any_" in item && val.indexOf(item.any_.utf8String) < 0) {
-            return false;
-        }
-        if ("final" in item) {
-            const ass = item.final.utf8String;
-            if (val.indexOf(ass) !== (val.length - ass.length - 1)) {
+const UTF8_SUBSTRING_RULE = createSubstringsMatcher(
+    (): FilterItem_substrings["strings"] => [],
+    (items, stored) => {
+        const val = stored.utf8String;
+        for (const item of items) {
+            if ("initial" in item && !val.startsWith(item.initial.utf8String)) {
                 return false;
             }
+            if ("any_" in item && val.indexOf(item.any_.utf8String) < 0) {
+                return false;
+            }
+            if ("final" in item) {
+                const ass = item.final.utf8String;
+                if (val.indexOf(ass) !== (val.length - ass.length - 1)) {
+                    return false;
+                }
+            }
         }
-    }
-    return true;
-};
+        return true;
+    },
+    (strings) => strings,
+);
 
 const ALWAYS_COMPATIBLE: EvaluateFilterSettings["isMatchingRuleCompatibleWithAttributeType"] = () => true;
 const NO_SUBTYPING: EvaluateFilterSettings["isAttributeSubtype"] = (

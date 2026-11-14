@@ -14,7 +14,7 @@ import { EntryInformation } from "../modules/DirectoryAbstractService/EntryInfor
 import { AttributeValueAssertion } from "../modules/InformationFramework/AttributeValueAssertion.ta.mjs";
 import type { Filter } from "../modules/DirectoryAbstractService/Filter.ta.mjs";
 import type { Name } from "../modules/InformationFramework/Name.ta.mjs";
-import type { ContextMatcher, Matcher } from "../types/matching.mjs";
+import { createEqualityMatcher, type ContextMatcher } from "../types/matching.mjs";
 
 const CONTEXT_TYPE = ObjectIdentifier.fromString("1.2.3.4.5");
 const ATTR_TYPE = ObjectIdentifier.fromString("2.5.4.3");
@@ -44,10 +44,10 @@ const WORLD = new DERElement(
     "world",
 );
 
-const stringEquality: Matcher = (assertion, valueOrValues) => {
-    const stored = "values" in valueOrValues ? valueOrValues.values[0] : valueOrValues.value;
-    return (assertion as DERElement).utf8String === stored.utf8String;
-};
+const stringEquality = createEqualityMatcher(
+    (assertion) => assertion.utf8String,
+    (assertion, stored) => assertion === stored.utf8String,
+);
 const stringContext: ContextMatcher = (assertion, values) => {
     for (const v of values) {
         if (assertion.utf8String === v.utf8String) {
@@ -227,5 +227,35 @@ describe("evaluateFilter context fallback", () => {
         const result = evaluateFilter(filter, [ entry ], options);
         expect(result.matched).toBe(false);
         expect(result.matchedValues ?? []).toHaveLength(0);
+    });
+
+    it("still consults denied siblings when deciding whether fallback is available", () => {
+        const attribute = new Attribute(ATTR_TYPE, [], [
+            new Attribute_valuesWithContext_Item(WORLD, [new Context(CONTEXT_TYPE, [EN], false)]),
+            new Attribute_valuesWithContext_Item(HELLO, [new Context(CONTEXT_TYPE, [FR], true)]),
+        ]);
+        const entry = new EntryInformation(name, true, [{ attribute }]);
+        const result = evaluateFilter(filter, [entry], {
+            ...options,
+            permittedToMatch: (_type, stored) => stored !== WORLD,
+        });
+        expect(result.matched).toBe(false);
+        expect(result.matchedValues).toEqual([]);
+        expect(attribute.valuesWithContext).toHaveLength(2);
+    });
+
+    it("consults plain siblings when deciding fallback for contextual values", () => {
+        const attribute = new Attribute(ATTR_TYPE, [WORLD], [
+            new Attribute_valuesWithContext_Item(HELLO, [new Context(CONTEXT_TYPE, [FR], true)]),
+        ]);
+        const entry = new EntryInformation(name, true, [{ attribute }]);
+        // WORLD has no contexts, so absentMatch satisfies the context assertion
+        // and suppresses HELLO's fallback, even though WORLD cannot be matched.
+        const result = evaluateFilter(filter, [entry], {
+            ...options,
+            permittedToMatch: (_type, stored) => stored !== WORLD,
+        });
+        expect(result.matched).toBe(false);
+        expect(result.matchedValues).toEqual([]);
     });
 });
