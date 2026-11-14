@@ -40,7 +40,7 @@ function evaluateLDAPAttributeOptionContext (
  * a membership test, not a bounded walk, so a work limit would
  * still be quadratic up to the cap.
  */
-function storedOptionSet (value: readonly string[] | IterableIterator<string>): Set<string> {
+function storedOptionSet (value: readonly string[]): Set<string> {
     const stored = new Set<string>();
     for (const option of value) {
         stored.add(option);
@@ -72,7 +72,7 @@ function evaluateLDAPAttributeOptionContextTyped (
     flags: number = 0,
 ): boolean {
     const constantTime = Boolean(flags & MATCH_FLAG_CONSTANT_TIME);
-    const storedValues = storedOptionSet(value);
+    const storedValues = storedOptionSet(Array.isArray(value) ? value : Array.from(value));
     let matched = true;
     for (const option of assertion) {
         if (!optionIsStored(storedValues, option)) {

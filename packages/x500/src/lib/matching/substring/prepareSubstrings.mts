@@ -254,21 +254,22 @@ function decodeFilterPieces (
  */
 export
 function normalizePieces (
-    pieces: readonly AssertedSubstring<string>[] | IterableIterator<AssertedSubstring<string>>,
+    pieces: readonly AssertedSubstring<string>[],
     prepare: StringPreparer,
     rule: string,
     el?: ASN1Element,
 ): AssertedSubstring<string>[] {
-    const out: AssertedSubstring<string>[] = [];
-    for (const piece of pieces) {
+    const out: AssertedSubstring<string>[] = new Array(pieces.length);
+    for (let i = 0; i < pieces.length; i++) {
+        const piece = pieces[i];
         if ("initial" in piece) {
-            out.push({ initial: assertPrepared(piece.initial, prepare, rule, el) });
+            out[i] = { initial: assertPrepared(piece.initial, prepare, rule, el) };
         } else if ("any_" in piece) {
-            out.push({ any_: assertPrepared(piece.any_, prepare, rule, el) });
+            out[i] = { any_: assertPrepared(piece.any_, prepare, rule, el) };
         } else if ("final" in piece) {
-            out.push({ final: assertPrepared(piece.final, prepare, rule, el) });
+            out[i] = { final: assertPrepared(piece.final, prepare, rule, el) };
         } else {
-            out.push(piece);
+            out[i] = piece;
         }
     }
     return out;

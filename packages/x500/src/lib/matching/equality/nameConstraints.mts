@@ -109,7 +109,7 @@ function nameWithinNameConstraints (
  */
 export
 function namesWithinNameConstraints (
-    names: readonly GeneralName[] | IterableIterator<GeneralName>,
+    names: readonly GeneralName[],
     constraints: NameConstraintsSyntax,
     getEqualityMatcher?: (type: OBJECT_IDENTIFIER) => Matcher | undefined,
 ): boolean {
@@ -120,12 +120,7 @@ function namesWithinNameConstraints (
             // If the subtree is not a supported name form, fail closed.
             return false;
         }
-        for (const name of names) {
-            if (!nameWithinNameConstraints(name, permitted, excluded, getEqualityMatcher)) {
-                return false;
-            }
-        }
-        return true;
+        return names.every((name) => nameWithinNameConstraints(name, permitted, excluded, getEqualityMatcher));
     } catch {
         return false;
     }

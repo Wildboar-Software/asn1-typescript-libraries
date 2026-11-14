@@ -92,7 +92,8 @@ function normalizeTelephoneNumberSubstringsMatchAssertion (
     assertion: readonly AssertedSubstring<string>[] | IterableIterator<AssertedSubstring<string>>,
     el?: ASN1Element,
 ): AssertedSubstring<string>[] {
-    return normalizePieces(assertion, prepareTelephone, RULE, el);
+    const pieces = Array.isArray(assertion) ? assertion : Array.from(assertion);
+    return normalizePieces(pieces, prepareTelephone, RULE, el);
 }
 
 /**

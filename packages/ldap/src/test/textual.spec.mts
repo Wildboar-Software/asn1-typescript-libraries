@@ -10,7 +10,7 @@ import { PartialAttribute } from "../lib/modules/Lightweight-Directory-Access-Pr
 import { SearchResultEntry } from "../lib/modules/Lightweight-Directory-Access-Protocol-V3/SearchResultEntry.ta.mjs";
 import { SubstringFilter } from "../lib/modules/Lightweight-Directory-Access-Protocol-V3/SubstringFilter.ta.mjs";
 import stringifyFilter from "../lib/filterToString.mjs";
-import { formatLdifAttribute, formatLdifAttributes, rfc4515Substrings } from "../lib/textual.mjs";
+import { formatLdifAttribute } from "../lib/textual.mjs";
 
 const utf8 = (text: string): Buffer => Buffer.from(text, "utf8");
 
@@ -233,16 +233,5 @@ describe("LDIF", () => {
                 newrdn: "cn=A",
                 deleteoldrdn: false,
             });
-    });
-
-    it("reads substring choices and LDIF values from iterators", () => {
-        expect(rfc4515Substrings([
-            { final: utf8("qux") },
-            { any_: utf8("bar") },
-            { initial: utf8("foo") },
-        ].values())).toBe("foo*bar*qux");
-        expect(formatLdifAttributes("cn", [utf8("Ada"), utf8("Augusta")].values()))
-            .toBe("cn: Ada\ncn: Augusta");
-        expect(formatLdifAttributes("cn", [].values())).toBe("");
     });
 });

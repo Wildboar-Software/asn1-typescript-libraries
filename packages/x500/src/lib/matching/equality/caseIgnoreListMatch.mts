@@ -1,5 +1,7 @@
-import { ASN1CharactersError, type ASN1Element } from "@wildboar/asn1";
+import { ASN1CharactersError, ASN1Element } from "@wildboar/asn1";
 import type { AttributeType } from "../../modules/InformationFramework/index.mjs";
+import type { DirectoryString } from "../../modules/SelectedAttributeTypes/DirectoryString.ta.mjs";
+import type { UnboundedDirectoryString } from "../../modules/SelectedAttributeTypes/UnboundedDirectoryString.ta.mjs";
 import type { DirectoryStringListInput } from "../readValue.mjs";
 import { readDirectoryStringList } from "../readValue.mjs";
 import { approximatelyEqualStrings } from "../approximate.mjs";
@@ -119,17 +121,21 @@ function matchListConstantTime (
  * UNDEFINED.
  *
  * @param assertion Presented lines, already prepared and case-folded.
- * @param value Stored list, or those lines already prepared.
+ * @param value Stored list, those lines already prepared, or an iterator of
+ *  those lines. An iterator is read once into an array before the list reader.
  *  `MATCH_FLAG_VALUE_NORMALIZED` skips preparation.
  */
 export
 function caseIgnoreListMatchTyped (
     assertion: readonly string[],
-    value: DirectoryStringListInput,
+    value: DirectoryStringListInput | IterableIterator<UnboundedDirectoryString | DirectoryString | string>,
     _getEqualityMatcher?: (attributeType: AttributeType) => Matcher | undefined,
     flags: number = 0,
 ): boolean | undefined {
-    const lines = readDirectoryStringList(value);
+    const stored: DirectoryStringListInput = Array.isArray(value) || ASN1Element.isElement(value)
+        ? value
+        : Array.from(value);
+    const lines = readDirectoryStringList(stored);
     const normalized = (flags & MATCH_FLAG_VALUE_NORMALIZED) !== 0;
     const approximate = (flags & MATCH_FLAG_APPROXIMATE) !== 0;
     const debug = (flags & MATCH_FLAG_DEBUG) !== 0;

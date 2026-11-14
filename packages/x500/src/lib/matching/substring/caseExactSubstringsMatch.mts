@@ -90,7 +90,8 @@ function normalizeCaseExactSubstringsMatchAssertion (
     assertion: readonly AssertedSubstring<string>[] | IterableIterator<AssertedSubstring<string>>,
     el?: ASN1Element,
 ): AssertedSubstring<string>[] {
-    return normalizePieces(assertion, prepareExact, RULE, el);
+    const pieces = Array.isArray(assertion) ? assertion : Array.from(assertion);
+    return normalizePieces(pieces, prepareExact, RULE, el);
 }
 
 /**

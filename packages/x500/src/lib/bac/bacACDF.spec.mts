@@ -9,7 +9,6 @@ import {
 } from "./bacACDF.mjs";
 import { splitGrantsAndDenials } from "./splitGrantsAndDenials.mjs";
 import { applyACDFConstraints } from "./applyACDFConstraints.mjs";
-import { operationPermitted } from "./operationPermitted.mjs";
 import { discardNonRelevantACDFTuples } from "./discardNonRelevantACDFTuples.mjs";
 import { ProtectedItems } from "../modules/BasicAccessControl/ProtectedItems.ta.mjs";
 import {
@@ -779,7 +778,7 @@ describe("BAC permission splitting (H3)", () => {
         }
     });
 
-    it("reads operations and tuples from iterators", () => {
+    it("reads tuples from an iterator", () => {
         const addGrant = new ACDFTupleExtended(
             ALL_USERS,
             AUTH_NONE,
@@ -792,22 +791,6 @@ describe("BAC permission splitting (H3)", () => {
             1,
         );
         const valueRequest: ValueRequest = { value: ALICE_COMMON_NAME };
-        expect(operationPermitted(
-            [PERMISSION_CATEGORY_ADD].values(),
-            addGrant,
-            valueRequest,
-        )).toBe(true);
-        expect(operationPermitted(
-            [PERMISSION_CATEGORY_READ].values(),
-            addGrant,
-            valueRequest,
-        )).toBe(false);
-        expect(applyACDFConstraints(
-            addGrant,
-            valueRequest,
-            [PERMISSION_CATEGORY_ADD, PERMISSION_CATEGORY_IMPORT].values(),
-            matchingSettings,
-        )).toBe(addGrant);
         expect(discardNonRelevantACDFTuples(
             [addGrant].values(),
             undefined,

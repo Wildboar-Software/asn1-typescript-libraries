@@ -16,15 +16,14 @@ const ANY_POLICY_KEY = anyPolicy.toString();
  * {@link groupByOID} uses. RFC 5280 forbids duplicate types; a
  * second member with the same OID overwrites the first.
  *
- * @param {Extension[] | IterableIterator<Extension>} extensions `TBSCertificate.extensions`.
- *  Absent, an array, and an iterator are each read once.
+ * @param {Extension[]} extensions `TBSCertificate.extensions`.
  * @returns {Map<string, Extension>} OID string to extension.
  * @function
  * @author Cursor Grok 4.6
  */
 export
 function certificateExtensionMap (
-    extensions: Extension[] | IterableIterator<Extension> | undefined,
+    extensions: Extension[] | undefined,
 ): Map<string, Extension> {
     const map: Map<string, Extension> = new Map();
     if (!extensions) {
@@ -75,15 +74,14 @@ function decodeCertificateExtension <T> (
  * Map of extensions plus a decode cache so each OID is decoded at
  * most once for one certificate.
  *
- * @param {Extension[] | IterableIterator<Extension>} extensions `TBSCertificate.extensions`.
- *  Absent, an array, and an iterator are each read once.
+ * @param {Extension[]} extensions `TBSCertificate.extensions`.
  * @returns {Function} `(oid, decoder) => decoded | undefined`.
  * @function
  * @author Cursor Grok 4.6
  */
 export
 function certificateExtensionReader <T> (
-    extensions: Extension[] | IterableIterator<Extension> | undefined,
+    extensions: Extension[] | undefined,
 ): (oid: OBJECT_IDENTIFIER, decoder: (el: DERElement) => T) => T | undefined {
     const map = certificateExtensionMap(extensions);
     const decoded: Map<string, unknown> = new Map();
@@ -100,16 +98,16 @@ function certificateExtensionReader <T> (
  * (`OBJECT_IDENTIFIER.toString()` is cached). Stored policies then
  * look up in that set.
  *
- * @param asserted Presented `CertPolicySet`. An array or an iterator is read once.
- * @param stored Decoded `certificatePolicies` extension. An array or an iterator is read once.
+ * @param asserted Presented `CertPolicySet`.
+ * @param stored Decoded `certificatePolicies` extension.
  * @returns `true` iff the policy component matches.
  * @function
  * @author Cursor Grok 4.6
  */
 export
 function certificatePoliciesIntersect (
-    asserted: OBJECT_IDENTIFIER[] | IterableIterator<OBJECT_IDENTIFIER>,
-    stored: CertificatePoliciesSyntax | IterableIterator<CertificatePoliciesSyntax[number]>,
+    asserted: OBJECT_IDENTIFIER[],
+    stored: CertificatePoliciesSyntax,
 ): boolean {
     const assertedIds: Set<string> = new Set();
     for (const oid of asserted) {

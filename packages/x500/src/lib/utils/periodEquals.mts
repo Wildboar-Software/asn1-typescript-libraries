@@ -89,28 +89,13 @@ export function periodsEquivalent (
  * are not themselves timing-independent.
  */
 export function periodSetsEquivalent (
-    asserted: readonly Period[] | IterableIterator<Period>,
-    stored: readonly Period[] | IterableIterator<Period>,
+    asserted: readonly Period[],
+    stored: readonly Period[],
     flags: number = 0,
 ): boolean {
-    if (Array.isArray(asserted) && Array.isArray(stored) && asserted.length !== stored.length) {
-        return false;
-    }
-    const assertedIterator = Array.isArray(asserted) ? asserted.values() : asserted;
-    const storedIterator = Array.isArray(stored) ? stored.values() : stored;
-    const assertedKeys: string[] = [];
-    for (const period of assertedIterator) {
-        assertedKeys.push(periodKey(period));
-    }
-    const storedKeys: string[] = [];
-    for (const period of storedIterator) {
-        storedKeys.push(periodKey(period));
-    }
-    if (assertedKeys.length !== storedKeys.length) {
-        return false;
-    }
+    if (asserted.length !== stored.length) return false;
     return sortedKeyMultisetsEqual(
-        assertedKeys, storedKeys, flags & MATCH_FLAG_CONSTANT_TIME,
+        asserted.map(periodKey), stored.map(periodKey), flags & MATCH_FLAG_CONSTANT_TIME,
     );
 }
 
