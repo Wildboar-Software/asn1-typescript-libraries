@@ -6,7 +6,6 @@ import {
     type Matcher,
     type TypedEquationFunction,
 } from "../../types/matching.mjs";
-import { readDecoded } from "../readValue.mjs";
 import { _decodeSetOf } from "@wildboar/asn1/functional";
 import {
     type Name,
@@ -32,7 +31,9 @@ import { sortedKeyMultisetsEqual } from "../../utils/sortedKeyMultisetsEqual.mjs
  * `masterAndShadowAccessPointsMatch` on decoded names and access
  * points. The inputs are not reordered.
  *
- * @param a Presented ae-titles.
+ * @param a Presented ae-titles. When both this and the stored points are
+ *  arrays, unequal lengths return before keys are built. An array is then
+ *  read via `values()`, and an iterator is read directly.
  * @param value Stored access points, or those points already decoded.
  * @param _getMatcher Accepted for the matcher signature. Ae-titles
  *  are compared with `nameToKey`, so this lookup is not consulted.
@@ -42,19 +43,32 @@ import { sortedKeyMultisetsEqual } from "../../utils/sortedKeyMultisetsEqual.mjs
  */
 export
 function masterAndShadowAccessPointsMatchTyped (
-    a: readonly Name[],
-    value: MasterAndShadowAccessPoints | ASN1Element,
+    a: readonly Name[] | IterableIterator<Name>,
+    value: MasterAndShadowAccessPoints | ASN1Element | IterableIterator<MasterAndShadowAccessPoints[number]>,
     _getMatcher?: (attributeType: AttributeType) => Matcher | undefined,
     flags: number = 0,
 ): boolean {
-    const v = readDecoded(value, _decode_MasterAndShadowAccessPoints);
-    if (a.length !== v.length) {
+    const points = ASN1Element.isElement(value)
+        ? _decode_MasterAndShadowAccessPoints(value)
+        : value;
+    if (Array.isArray(a) && Array.isArray(points) && a.length !== points.length) {
         return false;
     }
-    const stored = v.map((point) => point.ae_title);
+    const presented = Array.isArray(a) ? a.values() : a;
+    const stored = Array.isArray(points) ? points.values() : points;
+    const presentedKeys: string[] = [];
+    for (const name of presented) {
+        presentedKeys.push(nameToKey(name));
+    }
+    const storedKeys: string[] = [];
+    for (const point of stored) {
+        storedKeys.push(nameToKey(point.ae_title));
+    }
+    if (presentedKeys.length !== storedKeys.length) {
+        return false;
+    }
     return sortedKeyMultisetsEqual(
-        a.map((name) => nameToKey(name)), stored.map((name) => nameToKey(name)),
-        flags & MATCH_FLAG_CONSTANT_TIME,
+        presentedKeys, storedKeys, flags & MATCH_FLAG_CONSTANT_TIME,
     );
 }
 

@@ -144,4 +144,32 @@ describe("checkNameForm", () => {
         const optionals: OBJECT_IDENTIFIER[] = [];
         expect(checkNameForm(rdn, mandatories, optionals)).toBe(false);
     });
+
+    it("reads an iterator with the general check", () => {
+        const rdn: RelativeDistinguishedName = [
+            new AttributeTypeAndValue(
+                commonName["&id"],
+                commonName.encoderFor["&Type"]!({
+                    printableString: "John Doe",
+                }, DER),
+            ),
+        ];
+        expect(checkNameForm(
+            rdn.values(),
+            [ commonName["&id"] ].values(),
+            [].values(),
+        )).toBe(true);
+        // Duplicate mandatory OIDs still fail, which an array catches by length.
+        expect(checkNameForm(
+            rdn,
+            [ commonName["&id"], commonName["&id"] ],
+            [],
+        )).toBe(false);
+        expect(checkNameForm(
+            rdn.values(),
+            [ commonName["&id"], commonName["&id"] ].values(),
+            [].values(),
+        )).toBe(false);
+        expect(checkNameForm([].values(), [ commonName["&id"] ].values())).toBe(false);
+    });
 });

@@ -88,10 +88,11 @@ function decodeNumericStringSubstringsMatchFilterPieces (
  */
 export
 function normalizeNumericStringSubstringsMatchAssertion (
-    assertion: AssertedSubstring<string>[],
+    assertion: readonly AssertedSubstring<string>[] | IterableIterator<AssertedSubstring<string>>,
     el?: ASN1Element,
 ): AssertedSubstring<string>[] {
-    return normalizePieces(assertion, prepareNumeric, RULE, el);
+    const pieces = Array.isArray(assertion) ? assertion : Array.from(assertion);
+    return normalizePieces(pieces, prepareNumeric, RULE, el);
 }
 
 /**
