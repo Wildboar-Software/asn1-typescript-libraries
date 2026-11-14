@@ -16,6 +16,7 @@ import { checkForDisallowedContexts } from "./checkForDisallowedContexts.mjs";
 import { type AttributeCombination } from "@wildboar/x500/ServiceAdministration";
 import { type FilterItem } from "@wildboar/x500/DirectoryAbstractService";
 import type { AttributeType } from "@wildboar/x500/InformationFramework";
+import { getRequestAttributeProfile } from "./getRequestAttributeProfile.mjs";
 
 /**
  * The internal state of `generalCheckOfSearchFilter()`.
@@ -74,6 +75,8 @@ export interface SearchRuleGeneralCheckState {
  * @param ctx The context object
  * @param search The unsigned search argument data
  * @param rule The governing search rule
+ * @param getAttributeParentTypes The attribute's ancestors, nearest first;
+ *  the iterator may also include the asserted attribute type itself
  * @returns A tuple containing the step this function failed on, followed by the
  *  function's internal state, in that order. The first value will be 0 if no
  *  steps failed. It will be 16102 if requested attribute types are empty and
@@ -119,25 +122,17 @@ export function generalCheckOfSearchFilter(
         getRequiredAttributesFromAttributeCombination(rule.attributeCombination, true, required_attrs);
     }
 
+    // Index the resolved profiles by the types actually asserted, including subtypes.
+    const applicable_profiles: Map<DotDelimitedOidString, RequestAttribute> = new Map();
     // Steps 1 and 2
     for (const [attr, [was_non_negated, was_negated]] of negation_by_attr_type.entries()) {
         const oid = ObjectIdentifier.fromString(attr);
-        let is_permitted: boolean = false;
-        for (const attr_type of getAttributeParentTypes(oid)) {
-            const key = attr_type.toString();
-            const profile = permitted_attrs.get(attr_type.toString());
-            if (profile) {
-                const is_subtype: boolean = (key !== attr);
-                if (!is_subtype || profile.includeSubtypes) {
-                    is_permitted = true;
-                }
-                break;
-            }
-        }
-        if (!is_permitted) {
+        const profile = getRequestAttributeProfile(oid, permitted_attrs, getAttributeParentTypes);
+        if (!profile) {
             state.searchAttributeViolations.push(oid);
             continue;
         }
+        applicable_profiles.set(attr, profile);
         // TODO: Document this.
         /* WARNING: The specification is not clear as to whether this is true
         for all attributes at all, or just those present in the input attrs. */
@@ -173,9 +168,9 @@ export function generalCheckOfSearchFilter(
     // This step, and in fact this whole procedure, does NOT check for
     // selected values. That is done in another procedure.
     const zero_select_values_attrs: Map<DotDelimitedOidString, boolean> = new Map();
-    for (const attr of rule.inputAttributeTypes ?? []) {
+    for (const [attribute_type, attr] of applicable_profiles) {
         if (attr.selectedValues && (attr.selectedValues.length === 0)) {
-            zero_select_values_attrs.set(attr.attributeType.toString(), !!attr.contexts);
+            zero_select_values_attrs.set(attribute_type, !!attr.contexts);
         }
     }
     if (filter && zero_select_values_attrs.size > 0) {
@@ -183,13 +178,13 @@ export function generalCheckOfSearchFilter(
     }
 
     const attrs_with_contexts: Map<DotDelimitedOidString, Map<DotDelimitedOidString, ContextProfile>> = new Map();
-    for (const attr of rule.inputAttributeTypes ?? []) {
+    for (const [attribute_type, attr] of applicable_profiles) {
         if (attr.contexts) {
             const context_map: Map<DotDelimitedOidString, ContextProfile> = new Map();
             for (const context of attr.contexts) {
                 context_map.set(context.contextType.toString(), context);
             }
-            attrs_with_contexts.set(attr.attributeType.toString(), context_map);
+            attrs_with_contexts.set(attribute_type, context_map);
         }
     }
 

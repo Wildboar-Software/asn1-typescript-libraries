@@ -22,6 +22,7 @@ import { AttributeTypeAndValue, ContextAssertion, type CONTEXT } from "@wildboar
 import { type ContextCombination } from "@wildboar/x500/ServiceAdministration";
 import { type AttributeType } from "@wildboar/x500/InformationFramework";
 import anyTypeMatch from "../matching/anyTypeMatch.mjs";
+import { getRequestAttributeProfile } from "./getRequestAttributeProfile.mjs";
 
 /**
  * The return type of `checkOfRequestAttributeProfileInFilter()`. The
@@ -122,11 +123,17 @@ export interface CheckRequestAttributeState {
  * reference. The callee is expected to inspect the fields of this object to
  * determine if any restrictions were violated.
  *
- * @param ctx The context object
+ * Profiles that include subtypes also constrain filter items for those subtypes.
+ * The asserted subtype is retained for matching and diagnostic attribute types.
+ *
  * @param state The current state of this function, which is passed recursively
  * @param filter The search filter to be checked
  * @param attr_profiles A mapping of input attribute types by their string-form
  *  attribute type object identifier
+ * @param getAttributeParentTypes The attribute's ancestors, nearest first;
+ *  the iterator may also include the asserted attribute type itself
+ * @param getEqualityMatcher Look up an equality matcher for the asserted type
+ * @param getContextMatcher Look up a context matcher for a context type
  * @returns Nothing. `state` is modified by reference.
  *
  * @function
@@ -136,6 +143,7 @@ export function checkOfRequestAttributeProfileInFilter(
     state: CheckRequestAttributeState,
     filter: Filter,
     attr_profiles: Map<DotDelimitedOidString, RequestAttribute>,
+    getAttributeParentTypes: (attributeType: AttributeType) => IterableIterator<AttributeType>,
     getEqualityMatcher?: (attributeType: AttributeType) => Matcher | undefined,
     getContextMatcher?: (contextType: CONTEXT["&id"]) => ContextMatcher | undefined
 ): void {
@@ -189,7 +197,7 @@ export function checkOfRequestAttributeProfileInFilter(
         if (!type_oid) {
             return;
         }
-        const profile = attr_profiles.get(type_oid.toString());
+        const profile = getRequestAttributeProfile(type_oid, attr_profiles, getAttributeParentTypes);
         if (!profile) {
             return;
         }
@@ -318,14 +326,14 @@ export function checkOfRequestAttributeProfileInFilter(
         }
     } else if ("and" in filter) {
         for (const sub of filter.and) {
-            checkOfRequestAttributeProfileInFilter(state, sub, attr_profiles, getEqualityMatcher, getContextMatcher);
+            checkOfRequestAttributeProfileInFilter(state, sub, attr_profiles, getAttributeParentTypes, getEqualityMatcher, getContextMatcher);
         }
     } else if ("or" in filter) {
         for (const sub of filter.or) {
-            checkOfRequestAttributeProfileInFilter(state, sub, attr_profiles, getEqualityMatcher, getContextMatcher);
+            checkOfRequestAttributeProfileInFilter(state, sub, attr_profiles, getAttributeParentTypes, getEqualityMatcher, getContextMatcher);
         }
     } else if ("not" in filter) {
-        checkOfRequestAttributeProfileInFilter(state, filter.not, attr_profiles, getEqualityMatcher, getContextMatcher);
+        checkOfRequestAttributeProfileInFilter(state, filter.not, attr_profiles, getAttributeParentTypes, getEqualityMatcher, getContextMatcher);
     }
 }
 
@@ -339,9 +347,12 @@ export function checkOfRequestAttributeProfileInFilter(
  * [ITU Recommendation X.511 (2019)](https://www.itu.int/rec/T-REC-X.511/en),
  * Section 15.2.
  *
- * @param ctx The context object
  * @param search The unsigned search argument data
  * @param rule The governing search rule
+ * @param getAttributeParentTypes The attribute's ancestors, nearest first;
+ *  the iterator may also include the asserted attribute type itself
+ * @param getEqualityMatcher Look up an equality matcher for the asserted type
+ * @param getContextMatcher Look up a context matcher for a context type
  * @returns A tuple containing the step on which validation failed (or 0 if
  *  none) and the internal function state, in that order.
  *
@@ -351,6 +362,7 @@ export function checkOfRequestAttributeProfileInFilter(
 export function checkOfRequestAttributeProfiles(
     search: SearchArgumentData,
     rule: SearchRule,
+    getAttributeParentTypes: (attributeType: AttributeType) => IterableIterator<AttributeType>,
     getEqualityMatcher?: (attributeType: AttributeType) => Matcher | undefined,
     getContextMatcher?: (contextType: CONTEXT["&id"]) => ContextMatcher | undefined
 ): [number, CheckRequestAttributeState] {
@@ -370,7 +382,7 @@ export function checkOfRequestAttributeProfiles(
     for (const attr of rule.inputAttributeTypes ?? []) {
         permitted_attrs.set(attr.attributeType.toString(), attr);
     }
-    checkOfRequestAttributeProfileInFilter(state, filter, permitted_attrs, getEqualityMatcher, getContextMatcher);
+    checkOfRequestAttributeProfileInFilter(state, filter, permitted_attrs, getAttributeParentTypes, getEqualityMatcher, getContextMatcher);
     if (state.searchValuesRequired.length > 0) {
         return [1, state];
     }
