@@ -216,3 +216,40 @@ export {
 } from './lib/dap/extensions.mjs';
 export { sort as sortEntries } from './lib/dap/sort.mjs';
 export * from './lib/errors.mjs';
+
+export {
+    checkAttributeCombination,
+} from "./lib/service/checkAttributeCombination.mjs";
+export {
+    checkContextCombination,
+} from "./lib/service/checkContextCombination.mjs";
+export {
+    checkForDisallowedContexts,
+} from "./lib/service/checkForDisallowedContexts.mjs";
+export {
+    checkForDisallowedSearchValues,
+} from "./lib/service/checkForDisallowedSearchValues.mjs";
+export {
+    checkOfControlsAndHierarchySelections,
+} from "./lib/service/checkOfControlsAndHierarchySelections.mjs";
+export {
+    checkOfMatchingUse,
+} from "./lib/service/checkOfMatchingUse.mjs";
+export {
+    checkOfRequestAttributeProfiles,
+} from "./lib/service/checkOfRequestAttributeProfiles.mjs";
+export {
+    generalCheckOfSearchFilter,
+} from "./lib/service/generalCheckOfSearchFilter.mjs";
+export {
+    getAttributeTypeNegationFromFilter,
+} from "./lib/service/getAttributeTypeNegationFromFilter.mjs";
+export {
+    getEffectiveControlsFromSearchRule,
+} from "./lib/service/getEffectiveControlsFromSearchRule.mjs";
+export {
+    getRequiredAttributesFromAttributeCombination,
+} from "./lib/service/getRequiredAttributesFromAttributeCombination.mjs";
+export {
+    getRequiredContextsFromContextCombination,
+} from "./lib/service/getRequiredContextsFromContextCombination.mjs";
