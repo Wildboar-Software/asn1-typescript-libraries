@@ -11,12 +11,12 @@ import { ContextProfile } from "@wildboar/x500/ServiceAdministration";
 import { getAttributeTypeNegationFromFilter } from "./getAttributeTypeNegationFromFilter.mjs";
 import { getRequiredAttributesFromAttributeCombination } from "./getRequiredAttributesFromAttributeCombination.mjs";
 import { checkAttributeCombination } from "./checkAttributeCombination.mjs";
-import { check_for_disallowed_search_values } from "./check_for_disallowed_search_values.mjs";
-import { check_for_disallowed_contexts } from "./check_for_disallowed_contexts.mjs";
+import { checkForDisallowedSearchValues } from "./checkForDisallowedSearchValues.mjs";
+import { checkForDisallowedContexts } from "./checkForDisallowedContexts.mjs";
 import type { AttributeCombination } from "@wildboar/x500/ServiceAdministration";
 import { type FilterItem } from "@wildboar/x500/DirectoryAbstractService";
 import { type AttributeType, AttributeValueAssertion, ContextAssertion } from "@wildboar/x500/InformationFramework";
-import { general_check_of_search_filter } from "./general_check_of_search_filter.mjs";
+import { generalCheckOfSearchFilter } from "./generalCheckOfSearchFilter.mjs";
 import { commonName, languageContext, streetAddress } from "@wildboar/x500/SelectedAttributeTypes";
 import { BER } from "@wildboar/asn1/functional";
 
@@ -27,7 +27,7 @@ function getAttributeParentTypes(attributeType: AttributeType): IterableIterator
     return [attributeType].values();
 }
 
-describe("general_check_of_search_filter", () => {
+describe("generalCheckOfSearchFilter", () => {
     it("should return 0 for an empty search if the search rule is empty", () => {
         const search = new SearchArgumentData(
             {
@@ -38,7 +38,7 @@ describe("general_check_of_search_filter", () => {
             1,
             rule_oid,
         );
-        const [failed_step] = general_check_of_search_filter(search, rule, getAttributeParentTypes);
+        const [failed_step] = generalCheckOfSearchFilter(search, rule, getAttributeParentTypes);
         expect(failed_step).toBe(0);
     });
 
@@ -75,7 +75,7 @@ describe("general_check_of_search_filter", () => {
                 ),
             ],
         );
-        const [failed_step] = general_check_of_search_filter(search, rule, getAttributeParentTypes);
+        const [failed_step] = generalCheckOfSearchFilter(search, rule, getAttributeParentTypes);
         expect(failed_step).not.toBe(0);
     });
 
@@ -132,7 +132,7 @@ describe("general_check_of_search_filter", () => {
                 },
             ],
         });
-        const [failed_step1] = general_check_of_search_filter(search, rule1, getAttributeParentTypes);
+        const [failed_step1] = generalCheckOfSearchFilter(search, rule1, getAttributeParentTypes);
         expect(failed_step1).not.toBe(0);
 
         // Either commonName must be present and streetAddress must not, or vice versa.
@@ -165,7 +165,7 @@ describe("general_check_of_search_filter", () => {
                 },
             ],
         });
-        const [failed_step2] = general_check_of_search_filter(search, rule2, getAttributeParentTypes);
+        const [failed_step2] = generalCheckOfSearchFilter(search, rule2, getAttributeParentTypes);
         expect(failed_step2).toBe(0);
     });
 
@@ -199,7 +199,7 @@ describe("general_check_of_search_filter", () => {
                 ),
             ],
         );
-        const [failed_step1] = general_check_of_search_filter(search, rule1, getAttributeParentTypes);
+        const [failed_step1] = generalCheckOfSearchFilter(search, rule1, getAttributeParentTypes);
         expect(failed_step1).toBe(0);
     });
 
@@ -246,7 +246,7 @@ describe("general_check_of_search_filter", () => {
             undefined,
 
         );
-        const [failed_step1] = general_check_of_search_filter(search, rule1, getAttributeParentTypes);
+        const [failed_step1] = generalCheckOfSearchFilter(search, rule1, getAttributeParentTypes);
         expect(failed_step1).toBe(4);
     });
 
@@ -294,7 +294,7 @@ describe("general_check_of_search_filter", () => {
             undefined,
         );
         // This rule forbids any contexts at all.
-        const [failed_step1] = general_check_of_search_filter(search, rule1, getAttributeParentTypes);
+        const [failed_step1] = generalCheckOfSearchFilter(search, rule1, getAttributeParentTypes);
         expect(failed_step1).toBe(5);
 
         const rule2 = new SearchRule(
@@ -323,7 +323,7 @@ describe("general_check_of_search_filter", () => {
 
         );
         // This rule allows the language context, so it should pass.
-        const [failed_step2] = general_check_of_search_filter(search, rule2, getAttributeParentTypes);
+        const [failed_step2] = generalCheckOfSearchFilter(search, rule2, getAttributeParentTypes);
         expect(failed_step2).toBe(0);
     });
 });

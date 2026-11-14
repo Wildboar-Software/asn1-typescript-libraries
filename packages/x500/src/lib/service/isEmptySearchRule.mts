@@ -16,6 +16,6 @@ import type { SearchRule } from "@wildboar/x500/ServiceAdministration";
  *
  * @function
  */
-export function is_empty_search_rule(sr: SearchRule): boolean {
+export function isEmptySearchRule(sr: SearchRule): boolean {
     return ((sr.id === 0) && !sr.serviceType);
 }

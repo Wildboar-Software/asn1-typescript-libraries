@@ -24,7 +24,7 @@ export interface CheckMatchingUseReturn {
  *
  * @function
  */
-export function check_of_matching_use(): CheckMatchingUseReturn {
+export function checkOfMatchingUse(): CheckMatchingUseReturn {
     // DEVIATION: this is not checked, because it is checked during the actual search operation.
     return {
         violatingAttributes: [],

@@ -14,7 +14,7 @@ const rule_oid = ObjectIdentifier.fromString("1.2.3.4");
 
 const BITS_WE_USE = 16;
 
-function int_to_bits(int: number): BIT_STRING {
+function intToBits(int: number): BIT_STRING {
     const ret = new Uint8ClampedArray(BITS_WE_USE);
     for (let i = 0; i < BITS_WE_USE; i++) {
         ret[i] = (int & (1 << i)) ? TRUE_BIT : FALSE_BIT;
@@ -66,10 +66,10 @@ describe("getEffectiveControlsFromSearchRule", () => {
             user_service_co,
         );
         expect(result1).toEqual({
-            hs: int_to_bits(2),
-            search: int_to_bits((1 << SearchControlOptions_dnAttribute)
+            hs: intToBits(2),
+            search: intToBits((1 << SearchControlOptions_dnAttribute)
                 | (1 << SearchControlOptions_checkOverspecified)),
-            service: int_to_bits((1 << ServiceControlOptions_manageDSAIT)
+            service: intToBits((1 << ServiceControlOptions_manageDSAIT)
                 | (1 << ServiceControlOptions_allowWriteableCopy)),
         });
     });

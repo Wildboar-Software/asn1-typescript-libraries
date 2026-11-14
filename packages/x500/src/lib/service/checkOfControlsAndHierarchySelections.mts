@@ -20,9 +20,9 @@ import type {
 } from "@wildboar/x500/DirectoryAbstractService";
 
 /**
- * @summary Return type of `check_of_controls_and_hierarchy_selections()`
+ * @summary Return type of `checkOfControlsAndHierarchySelections()`
  * @interface
- * @see {@link check_of_controls_and_hierarchy_selections}
+ * @see {@link checkOfControlsAndHierarchySelections}
  */
 export interface CheckControlsAndHSReturn {
 
@@ -76,7 +76,7 @@ hierarchy selections, and 11 search control options, so 16 bits is enough for
 all three of the following functions. */
 const BITS_WE_USE = 16;
 
-function concatenate_default_bits(
+function concatenateDefaultBits(
     user_bits: BIT_STRING,
     default_bits: BIT_STRING,
 ): number {
@@ -90,7 +90,7 @@ function concatenate_default_bits(
     return ret;
 }
 
-function bits_to_int(bits: BIT_STRING): number {
+function bitsToInt(bits: BIT_STRING): number {
     let ret: number = 0;
     for (let i = 0; i < BITS_WE_USE; i++) {
         if (bits[i] === TRUE_BIT) {
@@ -100,7 +100,7 @@ function bits_to_int(bits: BIT_STRING): number {
     return ret;
 }
 
-function int_to_bits(int: number): BIT_STRING {
+function intToBits(int: number): BIT_STRING {
     const ret = new Uint8ClampedArray(BITS_WE_USE);
     for (let i = 0; i < BITS_WE_USE; i++) {
         ret[i] = (int & (1 << i)) ? TRUE_BIT : FALSE_BIT;
@@ -133,7 +133,7 @@ function int_to_bits(int: number): BIT_STRING {
  * @function
  * @see {@link CheckControlsAndHSReturn}
  */
-export function check_of_controls_and_hierarchy_selections(
+export function checkOfControlsAndHierarchySelections(
     search: SearchArgumentData,
     rule: SearchRule): CheckControlsAndHSReturn {
 
@@ -160,24 +160,24 @@ export function check_of_controls_and_hierarchy_selections(
         }
     }
 
-    const c_service_controls: number = concatenate_default_bits(
+    const c_service_controls: number = concatenateDefaultBits(
         search.serviceControls?.options ?? new Uint8ClampedArray(0),
         rule.defaultControls?.serviceControls ?? new Uint8ClampedArray(0),
     );
-    const c_search_options: number = concatenate_default_bits(
+    const c_search_options: number = concatenateDefaultBits(
         search.searchControlOptions ?? new Uint8ClampedArray(0),
         rule.defaultControls?.searchOptions ?? ControlOptions._default_value_for_searchOptions,
     );
-    const c_hierarchy_selections: number = concatenate_default_bits(
+    const c_hierarchy_selections: number = concatenateDefaultBits(
         search.hierarchySelections ?? DEFAULT_HS,
         rule.defaultControls?.hierarchyOptions ?? DEFAULT_HS,
     );
 
-    const d_hierarchy_selections = bits_to_int(rule.defaultControls?.hierarchyOptions
+    const d_hierarchy_selections = bitsToInt(rule.defaultControls?.hierarchyOptions
         ?? DEFAULT_HS);
-    const d_search_options = bits_to_int(rule.defaultControls?.searchOptions
+    const d_search_options = bitsToInt(rule.defaultControls?.searchOptions
         ?? ControlOptions._default_value_for_searchOptions);
-    const d_service_controls = bits_to_int(rule.defaultControls?.serviceControls
+    const d_service_controls = bitsToInt(rule.defaultControls?.serviceControls
         ?? ControlOptions._default_value_for_serviceControls);
 
     // TODO:
@@ -186,7 +186,7 @@ export function check_of_controls_and_hierarchy_selections(
 
     // Step 2
     if (rule.mandatoryControls?.hierarchyOptions) {
-        const mandatory = bits_to_int(rule.mandatoryControls.hierarchyOptions);
+        const mandatory = bitsToInt(rule.mandatoryControls.hierarchyOptions);
         /* ITU-T X.501 (2019), Section 16.10.5: "The search validation against
         this search-rule fails if the bitstring C&M is not equal to D&M."
         XOR'ing gives you a diff instead of just using ==. */
@@ -195,7 +195,7 @@ export function check_of_controls_and_hierarchy_selections(
         if (non_compliant_bits !== 0) {
             return {
                 step_failed: 2,
-                hierarchySelectList: int_to_bits(non_compliant_bits),
+                hierarchySelectList: intToBits(non_compliant_bits),
             };
         }
     }
@@ -203,7 +203,7 @@ export function check_of_controls_and_hierarchy_selections(
     // Step 3 does not apply, because Meerkat DSA supports all hierarchy selections.
     // Step 4
     if (rule.mandatoryControls?.searchOptions) {
-        const mandatory = bits_to_int(rule.mandatoryControls.searchOptions);
+        const mandatory = bitsToInt(rule.mandatoryControls.searchOptions);
         /* ITU-T X.501 (2019), Section 16.10.5: "The search validation against
         this search-rule fails if the bitstring C&M is not equal to D&M."
         XOR'ing gives you a diff instead of just using ==. */
@@ -212,14 +212,14 @@ export function check_of_controls_and_hierarchy_selections(
         if (non_compliant_bits !== 0) {
             return {
                 step_failed: 4,
-                searchControlOptionsList: int_to_bits(non_compliant_bits),
+                searchControlOptionsList: intToBits(non_compliant_bits),
             };
         }
     }
 
     // Step 5
     if (rule.mandatoryControls?.serviceControls) {
-        const mandatory = bits_to_int(rule.mandatoryControls.serviceControls);
+        const mandatory = bitsToInt(rule.mandatoryControls.serviceControls);
         /* ITU-T X.501 (2019), Section 16.10.5: "The search validation against
         this search-rule fails if the bitstring C&M is not equal to D&M."
         XOR'ing gives you a diff instead of just using ==. */
@@ -228,7 +228,7 @@ export function check_of_controls_and_hierarchy_selections(
         if (non_compliant_bits !== 0) {
             return {
                 step_failed: 5,
-                serviceControlOptionsList: int_to_bits(non_compliant_bits),
+                serviceControlOptionsList: intToBits(non_compliant_bits),
             };
         }
     }
@@ -237,17 +237,17 @@ export function check_of_controls_and_hierarchy_selections(
 
     if (!rule.searchRuleControls) {
         return {
-            hierarchySelectList: int_to_bits(c_hierarchy_selections),
-            searchControlOptionsList: int_to_bits(c_search_options),
-            serviceControlOptionsList: int_to_bits(c_service_controls),
+            hierarchySelectList: intToBits(c_hierarchy_selections),
+            searchControlOptionsList: intToBits(c_search_options),
+            serviceControlOptionsList: intToBits(c_service_controls),
         };
     }
     // This code was copied to getEffectiveControlsFromSearchRule.ts.
-    const s_hierarchy_selections = bits_to_int(rule.searchRuleControls.hierarchyOptions
+    const s_hierarchy_selections = bitsToInt(rule.searchRuleControls.hierarchyOptions
         ?? DEFAULT_HS);
-    const s_search_opts = bits_to_int(rule.searchRuleControls.searchOptions
+    const s_search_opts = bitsToInt(rule.searchRuleControls.searchOptions
         ?? ControlOptions._default_value_for_searchOptions);
-    const s_service_opts = bits_to_int(rule.searchRuleControls.serviceControls
+    const s_service_opts = bitsToInt(rule.searchRuleControls.serviceControls
         ?? ControlOptions._default_value_for_serviceControls);
 
     const effective_hierarchy_selections = (c_hierarchy_selections & ~s_hierarchy_selections)
@@ -258,8 +258,8 @@ export function check_of_controls_and_hierarchy_selections(
         | (d_service_controls & s_service_opts);
 
     return {
-        hierarchySelectList: int_to_bits(effective_hierarchy_selections),
-        searchControlOptionsList: int_to_bits(effective_search_opts),
-        serviceControlOptionsList: int_to_bits(effective_service_opts),
+        hierarchySelectList: intToBits(effective_hierarchy_selections),
+        searchControlOptionsList: intToBits(effective_search_opts),
+        serviceControlOptionsList: intToBits(effective_service_opts),
     };
 }

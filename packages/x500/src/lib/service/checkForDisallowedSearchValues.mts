@@ -26,7 +26,7 @@ import { id_pr_administratorImposedLimit } from "@wildboar/x500/SelectedAttribut
  *
  * @function
  */
-export function check_for_disallowed_search_values(
+export function checkForDisallowedSearchValues(
     filter: Filter,
     context_use_by_attr_type: Map<DotDelimitedOidString, boolean>,
     violations: FilterItem[],
@@ -83,15 +83,15 @@ export function check_for_disallowed_search_values(
     }
     else if ("and" in filter) {
         for (const sub of filter.and) {
-            check_for_disallowed_search_values(sub, context_use_by_attr_type, violations, recursion_ttl - 1);
+            checkForDisallowedSearchValues(sub, context_use_by_attr_type, violations, recursion_ttl - 1);
         }
     }
     else if ("or" in filter) {
         for (const sub of filter.or) {
-            check_for_disallowed_search_values(sub, context_use_by_attr_type, violations, recursion_ttl - 1);
+            checkForDisallowedSearchValues(sub, context_use_by_attr_type, violations, recursion_ttl - 1);
         }
     }
     else if ("not" in filter) {
-        check_for_disallowed_search_values(filter.not, context_use_by_attr_type, violations, recursion_ttl - 1);
+        checkForDisallowedSearchValues(filter.not, context_use_by_attr_type, violations, recursion_ttl - 1);
     }
 }

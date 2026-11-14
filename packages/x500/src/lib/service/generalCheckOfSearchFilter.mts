@@ -11,19 +11,19 @@ import { ContextProfile } from "@wildboar/x500/ServiceAdministration";
 import { getAttributeTypeNegationFromFilter } from "./getAttributeTypeNegationFromFilter.mjs";
 import { getRequiredAttributesFromAttributeCombination } from "./getRequiredAttributesFromAttributeCombination.mjs";
 import { checkAttributeCombination } from "./checkAttributeCombination.mjs";
-import { check_for_disallowed_search_values } from "./check_for_disallowed_search_values.mjs";
-import { check_for_disallowed_contexts } from "./check_for_disallowed_contexts.mjs";
+import { checkForDisallowedSearchValues } from "./checkForDisallowedSearchValues.mjs";
+import { checkForDisallowedContexts } from "./checkForDisallowedContexts.mjs";
 import { type AttributeCombination } from "@wildboar/x500/ServiceAdministration";
 import { type FilterItem } from "@wildboar/x500/DirectoryAbstractService";
 import type { AttributeType } from "@wildboar/x500/InformationFramework";
 
 /**
- * The internal state of `general_check_of_search_filter()`.
+ * The internal state of `generalCheckOfSearchFilter()`.
  * The properties of this interface take their names from the notification
  * attribute types defined in
  * [ITU Recommendation X.520 (2019)](https://www.itu.int/rec/T-REC-X.520/en).
  *
- * @see {@link general_check_of_search_filter}
+ * @see {@link generalCheckOfSearchFilter}
  */
 export interface SearchRuleGeneralCheckState {
 
@@ -81,7 +81,7 @@ export interface SearchRuleGeneralCheckState {
  * @function
  * @see {@link SearchRuleGeneralCheckState}
  */
-export function general_check_of_search_filter(
+export function generalCheckOfSearchFilter(
     search: SearchArgumentData,
     rule: SearchRule,
     getAttributeParentTypes: (oid: ObjectIdentifier) => IterableIterator<AttributeType>,
@@ -183,7 +183,7 @@ export function general_check_of_search_filter(
         }
     }
     if (filter && zero_select_values_attrs.size > 0) {
-        check_for_disallowed_search_values(filter, zero_select_values_attrs, state.searchValuesDisallowed);
+        checkForDisallowedSearchValues(filter, zero_select_values_attrs, state.searchValuesDisallowed);
     }
 
     const attrs_with_contexts: Map<DotDelimitedOidString, Map<DotDelimitedOidString, ContextProfile>> = new Map();
@@ -201,7 +201,7 @@ export function general_check_of_search_filter(
 
     // Step 5
     if (filter && attrs_with_contexts.size > 0) {
-        check_for_disallowed_contexts(filter, attrs_with_contexts, state.searchContextViolations);
+        checkForDisallowedContexts(filter, attrs_with_contexts, state.searchContextViolations);
     }
 
     if (state.searchAttributeViolations.length > 0) {
