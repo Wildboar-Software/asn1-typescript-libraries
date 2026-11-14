@@ -29,7 +29,7 @@ import type { ContextAssertion } from "@wildboar/x500/InformationFramework";
  *
  * @function
  */
-export function check_for_disallowed_contexts(
+export function checkForDisallowedContexts(
     filter: Filter,
     profiles: Map<DotDelimitedOidString, Map<DotDelimitedOidString, ContextProfile>>,
     violating_context_types: Set<DotDelimitedOidString>): void {
@@ -95,15 +95,15 @@ export function check_for_disallowed_contexts(
     }
     else if ("and" in filter) {
         for (const sub of filter.and) {
-            check_for_disallowed_contexts(sub, profiles, violating_context_types);
+            checkForDisallowedContexts(sub, profiles, violating_context_types);
         }
     }
     else if ("or" in filter) {
         for (const sub of filter.or) {
-            check_for_disallowed_contexts(sub, profiles, violating_context_types);
+            checkForDisallowedContexts(sub, profiles, violating_context_types);
         }
     }
     else if ("not" in filter) {
-        check_for_disallowed_contexts(filter.not, profiles, violating_context_types);
+        checkForDisallowedContexts(filter.not, profiles, violating_context_types);
     }
 }

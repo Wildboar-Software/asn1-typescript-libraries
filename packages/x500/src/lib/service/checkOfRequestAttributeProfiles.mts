@@ -24,13 +24,13 @@ import { type AttributeType } from "@wildboar/x500/InformationFramework";
 import anyTypeMatch from "../matching/anyTypeMatch.mjs";
 
 /**
- * The return type of `check_of_request_attribute_profile_in_filter()`. The
+ * The return type of `checkOfRequestAttributeProfileInFilter()`. The
  * fields of this object take their names from the search service problems
  * defined in
  * [ITU Recommendation X.520 (2019)](https://www.itu.int/rec/T-REC-X.520/en),
  * Section 6.16.2.
  *
- * @see {@link check_of_request_attribute_profile_in_filter}
+ * @see {@link checkOfRequestAttributeProfileInFilter}
  */
 export interface CheckRequestAttributeState {
 
@@ -132,7 +132,7 @@ export interface CheckRequestAttributeState {
  * @function
  * @see {@link CheckRequestAttributeState}
  */
-export function check_of_request_attribute_profile_in_filter(
+export function checkOfRequestAttributeProfileInFilter(
     state: CheckRequestAttributeState,
     filter: Filter,
     attr_profiles: Map<DotDelimitedOidString, RequestAttribute>,
@@ -318,14 +318,14 @@ export function check_of_request_attribute_profile_in_filter(
         }
     } else if ("and" in filter) {
         for (const sub of filter.and) {
-            check_of_request_attribute_profile_in_filter(state, sub, attr_profiles, getEqualityMatcher, getContextMatcher);
+            checkOfRequestAttributeProfileInFilter(state, sub, attr_profiles, getEqualityMatcher, getContextMatcher);
         }
     } else if ("or" in filter) {
         for (const sub of filter.or) {
-            check_of_request_attribute_profile_in_filter(state, sub, attr_profiles, getEqualityMatcher, getContextMatcher);
+            checkOfRequestAttributeProfileInFilter(state, sub, attr_profiles, getEqualityMatcher, getContextMatcher);
         }
     } else if ("not" in filter) {
-        check_of_request_attribute_profile_in_filter(state, filter.not, attr_profiles, getEqualityMatcher, getContextMatcher);
+        checkOfRequestAttributeProfileInFilter(state, filter.not, attr_profiles, getEqualityMatcher, getContextMatcher);
     }
 }
 
@@ -348,7 +348,7 @@ export function check_of_request_attribute_profile_in_filter(
  * @function
  * @see {@link CheckRequestAttributeState}
  */
-export function check_of_request_attribute_profiles(
+export function checkOfRequestAttributeProfiles(
     search: SearchArgumentData,
     rule: SearchRule,
     getEqualityMatcher?: (attributeType: AttributeType) => Matcher | undefined,
@@ -370,7 +370,7 @@ export function check_of_request_attribute_profiles(
     for (const attr of rule.inputAttributeTypes ?? []) {
         permitted_attrs.set(attr.attributeType.toString(), attr);
     }
-    check_of_request_attribute_profile_in_filter(state, filter, permitted_attrs, getEqualityMatcher, getContextMatcher);
+    checkOfRequestAttributeProfileInFilter(state, filter, permitted_attrs, getEqualityMatcher, getContextMatcher);
     if (state.searchValuesRequired.length > 0) {
         return [1, state];
     }

@@ -5,7 +5,7 @@ import { ObjectIdentifier } from "@wildboar/asn1";
 import { name, commonName, languageContext, localeContext } from "@wildboar/x500/SelectedAttributeTypes";
 import type { Filter } from "@wildboar/x500/DirectoryAbstractService";
 import { AttributeValueAssertion, ContextAssertion } from "@wildboar/x500/InformationFramework";
-import { check_of_request_attribute_profiles } from "./check_of_request_attribute_profiles.mjs";
+import { checkOfRequestAttributeProfiles } from "./checkOfRequestAttributeProfiles.mjs";
 import { BER } from "@wildboar/asn1/functional";
 import { type AttributeType } from "@wildboar/x500/InformationFramework";
 import { type AttributeTypeAndValue } from "@wildboar/x500/InformationFramework";
@@ -15,7 +15,7 @@ import { type Context } from "@wildboar/x500/InformationFramework";
 const rule_oid = ObjectIdentifier.fromString("1.2.3.4");
 
 
-describe("check_of_request_attribute_profiles", () => {
+describe("checkOfRequestAttributeProfiles", () => {
     it("should not find any violations in the simplest compliant case", () => {
         const filter: Filter = {
             item: {
@@ -41,7 +41,7 @@ describe("check_of_request_attribute_profiles", () => {
                 new RequestAttribute(commonName["&id"], true, undefined, undefined, undefined, undefined, undefined),
             ],
         );
-        const [failed_step, state] = check_of_request_attribute_profiles(search, rule);
+        const [failed_step, state] = checkOfRequestAttributeProfiles(search, rule);
         expect(failed_step).toBe(0);
         expect(state.searchValuesRequired).toEqual([]);
         expect(state.invalidSearchValues).toEqual([]);
@@ -76,7 +76,7 @@ describe("check_of_request_attribute_profiles", () => {
                 new RequestAttribute(name["&id"], true, undefined, undefined, undefined, undefined, undefined),
             ],
         );
-        const [failed_step, state] = check_of_request_attribute_profiles(search, rule);
+        const [failed_step, state] = checkOfRequestAttributeProfiles(search, rule);
         expect(failed_step).toBe(0);
         expect(state.searchValuesRequired).toEqual([]);
         expect(state.invalidSearchValues).toEqual([]);
@@ -123,7 +123,7 @@ describe("check_of_request_attribute_profiles", () => {
                 undefined,
                 filter,
             );
-            const [failed_step, state] = check_of_request_attribute_profiles(search, rule);
+            const [failed_step, state] = checkOfRequestAttributeProfiles(search, rule);
             expect(failed_step).toBe(2);
             expect(state.searchValuesRequired).toEqual([]);
             expect(state.invalidSearchValues).toEqual([ filter.item ]);
@@ -149,7 +149,7 @@ describe("check_of_request_attribute_profiles", () => {
                 undefined,
                 filter,
             );
-            const [failed_step, state] = check_of_request_attribute_profiles(search, rule);
+            const [failed_step, state] = checkOfRequestAttributeProfiles(search, rule);
             expect(failed_step).toBe(0);
             expect(state.searchValuesRequired).toEqual([]);
             expect(state.invalidSearchValues).toEqual([]);
@@ -209,7 +209,7 @@ describe("check_of_request_attribute_profiles", () => {
                 undefined,
                 filter,
             );
-            const [failed_step, state] = check_of_request_attribute_profiles(search, rule);
+            const [failed_step, state] = checkOfRequestAttributeProfiles(search, rule);
             expect(failed_step).toBe(5);
             expect(state.searchValuesRequired).toEqual([]);
             expect(state.invalidSearchValues).toEqual([]);
@@ -243,7 +243,7 @@ describe("check_of_request_attribute_profiles", () => {
                 undefined,
                 filter,
             );
-            const [failed_step, state] = check_of_request_attribute_profiles(search, rule);
+            const [failed_step, state] = checkOfRequestAttributeProfiles(search, rule);
             expect(failed_step).toBe(0);
             expect(state.searchValuesRequired).toEqual([]);
             expect(state.invalidSearchValues).toEqual([]);
@@ -303,7 +303,7 @@ describe("check_of_request_attribute_profiles", () => {
                 undefined,
                 filter,
             );
-            const [failed_step, state] = check_of_request_attribute_profiles(search, rule);
+            const [failed_step, state] = checkOfRequestAttributeProfiles(search, rule);
             expect(failed_step).toBe(6);
             expect(state.searchValuesRequired).toEqual([]);
             expect(state.invalidSearchValues).toEqual([]);
@@ -337,7 +337,7 @@ describe("check_of_request_attribute_profiles", () => {
                 undefined,
                 filter,
             );
-            const [failed_step, state] = check_of_request_attribute_profiles(search, rule);
+            const [failed_step, state] = checkOfRequestAttributeProfiles(search, rule);
             expect(failed_step).toBe(0);
             expect(state.searchValuesRequired).toEqual([]);
             expect(state.invalidSearchValues).toEqual([]);
@@ -435,7 +435,7 @@ describe("check_of_request_attribute_profiles", () => {
                 undefined,
                 filter,
             );
-            const [failed_step, state] = check_of_request_attribute_profiles(search, rule);
+            const [failed_step, state] = checkOfRequestAttributeProfiles(search, rule);
             expect(failed_step).toBe(4);
             expect(state.searchValuesRequired).toEqual([]);
             expect(state.invalidSearchValues).toEqual([]);
@@ -469,7 +469,7 @@ describe("check_of_request_attribute_profiles", () => {
                 undefined,
                 filter,
             );
-            const [failed_step, state] = check_of_request_attribute_profiles(search, rule);
+            const [failed_step, state] = checkOfRequestAttributeProfiles(search, rule);
             expect(failed_step).toBe(0);
             expect(state.searchValuesRequired).toEqual([]);
             expect(state.invalidSearchValues).toEqual([]);

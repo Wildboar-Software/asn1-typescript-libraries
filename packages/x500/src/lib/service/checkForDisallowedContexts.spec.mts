@@ -5,9 +5,9 @@ import { ContextAssertion } from "@wildboar/x500/InformationFramework";
 import { BER } from "@wildboar/asn1/functional";
 import { commonName, languageContext } from "@wildboar/x500/SelectedAttributeTypes";
 import { AttributeValueAssertion } from "@wildboar/x500/InformationFramework";
-import { check_for_disallowed_contexts } from "./check_for_disallowed_contexts.mjs";
+import { checkForDisallowedContexts } from "./checkForDisallowedContexts.mjs";
 
-describe("check_for_disallowed_contexts", () => {
+describe("checkForDisallowedContexts", () => {
     it("should not find any violations in the simplest compliant case", () => {
         const violations: Set<DotDelimitedOidString> = new Set();
         const filter: Filter = {
@@ -33,7 +33,7 @@ describe("check_for_disallowed_contexts", () => {
                 [languageContext.encoderFor["&Type"]!("en", BER)],
             )],
         ]));
-        check_for_disallowed_contexts(filter, profiles, violations);
+        checkForDisallowedContexts(filter, profiles, violations);
         expect(violations.size).toBe(0);
     });
 
@@ -57,7 +57,7 @@ describe("check_for_disallowed_contexts", () => {
         };
         const profiles: Map<DotDelimitedOidString, Map<DotDelimitedOidString, ContextProfile>> = new Map();
         profiles.set(commonName["&id"].toString(), new Map()); // No contexts allowed.
-        check_for_disallowed_contexts(filter, profiles, violations);
+        checkForDisallowedContexts(filter, profiles, violations);
         expect(violations.size).toBe(1);
     });
 });

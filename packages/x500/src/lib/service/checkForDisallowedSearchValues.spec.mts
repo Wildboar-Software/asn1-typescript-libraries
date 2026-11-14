@@ -4,9 +4,9 @@ import type { FilterItem } from "@wildboar/x500/DirectoryAbstractService";
 import { BER } from "@wildboar/asn1/functional";
 import { commonName, languageContext } from "@wildboar/x500/SelectedAttributeTypes";
 import { AttributeTypeAssertion, AttributeValueAssertion, Context, ContextAssertion } from "@wildboar/x500/InformationFramework";
-import { check_for_disallowed_search_values } from "./check_for_disallowed_search_values.mjs";
+import { checkForDisallowedSearchValues } from "./checkForDisallowedSearchValues.mjs";
 
-describe("check_for_disallowed_search_values", () => {
+describe("checkForDisallowedSearchValues", () => {
     it("should not find any violations in the simplest compliant case", () => {
         const filter: Filter = {
             item: {
@@ -18,7 +18,7 @@ describe("check_for_disallowed_search_values", () => {
         };
         const disallowed: Map<DotDelimitedOidString, boolean> = new Map();
         const violations: FilterItem[] = [];
-        check_for_disallowed_search_values(filter, disallowed, violations);
+        checkForDisallowedSearchValues(filter, disallowed, violations);
         expect(violations.length).toBe(0);
     });
 
@@ -50,9 +50,9 @@ describe("check_for_disallowed_search_values", () => {
         disallowed.set(commonName["&id"].toString(), true); // Has contexts.
         const violations: FilterItem[] = [];
 
-        check_for_disallowed_search_values(filter1, disallowed, violations);
+        checkForDisallowedSearchValues(filter1, disallowed, violations);
         expect(violations.length).toBe(0);
-        check_for_disallowed_search_values(filter2, disallowed, violations);
+        checkForDisallowedSearchValues(filter2, disallowed, violations);
         expect(violations.length).toBe(1);
     });
 
@@ -76,9 +76,9 @@ describe("check_for_disallowed_search_values", () => {
         disallowed.set(commonName["&id"].toString(), false); // Has no contexts.
         const violations: FilterItem[] = [];
 
-        check_for_disallowed_search_values(filter1, disallowed, violations);
+        checkForDisallowedSearchValues(filter1, disallowed, violations);
         expect(violations.length).toBe(0);
-        check_for_disallowed_search_values(filter2, disallowed, violations);
+        checkForDisallowedSearchValues(filter2, disallowed, violations);
         expect(violations.length).toBe(1);
     });
 });
