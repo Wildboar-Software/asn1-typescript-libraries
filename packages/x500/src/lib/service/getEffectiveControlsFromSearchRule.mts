@@ -92,6 +92,16 @@ function getEffectiveControlsFromSearchRule (
         rule.defaultControls?.hierarchyOptions ?? DEFAULT_HS,
     );
 
+    // Defaults have already filled omitted user bits. Without searchRuleControls,
+    // no bits are forced back to their defaults, so retain explicit user choices.
+    if (!rule.searchRuleControls) {
+        return {
+            hs: intToBits(c_hierarchy_selections),
+            search: intToBits(c_search_options),
+            service: intToBits(c_service_controls),
+        };
+    }
+
     const d_hierarchy_selections = bitsToInt(rule.defaultControls?.hierarchyOptions
         ?? DEFAULT_HS);
     const d_search_options = bitsToInt(rule.defaultControls?.searchOptions
@@ -99,11 +109,11 @@ function getEffectiveControlsFromSearchRule (
     const d_service_controls = bitsToInt(rule.defaultControls?.serviceControls
         ?? ControlOptions._default_value_for_serviceControls);
 
-    const s_hierarchy_selections = bitsToInt(rule.searchRuleControls?.hierarchyOptions
+    const s_hierarchy_selections = bitsToInt(rule.searchRuleControls.hierarchyOptions
         ?? DEFAULT_HS);
-    const s_search_opts = bitsToInt(rule.searchRuleControls?.searchOptions
+    const s_search_opts = bitsToInt(rule.searchRuleControls.searchOptions
         ?? ControlOptions._default_value_for_searchOptions);
-    const s_service_opts = bitsToInt(rule.searchRuleControls?.serviceControls
+    const s_service_opts = bitsToInt(rule.searchRuleControls.serviceControls
         ?? ControlOptions._default_value_for_serviceControls);
 
     const effective_hierarchy_selections = (c_hierarchy_selections & ~s_hierarchy_selections)
