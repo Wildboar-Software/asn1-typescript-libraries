@@ -98,9 +98,13 @@ export function generalCheckOfSearchFilter(
         searchValuesDisallowed: [],
         searchContextViolations: new Set(),
     };
-    // This behavior is specified in X.501, Section 16.10.2.
-    if (!rule.inputAttributeTypes) { // TODO: Is this correct?
-        return [0, state];
+    const subset = search.subset ?? SearchArgumentData._default_value_for_subset;
+    const subset_is_disallowed = !!rule.allowedSubset
+        && (rule.allowedSubset[Number(subset)] !== TRUE_BIT);
+    // X.501, Section 16.10.2: absent input profiles skip only attribute checks,
+    // not the independent allowedSubset restriction.
+    if (!rule.inputAttributeTypes) {
+        return [subset_is_disallowed ? 6 : 0, state];
     }
     const filter = search.extendedFilter ?? search.filter;
     // TODO: You might have to normalize the filter.
@@ -214,11 +218,8 @@ export function generalCheckOfSearchFilter(
         return [5, state]; // id-pr-searchContextViolation & serviceType & contextTypeList
     }
 
-    if (rule.allowedSubset) {
-        const subset = search.subset ?? SearchArgumentData._default_value_for_subset;
-        if (rule.allowedSubset[Number(subset)] !== TRUE_BIT) {
-            return [6, state]; // id-pr-searchSubsetViolation & serviceType
-        }
+    if (subset_is_disallowed) {
+        return [6, state]; // id-pr-searchSubsetViolation & serviceType
     }
 
     return [0, state];
