@@ -5,7 +5,7 @@ import {
 import {
     RequestAttribute,
 } from "@wildboar/x500/ServiceAdministration";
-import { SearchArgumentData } from "@wildboar/x500/DirectoryAbstractService";
+import { type Filter, SearchArgumentData } from "@wildboar/x500/DirectoryAbstractService";
 import { ObjectIdentifier } from "@wildboar/asn1";
 import { ContextProfile } from "@wildboar/x500/ServiceAdministration";
 import type { AttributeCombination } from "@wildboar/x500/ServiceAdministration";
@@ -161,6 +161,46 @@ describe("generalCheckOfSearchFilter", () => {
         });
         const [failed_step2] = generalCheckOfSearchFilter(search, rule2, getAttributeParentTypes);
         expect(failed_step2).toBe(0);
+    });
+
+    it.each([
+        [false, 3],
+        [true, 0],
+    ] as const)("checks mandatory attributes in every OR branch (second branch has cn: %s)", (include_cn, expected_step) => {
+        const cn: Filter = {
+            item: {
+                equality: new AttributeValueAssertion(
+                    commonName["&id"],
+                    commonName.encoderFor["&Type"]!({ uTF8String: "Alice" }, BER),
+                ),
+            },
+        };
+        const street: Filter = {
+            item: {
+                equality: new AttributeValueAssertion(
+                    streetAddress["&id"],
+                    streetAddress.encoderFor["&Type"]!({ uTF8String: "123 Main St" }, BER),
+                ),
+            },
+        };
+        const negated_street: Filter = { not: street };
+        const filter: Filter = {
+            or: [
+                { and: [cn, street] },
+                include_cn ? { and: [cn, negated_street] } : negated_street,
+            ],
+        };
+        const combo: AttributeCombination = { attribute: commonName["&id"] };
+        const search = new SearchArgumentData({ rdnSequence: [] }, undefined, filter);
+        const rule = new SearchRule(1, rule_oid, undefined, undefined, [
+            new RequestAttribute(commonName["&id"]),
+            new RequestAttribute(streetAddress["&id"]),
+        ], combo);
+        const [step, state] = generalCheckOfSearchFilter(search, rule, getAttributeParentTypes);
+        expect(step).toBe(expected_step);
+        expect(state.searchAttributeViolations).toEqual([]);
+        expect(state.attributeNegationViolations).toEqual([]);
+        expect(state.searchAttributeCombinationViolations).toEqual(expected_step ? [combo] : []);
     });
 
     // TODO: "If a matched entry or compound entry does not contain any of the attributes defined in this component, it is not included in the result."
