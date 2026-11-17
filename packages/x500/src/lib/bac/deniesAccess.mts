@@ -1,21 +1,18 @@
-import type { BIT_STRING } from "@wildboar/asn1";
+import { GRANTS_AND_DENIALS_DENIAL_MASK } from "./grantsAndDenialsMask.mjs";
+
+// Local copy. A live import of this constant is a getter under Vitest's module
+// runner, and that getter dominated this one-and function in the benchmark.
+const DENIAL_MASK: number = GRANTS_AND_DENIALS_DENIAL_MASK;
 
 /**
  * @summary Determine whether permission bits involve denying access
- * @param {Uint8ClampedArray} permissions The permissions bits
- * @returns {Boolean} `true` if the permissions involve denying access
+ * @param mask Packed `GrantsAndDenials` (odd bits deny). See `grantsAndDenialsToMask`.
+ * @returns `true` if any denial bit is set.
  * @function
  */
 export
-function deniesAccess (permissions: BIT_STRING): boolean {
-    // Odd bits are denials. Walk them directly so this does not allocate a copy.
-    const length = permissions.length;
-    for (let i = 1; i < length; i += 2) {
-        if (permissions[i]) {
-            return true;
-        }
-    }
-    return false;
+function deniesAccess (mask: number): boolean {
+    return (mask & DENIAL_MASK) !== 0;
 }
 
 export default deniesAccess;

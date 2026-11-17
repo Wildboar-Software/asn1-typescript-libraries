@@ -1,4 +1,4 @@
-import { FALSE_BIT, ObjectIdentifier, TRUE_BIT, type ASN1Element, type BIT_STRING } from "@wildboar/asn1";
+import { ObjectIdentifier, TRUE_BIT, type ASN1Element, type BIT_STRING } from "@wildboar/asn1";
 import { DER, _encodeUTF8String } from "@wildboar/asn1/functional";
 import {
     bacACDF,
@@ -8,13 +8,19 @@ import {
     PERMISSION_CATEGORY_READ,
 } from "./bacACDF.mjs";
 import { splitGrantsAndDenials } from "./splitGrantsAndDenials.mjs";
+import {
+    grantsAndDenialsHasBit,
+    grantsAndDenialsToMask,
+} from "./grantsAndDenialsMask.mjs";
 import { applyACDFConstraints } from "./applyACDFConstraints.mjs";
 import { ProtectedItems } from "../modules/BasicAccessControl/ProtectedItems.ta.mjs";
 import {
     denyAdd,
+    denyExecuteMethod,
     denyInvoke,
     denyRead,
     grantAdd,
+    grantExecuteMethod,
     grantImport,
     grantInvoke,
     grantRead,
@@ -530,13 +536,13 @@ describe("BAC constraints before precedence (H1)", () => {
         const updatedPermissions = constrainedTuple.grantsAndDenials;
         // restrictedBy disables the add grant; English contexts separately disable
         // the add denial. The unrelated read grant must survive both steps.
-        expect(updatedPermissions[grantAdd]).toBe(FALSE_BIT);
-        expect(updatedPermissions[denyAdd]).toBe(FALSE_BIT);
-        expect(updatedPermissions[grantRead]).toBe(TRUE_BIT);
+        expect(grantsAndDenialsHasBit(updatedPermissions, grantAdd)).toBe(false);
+        expect(grantsAndDenialsHasBit(updatedPermissions, denyAdd)).toBe(false);
+        expect(grantsAndDenialsHasBit(updatedPermissions, grantRead)).toBe(true);
         expect(contextMatcherLookup).toHaveBeenCalledExactlyOnceWith(TEST_LANGUAGE_CONTEXT_TYPE);
         // The original tuple is reusable for another request and must not be mutated.
-        expect(mixedPermissionTuple.grantsAndDenials[grantAdd]).toBe(TRUE_BIT);
-        expect(mixedPermissionTuple.grantsAndDenials[denyAdd]).toBe(TRUE_BIT);
+        expect(grantsAndDenialsHasBit(mixedPermissionTuple.grantsAndDenials, grantAdd)).toBe(true);
+        expect(grantsAndDenialsHasBit(mixedPermissionTuple.grantsAndDenials, denyAdd)).toBe(true);
     });
 
     it("does not remove count or restrictedBy denials", () => {
@@ -661,7 +667,7 @@ describe("BAC constraints before precedence (H1)", () => {
         // A failed conditional grant is not an explicit denial: the lower grant wins.
         expect(result.authorized).toBe(true);
         expect(result.relevantTuples).toHaveLength(1);
-        expect(higherPrecedenceZeroValueGrant.grantsAndDenials[grantAdd]).toBe(TRUE_BIT);
+        expect(grantsAndDenialsHasBit(higherPrecedenceZeroValueGrant.grantsAndDenials, grantAdd)).toBe(true);
     });
 });
 
@@ -712,26 +718,20 @@ describe("BAC permission splitting (H3)", () => {
     const DENY_EXTENSION_PERMISSION = 31;
 
     it("retains invoke and extension bits in mixed grant/deny tuples", () => {
-        const input = permissions(
+        const bitString = permissions(
             grantRead, denyRead,
             grantInvoke, denyInvoke,
             GRANT_EXTENSION_PERMISSION, DENY_EXTENSION_PERMISSION,
         );
-        const expectedGrantBits = new Uint8ClampedArray(input.length);
-        expectedGrantBits[grantRead] = TRUE_BIT;
-        expectedGrantBits[grantInvoke] = TRUE_BIT;
-        expectedGrantBits[GRANT_EXTENSION_PERMISSION] = TRUE_BIT;
-        const expectedDenialBits = new Uint8ClampedArray(input.length);
-        expectedDenialBits[denyRead] = TRUE_BIT;
-        expectedDenialBits[denyInvoke] = TRUE_BIT;
-        expectedDenialBits[DENY_EXTENSION_PERMISSION] = TRUE_BIT;
+        const input = grantsAndDenialsToMask(bitString);
+        const expectedGrants = (1 << grantRead) | (1 << grantInvoke) | (1 << GRANT_EXTENSION_PERMISSION);
+        const expectedDenials = (1 << denyRead) | (1 << denyInvoke) | (1 << DENY_EXTENSION_PERMISSION);
 
         const [grants, denials] = splitGrantsAndDenials(input);
-        expect(grants).toHaveLength(input.length);
-        expect(denials).toHaveLength(input.length);
-        expect(grants).toEqual(expectedGrantBits);
-        expect(denials).toEqual(expectedDenialBits);
-        expect(input[denyInvoke]).toBe(TRUE_BIT); // Splitting must not mutate input.
+        expect(grants).toBe(expectedGrants);
+        expect(denials).toBe(expectedDenials);
+        expect(bitString[denyInvoke]).toBe(TRUE_BIT); // Splitting must not mutate the BIT STRING.
+        expect(grantsAndDenialsToMask(bitString)).toBe(input);
     });
 
     it("does not lose an invoke denial during ACDF preprocessing", () => {
@@ -768,13 +768,48 @@ describe("BAC permission splitting (H3)", () => {
     });
 
     it("preserves pure grants and denials without splitting", () => {
-        const onlyGrants = permissions(grantInvoke, GRANT_EXTENSION_PERMISSION);
-        const onlyDenials = permissions(denyInvoke, DENY_EXTENSION_PERMISSION);
+        const onlyGrants = grantsAndDenialsToMask(permissions(grantInvoke, GRANT_EXTENSION_PERMISSION));
+        const onlyDenials = grantsAndDenialsToMask(permissions(denyInvoke, DENY_EXTENSION_PERMISSION));
         for (const input of [onlyGrants, onlyDenials]) {
             const result = splitGrantsAndDenials(input);
             expect(result).toHaveLength(1);
-            expect(result[0]).toBe(input); // Already-pure permissions reuse the original array.
+            expect(result[0]).toBe(input); // Already-pure masks are returned as the same number.
         }
+    });
+
+    it("keeps a bit-31 execute denial through ACDF splitting", () => {
+        // Category 15 is grantExecuteMethod / denyExecuteMethod (bits 30 and 31).
+        const execute = [ grantExecuteMethod / 2 ];
+        const mixed = new ACDFTupleExtended(
+            ALL_USERS,
+            AUTH_NONE,
+            Object.assign(new ProtectedItems(), {
+                allAttributeValues: [COMMON_NAME_TYPE],
+                _unrecognizedExtensionsList: [],
+            }),
+            permissions(grantRead, denyRead, grantExecuteMethod, denyExecuteMethod),
+            100,
+            1,
+        );
+        const executeGrant = new ACDFTupleExtended(
+            ALL_USERS,
+            AUTH_NONE,
+            Object.assign(new ProtectedItems(), {
+                allAttributeValues: [COMMON_NAME_TYPE],
+                _unrecognizedExtensionsList: [],
+            }),
+            permissions(grantExecuteMethod),
+            100,
+            1,
+        );
+        const valueForInvocation: ValueRequest = { value: ALICE_COMMON_NAME, contexts: [ENGLISH_CONTEXT] };
+
+        expect(bacACDF(
+            [executeGrant], undefined, valueForInvocation, execute, matchingSettings,
+        ).authorized).toBe(true);
+        expect(bacACDF(
+            [mixed, executeGrant], undefined, valueForInvocation, execute, matchingSettings,
+        ).authorized).toBe(false);
     });
 });
 

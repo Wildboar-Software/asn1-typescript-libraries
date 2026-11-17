@@ -307,21 +307,10 @@ const requester = new NameAndOptionalUID(
 
 describe("splitGrantsAndDenials()", () => {
     it("works", () => {
-        const gad: GrantsAndDenials = new Uint8ClampedArray([
-            TRUE_BIT,
-            TRUE_BIT,
-            FALSE_BIT,
-            FALSE_BIT,
-            TRUE_BIT,
-            TRUE_BIT,
-        ]);
+        // Bits 0, 1, 4, and 5 are set: grant, deny, grant, deny.
+        const gad = (1 << 0) | (1 << 1) | (1 << 4) | (1 << 5);
         const split = splitGrantsAndDenials(gad);
-        expect(split.length).toBe(2);
-        if (split.length === 2) {
-            // These get padded to 24 bits.
-            expect(split[0].toString().indexOf("1,0,0,0,1,0")).toBe(0);
-            expect(split[1].toString().indexOf("0,1,0,0,0,1")).toBe(0);
-        }
+        expect(split).toEqual([ (1 << 0) | (1 << 4), (1 << 1) | (1 << 5) ]);
     });
 });
 

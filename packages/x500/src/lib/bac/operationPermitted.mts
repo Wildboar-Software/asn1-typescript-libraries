@@ -1,9 +1,6 @@
 import type ACDFTupleExtended from "../types/ACDFTupleExtended.mjs";
-import type {
-    GrantsAndDenials,
-} from "../modules/BasicAccessControl/GrantsAndDenials.ta.mjs";
 import type ProtectedItem from "../types/ProtectedItem.mjs";
-import { TRUE_BIT } from "@wildboar/asn1";
+import { grantsAndDenialsPermit } from "./grantsAndDenialsMask.mjs";
 
 /**
  * @summary Check if at least one ACDF tuple grants access and none deny
@@ -29,8 +26,6 @@ function operationPermitted (
     tuple: ACDFTupleExtended,
     _request: ProtectedItem,
 ): boolean {
-    const gad: GrantsAndDenials = tuple.grantsAndDenials;
-
     /** 1E9DC3EB-E3DB-4CFA-A7BE-B86342F7EF75
      * Section 18.4.2.5.a of ITU Recommendation X.501 (2016) states that, if
      * group membership cannot be determined, a user should be assumed to be a
@@ -52,14 +47,7 @@ function operationPermitted (
         return false;
     }
     // Every required grant bit is set, and none of the corresponding deny bits are.
-    const operationCount = operations.length;
-    for (let i = 0; i < operationCount; i++) {
-        const bit = operations[i] * 2;
-        if ((gad[bit] !== TRUE_BIT) || (gad[bit + 1] === TRUE_BIT)) {
-            return false;
-        }
-    }
-    return true;
+    return grantsAndDenialsPermit(tuple.grantsAndDenials, operations);
 }
 
 export default operationPermitted;

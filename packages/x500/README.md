@@ -40,9 +40,9 @@ Utilties for evaluating Basic Access Controls are present in `src/lib/bac`.
 
 - `bacACDF.mts` - This exports `bacACDF` which is the Basic Access Control (BAC)
   Access Control Decision Function (ACDF) described in ITU Recommendation X.501.
-- `deniesAccess.mts` - This exports the function `deniesAccess`, which takes an
-  ACDF tuple and determines if it denies access or grants access. This is a part
-  of the ACDF.
+- `deniesAccess.mts` - This exports the function `deniesAccess`, which takes the
+  packed grants-and-denials mask from an ACDF tuple and reports whether any
+  denial bit is set.
 - `discardNonRelevantACDFTuples.mts` - Exports the function
   `discardNonRelevantACDFTuples`, which filters out the ACDF tuples that are not
   relevant to the current authorization request.
@@ -57,10 +57,12 @@ Utilties for evaluating Basic Access Controls are present in `src/lib/bac`.
   is the last step of the BAC ACDF: this function evaluates whether the
   operation is permitted by checking that at least one relevant ACDF tuple
   grants access and that none deny access.
+- `grantsAndDenialsMask.mts` - Packs a `GrantsAndDenials` `BIT STRING` into the
+  signed 32-bit mask stored on `ACDFTuple.grantsAndDenials` (`grantsAndDenialsToMask`).
+  Bit 0 is `grantAdd`. Bits past bit 31 throw.
 - `splitGrantsAndDenials.mts` - Exports the function `splitGrantsAndDenials`,
-  which splits a `GrantsAndDenials` `BIT STRING` into two separate
-  `GrantsAndDenials` `BIT STRING`s, where one contains only the set granting
-  bits and the other contains only the set denying bits.
+  which splits that mask into grant bits and denial bits. A mask that already
+  only grants or only denies is returned unchanged.
 - `userWithinACIUserClass.mts` - Exports the function `userWithinACIUserClass`
   which determines whether a user falls within an `ACIItem`'s `UserClasses`.
 
