@@ -27,25 +27,27 @@ const signedAltTagNumberByOpCode: Map<number, number> = new Map([
 ]);
 
 /**
- * @summary Determine whether a DAP argument is signed (without decoding it)
+ * @summary Determine whether an ROSE argument is signed (without decoding it)
  * @description
  *
- * Repeatedly encoding and decoding a DAP argument can be computationally
- * expensive. If you just need to determine whether a DAP argument is signed,
- * you can look at the outermost tag without decoding it, which is what this
- * function does.
+ * Repeatedly encoding and decoding an argument parameter can be
+ * computationally expensive. If you just need to determine whether a ROSE
+ * argument is signed, you can look at the outermost tag without decoding it,
+ * which is what this function does.
+ * 
+ * This function works for DAP, DSP, DOP, and DISP.
  *
  * @param opCode The opCode of the operation
- * @param arg The un-decoded DAP argument
- * @returns Whether the DAP argument is signed
+ * @param arg The un-decoded ROSE argument parameter
+ * @returns Whether the ROSE argument is signed
  *
  * @function
  */
 export
-    function isArgumentSigned(
-        opCode: Code,
-        arg: ASN1Element,
-        is_disp?: boolean,
+function isArgumentSigned(
+    opCode: Code,
+    arg: ASN1Element,
+    is_disp?: boolean,
 ): boolean | undefined {
     if (!("local" in opCode)) {
         return undefined;
