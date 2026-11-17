@@ -50,17 +50,35 @@ import type { Context } from "../modules/InformationFramework/Context.ta.mjs";
 import getAttributeTypesFromFilterItem from "./getAttributeTypesFromFilterItem.mjs";
 import { RequestAttribute } from "../modules/ServiceAdministration/RequestAttribute.ta.mjs";
 
+/**
+ * Matched attributes supplied by one family member.
+ *
+ * `entryIndex` is that member's index in the array passed to
+ * {@link evaluateFilter}. `attributes` are the whole attributes from that
+ * member whose values contributed to the match. Each attribute keeps its
+ * stored type and contains only the values that matched.
+ */
+export
+class MatchedEntryInfo {
+    public readonly entryIndex: number;
+    public readonly attributes: Attribute[];
+
+    constructor (entryIndex: number, attributes: Attribute[]) {
+        this.entryIndex = entryIndex;
+        this.attributes = attributes;
+    }
+}
+
 export
 interface EvaluateFilterReturn {
     matched: boolean | undefined;
     /**
-     * Whole attributes that contributed to the match when `matchedValuesOnly`
-     * is set. Each attribute keeps its stored type and contains only the
-     * values that matched, including contexts when the stored value had them.
-     * Empty when no values were collected. Omitted for results that do not
-     * report values, such as a negated item.
+     * One {@link MatchedEntryInfo} per family member that supplied matched
+     * attributes, when `matchedValuesOnly` is set. Empty when no values were
+     * collected. Omitted for results that do not report values, such as a
+     * negated item.
      */
-    matchedValues?: Attribute[];
+    matchedValues?: MatchedEntryInfo[];
     contributingEntries: Set<number>;
 }
 
@@ -949,11 +967,12 @@ function evaluateFilterItem (
  *
  * `matched` is `true` when the attributes match the filter, `false` when
  * they do not, and `undefined` when it cannot be determined. When
- * `matchedValuesOnly` is set, `matchedValues` contains each whole attribute
- * that contributed, with only the values that matched. An empty
- * `matchedValues` array means nothing was collected; `matched` is what
- * decides the result. `contributingEntries` records which family members
- * supplied a match.
+ * `matchedValuesOnly` is set, `matchedValues` contains one
+ * {@link MatchedEntryInfo} for each family member that supplied a match.
+ * That object carries the member's index and the whole attributes whose
+ * values matched. An empty `matchedValues` array means nothing was
+ * collected; `matched` is what decides the result. `contributingEntries`
+ * records the same members.
  *
  * Features:
  *
@@ -989,8 +1008,9 @@ function evaluateFilterItem (
  * @param recursionTTL Maximum filter nodes on a recursive path, including the
  *  root. Defaults to MAX_FILTER_DEPTH (128). Non-positive or non-safe-integer
  *  budgets evaluate to UNDEFINED.
- * @returns Whether the family matched, which members contributed, and the
- *  whole attributes that matched when `matchedValuesOnly` is set.
+ * @returns Whether the family matched, which members contributed, and one
+ *  {@link MatchedEntryInfo} per contributing member when `matchedValuesOnly`
+ *  is set.
  * @function
  */
 export
@@ -1020,7 +1040,7 @@ function evaluateFilterAtDepth (
     }
     let subresult_undefined: boolean = false;
     if ("item" in filter) {
-        const familyResults: Attribute[] = [];
+        const familyResults: MatchedEntryInfo[] = [];
         let undefinedResultFound: boolean = false;
         let matched: boolean = false;
         for (let i = 0; i < family.length; i++) {
@@ -1045,8 +1065,8 @@ function evaluateFilterAtDepth (
                 contributingEntries.add(i);
                 matched = true;
             }
-            if (Array.isArray(result)) {
-                familyResults.push(...result);
+            if (Array.isArray(result) && result.length > 0) {
+                familyResults.push(new MatchedEntryInfo(i, result));
             }
         }
         return {
@@ -1056,7 +1076,7 @@ function evaluateFilterAtDepth (
         };
     } else if ("and" in filter) {
         const newContributingEntries: Set<number> = new Set();
-        const matchedValues: Attribute[] = [];
+        const matchedValues: MatchedEntryInfo[] = [];
         for (const subfilter of filter.and) {
             const result = evaluateFilterAtDepth(subfilter, family, options, new Set(), remainingDepth - 1);
             if (result.matched === false) {
@@ -1092,7 +1112,7 @@ function evaluateFilterAtDepth (
         };
     } else if ("or" in filter) {
         const newContributingEntries: Set<number> = new Set();
-        const matchedValues: Attribute[] = [];
+        const matchedValues: MatchedEntryInfo[] = [];
         let matched: boolean = false;
         /* Unlike with and, we still have to iterate over all subfilters so that
         we can determine if other entries contribute to the match or if other
