@@ -140,7 +140,7 @@ export { dnWithinSubtreeSpecification } from "./lib/utils/dnWithinSubtreeSpecifi
 export { dnWithinSubtree } from "./lib/utils/dnWithinSubtree.mjs";
 export { evaluateContextAssertion } from "./lib/utils/evaluateContextAssertion.mjs";
 export type { EvaluateFilterReturn, EvaluateFilterSettings } from "./lib/utils/evaluateFilter.mjs";
-export { evaluateFilter } from "./lib/utils/evaluateFilter.mjs";
+export { evaluateFilter, MatchedEntryInfo } from "./lib/utils/evaluateFilter.mjs";
 export { isArgumentSigned } from "./lib/utils/isArgumentSigned.mjs";
 export { getAttributeSize } from "./lib/utils/getAttributeSize.mjs";
 export { getAttributeTypesFromFilterItem } from "./lib/utils/getAttributeTypesFromFilterItem.mjs";

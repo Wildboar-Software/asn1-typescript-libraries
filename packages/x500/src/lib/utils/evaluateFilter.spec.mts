@@ -1,6 +1,6 @@
 import { ObjectIdentifier, type ASN1Element } from "@wildboar/asn1";
 import { DER, _encodeUTF8String } from "@wildboar/asn1/functional";
-import { evaluateEquality, evaluateApprox, evaluateMatchingRuleAssertion, evaluateFilter, type EvaluateFilterSettings } from "./evaluateFilter.mjs";
+import { evaluateEquality, evaluateApprox, evaluateMatchingRuleAssertion, evaluateFilter, MatchedEntryInfo, type EvaluateFilterSettings } from "./evaluateFilter.mjs";
 import { CannotPerformExactly } from "../errors.mjs";
 import {
     MATCH_FLAG_APPROXIMATE,
@@ -97,8 +97,7 @@ describe("attribute-level filter matching", () => {
             const entries = family(["false", "unknown", "true"], ["false", "true", "throw"]);
             const result = evaluateFilter(leaf(kind), entries, options);
             expect(result.matched).toBe(true);
-            expect(result.matchedValues).toHaveLength(matchedValuesOnly ? 2 : 0);
-            expect(result.matchedValues!.map((match) => match.value.utf8String)).toEqual(matchedValuesOnly ? ["true", "true"] : []);
+            expect(result.matchedValues).toHaveLength(matchedValuesOnly ? 1 : 0);
             expect([...result.contributingEntries]).toEqual([0]);
             expect(matcher).toHaveBeenCalledTimes(1);
             const attribute = matcher.mock.calls[0][1];
@@ -113,7 +112,14 @@ describe("attribute-level filter matching", () => {
             if (matchedValuesOnly) {
                 expect(matcher.mock.calls[0][4]).toBeInstanceOf(Attribute);
                 const original = (entries[0].information![0] as { attribute: Attribute }).attribute;
-                expect(result.matchedValues![1].contexts).toBe(original.valuesWithContext![1].contextList);
+                const info = result.matchedValues![0];
+                expect(info).toBeInstanceOf(MatchedEntryInfo);
+                expect(info.entryIndex).toBe(0);
+                expect(info.attributes).toHaveLength(1);
+                const matched = info.attributes[0];
+                expect(matched).toBeInstanceOf(Attribute);
+                expect(matched.values).toEqual([original.values[2]]);
+                expect(matched.valuesWithContext).toEqual([original.valuesWithContext![1]]);
             } else {
                 expect(matcher.mock.calls[0]).toHaveLength(4);
             }
@@ -265,7 +271,11 @@ describe("attribute-level filter matching", () => {
                     expect(result.matchedValues).toHaveLength(expected === true && matchedValuesOnly ? 1 : 0);
                     if (result.matchedValues!.length > 0) {
                         const original = (entries[0].information![0] as { attribute: Attribute }).attribute;
-                        expect(result.matchedValues![0].value).toBe(contextual ? original.valuesWithContext![0].value : original.values[0]);
+                        const info = result.matchedValues![0];
+                        expect(info.entryIndex).toBe(0);
+                        const matched = info.attributes[0];
+                        const stored = contextual ? original.valuesWithContext![0].value : original.values[0];
+                        expect(contextual ? matched.valuesWithContext![0].value : matched.values[0]).toBe(stored);
                     }
                     expect([...result.contributingEntries]).toEqual(expected === true ? [0] : []);
                     expect(matcher).toHaveBeenCalledTimes(1);
@@ -312,9 +322,11 @@ describe("attribute-level filter matching", () => {
             });
             expect(result.matched).toBe(true);
             expect(result.matchedValues).toHaveLength(1);
-            expect(result.matchedValues![0].value).toBe(storedValue);
-            expect(result.matchedValues![0].type).toBe(friend);
             expect(result.matchedValues![0].entryIndex).toBe(0);
+            expect(result.matchedValues![0].attributes).toHaveLength(1);
+            expect(result.matchedValues![0].attributes[0].values).toEqual([storedValue]);
+            expect(result.matchedValues![0].attributes[0].type_).toBe(friend);
+            expect(result.matchedValues![0].attributes[0].valuesWithContext).toBeUndefined();
             expect([...result.contributingEntries]).toEqual([0]);
             expect(matcher).toHaveBeenCalledTimes(2);
             expect(matcher.mock.calls[1][4]).toBeInstanceOf(Attribute);
@@ -348,7 +360,7 @@ describe("attribute-level filter matching", () => {
             const original = (entries[0].information![0] as { attribute: Attribute }).attribute;
             const result = evaluateFilter(filter, entries, { ...options, getContextMatcher: () => matchContext });
             expect(result.matched).toBe(true);
-            expect(result.matchedValues).toHaveLength(matchedValuesOnly ? 2 : 0);
+            expect(result.matchedValues).toHaveLength(matchedValuesOnly ? 1 : 0);
             expect(matcher).toHaveBeenCalledTimes(1);
             expect(normalize).toHaveBeenCalledTimes(1);
             expect(compareValue).toHaveBeenCalledTimes(matchedValuesOnly ? 4 : 1);
@@ -359,7 +371,12 @@ describe("attribute-level filter matching", () => {
             expect(compareValue.mock.calls.some((call) => call[1] === original.valuesWithContext![0].value)).toBe(false);
             expect(matcher.mock.calls[0]).toHaveLength(matchedValuesOnly ? 5 : 4);
             if (matchedValuesOnly) {
-                expect(result.matchedValues![1].contexts).toBe(original.valuesWithContext![1].contextList);
+                const info = result.matchedValues![0];
+                expect(info.entryIndex).toBe(0);
+                expect(info.attributes).toHaveLength(1);
+                const matched = info.attributes[0];
+                expect(matched.values).toEqual([original.values[0]]);
+                expect(matched.valuesWithContext).toEqual([original.valuesWithContext![1]]);
             }
             expect(original.valuesWithContext).toHaveLength(3);
         });
@@ -517,8 +534,10 @@ describe("attribute-level filter matching", () => {
         expect(result.matched).toBe(true);
         expect([...result.contributingEntries]).toEqual([1]);
         expect(result.matchedValues).toHaveLength(1);
-        expect(result.matchedValues![0].type).toBe(subtype);
         expect(result.matchedValues![0].entryIndex).toBe(1);
+        expect(result.matchedValues![0].attributes).toHaveLength(1);
+        expect(result.matchedValues![0].attributes[0].type_).toBe(subtype);
+        expect(result.matchedValues![0].attributes[0].values[0].utf8String).toBe("true");
     });
 });
 
@@ -686,6 +705,8 @@ describe("bounded filter evaluation (M5)", () => {
         expect(withinBudget.matched).toBe(true);
         expect([...withinBudget.contributingEntries]).toEqual([0]);
         expect(withinBudget.matchedValues).toHaveLength(1);
+        expect(withinBudget.matchedValues![0].entryIndex).toBe(0);
+        expect(withinBudget.matchedValues![0].attributes).toHaveLength(1);
         expect(evaluateFilter(nested("and", 128), entries, settings()).matched).toBeUndefined();
     });
 
@@ -955,7 +976,8 @@ describe("extensible matching-rule applicability (M4)", () => {
         const result = evaluateFilter(extensible(), [entry(selected)], applicabilitySettings(selectedTypes, true, true));
         expect(result.matched).toBe(true);
         expect(result.matchedValues).toHaveLength(1);
-        expect(result.matchedValues![0].type.isEqualTo(selected)).toBe(true);
+        expect(result.matchedValues![0].entryIndex).toBe(0);
+        expect(result.matchedValues![0].attributes[0].type_.isEqualTo(selected)).toBe(true);
         expect([...result.contributingEntries]).toEqual([0]);
     });
 
