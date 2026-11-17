@@ -1,61 +1,35 @@
-import { TRUE_BIT } from "@wildboar/asn1";
-import type {
-    GrantsAndDenials,
-} from "../modules/BasicAccessControl/GrantsAndDenials.ta.mjs";
+import {
+    GRANTS_AND_DENIALS_DENIAL_MASK,
+    GRANTS_AND_DENIALS_GRANT_MASK,
+} from "./grantsAndDenialsMask.mjs";
+
+// Local copies. See deniesAccess: imported constants are getters under Vitest,
+// which hid the bitwise split in the benchmark.
+const GRANT_MASK: number = GRANTS_AND_DENIALS_GRANT_MASK;
+const DENIAL_MASK: number = GRANTS_AND_DENIALS_DENIAL_MASK;
 
 /**
- * @summary Splits `GrantsAndDenials` into up to two `GrantsAndDenials` into
- *  those that grant and deny access separately.
+ * @summary Split a grants-and-denials mask into grant bits and denial bits.
  * @description
  *
- * Splits a single `GrantsAndDenials`, which may contain bits that grant access
- * and bits that deny access, into two separate `GrantsAndDenials`, one of which
- * has only the corresponding grant bits set and another that has only the
- * corresponding deny bits set. If the input `GrantsAndDenials` exclusively
- * grants or denies from the start, this function returns that input
- * `GrantsAndDenials` as the only element of a one-element array.
+ * Even bits grant and odd bits deny. A mask that already only grants or only
+ * denies is returned as the sole element, the same number, so a pure tuple
+ * does not have to be rebuilt. A mixed mask becomes `[grants, denials]`.
  *
- * ### Parameters
+ * The argument is the packed form stored on `ACDFTuple`, not the
+ * `GrantsAndDenials` BIT STRING. Pack a BIT STRING with
+ * `grantsAndDenialsToMask` first.
  *
- * @param {GrantsAndDenials} gad The `GrantsAndDenials` that is to be split into
- *  one or two `GrantsAndDenials`.
- * @returns {GrantsAndDenials[]} An array of `GrantsAndDenials`, separated into
- *  those that exclusively grant and those that exclusively deny.
+ * @param mask Packed `GrantsAndDenials`. See `grantsAndDenialsToMask`.
+ * @returns One mask when the input is pure, or grant bits then denial bits.
  * @function
  */
 export
-function splitGrantsAndDenials (gad: GrantsAndDenials): [ GrantsAndDenials ] | [ GrantsAndDenials, GrantsAndDenials ] {
-    const len: number = gad.length;
-    let grantsEncountered: boolean = false;
-    let denialsEncountered: boolean = false;
-    // Even bits are grants and odd bits are denials. A pure value is the
-    // common case, so do not allocate the two result strings until both kinds
-    // of bit have actually been seen.
-    for (let i = 0; i < len; i += 2) {
-        if (gad[i]) {
-            grantsEncountered = true;
-        }
-        const denialIndex = i + 1;
-        if ((denialIndex < len) && gad[denialIndex]) {
-            denialsEncountered = true;
-        }
-        if (grantsEncountered && denialsEncountered) {
-            break;
-        }
-    }
-    if (!grantsEncountered || !denialsEncountered) {
-        return [ gad ];
-    }
-    const grants: GrantsAndDenials = new Uint8ClampedArray(len);
-    const denials: GrantsAndDenials = new Uint8ClampedArray(len);
-    for (let i = 0; i < len; i += 2) {
-        if (gad[i]) {
-            grants[i] = TRUE_BIT;
-        }
-        const denialIndex = i + 1;
-        if ((denialIndex < len) && gad[denialIndex]) {
-            denials[denialIndex] = TRUE_BIT;
-        }
+function splitGrantsAndDenials (mask: number): [ number ] | [ number, number ] {
+    const grants = mask & GRANT_MASK;
+    const denials = mask & DENIAL_MASK;
+    if ((grants === 0) || (denials === 0)) {
+        return [ mask ];
     }
     return [ grants, denials ];
 }

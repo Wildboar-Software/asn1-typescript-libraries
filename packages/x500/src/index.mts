@@ -99,6 +99,13 @@ export { getACDFTuplesFromACIItem } from "./lib/bac/getACDFTuplesFromACIItem.mjs
 export { grantsAccess } from "./lib/bac/grantsAccess.mjs";
 export { itemIsProtected } from "./lib/bac/itemIsProtected.mjs";
 export { splitGrantsAndDenials } from "./lib/bac/splitGrantsAndDenials.mjs";
+export {
+    GRANTS_AND_DENIALS_DENIAL_MASK,
+    GRANTS_AND_DENIALS_GRANT_MASK,
+    grantsAndDenialsHasBit,
+    grantsAndDenialsToMask,
+    grantsAndDenialsWithoutBit,
+} from "./lib/bac/grantsAndDenialsMask.mjs";
 export { userWithinACIUserClass } from "./lib/bac/userWithinACIUserClass.mjs";
 export { compareAlgorithmIdentifier } from "./lib/comparators/compareAlgorithmIdentifier.mjs";
 export { compareAttCertIssuer } from "./lib/comparators/compareAttCertIssuer.mjs";

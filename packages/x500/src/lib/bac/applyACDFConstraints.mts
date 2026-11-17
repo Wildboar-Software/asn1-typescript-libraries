@@ -1,9 +1,13 @@
-import { FALSE_BIT, TRUE_BIT, type INTEGER } from "@wildboar/asn1";
+import { type INTEGER } from "@wildboar/asn1";
 import {
     grantAdd,
     denyAdd,
     grantImport,
 } from "../modules/BasicAccessControl/GrantsAndDenials.ta.mjs";
+import {
+    grantsAndDenialsHasBit,
+    grantsAndDenialsWithoutBit,
+} from "./grantsAndDenialsMask.mjs";
 import type ACDFTupleExtended from "../types/ACDFTupleExtended.mjs";
 import type ProtectedItem from "../types/ProtectedItem.mjs";
 import type { EvaluateFilterSettings } from "../utils/evaluateFilter.mjs";
@@ -57,15 +61,11 @@ function applyACDFConstraints (
     const adds = operations.includes(grantAdd / 2);
     const imports = operations.includes(grantImport / 2);
     const removePermission = (bit: number): void => {
-        if (permissions[bit] !== TRUE_BIT) {
-            // The bit is already FALSE, so there is nothing to do.
+        if (!grantsAndDenialsHasBit(permissions, bit)) {
             return;
         }
-        if (permissions === tuple.grantsAndDenials) {
-            // Make a copy to avoid mutating the original tuple.
-            permissions = permissions.slice();
-        }
-        permissions[bit] = FALSE_BIT;
+        // The mask is a number, so clearing a bit does not mutate the tuple.
+        permissions = grantsAndDenialsWithoutBit(permissions, bit);
     };
 
     if (
@@ -82,7 +82,7 @@ function applyACDFConstraints (
         }
     }
 
-    let addGranted = (permissions[grantAdd] === TRUE_BIT);
+    let addGranted = grantsAndDenialsHasBit(permissions, grantAdd);
     // Retain attribute-type count support for existing callers as well as the
     // attribute-value additions specified by X.501.
     if (adds && addGranted && (("value" in request) || ("attributeType" in request))) {
@@ -99,7 +99,7 @@ function applyACDFConstraints (
         }
     }
 
-    addGranted = (permissions[grantAdd] === TRUE_BIT);
+    addGranted = grantsAndDenialsHasBit(permissions, grantAdd);
     if (adds && ("value" in request)) {
         // At least in Meerkat DSA, we don't always have all the entry
         // attributes available when evaluating restrictedBy. If this is not
@@ -192,10 +192,8 @@ function applyACDFConstraints (
         }
     }
 
-    // removePermission above makes a new permissions `BIT STRING` entirely if
-    // any bit is mutated. If no bits were mutated, we can just return the
-    // original tuple, which contains the original permissions `BIT STRING`.
-    // Otherwise, we return a new tuple with the new permissions `BIT STRING`.
+    // Clearing a bit produces a different mask value. An unchanged mask is the
+    // same number, so the caller's tuple can be reused.
     return permissions === tuple.grantsAndDenials
         ? tuple
         : tuple.withGrantsAndDenials(permissions);
