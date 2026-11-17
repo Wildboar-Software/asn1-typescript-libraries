@@ -11,9 +11,8 @@ import type { GrantsAndDenials } from "../modules/BasicAccessControl/GrantsAndDe
  * deny. Bit 31 is the sign bit; masks that set it are negative, and the
  * bitwise tests below still work.
  *
- * A Vitest benchmark against the `Uint8ClampedArray` BIT STRING
- * (`npx vitest bench --run --config packages/x500/vite.config.ts src/lib/bac/grantsAndDenialsMask.bench.mts`,
- * Node 22) found, approximately:
+ * A benchmark against the `Uint8ClampedArray` BIT STRING (Node 22) found,
+ * approximately:
  *
  * - splitting a mixed batch about 9× faster, and one pure value about 1.3×
  * - clearing a set bit across a batch about 2.7× faster
@@ -38,6 +37,7 @@ import type { GrantsAndDenials } from "../modules/BasicAccessControl/GrantsAndDe
  * @throws {RangeError} A set bit is past bit 31, or a numeric argument is not
  *  an int32.
  * @function
+ * @author Cursor Grok 4.7
  */
 export
 function grantsAndDenialsToMask (bits: GrantsAndDenials | number): number {
@@ -89,6 +89,7 @@ const MAX_PERMISSION_CATEGORY: number = 15;
  * @param bit A `GrantsAndDenials` bit index, 0..31.
  * @returns `true` when that bit is set. An index outside 0..31 is unset.
  * @function
+ * @author Cursor Grok 4.7
  */
 export
 function grantsAndDenialsHasBit (mask: number, bit: number): boolean {
@@ -105,6 +106,7 @@ function grantsAndDenialsHasBit (mask: number, bit: number): boolean {
  * @returns The mask with that bit cleared. Clearing an absent bit, or an
  *  index outside 0..31, returns the same value.
  * @function
+ * @author Cursor Grok 4.7
  */
 export
 function grantsAndDenialsWithoutBit (mask: number, bit: number): number {
@@ -115,8 +117,15 @@ function grantsAndDenialsWithoutBit (mask: number, bit: number): number {
 }
 
 /**
- * Grant flag for one permission category, or `0` when the category does not
- * fit in the mask.
+ * @summary Grant flag for one permission category.
+ * @description
+ *
+ * Returns `0` when the category does not fit in the mask.
+ *
+ * @param operation Permission category (`GrantsAndDenials` bit index / 2).
+ * @returns The grant bit flag, or `0` when `operation` is outside 0..15.
+ * @function
+ * @author Cursor Grok 4.7
  */
 function grantFlag (operation: number): number {
     if ((operation >>> 0) > MAX_PERMISSION_CATEGORY) {
@@ -137,6 +146,7 @@ function grantFlag (operation: number): number {
  * @returns `true` when every operation is granted and none of those is denied.
  *  An empty list is permitted.
  * @function
+ * @author Cursor Grok 4.7
  */
 export
 function grantsAndDenialsPermit (mask: number, operations: number[]): boolean {
@@ -165,6 +175,7 @@ function grantsAndDenialsPermit (mask: number, operations: number[]): boolean {
  * @param operations Permission categories (`GrantsAndDenials` bit index / 2).
  * @returns `true` when a requested grant or deny bit is set.
  * @function
+ * @author Cursor Grok 4.7
  */
 export
 function grantsAndDenialsRelevant (mask: number, operations: number[]): boolean {
