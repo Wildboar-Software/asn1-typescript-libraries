@@ -50,20 +50,17 @@ import type { Context } from "../modules/InformationFramework/Context.ta.mjs";
 import getAttributeTypesFromFilterItem from "./getAttributeTypesFromFilterItem.mjs";
 import { RequestAttribute } from "../modules/ServiceAdministration/RequestAttribute.ta.mjs";
 
-interface MatchedValue {
-    type: AttributeType;
-    value: ASN1Element;
-    contexts?: Context[];
-}
-
-interface MatchedEntryInfo extends MatchedValue {
-    entryIndex: number;
-};
-
 export
 interface EvaluateFilterReturn {
     matched: boolean | undefined;
-    matchedValues?: MatchedEntryInfo[];
+    /**
+     * Whole attributes that contributed to the match when `matchedValuesOnly`
+     * is set. Each attribute keeps its stored type and contains only the
+     * values that matched, including contexts when the stored value had them.
+     * Empty when no values were collected. Omitted for results that do not
+     * report values, such as a negated item.
+     */
+    matchedValues?: Attribute[];
     contributingEntries: Set<number>;
 }
 
@@ -195,8 +192,8 @@ interface EvaluateFilterSettings {
      *
      * Within this implementation, this option matters for performance: it
      * determines whether this function bails out as soon as it finds a match
-     * for a given filter item. If this option is set, every attribute type of
-     * interest is evaluated so that the complete list of matched values can be
+     * for a given filter item. If this option is set, every attribute of
+     * interest is evaluated so that each whole matched attribute can be
      * returned.
      *
      * @readonly
@@ -409,17 +406,19 @@ function valueSatisfiesSelectedContexts (
 
 type FilterAssertion = ASN1Element | FilterItem_substrings_strings_Item[];
 
-/** Convert matcher output without losing the contexts of stored values. */
-function appendMatchedValues (
-    attribute: Attribute,
-    matchedValues: MatchedValue[],
-): void {
-    for (const value of attribute.values) {
-        matchedValues.push({ type: attribute.type_, value });
+/**
+ * Adopt the attribute the matcher filled in. Nothing was collected when that
+ * attribute is empty. An empty `valuesWithContext` is omitted so a
+ * values-only result has the same shape as a stored attribute.
+ */
+function takeMatchedAttribute (collected: Attribute): Attribute | undefined {
+    if (collected.isEmpty()) {
+        return undefined;
     }
-    for (const vwc of attribute.valuesWithContext ?? []) {
-        matchedValues.push({ type: attribute.type_, value: vwc.value, contexts: vwc.contextList });
+    if (collected.valuesWithContext?.length) {
+        return collected;
     }
+    return new Attribute(collected.type_, collected.values);
 }
 
 /**
@@ -473,17 +472,17 @@ function selectAttributeValues (
 
 /**
  * Match selected values as a batch, decoding/preparing the assertion once.
- * Collect values only when requested, so normal matching can stop at TRUE.
- * `matcher` is wrapped by `handleErrors` to return UNDEFINED on errors.
- * An absent `matchedValues` array suppresses output collection, even with
- * `matchedValuesOnly`, for defaults that are never returned to the caller.
+ * Collect whole attributes only when requested, so normal matching can stop
+ * at TRUE. `matcher` is wrapped by `handleErrors` to return UNDEFINED on
+ * errors. An absent `matchedValues` array suppresses output collection, even
+ * with `matchedValuesOnly`, for defaults that are never returned to the caller.
  */
 function matchAttribute (
     matcher: Matcher,
     assertion: FilterAssertion,
     attribute: Attribute,
     options: EvaluateFilterSettings,
-    matchedValues: MatchedValue[] | undefined,
+    matchedValues: Attribute[] | undefined,
     flags: number = 0,
     selectedContexts?: ContextAssertion[],
     directMatchCache: DirectContextMatchCache = new WeakMap(),
@@ -494,10 +493,15 @@ function matchAttribute (
     // call a matcher whose empty-input result might instead be UNDEFINED.
     if (!selected.isEmpty()) {
         if (options.matchedValuesOnly && matchedValues) {
+            // An empty valuesWithContext array asks the matcher to keep
+            // contexts on the values it records.
             const valueMatches = new Attribute(attribute.type_, [], []);
             result = matcher(assertion, selected, options.getEqualityMatcher, flags, valueMatches);
             if (result === true) {
-                appendMatchedValues(valueMatches, matchedValues);
+                const matched = takeMatchedAttribute(valueMatches);
+                if (matched) {
+                    matchedValues.push(matched);
+                }
             }
         } else {
             result = matcher(assertion, selected, options.getEqualityMatcher, flags);
@@ -562,7 +566,7 @@ function evaluateFilterAssertion (
     options: EvaluateFilterSettings,
     flags: number,
     selectedContexts?: ContextAssertion[],
-): MatchedValue[] | boolean | undefined {
+): Attribute[] | boolean | undefined {
     let indeterminate = false;
     const rawMatcher = matcherForItem(type_, assertion, options, flags);
     const matcher: Matcher | undefined = handleErrors(rawMatcher);
@@ -583,7 +587,7 @@ function evaluateFilterAssertion (
     ];
     const relevantAttributes = attributes
         .filter((attr): boolean => friendTypes.some((f) => options.isAttributeSubtype(attr.type_, f)));
-    const matchedValues: MatchedValue[] = [];
+    const matchedValues: Attribute[] = [];
     let matched = false;
     const substrings = Array.isArray(assertion);
     // Determine presence before value permissions and context selection:
@@ -637,7 +641,7 @@ function evaluateEquality (
     ava: AttributeValueAssertion,
     entry: EntryInformation,
     options: EvaluateFilterSettings,
-): MatchedValue[] | boolean | undefined {
+): Attribute[] | boolean | undefined {
     return evaluateFilterAssertion(
         ava.type_,
         ava.assertion,
@@ -653,7 +657,7 @@ function evaluateApprox (
     ava: AttributeValueAssertion,
     entry: EntryInformation,
     options: EvaluateFilterSettings,
-): MatchedValue[] | boolean | undefined {
+): Attribute[] | boolean | undefined {
     return evaluateFilterAssertion(
         ava.type_,
         ava.assertion,
@@ -670,7 +674,7 @@ function evaluateOrdering (
     ava: AttributeValueAssertion,
     entry: EntryInformation,
     options: EvaluateFilterSettings,
-): MatchedValue[] | boolean | undefined {
+): Attribute[] | boolean | undefined {
     const flags = MATCH_FLAG_ORDERING_OR_EQUAL
         | (gte ? MATCH_FLAG_ORDERING_GREATER : 0);
     return evaluateFilterAssertion(
@@ -688,7 +692,7 @@ function evaluateSubstring (
     sub: FilterItem_substrings,
     entry: EntryInformation,
     options: EvaluateFilterSettings,
-): MatchedValue[] | boolean | undefined {
+): Attribute[] | boolean | undefined {
     return evaluateFilterAssertion(sub.type_, sub.strings, entry, options, 0);
 }
 
@@ -719,7 +723,7 @@ function evaluateMatchingRuleAssertion (
     mra: MatchingRuleAssertion,
     entry: EntryInformation,
     options: EvaluateFilterSettings,
-): MatchedValue[] | boolean | undefined {
+): Attribute[] | boolean | undefined {
     if (mra.type_ && !options.permittedToMatch(mra.type_)) {
         return undefined;
     }
@@ -784,7 +788,7 @@ function evaluateMatchingRuleAssertion (
     const relevantAttributes = selectedAttributes.filter((attr) => (
         options.permittedToMatch(attr.type_) && isCompatibleCandidate(attr.type_)
     ));
-    const matchedValues: MatchedValue[] = [];
+    const matchedValues: Attribute[] = [];
     let matched = false;
     if (relevantAttributes.length === 0) {
         // Service-profile defaults must satisfy the same applicability check.
@@ -902,7 +906,7 @@ function evaluateFilterItem (
     filterItem: FilterItem,
     entry: EntryInformation,
     options: EvaluateFilterSettings,
-): MatchedValue[] | boolean | undefined {
+): Attribute[] | boolean | undefined {
     if ("equality" in filterItem) {
         if (filterItem.equality.type_.isEqualTo(id_mr_approximateStringMatch)) {
             return evaluateApprox(filterItem.equality, entry, options);
@@ -943,13 +947,13 @@ function evaluateFilterItem (
  * of them supplied matching values and hence "contributed" to the match, per
  * ITU Recommendation X.511 (2016), Section 7.13).
  *
- * This function returns `true` if the sum of all attributes of the supplied
- * entries match the filter, `false` if they do not, or `undefined` if it could
- * not be determined. It may also return an array of `MatchedValue`, each of
- * which is an attribute type, value, contexts (if present), and the index of
- * the entry from the array of supplied entries that supplied that matching
- * value. If this array is empty, it means that there was no match; an empty
- * array should be treated like a `false` result.
+ * `matched` is `true` when the attributes match the filter, `false` when
+ * they do not, and `undefined` when it cannot be determined. When
+ * `matchedValuesOnly` is set, `matchedValues` contains each whole attribute
+ * that contributed, with only the values that matched. An empty
+ * `matchedValues` array means nothing was collected; `matched` is what
+ * decides the result. `contributingEntries` records which family members
+ * supplied a match.
  *
  * Features:
  *
@@ -985,11 +989,8 @@ function evaluateFilterItem (
  * @param recursionTTL Maximum filter nodes on a recursive path, including the
  *  root. Defaults to MAX_FILTER_DEPTH (128). Non-positive or non-safe-integer
  *  budgets evaluate to UNDEFINED.
- * @returns `true` if the entry matches the filter, `false` if it does not, or
- *  `undefined` if it cannot be determined whether the entry matches or not.
- *  An array of matched values may be returned, containing the values that
- *  matched and the indices of the entries from which the matches came, if this
- *  array is empty, it means there was no match.
+ * @returns Whether the family matched, which members contributed, and the
+ *  whole attributes that matched when `matchedValuesOnly` is set.
  * @function
  */
 export
@@ -1019,7 +1020,7 @@ function evaluateFilterAtDepth (
     }
     let subresult_undefined: boolean = false;
     if ("item" in filter) {
-        const familyResults: MatchedEntryInfo[] = [];
+        const familyResults: Attribute[] = [];
         let undefinedResultFound: boolean = false;
         let matched: boolean = false;
         for (let i = 0; i < family.length; i++) {
@@ -1045,10 +1046,7 @@ function evaluateFilterAtDepth (
                 matched = true;
             }
             if (Array.isArray(result)) {
-                familyResults.push(...result.map((r) => ({
-                    ...r,
-                    entryIndex: i,
-                })));
+                familyResults.push(...result);
             }
         }
         return {
@@ -1058,7 +1056,7 @@ function evaluateFilterAtDepth (
         };
     } else if ("and" in filter) {
         const newContributingEntries: Set<number> = new Set();
-        const matchedValues: MatchedEntryInfo[] = [];
+        const matchedValues: Attribute[] = [];
         for (const subfilter of filter.and) {
             const result = evaluateFilterAtDepth(subfilter, family, options, new Set(), remainingDepth - 1);
             if (result.matched === false) {
@@ -1094,7 +1092,7 @@ function evaluateFilterAtDepth (
         };
     } else if ("or" in filter) {
         const newContributingEntries: Set<number> = new Set();
-        const matchedValues: MatchedEntryInfo[] = [];
+        const matchedValues: Attribute[] = [];
         let matched: boolean = false;
         /* Unlike with and, we still have to iterate over all subfilters so that
         we can determine if other entries contribute to the match or if other

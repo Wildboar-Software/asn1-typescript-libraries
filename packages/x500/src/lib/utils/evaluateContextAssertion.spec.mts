@@ -173,7 +173,7 @@ describe("evaluateFilter context fallback", () => {
         const result = evaluateFilter(filter, [ entry ], options);
         expect(result.matched).toBe(true);
         expect(result.matchedValues).toHaveLength(1);
-        expect(result.matchedValues![0].contexts![0].fallback).toBeFalsy();
+        expect(result.matchedValues![0].valuesWithContext![0].contextList[0].fallback).toBeFalsy();
     });
 
     it("selects a fallback value when no other value satisfies the context assertion", () => {
@@ -198,7 +198,7 @@ describe("evaluateFilter context fallback", () => {
         const result = evaluateFilter(filter, [ entry ], options);
         expect(result.matched).toBe(true);
         expect(result.matchedValues).toHaveLength(1);
-        expect(result.matchedValues![0].contexts![0].fallback).toBe(true);
+        expect(result.matchedValues![0].valuesWithContext![0].contextList[0].fallback).toBe(true);
     });
 
     it("does not apply fallback when a sibling matches the context even if that sibling fails equality", () => {
