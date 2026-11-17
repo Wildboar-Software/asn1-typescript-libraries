@@ -13,13 +13,14 @@ import {
  * Access points that are neither masters nor shadows are silently excluded from
  * both returned arrays.
  * 
- * @param {MasterOrShadowAccessPoint[]} mosaps The access points to be grouped
+ * @param {MasterOrShadowAccessPoint[] | IterableIterator<MasterOrShadowAccessPoint>} mosaps The access points to be grouped.
+ *  An array or an iterator is read once.
  * @returns {Array} Master and shadow access points, respectively, in two arrays
  * @function
  */
 export
 function splitIntoMastersAndShadows (
-    mosaps: MasterOrShadowAccessPoint[],
+    mosaps: MasterOrShadowAccessPoint[] | IterableIterator<MasterOrShadowAccessPoint>,
 ): [ masters: MasterOrShadowAccessPoint[], shadows: MasterOrShadowAccessPoint[] ] {
     const masters: MasterOrShadowAccessPoint[] = [];
     const shadows: MasterOrShadowAccessPoint[] = [];

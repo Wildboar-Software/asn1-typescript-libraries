@@ -34,7 +34,8 @@ const compareElementsContextMatcher: ContextMatcher = (assertion, values) => {
  * `false`.
  *
  * @param {ContextAssertion} ca The context assertion to be evaluated
- * @param {Context[]} contexts The contexts to be evaluated
+ * @param {Context[] | IterableIterator<Context>} contexts The contexts to be evaluated.
+ *  An array or an iterator is read once.
  * @param {Function} getContextMatcher A function that returns a matcher function when given
  *  the OID of the context type. If the context type is unrecognized, asserted
  *  and stored values are compared by encoding via `compareElements`.
@@ -49,7 +50,7 @@ const compareElementsContextMatcher: ContextMatcher = (assertion, values) => {
 export
 function evaluateContextAssertion (
     ca: ContextAssertion,
-    contexts: readonly Context[],
+    contexts: readonly Context[] | IterableIterator<Context>,
     getContextMatcher: (contextType: OBJECT_IDENTIFIER) => ContextMatcher | undefined,
     determineAbsentMatch: (contextType: OBJECT_IDENTIFIER) => boolean,
     getEqualityMatcher?: (attributeType: OBJECT_IDENTIFIER) => Matcher | undefined,

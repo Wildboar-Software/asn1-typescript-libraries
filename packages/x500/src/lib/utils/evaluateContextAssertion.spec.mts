@@ -76,6 +76,12 @@ describe("evaluateContextAssertion", () => {
             () => stringContext,
             () => true,
         )).toBe(false);
+        expect(evaluateContextAssertion(
+            assertion(EN),
+            contexts.values(),
+            () => stringContext,
+            () => true,
+        )).toBe(true);
     });
 
     it("does not match a fallback value by itself", () => {

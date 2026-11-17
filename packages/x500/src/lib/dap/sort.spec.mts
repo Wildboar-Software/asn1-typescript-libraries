@@ -105,5 +105,11 @@ describe("sort (M22)", () => {
         ]);
         const lookup = (type: ObjectIdentifier) => type.isEqualTo(commonName) ? alphabetically : undefined;
         expect(sort([new SortKey(unknownType), new SortKey(commonName)], a, b, lookup)).toBeLessThan(0);
+        expect(sort(
+            [new SortKey(unknownType), new SortKey(commonName)].values(),
+            a,
+            b,
+            lookup,
+        )).toBeLessThan(0);
     });
 });

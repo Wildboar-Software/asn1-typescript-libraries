@@ -82,10 +82,11 @@ function decodeCaseIgnoreIA5SubstringsMatchFilterPieces (
  */
 export
 function normalizeCaseIgnoreIA5SubstringsMatchAssertion (
-    assertion: AssertedSubstring<string>[],
+    assertion: readonly AssertedSubstring<string>[] | IterableIterator<AssertedSubstring<string>>,
     el?: ASN1Element,
 ): AssertedSubstring<string>[] {
-    return normalizePieces(assertion, prepareIgnore, RULE, el);
+    const pieces = Array.isArray(assertion) ? assertion : Array.from(assertion);
+    return normalizePieces(pieces, prepareIgnore, RULE, el);
 }
 
 /**

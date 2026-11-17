@@ -129,6 +129,14 @@ describe("context matchers", () => {
             [ "lang-en", "binary", "x-foo" ],
         )).toBe(true);
         expect(evaluateLDAPAttributeOptionContextTyped(
+            [ "binary", "lang-en" ].values(),
+            [ "lang-en", "binary", "x-foo" ].values(),
+        )).toBe(true);
+        expect(evaluateLDAPAttributeOptionContextTyped(
+            [ "missing" ].values(),
+            [ "lang-en" ].values(),
+        )).toBe(false);
+        expect(evaluateLDAPAttributeOptionContextTyped(
             [ "BINARY" ],
             [ "binary" ],
         )).toBe(true);

@@ -349,3 +349,11 @@ describe("storedPrefixMatch with MATCH_FLAG_ASSERTION_NORMALIZED", () => {
         )).toBe(true);
     });
 });
+
+describe("normalizeCaseIgnoreListMatchAssertion iterators", () => {
+    it("prepares lines from an iterator in order", () => {
+        expect(equality.normalizeCaseIgnoreListMatchAssertion(
+            [ "  Main ST ", "SPRINGFIELD" ].values(),
+        )).toEqual([ "main st", "springfield" ]);
+    });
+});

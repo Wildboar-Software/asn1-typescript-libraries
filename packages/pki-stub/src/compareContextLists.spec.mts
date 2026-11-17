@@ -94,6 +94,17 @@ describe("compareContextLists()", () => {
         assert.ok(!result);
     });
 
+    it("reads iterators and still rejects unequal lengths", () => {
+        assert.ok(compareContextLists(
+            [context1, context3].values(),
+            [context3, context1].values(),
+        ));
+        assert.ok(!compareContextLists(
+            [context1].values(),
+            [context1, context3].values(),
+        ));
+    });
+
     it("does not count type subsets as matches", () => {
         const result = compareContextLists([context1], [context1, context4]);
         assert.ok(!result);

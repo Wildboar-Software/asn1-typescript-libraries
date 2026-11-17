@@ -28,7 +28,9 @@ import {
     MATCH_FLAG_DEBUG,
     MATCH_FLAG_VALUE_NORMALIZED,
 } from "../../types/matching.mjs";
-import caseExactSubstringsMatch from "./caseExactSubstringsMatch.mjs";
+import caseExactSubstringsMatch, {
+    normalizeCaseExactSubstringsMatchAssertion,
+} from "./caseExactSubstringsMatch.mjs";
 import caseIgnoreSubstringsMatch, {
     caseIgnoreSubstringsMatchTyped,
 } from "./caseIgnoreSubstringsMatch.mjs";
@@ -359,5 +361,11 @@ describe("caseIgnoreListSubstringsMatch", () => {
             undefined,
             MATCH_FLAG_VALUE_NORMALIZED,
         )).toBe(true);
+    });
+
+    it("prepares substring pieces from an iterator", () => {
+        expect(normalizeCaseExactSubstringsMatchAssertion(
+            [ { initial: "  Foo " }, { any_: "  Bar " } ].values(),
+        )).toEqual([ { initial: "Foo" }, { any_: "Bar" } ]);
     });
 });

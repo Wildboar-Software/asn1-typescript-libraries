@@ -19,13 +19,13 @@ import {
  * ignoring letter case and option order. `ABSENT-MATCH` is FALSE:
  * a value without this context does not satisfy an assertion.
  *
- * Each argument may be an `ASN1Element` or an array of option
- * strings (`AttributeOptionList`).
+ * Each argument may be an `ASN1Element`, an array of option strings
+ * (`AttributeOptionList`), or an iterator of those strings.
  */
 export
 function evaluateLDAPAttributeOptionContext (
-    assertion: ASN1Element | readonly string[],
-    value: ASN1Element | readonly string[],
+    assertion: ASN1Element | readonly string[] | IterableIterator<string>,
+    value: ASN1Element | readonly string[] | IterableIterator<string>,
     flags: number = 0,
 ): boolean {
     const a = ASN1Element.isElement(assertion) ? _decode_AttributeOptionList(assertion) : assertion;
@@ -42,8 +42,7 @@ function evaluateLDAPAttributeOptionContext (
  */
 function storedOptionSet (value: readonly string[]): Set<string> {
     const stored = new Set<string>();
-    for (let i = 0; i < value.length; i++) {
-        const option = value[i];
+    for (const option of value) {
         stored.add(option);
         const folded = option.toLowerCase();
         if (folded !== option) {
@@ -61,22 +60,22 @@ function optionIsStored (stored: Set<string>, option: string): boolean {
  * `ldapAttributeOptionContext` on two option lists. Asserted
  * options must be a case-insensitive subset of the stored options.
  *
- * @param assertion Presented options.
- * @param value Stored options.
+ * @param assertion Presented options. An array or an iterator is read once.
+ * @param value Stored options. An array or an iterator is read once.
  * @param flags `MATCH_FLAG_CONSTANT_TIME`.
  * @returns `true` when every asserted option is stored.
  */
 export
 function evaluateLDAPAttributeOptionContextTyped (
-    assertion: readonly string[],
-    value: readonly string[],
+    assertion: readonly string[] | IterableIterator<string>,
+    value: readonly string[] | IterableIterator<string>,
     flags: number = 0,
 ): boolean {
     const constantTime = Boolean(flags & MATCH_FLAG_CONSTANT_TIME);
-    const storedValues = storedOptionSet(value);
+    const storedValues = storedOptionSet(Array.isArray(value) ? value : Array.from(value));
     let matched = true;
-    for (let i = 0; i < assertion.length; i++) {
-        if (!optionIsStored(storedValues, assertion[i])) {
+    for (const option of assertion) {
+        if (!optionIsStored(storedValues, option)) {
             if (!constantTime) {
                 return false;
             }
