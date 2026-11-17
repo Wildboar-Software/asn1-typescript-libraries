@@ -1,11 +1,8 @@
 import type ACDFTupleExtended from "../types/ACDFTupleExtended.mjs";
 import type ProtectedItem from "../types/ProtectedItem.mjs";
 import itemIsProtected from "./itemIsProtected.mjs";
-import type {
-    GrantsAndDenials,
-} from "../modules/BasicAccessControl/GrantsAndDenials.ta.mjs";
-import { TRUE_BIT } from "@wildboar/asn1";
 import type { EvaluateFilterSettings } from "../utils/evaluateFilter.mjs";
+import { grantsAndDenialsRelevant } from "./grantsAndDenialsMask.mjs";
 import type {
     NameAndOptionalUID,
 } from "../modules/SelectedAttributeTypes/NameAndOptionalUID.ta.mjs";
@@ -14,11 +11,11 @@ import applyACDFConstraints from "./applyACDFConstraints.mjs";
 /**
  * Note that this function is different than `operationIsPermitted()`.
  *
- * @param operations
- * @param gad
- * @returns
+ * @param operations Permission categories (`GrantsAndDenials` bit index / 2).
+ * @param mask Packed grants and denials.
+ * @returns `true` when the tuple sets a grant or deny bit for a requested operation.
  */
-function operationRelevant (operations: number[], gad: GrantsAndDenials): boolean {
+function operationRelevant (operations: number[], mask: number): boolean {
     /**
      * The wording of ITU Recommendation X.501 (2016), Section 18.8.3.4 is
      * tricky:
@@ -29,14 +26,7 @@ function operationRelevant (operations: number[], gad: GrantsAndDenials): boolea
      * As I read that, it means that we have to include any tuple that has a bit
      * set that affects the operation, whether it grants it or denies it.
      */
-    const operationCount = operations.length;
-    for (let i = 0; i < operationCount; i++) {
-        const bit = operations[i] * 2;
-        if ((gad[bit] === TRUE_BIT) || (gad[bit + 1] === TRUE_BIT)) {
-            return true;
-        }
-    }
-    return false;
+    return grantsAndDenialsRelevant(mask, operations);
 }
 
 /**

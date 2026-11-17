@@ -33,7 +33,7 @@ class ACDFTupleExtended extends ACDFTuple {
         userClasses: UserClasses,
         authenticationLevel: AuthenticationLevel,
         protectedItems: ProtectedItems,
-        grantsAndDenials: GrantsAndDenials,
+        grantsAndDenials: GrantsAndDenials | number,
         precedence: Precedence,
         userClassSpecificity: number,
     );
@@ -41,7 +41,7 @@ class ACDFTupleExtended extends ACDFTuple {
         userClassesOrTuple: UserClasses | ACDFTuple,
         authenticationLevelOrSpecificity: AuthenticationLevel | number,
         protectedItems?: ProtectedItems,
-        grantsAndDenials?: GrantsAndDenials,
+        grantsAndDenials?: GrantsAndDenials | number,
         precedence?: Precedence,
         userClassSpecificity?: number,
     ) {
@@ -79,7 +79,7 @@ class ACDFTupleExtended extends ACDFTuple {
     }
 
     public withGrantsAndDenials (
-        grantsAndDenials: GrantsAndDenials,
+        grantsAndDenials: GrantsAndDenials | number,
     ): ACDFTupleExtended {
         return new ACDFTupleExtended(
             this.userClasses,

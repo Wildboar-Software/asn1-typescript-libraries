@@ -124,6 +124,12 @@ interface BACACDFReturn extends ACDFReturn {
  * unique to avoid the more computationally-expensive code paths.**
  *
  * Array walks below are indexed loops. Ranking uses `Array.prototype.sort`.
+ * `grantsAndDenials` is a 32-bit mask (see `grantsAndDenialsToMask`). Bitwise
+ * masks were faster than the `Uint8ClampedArray` for the bit work in this
+ * function: about 9× for a mixed split, about 5.7× for split plus permit, and
+ * about 2.7× for clearing a constrained bit. One permission test was a tie.
+ * Packing the BIT STRING on every test was slower than indexing, so the tuple
+ * packs it once.
  *
  * ### Compliance
  *
