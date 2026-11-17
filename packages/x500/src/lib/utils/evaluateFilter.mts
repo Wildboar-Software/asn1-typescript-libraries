@@ -193,6 +193,13 @@ interface EvaluateFilterSettings {
      * (Unrelated attribute types or attribute types that did not match are not
      * affected by this option.)
      *
+     * A negated filter item — one nested in an odd number of `not` filters
+     * (X.511 7.8.1) — ignores this option. No matched values are collected
+     * for it, and evaluation still stops at the first decisive value. An even
+     * number of negations restores the option. `present` never contributes
+     * values. Values from `or` elements that are FALSE or UNDEFINED are
+     * omitted, and every `or` element is still evaluated.
+     *
      * Within this implementation, this option matters for performance: it
      * determines whether this function bails out as soon as it finds a match
      * for a given filter item. If this option is set, every attribute type of
@@ -956,7 +963,7 @@ function evaluateFilterItem (
  * - Attribute subtyping
  * - `nullMatch`
  * - `performExactly`
- * - `matchedValuesOnly`
+ * - `matchedValuesOnly` (no effect on negated filter items; X.511 11.2.2)
  * - `dnAttributes`
  * - Family contribution tracking
  *
@@ -1006,19 +1013,40 @@ function evaluateFilter (
     return evaluateFilterAtDepth(filter, family, options, contributingEntries, recursionTTL);
 }
 
-/** Evaluate one node, passing a decreasing depth budget to its children. */
+/**
+ * X.511 7.8.1 / 11.2.2: a filter item under an odd number of `not`s is
+ * negated, and `matchedValuesOnly` has no effect on it. Clearing the option
+ * also restores the first-match return that the option otherwise disables.
+ */
+function settingsForFilterItem (
+    options: EvaluateFilterSettings,
+    negated: boolean,
+): EvaluateFilterSettings {
+    if (!negated || !options.matchedValuesOnly) {
+        return options;
+    }
+    return { ...options, matchedValuesOnly: false };
+}
+
+/**
+ * Evaluate one node, passing a decreasing depth budget to its children.
+ * `negated` is true when this node sits inside an odd number of `not`
+ * filters (X.511 7.8.1). Matched values are collected only for items at
+ * even depth.
+ */
 function evaluateFilterAtDepth (
     filter: Filter,
     family: EntryInformation[],
     options: EvaluateFilterSettings,
     contributingEntries: Set<number>,
     remainingDepth: number,
+    negated: boolean = false,
 ): EvaluateFilterReturn {
     if (remainingDepth <= 0) {
         return { matched: undefined, contributingEntries, matchedValues: [] };
     }
-    let subresult_undefined: boolean = false;
     if ("item" in filter) {
+        const itemOptions = settingsForFilterItem(options, negated);
         const familyResults: MatchedEntryInfo[] = [];
         let undefinedResultFound: boolean = false;
         let matched: boolean = false;
@@ -1026,7 +1054,7 @@ function evaluateFilterAtDepth (
             const member = family[i];
             let result: ReturnType<typeof evaluateFilterItem>;
             try {
-                result = evaluateFilterItem(filter.item, member, options);
+                result = evaluateFilterItem(filter.item, member, itemOptions);
             } catch (error) {
                 if (error instanceof CannotPerformExactly) {
                     throw error;
@@ -1059,25 +1087,55 @@ function evaluateFilterAtDepth (
     } else if ("and" in filter) {
         const newContributingEntries: Set<number> = new Set();
         const matchedValues: MatchedEntryInfo[] = [];
+        const negatedFalseValues: MatchedEntryInfo[] = [];
+        // Under an odd `not`, AND is the De Morgan dual of OR (X.511 11.2.2).
+        // A locally FALSE child can be what makes the enclosing NOT true, so
+        // its matched values — from items at even `not` depth — are kept.
+        const keepNegatedFalseValues = negated && !!options.matchedValuesOnly;
+        let sawUndefined = false;
+        let sawFalse = false;
         for (const subfilter of filter.and) {
-            const result = evaluateFilterAtDepth(subfilter, family, options, new Set(), remainingDepth - 1);
+            const result = evaluateFilterAtDepth(
+                subfilter,
+                family,
+                options,
+                new Set(),
+                remainingDepth - 1,
+                negated,
+            );
             if (result.matched === false) {
-                return {
-                    matched: false,
-                    contributingEntries,
-                    matchedValues: [],
-                };
+                if (!keepNegatedFalseValues) {
+                    return {
+                        matched: false,
+                        contributingEntries,
+                        matchedValues: [],
+                    };
+                }
+                sawFalse = true;
+                if (result.matchedValues) {
+                    negatedFalseValues.push(...result.matchedValues);
+                }
+                continue;
             }
             if (result.matched === undefined) {
-                subresult_undefined = true;
+                sawUndefined = true;
                 continue;
             }
             for (const ce of result.contributingEntries.values()) {
                 newContributingEntries.add(ce);
             }
-            result.matchedValues && matchedValues.push(...result.matchedValues);
+            if (!negated && result.matchedValues) {
+                matchedValues.push(...result.matchedValues);
+            }
         }
-        if (subresult_undefined) {
+        if (sawFalse) {
+            return {
+                matched: false,
+                contributingEntries,
+                matchedValues: negatedFalseValues,
+            };
+        }
+        if (sawUndefined) {
             return {
                 matched: undefined,
                 contributingEntries,
@@ -1090,29 +1148,48 @@ function evaluateFilterAtDepth (
         return {
             matched: true,
             contributingEntries: newContributingEntries,
-            matchedValues,
+            // A TRUE AND inside a NOT does not contribute values: that NOT is
+            // FALSE, and FALSE `or` elements are ignored for matchedValuesOnly.
+            matchedValues: negated ? [] : matchedValues,
         };
     } else if ("or" in filter) {
         const newContributingEntries: Set<number> = new Set();
         const matchedValues: MatchedEntryInfo[] = [];
-        let matched: boolean = false;
-        /* Unlike with and, we still have to iterate over all subfilters so that
-        we can determine if other entries contribute to the match or if other
-        values match. */
+        const negatedFalseValues: MatchedEntryInfo[] = [];
+        // Under an odd `not`, OR is the De Morgan dual of AND. Values apply
+        // only when every child is FALSE. Otherwise FALSE and UNDEFINED `or`
+        // elements contribute nothing (X.511 11.2.2).
+        const keepNegatedFalseValues = negated && !!options.matchedValuesOnly;
+        let sawUndefined = false;
+        let matched = false;
+        // Every `or` element is evaluated, even after the filter is known to
+        // be TRUE, so matchedValuesOnly can see the other arms.
         for (const subfilter of filter.or) {
-            const result = evaluateFilterAtDepth(subfilter, family, options, new Set(), remainingDepth - 1);
+            const result = evaluateFilterAtDepth(
+                subfilter,
+                family,
+                options,
+                new Set(),
+                remainingDepth - 1,
+                negated,
+            );
             if (result.matched === false) {
+                if (keepNegatedFalseValues && result.matchedValues) {
+                    negatedFalseValues.push(...result.matchedValues);
+                }
                 continue;
             }
             if (result.matched === undefined) {
-                subresult_undefined = true;
+                sawUndefined = true;
                 continue;
             }
             matched = true;
             for (const ce of result.contributingEntries.values()) {
                 newContributingEntries.add(ce);
             }
-            result.matchedValues && matchedValues.push(...result.matchedValues);
+            if (!negated && result.matchedValues) {
+                matchedValues.push(...result.matchedValues);
+            }
         }
         if (matched) {
             for (const ce of contributingEntries.values()) {
@@ -1121,10 +1198,10 @@ function evaluateFilterAtDepth (
             return {
                 matched: true,
                 contributingEntries: newContributingEntries,
-                matchedValues,
+                matchedValues: negated ? [] : matchedValues,
             };
         }
-        if (subresult_undefined) {
+        if (sawUndefined) {
             return {
                 matched: undefined,
                 contributingEntries,
@@ -1134,7 +1211,7 @@ function evaluateFilterAtDepth (
         return {
             matched: false,
             contributingEntries,
-            matchedValues: [],
+            matchedValues: keepNegatedFalseValues ? negatedFalseValues : [],
         };
     } else if ("not" in filter) {
         if (
@@ -1147,11 +1224,19 @@ function evaluateFilterAtDepth (
                 contributingEntries,
             };
         }
-        const result = evaluateFilterAtDepth(filter.not, family, options, contributingEntries, remainingDepth - 1);
+        const result = evaluateFilterAtDepth(
+            filter.not,
+            family,
+            options,
+            contributingEntries,
+            remainingDepth - 1,
+            !negated,
+        );
         if (result.matched === undefined) {
             return {
                 matched: undefined,
                 contributingEntries,
+                matchedValues: [],
             };
         }
         /**
@@ -1184,6 +1269,9 @@ function evaluateFilterAtDepth (
         return {
             matched: (result.matched === false),
             contributingEntries,
+            // Collected only for items at even `not` depth. A negated item
+            // contributes nothing here (X.511 11.2.2).
+            matchedValues: result.matchedValues ?? [],
         };
     } else {
         return {

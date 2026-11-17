@@ -1,6 +1,13 @@
 import { ObjectIdentifier, type ASN1Element } from "@wildboar/asn1";
 import { DER, _encodeUTF8String } from "@wildboar/asn1/functional";
-import { evaluateEquality, evaluateApprox, evaluateMatchingRuleAssertion, evaluateFilter, type EvaluateFilterSettings } from "./evaluateFilter.mjs";
+import {
+    evaluateEquality,
+    evaluateApprox,
+    evaluateMatchingRuleAssertion,
+    evaluateFilter,
+    type EvaluateFilterReturn,
+    type EvaluateFilterSettings,
+} from "./evaluateFilter.mjs";
 import { CannotPerformExactly } from "../errors.mjs";
 import {
     MATCH_FLAG_APPROXIMATE,
@@ -983,5 +990,176 @@ describe("extensible matching-rule applicability (M4)", () => {
             ]),
         };
         expect(evaluateFilter(extensible(), [new EntryInformation({ rdnSequence: [] })], options).matched).toBe(true);
+    });
+});
+
+describe("matchedValuesOnly on negated filters (X.511 11.2.2)", () => {
+    const CN = TYPE;
+    const SN = ObjectIdentifier.fromString("2.5.4.4");
+
+    function equality (type: typeof TYPE, text: string): Filter {
+        return { item: { equality: new AttributeValueAssertion(type, value(text)) } };
+    }
+
+    function directoryEntry (attributes: [typeof TYPE, string[]][]): EntryInformation {
+        return new EntryInformation({ rdnSequence: [] }, true, attributes.map(([type, texts]) => ({
+            attribute: new Attribute(type, texts.map(value)),
+        })));
+    }
+
+    function described (matches: EvaluateFilterReturn["matchedValues"]): string[] {
+        return (matches ?? []).map((match) => `${match.type.toString()}=${match.value.utf8String}`);
+    }
+
+    function countingMatcher () {
+        const compareValue = vi.fn((assertion: ASN1Element, stored: ASN1Element): boolean => (
+            assertion.utf8String === stored.utf8String
+        ));
+        const matcher = vi.fn(createEqualityMatcher((element) => element, compareValue, () => value("unused")));
+        const options: EvaluateFilterSettings = {
+            ...settings("equality", true),
+            getEqualityMatcher: () => matcher,
+        };
+        return { compareValue, matcher, options };
+    }
+
+    it("does not apply matchedValuesOnly to a negated filter item", () => {
+        const compareValue = vi.fn(compare);
+        const matcher = vi.fn(createEqualityMatcher((element) => element, compareValue, () => value("unused")));
+        const options: EvaluateFilterSettings = {
+            ...settings("equality", true),
+            getEqualityMatcher: () => matcher,
+        };
+        const result = evaluateFilter({ not: leaf() }, family(["true", "throw", "throw"]), options);
+        expect(result.matched).toBe(false);
+        expect(result.matchedValues ?? []).toEqual([]);
+        expect(compareValue).toHaveBeenCalledTimes(1);
+        expect(matcher.mock.calls[0]).toHaveLength(4);
+    });
+
+    it("returns no matched values when the entry matches only because the item is negated", () => {
+        const { compareValue, options } = countingMatcher();
+        const result = evaluateFilter({ not: equality(CN, "John") }, [directoryEntry([[CN, ["Jane", "Joan"]]])], options);
+        expect(result.matched).toBe(true);
+        expect(result.matchedValues ?? []).toEqual([]);
+        expect(compareValue).toHaveBeenCalledTimes(2);
+    });
+
+    it("restores matchedValuesOnly after an even number of negations", () => {
+        const { options } = countingMatcher();
+        const entries = [directoryEntry([[CN, ["Jane", "John", "John"]]])];
+        const positive = evaluateFilter(equality(CN, "John"), entries, options);
+        const doubled = evaluateFilter({ not: { not: equality(CN, "John") } }, entries, options);
+        const quadrupled = evaluateFilter(
+            { not: { not: { not: { not: equality(CN, "John") } } } },
+            entries,
+            options,
+        );
+        expect(positive.matched).toBe(true);
+        expect(described(doubled.matchedValues)).toEqual(described(positive.matchedValues));
+        expect(described(quadrupled.matchedValues)).toEqual([
+            `${CN.toString()}=John`,
+            `${CN.toString()}=John`,
+        ]);
+        expect(doubled.matched).toBe(true);
+        expect(quadrupled.matched).toBe(true);
+    });
+
+    it("keeps a triple negation from selecting matched values", () => {
+        const compareValue = vi.fn(compare);
+        const matcher = vi.fn(createEqualityMatcher((element) => element, compareValue, () => value("unused")));
+        const options: EvaluateFilterSettings = {
+            ...settings("equality", true),
+            getEqualityMatcher: () => matcher,
+        };
+        const result = evaluateFilter({ not: { not: { not: leaf() } } }, family(["true", "throw"]), options);
+        expect(result.matched).toBe(false);
+        expect(result.matchedValues ?? []).toEqual([]);
+        expect(compareValue).toHaveBeenCalledTimes(1);
+        expect(matcher.mock.calls[0]).toHaveLength(4);
+    });
+
+    it("lets one non-negated match override a negated item on the same attribute", () => {
+        const { options } = countingMatcher();
+        const filter: Filter = { and: [equality(CN, "John"), { not: equality(CN, "Admin") }] };
+        const result = evaluateFilter(filter, [directoryEntry([[CN, ["John", "Jane"]]])], options);
+        expect(result.matched).toBe(true);
+        expect(described(result.matchedValues)).toEqual([`${CN.toString()}=John`]);
+    });
+
+    it("omits values from a negated item nested beside a positive item", () => {
+        const { compareValue, matcher, options } = countingMatcher();
+        const filter: Filter = {
+            and: [
+                equality(SN, "Smith"),
+                { not: { or: [equality(CN, "John"), equality(CN, "Jane")] } },
+            ],
+        };
+        const result = evaluateFilter(filter, [directoryEntry([
+            [SN, ["Smith", "Smythe"]],
+            [CN, ["Joan", "Jean"]],
+        ])], options);
+        expect(result.matched).toBe(true);
+        expect(described(result.matchedValues)).toEqual([`${SN.toString()}=Smith`]);
+        // Surname is collected in full. Each negated given-name assertion
+        // has no hit, so both stored values are still examined, but without
+        // an output attribute.
+        expect(compareValue).toHaveBeenCalledTimes(6);
+        expect(matcher.mock.calls.filter((call) => call.length === 5)).toHaveLength(1);
+        expect(matcher.mock.calls.filter((call) => call.length === 4)).toHaveLength(2);
+    });
+
+    it("keeps values that make a negated conjunction true", () => {
+        const { options } = countingMatcher();
+        // not ( (not cn=John) and sn=Smith ) === cn=John or not sn=Smith
+        const filter: Filter = {
+            not: { and: [{ not: equality(CN, "John") }, equality(SN, "Smith")] },
+        };
+        const result = evaluateFilter(filter, [directoryEntry([
+            [CN, ["John", "Jane"]],
+            [SN, ["Smith", "Smythe"]],
+        ])], options);
+        expect(result.matched).toBe(true);
+        expect(described(result.matchedValues)).toEqual([`${CN.toString()}=John`]);
+    });
+
+    it("keeps values that make a negated disjunction true", () => {
+        const { options } = countingMatcher();
+        // not ( (not cn=John) or sn=Smith ) === cn=John and not sn=Smith
+        const filter: Filter = {
+            not: { or: [{ not: equality(CN, "John") }, equality(SN, "Smith")] },
+        };
+        const matched = evaluateFilter(filter, [directoryEntry([
+            [CN, ["John", "Jane"]],
+            [SN, ["Smythe"]],
+        ])], options);
+        expect(matched.matched).toBe(true);
+        expect(described(matched.matchedValues)).toEqual([`${CN.toString()}=John`]);
+
+        const rejected = evaluateFilter(filter, [directoryEntry([
+            [CN, ["John"]],
+            [SN, ["Smith"]],
+        ])], options);
+        expect(rejected.matched).toBe(false);
+        expect(rejected.matchedValues ?? []).toEqual([]);
+    });
+
+    it("evaluates every or arm and ignores false arms", () => {
+        const { compareValue, options } = countingMatcher();
+        const filter: Filter = { or: [
+            { and: [equality(CN, "John"), equality(SN, "Nope")] },
+            equality(SN, "Smith"),
+        ] };
+        const result = evaluateFilter(filter, [directoryEntry([
+            [CN, ["John", "Jane"]],
+            [SN, ["Smith", "Smythe"]],
+        ])], options);
+        expect(result.matched).toBe(true);
+        expect(described(result.matchedValues)).toEqual([`${SN.toString()}=Smith`]);
+        // The false arm compares John against both given names, then Nope
+        // against both surnames. The true arm compares Smith against both.
+        expect(compareValue.mock.calls.map((call) => call[0].utf8String)).toEqual([
+            "John", "John", "Nope", "Nope", "Smith", "Smith",
+        ]);
     });
 });
