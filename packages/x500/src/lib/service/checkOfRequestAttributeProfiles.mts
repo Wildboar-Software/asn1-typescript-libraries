@@ -114,6 +114,13 @@ export interface CheckRequestAttributeState {
 
 }
 
+/**
+ * Evaluates a single non-negated `FilterItem` against its applicable
+ * `RequestAttribute` profile according to Steps 1-6 of ITU-T Rec. X.511 (2019),
+ * Section 15.2, recording any violation into `state`.
+ *
+ * @internal
+ */
 function checkOfRequestAttributeProfileInFilterItem(
     state: CheckRequestAttributeState,
     filter: Filter,
@@ -318,6 +325,14 @@ function checkOfRequestAttributeProfileInFilterItem(
 
 const MAX_FILTER_DEPTH = 100;
 
+/**
+ * Creates a blank `CheckRequestAttributeState` with no recorded violations.
+ *
+ * @returns An initialized, violation-free `CheckRequestAttributeState`
+ * @function
+ * @internal
+ * @author Google Gemini 4 Carbon
+ */
 function createEmptyState(): CheckRequestAttributeState {
     return {
         searchValuesRequired: [],
@@ -329,6 +344,15 @@ function createEmptyState(): CheckRequestAttributeState {
     };
 }
 
+/**
+ * Checks whether any profile restriction violation has been recorded on `state`.
+ *
+ * @param state The state produced by evaluating a filter item
+ * @returns `true` if `state` contains at least one violation, or `false` if compliant
+ * @function
+ * @internal
+ * @author Google Gemini 4 Carbon
+ */
 function hasViolation(state: CheckRequestAttributeState): boolean {
     return Boolean(
         state.serviceProblem
@@ -341,6 +365,17 @@ function hasViolation(state: CheckRequestAttributeState): boolean {
     );
 }
 
+/**
+ * Extracts the asserted attribute type OID from a `FilterItem`, if present.
+ * Returns `undefined` for untyped `extensibleMatch` items or unrecognized
+ * `CHOICE` extensions.
+ *
+ * @param item The filter item to inspect
+ * @returns The asserted attribute type OID, or `undefined` if none is present
+ * @function
+ * @internal
+ * @author Google Gemini 4 Carbon
+ */
 function getFilterItemType(item: FilterItem): OBJECT_IDENTIFIER | undefined {
     if ("equality" in item) return item.equality.type_;
     if ("substrings" in item) return item.substrings.type_;
@@ -379,8 +414,15 @@ const OUTCOME_ABSENT: BranchOutcome = { status: STATUS_ABSENT };
 const OUTCOME_NEGATED: BranchOutcome = { status: STATUS_NEGATED };
 
 /**
- * Combines two operands of an effective `AND`:
+ * Combines two subfilter outcomes across an effective `AND`:
  * `EMPTY > COMPLIED > FAILED (right wins ties) > NEGATED > ABSENT`.
+ *
+ * @param left Outcome of the left conjunct
+ * @param right Outcome of the right conjunct
+ * @returns The combined `BranchOutcome` for the conjunction
+ * @function
+ * @internal
+ * @author Google Gemini 4 Carbon
  */
 function combineAnd(left: BranchOutcome, right: BranchOutcome): BranchOutcome {
     if ((left.status === STATUS_EMPTY) || (right.status === STATUS_EMPTY)) {
@@ -403,6 +445,13 @@ function combineAnd(left: BranchOutcome, right: BranchOutcome): BranchOutcome {
  * unconditionally required under `and`, or conditionally referenced under
  * `or` / `not`), so conditional attributes can be distinguished from
  * attributes not mentioned in `attributeCombination` at all.
+ *
+ * @param combo The attribute combination expression from the search rule
+ * @param ret Output set populated with string-form attribute type OIDs
+ * @param recursion_ttl Remaining nesting depth allowed
+ * @function
+ * @internal
+ * @author Google Gemini 4 Carbon
  */
 function collectAllCombinationAttributes(
     combo: AttributeCombination,
@@ -444,6 +493,9 @@ function collectAllCombinationAttributes(
  * @returns `true` if the entire subtree stayed within `recursion_ttl`, or `false`
  *  if the depth limit was exceeded (so a deeply nested filter cannot hide
  *  assertions past the depth limit and appear to have `governed.size === 0`).
+ * @function
+ * @internal
+ * @author Google Gemini 4 Carbon
  */
 function collectGovernedAttributes(
     filter: Filter,
@@ -484,6 +536,31 @@ function collectGovernedAttributes(
     return true;
 }
 
+/**
+ * Evaluates whether a single governed attribute (`attr_key`) complies with its
+ * `RequestAttribute` profile across every DNF subfilter of `filter` (per ITU-T
+ * Rec. X.511 (2019), Section 15.2 and X.501 Annex Q) without materializing DNF.
+ *
+ * `not` polarity is pushed down via `non_negated` (applying De Morgan's laws to
+ * `and` / `or`). Effective `AND` nodes combine outcomes with {@link combineAnd}
+ * (where one complying non-negated item satisfies the subfilter), while
+ * effective `OR` nodes retain the worst branch outcome (`max` on `status`).
+ *
+ * @param filter The filter subtree to evaluate
+ * @param non_negated `true` under an even number of enclosing `not` operators
+ * @param attr_key Dot-delimited OID of the asserted attribute type being checked
+ * @param attr_profiles Input attribute profiles indexed by their OID string
+ * @param evaluated_items Memoized single-item evaluation failures (`null` if compliant)
+ * @param getAttributeParentTypes Yields ancestors of an asserted attribute type
+ * @param getEqualityMatcher Look up an equality matcher for the asserted type
+ * @param getContextMatcher Look up a context matcher for a context type
+ * @param getSubstringsMatcher Look up a substring matcher for the asserted type
+ * @param recursion_ttl Remaining nesting depth allowed before failing closed
+ * @returns The worst-case `BranchOutcome` across all subfilters of `filter`
+ * @function
+ * @internal
+ * @author Google Gemini 4 Carbon
+ */
 function evaluateAttributeInFilter(
     filter: Filter,
     non_negated: boolean,
