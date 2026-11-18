@@ -1101,6 +1101,59 @@ describe("checkOfRequestAttributeProfiles", () => {
             const [step] = checkOfRequestAttributeProfiles(search, rule, getAttributeParentTypes);
             expect(step).toBe(0);
         });
+
+        it("accepts a single context alternative under NOT(AND(NOT A, NOT B))", () => {
+            const locale_en = localeContext.encoderFor["&Type"]!({ localeID2: { printableString: "en" } }, BER);
+            const rule = new SearchRule(1, rule_oid, undefined, undefined, [
+                new RequestAttribute(
+                    commonName["&id"],
+                    true,
+                    undefined,
+                    undefined,
+                    [
+                        new ContextProfile(languageContext["&id"]),
+                        new ContextProfile(localeContext["&id"]),
+                    ],
+                    {
+                        not: {
+                            and: [
+                                { not: { context: languageContext["&id"] } },
+                                { not: { context: localeContext["&id"] } },
+                            ],
+                        },
+                    },
+                ),
+            ]);
+
+            for (const selectedContexts of [
+                [new ContextAssertion(languageContext["&id"], [english])],
+                [new ContextAssertion(localeContext["&id"], [locale_en])],
+            ]) {
+                const search = new SearchArgumentData({ rdnSequence: [] }, undefined, {
+                    item: {
+                        equality: new AttributeValueAssertion(commonName["&id"], allowed, {
+                            selectedContexts,
+                        }),
+                    },
+                });
+                const [step, state] = checkOfRequestAttributeProfiles(search, rule, getAttributeParentTypes);
+                expect(step).toBe(0);
+                expect(state.missingSearchContexts).toEqual([]);
+                expect(state.contextComboViolations).toEqual([]);
+                expect(state.searchContextViolations).toEqual([]);
+            }
+
+            // Asserting neither context fails the combination check rather than missingSearchContext.
+            const empty_search = new SearchArgumentData({ rdnSequence: [] }, undefined, cn_eq(allowed));
+            const [empty_step, empty_state] = checkOfRequestAttributeProfiles(
+                empty_search,
+                rule,
+                getAttributeParentTypes,
+            );
+            expect(empty_step).toBe(4);
+            expect(empty_state.contextComboViolations).toHaveLength(1);
+            expect(empty_state.searchContextViolations).toEqual([]);
+        });
     });
 });
 
