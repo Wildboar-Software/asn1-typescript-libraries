@@ -248,11 +248,11 @@ function checkOfRequestAttributeProfileInFilterItem(
                 for (const mc of required_contexts.values()) {
                     if (!asserted_context_set.has(mc)) {
                         state.serviceProblem = id_pr_missingSearchContext;
-                        state.searchContextViolationsAttr = type_oid;
-                        state.searchContextViolations.push(ObjectIdentifier.fromString(mc));
+                        state.missingSearchContextAttr = type_oid;
+                        state.missingSearchContexts.push(ObjectIdentifier.fromString(mc));
                     }
                 }
-                if (state.serviceProblem) {
+                if (state.missingSearchContexts.length > 0) {
                     return;
                 }
 
