@@ -25,6 +25,17 @@ import {
     _decode_Exclusions,
     _encode_Exclusions,
 } from "../DistributedOperations/Exclusions.ta.mjs";
+
+/**
+ * Fields accepted by {@link ChainingResults.with}.
+ */
+export type ChainingResultsChanges = {
+    info?: OPTIONAL<DomainInfo>;
+    crossReferences?: OPTIONAL<CrossReference[]>;
+    securityParameters?: OPTIONAL<SecurityParameters>;
+    alreadySearched?: OPTIONAL<Exclusions>;
+    _unrecognizedExtensionsList?: _Element[];
+};
 /**
  * @summary ChainingResults
  * @description
@@ -125,7 +136,7 @@ export class ChainingResults {
      * @returns {ChainingResults}
      */
     public static _from_object(
-        _o: { [_K in keyof ChainingResults]: ChainingResults[_K] }
+        _o: Omit<ChainingResults, "with">
     ): ChainingResults {
         return new ChainingResults(
             _o.info,
@@ -133,6 +144,69 @@ export class ChainingResults {
             _o.securityParameters,
             _o.alreadySearched,
             _o._unrecognizedExtensionsList
+        );
+    }
+
+    /**
+     * @summary Copy these `ChainingResults`, replacing selected components.
+     * @description
+     *
+     * Omitted keys keep their current values from `this`. Keys present on
+     * `changes` (even with value `undefined`) overwrite the corresponding
+     * optional component, so optional fields can be cleared with
+     * `{ field: undefined }` and overlapping fields can be populated from
+     * another `ChainingResults` or `CommonResults`-like object.
+     * `_unrecognizedExtensionsList` is only copied from plain objects or
+     * `ChainingResults` instances, never from instances of other ASN.1 classes.
+     *
+     * @public
+     * @method
+     * @param {ChainingResultsChanges} [changes] Fields to replace.
+     * @returns {ChainingResults} A new `ChainingResults`, or `this` if unchanged.
+     */
+    public with(changes?: ChainingResultsChanges): ChainingResults {
+        if (!changes) {
+            return this;
+        }
+        const copyExtensions = (
+            changes instanceof ChainingResults
+            || Object.getPrototypeOf(changes) === Object.prototype
+            || Object.getPrototypeOf(changes) === null
+        );
+        const info = ("info" in changes)
+            ? changes.info
+            : this.info;
+        const crossReferences = ("crossReferences" in changes)
+            ? changes.crossReferences
+            : this.crossReferences;
+        const securityParameters = ("securityParameters" in changes)
+            ? changes.securityParameters
+            : this.securityParameters;
+        const alreadySearched = ("alreadySearched" in changes)
+            ? changes.alreadySearched
+            : this.alreadySearched;
+        const _unrecognizedExtensionsList = (
+            copyExtensions
+            && ("_unrecognizedExtensionsList" in changes)
+            && (changes._unrecognizedExtensionsList !== undefined)
+        )
+            ? changes._unrecognizedExtensionsList
+            : this._unrecognizedExtensionsList;
+        if (
+            (info === this.info)
+            && (crossReferences === this.crossReferences)
+            && (securityParameters === this.securityParameters)
+            && (alreadySearched === this.alreadySearched)
+            && (_unrecognizedExtensionsList === this._unrecognizedExtensionsList)
+        ) {
+            return this;
+        }
+        return new ChainingResults(
+            info,
+            crossReferences,
+            securityParameters,
+            alreadySearched,
+            _unrecognizedExtensionsList
         );
     }
 

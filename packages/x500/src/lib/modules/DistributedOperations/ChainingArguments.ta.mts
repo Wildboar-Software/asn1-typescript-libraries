@@ -54,6 +54,7 @@ import {
     _decode_DistinguishedName,
     _encode_DistinguishedName,
 } from "../InformationFramework/DistinguishedName.ta.mjs";
+import type { Name } from "../InformationFramework/Name.ta.mjs";
 import {
     type UniqueIdentifier,
     _decode_UniqueIdentifier,
@@ -69,6 +70,48 @@ import {
     _decode_SearchRuleId,
     _encode_SearchRuleId,
 } from "../ServiceAdministration/SearchRuleId.ta.mjs";
+
+/**
+ * Fields accepted by {@link ChainingArguments.with}.
+ */
+export type ChainingArgumentsChanges = {
+    originator?: OPTIONAL<DistinguishedName | Name>;
+    targetObject?: OPTIONAL<DistinguishedName | Name>;
+    operationProgress?: OPTIONAL<OperationProgress>;
+    traceInformation?: TraceInformation;
+    aliasDereferenced?: OPTIONAL<BOOLEAN>;
+    aliasedRDNs?: OPTIONAL<INTEGER>;
+    returnCrossRefs?: OPTIONAL<BOOLEAN>;
+    referenceType?: OPTIONAL<ReferenceType>;
+    info?: OPTIONAL<DomainInfo>;
+    timeLimit?: OPTIONAL<Time>;
+    securityParameters?: OPTIONAL<SecurityParameters>;
+    entryOnly?: OPTIONAL<BOOLEAN>;
+    uniqueIdentifier?: OPTIONAL<UniqueIdentifier>;
+    authenticationLevel?: OPTIONAL<AuthenticationLevel>;
+    exclusions?: OPTIONAL<Exclusions>;
+    excludeShadows?: OPTIONAL<BOOLEAN>;
+    nameResolveOnMaster?: OPTIONAL<BOOLEAN>;
+    operationIdentifier?: OPTIONAL<INTEGER>;
+    searchRuleId?: OPTIONAL<SearchRuleId>;
+    chainedRelaxation?: OPTIONAL<MRMapping>;
+    relatedEntry?: OPTIONAL<INTEGER>;
+    dspPaging?: OPTIONAL<BOOLEAN>;
+    excludeWriteableCopies?: OPTIONAL<BOOLEAN>;
+    _unrecognizedExtensionsList?: _Element[];
+};
+
+function toDistinguishedName(
+    value: OPTIONAL<DistinguishedName | Name>,
+): OPTIONAL<DistinguishedName> {
+    if (!value) {
+        return undefined;
+    }
+    if ("rdnSequence" in value) {
+        return value.rdnSequence;
+    }
+    return value;
+}
 /**
  * @summary ChainingArguments
  * @description
@@ -457,7 +500,7 @@ export class ChainingArguments {
      * @returns {ChainingArguments}
      */
     public static _from_object(
-        _o: { [_K in keyof ChainingArguments]: ChainingArguments[_K] }
+        _o: Omit<ChainingArguments, "with">
     ): ChainingArguments {
         return new ChainingArguments(
             _o.originator,
@@ -484,6 +527,171 @@ export class ChainingArguments {
             _o.dspPaging,
             _o.excludeWriteableCopies,
             _o._unrecognizedExtensionsList
+        );
+    }
+
+    /**
+     * @summary Copy these `ChainingArguments`, replacing selected components.
+     * @description
+     *
+     * Omitted keys keep their current values from `this`. Keys present on
+     * `changes` (even with value `undefined`) overwrite the corresponding
+     * optional component, so optional fields can be cleared with
+     * `{ field: undefined }` and overlapping fields can be populated from
+     * another `ChainingArguments`, `ContinuationReference`, `CommonArguments`,
+     * or `TraceItem`. `originator` and `targetObject` accept either a
+     * `DistinguishedName` or a `Name` (`{ rdnSequence }`). The required
+     * `traceInformation` component keeps `this.traceInformation` when omitted
+     * or `undefined`. `_unrecognizedExtensionsList` is only copied from plain
+     * objects or `ChainingArguments` instances, never from instances of other
+     * ASN.1 classes.
+     *
+     * @public
+     * @method
+     * @param {ChainingArgumentsChanges} [changes] Fields to replace.
+     * @returns {ChainingArguments} A new `ChainingArguments`, or `this` if unchanged.
+     */
+    public with(changes?: ChainingArgumentsChanges): ChainingArguments {
+        if (!changes) {
+            return this;
+        }
+        const copyExtensions = (
+            changes instanceof ChainingArguments
+            || Object.getPrototypeOf(changes) === Object.prototype
+            || Object.getPrototypeOf(changes) === null
+        );
+        const originator = ("originator" in changes)
+            ? toDistinguishedName(changes.originator)
+            : this.originator;
+        const targetObject = ("targetObject" in changes)
+            ? toDistinguishedName(changes.targetObject)
+            : this.targetObject;
+        const operationProgress = ("operationProgress" in changes)
+            ? changes.operationProgress
+            : this.operationProgress;
+        const traceInformation = (
+            ("traceInformation" in changes)
+            && (changes.traceInformation !== undefined)
+        )
+            ? changes.traceInformation
+            : this.traceInformation;
+        const aliasDereferenced = ("aliasDereferenced" in changes)
+            ? changes.aliasDereferenced
+            : this.aliasDereferenced;
+        const aliasedRDNs = ("aliasedRDNs" in changes)
+            ? changes.aliasedRDNs
+            : this.aliasedRDNs;
+        const returnCrossRefs = ("returnCrossRefs" in changes)
+            ? changes.returnCrossRefs
+            : this.returnCrossRefs;
+        const referenceType = ("referenceType" in changes)
+            ? changes.referenceType
+            : this.referenceType;
+        const info = ("info" in changes)
+            ? changes.info
+            : this.info;
+        const timeLimit = ("timeLimit" in changes)
+            ? changes.timeLimit
+            : this.timeLimit;
+        const securityParameters = ("securityParameters" in changes)
+            ? changes.securityParameters
+            : this.securityParameters;
+        const entryOnly = ("entryOnly" in changes)
+            ? changes.entryOnly
+            : this.entryOnly;
+        const uniqueIdentifier = ("uniqueIdentifier" in changes)
+            ? changes.uniqueIdentifier
+            : this.uniqueIdentifier;
+        const authenticationLevel = ("authenticationLevel" in changes)
+            ? changes.authenticationLevel
+            : this.authenticationLevel;
+        const exclusions = ("exclusions" in changes)
+            ? changes.exclusions
+            : this.exclusions;
+        const excludeShadows = ("excludeShadows" in changes)
+            ? changes.excludeShadows
+            : this.excludeShadows;
+        const nameResolveOnMaster = ("nameResolveOnMaster" in changes)
+            ? changes.nameResolveOnMaster
+            : this.nameResolveOnMaster;
+        const operationIdentifier = ("operationIdentifier" in changes)
+            ? changes.operationIdentifier
+            : this.operationIdentifier;
+        const searchRuleId = ("searchRuleId" in changes)
+            ? changes.searchRuleId
+            : this.searchRuleId;
+        const chainedRelaxation = ("chainedRelaxation" in changes)
+            ? changes.chainedRelaxation
+            : this.chainedRelaxation;
+        const relatedEntry = ("relatedEntry" in changes)
+            ? changes.relatedEntry
+            : this.relatedEntry;
+        const dspPaging = ("dspPaging" in changes)
+            ? changes.dspPaging
+            : this.dspPaging;
+        const excludeWriteableCopies = ("excludeWriteableCopies" in changes)
+            ? changes.excludeWriteableCopies
+            : this.excludeWriteableCopies;
+        const _unrecognizedExtensionsList = (
+            copyExtensions
+            && ("_unrecognizedExtensionsList" in changes)
+            && (changes._unrecognizedExtensionsList !== undefined)
+        )
+            ? changes._unrecognizedExtensionsList
+            : this._unrecognizedExtensionsList;
+        if (
+            (originator === this.originator)
+            && (targetObject === this.targetObject)
+            && (operationProgress === this.operationProgress)
+            && (traceInformation === this.traceInformation)
+            && (aliasDereferenced === this.aliasDereferenced)
+            && (aliasedRDNs === this.aliasedRDNs)
+            && (returnCrossRefs === this.returnCrossRefs)
+            && (referenceType === this.referenceType)
+            && (info === this.info)
+            && (timeLimit === this.timeLimit)
+            && (securityParameters === this.securityParameters)
+            && (entryOnly === this.entryOnly)
+            && (uniqueIdentifier === this.uniqueIdentifier)
+            && (authenticationLevel === this.authenticationLevel)
+            && (exclusions === this.exclusions)
+            && (excludeShadows === this.excludeShadows)
+            && (nameResolveOnMaster === this.nameResolveOnMaster)
+            && (operationIdentifier === this.operationIdentifier)
+            && (searchRuleId === this.searchRuleId)
+            && (chainedRelaxation === this.chainedRelaxation)
+            && (relatedEntry === this.relatedEntry)
+            && (dspPaging === this.dspPaging)
+            && (excludeWriteableCopies === this.excludeWriteableCopies)
+            && (_unrecognizedExtensionsList === this._unrecognizedExtensionsList)
+        ) {
+            return this;
+        }
+        return new ChainingArguments(
+            originator,
+            targetObject,
+            operationProgress,
+            traceInformation,
+            aliasDereferenced,
+            aliasedRDNs,
+            returnCrossRefs,
+            referenceType,
+            info,
+            timeLimit,
+            securityParameters,
+            entryOnly,
+            uniqueIdentifier,
+            authenticationLevel,
+            exclusions,
+            excludeShadows,
+            nameResolveOnMaster,
+            operationIdentifier,
+            searchRuleId,
+            chainedRelaxation,
+            relatedEntry,
+            dspPaging,
+            excludeWriteableCopies,
+            _unrecognizedExtensionsList
         );
     }
 
