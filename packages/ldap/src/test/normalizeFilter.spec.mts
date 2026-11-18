@@ -152,7 +152,8 @@ describe("normalizeFilter()", () => {
         expect(normed.or.every((sub) => ("present" in sub))).toBeTruthy();
     });
 
-    it("and{or{x,y,z}, p, q} is the same as or{and{x,p,q}, and{y,p,q}, and{z,p,q}}", () => {
+    // This test is skipped because this dangerous expansion is not done at all anymore.
+    it.skip("and{or{x,y,z}, p, q} is the same as or{and{x,p,q}, and{y,p,q}, and{z,p,q}}", () => {
         const filter: Filter = {
             and: [
                 {
@@ -362,10 +363,6 @@ describe("normalizeFilter()", () => {
         filter.and[3].or.push(...items);
         filter.and[4].or.push(...items);
         const normed = normalizeFilter(filter);
-        expect("or" in normed).toBeTruthy();
-        if (!("or" in normed)) {
-            return;
-        }
-        expect(normed.or.length).toBeLessThanOrEqual(10);
+        expect("and" in normed).toBeTruthy();
     });
 });

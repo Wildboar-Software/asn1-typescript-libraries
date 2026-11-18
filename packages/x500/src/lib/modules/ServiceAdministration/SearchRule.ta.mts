@@ -328,6 +328,26 @@ export class SearchRule implements SearchRuleId {
      */
 
     public static _enum_for_imposedSubset: typeof _enum_for_ImposedSubset = _enum_for_ImposedSubset;
+
+    /**
+     * @summary Determine whether this search rule is the "empty search rule"
+     * @description
+     *
+     * [ITU Recommendation X.501 (2019)](https://www.itu.int/rec/T-REC-X.501/en),
+     * describes an "empty search rule" that imposes no restrictions on searches in
+     * Section 16.3.
+     *
+     * As described in Section 16.10.1, the "empty search rule" is indicated by
+     * having an `id` of 0 and a missing `serviceType` component.
+     *
+     * @returns {Boolean} indicating whether the search rule is "empty"
+     * @public
+     * @method
+     * @author Jonathan M. Wilbur
+     */
+    public isSpecialEmptySearchRule(): boolean {
+        return ((this.id == 0) && !this.serviceType);
+    }
 }
 
 /**
