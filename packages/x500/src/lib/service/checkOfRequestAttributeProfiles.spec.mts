@@ -2,8 +2,16 @@ import { ContextProfile, SearchRule } from "@wildboar/x500/ServiceAdministration
 import { FilterItem_substrings, SearchArgumentData } from "@wildboar/x500/DirectoryAbstractService";
 import { RequestAttribute } from "@wildboar/x500/ServiceAdministration";
 import { type ASN1Element, ObjectIdentifier } from "@wildboar/asn1";
-import { name, commonName, languageContext, localeContext } from "@wildboar/x500/SelectedAttributeTypes";
-import type { Filter, FilterItem_substrings_strings_Item } from "@wildboar/x500/DirectoryAbstractService";
+import {
+    name,
+    commonName,
+    surname,
+    streetAddress,
+    languageContext,
+    localeContext,
+    id_pr_attributeNegationViolation,
+} from "@wildboar/x500/SelectedAttributeTypes";
+import type { Filter, FilterItem, FilterItem_substrings_strings_Item } from "@wildboar/x500/DirectoryAbstractService";
 import { type AttributeType, AttributeValueAssertion, ContextAssertion } from "@wildboar/x500/InformationFramework";
 import { checkOfRequestAttributeProfiles } from "./checkOfRequestAttributeProfiles.mjs";
 import { BER } from "@wildboar/asn1/functional";
@@ -15,7 +23,7 @@ const rule_oid = ObjectIdentifier.fromString("1.2.3.4");
 
 function* getAttributeParentTypes(attributeType: AttributeType): IterableIterator<AttributeType> {
     yield attributeType;
-    if (attributeType.isEqualTo(commonName["&id"])) {
+    if (attributeType.isEqualTo(commonName["&id"]) || attributeType.isEqualTo(surname["&id"])) {
         yield name["&id"];
     }
 }
@@ -793,6 +801,305 @@ describe("checkOfRequestAttributeProfiles", () => {
             expect(step).toBe(4);
             expect(state.contextComboViolationAttr?.toString()).toBe(commonName["&id"].toString());
             expect(state.contextComboViolations).toHaveLength(1);
+        });
+    });
+
+    describe("subfilter and per-attribute candidate grouping", () => {
+        const encode_cn = (value: string): ASN1Element =>
+            commonName.encoderFor["&Type"]!({ uTF8String: value }, BER);
+        const encode_sn = (value: string): ASN1Element =>
+            surname.encoderFor["&Type"]!({ uTF8String: value }, BER);
+        const encode_street = (value: string): ASN1Element =>
+            streetAddress.encoderFor["&Type"]!({ uTF8String: value }, BER);
+
+        const allowed = encode_cn("allowed");
+        const allowed_2 = encode_cn("allowed2");
+        const other = encode_cn("other");
+        const other_2 = encode_cn("other2");
+        const english = languageContext.encoderFor["&Type"]!("en", BER);
+        const french = languageContext.encoderFor["&Type"]!("fr", BER);
+
+        const cn_eq = (value: ASN1Element): { item: FilterItem } => ({
+            item: { equality: new AttributeValueAssertion(commonName["&id"], value) },
+        });
+        const street_eq = (value: string): { item: FilterItem } => ({
+            item: { equality: new AttributeValueAssertion(streetAddress["&id"], encode_street(value)) },
+        });
+
+        it.each([
+            ["complying first", [cn_eq(allowed), cn_eq(other)]],
+            ["complying second", [cn_eq(other), cn_eq(allowed)]],
+        ] as const)("passes (&(cn=...)(cn=...)) when at least one assertion complies (%s)", (_label, items) => {
+            const search = new SearchArgumentData({ rdnSequence: [] }, undefined, { and: items });
+            const rule = new SearchRule(1, rule_oid, undefined, undefined, [
+                new RequestAttribute(commonName["&id"], true, [allowed]),
+            ]);
+            const [step, state] = checkOfRequestAttributeProfiles(search, rule, getAttributeParentTypes);
+            expect(step).toBe(0);
+            expect(state.searchValuesRequired).toEqual([]);
+            expect(state.invalidSearchValues).toEqual([]);
+        });
+
+        it("reports a single failing item for an attribute when none complies in a subfilter", () => {
+            const first = cn_eq(other);
+            const second = cn_eq(other_2);
+            const search = new SearchArgumentData({ rdnSequence: [] }, undefined, { and: [first, second] });
+            const rule = new SearchRule(1, rule_oid, undefined, undefined, [
+                new RequestAttribute(commonName["&id"], true, [allowed]),
+            ]);
+            const [step, state] = checkOfRequestAttributeProfiles(search, rule, getAttributeParentTypes);
+            expect(step).toBe(2);
+            expect(state.invalidSearchValues).toHaveLength(1);
+            expect([first.item, second.item]).toContain(state.invalidSearchValues[0]);
+        });
+
+        it("drops an item failing step 1 when another item in the subfilter complies, and does not mix diagnostics when none complies", () => {
+            const present_cn: { item: FilterItem } = { item: { present: commonName["&id"] } };
+            const bad_eq = cn_eq(other);
+            const good_eq = cn_eq(allowed);
+            const rule = new SearchRule(1, rule_oid, undefined, undefined, [
+                new RequestAttribute(commonName["&id"], true, [allowed]),
+            ]);
+
+            for (const items of [[present_cn, good_eq], [good_eq, present_cn]]) {
+                const search = new SearchArgumentData({ rdnSequence: [] }, undefined, { and: items });
+                const [step, state] = checkOfRequestAttributeProfiles(search, rule, getAttributeParentTypes);
+                expect(step).toBe(0);
+                expect(state.searchValuesRequired).toEqual([]);
+                expect(state.invalidSearchValues).toEqual([]);
+            }
+
+            for (const items of [[present_cn, bad_eq], [bad_eq, present_cn]]) {
+                const search = new SearchArgumentData({ rdnSequence: [] }, undefined, { and: items });
+                const [step, state] = checkOfRequestAttributeProfiles(search, rule, getAttributeParentTypes);
+                expect([1, 2]).toContain(step);
+                if (step === 1) {
+                    expect(state.searchValuesRequired).toEqual([commonName["&id"]]);
+                    expect(state.invalidSearchValues).toEqual([]);
+                } else {
+                    expect(state.searchValuesRequired).toEqual([]);
+                    expect(state.invalidSearchValues).toEqual([bad_eq.item]);
+                }
+            }
+        });
+
+        it.each([
+            ["non-complying context first", [french, english]],
+            ["complying context first", [english, french]],
+        ] as const)("accepts a subfilter when one assertion satisfies context value restrictions (%s)", (_label, langs) => {
+            const items: Filter[] = langs.map((lang) => ({
+                item: {
+                    equality: new AttributeValueAssertion(commonName["&id"], allowed, {
+                        selectedContexts: [new ContextAssertion(languageContext["&id"], [lang])],
+                    }),
+                },
+            }));
+            const search = new SearchArgumentData({ rdnSequence: [] }, undefined, { and: items });
+            const rule = new SearchRule(1, rule_oid, undefined, undefined, [
+                new RequestAttribute(commonName["&id"], true, undefined, undefined, [
+                    new ContextProfile(languageContext["&id"], [english]),
+                ]),
+            ]);
+            const [step, state] = checkOfRequestAttributeProfiles(search, rule, getAttributeParentTypes);
+            expect(step).toBe(0);
+            expect(state.searchContextValueViolations).toEqual([]);
+        });
+
+        it("requires every OR subfilter where the attribute appears to have a complying item", () => {
+            const bad = cn_eq(other);
+            const rule = new SearchRule(1, rule_oid, undefined, undefined, [
+                new RequestAttribute(commonName["&id"], true, [allowed]),
+                new RequestAttribute(streetAddress["&id"], true),
+            ]);
+
+            {
+                const search = new SearchArgumentData({ rdnSequence: [] }, undefined, {
+                    or: [cn_eq(allowed), bad],
+                });
+                const [step, state] = checkOfRequestAttributeProfiles(search, rule, getAttributeParentTypes);
+                expect(step).toBe(2);
+                expect(state.invalidSearchValues).toEqual([bad.item]);
+            }
+
+            {
+                const search = new SearchArgumentData({ rdnSequence: [] }, undefined, {
+                    or: [
+                        { and: [cn_eq(allowed), cn_eq(other)] },
+                        { and: [cn_eq(other_2), cn_eq(allowed)] },
+                    ],
+                });
+                const [step] = checkOfRequestAttributeProfiles(search, rule, getAttributeParentTypes);
+                expect(step).toBe(0);
+            }
+
+            {
+                const search = new SearchArgumentData({ rdnSequence: [] }, undefined, {
+                    or: [cn_eq(allowed), street_eq("123 Main St")],
+                });
+                const [step] = checkOfRequestAttributeProfiles(search, rule, getAttributeParentTypes);
+                expect(step).toBe(0);
+            }
+        });
+
+        it("evaluates nested AND/OR subfilters accurately without exponential DNF expansion", () => {
+            const rule = new SearchRule(1, rule_oid, undefined, undefined, [
+                new RequestAttribute(commonName["&id"], true, [allowed, allowed_2]),
+                new RequestAttribute(streetAddress["&id"], true),
+            ]);
+            const bad = cn_eq(other);
+            const bad_2 = cn_eq(other_2);
+
+            // Both expanded subfilters contain cn=allowed2, so both comply.
+            {
+                const search = new SearchArgumentData({ rdnSequence: [] }, undefined, {
+                    and: [{ or: [cn_eq(allowed), bad] }, cn_eq(allowed_2)],
+                });
+                const [step] = checkOfRequestAttributeProfiles(search, rule, getAttributeParentTypes);
+                expect(step).toBe(0);
+            }
+
+            // Expanded subfilter (street=123 Main St) & (cn=other) lacks a complying cn item.
+            {
+                const search = new SearchArgumentData({ rdnSequence: [] }, undefined, {
+                    and: [{ or: [cn_eq(allowed), street_eq("123 Main St")] }, bad],
+                });
+                const [step, state] = checkOfRequestAttributeProfiles(search, rule, getAttributeParentTypes);
+                expect(step).toBe(2);
+                expect(state.invalidSearchValues).toEqual([bad.item]);
+            }
+
+            // Expanded subfilter (cn=other) & (cn=other2) lacks a complying cn item.
+            {
+                const search = new SearchArgumentData({ rdnSequence: [] }, undefined, {
+                    and: [
+                        { or: [cn_eq(allowed), bad] },
+                        { or: [bad_2, cn_eq(allowed)] },
+                    ],
+                });
+                const [step, state] = checkOfRequestAttributeProfiles(search, rule, getAttributeParentTypes);
+                expect(step).toBe(2);
+                expect(state.invalidSearchValues).toHaveLength(1);
+                expect([bad.item, bad_2.item]).toContain(state.invalidSearchValues[0]);
+            }
+
+            // 30 OR clauses inside an AND represent 2^30 subfilters; avoid blowup.
+            const clauses: Filter[] = Array.from({ length: 30 }, (_, i) => ({
+                or: [cn_eq(allowed), street_eq(`${i} Main St`)],
+            }));
+            {
+                const search = new SearchArgumentData({ rdnSequence: [] }, undefined, { and: clauses });
+                const [step] = checkOfRequestAttributeProfiles(search, rule, getAttributeParentTypes);
+                expect(step).toBe(0);
+            }
+            {
+                const search = new SearchArgumentData({ rdnSequence: [] }, undefined, { and: [...clauses, bad] });
+                const [step, state] = checkOfRequestAttributeProfiles(search, rule, getAttributeParentTypes);
+                expect(step).toBe(2);
+                expect(state.invalidSearchValues).toEqual([bad.item]);
+            }
+        });
+
+        it("handles negation and De Morgan laws so negated items neither poison nor satisfy effective presence", () => {
+            const bad = cn_eq(other);
+            const rule = new SearchRule(1, rule_oid, undefined, undefined, [
+                new RequestAttribute(commonName["&id"], true, [allowed]),
+            ]);
+
+            // (&(cn=allowed)(!(cn=other))) passes because cn=allowed complies.
+            {
+                const search = new SearchArgumentData({ rdnSequence: [] }, undefined, {
+                    and: [cn_eq(allowed), { not: bad }],
+                });
+                const [step] = checkOfRequestAttributeProfiles(search, rule, getAttributeParentTypes);
+                expect(step).toBe(0);
+            }
+
+            // (&(!(cn=allowed))(cn=other)) fails because !(cn=allowed) is negated.
+            {
+                const search = new SearchArgumentData({ rdnSequence: [] }, undefined, {
+                    and: [{ not: cn_eq(allowed) }, bad],
+                });
+                const [step, state] = checkOfRequestAttributeProfiles(search, rule, getAttributeParentTypes);
+                expect(step).toBe(2);
+                expect(state.invalidSearchValues).toEqual([bad.item]);
+            }
+
+            // (|(cn=allowed)(!(cn=other))) fails because the second subfilter only negates cn.
+            {
+                const search = new SearchArgumentData({ rdnSequence: [] }, undefined, {
+                    or: [cn_eq(allowed), { not: bad }],
+                });
+                const [step, state] = checkOfRequestAttributeProfiles(search, rule, getAttributeParentTypes);
+                expect(step).not.toBe(0);
+                expect(state.serviceProblem?.toString()).toBe(id_pr_attributeNegationViolation.toString());
+            }
+
+            // !((!(cn=allowed)) | (!(cn=other))) == (&(cn=allowed)(cn=other)) -> passes.
+            {
+                const search = new SearchArgumentData({ rdnSequence: [] }, undefined, {
+                    not: { or: [{ not: cn_eq(allowed) }, { not: bad }] },
+                });
+                const [step] = checkOfRequestAttributeProfiles(search, rule, getAttributeParentTypes);
+                expect(step).toBe(0);
+            }
+
+            // !((!(cn=allowed)) & (!(cn=other))) == (|(cn=allowed)(cn=other)) -> fails on cn=other.
+            {
+                const search = new SearchArgumentData({ rdnSequence: [] }, undefined, {
+                    not: { and: [{ not: cn_eq(allowed) }, { not: bad }] },
+                });
+                const [step, state] = checkOfRequestAttributeProfiles(search, rule, getAttributeParentTypes);
+                expect(step).toBe(2);
+                expect(state.invalidSearchValues).toEqual([bad.item]);
+            }
+        });
+
+        it("groups candidates by asserted attribute type, not shared ancestor profile", () => {
+            const sn_bad: { item: FilterItem } = {
+                item: { equality: new AttributeValueAssertion(surname["&id"], encode_sn("other")) },
+            };
+            const search = new SearchArgumentData({ rdnSequence: [] }, undefined, {
+                and: [cn_eq(allowed), sn_bad],
+            });
+            const rule = new SearchRule(1, rule_oid, undefined, undefined, [
+                new RequestAttribute(name["&id"], true, [allowed]),
+            ]);
+            const [step, state] = checkOfRequestAttributeProfiles(search, rule, getAttributeParentTypes);
+            expect(step).toBe(2);
+            expect(state.invalidSearchValues).toEqual([sn_bad.item]);
+        });
+
+        it("checks unconditionally required attributes before remaining attributes per X.511 Section 15.2", () => {
+            const street_bad = street_eq("wrong");
+            const cn_bad = cn_eq(other);
+            const search = new SearchArgumentData({ rdnSequence: [] }, undefined, {
+                and: [street_bad, cn_bad],
+            });
+            const rule = new SearchRule(
+                1,
+                rule_oid,
+                undefined,
+                undefined,
+                [
+                    new RequestAttribute(streetAddress["&id"], true, [encode_street("allowed")]),
+                    new RequestAttribute(commonName["&id"], true, [allowed]),
+                ],
+                { attribute: commonName["&id"] },
+            );
+            const [step, state] = checkOfRequestAttributeProfiles(search, rule, getAttributeParentTypes);
+            expect(step).toBe(2);
+            expect(state.invalidSearchValues).toEqual([cn_bad.item]);
+        });
+
+        it("treats an AND containing an empty OR (FALSE) as having no subfilters", () => {
+            const search = new SearchArgumentData({ rdnSequence: [] }, undefined, {
+                and: [cn_eq(other), { or: [] }],
+            });
+            const rule = new SearchRule(1, rule_oid, undefined, undefined, [
+                new RequestAttribute(commonName["&id"], true, [allowed]),
+            ]);
+            const [step] = checkOfRequestAttributeProfiles(search, rule, getAttributeParentTypes);
+            expect(step).toBe(0);
         });
     });
 });

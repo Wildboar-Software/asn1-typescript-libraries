@@ -10,16 +10,19 @@ import {
     type OBJECT_IDENTIFIER,
     type DotDelimitedOidString
 } from "@wildboar/asn1";
+import { id_pr_administratorImposedLimit } from "@wildboar/x500/SelectedAttributeTypes";
+import { id_pr_attributeNegationViolation } from "@wildboar/x500/SelectedAttributeTypes";
 import { id_pr_missingSearchContext } from "@wildboar/x500/SelectedAttributeTypes";
 import { id_pr_searchContextViolation } from "@wildboar/x500/SelectedAttributeTypes";
 import { id_pr_searchContextCombinationViolation } from "@wildboar/x500/SelectedAttributeTypes";
 import { type Filter } from "@wildboar/x500/DirectoryAbstractService";
 import { ContextProfile } from "@wildboar/x500/ServiceAdministration";
+import { getRequiredAttributesFromAttributeCombination } from "./getRequiredAttributesFromAttributeCombination.mjs";
 import { getRequiredContextsFromContextCombination } from "./getRequiredContextsFromContextCombination.mjs";
 import { checkContextCombination } from "./checkContextCombination.mjs";
 import type { FilterItem, FilterItem_substrings_strings_Item } from "@wildboar/x500/DirectoryAbstractService";
 import { AttributeTypeAndValue, ContextAssertion, type CONTEXT } from "@wildboar/x500/InformationFramework";
-import { type ContextCombination } from "@wildboar/x500/ServiceAdministration";
+import { type AttributeCombination, type ContextCombination } from "@wildboar/x500/ServiceAdministration";
 import { type AttributeType } from "@wildboar/x500/InformationFramework";
 import anyTypeMatch from "../matching/anyTypeMatch.mjs";
 import { getRequestAttributeProfile } from "./getRequestAttributeProfile.mjs";
@@ -111,37 +114,7 @@ export interface CheckRequestAttributeState {
 
 }
 
-/**
- * @summary Validate filters based on search-rule-imposed input attribute profiles
- * @description
- *
- * This function implements the procedure defined in
- * [ITU Recommendation X.511 (2019)](https://www.itu.int/rec/T-REC-X.511/en),
- * Section 15.2. Specifically, it checks that filter items within a filter
- * comply with the applicable attribute profiles present in the governing
- * search filter. As problems are encountered, the `state` is modified by
- * reference. The callee is expected to inspect the fields of this object to
- * determine if any restrictions were violated.
- *
- * Profiles that include subtypes also constrain filter items for those subtypes.
- * The asserted subtype is retained for matching and diagnostic attribute types.
- *
- * @param state The current state of this function, which is passed recursively
- * @param filter The search filter to be checked
- * @param attr_profiles A mapping of input attribute types by their string-form
- *  attribute type object identifier
- * @param getAttributeParentTypes The attribute's ancestors, nearest first;
- *  the iterator may also include the asserted attribute type itself
- * @param getEqualityMatcher Look up an equality matcher for the asserted type
- * @param getContextMatcher Look up a context matcher for a context type
- * @param getSubstringsMatcher Look up a substring matcher for the asserted type.
- *  If unavailable, substring items cannot satisfy non-empty selectedValues.
- * @returns Nothing. `state` is modified by reference.
- *
- * @function
- * @see {@link CheckRequestAttributeState}
- */
-export function checkOfRequestAttributeProfileInFilter(
+function checkOfRequestAttributeProfileInFilterItem(
     state: CheckRequestAttributeState,
     filter: Filter,
     attr_profiles: Map<DotDelimitedOidString, RequestAttribute>,
@@ -216,6 +189,7 @@ export function checkOfRequestAttributeProfileInFilter(
                 // NOTE: This excludes other filter item types I think it should include...
             )) {
             state.searchValuesRequired.push(type_oid);
+            return;
         }
         // Step 2
         if (profile.selectedValues?.length && asserted_value) {
@@ -238,6 +212,7 @@ export function checkOfRequestAttributeProfileInFilter(
             }
             if (!matched) {
                 state.invalidSearchValues.push(item);
+                return;
             }
         }
         // Step 3 is a NOOP for our purposes.
@@ -338,25 +313,410 @@ export function checkOfRequestAttributeProfileInFilter(
                 }
             }
         }
-    } else if ("and" in filter) {
-        for (const sub of filter.and) {
-            checkOfRequestAttributeProfileInFilter(
-                state, sub, attr_profiles, getAttributeParentTypes,
-                getEqualityMatcher, getContextMatcher, getSubstringsMatcher,
-            );
+    }
+}
+
+const MAX_FILTER_DEPTH = 100;
+
+function createEmptyState(): CheckRequestAttributeState {
+    return {
+        searchValuesRequired: [],
+        invalidSearchValues: [],
+        missingSearchContexts: [],
+        contextComboViolations: [],
+        searchContextViolations: [],
+        searchContextValueViolations: [],
+    };
+}
+
+function hasViolation(state: CheckRequestAttributeState): boolean {
+    return Boolean(
+        state.serviceProblem
+        || (state.searchValuesRequired.length > 0)
+        || (state.invalidSearchValues.length > 0)
+        || (state.missingSearchContexts.length > 0)
+        || (state.contextComboViolations.length > 0)
+        || (state.searchContextViolations.length > 0)
+        || (state.searchContextValueViolations.length > 0)
+    );
+}
+
+function getFilterItemType(item: FilterItem): OBJECT_IDENTIFIER | undefined {
+    if ("equality" in item) return item.equality.type_;
+    if ("substrings" in item) return item.substrings.type_;
+    if ("greaterOrEqual" in item) return item.greaterOrEqual.type_;
+    if ("lessOrEqual" in item) return item.lessOrEqual.type_;
+    if ("present" in item) return item.present;
+    if ("approximateMatch" in item) return item.approximateMatch.type_;
+    if ("extensibleMatch" in item) return item.extensibleMatch.type_;
+    if ("contextPresent" in item) return item.contextPresent.type_;
+    return undefined;
+}
+
+// Ordered from safest/vacuous to worst for `OR` (`max` picks the worst branch):
+// EMPTY (0) < COMPLIED (1) < ABSENT (2) < NEGATED (3) < FAILED (4).
+const STATUS_EMPTY = 0;
+const STATUS_COMPLIED = 1;
+const STATUS_ABSENT = 2;
+const STATUS_NEGATED = 3;
+const STATUS_FAILED = 4;
+
+type BranchStatus =
+    | typeof STATUS_EMPTY
+    | typeof STATUS_COMPLIED
+    | typeof STATUS_ABSENT
+    | typeof STATUS_NEGATED
+    | typeof STATUS_FAILED;
+
+interface BranchOutcome {
+    status: BranchStatus;
+    failed_state?: CheckRequestAttributeState;
+}
+
+const OUTCOME_EMPTY: BranchOutcome = { status: STATUS_EMPTY };
+const OUTCOME_COMPLIED: BranchOutcome = { status: STATUS_COMPLIED };
+const OUTCOME_ABSENT: BranchOutcome = { status: STATUS_ABSENT };
+const OUTCOME_NEGATED: BranchOutcome = { status: STATUS_NEGATED };
+
+/**
+ * Combines two operands of an effective `AND`:
+ * `EMPTY > COMPLIED > FAILED (right wins ties) > NEGATED > ABSENT`.
+ */
+function combineAnd(left: BranchOutcome, right: BranchOutcome): BranchOutcome {
+    if ((left.status === STATUS_EMPTY) || (right.status === STATUS_EMPTY)) {
+        return OUTCOME_EMPTY;
+    } else if ((left.status === STATUS_COMPLIED) || (right.status === STATUS_COMPLIED)) {
+        return OUTCOME_COMPLIED;
+    } else if (right.status === STATUS_FAILED) {
+        return right;
+    } else if (left.status === STATUS_FAILED) {
+        return left;
+    } else if ((left.status === STATUS_NEGATED) || (right.status === STATUS_NEGATED)) {
+        return OUTCOME_NEGATED;
+    } else {
+        return OUTCOME_ABSENT;
+    }
+}
+
+/**
+ * Collects every attribute type OID referenced anywhere in `combo` (whether
+ * unconditionally required under `and`, or conditionally referenced under
+ * `or` / `not`), so conditional attributes can be distinguished from
+ * attributes not mentioned in `attributeCombination` at all.
+ */
+function collectAllCombinationAttributes(
+    combo: AttributeCombination,
+    ret: Set<DotDelimitedOidString>,
+    recursion_ttl: number = MAX_FILTER_DEPTH,
+): void {
+    if (recursion_ttl <= 0) {
+        return;
+    }
+    if ("attribute" in combo) {
+        ret.add(combo.attribute.toString());
+    } else if (("and" in combo) || ("or" in combo)) {
+        for (const sub of ("and" in combo) ? combo.and : combo.or) {
+            collectAllCombinationAttributes(sub, ret, recursion_ttl - 1);
         }
-    } else if ("or" in filter) {
-        for (const sub of filter.or) {
-            checkOfRequestAttributeProfileInFilter(
-                state, sub, attr_profiles, getAttributeParentTypes,
-                getEqualityMatcher, getContextMatcher, getSubstringsMatcher,
-            );
+    } else if ("not" in combo) {
+        collectAllCombinationAttributes(combo.not, ret, recursion_ttl - 1);
+    }
+}
+
+/**
+ * Scans `filter` to find every asserted attribute type that is governed by a
+ * `RequestAttribute` profile in `attr_profiles` (either directly or inherited
+ * from a supertype profile with `includeSubtypes: true`), populating `governed`.
+ *
+ * We cannot simply iterate `attr_profiles.keys()` because `evaluateAttributeInFilter`
+ * groups candidates by the *asserted* attribute type: if `attr_profiles` only
+ * defines `name` (`includeSubtypes: true`) and the filter asserts both `cn` and
+ * `sn`, `cn` and `sn` must be evaluated as separate attributes, whereas unused
+ * profiles in `attr_profiles` and unpermitted types (no matching profile) are
+ * skipped.
+ *
+ * @param filter The filter subtree being scanned
+ * @param attr_profiles Input attribute profiles indexed by their OID string
+ * @param getAttributeParentTypes Yields ancestors of an asserted attribute type
+ * @param resolved_cache Memoizes profile lookups (including `null` misses) by OID
+ * @param governed Output map of asserted attribute OID -> governing `RequestAttribute`
+ * @param recursion_ttl Remaining nesting depth allowed before failing closed
+ * @returns `true` if the entire subtree stayed within `recursion_ttl`, or `false`
+ *  if the depth limit was exceeded (so a deeply nested filter cannot hide
+ *  assertions past the depth limit and appear to have `governed.size === 0`).
+ */
+function collectGovernedAttributes(
+    filter: Filter,
+    attr_profiles: ReadonlyMap<DotDelimitedOidString, RequestAttribute>,
+    getAttributeParentTypes: (attributeType: AttributeType) => IterableIterator<AttributeType>,
+    resolved_cache: Map<DotDelimitedOidString, RequestAttribute | null>,
+    governed: Map<DotDelimitedOidString, RequestAttribute>,
+    recursion_ttl: number = MAX_FILTER_DEPTH,
+): boolean {
+    if (recursion_ttl <= 0) {
+        return false;
+    }
+    if ("item" in filter) {
+        const type_oid = getFilterItemType(filter.item);
+        if (!type_oid) {
+            return true;
         }
+        const key = type_oid.toString();
+        let profile = resolved_cache.get(key);
+        if (profile === undefined) {
+            profile = getRequestAttributeProfile(type_oid, attr_profiles, getAttributeParentTypes) ?? null;
+            resolved_cache.set(key, profile);
+        }
+        if (profile && !governed.has(key)) {
+            governed.set(key, profile);
+        }
+        return true;
+    } else if (("and" in filter) || ("or" in filter)) {
+        for (const sub of ("and" in filter) ? filter.and : filter.or) {
+            if (!collectGovernedAttributes(sub, attr_profiles, getAttributeParentTypes, resolved_cache, governed, recursion_ttl - 1)) {
+                return false;
+            }
+        }
+        return true;
     } else if ("not" in filter) {
-        checkOfRequestAttributeProfileInFilter(
-            state, filter.not, attr_profiles, getAttributeParentTypes,
-            getEqualityMatcher, getContextMatcher, getSubstringsMatcher,
+        return collectGovernedAttributes(filter.not, attr_profiles, getAttributeParentTypes, resolved_cache, governed, recursion_ttl - 1);
+    }
+    return true;
+}
+
+function evaluateAttributeInFilter(
+    filter: Filter,
+    non_negated: boolean,
+    attr_key: DotDelimitedOidString,
+    attr_profiles: Map<DotDelimitedOidString, RequestAttribute>,
+    evaluated_items: WeakMap<FilterItem, CheckRequestAttributeState | null>,
+    getAttributeParentTypes: (attributeType: AttributeType) => IterableIterator<AttributeType>,
+    getEqualityMatcher?: (attributeType: AttributeType) => Matcher | undefined,
+    getContextMatcher?: (contextType: CONTEXT["&id"]) => ContextMatcher | undefined,
+    getSubstringsMatcher?: (attributeType: AttributeType) => Matcher | undefined,
+    recursion_ttl: number = MAX_FILTER_DEPTH,
+): BranchOutcome {
+    if (recursion_ttl <= 0) {
+        const limit_state = createEmptyState();
+        limit_state.serviceProblem = id_pr_administratorImposedLimit;
+        return { status: STATUS_FAILED, failed_state: limit_state };
+    }
+    if ("item" in filter) {
+        const type_oid = getFilterItemType(filter.item);
+        if (!type_oid || (type_oid.toString() !== attr_key)) {
+            return OUTCOME_ABSENT;
+        }
+        if (!non_negated) {
+            return OUTCOME_NEGATED;
+        }
+        let item_failure = evaluated_items.get(filter.item);
+        if (item_failure === undefined) {
+            const item_state = createEmptyState();
+            checkOfRequestAttributeProfileInFilterItem(
+                item_state,
+                filter,
+                attr_profiles,
+                getAttributeParentTypes,
+                getEqualityMatcher,
+                getContextMatcher,
+                getSubstringsMatcher,
+            );
+            item_failure = hasViolation(item_state) ? item_state : null;
+            evaluated_items.set(filter.item, item_failure);
+        }
+        return item_failure
+            ? { status: STATUS_FAILED, failed_state: item_failure }
+            : OUTCOME_COMPLIED;
+    } else if ("not" in filter) {
+        return evaluateAttributeInFilter(
+            filter.not, !non_negated, attr_key, attr_profiles, evaluated_items,
+            getAttributeParentTypes, getEqualityMatcher, getContextMatcher, getSubstringsMatcher,
+            recursion_ttl - 1,
         );
+    } else if (("and" in filter) || ("or" in filter)) {
+        const subfilters = ("and" in filter) ? filter.and : filter.or;
+        const acts_as_and = ("and" in filter) === non_negated;
+        if (acts_as_and) {
+            let acc: BranchOutcome = OUTCOME_ABSENT;
+            for (const sub of subfilters) {
+                const child = evaluateAttributeInFilter(
+                    sub, non_negated, attr_key, attr_profiles, evaluated_items,
+                    getAttributeParentTypes, getEqualityMatcher, getContextMatcher, getSubstringsMatcher,
+                    recursion_ttl - 1,
+                );
+                acc = combineAnd(acc, child);
+                if ((acc.status === STATUS_EMPTY) || (acc.status === STATUS_COMPLIED)) {
+                    return acc;
+                }
+            }
+            return acc;
+        }
+        // Effective OR: every branch must hold, so track the worst branch.
+        let acc: BranchOutcome = OUTCOME_EMPTY;
+        for (const sub of subfilters) {
+            const child = evaluateAttributeInFilter(
+                sub, non_negated, attr_key, attr_profiles, evaluated_items,
+                getAttributeParentTypes, getEqualityMatcher, getContextMatcher, getSubstringsMatcher,
+                recursion_ttl - 1,
+            );
+            if (child.status > acc.status) {
+                acc = child;
+                if (acc.status === STATUS_FAILED) {
+                    return acc;
+                }
+            }
+        }
+        return acc;
+    }
+    return OUTCOME_ABSENT;
+}
+
+/**
+ * @summary Validate filters based on search-rule-imposed input attribute profiles
+ * @description
+ *
+ * This function implements the procedure defined in
+ * [ITU Recommendation X.511 (2019)](https://www.itu.int/rec/T-REC-X.511/en),
+ * Section 15.2. Specifically, it checks that filter items within a filter
+ * comply with the applicable attribute profiles present in the governing
+ * search filter. As problems are encountered, the `state` is modified by
+ * reference. The callee is expected to inspect the fields of this object to
+ * determine if any restrictions were violated.
+ *
+ * Profiles that include subtypes also constrain filter items for those subtypes.
+ * The asserted subtype is retained for matching and diagnostic attribute types.
+ *
+ * @param state The current state of this function, which is passed recursively
+ * @param filter The search filter to be checked
+ * @param attr_profiles A mapping of input attribute types by their string-form
+ *  attribute type object identifier
+ * @param getAttributeParentTypes The attribute's ancestors, nearest first;
+ *  the iterator may also include the asserted attribute type itself
+ * @param getEqualityMatcher Look up an equality matcher for the asserted type
+ * @param getContextMatcher Look up a context matcher for a context type
+ * @param getSubstringsMatcher Look up a substring matcher for the asserted type.
+ *  If unavailable, substring items cannot satisfy non-empty selectedValues.
+ * @param attribute_combination Optional attribute combination from the search
+ *  rule, used to check unconditional and conditional attributes first per X.511
+ *  Section 15.2.
+ * @returns Nothing. `state` is modified by reference.
+ *
+ * @function
+ * @see {@link CheckRequestAttributeState}
+ */
+export function checkOfRequestAttributeProfileInFilter(
+    state: CheckRequestAttributeState,
+    filter: Filter,
+    attr_profiles: Map<DotDelimitedOidString, RequestAttribute>,
+    getAttributeParentTypes: (attributeType: AttributeType) => IterableIterator<AttributeType>,
+    getEqualityMatcher?: (attributeType: AttributeType) => Matcher | undefined,
+    getContextMatcher?: (contextType: CONTEXT["&id"]) => ContextMatcher | undefined,
+    getSubstringsMatcher?: (attributeType: AttributeType) => Matcher | undefined,
+    attribute_combination?: AttributeCombination,
+): void {
+    const resolved_cache: Map<DotDelimitedOidString, RequestAttribute | null> = new Map();
+    const governed: Map<DotDelimitedOidString, RequestAttribute> = new Map();
+    const within_depth_limit = collectGovernedAttributes(
+        filter,
+        attr_profiles,
+        getAttributeParentTypes,
+        resolved_cache,
+        governed,
+    );
+    if (!within_depth_limit) {
+        state.serviceProblem = id_pr_administratorImposedLimit;
+        return;
+    }
+    if (governed.size === 0) {
+        return;
+    }
+
+    /**
+     * ITU-T Rec. X.511 (2019), Section 15.2 specifies the order in which
+     * attributes are checked before stopping at the first failure:
+     *   1) attributes that unconditionally have to be represented;
+     *   2) attributes that conditionally have to be represented;
+     *   3) the remaining attributes.
+     *
+     * Because the evaluation loop below returns immediately on the first
+     * failing attribute, bucket-sorting `governed` into `[...tier_1, ...tier_2, ...tier_3]`
+     * ensures that when multiple attributes fail in the same filter (e.g. an
+     * optional attribute appears earlier in the filter than a mandatory one),
+     * the higher-priority tier's diagnostic is reported first.
+     */
+    let ordered_attrs: DotDelimitedOidString[];
+    if (attribute_combination) {
+        const unconditional: Set<DotDelimitedOidString> = new Set();
+        getRequiredAttributesFromAttributeCombination(attribute_combination, true, unconditional);
+        const all_combo_attrs: Set<DotDelimitedOidString> = new Set();
+        collectAllCombinationAttributes(attribute_combination, all_combo_attrs);
+
+        /** Tier 1: Mandatory attributes unconditionally required by `attributeCombination` (e.g. `and: [cn]`). */
+        const tier_1: DotDelimitedOidString[] = [];
+        /** Tier 2: Conditional attributes referenced in `attributeCombination` (e.g. inside `or` / `not`), but not unconditionally required. */
+        const tier_2: DotDelimitedOidString[] = [];
+        /** Tier 3: Optional permitted attributes not referenced in `attributeCombination` at all. */
+        const tier_3: DotDelimitedOidString[] = [];
+        for (const [key, profile] of governed.entries()) {
+            // Also check `profile.attributeType` in case `key` is a subtype
+            // governed via `includeSubtypes: true` while `attributeCombination`
+            // names the supertype from `inputAttributeTypes`.
+            const profile_key = profile.attributeType.toString();
+            if (unconditional.has(key) || unconditional.has(profile_key)) {
+                tier_1.push(key);
+            } else if (all_combo_attrs.has(key) || all_combo_attrs.has(profile_key)) {
+                tier_2.push(key);
+            } else {
+                tier_3.push(key);
+            }
+        }
+        ordered_attrs = [...tier_1, ...tier_2, ...tier_3];
+    } else {
+        ordered_attrs = Array.from(governed.keys());
+    }
+
+    const evaluated_items: WeakMap<FilterItem, CheckRequestAttributeState | null> = new WeakMap();
+    for (const attr_key of ordered_attrs) {
+        const outcome = evaluateAttributeInFilter(
+            filter,
+            true,
+            attr_key,
+            attr_profiles,
+            evaluated_items,
+            getAttributeParentTypes,
+            getEqualityMatcher,
+            getContextMatcher,
+            getSubstringsMatcher,
+        );
+        if ((outcome.status === STATUS_FAILED) && outcome.failed_state) {
+            const failed = outcome.failed_state;
+            if (failed.serviceProblem) {
+                state.serviceProblem = failed.serviceProblem;
+            }
+            state.searchValuesRequired.push(...failed.searchValuesRequired);
+            state.invalidSearchValues.push(...failed.invalidSearchValues);
+            if (failed.missingSearchContextAttr) {
+                state.missingSearchContextAttr = failed.missingSearchContextAttr;
+            }
+            state.missingSearchContexts.push(...failed.missingSearchContexts);
+            if (failed.contextComboViolationAttr) {
+                state.contextComboViolationAttr = failed.contextComboViolationAttr;
+            }
+            state.contextComboViolations.push(...failed.contextComboViolations);
+            if (failed.searchContextViolationsAttr) {
+                state.searchContextViolationsAttr = failed.searchContextViolationsAttr;
+            }
+            state.searchContextViolations.push(...failed.searchContextViolations);
+            if (failed.searchContextValueViolationAttr) {
+                state.searchContextValueViolationAttr = failed.searchContextValueViolationAttr;
+            }
+            state.searchContextValueViolations.push(...failed.searchContextValueViolations);
+            return;
+        }
+        if (outcome.status === STATUS_NEGATED) {
+            state.serviceProblem = id_pr_attributeNegationViolation;
+            return;
+        }
     }
 }
 
@@ -411,6 +771,7 @@ export function checkOfRequestAttributeProfiles(
     checkOfRequestAttributeProfileInFilter(
         state, filter, permitted_attrs, getAttributeParentTypes,
         getEqualityMatcher, getContextMatcher, getSubstringsMatcher,
+        rule.attributeCombination,
     );
     if (state.searchValuesRequired.length > 0) {
         return [1, state];
@@ -429,6 +790,9 @@ export function checkOfRequestAttributeProfiles(
     }
     if (state.searchContextValueViolations.length > 0) {
         return [6, state];
+    }
+    if (state.serviceProblem) {
+        return [152, state];
     }
     return [0, state];
 }
