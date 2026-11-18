@@ -1,12 +1,24 @@
 import {
+    ControlOptions,
+    ImposedSubset_baseObject,
+    ImposedSubset_oneLevel,
+    ImposedSubset_wholeSubtree,
     ResultAttribute,
     SearchRule,
 } from "@wildboar/x500/ServiceAdministration";
 import {
     RequestAttribute,
 } from "@wildboar/x500/ServiceAdministration";
-import { type Filter, SearchArgumentData } from "@wildboar/x500/DirectoryAbstractService";
-import { ObjectIdentifier } from "@wildboar/asn1";
+import {
+    type Filter,
+    SearchArgumentData,
+    SearchArgumentData_subset_baseObject,
+    SearchArgumentData_subset_oneLevel,
+    SearchArgumentData_subset_wholeSubtree,
+    SearchControlOptions_searchAliases,
+    SearchControlOptions_useSubset,
+} from "@wildboar/x500/DirectoryAbstractService";
+import { type BIT_STRING, FALSE_BIT, ObjectIdentifier, TRUE_BIT } from "@wildboar/asn1";
 import { ContextProfile } from "@wildboar/x500/ServiceAdministration";
 import type { AttributeCombination } from "@wildboar/x500/ServiceAdministration";
 import { type AttributeType, AttributeValueAssertion, ContextAssertion } from "@wildboar/x500/InformationFramework";
@@ -359,5 +371,216 @@ describe("generalCheckOfSearchFilter", () => {
         // This rule allows the language context, so it should pass.
         const [failed_step2] = generalCheckOfSearchFilter(search, rule2, getAttributeParentTypes);
         expect(failed_step2).toBe(0);
+    });
+
+    describe("allowedSubset, imposedSubset, and useSubset", () => {
+        const only_base = new Uint8ClampedArray([TRUE_BIT, FALSE_BIT, FALSE_BIT]);
+        const base_and_one_level = new Uint8ClampedArray([TRUE_BIT, TRUE_BIT, FALSE_BIT]);
+        const no_subsets = new Uint8ClampedArray([FALSE_BIT, FALSE_BIT, FALSE_BIT]);
+
+        function searchOptionsWithUseSubset(enabled: boolean): BIT_STRING {
+            const bits = new Uint8ClampedArray(SearchControlOptions_useSubset + 1);
+            bits[SearchControlOptions_searchAliases] = TRUE_BIT;
+            bits[SearchControlOptions_useSubset] = enabled ? TRUE_BIT : FALSE_BIT;
+            return bits;
+        }
+
+        function makeSearch(opts: {
+            subset?: number;
+            filter?: Filter;
+            searchControlOptions?: BIT_STRING;
+        } = {}): SearchArgumentData {
+            return SearchArgumentData._from_object({
+                baseObject: { rdnSequence: [] },
+                subset: opts.subset,
+                filter: opts.filter,
+                searchControlOptions: opts.searchControlOptions,
+                _unrecognizedExtensionsList: [],
+            });
+        }
+
+        function makeRule(opts: {
+            inputAttributeTypes?: RequestAttribute[];
+            defaultControls?: ControlOptions;
+            mandatoryControls?: ControlOptions;
+            searchRuleControls?: ControlOptions;
+            allowedSubset?: BIT_STRING;
+            imposedSubset?: number;
+        } = {}): SearchRule {
+            return new SearchRule(
+                1,
+                rule_oid,
+                undefined,
+                undefined,
+                opts.inputAttributeTypes,
+                undefined,
+                undefined,
+                opts.defaultControls,
+                opts.mandatoryControls,
+                opts.searchRuleControls,
+                undefined,
+                undefined,
+                undefined,
+                undefined,
+                opts.allowedSubset,
+                opts.imposedSubset,
+            );
+        }
+
+        it.each([
+            ["inputAttributeTypes absent", undefined],
+            ["inputAttributeTypes present", [new RequestAttribute(commonName["&id"])]],
+        ] as const)("enforces allowedSubset when imposedSubset is absent (%s)", (_label, inputAttributeTypes) => {
+            const rule = makeRule({ inputAttributeTypes, allowedSubset: only_base });
+            expect(generalCheckOfSearchFilter(
+                makeSearch({ subset: SearchArgumentData_subset_baseObject }),
+                rule,
+                getAttributeParentTypes,
+            )[0]).toBe(0);
+            expect(generalCheckOfSearchFilter(
+                makeSearch({ subset: SearchArgumentData_subset_wholeSubtree }),
+                rule,
+                getAttributeParentTypes,
+            )[0]).toBe(6);
+        });
+
+        it.each([
+            ["baseObject (0)", ImposedSubset_baseObject],
+            ["oneLevel (1)", ImposedSubset_oneLevel],
+            ["wholeSubtree (2)", ImposedSubset_wholeSubtree],
+        ] as const)("ignores allowedSubset when imposedSubset is %s and useSubset is unset", (_label, imposedSubset) => {
+            for (const inputAttributeTypes of [
+                undefined,
+                [],
+                [new RequestAttribute(commonName["&id"])],
+            ]) {
+                for (const allowedSubset of [only_base, no_subsets, new Uint8ClampedArray(0)]) {
+                    for (const searchControlOptions of [
+                        undefined,
+                        new Uint8ClampedArray([TRUE_BIT]),
+                        searchOptionsWithUseSubset(false),
+                    ]) {
+                        const search = makeSearch({
+                            subset: SearchArgumentData_subset_wholeSubtree,
+                            searchControlOptions,
+                        });
+                        const rule = makeRule({
+                            inputAttributeTypes,
+                            allowedSubset,
+                            imposedSubset,
+                        });
+                        const [step] = generalCheckOfSearchFilter(search, rule, getAttributeParentTypes);
+                        expect(step).toBe(0);
+                    }
+                }
+            }
+        });
+
+        it.each([
+            ["inputAttributeTypes absent", undefined],
+            ["inputAttributeTypes present", [new RequestAttribute(commonName["&id"])]],
+        ] as const)("enforces allowedSubset when imposedSubset is present and useSubset is set (%s)", (_label, inputAttributeTypes) => {
+            const rule = makeRule({
+                inputAttributeTypes,
+                allowedSubset: base_and_one_level,
+                imposedSubset: ImposedSubset_baseObject,
+            });
+            const use_subset_opts = searchOptionsWithUseSubset(true);
+
+            // Requested oneLevel differs from imposedSubset (baseObject), but is allowed by allowedSubset.
+            expect(generalCheckOfSearchFilter(
+                makeSearch({
+                    subset: SearchArgumentData_subset_oneLevel,
+                    searchControlOptions: use_subset_opts,
+                }),
+                rule,
+                getAttributeParentTypes,
+            )[0]).toBe(0);
+
+            // Requested wholeSubtree is disallowed by allowedSubset when useSubset is set.
+            expect(generalCheckOfSearchFilter(
+                makeSearch({
+                    subset: SearchArgumentData_subset_wholeSubtree,
+                    searchControlOptions: use_subset_opts,
+                }),
+                rule,
+                getAttributeParentTypes,
+            )[0]).toBe(6);
+        });
+
+        it("still reports attribute violations when imposedSubset suppresses allowedSubset", () => {
+            const search = makeSearch({
+                subset: SearchArgumentData_subset_wholeSubtree,
+                filter: {
+                    item: {
+                        equality: new AttributeValueAssertion(
+                            streetAddress["&id"],
+                            streetAddress.encoderFor["&Type"]!({ uTF8String: "123 Main St" }, BER),
+                        ),
+                    },
+                },
+            });
+            const rule = makeRule({
+                inputAttributeTypes: [new RequestAttribute(commonName["&id"])],
+                allowedSubset: only_base,
+                imposedSubset: ImposedSubset_baseObject,
+            });
+            const [step, state] = generalCheckOfSearchFilter(search, rule, getAttributeParentTypes);
+            expect(step).toBe(1);
+            expect(state.searchAttributeViolations.map((oid) => oid.toString())).toEqual([
+                streetAddress["&id"].toString(),
+            ]);
+        });
+
+        it("respects defaultControls and searchRuleControls when determining effective useSubset", () => {
+            // defaultControls enables useSubset when omitted by the user, so allowedSubset applies.
+            const defaults_enable_use_subset = new ControlOptions(
+                undefined,
+                searchOptionsWithUseSubset(true),
+            );
+            const rule_with_default = makeRule({
+                defaultControls: defaults_enable_use_subset,
+                allowedSubset: only_base,
+                imposedSubset: ImposedSubset_baseObject,
+            });
+            expect(generalCheckOfSearchFilter(
+                makeSearch({ subset: SearchArgumentData_subset_wholeSubtree }),
+                rule_with_default,
+                getAttributeParentTypes,
+            )[0]).toBe(6);
+            // User explicitly clearing useSubset restores imposedSubset and suppresses allowedSubset.
+            expect(generalCheckOfSearchFilter(
+                makeSearch({
+                    subset: SearchArgumentData_subset_wholeSubtree,
+                    searchControlOptions: searchOptionsWithUseSubset(false),
+                }),
+                rule_with_default,
+                getAttributeParentTypes,
+            )[0]).toBe(0);
+
+            // searchRuleControls forcing useSubset back to default (unset) suppresses allowedSubset
+            // even if the user requested useSubset.
+            const override_use_subset_mask = new ControlOptions(
+                undefined,
+                (() => {
+                    const mask = new Uint8ClampedArray(SearchControlOptions_useSubset + 1);
+                    mask[SearchControlOptions_useSubset] = TRUE_BIT;
+                    return mask;
+                })(),
+            );
+            const rule_forcing_imposed = makeRule({
+                searchRuleControls: override_use_subset_mask,
+                allowedSubset: only_base,
+                imposedSubset: ImposedSubset_baseObject,
+            });
+            expect(generalCheckOfSearchFilter(
+                makeSearch({
+                    subset: SearchArgumentData_subset_wholeSubtree,
+                    searchControlOptions: searchOptionsWithUseSubset(true),
+                }),
+                rule_forcing_imposed,
+                getAttributeParentTypes,
+            )[0]).toBe(0);
+        });
     });
 });

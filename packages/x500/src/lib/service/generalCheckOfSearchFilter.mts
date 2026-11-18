@@ -5,7 +5,10 @@ import {
 import {
     RequestAttribute,
 } from "@wildboar/x500/ServiceAdministration";
-import { SearchArgumentData } from "@wildboar/x500/DirectoryAbstractService";
+import {
+    SearchArgumentData,
+    SearchControlOptions_useSubset,
+} from "@wildboar/x500/DirectoryAbstractService";
 import { ObjectIdentifier, TRUE_BIT } from "@wildboar/asn1";
 import { ContextProfile } from "@wildboar/x500/ServiceAdministration";
 import { getAttributeTypeNegationFromFilter } from "./getAttributeTypeNegationFromFilter.mjs";
@@ -17,6 +20,7 @@ import { type AttributeCombination } from "@wildboar/x500/ServiceAdministration"
 import { type FilterItem } from "@wildboar/x500/DirectoryAbstractService";
 import type { AttributeType } from "@wildboar/x500/InformationFramework";
 import { getRequestAttributeProfile } from "./getRequestAttributeProfile.mjs";
+import { getEffectiveControlsFromSearchRule } from "./getEffectiveControlsFromSearchRule.mjs";
 
 /**
  * The internal state of `generalCheckOfSearchFilter()`.
@@ -98,8 +102,19 @@ export function generalCheckOfSearchFilter(
         searchValuesDisallowed: [],
         searchContextViolations: new Set(),
     };
+    const effective_controls = getEffectiveControlsFromSearchRule(
+        rule,
+        search.hierarchySelections,
+        search.searchControlOptions,
+        search.serviceControls?.options,
+    );
+    const use_subset = effective_controls.search[SearchControlOptions_useSubset] === TRUE_BIT;
+    // X.501, Section 16.10.9: if imposedSubset is present and useSubset is not
+    // set, imposedSubset replaces the requested subset and allowedSubset is ignored.
+    const check_allowed_subset = (rule.imposedSubset === undefined) || use_subset;
     const subset = search.subset ?? SearchArgumentData._default_value_for_subset;
-    const subset_is_disallowed = !!rule.allowedSubset
+    const subset_is_disallowed = check_allowed_subset
+        && !!rule.allowedSubset
         && (rule.allowedSubset[Number(subset)] !== TRUE_BIT);
     // X.501, Section 16.10.2: absent input profiles skip only attribute checks,
     // not the independent allowedSubset restriction.
