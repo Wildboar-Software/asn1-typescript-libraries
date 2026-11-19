@@ -10,9 +10,9 @@ const iPMLocationMatch: Matcher = createEqualityMatcher(
         if (!("stored" in v)) {
             return false;
         }
-        const a = Number(assertion);
         for (const sn of v.stored) {
-            if (a === Number(sn)) {
+            // Loose equality so a number matches the same bigint.
+            if (assertion == sn) {
                 return true;
             }
         }

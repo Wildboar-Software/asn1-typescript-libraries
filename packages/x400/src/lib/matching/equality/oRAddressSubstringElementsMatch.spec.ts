@@ -81,4 +81,10 @@ describe("isSubstringSubset()", () => {
         };
         expect(isSubstringSubset(value, assertion)).toBe(false);
     });
+    test("compares integers with loose equality", () => {
+        expect(isSubstringSubset(5, 5n)).toBe(true);
+        expect(isSubstringSubset(5n, 6)).toBe(false);
+        expect(isSubstringSubset({ terminalType: 3 }, { terminalType: 3n })).toBe(true);
+        expect(isSubstringSubset({ terminalType: 3 }, { terminalType: 4 })).toBe(false);
+    });
 });
