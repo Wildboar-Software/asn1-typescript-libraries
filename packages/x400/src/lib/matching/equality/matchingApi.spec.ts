@@ -7,7 +7,12 @@ import contentIdentifierMatch from "./contentIdentifierMatch.js";
 import mSStringMatch from "./mSStringMatch.js";
 import mSStringOrderingMatch from "../ordering/mSStringOrderingMatch.js";
 import mSSingleSubstringMatch from "../substring/mSSingleSubstringMatch.js";
-import { MATCH_FLAG_ORDERING_OR_EQUAL } from "@wildboar/x500";
+import {
+    MATCH_FLAG_ASSERTION_NORMALIZED,
+    MATCH_FLAG_ORDERING_OR_EQUAL,
+    MATCH_FLAG_USED_FOR_NAME,
+} from "@wildboar/x500";
+import oRNameSingleElementMatch from "./oRNameSingleElementMatch.js";
 
 const type_ = ObjectIdentifier.fromString("2.5.4.3");
 
@@ -28,6 +33,17 @@ describe("X.400 matchers decode the assertion", () => {
         expect(contentIdentifierMatch(otherCase, stored(value))).toBe(false);
     });
 
+    test("MATCH_FLAG_ASSERTION_NORMALIZED skips content-identifier whitespace normalization", () => {
+        const assertion = _encode_ContentIdentifier("Hello  World", DER);
+        const value = _encode_ContentIdentifier("Hello World", DER);
+        expect(contentIdentifierMatch(
+            assertion,
+            stored(value),
+            undefined,
+            MATCH_FLAG_ASSERTION_NORMALIZED,
+        )).toBe(false);
+    });
+
     test("a malformed ContentIdentifier assertion throws", () => {
         const raw = new DERElement();
         raw.boolean = true;
@@ -43,6 +59,15 @@ describe("X.400 matchers decode the assertion", () => {
     test("mSStringOrderingMatch decodes MSString and orders stored against presented", () => {
         expect(mSStringOrderingMatch(ms("b"), stored(ms("a")))).toBe(true);
         expect(mSStringOrderingMatch(ms("a"), stored(ms("a")), undefined, MATCH_FLAG_ORDERING_OR_EQUAL)).toBe(true);
+    });
+
+    test("name matching is refused when the assertion syntax differs from the value syntax", () => {
+        expect(oRNameSingleElementMatch(
+            ms("smith"),
+            stored(ms("smith")),
+            undefined,
+            MATCH_FLAG_USED_FOR_NAME,
+        )).toBeUndefined();
     });
 
     test("mSSingleSubstringMatch treats an encoded MSString as any", () => {

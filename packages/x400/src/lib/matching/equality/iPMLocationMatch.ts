@@ -18,6 +18,8 @@ const iPMLocationMatch: Matcher = createEqualityMatcher(
         }
         return false;
     },
+    undefined,
+    true,
 );
 
 export default iPMLocationMatch;

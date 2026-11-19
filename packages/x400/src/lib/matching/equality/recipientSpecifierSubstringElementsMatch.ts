@@ -35,6 +35,8 @@ export
 const recipientSpecifierSubstringElementsMatch: Matcher = createEqualityMatcher(
     _decode_RecipientSpecifier,
     recipientSpecifierSubstringElementsMatchTyped,
+    undefined,
+    false,
 );
 
 export default recipientSpecifierSubstringElementsMatch;

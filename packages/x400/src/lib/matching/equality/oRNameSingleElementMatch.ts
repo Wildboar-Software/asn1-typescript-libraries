@@ -1,10 +1,7 @@
 import type { ASN1Element } from "@wildboar/asn1";
 import { createEqualityMatcher, type Matcher } from "@wildboar/x500";
 import { _decode_ORName } from "@wildboar/x400/MTSAbstractService";
-import {
-    _decode_MSString,
-    type MSString,
-} from "@wildboar/x400/MSMatchingRules";
+import { _decode_MSString } from "@wildboar/x400/MSMatchingRules";
 import { msStringToString, orAddressToInfo } from "./orAddressUtilities.js";
 
 export
@@ -25,14 +22,21 @@ function extractStrings (value: unknown, depth: number = 0): string[] {
 }
 
 export
+function decodeORNameSingleElementAssertion (el: ASN1Element): string {
+    return msStringToString(_decode_MSString(el));
+}
+
+export
+function normalizeORNameSingleElementAssertion (assertion: string): string {
+    return assertion.trim().replace(/\s+/g, " ").toUpperCase();
+}
+
+export
 function oRNameSingleElementMatchTyped (
-    assertion: MSString,
+    assertion: string,
     value: ASN1Element,
 ): boolean {
-    const a: string = msStringToString(assertion)
-        .trim()
-        .replace(/\s+/g, " ")
-        .toUpperCase();
+    const a: string = assertion;
     const v = _decode_ORName(value);
     const vInfo = orAddressToInfo(v);
     if (!vInfo) {
@@ -59,8 +63,11 @@ function oRNameSingleElementMatchTyped (
 
 export
 const oRNameSingleElementMatch: Matcher = createEqualityMatcher(
-    _decode_MSString,
+    decodeORNameSingleElementAssertion,
     oRNameSingleElementMatchTyped,
+    undefined,
+    true,
+    normalizeORNameSingleElementAssertion,
 );
 
 export default oRNameSingleElementMatch;

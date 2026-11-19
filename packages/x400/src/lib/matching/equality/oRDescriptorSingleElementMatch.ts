@@ -10,7 +10,10 @@ import {
 import { _encode_ORName } from "@wildboar/x400/MTSAbstractService";
 import { _decode_ORDescriptor } from "@wildboar/x400/IPMSInformationObjects";
 import { msStringToString } from "./orAddressUtilities.js";
-import { oRNameSingleElementMatchTyped } from "./oRNameSingleElementMatch.js";
+import {
+    normalizeORNameSingleElementAssertion,
+    oRNameSingleElementMatchTyped,
+} from "./oRNameSingleElementMatch.js";
 
 // ORDescriptor ::= SET {
 //     formal-name       ORName OPTIONAL,
@@ -35,7 +38,10 @@ function oRDescriptorSingleElementMatchTyped (
     }
     if (v.formal_name) {
         const vname = _encode_ORName(v.formal_name, DER);
-        return oRNameSingleElementMatchTyped(_decode_MSString(vname), _encode_MSString(assertion, DER));
+        return oRNameSingleElementMatchTyped(
+            normalizeORNameSingleElementAssertion(msStringToString(_decode_MSString(vname))),
+            _encode_MSString(assertion, DER),
+        );
     }
     return false;
 }
@@ -44,6 +50,8 @@ export
 const oRDescriptorSingleElementMatch: Matcher = createEqualityMatcher(
     _decode_MSString,
     oRDescriptorSingleElementMatchTyped,
+    undefined,
+    true,
 );
 
 export default oRDescriptorSingleElementMatch;

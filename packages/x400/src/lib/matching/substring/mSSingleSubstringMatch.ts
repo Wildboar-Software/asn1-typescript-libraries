@@ -5,22 +5,35 @@ import {
     type Matcher,
 } from "@wildboar/x500";
 import type { FilterItem_substrings_strings_Item } from "@wildboar/x500/DirectoryAbstractService";
-import {
-    _decode_MSString,
-} from "@wildboar/x400/MSMatchingRules";
+import { _decode_MSString } from "@wildboar/x400/MSMatchingRules";
 import { msStringToString } from "../equality/orAddressUtilities.js";
 
 type SingleSubstring =
     | AssertedSubstring<string>
     | { unrecognized: true };
 
-function upperMSString (el: ASN1Element): string {
-    return msStringToString(_decode_MSString(el)).toUpperCase();
+function msStringElementToString (el: ASN1Element): string {
+    return msStringToString(_decode_MSString(el));
+}
+
+function normalizeSingleSubstrings (assertion: SingleSubstring[]): SingleSubstring[] {
+    return assertion.map((item): SingleSubstring => {
+        if ("initial" in item) {
+            return { initial: item.initial.toUpperCase() };
+        }
+        if ("any_" in item) {
+            return { any_: item.any_.toUpperCase() };
+        }
+        if ("final" in item) {
+            return { final: item.final.toUpperCase() };
+        }
+        return item;
+    });
 }
 
 export
 const mSSingleSubstringMatch: Matcher = createSubstringsMatcher(
-    (el: ASN1Element): SingleSubstring[] => [{ any_: upperMSString(el) }],
+    (el: ASN1Element): SingleSubstring[] => [{ any_: msStringElementToString(el) }],
     (assertion: SingleSubstring[], value): boolean => {
         const v: string = msStringToString(_decode_MSString(value)).toUpperCase();
         for (const sub of assertion) {
@@ -48,17 +61,18 @@ const mSSingleSubstringMatch: Matcher = createSubstringsMatcher(
                 return { unrecognized: true };
             }
             if ("initial" in item) {
-                return { initial: upperMSString(item.initial) };
+                return { initial: msStringElementToString(item.initial) };
             }
             if ("any_" in item) {
-                return { any_: upperMSString(item.any_) };
+                return { any_: msStringElementToString(item.any_) };
             }
             if ("final" in item) {
-                return { final: upperMSString(item.final) };
+                return { final: msStringElementToString(item.final) };
             }
             return { unrecognized: true };
         });
     },
+    normalizeSingleSubstrings,
 );
 
 export default mSSingleSubstringMatch;

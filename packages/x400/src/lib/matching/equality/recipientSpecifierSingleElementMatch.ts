@@ -19,6 +19,8 @@ const recipientSpecifierSingleElementMatch: Matcher = createEqualityMatcher(
         }
         return oRDescriptorSingleElementMatchTyped(assertion, valueRecipientElement);
     },
+    undefined,
+    true,
 );
 
 export default recipientSpecifierSingleElementMatch;

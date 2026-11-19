@@ -28,6 +28,8 @@ const circulationMemberSingleElementMatch: Matcher = createEqualityMatcher(
         }
         return oRDescriptorSingleElementMatchTyped(assertion, valueRecipientElement);
     },
+    undefined,
+    true,
 );
 
 export default circulationMemberSingleElementMatch;

@@ -2,7 +2,7 @@ import { createEqualityMatcher, type Matcher } from "@wildboar/x500";
 import {
     _decode_MTSIdentifier,
 } from "@wildboar/x400/MTSAbstractService";
-import { x121dcc2iso2c } from "../../utils/x121dcc2iso.js";
+import { x121_dcc_country_code_to_iso_3166 } from "@wildboar/or-address";
 
 // MTSIdentifier ::= [APPLICATION 4]  SEQUENCE {
 //     global-domain-identifier  GlobalDomainIdentifier,
@@ -44,8 +44,8 @@ const mTSIdentifierMatch: Matcher = createEqualityMatcher(
     const vCountry = ("x121_dcc_code" in vglob.country_name)
         ? vglob.country_name.x121_dcc_code
         : vglob.country_name.iso_3166_alpha2_code;
-    const aCountryISO = x121dcc2iso2c.get(aCountry) ?? aCountry;
-    const vCountryISO = x121dcc2iso2c.get(vCountry) ?? vCountry;
+    const aCountryISO = x121_dcc_country_code_to_iso_3166(Number.parseInt(aCountry, 10)) ?? aCountry;
+    const vCountryISO = x121_dcc_country_code_to_iso_3166(Number.parseInt(vCountry, 10)) ?? vCountry;
     if (aCountryISO !== vCountryISO) {
         return false;
     }

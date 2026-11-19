@@ -34,6 +34,8 @@ export
 const recipientSpecifierMatch: Matcher = createEqualityMatcher(
     _decode_RecipientSpecifier,
     recipientSpecifierMatchTyped,
+    undefined,
+    false,
 );
 
 export default recipientSpecifierMatch;

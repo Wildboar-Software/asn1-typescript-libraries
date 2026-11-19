@@ -18,6 +18,8 @@ const redirectionReasonMatch: Matcher = createEqualityMatcher(
         }
         return false;
     },
+    undefined,
+    true,
 );
 
 export default redirectionReasonMatch;

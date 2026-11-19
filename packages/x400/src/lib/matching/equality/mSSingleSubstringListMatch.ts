@@ -9,24 +9,33 @@ import { msStringToString } from "./orAddressUtilities.js";
 
 const decodeMSStringSequence = $._decodeSequenceOf<MSString>(() => _decode_MSString);
 
+function decodeMSStringList (el: ASN1Element): string[] {
+    return decodeMSStringSequence(el).map((ms) => msStringToString(ms));
+}
+
+function normalizeCaseIgnoreList (assertion: string[]): string[] {
+    return assertion.map((text) => text.trim().replace(/\s+/g, " ").toUpperCase());
+}
+
 export
 const mSSingleSubstringListMatch: Matcher = createEqualityMatcher(
-    decodeMSStringSequence,
+    decodeMSStringList,
     (assertion, value: ASN1Element): boolean => {
         const vElements = value.sequenceOf;
         if (assertion.length !== vElements.length) {
             return false;
         }
-        const v = vElements.map((el) => _decode_MSString(el));
-        for (let i = 0; i < v.length; i++) {
-            const ai = msStringToString(assertion[i]).trim().replace(/\s+/g, " ").toUpperCase();
-            const vi = msStringToString(v[i]).trim().replace(/\s+/g, " ").toUpperCase();
-            if (vi.indexOf(ai) < 0) {
+        for (let i = 0; i < assertion.length; i++) {
+            const vi = msStringToString(_decode_MSString(vElements[i])).trim().replace(/\s+/g, " ").toUpperCase();
+            if (vi.indexOf(assertion[i]) < 0) {
                 return false;
             }
         }
         return true;
     },
+    undefined,
+    false,
+    normalizeCaseIgnoreList,
 );
 
 export default mSSingleSubstringListMatch;

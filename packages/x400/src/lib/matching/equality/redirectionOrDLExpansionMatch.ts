@@ -10,6 +10,8 @@ export
 const redirectionOrDLExpansionMatch: Matcher = createEqualityMatcher(
     _decode_ORAddressAndOptionalDirectoryName,
     redirectionOrDLExpansionMatchTyped,
+    undefined,
+    true,
 );
 
 export default redirectionOrDLExpansionMatch;

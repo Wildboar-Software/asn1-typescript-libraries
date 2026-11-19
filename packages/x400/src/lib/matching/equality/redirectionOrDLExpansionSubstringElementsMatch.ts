@@ -30,6 +30,8 @@ export
 const redirectionOrDLExpansionSubstringElementsMatch: Matcher = createEqualityMatcher(
     _decode_ORAddressAndOptionalDirectoryName,
     redirectionOrDLExpansionSubstringElementsMatchTyped,
+    undefined,
+    true,
 );
 
 export default redirectionOrDLExpansionSubstringElementsMatch;
