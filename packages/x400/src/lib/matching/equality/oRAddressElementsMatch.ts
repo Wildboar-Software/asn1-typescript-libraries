@@ -1,14 +1,12 @@
-import { Buffer } from "node:buffer";
-import type { ASN1Element } from "@wildboar/asn1";
-import type { EqualityMatcher } from "@wildboar/x500";
+import { createEqualityMatcher, type Matcher } from "@wildboar/x500";
 import {
     ORAddress,
     _decode_ORAddress,
 } from "@wildboar/x400/MTSAbstractService";
 import { ORAddressInfo, orAddressToInfo, recursivelyNormalize } from "./orAddressUtilities.js";
-import { _encode_PresentationAddress, PresentationAddress } from "@wildboar/x500/SelectedAttributeTypes";
+import { PresentationAddress } from "@wildboar/x500/SelectedAttributeTypes";
 import _ from "lodash";
-import { presentationAddressMatch } from "@wildboar/x500/matching/equality";
+import { presentationAddressMatchTyped } from "@wildboar/x500/matching/equality";
 
 export
 function orAddressIsSubset (asserted: ORAddress, value: ORAddress): boolean {
@@ -48,9 +46,7 @@ function orAddressIsSubset (asserted: ORAddress, value: ORAddress): boolean {
             }
             const presa = aInfo.extendedNetworkAddress;
             const presb = bInfo.extendedNetworkAddress;
-            const presaEncoded = _encode_PresentationAddress(presa);
-            const presbEncoded = _encode_PresentationAddress(presb);
-            return presentationAddressMatch(presaEncoded, presbEncoded);
+            return presentationAddressMatchTyped(presa, presb);
         } else {
             return false;
         }
@@ -59,17 +55,12 @@ function orAddressIsSubset (asserted: ORAddress, value: ORAddress): boolean {
 }
 
 export
-const oRAddressElementsMatch: EqualityMatcher = (
-    assertion: ASN1Element,
-    value: ASN1Element,
-): boolean => {
-    // If the two values are byte-for-byte equal, return.
-    if (!Buffer.compare(assertion.value, value.value)) {
-        return true;
-    }
-    const a = _decode_ORAddress(assertion);
-    const v = _decode_ORAddress(value);
-    return orAddressIsSubset(a, v);
-}
+const oRAddressElementsMatch: Matcher = createEqualityMatcher(
+    _decode_ORAddress,
+    (assertion, value): boolean => {
+        const v = _decode_ORAddress(value);
+        return orAddressIsSubset(assertion, v);
+    },
+);
 
 export default oRAddressElementsMatch;

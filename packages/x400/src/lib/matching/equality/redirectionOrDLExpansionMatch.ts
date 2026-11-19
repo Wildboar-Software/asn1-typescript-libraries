@@ -1,8 +1,17 @@
-import type { Context } from "../../types/index.js";
-import { getORNameMatcher } from "./oRNameMatch.js";
-import getRedirectionOrDLExpansionMatchingGetter from "./redirectionOrDLExpansionMatchCommon.js";
+import { createEqualityMatcher, type Matcher } from "@wildboar/x500";
+import { _decode_ORAddressAndOptionalDirectoryName } from "@wildboar/x400/MTSAbstractService";
+import { oRNameMatchTyped } from "./oRNameMatch.js";
+import { matchRedirectionOrDLExpansionHistory } from "./redirectionOrDLExpansionMatchCommon.js";
 
-export const redirectionOrDLExpansionMatcher
-    = (ctx: Context) => getRedirectionOrDLExpansionMatchingGetter(ctx, getORNameMatcher);
+export
+const redirectionOrDLExpansionMatchTyped = matchRedirectionOrDLExpansionHistory(oRNameMatchTyped);
 
-export default redirectionOrDLExpansionMatcher;
+export
+const redirectionOrDLExpansionMatch: Matcher = createEqualityMatcher(
+    _decode_ORAddressAndOptionalDirectoryName,
+    redirectionOrDLExpansionMatchTyped,
+    undefined,
+    true,
+);
+
+export default redirectionOrDLExpansionMatch;

@@ -1,28 +1,21 @@
-import type { ASN1Element } from "@wildboar/asn1";
-import type { EqualityMatcher } from "@wildboar/x500";
+import type { OBJECT_IDENTIFIER } from "@wildboar/asn1";
+import { createEqualityMatcher, type Matcher } from "@wildboar/x500";
 import {
     _decode_IPMIdentifier,
 } from "@wildboar/x400/IPMSInformationObjects";
-import { _encode_ORName } from "@wildboar/x400/MTSAbstractService";
 import { strict as assert } from "node:assert";
-import { Context } from "../../types/index.js";
-import { getORNameMatcherTyped } from "./oRNameMatch.js";
-
-// IPMIdentifier ::= [APPLICATION 11]  SET {
-//     user                      ORName OPTIONAL,
-//     user-relative-identifier  LocalIPMIdentifier
-// }
-
-// LocalIPMIdentifier ::= PrintableString(SIZE (0..ub-local-ipm-identifier))
+import { matchORNames } from "./oRNameMatch.js";
 
 export
-function getIPMIdentifierMatcher (ctx: Context): EqualityMatcher {
-    const orNameMatcher = getORNameMatcherTyped(ctx);
-    return (
-        assertion: ASN1Element,
-        value: ASN1Element,
+const iPMIdentifierMatch: Matcher = createEqualityMatcher(
+    _decode_IPMIdentifier,
+    (
+        assertion,
+        value,
+        getEqualityMatcher?: (attributeType: OBJECT_IDENTIFIER) => Matcher | undefined,
+        flags?: number,
     ): boolean => {
-        const a = _decode_IPMIdentifier(assertion);
+        const a = assertion;
         const v = _decode_IPMIdentifier(value);
         if (!!a.user !== !!v.user) {
             return false;
@@ -34,10 +27,10 @@ function getIPMIdentifierMatcher (ctx: Context): EqualityMatcher {
         }
         if (a.user) {
             assert(v.user);
-            return orNameMatcher(a.user, v.user);
+            return matchORNames(a.user, v.user, getEqualityMatcher, flags);
         }
         return true;
-    };
-}
+    },
+);
 
-export default getIPMIdentifierMatcher;
+export default iPMIdentifierMatch;

@@ -1,26 +1,23 @@
-import { Buffer } from "node:buffer";
-import type { Context } from "../../types/index.js";
-import type { ASN1Element } from "@wildboar/asn1";
-import { compareDistinguishedName, EqualityMatcher } from "@wildboar/x500";
-import { _decode_ORName } from "@wildboar/x400/MTSAbstractService";
-import getNamingMatcherGetter from "../../x500/getNamingMatcherGetter.js";
+import type { OBJECT_IDENTIFIER } from "@wildboar/asn1";
+import { compareRDNSequence } from "@wildboar/dn";
 import {
-    _decode_ORAddress,
-} from "@wildboar/x400/MTSAbstractService";
+    createEqualityMatcher,
+    type Matcher,
+} from "@wildboar/x500";
+import { _decode_ORName } from "@wildboar/x400/MTSAbstractService";
 import { orAddressesMatch } from "./orAddressUtilities.js";
+import { namingEqualityMatcher } from "../namingEqualityMatcher.js";
 
 export
-function getORNameExactMatcher (ctx: Context): EqualityMatcher {
-    const namingMatcher = getNamingMatcherGetter(ctx);
-    return(
-        assertion: ASN1Element,
-        value: ASN1Element,
+const oRNameExactMatch: Matcher = createEqualityMatcher(
+    _decode_ORName,
+    (
+        assertion,
+        value,
+        getEqualityMatcher?: (attributeType: OBJECT_IDENTIFIER) => Matcher | undefined,
+        flags?: number,
     ): boolean => {
-        // If the two values are byte-for-byte equal, return.
-        if (!Buffer.compare(assertion.value, value.value)) {
-            return true;
-        }
-        const a = _decode_ORName(assertion);
+        const a = assertion;
         const v = _decode_ORName(value);
         const directoryNameAsserted: boolean = !!a.directory_name;
         const directoryNamePresent: boolean = !!v.directory_name;
@@ -61,10 +58,10 @@ function getORNameExactMatcher (ctx: Context): EqualityMatcher {
             if (!v.directory_name) {
                 return false;
             }
-            const namesMatch = compareDistinguishedName(
+            const namesMatch = compareRDNSequence(
                 a.directory_name!.rdnSequence,
                 v.directory_name.rdnSequence,
-                namingMatcher,
+                namingEqualityMatcher(getEqualityMatcher, flags),
             );
             if (!namesMatch) {
                 return false;
@@ -75,7 +72,7 @@ function getORNameExactMatcher (ctx: Context): EqualityMatcher {
             return orAddressesMatch(a, v);
         }
         return true;
-    };
-}
+    },
+);
 
-export default getORNameExactMatcher;
+export default oRNameExactMatch;

@@ -1,5 +1,4 @@
-import type { ASN1Element } from "@wildboar/asn1";
-import type { EqualityMatcher } from "@wildboar/x500";
+import { createEqualityMatcher, type Matcher } from "@wildboar/x500";
 import {
     _decode_AddressCapabilities,
 } from "@wildboar/x400/MHSDirectoryObjectsAndAttributes";
@@ -58,11 +57,10 @@ import { orAddressesMatch } from "./orAddressUtilities.js";
 // SECURITY-CATEGORY ::= TYPE-IDENTIFIER
 
 export
-const addressCapabilitiesMatch: EqualityMatcher = (
-    assertion: ASN1Element,
-    value: ASN1Element,
-): boolean => {
-    const a = _decode_AddressCapabilities(assertion);
+const addressCapabilitiesMatch: Matcher = createEqualityMatcher(
+    _decode_AddressCapabilities,
+    (assertion, value): boolean => {
+    const a = assertion;
     const v = _decode_AddressCapabilities(value);
     if (a.description && (a.description !== v.description?.trim())) {
         return false;
@@ -101,6 +99,7 @@ const addressCapabilitiesMatch: EqualityMatcher = (
         }
     }
     return true;
-}
+    },
+);
 
 export default addressCapabilitiesMatch;

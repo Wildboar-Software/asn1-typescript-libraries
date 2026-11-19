@@ -1,68 +1,45 @@
-import type { Context } from "../../types/index.js";
 import { ASN1Element, ASN1TagClass, ASN1UniversalType } from "@wildboar/asn1";
-import type { EqualityMatcher } from "@wildboar/x500";
-import { orDescriptorElementsMatcher } from "./oRDescriptorElementsMatch.js";
+import { createEqualityMatcher, type Matcher } from "@wildboar/x500";
+import {
+    _decode_CirculationMember,
+    type CirculationMember,
+} from "@wildboar/x400/IPMSHeadingExtensions";
+import { oRDescriptorElementsMatchTyped } from "./oRDescriptorElementsMatch.js";
 
-// CirculationMember ::= SET {
-//     circulation-recipient
-//       RecipientSpecifier
-//         (WITH COMPONENTS {
-//            ...,
-//            recipient  (WITH COMPONENTS {
-//                          ...,
-//                          formal-name  PRESENT
-//                        })
-//          }),
-//     checked                Checkmark OPTIONAL
-// }
-
-// RecipientSpecifier ::= SET {
-//     recipient              [0]  ORDescriptor,
-//     notification-requests  [1]  NotificationRequests DEFAULT {},
-//     reply-requested        [2]  BOOLEAN DEFAULT FALSE,
-//     recipient-extensions   [3]  RecipientExtensionsField OPTIONAL
-// }
-
-// ORDescriptor ::= SET {
-//     formal-name       ORName OPTIONAL,
-//     free-form-name    [0]  FreeFormName OPTIONAL,
-//     telephone-number  [1]  TelephoneNumber OPTIONAL
-// }
-
-// FreeFormName ::= TeletexString(SIZE (0..ub-free-form-name))
-
-// TelephoneNumber ::= PrintableString(SIZE (0..ub-telephone-number))
-
-export
-function circulationMemberElementsMatcher (
-    assertion: ASN1Element,
-    value: ASN1Element,
-): boolean {
-    const assertionCirculationRecipientElement = assertion.set.find((el) => (
-        (el.tagClass === ASN1TagClass.universal)
-        && (el.tagNumber === ASN1UniversalType.set)
-    ));
+function valueRecipientElement (value: ASN1Element): ASN1Element | undefined {
     const valueCirculationRecipientElement = value.set.find((el) => (
         (el.tagClass === ASN1TagClass.universal)
         && (el.tagNumber === ASN1UniversalType.set)
     ));
-    // This should not happen, because it is a required field.
-    if (!assertionCirculationRecipientElement || !valueCirculationRecipientElement) {
-        return false;
+    if (!valueCirculationRecipientElement) {
+        return undefined;
     }
-    const assertionRecipientElement = assertionCirculationRecipientElement.set.find((el) => (
+    return valueCirculationRecipientElement.set.find((el) => (
         (el.tagClass === ASN1TagClass.context)
         && (el.tagNumber === 0)
     ));
-    const valueRecipientElement = valueCirculationRecipientElement.set.find((el) => (
-        (el.tagClass === ASN1TagClass.context)
-        && (el.tagNumber === 0)
-    ));
-    // This should not happen, because it is a required field.
-    if (!assertionRecipientElement || !valueRecipientElement) {
-        return false;
-    }
-    return orDescriptorElementsMatcher(assertionRecipientElement, valueRecipientElement);
-};
+}
 
-export default circulationMemberElementsMatcher;
+export
+function circulationMemberElementsMatchTyped (
+    assertion: CirculationMember,
+    value: ASN1Element,
+): boolean {
+    const recipient = valueRecipientElement(value);
+    // This should not happen, because it is a required field.
+    if (!recipient) {
+        return false;
+    }
+    return oRDescriptorElementsMatchTyped(
+        assertion.circulation_recipient.recipient,
+        recipient,
+    );
+}
+
+export
+const circulationMemberElementsMatch: Matcher = createEqualityMatcher(
+    _decode_CirculationMember,
+    circulationMemberElementsMatchTyped,
+);
+
+export default circulationMemberElementsMatch;

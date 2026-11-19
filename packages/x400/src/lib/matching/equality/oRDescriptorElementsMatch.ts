@@ -1,6 +1,10 @@
 import type { ASN1Element } from "@wildboar/asn1";
-import { teletexToString } from "@wildboar/x500";
-import { _decode_ORDescriptor } from "@wildboar/x400/IPMSInformationObjects";
+import teletexToString from "@wildboar/teletex";
+import { createEqualityMatcher, type Matcher } from "@wildboar/x500";
+import {
+    _decode_ORDescriptor,
+    type ORDescriptor,
+} from "@wildboar/x400/IPMSInformationObjects";
 import { orAddressIsSubset } from "./oRAddressElementsMatch.js";
 
 // ORDescriptor ::= SET {
@@ -9,16 +13,12 @@ import { orAddressIsSubset } from "./oRAddressElementsMatch.js";
 //     telephone-number  [1]  TelephoneNumber OPTIONAL
 // }
 
-// FreeFormName ::= TeletexString(SIZE (0..ub-free-form-name))
-
-// TelephoneNumber ::= PrintableString(SIZE (0..ub-telephone-number))
-
 export
-function orDescriptorElementsMatcher (
-    assertion: ASN1Element,
+function oRDescriptorElementsMatchTyped (
+    assertion: ORDescriptor,
     value: ASN1Element,
 ): boolean {
-    const a = _decode_ORDescriptor(assertion);
+    const a = assertion;
     const v = _decode_ORDescriptor(value);
     if (!!a.formal_name && !!v.formal_name) {
         return orAddressIsSubset(a.formal_name, v.formal_name);
@@ -34,6 +34,12 @@ function orDescriptorElementsMatcher (
         return (aname === vname);
     }
     return false;
-};
+}
 
-export default orDescriptorElementsMatcher;
+export
+const oRDescriptorElementsMatch: Matcher = createEqualityMatcher(
+    _decode_ORDescriptor,
+    oRDescriptorElementsMatchTyped,
+);
+
+export default oRDescriptorElementsMatch;

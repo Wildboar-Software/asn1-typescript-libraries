@@ -1,45 +1,42 @@
-import { ASN1Element, ASN1TagClass } from "@wildboar/asn1";
-import type { EqualityMatcher } from "@wildboar/x500";
-import { Context } from "../../types/index.js";
-import { getORDescriptorSubstringElementsMatcher } from "./oRDescriptorSubstringElementsMatch.js";
-
-// RecipientSpecifier ::= SET {
-//     recipient              [0]  ORDescriptor,
-//     notification-requests  [1]  NotificationRequests DEFAULT {},
-//     reply-requested        [2]  BOOLEAN DEFAULT FALSE,
-//     recipient-extensions   [3]  RecipientExtensionsField OPTIONAL
-// }
-
-// ORDescriptor ::= SET {
-//     formal-name       ORName OPTIONAL,
-//     free-form-name    [0]  FreeFormName OPTIONAL,
-//     telephone-number  [1]  TelephoneNumber OPTIONAL
-// }
-
-// FreeFormName ::= TeletexString(SIZE (0..ub-free-form-name))
-
-// TelephoneNumber ::= PrintableString(SIZE (0..ub-telephone-number))
+import { ASN1Element, ASN1TagClass, type OBJECT_IDENTIFIER } from "@wildboar/asn1";
+import {
+    createEqualityMatcher,
+    type Matcher,
+} from "@wildboar/x500";
+import {
+    _decode_RecipientSpecifier,
+    type RecipientSpecifier,
+} from "@wildboar/x400/IPMSInformationObjects";
+import { oRDescriptorSubstringElementsMatchTyped } from "./oRDescriptorSubstringElementsMatch.js";
 
 export
-function getRecipientSpecifierSubstringElementsMatcher (ctx: Context): EqualityMatcher {
-    const orDescriptorMatcher = getORDescriptorSubstringElementsMatcher(ctx);
-    return (
-        assertion: ASN1Element,
-        value: ASN1Element,
-    ): boolean => {
-        const assertionRecipientElement = assertion.set.find((el) => (
-            (el.tagClass === ASN1TagClass.context)
-            && (el.tagNumber === 0)
-        ));
-        const valueRecipientElement = value.set.find((el) => (
-            (el.tagClass === ASN1TagClass.context)
-            && (el.tagNumber === 0)
-        ));
-        if (!valueRecipientElement || !assertionRecipientElement) { // This should not happen, because it is a required field.
-            return false;
-        }
-        return orDescriptorMatcher(assertionRecipientElement, valueRecipientElement);
-    };
+function recipientSpecifierSubstringElementsMatchTyped (
+    assertion: RecipientSpecifier,
+    value: ASN1Element,
+    getEqualityMatcher?: (attributeType: OBJECT_IDENTIFIER) => Matcher | undefined,
+    flags?: number,
+): boolean {
+    const recipient = value.set.find((el) => (
+        (el.tagClass === ASN1TagClass.context)
+        && (el.tagNumber === 0)
+    ));
+    if (!recipient) { // This should not happen, because it is a required field.
+        return false;
+    }
+    return oRDescriptorSubstringElementsMatchTyped(
+        assertion.recipient,
+        recipient,
+        getEqualityMatcher,
+        flags,
+    );
 }
 
-export default getRecipientSpecifierSubstringElementsMatcher;
+export
+const recipientSpecifierSubstringElementsMatch: Matcher = createEqualityMatcher(
+    _decode_RecipientSpecifier,
+    recipientSpecifierSubstringElementsMatchTyped,
+    undefined,
+    false,
+);
+
+export default recipientSpecifierSubstringElementsMatch;

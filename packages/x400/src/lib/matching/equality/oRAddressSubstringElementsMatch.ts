@@ -1,5 +1,4 @@
-import type { ASN1Element } from "@wildboar/asn1";
-import type { EqualityMatcher } from "@wildboar/x500";
+import { createEqualityMatcher, type Matcher } from "@wildboar/x500";
 import {
     ORAddress,
     _decode_ORAddress,
@@ -50,13 +49,12 @@ function orAddressIsSubstringSubset (asserted: ORAddress, value: ORAddress): boo
 }
 
 export
-const oRAddressSubstringElementsMatch: EqualityMatcher = (
-    assertion: ASN1Element,
-    value: ASN1Element,
-): boolean => {
-    const a = _decode_ORAddress(assertion);
-    const v = _decode_ORAddress(value);
-    return orAddressIsSubstringSubset(a, v);
-}
+const oRAddressSubstringElementsMatch: Matcher = createEqualityMatcher(
+    _decode_ORAddress,
+    (assertion, value): boolean => {
+        const v = _decode_ORAddress(value);
+        return orAddressIsSubstringSubset(assertion, v);
+    },
+);
 
 export default oRAddressSubstringElementsMatch;

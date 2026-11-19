@@ -1,7 +1,13 @@
-import type { Context } from "../../types/index.js";
-import { ASN1Element, ASN1TagClass, ASN1UniversalType } from "@wildboar/asn1";
-import type { EqualityMatcher } from "@wildboar/x500";
-import { getORDescriptorMatcher } from "./oRDescriptorMatch.js";
+import { ASN1Element, ASN1TagClass, ASN1UniversalType, type OBJECT_IDENTIFIER } from "@wildboar/asn1";
+import {
+    createEqualityMatcher,
+    type Matcher,
+} from "@wildboar/x500";
+import {
+    _decode_CirculationMember,
+    type CirculationMember,
+} from "@wildboar/x400/IPMSHeadingExtensions";
+import { oRDescriptorMatchTyped } from "./oRDescriptorMatch.js";
 
 // CirculationMember ::= SET {
 //     circulation-recipient
@@ -16,56 +22,44 @@ import { getORDescriptorMatcher } from "./oRDescriptorMatch.js";
 //     checked                Checkmark OPTIONAL
 // }
 
-// RecipientSpecifier ::= SET {
-//     recipient              [0]  ORDescriptor,
-//     notification-requests  [1]  NotificationRequests DEFAULT {},
-//     reply-requested        [2]  BOOLEAN DEFAULT FALSE,
-//     recipient-extensions   [3]  RecipientExtensionsField OPTIONAL
-// }
-
-// ORDescriptor ::= SET {
-//     formal-name       ORName OPTIONAL,
-//     free-form-name    [0]  FreeFormName OPTIONAL,
-//     telephone-number  [1]  TelephoneNumber OPTIONAL
-// }
-
-// FreeFormName ::= TeletexString(SIZE (0..ub-free-form-name))
-
-// TelephoneNumber ::= PrintableString(SIZE (0..ub-telephone-number))
-
-export
-function getCirculationMemberMatcher (ctx: Context): EqualityMatcher {
-    const orDescriptorMatcher = getORDescriptorMatcher(ctx);
-    return (
-        assertion: ASN1Element,
-        value: ASN1Element,
-    ): boolean => {
-        const assertionCirculationRecipientElement = assertion.set.find((el) => (
-            (el.tagClass === ASN1TagClass.universal)
-            && (el.tagNumber === ASN1UniversalType.set)
-        ));
-        const valueCirculationRecipientElement = value.set.find((el) => (
-            (el.tagClass === ASN1TagClass.universal)
-            && (el.tagNumber === ASN1UniversalType.set)
-        ));
-        // This should not happen, because it is a required field.
-        if (!assertionCirculationRecipientElement || !valueCirculationRecipientElement) {
-            return false;
-        }
-        const assertionRecipientElement = assertionCirculationRecipientElement.set.find((el) => (
-            (el.tagClass === ASN1TagClass.context)
-            && (el.tagNumber === 0)
-        ));
-        const valueRecipientElement = valueCirculationRecipientElement.set.find((el) => (
-            (el.tagClass === ASN1TagClass.context)
-            && (el.tagNumber === 0)
-        ));
-        // This should not happen, because it is a required field.
-        if (!assertionRecipientElement || !valueRecipientElement) {
-            return false;
-        }
-        return orDescriptorMatcher(assertionRecipientElement, valueRecipientElement);
-    };
+function valueRecipientElement (value: ASN1Element): ASN1Element | undefined {
+    const valueCirculationRecipientElement = value.set.find((el) => (
+        (el.tagClass === ASN1TagClass.universal)
+        && (el.tagNumber === ASN1UniversalType.set)
+    ));
+    if (!valueCirculationRecipientElement) {
+        return undefined;
+    }
+    return valueCirculationRecipientElement.set.find((el) => (
+        (el.tagClass === ASN1TagClass.context)
+        && (el.tagNumber === 0)
+    ));
 }
 
-export default getCirculationMemberMatcher;
+export
+function circulationMemberMatchTyped (
+    assertion: CirculationMember,
+    value: ASN1Element,
+    getEqualityMatcher?: (attributeType: OBJECT_IDENTIFIER) => Matcher | undefined,
+    flags?: number,
+): boolean {
+    const recipient = valueRecipientElement(value);
+    // This should not happen, because it is a required field.
+    if (!recipient) {
+        return false;
+    }
+    return oRDescriptorMatchTyped(
+        assertion.circulation_recipient.recipient,
+        recipient,
+        getEqualityMatcher,
+        flags,
+    );
+}
+
+export
+const circulationMemberMatch: Matcher = createEqualityMatcher(
+    _decode_CirculationMember,
+    circulationMemberMatchTyped,
+);
+
+export default circulationMemberMatch;

@@ -1,21 +1,22 @@
-import { Buffer } from "node:buffer";
 import type { ASN1Element } from "@wildboar/asn1";
-import { _decode_ORName } from "@wildboar/x400/MTSAbstractService";
+import { createEqualityMatcher, type Matcher } from "@wildboar/x500";
+import { _decode_ORName, type ORName } from "@wildboar/x400/MTSAbstractService";
 import { orAddressIsSubset } from "./oRAddressElementsMatch.js";
 
 export
-function orNameElementsMatcher (
-    assertion: ASN1Element,
+function oRNameElementsMatchTyped (
+    assertion: ORName,
     value: ASN1Element,
 ): boolean {
-    // If the two values are byte-for-byte equal, return.
-    if (!Buffer.compare(assertion.value, value.value)) {
-        return true;
-    }
-    const a = _decode_ORName(assertion);
     const v = _decode_ORName(value);
     // TODO: Use the directory name too.
-    return orAddressIsSubset(a, v);
-};
+    return orAddressIsSubset(assertion, v);
+}
 
-export default orNameElementsMatcher;
+export
+const oRNameElementsMatch: Matcher = createEqualityMatcher(
+    _decode_ORName,
+    oRNameElementsMatchTyped,
+);
+
+export default oRNameElementsMatch;

@@ -1,46 +1,35 @@
 import { ASN1Element, ASN1TagClass, ASN1UniversalType } from "@wildboar/asn1";
-import type { EqualityMatcher } from "@wildboar/x500";
-import { oRDescriptorSingleElementMatch } from "./oRDescriptorSingleElementMatch.js";
-
-// RecipientSpecifier ::= SET {
-//     recipient              [0]  ORDescriptor,
-//     notification-requests  [1]  NotificationRequests DEFAULT {},
-//     reply-requested        [2]  BOOLEAN DEFAULT FALSE,
-//     recipient-extensions   [3]  RecipientExtensionsField OPTIONAL
-// }
-
-// ORDescriptor ::= SET {
-//     formal-name       ORName OPTIONAL,
-//     free-form-name    [0]  FreeFormName OPTIONAL,
-//     telephone-number  [1]  TelephoneNumber OPTIONAL
-// }
-
-// FreeFormName ::= TeletexString(SIZE (0..ub-free-form-name))
-
-// TelephoneNumber ::= PrintableString(SIZE (0..ub-telephone-number))
+import { createEqualityMatcher, type Matcher } from "@wildboar/x500";
+import {
+    _decode_MSString,
+    type MSString,
+} from "@wildboar/x400/MSMatchingRules";
+import { oRDescriptorSingleElementMatchTyped } from "./oRDescriptorSingleElementMatch.js";
 
 export
-const circulationMemberSingleElementMatch: EqualityMatcher = (
-    assertion: ASN1Element,
-    value: ASN1Element,
-): boolean => {
-    const valueCirculationRecipientElement = value.set.find((el) => (
-        (el.tagClass === ASN1TagClass.universal)
-        && (el.tagNumber === ASN1UniversalType.set)
-    ));
-    // This should not happen, because it is a required field.
-    if (!valueCirculationRecipientElement) {
-        return false;
-    }
-    const valueRecipientElement = valueCirculationRecipientElement.set.find((el) => (
-        (el.tagClass === ASN1TagClass.context)
-        && (el.tagNumber === 0)
-    ));
-    // This should not happen, because it is a required field.
-    if (!valueRecipientElement) {
-        return false;
-    }
-    return oRDescriptorSingleElementMatch(assertion, valueRecipientElement);
-};
+const circulationMemberSingleElementMatch: Matcher = createEqualityMatcher(
+    _decode_MSString,
+    (assertion: MSString, value: ASN1Element): boolean => {
+        const valueCirculationRecipientElement = value.set.find((el) => (
+            (el.tagClass === ASN1TagClass.universal)
+            && (el.tagNumber === ASN1UniversalType.set)
+        ));
+        // This should not happen, because it is a required field.
+        if (!valueCirculationRecipientElement) {
+            return false;
+        }
+        const valueRecipientElement = valueCirculationRecipientElement.set.find((el) => (
+            (el.tagClass === ASN1TagClass.context)
+            && (el.tagNumber === 0)
+        ));
+        // This should not happen, because it is a required field.
+        if (!valueRecipientElement) {
+            return false;
+        }
+        return oRDescriptorSingleElementMatchTyped(assertion, valueRecipientElement);
+    },
+    undefined,
+    true,
+);
 
 export default circulationMemberSingleElementMatch;

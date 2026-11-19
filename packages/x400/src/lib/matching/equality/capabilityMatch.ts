@@ -1,7 +1,6 @@
 import { Buffer } from "node:buffer";
-import type { ASN1Element } from "@wildboar/asn1";
 import { DER } from "@wildboar/asn1/functional";
-import type { EqualityMatcher } from "@wildboar/x500";
+import { createEqualityMatcher, type Matcher } from "@wildboar/x500";
 import {
     _decode_Capability,
     _encode_Capability,
@@ -57,15 +56,15 @@ import {
 // SECURITY-CATEGORY ::= TYPE-IDENTIFIER
 
 export
-const capabilityMatch: EqualityMatcher = (
-    assertion: ASN1Element,
-    value: ASN1Element,
-): boolean => {
-    // We re-encode to DER and just do a byte-by-byte comparison.
-    // This will have the effect of sorting SET OF, and deconstructing strings.
-    const a = _encode_Capability(_decode_Capability(assertion), DER);
-    const v = _encode_Capability(_decode_Capability(value), DER);
-    return !Buffer.compare(a.value, v.value);
-}
+const capabilityMatch: Matcher = createEqualityMatcher(
+    _decode_Capability,
+    (assertion, value): boolean => {
+        // We re-encode to DER and just do a byte-by-byte comparison.
+        // This will have the effect of sorting SET OF, and deconstructing strings.
+        const a = _encode_Capability(assertion, DER);
+        const v = _encode_Capability(_decode_Capability(value), DER);
+        return !Buffer.compare(a.value, v.value);
+    },
+);
 
 export default capabilityMatch;

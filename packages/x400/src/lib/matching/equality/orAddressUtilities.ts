@@ -1,5 +1,5 @@
 import type { ASN1Element, INTEGER, OCTET_STRING } from "@wildboar/asn1";
-import { teletexToString, type EqualityMatcher } from "@wildboar/x500";
+import teletexToString from "@wildboar/teletex";
 import {
     MSString,
 } from "@wildboar/x400/MSMatchingRules";
@@ -183,7 +183,7 @@ import {
     terminal_type,
 } from "@wildboar/x400/MTSAbstractService";
 import _ from "lodash";
-import { x121dcc2iso2c } from "../../utils/x121dcc2iso.js";
+import { x121_dcc_country_code_to_iso_3166 } from "@wildboar/or-address";
 
 function bothUndefinedOrSame (a: Uint8Array | undefined, b: Uint8Array | undefined): boolean {
     return (
@@ -1117,8 +1117,9 @@ function orAddressToInfo (addr: ORAddress): ORAddressInfo | null {
     const bisa = addr.built_in_standard_attributes;
     if (bisa.country_name) {
         if ("x121_dcc_code" in bisa.country_name) {
-            ret.countryName = x121dcc2iso2c.get(bisa.country_name.x121_dcc_code)
-                ?? bisa.country_name.x121_dcc_code;
+            ret.countryName = x121_dcc_country_code_to_iso_3166(
+                Number.parseInt(bisa.country_name.x121_dcc_code, 10),
+            ) ?? bisa.country_name.x121_dcc_code;
         } else if ("iso_3166_alpha2_code" in bisa.country_name) {
             ret.countryName = bisa.country_name.iso_3166_alpha2_code;
         } else {

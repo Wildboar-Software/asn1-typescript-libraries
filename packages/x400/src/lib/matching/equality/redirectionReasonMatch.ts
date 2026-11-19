@@ -1,5 +1,4 @@
-import type { ASN1Element } from "@wildboar/asn1";
-import type { EqualityMatcher } from "@wildboar/x500";
+import { createEqualityMatcher, type Matcher } from "@wildboar/x500";
 import {
     _decode_RedirectionReason,
 } from "@wildboar/x400/MTSAbstractService";
@@ -8,18 +7,19 @@ import {
 } from "@wildboar/x400/MTSAbstractService";
 
 export
-const redirectionReasonMatch: EqualityMatcher = (
-    assertion: ASN1Element,
-    value: ASN1Element,
-): boolean => {
-    const a = _decode_RedirectionReason(assertion);
-    const v = _decode_RedirectionHistory(value);
-    for (const rh of v) {
-        if (rh.redirection_reason === a) {
-            return true;
+const redirectionReasonMatch: Matcher = createEqualityMatcher(
+    _decode_RedirectionReason,
+    (assertion, value): boolean => {
+        const v = _decode_RedirectionHistory(value);
+        for (const rh of v) {
+            if (rh.redirection_reason === assertion) {
+                return true;
+            }
         }
-    }
-    return false;
-}
+        return false;
+    },
+    undefined,
+    true,
+);
 
 export default redirectionReasonMatch;

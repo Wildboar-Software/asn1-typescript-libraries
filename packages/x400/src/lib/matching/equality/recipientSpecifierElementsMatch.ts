@@ -1,40 +1,32 @@
 import { ASN1Element, ASN1TagClass } from "@wildboar/asn1";
-import { orDescriptorElementsMatcher } from "./oRDescriptorElementsMatch.js";
-
-// RecipientSpecifier ::= SET {
-//     recipient              [0]  ORDescriptor,
-//     notification-requests  [1]  NotificationRequests DEFAULT {},
-//     reply-requested        [2]  BOOLEAN DEFAULT FALSE,
-//     recipient-extensions   [3]  RecipientExtensionsField OPTIONAL
-// }
-
-// ORDescriptor ::= SET {
-//     formal-name       ORName OPTIONAL,
-//     free-form-name    [0]  FreeFormName OPTIONAL,
-//     telephone-number  [1]  TelephoneNumber OPTIONAL
-// }
-
-// FreeFormName ::= TeletexString(SIZE (0..ub-free-form-name))
-
-// TelephoneNumber ::= PrintableString(SIZE (0..ub-telephone-number))
+import { createEqualityMatcher, type Matcher } from "@wildboar/x500";
+import {
+    _decode_RecipientSpecifier,
+    type RecipientSpecifier,
+} from "@wildboar/x400/IPMSInformationObjects";
+import { oRDescriptorElementsMatchTyped } from "./oRDescriptorElementsMatch.js";
 
 export
-function recipientSpecifierElementsMatcher(
-    assertion: ASN1Element,
+function recipientSpecifierElementsMatchTyped (
+    assertion: RecipientSpecifier,
     value: ASN1Element,
 ): boolean {
-    const assertionRecipientElement = assertion.set.find((el) => (
+    const recipient = value.set.find((el) => (
         (el.tagClass === ASN1TagClass.context)
         && (el.tagNumber === 0)
     ));
-    const valueRecipientElement = value.set.find((el) => (
-        (el.tagClass === ASN1TagClass.context)
-        && (el.tagNumber === 0)
-    ));
-    if (!valueRecipientElement || !assertionRecipientElement) { // This should not happen, because it is a required field.
+    if (!recipient) { // This should not happen, because it is a required field.
         return false;
     }
-    return orDescriptorElementsMatcher(assertionRecipientElement, valueRecipientElement);
-};
+    return oRDescriptorElementsMatchTyped(assertion.recipient, recipient);
+}
 
-export default recipientSpecifierElementsMatcher;
+export
+const recipientSpecifierElementsMatch: Matcher = createEqualityMatcher(
+    _decode_RecipientSpecifier,
+    recipientSpecifierElementsMatchTyped,
+    undefined,
+    false,
+);
+
+export default recipientSpecifierElementsMatch;
