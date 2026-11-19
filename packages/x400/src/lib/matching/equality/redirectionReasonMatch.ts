@@ -12,7 +12,8 @@ const redirectionReasonMatch: Matcher = createEqualityMatcher(
     (assertion, value): boolean => {
         const v = _decode_RedirectionHistory(value);
         for (const rh of v) {
-            if (rh.redirection_reason === assertion) {
+            // Loose equality so a number matches the same bigint.
+            if (rh.redirection_reason == assertion) {
                 return true;
             }
         }

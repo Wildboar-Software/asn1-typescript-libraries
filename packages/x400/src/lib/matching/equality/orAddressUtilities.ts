@@ -765,7 +765,8 @@ function process_extended_network_address_ext (info: ORAddressInfo, value: ASN1E
 
 function process_terminal_type_ext (info: ORAddressInfo, value: ASN1Element): ORAddressInfo | null {
     const newValue = _decode_TerminalType(value);
-    if ((info.terminalType !== undefined) && (info.terminalType !== newValue)) {
+    // Loose inequality so a number matches the same bigint.
+    if ((info.terminalType !== undefined) && (info.terminalType != newValue)) {
         return null;
     }
     info.terminalType = Number(newValue);
@@ -1022,9 +1023,12 @@ function compareBuiltInStandardAttributes (
             if (acc !== bcc) {
                 return false;
             }
-        } else if ("iso_3166_alpha2_code" in b.country_name) {
+        } else if (
+            ("iso_3166_alpha2_code" in a.country_name)
+            && ("iso_3166_alpha2_code" in b.country_name)
+        ) {
             const acc = a.country_name.iso_3166_alpha2_code;
-            const bcc = a.country_name.iso_3166_alpha2_code;
+            const bcc = b.country_name.iso_3166_alpha2_code;
             if (acc !== bcc) {
                 return false;
             }
@@ -1042,7 +1046,9 @@ function compareBuiltInStandardAttributes (
         const bstr = ("numeric" in b.administration_domain_name)
             ? b.administration_domain_name.numeric.trim().replace(/\s+/g, "")
             : b.administration_domain_name.printable.trim().toUpperCase();
-        return (astr === bstr);
+        if (astr !== bstr) {
+            return false;
+        }
     }
     if (a.network_address) {
         if (!b.network_address) {
@@ -1074,7 +1080,9 @@ function compareBuiltInStandardAttributes (
         const bstr = ("numeric" in b.private_domain_name)
             ? b.private_domain_name.numeric.trim().replace(/\s+/g, "")
             : b.private_domain_name.printable.trim().toUpperCase();
-        return (astr === bstr);
+        if (astr !== bstr) {
+            return false;
+        }
     }
     if (a.organization_name) {
         if (!b.organization_name) {
@@ -1177,7 +1185,7 @@ function orAddressToInfo (addr: ORAddress): ORAddressInfo | null {
     }
 
     for (const ext of addr.extension_attributes ?? []) {
-        const handler = handlers.get(ext.extension_attribute_type);
+        const handler = handlers.get(Number(ext.extension_attribute_type));
         if (!handler) {
             return null; // Extension not understood.
         }
@@ -1212,20 +1220,23 @@ function orAddressesMatch (a: ORAddress, b: ORAddress): boolean {
     if (!_.isEqual(comparableAInfo, comparableBInfo)) {
         return false;
     }
-    if (!!aInfo.extendedNetworkAddress && !!bInfo.extendedNetworkAddress) {
+    const aExt = aInfo.extendedNetworkAddress;
+    const bExt = bInfo.extendedNetworkAddress;
+    if (!!aExt !== !!bExt) {
         return false;
     }
-    if (
-        aInfo.extendedNetworkAddress
-        && bInfo.extendedNetworkAddress
-        && (aInfo.extendedNetworkAddress instanceof PresentationAddress)
-    ) {
-        if (!(bInfo.extendedNetworkAddress instanceof PresentationAddress)) {
+    if (aExt && bExt) {
+        const aIsPsap = aExt instanceof PresentationAddress;
+        const bIsPsap = bExt instanceof PresentationAddress;
+        if (aIsPsap || bIsPsap) {
+            if (!aIsPsap || !bIsPsap) {
+                return false;
+            }
+            return presentationAddressMatch(aExt, bExt);
+        }
+        if (aExt[0] !== bExt[0] || aExt[1] !== bExt[1]) {
             return false;
         }
-        const presa = aInfo.extendedNetworkAddress;
-        const presb = bInfo.extendedNetworkAddress;
-        return presentationAddressMatch(presa, presb);
     }
     return true;
 }

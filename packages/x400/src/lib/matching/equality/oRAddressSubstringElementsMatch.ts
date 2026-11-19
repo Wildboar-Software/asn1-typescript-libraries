@@ -8,6 +8,13 @@ import { strict as assert } from "node:assert";
 
 export
 function isSubstringSubset (value: unknown, assertion: unknown): boolean {
+    if (
+        (typeof value === "number" || typeof value === "bigint")
+        && (typeof assertion === "number" || typeof assertion === "bigint")
+    ) {
+        // Loose equality so a number matches the same bigint.
+        return value == assertion;
+    }
     const typeofValue = typeof value;
     const typeofAssertion = typeof assertion;
     if (typeofValue !== typeofAssertion) {

@@ -90,9 +90,9 @@ const addressCapabilitiesMatch: Matcher = createEqualityMatcher(
                 return false;
             }
             if (
-                existingCap.maximum_content_length
-                && cap.maximum_content_length
-                && (Number(existingCap.maximum_content_length) < Number(cap.maximum_content_length))
+                existingCap.maximum_content_length !== undefined
+                && cap.maximum_content_length !== undefined
+                && (existingCap.maximum_content_length < cap.maximum_content_length)
             ) {
                 return false;
             }

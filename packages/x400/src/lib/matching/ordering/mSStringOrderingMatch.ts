@@ -1,4 +1,5 @@
 import { ASN1Element } from "@wildboar/asn1";
+import { compareCodePoints } from "@wildboar/dn";
 import {
     createOrderingMatcher,
     type Matcher,
@@ -21,7 +22,7 @@ const mSStringOrderingMatch: Matcher = createOrderingMatcher(
         const v = (typeof value === "string")
             ? value
             : normalizeCaseIgnoreMSString(msStringToString(_decode_MSString(value)));
-        return assertion.localeCompare(v);
+        return compareCodePoints(assertion, v);
     },
     normalizeCaseIgnoreMSString,
 );

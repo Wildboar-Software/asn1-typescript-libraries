@@ -58,15 +58,18 @@ const mTSIdentifierMatch: Matcher = createEqualityMatcher(
         : aadn.printable.replace(/\s+/g, " ");
     const vadnStr = ("numeric" in vadn)
         ? vadn.numeric.trim().replace(/\s+/g, "")
-        : vadn.printable.replace(/\s+/g, " ");;
+        : vadn.printable.replace(/\s+/g, " ");
     if (aadnStr.toUpperCase() !== vadnStr.toUpperCase()) {
         return false;
     }
 
     // Private Domain Identifier Comparison
-    if (aglob.private_domain_identifier) {
-        const apdn = aglob.administration_domain_name;
-        const vpdn = vglob.administration_domain_name;
+    if (!!aglob.private_domain_identifier !== !!vglob.private_domain_identifier) {
+        return false;
+    }
+    if (aglob.private_domain_identifier && vglob.private_domain_identifier) {
+        const apdn = aglob.private_domain_identifier;
+        const vpdn = vglob.private_domain_identifier;
         const apdnStr = ("numeric" in apdn)
             ? apdn.numeric.trim().replace(/\s+/g, "")
             : apdn.printable.replace(/\s+/g, " ");

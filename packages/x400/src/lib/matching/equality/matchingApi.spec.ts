@@ -61,6 +61,14 @@ describe("X.400 matchers decode the assertion", () => {
         expect(mSStringOrderingMatch(ms("a"), stored(ms("a")), undefined, MATCH_FLAG_ORDERING_OR_EQUAL)).toBe(true);
     });
 
+    test("mSStringOrderingMatch uses code points, not localeCompare", () => {
+        // Uppercased U+00C9 É follows U+0046 F. localeCompare orders É before F.
+        const eAcute = _encode_MSString({ bmp: "é" }, DER);
+        const f = _encode_MSString({ bmp: "f" }, DER);
+        expect(mSStringOrderingMatch(eAcute, stored(f))).toBe(true);
+        expect(mSStringOrderingMatch(f, stored(eAcute))).toBe(false);
+    });
+
     test("name matching is refused when the assertion syntax differs from the value syntax", () => {
         expect(oRNameSingleElementMatch(
             ms("smith"),
