@@ -10,51 +10,30 @@ import { namingEqualityMatcher } from "../namingEqualityMatcher.js";
 
 export
 const oRNameExactMatch: Matcher = createEqualityMatcher(
-    _decode_ORName,
+    (el) => {
+        const decoded = _decode_ORName(el);
+        if (decoded.isEmpty()) {
+            throw new Error("oRNameExactMatch: assertion is empty");
+        }
+        return decoded;
+    },
     (
         assertion,
         value,
         getEqualityMatcher?: (attributeType: OBJECT_IDENTIFIER) => Matcher | undefined,
         flags?: number,
-    ): boolean => {
+    ): boolean | undefined => {
         const a = assertion;
         const v = _decode_ORName(value);
+        if (v.isEmpty()) {
+            return undefined;
+        }
         const directoryNameAsserted: boolean = !!a.directory_name;
         const directoryNamePresent: boolean = !!v.directory_name;
-        const orAddressAsserted: boolean = !!(
-            a.built_in_domain_defined_attributes?.length
-            || a.extension_attributes?.length
-            || a.built_in_standard_attributes.administration_domain_name
-            || a.built_in_standard_attributes.country_name
-            || a.built_in_standard_attributes.network_address
-            || a.built_in_standard_attributes.numeric_user_identifier
-            || a.built_in_standard_attributes.organization_name
-            || a.built_in_standard_attributes.organizational_unit_names
-            || a.built_in_standard_attributes.personal_name
-            || a.built_in_standard_attributes.private_domain_name
-            || a.built_in_standard_attributes.terminal_identifier
-        );
-        const orAddressPresent: boolean = !!(
-            v.built_in_domain_defined_attributes?.length
-            || v.extension_attributes?.length
-            || v.built_in_standard_attributes.administration_domain_name
-            || v.built_in_standard_attributes.country_name
-            || v.built_in_standard_attributes.network_address
-            || v.built_in_standard_attributes.numeric_user_identifier
-            || v.built_in_standard_attributes.organization_name
-            || v.built_in_standard_attributes.organizational_unit_names
-            || v.built_in_standard_attributes.personal_name
-            || v.built_in_standard_attributes.private_domain_name
-            || v.built_in_standard_attributes.terminal_identifier
-        );
-        if (directoryNameAsserted && !directoryNamePresent) {
-            return false;
-        }
-        if (orAddressAsserted && !orAddressPresent) {
+        if (directoryNameAsserted !== directoryNamePresent) {
             return false;
         }
         if (directoryNameAsserted) {
-            const v = _decode_ORName(value);
             if (!v.directory_name) {
                 return false;
             }
@@ -66,12 +45,13 @@ const oRNameExactMatch: Matcher = createEqualityMatcher(
             if (!namesMatch) {
                 return false;
             }
-            return orAddressesMatch(a, v);
         }
-        if (orAddressAsserted) {
-            return orAddressesMatch(a, v);
+        if (a.isEmptyOrAddress() !== v.isEmptyOrAddress())
+            return false;
+        if (a.isEmptyOrAddress()) {
+            return true;
         }
-        return true;
+        return orAddressesMatch(a, v);
     },
 );
 

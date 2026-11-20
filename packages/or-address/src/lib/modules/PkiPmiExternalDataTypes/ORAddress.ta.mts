@@ -418,6 +418,18 @@ export class ORAddress {
         return orAddressFromString(s, options);
     }
 
+    /**
+     * @summary Checks if the ORAddress is empty.
+     * @returns `true` if the ORAddress is empty.
+     * @public
+     * @method
+     */
+    public isEmpty(): boolean {
+        return this.built_in_standard_attributes.isEmpty()
+            && !this.built_in_domain_defined_attributes?.length
+            && !this.extension_attributes?.length;
+    }
+
 }
 
 /**

@@ -4,7 +4,6 @@ import {
     _decode_ORAddress,
 } from "@wildboar/x400/MTSAbstractService";
 import { ORAddressInfo, orAddressToInfo } from "./orAddressUtilities.js";
-import { strict as assert } from "node:assert";
 
 export
 function isSubstringSubset (value: unknown, assertion: unknown): boolean {
@@ -20,9 +19,7 @@ function isSubstringSubset (value: unknown, assertion: unknown): boolean {
     if (typeofValue !== typeofAssertion) {
         return false;
     }
-    if (typeofValue === "string") {
-        assert(typeof value === "string");
-        assert(typeof assertion === "string");
+    if (typeof value === "string" && typeof assertion === "string") {
         const a = assertion.trim().replace(/\s+/g, " ").toUpperCase();
         const v = value.trim().replace(/\s+/g, " ").toUpperCase();
         if (v.indexOf(a) <= -1) {
@@ -30,7 +27,9 @@ function isSubstringSubset (value: unknown, assertion: unknown): boolean {
         }
     }
     if (typeof value === "object") {
-        assert(typeof assertion === "object");
+        if (typeof assertion !== "object") {
+            return false;
+        }
         if (!value) {
             return true;
         }

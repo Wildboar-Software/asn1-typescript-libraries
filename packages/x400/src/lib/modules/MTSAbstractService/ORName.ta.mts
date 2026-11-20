@@ -122,6 +122,26 @@ export class ORName extends ORAddress {
             _o.directory_name
         );
     }
+
+    /**
+     * @summary Checks if the ORName is empty: no ORAddress and no directory name.
+     * @returns `true` if the ORName is empty.
+     * @public
+     * @method
+     */
+    public override isEmpty(): boolean {
+        return super.isEmpty() && !this.directory_name;
+    }
+
+    /**
+     * @summary Checks if the ORName has no ORAddress.
+     * @returns `true` if the ORName has no ORAddress
+     * @public
+     * @method
+     */
+    public isEmptyOrAddress(): boolean {
+        return super.isEmpty();
+    }
 }
 
 /**

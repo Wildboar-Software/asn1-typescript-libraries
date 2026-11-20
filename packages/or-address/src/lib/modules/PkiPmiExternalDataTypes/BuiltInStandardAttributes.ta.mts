@@ -416,6 +416,24 @@ export class BuiltInStandardAttributes {
     }
 
     /**
+     * @summary Checks if the built-in standard attributes are empty.
+     * @returns `true` if the built-in standard attributes are empty.
+     * @public
+     * @function
+     */
+    public isEmpty(): boolean {
+        return !this.country_name
+            && !this.administration_domain_name
+            && !this.network_address
+            && !this.terminal_identifier
+            && !this.private_domain_name
+            && !this.organization_name
+            && !this.numeric_user_identifier
+            && !this.personal_name
+            && !this.organizational_unit_names?.length;
+    }
+
+    /**
      * @summary ISO 3166-1 alpha-2 country code for this address.
      * @description
      *

@@ -1,6 +1,6 @@
-import { defineConfig } from "vitest/config";
+import { type ViteUserConfigFnObject, defineConfig } from "vitest/config";
 
-export default defineConfig(() => ({
+const config: ViteUserConfigFnObject = defineConfig(() => ({
     root: import.meta.dirname,
     cacheDir: "../../node_modules/.vite/packages/x400",
     test: {
@@ -12,3 +12,5 @@ export default defineConfig(() => ({
         reporters: ["default"],
     },
 }));
+
+export default config;
