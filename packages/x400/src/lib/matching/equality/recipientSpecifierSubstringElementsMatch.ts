@@ -15,7 +15,7 @@ function recipientSpecifierSubstringElementsMatchTyped (
     value: ASN1Element,
     getEqualityMatcher?: (attributeType: OBJECT_IDENTIFIER) => Matcher | undefined,
     flags?: number,
-): boolean {
+): boolean | undefined {
     const recipient = value.set.find((el) => (
         (el.tagClass === ASN1TagClass.context)
         && (el.tagNumber === 0)

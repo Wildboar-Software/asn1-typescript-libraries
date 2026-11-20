@@ -2,14 +2,18 @@
   "extends": "./tsconfig.json",
   "compilerOptions": {
     "outDir": "../../dist/out-tsc",
-
-    "types": ["jest", "node"]
+    "types": [
+      "vitest/globals",
+      "vitest/importMeta",
+      "vite/client",
+      "node",
+      "vitest"
+    ],
   },
   "include": [
+    "**/*.mts",
+    "**/*.ts",
     "**/*.spec.mts",
-
-
-
-
+    "**/*.spec.ts"
   ]
 }

@@ -24,7 +24,7 @@ function oRDescriptorSubstringElementsMatchTyped (
     value: ASN1Element,
     getEqualityMatcher?: (attributeType: OBJECT_IDENTIFIER) => Matcher | undefined,
     flags?: number,
-): boolean {
+): boolean | undefined {
     const a = assertion;
     const v = _decode_ORDescriptor(value);
     if (!!a.formal_name && !!v.formal_name) {

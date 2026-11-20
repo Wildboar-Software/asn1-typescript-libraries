@@ -29,7 +29,7 @@ function circulationMemberSubstringElementsMatchTyped (
     value: ASN1Element,
     getEqualityMatcher?: (attributeType: OBJECT_IDENTIFIER) => Matcher | undefined,
     flags?: number,
-): boolean {
+): boolean | undefined {
     const recipient = valueRecipientElement(value);
     // This should not happen, because it is a required field.
     if (!recipient) {

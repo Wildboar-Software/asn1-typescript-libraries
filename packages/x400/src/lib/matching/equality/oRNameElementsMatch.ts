@@ -1,7 +1,11 @@
 import type { ASN1Element, OBJECT_IDENTIFIER } from "@wildboar/asn1";
 import { createEqualityMatcher, type Matcher } from "@wildboar/x500";
-import { _decode_ORName, type ORName } from "@wildboar/x400/MTSAbstractService";
-import { MATCH_FLAG_ELEMENTS_MATCH, oRNameMatchTyped } from "./oRNameMatch.js";
+import { type ORName } from "@wildboar/x400/MTSAbstractService";
+import {
+    decodeNonEmptyORNameAssertion,
+    MATCH_FLAG_ELEMENTS_MATCH,
+    oRNameMatchTyped,
+} from "./oRNameMatch.js";
 
 export
 function oRNameElementsMatchTyped (
@@ -24,7 +28,7 @@ function oRNameElementsMatchTyped (
 
 export
 const oRNameElementsMatch: Matcher = createEqualityMatcher(
-    _decode_ORName,
+    decodeNonEmptyORNameAssertion("oRNameElementsMatch"),
     oRNameElementsMatchTyped,
 );
 

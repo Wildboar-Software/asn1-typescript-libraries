@@ -419,15 +419,30 @@ export class ORAddress {
     }
 
     /**
+     * @summary Checks if the ORAddress has no attributes.
+     * @description
+     * 
+     * There is no difference between this and {@link isEmpty}, but this was
+     * provided for polymorphism purposes.
+     * 
+     * @returns `true` if the ORAddress has no attributes.
+     * @public
+     * @method
+     */
+    public isEmptyOrAddress(): boolean {
+        return this.built_in_standard_attributes.isEmpty()
+            && !this.built_in_domain_defined_attributes?.length
+            && !this.extension_attributes?.length;
+    }
+
+    /**
      * @summary Checks if the ORAddress is empty.
      * @returns `true` if the ORAddress is empty.
      * @public
      * @method
      */
     public isEmpty(): boolean {
-        return this.built_in_standard_attributes.isEmpty()
-            && !this.built_in_domain_defined_attributes?.length
-            && !this.extension_attributes?.length;
+        return this.isEmptyOrAddress();
     }
 
 }

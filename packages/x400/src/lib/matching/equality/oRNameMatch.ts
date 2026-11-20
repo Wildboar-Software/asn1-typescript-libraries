@@ -15,8 +15,19 @@ import {
     orAddressIsSubstringSubset as oRAddressSubstringElementsMatchTyped,
 } from "./oRAddressSubstringElementsMatch.js";
 
-export const MATCH_FLAG_ELEMENTS_MATCH = 1 << 31;
-export const MATCH_FLAG_SUBSTRING_MATCH = 1 << 30;
+export const MATCH_FLAG_ELEMENTS_MATCH: number = 1 << 29;
+export const MATCH_FLAG_SUBSTRING_MATCH: number = 1 << 30;
+
+export
+function decodeNonEmptyORNameAssertion (rule: string): (el: ASN1Element) => ORName {
+    return (el: ASN1Element): ORName => {
+        const decoded = _decode_ORName(el);
+        if (decoded.isEmpty()) {
+            throw new Error(`${rule}: assertion is empty`);
+        }
+        return decoded;
+    };
+}
 
 export
 function matchORNames (
@@ -27,10 +38,13 @@ function matchORNames (
 ): boolean {
     const a = assertion;
     const v = value;
+    const innerFlags = flags & ~(MATCH_FLAG_ELEMENTS_MATCH | MATCH_FLAG_SUBSTRING_MATCH);
+    const aHasDN: boolean = !!a.directory_name?.rdnSequence.length;
+    const vHasDN: boolean = !!v.directory_name?.rdnSequence.length;
     // a) If the presented OR-name contains only an OR-address, the rule matches if the presented value matches an
     // OR-address in the stored value according to the OR-address-match rule.
     const presentedContainsOnlyORAddress: boolean = (
-        !a.directory_name
+        !aHasDN
         && !a.isEmptyOrAddress()
     );
     if (presentedContainsOnlyORAddress) {
@@ -49,30 +63,30 @@ function matchORNames (
     // directory-name in the stored value according to the Distinguished Name Match rule.
     const presentedContainsOnlyDirectoryName: boolean = (
         a.isEmptyOrAddress()
-        && !!a.directory_name
+        && aHasDN
     );
     if (presentedContainsOnlyDirectoryName) {
-        if (!v.directory_name || !a.directory_name) {
+        if (!vHasDN || !v.directory_name || !a.directory_name) {
             return false;
         }
         return compareRDNSequence(
             a.directory_name.rdnSequence,
             v.directory_name.rdnSequence,
-            namingEqualityMatcher(getEqualityMatcher, flags),
+            namingEqualityMatcher(getEqualityMatcher, innerFlags),
         );
     }
     // c) If the presented OR-name contains both an OR-address and a directory-name, the rule matches if either of
     // the rules described above matches.
     const presentedContainsBothORAddressAndDirectoryName: boolean = (
-        !!a.directory_name
+        aHasDN
         && !a.isEmptyOrAddress()
     );
     if (presentedContainsBothORAddressAndDirectoryName) {
-        if (v.directory_name && a.directory_name) {
+        if (vHasDN && v.directory_name && a.directory_name) {
             const namesMatch = compareRDNSequence(
                 a.directory_name.rdnSequence,
                 v.directory_name.rdnSequence,
-                namingEqualityMatcher(getEqualityMatcher, flags),
+                namingEqualityMatcher(getEqualityMatcher, innerFlags),
             );
             if (namesMatch) {
                 return true;
@@ -107,13 +121,7 @@ function oRNameMatchTyped (
 
 export
 const oRNameMatch: Matcher = createEqualityMatcher(
-    (el) => {
-        const decoded = _decode_ORName(el);
-        if (decoded.isEmpty()) {
-            throw new Error("oRNameMatch: assertion is empty");
-        }
-        return decoded;
-    },
+    decodeNonEmptyORNameAssertion("oRNameMatch"),
     oRNameMatchTyped,
 );
 

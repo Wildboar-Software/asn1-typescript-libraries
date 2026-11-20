@@ -7,16 +7,11 @@ import {
 import { _decode_ORName } from "@wildboar/x400/MTSAbstractService";
 import { orAddressesMatch } from "./orAddressUtilities.js";
 import { namingEqualityMatcher } from "../namingEqualityMatcher.js";
+import { decodeNonEmptyORNameAssertion } from "./oRNameMatch.js";
 
 export
 const oRNameExactMatch: Matcher = createEqualityMatcher(
-    (el) => {
-        const decoded = _decode_ORName(el);
-        if (decoded.isEmpty()) {
-            throw new Error("oRNameExactMatch: assertion is empty");
-        }
-        return decoded;
-    },
+    decodeNonEmptyORNameAssertion("oRNameExactMatch"),
     (
         assertion,
         value,
@@ -28,17 +23,17 @@ const oRNameExactMatch: Matcher = createEqualityMatcher(
         if (v.isEmpty()) {
             return undefined;
         }
-        const directoryNameAsserted: boolean = !!a.directory_name;
-        const directoryNamePresent: boolean = !!v.directory_name;
+        const directoryNameAsserted: boolean = !!a.directory_name?.rdnSequence.length;
+        const directoryNamePresent: boolean = !!v.directory_name?.rdnSequence.length;
         if (directoryNameAsserted !== directoryNamePresent) {
             return false;
         }
         if (directoryNameAsserted) {
-            if (!v.directory_name) {
+            if (!v.directory_name || !a.directory_name) {
                 return false;
             }
             const namesMatch = compareRDNSequence(
-                a.directory_name!.rdnSequence,
+                a.directory_name.rdnSequence,
                 v.directory_name.rdnSequence,
                 namingEqualityMatcher(getEqualityMatcher, flags),
             );
@@ -46,8 +41,9 @@ const oRNameExactMatch: Matcher = createEqualityMatcher(
                 return false;
             }
         }
-        if (a.isEmptyOrAddress() !== v.isEmptyOrAddress())
+        if (a.isEmptyOrAddress() !== v.isEmptyOrAddress()) {
             return false;
+        }
         if (a.isEmptyOrAddress()) {
             return true;
         }
