@@ -5,15 +5,14 @@ import {
     type Matcher,
 } from "@wildboar/x500";
 import type { FilterItem_substrings_strings_Item } from "@wildboar/x500/DirectoryAbstractService";
-import { _decode_MSString } from "@wildboar/x400/MSMatchingRules";
-import { msStringToString } from "../equality/orAddressUtilities.js";
+import { decodeMSStringElement } from "../equality/orAddressUtilities.js";
 
 type SingleSubstring =
     | AssertedSubstring<string>
     | { unrecognized: true };
 
 function msStringElementToString (el: ASN1Element): string {
-    return msStringToString(_decode_MSString(el));
+    return decodeMSStringElement(el);
 }
 
 function normalizeSingleSubstrings (assertion: SingleSubstring[]): SingleSubstring[] {
@@ -35,7 +34,7 @@ export
 const mSSingleSubstringMatch: Matcher = createSubstringsMatcher(
     (el: ASN1Element): SingleSubstring[] => [{ any_: msStringElementToString(el) }],
     (assertion: SingleSubstring[], value): boolean => {
-        const v: string = msStringToString(_decode_MSString(value)).toUpperCase();
+        const v: string = decodeMSStringElement(value).normalize("NFC").toUpperCase();
         for (const sub of assertion) {
             if ("initial" in sub) {
                 if (!v.startsWith(sub.initial)) {

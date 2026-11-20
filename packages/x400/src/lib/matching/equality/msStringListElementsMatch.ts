@@ -8,16 +8,14 @@ import {
 import * as $ from "@wildboar/asn1/functional";
 import { createEqualityMatcher, type Matcher } from "@wildboar/x500";
 import {
-    _decode_MSString,
-    type MSString,
-} from "@wildboar/x400/MSMatchingRules";
-import { msStringToString } from "./orAddressUtilities.js";
+    decodeMSStringElement,
+    normalizeMSString,
+} from "./orAddressUtilities.js";
 
-const decodeMSStringSequence = $._decodeSequenceOf<MSString>(() => _decode_MSString);
+const decodeMSStringSequence = $._decodeSequenceOf<string>(() => decodeMSStringElement);
 
 function normalizeCaseIgnoreElement (text: string): string {
-    const trimmed = text.trim().replace(/\s+/g, " ").toUpperCase();
-    return trimmed.length === 0 ? " " : trimmed;
+    return normalizeMSString(text, true);
 }
 
 function decodeMSStringList (el: ASN1Element): string[] {
@@ -27,8 +25,7 @@ function decodeMSStringList (el: ASN1Element): string[] {
     ) {
         throw new ASN1ConstructionError("mSStringListElementsMatch: expected SEQUENCE", el);
     }
-    return decodeMSStringSequence(el).map((ms) => {
-        const str = msStringToString(ms);
+    return decodeMSStringSequence(el).map((str) => {
         if (str.length === 0) {
             throw new ASN1CharactersError("mSStringListElementsMatch: empty MSString", el);
         }
@@ -55,7 +52,7 @@ const mSStringListElementsMatch: Matcher = createEqualityMatcher(
             return false;
         }
         for (let i = 0; i < assertion.length; i++) {
-            const raw = msStringToString(_decode_MSString(vElements[i]));
+            const raw = decodeMSStringElement(vElements[i]);
             if (raw.length === 0) {
                 // This is required by type constraints of the MSString type.
                 throw new ASN1CharactersError("mSStringListElementsMatch: empty MSString", vElements[i]);

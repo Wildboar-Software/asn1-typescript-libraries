@@ -1,21 +1,16 @@
 import type { ASN1Element } from "@wildboar/asn1";
 import { createEqualityMatcher, type Matcher } from "@wildboar/x500";
-import { _decode_MSString } from "@wildboar/x400/MSMatchingRules";
-import { msStringToString } from "./orAddressUtilities.js";
-
-function decodeMSStringAssertion (el: ASN1Element): string {
-    return msStringToString(_decode_MSString(el));
-}
+import { decodeMSStringElement, normalizeMSString } from "./orAddressUtilities.js";
 
 function normalizeCaseIgnoreMSString (assertion: string): string {
-    return assertion.trim().replace(/\s+/g, " ").toUpperCase();
+    return normalizeMSString(assertion, true);
 }
 
 export
 const mSStringMatch: Matcher = createEqualityMatcher(
-    decodeMSStringAssertion,
+    decodeMSStringElement,
     (assertion, value: ASN1Element): boolean => {
-        const v = normalizeCaseIgnoreMSString(msStringToString(_decode_MSString(value)));
+        const v = normalizeCaseIgnoreMSString(decodeMSStringElement(value));
         return assertion === v;
     },
     undefined,

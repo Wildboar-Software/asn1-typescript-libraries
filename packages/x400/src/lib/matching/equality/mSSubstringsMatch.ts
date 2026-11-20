@@ -1,8 +1,12 @@
 import { ASN1Element } from "@wildboar/asn1";
 import { createEqualityMatcher, type Matcher } from "@wildboar/x500";
 import type { FilterItem_substrings_strings_Item } from "@wildboar/x500/DirectoryAbstractService";
-import { _decode_MSString, _decode_SubstringAssertion } from "@wildboar/x400/MSMatchingRules";
-import { msStringToString } from "./orAddressUtilities.js";
+import { _decode_SubstringAssertion } from "@wildboar/x400/MSMatchingRules";
+import {
+    decodeMSStringElement,
+    msStringToString,
+    normalizeMSString,
+} from "./orAddressUtilities.js";
 
 type MSSubstring =
     | { initial: string }
@@ -13,7 +17,7 @@ type MSSubstring =
 function substringFromMSString (
     element: ASN1Element,
 ): string {
-    return msStringToString(_decode_MSString(element));
+    return decodeMSStringElement(element);
 }
 
 function decodeMSSubstrings (el: ASN1Element): MSSubstring[] {
@@ -70,10 +74,7 @@ export
 const mSSubstringsMatch: Matcher = createEqualityMatcher(
     decodeMSSubstrings,
     (assertion, value: ASN1Element): boolean => {
-        const v: string = msStringToString(_decode_MSString(value))
-            .trim()
-            .replace(/\s+/g, " ")
-            .toUpperCase();
+        const v: string = normalizeMSString(decodeMSStringElement(value), true);
         let lastAnyMatch: number = -1;
         for (const sa of assertion) {
             if ("initial" in sa) {

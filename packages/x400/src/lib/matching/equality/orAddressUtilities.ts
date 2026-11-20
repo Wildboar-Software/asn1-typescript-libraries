@@ -1,4 +1,11 @@
-import type { ASN1Element, INTEGER } from "@wildboar/asn1";
+import {
+    ASN1ConstructionError,
+    ASN1TagClass,
+    ASN1UniversalType,
+    type ASN1Element,
+    type INTEGER,
+} from "@wildboar/asn1";
+import * as $ from "@wildboar/asn1/functional";
 import teletexToString from "@wildboar/teletex";
 import {
     type BuiltInStandardAttributes,
@@ -7,6 +14,7 @@ import {
     type PersonalName,
     type PersonalNameJSON,
     UniversalOrBMPString,
+    _decode_UniversalOrBMPString,
     common_name,
     extended_network_address,
     extension_OR_address_components,
@@ -1010,6 +1018,48 @@ function msStringToString (ms: MSString): string {
         return ms.bmp;
     } else {
         return "?";
+    }
+}
+
+/**
+ * Decode an `ASN1Element` representing an `MSString` assertion or any
+ * attribute syntax matched by `mSString*` / `mSSubstringsMatch` rules
+ * (including `UniversalOrBMPString` used by X.420 `ExtendedSubject`,
+ * `ManualHandlingInstruction`, and `OriginatorsReference`, as well as
+ * `NumericString`, `IA5String`, and `UTF8String`).
+ */
+export
+function decodeMSStringElement (el: ASN1Element): string {
+    if (el.tagClass !== ASN1TagClass.universal) {
+        throw new ASN1ConstructionError(
+            `Expected UNIVERSAL string or UniversalOrBMPString SET, got tag class ${el.tagClass}`,
+            el,
+        );
+    }
+    switch (el.tagNumber) {
+        case ASN1UniversalType.printableString:
+            return $._decodePrintableString(el);
+        case ASN1UniversalType.teletexString:
+            return teletexToString($._decodeTeletexString(el));
+        case ASN1UniversalType.generalString:
+            return $._decodeGeneralString(el);
+        case ASN1UniversalType.universalString:
+            return $._decodeUniversalString(el);
+        case ASN1UniversalType.bmpString:
+            return $._decodeBMPString(el);
+        case ASN1UniversalType.set:
+            return _decode_UniversalOrBMPString(el).toString();
+        case ASN1UniversalType.numericString:
+            return $._decodeNumericString(el);
+        case ASN1UniversalType.ia5String:
+            return $._decodeIA5String(el);
+        case ASN1UniversalType.utf8String:
+            return $._decodeUTF8String(el);
+        default:
+            throw new ASN1ConstructionError(
+                `Unsupported MSString element tag [UNIVERSAL ${el.tagNumber}]`,
+                el,
+            );
     }
 }
 
