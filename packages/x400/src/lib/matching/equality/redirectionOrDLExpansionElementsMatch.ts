@@ -1,14 +1,20 @@
-import { createEqualityMatcher, type Matcher } from "@wildboar/x500";
-import { _decode_ORAddressAndOptionalDirectoryName } from "@wildboar/x400/MTSAbstractService";
+import {
+    createEqualityMatcher,
+    type Matcher,
+    type TypedEquationFunction,
+} from "@wildboar/x500";
+import type { ORAddressAndOptionalDirectoryName } from "@wildboar/x400/MTSAbstractService";
+import { decodeNonEmptyORNameAssertion } from "./oRNameMatch.js";
 import { oRNameElementsMatchTyped } from "./oRNameElementsMatch.js";
 import { matchRedirectionOrDLExpansionHistory } from "./redirectionOrDLExpansionMatchCommon.js";
 
 export
-const redirectionOrDLExpansionElementsMatchTyped = matchRedirectionOrDLExpansionHistory(oRNameElementsMatchTyped);
+const redirectionOrDLExpansionElementsMatchTyped: TypedEquationFunction<ORAddressAndOptionalDirectoryName> =
+    matchRedirectionOrDLExpansionHistory(oRNameElementsMatchTyped);
 
 export
 const redirectionOrDLExpansionElementsMatch: Matcher = createEqualityMatcher(
-    _decode_ORAddressAndOptionalDirectoryName,
+    decodeNonEmptyORNameAssertion("redirectionOrDLExpansionElementsMatch"),
     redirectionOrDLExpansionElementsMatchTyped,
     undefined,
     true,

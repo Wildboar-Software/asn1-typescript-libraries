@@ -1,4 +1,8 @@
-import { createEqualityMatcher, type Matcher } from "@wildboar/x500";
+import {
+    createEqualityMatcher,
+    type Matcher,
+    type TypedEquationFunction,
+} from "@wildboar/x500";
 import {
     decodeORNameSingleElementAssertion,
     normalizeORNameSingleElementAssertion,
@@ -7,7 +11,8 @@ import {
 import { matchRedirectionOrDLExpansionHistory } from "./redirectionOrDLExpansionMatchCommon.js";
 
 export
-const redirectionOrDLExpansionSingleElementMatchTyped = matchRedirectionOrDLExpansionHistory(oRNameSingleElementMatchTyped);
+const redirectionOrDLExpansionSingleElementMatchTyped: TypedEquationFunction<string> =
+    matchRedirectionOrDLExpansionHistory(oRNameSingleElementMatchTyped);
 
 export
 const redirectionOrDLExpansionSingleElementMatch: Matcher = createEqualityMatcher(
