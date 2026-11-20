@@ -1,65 +1,53 @@
+import type { ASN1Element } from "@wildboar/asn1";
 import { createEqualityMatcher, type Matcher } from "@wildboar/x500";
 import {
     ORAddress,
     _decode_ORAddress,
 } from "@wildboar/x400/MTSAbstractService";
-import { ORAddressInfo, orAddressToInfo, recursivelyNormalize } from "./orAddressUtilities.js";
-import { PresentationAddress } from "@wildboar/x500/SelectedAttributeTypes";
-import _ from "lodash";
-import { presentationAddressMatchTyped } from "@wildboar/x500/matching/equality";
+import {
+    compareORAddressInfo,
+    type ORAddressInfo,
+    orAddressToInfo,
+} from "./orAddressUtilities.js";
 
 export
 function orAddressIsSubset (asserted: ORAddress, value: ORAddress): boolean {
+    if (asserted.isEmptyOrAddress() || value.isEmptyOrAddress()) {
+        return undefined;
+    }
     const aInfo: ORAddressInfo | null = orAddressToInfo(asserted);
     const bInfo: ORAddressInfo | null = orAddressToInfo(value);
-    if (!aInfo) {
-        return false;
+    if (!aInfo || !bInfo) {
+        return undefined;
     }
-    if (!bInfo) {
-        return false;
+    return compareORAddressInfo(aInfo, bInfo, "elements");
+}
+
+function decodeORAddressElementsAssertion (el: ASN1Element): ORAddressInfo {
+    const decoded = _decode_ORAddress(el);
+    if (decoded.isEmptyOrAddress()) {
+        throw new Error("oRAddressElementsMatch: assertion is empty");
     }
-    const comparableAInfo: ORAddressInfo = recursivelyNormalize({
-        ...aInfo,
-        extendedNetworkAddress: undefined,
-    });
-    const comparableBInfo: ORAddressInfo = recursivelyNormalize({
-        ...bInfo,
-        extendedNetworkAddress: undefined,
-    });
-    if (!_.isMatch(comparableBInfo, comparableAInfo)) { // Intentionally swapped.
-        return false;
+    const info = orAddressToInfo(decoded);
+    if (!info) {
+        throw new Error("oRAddressElementsMatch: malformed ORAddress assertion");
     }
-    if (aInfo.extendedNetworkAddress) {
-        if (!bInfo.extendedNetworkAddress) {
-            return false;
-        }
-        if (Array.isArray(aInfo.extendedNetworkAddress)) {
-            if (!Array.isArray(bInfo.extendedNetworkAddress)) {
-                return false;
-            }
-            if (!_.isEqual(aInfo.extendedNetworkAddress, bInfo.extendedNetworkAddress)) {
-                return false;
-            }
-        } else if (aInfo.extendedNetworkAddress instanceof PresentationAddress) {
-            if (!(bInfo.extendedNetworkAddress instanceof PresentationAddress)) {
-                return false;
-            }
-            const presa = aInfo.extendedNetworkAddress;
-            const presb = bInfo.extendedNetworkAddress;
-            return presentationAddressMatchTyped(presa, presb);
-        } else {
-            return false;
-        }
-    }
-    return true;
+    return info;
 }
 
 export
 const oRAddressElementsMatch: Matcher = createEqualityMatcher(
-    _decode_ORAddress,
-    (assertion, value): boolean => {
+    decodeORAddressElementsAssertion,
+    (assertion: ORAddressInfo, value: ASN1Element): boolean | undefined => {
         const v = _decode_ORAddress(value);
-        return orAddressIsSubset(assertion, v);
+        if (v.isEmptyOrAddress()) {
+            return undefined;
+        }
+        const vInfo = orAddressToInfo(v);
+        if (!vInfo) {
+            return undefined;
+        }
+        return compareORAddressInfo(assertion, vInfo, "elements");
     },
 );
 

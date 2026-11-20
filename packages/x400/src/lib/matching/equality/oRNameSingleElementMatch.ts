@@ -11,6 +11,10 @@ function extractStrings (value: unknown, depth: number = 0): string[] {
     }
     if (typeof value === "string") {
         return [ value ];
+    } else if (value instanceof Map) {
+        return Array.from(value.values()).flatMap((v) => extractStrings(v, depth + 1));
+    } else if (value instanceof Set) {
+        return Array.from(value).flatMap((v) => extractStrings(v, depth + 1));
     } else if (typeof value === "object") {
         if (!value) {
             return [];

@@ -1,12 +1,14 @@
 import type { ASN1Element } from "@wildboar/asn1";
 import { createEqualityMatcher, type Matcher } from "@wildboar/x500";
-import { PresentationAddress } from "@wildboar/x500/SelectedAttributeTypes";
-import { presentationAddressMatchTyped } from "@wildboar/x500/matching/equality";
 import {
     ORAddress,
     _decode_ORAddress,
 } from "@wildboar/x400/MTSAbstractService";
-import { type ORAddressInfo, orAddressToInfo } from "./orAddressUtilities.js";
+import {
+    compareORAddressInfo,
+    type ORAddressInfo,
+    orAddressToInfo,
+} from "./orAddressUtilities.js";
 
 function normalizeSubstringPiece (s: string): string {
     if (s.length === 0) {
@@ -82,54 +84,34 @@ function orAddressIsSubstringSubset (asserted: ORAddress, value: ORAddress): boo
     if (!aInfo || !bInfo) {
         return false;
     }
-    if (aInfo.extendedNetworkAddress !== undefined) {
-        if (bInfo.extendedNetworkAddress === undefined) {
-            return false;
-        }
-        if (aInfo.extendedNetworkAddress instanceof PresentationAddress) {
-            if (!(bInfo.extendedNetworkAddress instanceof PresentationAddress)) {
-                return false;
-            }
-            if (!presentationAddressMatchTyped(aInfo.extendedNetworkAddress, bInfo.extendedNetworkAddress)) {
-                return false;
-            }
-        } else if (Array.isArray(aInfo.extendedNetworkAddress)) {
-            if (!Array.isArray(bInfo.extendedNetworkAddress)) {
-                return false;
-            }
-            if (!isSubstringSubset(bInfo.extendedNetworkAddress, aInfo.extendedNetworkAddress)) {
-                return false;
-            }
-        } else {
-            return false;
-        }
+    return compareORAddressInfo(aInfo, bInfo, "substrings");
+}
+
+function decodeORAddressSubstringElementsAssertion (el: ASN1Element): ORAddressInfo {
+    const decoded = _decode_ORAddress(el);
+    if (decoded.isEmptyOrAddress()) {
+        throw new Error("oRAddressSubstringElementsMatch: assertion is empty");
     }
-    const comparableAInfo: ORAddressInfo = {
-        ...aInfo,
-        extendedNetworkAddress: undefined,
-    };
-    const comparableBInfo: ORAddressInfo = {
-        ...bInfo,
-        extendedNetworkAddress: undefined,
-    };
-    return isSubstringSubset(comparableBInfo, comparableAInfo);
+    const info = orAddressToInfo(decoded);
+    if (!info) {
+        throw new Error("oRAddressSubstringElementsMatch: malformed ORAddress assertion");
+    }
+    return info;
 }
 
 export
 const oRAddressSubstringElementsMatch: Matcher = createEqualityMatcher(
-    (el: ASN1Element): ORAddress => {
-        const decoded = _decode_ORAddress(el);
-        if (decoded.isEmptyOrAddress()) {
-            throw new Error("oRAddressSubstringElementsMatch: assertion is empty");
-        }
-        return decoded;
-    },
-    (assertion, value): boolean | undefined => {
+    decodeORAddressSubstringElementsAssertion,
+    (assertion: ORAddressInfo, value: ASN1Element): boolean | undefined => {
         const v = _decode_ORAddress(value);
         if (v.isEmptyOrAddress()) {
             return undefined;
         }
-        return orAddressIsSubstringSubset(assertion, v);
+        const vInfo = orAddressToInfo(v);
+        if (!vInfo) {
+            return undefined;
+        }
+        return compareORAddressInfo(assertion, vInfo, "substrings");
     },
 );
 
