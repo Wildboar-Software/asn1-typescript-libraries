@@ -1,6 +1,6 @@
-import type { ASN1Element } from "@wildboar/asn1";
+import { ASN1CharactersError, type ASN1Element } from "@wildboar/asn1";
 import { createEqualityMatcher, type Matcher } from "@wildboar/x500";
-import { _decode_ORName } from "@wildboar/x400/MTSAbstractService";
+import { _decode_ORName, type ORName } from "@wildboar/x400/MTSAbstractService";
 import { _decode_MSString } from "@wildboar/x400/MSMatchingRules";
 import { msStringToString, orAddressToInfo } from "./orAddressUtilities.js";
 
@@ -23,42 +23,59 @@ function extractStrings (value: unknown, depth: number = 0): string[] {
 
 export
 function decodeORNameSingleElementAssertion (el: ASN1Element): string {
-    return msStringToString(_decode_MSString(el));
+    const str = msStringToString(_decode_MSString(el));
+    if (str.length === 0) {
+        throw new ASN1CharactersError("MSString assertion cannot be empty", el);
+    }
+    return str;
 }
 
 export
 function normalizeORNameSingleElementAssertion (assertion: string): string {
-    return assertion.trim().replace(/\s+/g, " ").toUpperCase();
+    const trimmed = assertion.trim().replace(/\s+/g, " ").toUpperCase();
+    return trimmed.length === 0 ? " " : trimmed;
 }
 
 export
-function oRNameSingleElementMatchTyped (
+function matchORNameSingleElement (
     assertion: string,
-    value: ASN1Element,
-): boolean {
-    const a: string = assertion;
-    const v = _decode_ORName(value);
-    const vInfo = orAddressToInfo(v);
-    if (!vInfo) {
-        return false;
+    v: ORName,
+): boolean | undefined {
+    if (v.isEmpty()) {
+        return undefined;
     }
-    const stringsInValue = extractStrings(vInfo);
-    for (const strInValue of stringsInValue) {
-        const s = strInValue.trim().replace(/\s+/g, " ").toUpperCase();
-        if (s === a) {
-            return true;
+    if (!v.isEmptyOrAddress()) {
+        const vInfo = orAddressToInfo(v);
+        if (!vInfo) {
+            return undefined;
+        }
+        const stringsInValue = extractStrings(vInfo);
+        for (const strInValue of stringsInValue) {
+            const s = normalizeORNameSingleElementAssertion(strInValue);
+            if (s === assertion) {
+                return true;
+            }
         }
     }
     if (v.directory_name) {
         for (const rdn of v.directory_name.rdnSequence) {
             for (const atav of rdn) {
-                if (atav.value.toString() === `"${a}"`) {
+                if (atav.value.toString() === `"${assertion}"`) {
                     return true;
                 }
             }
         }
     }
     return false;
+}
+
+export
+function oRNameSingleElementMatchTyped (
+    assertion: string,
+    value: ASN1Element,
+): boolean | undefined {
+    const v = _decode_ORName(value);
+    return matchORNameSingleElement(assertion, v);
 }
 
 export

@@ -1,26 +1,22 @@
-import { ASN1Element, ASN1TagClass } from "@wildboar/asn1";
+import type { ASN1Element } from "@wildboar/asn1";
 import { createEqualityMatcher, type Matcher } from "@wildboar/x500";
+import { _decode_RecipientSpecifier } from "@wildboar/x400/IPMSInformationObjects";
+import { matchORDescriptorSingleElement } from "./oRDescriptorSingleElementMatch.js";
 import {
-    _decode_MSString,
-    type MSString,
-} from "@wildboar/x400/MSMatchingRules";
-import { oRDescriptorSingleElementMatchTyped } from "./oRDescriptorSingleElementMatch.js";
+    decodeORNameSingleElementAssertion,
+    normalizeORNameSingleElementAssertion,
+} from "./oRNameSingleElementMatch.js";
 
 export
 const recipientSpecifierSingleElementMatch: Matcher = createEqualityMatcher(
-    _decode_MSString,
-    (assertion: MSString, value: ASN1Element): boolean => {
-        const valueRecipientElement = value.set.find((el) => (
-            (el.tagClass === ASN1TagClass.context)
-            && (el.tagNumber === 0)
-        ));
-        if (!valueRecipientElement) { // This should not happen, because it is a required field.
-            return false;
-        }
-        return oRDescriptorSingleElementMatchTyped(assertion, valueRecipientElement);
+    decodeORNameSingleElementAssertion,
+    (assertion: string, value: ASN1Element): boolean | undefined => {
+        const v = _decode_RecipientSpecifier(value);
+        return matchORDescriptorSingleElement(assertion, v.recipient);
     },
     undefined,
     true,
+    normalizeORNameSingleElementAssertion,
 );
 
 export default recipientSpecifierSingleElementMatch;

@@ -1,18 +1,14 @@
 import type { ASN1Element } from "@wildboar/asn1";
-import { DER } from "@wildboar/asn1/functional";
 import teletexToString from "@wildboar/teletex";
 import { createEqualityMatcher, type Matcher } from "@wildboar/x500";
 import {
-    _decode_MSString,
-    _encode_MSString,
-    type MSString,
-} from "@wildboar/x400/MSMatchingRules";
-import { _encode_ORName } from "@wildboar/x400/MTSAbstractService";
-import { _decode_ORDescriptor } from "@wildboar/x400/IPMSInformationObjects";
-import { msStringToString } from "./orAddressUtilities.js";
+    _decode_ORDescriptor,
+    type ORDescriptor,
+} from "@wildboar/x400/IPMSInformationObjects";
 import {
+    decodeORNameSingleElementAssertion,
+    matchORNameSingleElement,
     normalizeORNameSingleElementAssertion,
-    oRNameSingleElementMatchTyped,
 } from "./oRNameSingleElementMatch.js";
 
 // ORDescriptor ::= SET {
@@ -22,36 +18,54 @@ import {
 // }
 
 export
-function oRDescriptorSingleElementMatchTyped (
-    assertion: MSString,
-    value: ASN1Element,
-): boolean {
-    const a: string = msStringToString(assertion);
-    const v = _decode_ORDescriptor(value);
-    if (v.free_form_name) {
-        const vname = teletexToString(v.free_form_name).trim().replace(/\s+/g, " ").toUpperCase();
-        return (vname.indexOf(a) >= 0);
+function matchORDescriptorSingleElement (
+    assertion: string,
+    v: ORDescriptor,
+): boolean | undefined {
+    if (!v.formal_name && (v.free_form_name === undefined) && (v.telephone_number === undefined)) {
+        return undefined;
     }
-    if (v.telephone_number) {
-        const vname = v.telephone_number.trim().replace(/\s+/g, " ").toUpperCase();
-        return (vname.indexOf(a) >= 0);
+    let sawUndefined = false;
+    if (v.free_form_name !== undefined && v.free_form_name.length > 0) {
+        const vname = normalizeORNameSingleElementAssertion(teletexToString(v.free_form_name));
+        if (vname === assertion) {
+            return true;
+        }
+    }
+    if (v.telephone_number !== undefined && v.telephone_number.length > 0) {
+        const vname = normalizeORNameSingleElementAssertion(v.telephone_number);
+        if (vname === assertion) {
+            return true;
+        }
     }
     if (v.formal_name) {
-        const vname = _encode_ORName(v.formal_name, DER);
-        return oRNameSingleElementMatchTyped(
-            normalizeORNameSingleElementAssertion(msStringToString(_decode_MSString(vname))),
-            _encode_MSString(assertion, DER),
-        );
+        const formalMatch = matchORNameSingleElement(assertion, v.formal_name);
+        if (formalMatch === true) {
+            return true;
+        }
+        if (formalMatch === undefined) {
+            sawUndefined = true;
+        }
     }
-    return false;
+    return sawUndefined ? undefined : false;
+}
+
+export
+function oRDescriptorSingleElementMatchTyped (
+    assertion: string,
+    value: ASN1Element,
+): boolean | undefined {
+    const v = _decode_ORDescriptor(value);
+    return matchORDescriptorSingleElement(assertion, v);
 }
 
 export
 const oRDescriptorSingleElementMatch: Matcher = createEqualityMatcher(
-    _decode_MSString,
+    decodeORNameSingleElementAssertion,
     oRDescriptorSingleElementMatchTyped,
     undefined,
     true,
+    normalizeORNameSingleElementAssertion,
 );
 
 export default oRDescriptorSingleElementMatch;
