@@ -1,4 +1,12 @@
-import { ASN1Element, ASN1TagClass, ASN1UniversalType, type OBJECT_IDENTIFIER } from "@wildboar/asn1";
+import {
+    ASN1Construction,
+    ASN1ConstructionError,
+    type ASN1Element,
+    ASN1TagClass,
+    ASN1UniversalType,
+    BERElement,
+    type OBJECT_IDENTIFIER,
+} from "@wildboar/asn1";
 import {
     createEqualityMatcher,
     type Matcher,
@@ -7,33 +15,48 @@ import {
     _decode_CirculationMember,
     type CirculationMember,
 } from "@wildboar/x400/IPMSHeadingExtensions";
-import { oRDescriptorMatchTyped } from "./oRDescriptorMatch.js";
+import {
+    oRDescriptorMatchTyped,
+    validateORDescriptorAssertion,
+} from "./oRDescriptorMatch.js";
+import { findRecipientElement } from "./recipientSpecifierMatch.js";
 
-// CirculationMember ::= SET {
-//     circulation-recipient
-//       RecipientSpecifier
-//         (WITH COMPONENTS {
-//            ...,
-//            recipient  (WITH COMPONENTS {
-//                          ...,
-//                          formal-name  PRESENT
-//                        })
-//          }),
-//     checked                Checkmark OPTIONAL
-// }
-
-function valueRecipientElement (value: ASN1Element): ASN1Element | undefined {
-    const valueCirculationRecipientElement = value.set.find((el) => (
-        (el.tagClass === ASN1TagClass.universal)
-        && (el.tagNumber === ASN1UniversalType.set)
-    ));
-    if (!valueCirculationRecipientElement) {
+export
+function findCirculationRecipientElement (value: ASN1Element): ASN1Element | undefined {
+    if (value.construction !== ASN1Construction.constructed) {
         return undefined;
     }
-    return valueCirculationRecipientElement.set.find((el) => (
-        (el.tagClass === ASN1TagClass.context)
-        && (el.tagNumber === 0)
-    ));
+    const bytes = value.value;
+    const el = new BERElement();
+    let i = 0;
+    while (i < bytes.length) {
+        i += el.fromBytes(bytes.subarray(i), true);
+        if (
+            (el.tagClass === ASN1TagClass.universal)
+            && (el.tagNumber === ASN1UniversalType.set)
+        ) {
+            return findRecipientElement(el);
+        }
+    }
+    return undefined;
+}
+
+export
+function decodeCirculationMemberAssertion (
+    rule: string,
+    substringMode: boolean = false,
+): (el: ASN1Element) => CirculationMember {
+    return (el: ASN1Element): CirculationMember => {
+        const cm = _decode_CirculationMember(el);
+        if (!cm.circulation_recipient.recipient.formal_name) {
+            throw new ASN1ConstructionError(
+                `${rule}: formal-name is required in CirculationMember assertion`,
+                el,
+            );
+        }
+        validateORDescriptorAssertion(cm.circulation_recipient.recipient, rule, substringMode);
+        return cm;
+    };
 }
 
 export
@@ -41,12 +64,11 @@ function circulationMemberMatchTyped (
     assertion: CirculationMember,
     value: ASN1Element,
     getEqualityMatcher?: (attributeType: OBJECT_IDENTIFIER) => Matcher | undefined,
-    flags?: number,
+    flags: number = 0,
 ): boolean | undefined {
-    const recipient = valueRecipientElement(value);
-    // This should not happen, because it is a required field.
+    const recipient = findCirculationRecipientElement(value);
     if (!recipient) {
-        return false;
+        return undefined;
     }
     return oRDescriptorMatchTyped(
         assertion.circulation_recipient.recipient,
@@ -58,7 +80,7 @@ function circulationMemberMatchTyped (
 
 export
 const circulationMemberMatch: Matcher = createEqualityMatcher(
-    _decode_CirculationMember,
+    decodeCirculationMemberAssertion("circulationMemberMatch"),
     circulationMemberMatchTyped,
 );
 

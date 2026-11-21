@@ -37,6 +37,9 @@ function isSubstringSubset (value: unknown, assertion: unknown): boolean {
         if (value === null || assertion === null) {
             return value === assertion;
         }
+        if (ArrayBuffer.isView(value) || ArrayBuffer.isView(assertion)) {
+            return false;
+        }
         if (Array.isArray(value) !== Array.isArray(assertion)) {
             return false;
         }
@@ -68,14 +71,14 @@ function isSubstringSubset (value: unknown, assertion: unknown): boolean {
 }
 
 export
-function orAddressIsSubstringSubset (asserted: ORAddress, value: ORAddress): boolean {
+function orAddressIsSubstringSubset (asserted: ORAddress, value: ORAddress): boolean | undefined {
     if (asserted.isEmptyOrAddress() || value.isEmptyOrAddress()) {
-        return false;
+        return undefined;
     }
     const aInfo: ORAddressInfo | null = orAddressToInfo(asserted);
     const bInfo: ORAddressInfo | null = orAddressToInfo(value);
     if (!aInfo || !bInfo) {
-        return false;
+        return undefined;
     }
     return compareORAddressInfo(aInfo, bInfo, "substrings");
 }

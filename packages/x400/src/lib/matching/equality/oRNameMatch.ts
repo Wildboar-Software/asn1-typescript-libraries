@@ -8,7 +8,7 @@ import {
     type ORName,
     _decode_ORName,
 } from "@wildboar/x400/MTSAbstractService";
-import { orAddressesMatch } from "./orAddressUtilities.js";
+import { orAddressesMatch, orAddressToInfo } from "./orAddressUtilities.js";
 import { namingEqualityMatcher } from "../namingEqualityMatcher.js";
 import { orAddressIsSubset as oRAddressElementsMatchTyped } from "./oRAddressElementsMatch.js";
 import {
@@ -19,14 +19,18 @@ export const MATCH_FLAG_ELEMENTS_MATCH: number = 1 << 29;
 export const MATCH_FLAG_SUBSTRING_MATCH: number = 1 << 30;
 
 export
+function validateNonEmptyORNameAssertion (decoded: ORName, rule: string): ORName {
+    if (decoded.isEmpty()) {
+        throw new Error(`${rule}: assertion is empty`);
+    }
+    return decoded;
+}
+
+export
 function decodeNonEmptyORNameAssertion (rule: string): (el: ASN1Element) => ORName {
-    return (el: ASN1Element): ORName => {
-        const decoded = _decode_ORName(el);
-        if (decoded.isEmpty()) {
-            throw new Error(`${rule}: assertion is empty`);
-        }
-        return decoded;
-    };
+    return (el: ASN1Element): ORName => (
+        validateNonEmptyORNameAssertion(_decode_ORName(el), rule)
+    );
 }
 
 export

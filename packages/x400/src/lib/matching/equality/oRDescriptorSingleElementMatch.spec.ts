@@ -101,13 +101,6 @@ describe("oRDescriptorSingleElementMatch, recipientSpecifierSingleElementMatch, 
         expect(recipientSpecifierSingleElementMatch(ms("mcarthur"), stored(emptySet))).toBeUndefined();
         expect(circulationMemberSingleElementMatch(ms("mcarthur"), stored(emptySet))).toBeUndefined();
 
-        // CirculationMember without mandatory formal-name is malformed -> undefined
-        const noFormalCirc = _encode_CirculationMember(
-            new CirculationMember(new RecipientSpecifier(new ORDescriptor(undefined, Buffer.from("Bob")))),
-            DER,
-        );
-        expect(circulationMemberSingleElementMatch(ms("bob"), stored(noFormalCirc))).toBeUndefined();
-
         // Lowercase assertion fails when caller claims MATCH_FLAG_ASSERTION_NORMALIZED
         expect(
             oRDescriptorSingleElementMatch(

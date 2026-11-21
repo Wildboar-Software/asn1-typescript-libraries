@@ -1,4 +1,10 @@
-import { ASN1Element, DERElement, ObjectIdentifier } from "@wildboar/asn1";
+import {
+    ASN1Construction,
+    ASN1Element,
+    ASN1TagClass,
+    DERElement,
+    ObjectIdentifier,
+} from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { DER } from "@wildboar/asn1/functional";
 import { AttributeTypeAndValue } from "@wildboar/x500/InformationFramework";
@@ -19,8 +25,12 @@ import {
     _encode_MSString,
     _encode_SubstringAssertion,
 } from "@wildboar/x400/MSMatchingRules";
+import {
+    _encode_IPMLocation,
+} from "@wildboar/x400/IPMSMessageStoreAttributes";
 import contentCorrelatorMatch from "./contentCorrelatorMatch.js";
 import contentIdentifierMatch from "./contentIdentifierMatch.js";
+import iPMLocationMatch from "./iPMLocationMatch.js";
 import mSSingleSubstringListMatch from "./mSSingleSubstringListMatch.js";
 import mSSingleSubstringListElementsMatch from "./mSSingleSubstringListElementsMatch.js";
 import mSStringMatch from "./mSStringMatch.js";
@@ -343,5 +353,22 @@ describe("X.400 matchers decode the assertion", () => {
         );
         expect(() => mTSIdentifierMatch(emptyCountry, stored(storedEquiv))).toThrow();
         expect(mTSIdentifierMatch(storedEquiv, stored(emptyCountry))).toBeUndefined();
+    });
+
+    test("iPMLocationMatch returns false for absent and undefined for unrecognized CHOICE extension (Issue 2.5)", () => {
+        const snAssertion = $._encodeInteger(42, DER);
+        const locStored = _encode_IPMLocation({ stored: [10, 42] }, DER);
+        const locAbsent = _encode_IPMLocation({ absent: null }, DER);
+        const locFutureExt = new DERElement(
+            ASN1TagClass.context,
+            ASN1Construction.primitive,
+            99,
+            new Uint8Array([0x01]),
+        );
+
+        expect(iPMLocationMatch(snAssertion, stored(locStored))).toBe(true);
+        expect(iPMLocationMatch($._encodeInteger(99, DER), stored(locStored))).toBe(false);
+        expect(iPMLocationMatch(snAssertion, stored(locAbsent))).toBe(false);
+        expect(iPMLocationMatch(snAssertion, stored(locFutureExt))).toBeUndefined();
     });
 });

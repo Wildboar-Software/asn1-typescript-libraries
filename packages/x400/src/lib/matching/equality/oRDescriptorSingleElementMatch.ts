@@ -22,7 +22,7 @@ function matchORDescriptorSingleElement (
     assertion: string,
     v: ORDescriptor,
 ): boolean | undefined {
-    if (!v.formal_name && (v.free_form_name === undefined) && (v.telephone_number === undefined)) {
+    if (v.isEmpty()) {
         return undefined;
     }
     let sawUndefined = false;

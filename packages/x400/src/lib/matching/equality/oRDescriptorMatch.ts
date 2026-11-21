@@ -7,7 +7,11 @@ import {
     _decode_ORDescriptor,
     type ORDescriptor,
 } from "@wildboar/x400/IPMSInformationObjects";
-import { MATCH_FLAG_SUBSTRING_MATCH, matchORNames } from "./oRNameMatch.js";
+import {
+    MATCH_FLAG_SUBSTRING_MATCH,
+    matchORNames,
+    validateNonEmptyORNameAssertion,
+} from "./oRNameMatch.js";
 import { normalizeMSString, teletexBytesToString } from "./orAddressUtilities.js";
 
 // ORDescriptor ::= SET {
@@ -24,6 +28,9 @@ function validateORDescriptorAssertion (
 ): ORDescriptor {
     if (d.isEmpty()) {
         throw new Error(`${rule}: assertion is empty`);
+    }
+    if (d.formal_name) {
+        validateNonEmptyORNameAssertion(d.formal_name, rule);
     }
     if (d.free_form_name !== undefined) {
         const norm = normalizeMSString(teletexBytesToString(d.free_form_name), true);
@@ -62,11 +69,7 @@ function matchORDescriptors (
     getEqualityMatcher?: (attributeType: OBJECT_IDENTIFIER) => Matcher | undefined,
     flags: number = 0,
 ): boolean | undefined {
-    if (
-        !v.formal_name
-        && (v.free_form_name === undefined)
-        && (v.telephone_number === undefined)
-    ) {
+    if (v.isEmpty()) {
         return undefined;
     }
     const substringMode = !!(flags & MATCH_FLAG_SUBSTRING_MATCH);

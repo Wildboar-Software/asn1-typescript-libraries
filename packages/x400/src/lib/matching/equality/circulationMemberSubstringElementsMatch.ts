@@ -1,39 +1,25 @@
-import { ASN1Element, ASN1TagClass, ASN1UniversalType, type OBJECT_IDENTIFIER } from "@wildboar/asn1";
+import type { ASN1Element, OBJECT_IDENTIFIER } from "@wildboar/asn1";
 import {
     createEqualityMatcher,
     type Matcher,
 } from "@wildboar/x500";
-import {
-    _decode_CirculationMember,
-    type CirculationMember,
-} from "@wildboar/x400/IPMSHeadingExtensions";
+import type { CirculationMember } from "@wildboar/x400/IPMSHeadingExtensions";
 import { oRDescriptorSubstringElementsMatchTyped } from "./oRDescriptorSubstringElementsMatch.js";
-
-function valueRecipientElement (value: ASN1Element): ASN1Element | undefined {
-    const valueCirculationRecipientElement = value.set.find((el) => (
-        (el.tagClass === ASN1TagClass.universal)
-        && (el.tagNumber === ASN1UniversalType.set)
-    ));
-    if (!valueCirculationRecipientElement) {
-        return undefined;
-    }
-    return valueCirculationRecipientElement.set.find((el) => (
-        (el.tagClass === ASN1TagClass.context)
-        && (el.tagNumber === 0)
-    ));
-}
+import {
+    decodeCirculationMemberAssertion,
+    findCirculationRecipientElement,
+} from "./circulationMemberMatch.js";
 
 export
 function circulationMemberSubstringElementsMatchTyped (
     assertion: CirculationMember,
     value: ASN1Element,
     getEqualityMatcher?: (attributeType: OBJECT_IDENTIFIER) => Matcher | undefined,
-    flags?: number,
+    flags: number = 0,
 ): boolean | undefined {
-    const recipient = valueRecipientElement(value);
-    // This should not happen, because it is a required field.
+    const recipient = findCirculationRecipientElement(value);
     if (!recipient) {
-        return false;
+        return undefined;
     }
     return oRDescriptorSubstringElementsMatchTyped(
         assertion.circulation_recipient.recipient,
@@ -45,7 +31,7 @@ function circulationMemberSubstringElementsMatchTyped (
 
 export
 const circulationMemberSubstringElementsMatch: Matcher = createEqualityMatcher(
-    _decode_CirculationMember,
+    decodeCirculationMemberAssertion("circulationMemberSubstringElementsMatch", true),
     circulationMemberSubstringElementsMatchTyped,
 );
 

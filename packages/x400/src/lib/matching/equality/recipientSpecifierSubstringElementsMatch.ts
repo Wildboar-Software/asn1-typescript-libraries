@@ -1,27 +1,25 @@
-import { ASN1Element, ASN1TagClass, type OBJECT_IDENTIFIER } from "@wildboar/asn1";
+import type { ASN1Element, OBJECT_IDENTIFIER } from "@wildboar/asn1";
 import {
     createEqualityMatcher,
     type Matcher,
 } from "@wildboar/x500";
-import {
-    _decode_RecipientSpecifier,
-    type RecipientSpecifier,
-} from "@wildboar/x400/IPMSInformationObjects";
+import type { RecipientSpecifier } from "@wildboar/x400/IPMSInformationObjects";
 import { oRDescriptorSubstringElementsMatchTyped } from "./oRDescriptorSubstringElementsMatch.js";
+import {
+    decodeNonEmptyRecipientSpecifierAssertion,
+    findRecipientElement,
+} from "./recipientSpecifierMatch.js";
 
 export
 function recipientSpecifierSubstringElementsMatchTyped (
     assertion: RecipientSpecifier,
     value: ASN1Element,
     getEqualityMatcher?: (attributeType: OBJECT_IDENTIFIER) => Matcher | undefined,
-    flags?: number,
+    flags: number = 0,
 ): boolean | undefined {
-    const recipient = value.set.find((el) => (
-        (el.tagClass === ASN1TagClass.context)
-        && (el.tagNumber === 0)
-    ));
-    if (!recipient) { // This should not happen, because it is a required field.
-        return false;
+    const recipient = findRecipientElement(value);
+    if (!recipient) {
+        return undefined;
     }
     return oRDescriptorSubstringElementsMatchTyped(
         assertion.recipient,
@@ -33,7 +31,7 @@ function recipientSpecifierSubstringElementsMatchTyped (
 
 export
 const recipientSpecifierSubstringElementsMatch: Matcher = createEqualityMatcher(
-    _decode_RecipientSpecifier,
+    decodeNonEmptyRecipientSpecifierAssertion("recipientSpecifierSubstringElementsMatch", true),
     recipientSpecifierSubstringElementsMatchTyped,
     undefined,
     false,

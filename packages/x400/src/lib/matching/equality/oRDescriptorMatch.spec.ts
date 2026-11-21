@@ -1,5 +1,11 @@
 import { Buffer } from "node:buffer";
-import { type ASN1Element, ObjectIdentifier } from "@wildboar/asn1";
+import {
+    ASN1Construction,
+    type ASN1Element,
+    ASN1TagClass,
+    DERElement,
+    ObjectIdentifier,
+} from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { DER } from "@wildboar/asn1/functional";
 import { AttributeTypeAndValue as DNAtav, type Name } from "@wildboar/dn";
@@ -7,8 +13,10 @@ import { AttributeTypeAndValue } from "@wildboar/x500/InformationFramework";
 import { caseIgnoreMatch } from "@wildboar/x500/matching/equality";
 import {
     BuiltInStandardAttributes,
+    ExtensionAttribute,
     ORName,
     PersonalName,
+    _encode_ORName,
 } from "@wildboar/x400/MTSAbstractService";
 import {
     ORDescriptor,
@@ -20,11 +28,18 @@ import {
     CirculationMember,
     _encode_CirculationMember,
 } from "@wildboar/x400/IPMSHeadingExtensions";
+import oRNameMatch from "./oRNameMatch.js";
+import oRNameExactMatch from "./oRNameExactMatch.js";
 import oRDescriptorMatch from "./oRDescriptorMatch.js";
 import oRDescriptorElementsMatch from "./oRDescriptorElementsMatch.js";
 import oRDescriptorSubstringElementsMatch from "./oRDescriptorSubstringElementsMatch.js";
+import recipientSpecifierMatch from "./recipientSpecifierMatch.js";
 import recipientSpecifierElementsMatch from "./recipientSpecifierElementsMatch.js";
+import recipientSpecifierSubstringElementsMatch from "./recipientSpecifierSubstringElementsMatch.js";
+import circulationMemberMatch from "./circulationMemberMatch.js";
 import circulationMemberElementsMatch from "./circulationMemberElementsMatch.js";
+import circulationMemberSubstringElementsMatch from "./circulationMemberSubstringElementsMatch.js";
+import circulationMemberCheckmarkMatch from "./circulationMemberCheckmarkMatch.js";
 
 const testAttrType = ObjectIdentifier.fromString("2.6.1.2.1");
 const id_at_commonName = ObjectIdentifier.fromString("2.5.4.3");
@@ -174,5 +189,56 @@ describe("oRDescriptorMatch, oRDescriptorElementsMatch, and oRDescriptorSubstrin
 
         const emptyPhoneSub = _encode_ORDescriptor(new ORDescriptor(undefined, undefined, ""), DER);
         expect(() => oRDescriptorSubstringElementsMatch(emptyPhoneSub, stored(storedFormal))).toThrow();
+    });
+
+    test("malformed assertions throw and malformed/unrecognized stored values return undefined (Issue 2.5)", () => {
+        // ORName with unrecognized extension-attribute-type 9999
+        const unknownExtOrName = _encode_ORName(
+            new ORName(
+                new BuiltInStandardAttributes({ iso_3166_alpha2_code: "US" }),
+                undefined,
+                [new ExtensionAttribute(9999, $._encodePrintableString("x", DER))],
+            ),
+            DER,
+        );
+        const validOrName = _encode_ORName(aliceFormal, DER);
+        expect(() => oRNameMatch(unknownExtOrName, stored(validOrName))).toThrow();
+        expect(() => oRNameExactMatch(unknownExtOrName, stored(validOrName))).toThrow();
+        expect(oRNameMatch(validOrName, stored(unknownExtOrName))).toBeUndefined();
+        expect(oRNameExactMatch(validOrName, stored(unknownExtOrName))).toBeUndefined();
+
+        // RecipientSpecifier missing required [0] recipient -> undefined (not false)
+        const emptySet = DERElement.fromSet([]);
+        const validRecipSpec = _encode_RecipientSpecifier(
+            new RecipientSpecifier(new ORDescriptor(aliceFormal)),
+            DER,
+        );
+        expect(recipientSpecifierMatch(validRecipSpec, stored(emptySet))).toBeUndefined();
+        expect(recipientSpecifierElementsMatch(validRecipSpec, stored(emptySet))).toBeUndefined();
+        expect(recipientSpecifierSubstringElementsMatch(validRecipSpec, stored(emptySet))).toBeUndefined();
+
+        // CirculationMember checkmark and malformed CirculationMember handling
+        const checkedCirc = _encode_CirculationMember(
+            new CirculationMember(new RecipientSpecifier(new ORDescriptor(aliceFormal)), { simple: null }),
+            DER,
+        );
+        const uncheckedCirc = _encode_CirculationMember(
+            new CirculationMember(new RecipientSpecifier(new ORDescriptor(aliceFormal))),
+            DER,
+        );
+        const circMissingFormal = _encode_CirculationMember(
+            new CirculationMember(new RecipientSpecifier(new ORDescriptor(undefined, Buffer.from("Alice")))),
+            DER,
+        );
+
+        expect(circulationMemberCheckmarkMatch(uncheckedCirc, stored(checkedCirc))).toBe(true);
+        expect(circulationMemberCheckmarkMatch(uncheckedCirc, stored(uncheckedCirc))).toBe(false);
+        expect(circulationMemberCheckmarkMatch(uncheckedCirc, stored($._encodeBoolean(true, DER)))).toBeUndefined();
+        expect(() => circulationMemberMatch(circMissingFormal, stored(uncheckedCirc))).toThrow();
+
+        // Non-constructed primitive returns undefined
+        const primitiveEl = $._encodeBoolean(true, DER);
+        expect(recipientSpecifierMatch(validRecipSpec, stored(primitiveEl))).toBeUndefined();
+        expect(circulationMemberMatch(uncheckedCirc, stored(primitiveEl))).toBeUndefined();
     });
 });

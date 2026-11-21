@@ -1,14 +1,30 @@
 import {
+    ASN1Construction,
     ASN1ConstructionError,
     ASN1TagClass,
     ASN1UniversalType,
+    BERElement,
 } from "@wildboar/asn1";
 import { createEqualityMatcher, type Matcher } from "@wildboar/x500";
-import {
-    _decode_Redirection,
-    _decode_RedirectionHistory,
-    _decode_RedirectionReason,
-} from "@wildboar/x400/MTSAbstractService";
+import { _decode_RedirectionReason } from "@wildboar/x400/MTSAbstractService";
+
+function readRedirectionReasonFromElement (redirectionEl: BERElement): number | bigint {
+    if (
+        (redirectionEl.tagClass !== ASN1TagClass.universal)
+        || (redirectionEl.tagNumber !== ASN1UniversalType.sequence)
+        || (redirectionEl.construction !== ASN1Construction.constructed)
+    ) {
+        throw new ASN1ConstructionError("redirectionReasonMatch: expected Redirection SEQUENCE", redirectionEl);
+    }
+    const bytes = redirectionEl.value;
+    const el = new BERElement();
+    const secondOffset = el.fromBytes(bytes, true);
+    if (secondOffset >= bytes.length) {
+        throw new ASN1ConstructionError("redirectionReasonMatch: truncated Redirection", redirectionEl);
+    }
+    el.fromBytes(bytes.subarray(secondOffset), true);
+    return el.enumerated;
+}
 
 export
 const redirectionReasonMatch: Matcher = createEqualityMatcher(
@@ -17,29 +33,33 @@ const redirectionReasonMatch: Matcher = createEqualityMatcher(
         if (
             (value.tagClass !== ASN1TagClass.universal)
             || (value.tagNumber !== ASN1UniversalType.sequence)
+            || (value.construction !== ASN1Construction.constructed)
         ) {
             throw new ASN1ConstructionError("redirectionReasonMatch: expected SEQUENCE", value);
         }
-        const seq = value.sequence;
-        if (seq.length === 0) {
+        const bytes = value.value;
+        if (bytes.length === 0) {
             throw new ASN1ConstructionError("redirectionReasonMatch: empty SEQUENCE", value);
         }
-        // Single `Redirection` (`mt-redirection-history`, ITU-T Rec. X.413 §11.2.69)
-        if (
-            (seq.length >= 2)
-            && (seq[0].tagClass === ASN1TagClass.universal)
-            && (seq[0].tagNumber === ASN1UniversalType.sequence)
-            && (seq[1].tagClass === ASN1TagClass.universal)
-            && (seq[1].tagNumber === ASN1UniversalType.enumerated)
-        ) {
-            const r = _decode_Redirection(value);
-            // Loose equality so a number matches the same bigint.
-            return r.redirection_reason == assertion;
+        const first = new BERElement();
+        const secondOffset = first.fromBytes(bytes, true);
+        if (secondOffset < bytes.length) {
+            const second = new BERElement();
+            second.fromBytes(bytes.subarray(secondOffset), true);
+            // Single `Redirection` (`mt-redirection-history`, ITU-T Rec. X.413 §11.2.69)
+            if (
+                (second.tagClass === ASN1TagClass.universal)
+                && (second.tagNumber === ASN1UniversalType.enumerated)
+            ) {
+                return second.enumerated == assertion;
+            }
         }
         // `RedirectionHistory` (`SEQUENCE SIZE (1..ub-redirections) OF Redirection`)
-        const v = _decode_RedirectionHistory(value);
-        for (const rh of v) {
-            if (rh.redirection_reason == assertion) {
+        const item = new BERElement();
+        let i = 0;
+        while (i < bytes.length) {
+            i += item.fromBytes(bytes.subarray(i), true);
+            if (readRedirectionReasonFromElement(item) == assertion) {
                 return true;
             }
         }

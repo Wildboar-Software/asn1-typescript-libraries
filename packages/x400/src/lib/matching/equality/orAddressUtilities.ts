@@ -608,7 +608,7 @@ function compareBuiltInStandardAttributes (
     a: BuiltInStandardAttributes,
     b: BuiltInStandardAttributes,
 ): boolean {
-    return orAddressesMatch(new ORAddress(a), new ORAddress(b))
+    return (orAddressesMatch(new ORAddress(a), new ORAddress(b)) === true)
         || (a.isEmpty() && b.isEmpty());
 }
 
@@ -1004,14 +1004,14 @@ function compareORAddressInfo (
 }
 
 export
-function orAddressesMatch (a: ORAddress, b: ORAddress): boolean {
+function orAddressesMatch (a: ORAddress, b: ORAddress): boolean | undefined {
     if (a.isEmptyOrAddress() || b.isEmptyOrAddress()) {
-        return false;
+        return undefined;
     }
     const aInfo: ORAddressInfo | null = orAddressToInfo(a);
     const bInfo: ORAddressInfo | null = orAddressToInfo(b);
     if (!aInfo || !bInfo) {
-        return false;
+        return undefined;
     }
     return compareORAddressInfo(aInfo, bInfo, "exact");
 }
