@@ -4,7 +4,6 @@ import {
     ASN1TagClass,
     ASN1UniversalType,
 } from "@wildboar/asn1";
-import teletexToString from "@wildboar/teletex";
 import { _decode_UniversalOrBMPString } from "@wildboar/or-address";
 import { createEqualityMatcher, type Matcher } from "@wildboar/x500";
 import { _decode_ORName, type ORName } from "@wildboar/x400/MTSAbstractService";
@@ -12,6 +11,7 @@ import {
     decodeMSStringElement,
     normalizeMSString,
     orAddressToInfo,
+    teletexBytesToString,
 } from "./orAddressUtilities.js";
 
 const MAX_DN_STRING_LIST_ITEMS = 16;
@@ -58,7 +58,7 @@ function readSingleDNString (el: ASN1Element): string | undefined {
             case ASN1UniversalType.printableString:
                 return el.printableString;
             case ASN1UniversalType.teletexString:
-                return teletexToString(el.teletexString);
+                return teletexBytesToString(el.teletexString);
             case ASN1UniversalType.bmpString:
                 return el.bmpString;
             case ASN1UniversalType.universalString:

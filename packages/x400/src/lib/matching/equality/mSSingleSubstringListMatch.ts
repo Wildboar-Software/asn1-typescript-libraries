@@ -30,7 +30,13 @@ function decodeMSStringList (el: ASN1Element): string[] {
 }
 
 function normalizeCaseIgnoreList (assertion: string[]): string[] {
-    return assertion.map((text) => normalizeMSString(text, true));
+    return assertion.map((text) => {
+        const normalized = normalizeMSString(text, true);
+        if (normalized.length === 0) {
+            throw new ASN1CharactersError("mSSingleSubstringListMatch: substring reduced to empty after normalization");
+        }
+        return normalized;
+    });
 }
 
 export

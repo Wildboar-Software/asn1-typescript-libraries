@@ -72,13 +72,20 @@ const DIGITS_AND_SPACES_ONLY = /^[0-9 ]+$/;
 const INSIGNIFICANT_CONTROLS_AND_UNDERLINE =
     /[\u0000-\u0008\u000E-\u001F\u007F-\u0084\u0086-\u009F\u0332]+/g;
 
+export
+function teletexBytesToString (ttex: Uint8Array): string {
+    const filtered = ttex.includes(0xcc) ? ttex.filter((b) => b !== 0xcc) : ttex;
+    return teletexToString(filtered);
+}
+
 /**
  * Normalize a string per ITU-T Rec. X.413 §12.2 / X.402 §18.4:
  * - Strip insignificant non-spacing underline and control characters
- * - Normalize to Unicode NFC so decomposed T.61 sequences match BMP/Universal
+ * - Normalize to Unicode NFC so decomposed T.61 sequences and reordered
+ *   combining marks match precomposed BMP/Universal strings
  * - Collapse whitespace runs and trim leading/trailing spaces, preserving a
  *   single `" "` when a non-empty input contained only spaces
- * - Fold to upper-case
+ * - Fold to upper-case and re-normalize to NFC
  */
 export
 function normalizeMSString (raw: string, caseFold: boolean = true): string {
@@ -91,7 +98,9 @@ function normalizeMSString (raw: string, caseFold: boolean = true): string {
     }
     const trimmed = cleaned.replace(/\s+/g, " ").trim();
     const spaceNormalized = trimmed.length === 0 ? " " : trimmed;
-    return caseFold ? spaceNormalized.toUpperCase() : spaceNormalized;
+    return caseFold
+        ? spaceNormalized.toUpperCase().normalize("NFC")
+        : spaceNormalized;
 }
 
 function removeAsciiSpaces (s: string): string {
@@ -1011,7 +1020,7 @@ function msStringToString (ms: MSString): string {
     if ("printable" in ms) {
         return ms.printable;
     } else if ("teletex" in ms) {
-        return teletexToString(ms.teletex);
+        return teletexBytesToString(ms.teletex);
     } else if ("general" in ms) {
         return ms.general;
     } else if ("universal" in ms) {
@@ -1042,7 +1051,7 @@ function decodeMSStringElement (el: ASN1Element): string {
         case ASN1UniversalType.printableString:
             return $._decodePrintableString(el);
         case ASN1UniversalType.teletexString:
-            return teletexToString($._decodeTeletexString(el));
+            return teletexBytesToString($._decodeTeletexString(el));
         case ASN1UniversalType.generalString:
             return $._decodeGeneralString(el);
         case ASN1UniversalType.universalString:

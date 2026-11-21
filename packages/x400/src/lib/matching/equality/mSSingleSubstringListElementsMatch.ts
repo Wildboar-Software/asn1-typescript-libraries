@@ -18,6 +18,16 @@ function normalizeCaseIgnoreElement (text: string): string {
     return normalizeMSString(text, true);
 }
 
+function normalizeCaseIgnoreList (assertion: string[]): string[] {
+    return assertion.map((text) => {
+        const normalized = normalizeCaseIgnoreElement(text);
+        if (normalized.length === 0) {
+            throw new ASN1CharactersError("mSSingleSubstringListElementsMatch: substring reduced to empty after normalization");
+        }
+        return normalized;
+    });
+}
+
 function decodeMSStringList (el: ASN1Element): string[] {
     if (
         (el.tagClass !== ASN1TagClass.universal)
@@ -31,10 +41,6 @@ function decodeMSStringList (el: ASN1Element): string[] {
         }
         return str;
     });
-}
-
-function normalizeCaseIgnoreList (assertion: string[]): string[] {
-    return assertion.map(normalizeCaseIgnoreElement);
 }
 
 export

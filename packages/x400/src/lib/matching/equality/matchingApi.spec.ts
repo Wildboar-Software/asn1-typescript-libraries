@@ -22,10 +22,12 @@ import {
 import contentCorrelatorMatch from "./contentCorrelatorMatch.js";
 import contentIdentifierMatch from "./contentIdentifierMatch.js";
 import mSSingleSubstringListMatch from "./mSSingleSubstringListMatch.js";
+import mSSingleSubstringListElementsMatch from "./mSSingleSubstringListElementsMatch.js";
 import mSStringMatch from "./mSStringMatch.js";
 import mSStringCaseSensitiveMatch from "./msStringCaseSensitiveMatch.js";
 import mSSubstringsMatch from "./mSSubstringsMatch.js";
 import mTSIdentifierMatch from "./mTSIdentifierMatch.js";
+import oRDescriptorMatch from "./oRDescriptorMatch.js";
 import oRDescriptorSubstringElementsMatch from "./oRDescriptorSubstringElementsMatch.js";
 import mSStringOrderingMatch from "../ordering/mSStringOrderingMatch.js";
 import mSSingleSubstringMatch from "../substring/mSSingleSubstringMatch.js";
@@ -218,5 +220,56 @@ describe("X.400 matchers decode the assertion", () => {
         const ciSpaces = _encode_ContentIdentifier("   ", DER);
         const ciSingleSpace = _encode_ContentIdentifier(" ", DER);
         expect(contentIdentifierMatch(ciSpaces, stored(ciSingleSpace))).toBe(true);
+    });
+
+    test("cross-repertoire NFC normalization and T.61 underline/control stripping (X.402 §18.4, X.413 §12.2)", () => {
+        // T.61 underlined + accented "Café" with C0/C1 controls: 0xCC 'C', 0xCC 'a', 0x07, 0xCC 'f', 0xCC 0xC2 'e'
+        const t61UnderlinedCafe = _encode_MSString(
+            { teletex: new Uint8Array([0xcc, 0x43, 0xcc, 0x61, 0x07, 0xcc, 0x66, 0xcc, 0xc2, 0x65]) },
+            DER,
+        );
+        const bmpCafe = _encode_MSString({ bmp: "Café" }, DER);
+        const bmpCafeUpper = _encode_MSString({ bmp: "CAFÉ" }, DER);
+        expect(mSStringMatch(t61UnderlinedCafe, stored(bmpCafeUpper))).toBe(true);
+        expect(mSStringCaseSensitiveMatch(t61UnderlinedCafe, stored(bmpCafe))).toBe(true);
+
+        // Teletex e-acute (0xC2 0x65 -> decomposed "e\u0301") orders identically to BMP "é" (after "f")
+        const t61EAcute = _encode_MSString({ teletex: new Uint8Array([0xc2, 0x65]) }, DER);
+        const f = _encode_MSString({ printable: "f" }, DER);
+        expect(mSStringOrderingMatch(t61EAcute, stored(f))).toBe(true);
+        expect(mSStringOrderingMatch(f, stored(t61EAcute))).toBe(false);
+
+        // Reordered combining marks (X.402 §18.4(j)) and post-uppercase NFC ("\u0390" vs "\u03AA\u0301")
+        const combOrder1 = _encode_MSString({ universal: "o\u0323\u0302" }, DER);
+        const combOrder2 = _encode_MSString({ universal: "o\u0302\u0323" }, DER);
+        expect(mSStringMatch(combOrder1, stored(combOrder2))).toBe(true);
+        expect(mSStringCaseSensitiveMatch(combOrder1, stored(combOrder2))).toBe(true);
+        expect(
+            mSStringMatch(
+                _encode_MSString({ bmp: "\u0390" }, DER),
+                stored(_encode_MSString({ bmp: "\u03AA\u0301" }, DER)),
+            ),
+        ).toBe(true);
+
+        // ORDescriptor free-form-name with T.61 underline + accent
+        const ordUnderlined = _encode_ORDescriptor(
+            new ORDescriptor(undefined, new Uint8Array([0xcc, 0xc2, 0x65])),
+            DER,
+        );
+        const ordPlain = _encode_ORDescriptor(
+            new ORDescriptor(undefined, new Uint8Array([0xc2, 0x45])),
+            DER,
+        );
+        expect(oRDescriptorMatch(ordUnderlined, stored(ordPlain))).toBe(true);
+
+        // Underline-only substring assertion reduces to empty and must throw
+        const encodeList = $._encodeSequenceOf<ASN1Element>(() => (el) => el, DER);
+        const underlineOnlyList = encodeList(
+            [_encode_MSString({ teletex: new Uint8Array([0xcc]) }, DER)],
+            DER,
+        );
+        const validList = encodeList([ms("Hello")], DER);
+        expect(() => mSSingleSubstringListMatch(underlineOnlyList, stored(validList))).toThrow();
+        expect(() => mSSingleSubstringListElementsMatch(underlineOnlyList, stored(validList))).toThrow();
     });
 });

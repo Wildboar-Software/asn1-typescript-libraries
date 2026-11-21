@@ -1,12 +1,11 @@
 import type { ASN1Element } from "@wildboar/asn1";
-import teletexToString from "@wildboar/teletex";
 import { createEqualityMatcher, type Matcher } from "@wildboar/x500";
 import {
     _decode_ORDescriptor,
     type ORDescriptor,
 } from "@wildboar/x400/IPMSInformationObjects";
 import { orAddressIsSubset } from "./oRAddressElementsMatch.js";
-import { normalizeMSString } from "./orAddressUtilities.js";
+import { normalizeMSString, teletexBytesToString } from "./orAddressUtilities.js";
 
 // ORDescriptor ::= SET {
 //     formal-name       ORName OPTIONAL,
@@ -25,8 +24,8 @@ function oRDescriptorElementsMatchTyped (
         return orAddressIsSubset(a.formal_name, v.formal_name);
     }
     if (!!a.free_form_name && !!v.free_form_name) {
-        const aname = normalizeMSString(teletexToString(a.free_form_name), true);
-        const vname = normalizeMSString(teletexToString(v.free_form_name), true);
+        const aname = normalizeMSString(teletexBytesToString(a.free_form_name), true);
+        const vname = normalizeMSString(teletexBytesToString(v.free_form_name), true);
         return (aname === vname);
     }
     if (!!a.telephone_number && !!v.telephone_number) {

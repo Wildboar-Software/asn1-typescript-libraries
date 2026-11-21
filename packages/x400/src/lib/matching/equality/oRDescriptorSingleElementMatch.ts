@@ -1,10 +1,10 @@
 import type { ASN1Element } from "@wildboar/asn1";
-import teletexToString from "@wildboar/teletex";
 import { createEqualityMatcher, type Matcher } from "@wildboar/x500";
 import {
     _decode_ORDescriptor,
     type ORDescriptor,
 } from "@wildboar/x400/IPMSInformationObjects";
+import { teletexBytesToString } from "./orAddressUtilities.js";
 import {
     decodeORNameSingleElementAssertion,
     matchORNameSingleElement,
@@ -27,7 +27,7 @@ function matchORDescriptorSingleElement (
     }
     let sawUndefined = false;
     if (v.free_form_name !== undefined && v.free_form_name.length > 0) {
-        const vname = normalizeORNameSingleElementAssertion(teletexToString(v.free_form_name));
+        const vname = normalizeORNameSingleElementAssertion(teletexBytesToString(v.free_form_name));
         if (vname === assertion) {
             return true;
         }
