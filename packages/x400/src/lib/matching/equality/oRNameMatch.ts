@@ -8,7 +8,7 @@ import {
     type ORName,
     _decode_ORName,
 } from "@wildboar/x400/MTSAbstractService";
-import { orAddressesMatch, orAddressToInfo } from "./orAddressUtilities.js";
+import { orAddressesMatch } from "./orAddressUtilities.js";
 import { namingEqualityMatcher } from "../namingEqualityMatcher.js";
 import { orAddressIsSubset as oRAddressElementsMatchTyped } from "./oRAddressElementsMatch.js";
 import {

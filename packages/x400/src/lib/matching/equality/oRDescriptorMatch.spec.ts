@@ -202,8 +202,11 @@ describe("oRDescriptorMatch, oRDescriptorElementsMatch, and oRDescriptorSubstrin
             DER,
         );
         const validOrName = _encode_ORName(aliceFormal, DER);
-        expect(() => oRNameMatch(unknownExtOrName, stored(validOrName))).toThrow();
-        expect(() => oRNameExactMatch(unknownExtOrName, stored(validOrName))).toThrow();
+        const emptyOrName = _encode_ORName(new ORName(new BuiltInStandardAttributes()), DER);
+        expect(() => oRNameMatch(emptyOrName, stored(validOrName))).toThrow();
+        expect(() => oRNameExactMatch(emptyOrName, stored(validOrName))).toThrow();
+        expect(oRNameMatch(unknownExtOrName, stored(validOrName))).toBeUndefined();
+        expect(oRNameExactMatch(unknownExtOrName, stored(validOrName))).toBeUndefined();
         expect(oRNameMatch(validOrName, stored(unknownExtOrName))).toBeUndefined();
         expect(oRNameExactMatch(validOrName, stored(unknownExtOrName))).toBeUndefined();
 

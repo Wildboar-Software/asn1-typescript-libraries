@@ -7,7 +7,11 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { DER } from "@wildboar/asn1/functional";
-import { AttributeTypeAndValue } from "@wildboar/x500/InformationFramework";
+import {
+    Attribute,
+    AttributeTypeAndValue,
+    Attribute_valuesWithContext_Item,
+} from "@wildboar/x500/InformationFramework";
 import {
     GlobalDomainIdentifier,
     MTSIdentifier,
@@ -39,6 +43,7 @@ import mSSubstringsMatch from "./mSSubstringsMatch.js";
 import mTSIdentifierMatch from "./mTSIdentifierMatch.js";
 import oRDescriptorMatch from "./oRDescriptorMatch.js";
 import oRDescriptorSubstringElementsMatch from "./oRDescriptorSubstringElementsMatch.js";
+import valueCountMatch from "./valueCountMatch.js";
 import mSStringOrderingMatch from "../ordering/mSStringOrderingMatch.js";
 import mSSingleSubstringMatch from "../substring/mSSingleSubstringMatch.js";
 import {
@@ -370,5 +375,40 @@ describe("X.400 matchers decode the assertion", () => {
         expect(iPMLocationMatch($._encodeInteger(99, DER), stored(locStored))).toBe(false);
         expect(iPMLocationMatch(snAssertion, stored(locAbsent))).toBe(false);
         expect(iPMLocationMatch(snAssertion, stored(locFutureExt))).toBeUndefined();
+    });
+
+    test("valueCountMatch compares total attribute value count and rejects invalid assertions (X.413 §12.3)", () => {
+        const v1 = ms("group-a");
+        const v2 = ms("group-b");
+        const v3 = ms("group-c");
+        const multiAttr = new Attribute(
+            type_,
+            [v1, v2],
+            [new Attribute_valuesWithContext_Item(v3, [])],
+        );
+
+        expect(valueCountMatch($._encodeInteger(3, DER), multiAttr)).toBe(true);
+        expect(valueCountMatch($._encodeInteger(2, DER), multiAttr)).toBe(false);
+        expect(valueCountMatch($._encodeInteger(4, DER), multiAttr)).toBe(false);
+
+        // Single AttributeTypeAndValue has count 1
+        expect(valueCountMatch($._encodeInteger(1, DER), stored(v1))).toBe(true);
+        expect(valueCountMatch($._encodeInteger(2, DER), stored(v1))).toBe(false);
+
+        // matchedValues out-parameter population
+        const outValuesOnly = new Attribute(type_, []);
+        expect(valueCountMatch($._encodeInteger(3, DER), multiAttr, undefined, 0, outValuesOnly)).toBe(true);
+        expect(outValuesOnly.values).toHaveLength(3);
+
+        const outWithContext = new Attribute(type_, [], []);
+        expect(valueCountMatch($._encodeInteger(3, DER), multiAttr, undefined, 0, outWithContext)).toBe(true);
+        expect(outWithContext.values).toHaveLength(2);
+        expect(outWithContext.valuesWithContext).toHaveLength(1);
+
+        // Name matching is refused; assertions < 1 or non-INTEGER throw
+        expect(valueCountMatch($._encodeInteger(1, DER), stored(v1), undefined, MATCH_FLAG_USED_FOR_NAME)).toBeUndefined();
+        expect(() => valueCountMatch($._encodeInteger(0, DER), multiAttr)).toThrow();
+        expect(() => valueCountMatch($._encodeInteger(-1, DER), multiAttr)).toThrow();
+        expect(() => valueCountMatch(ms("3"), multiAttr)).toThrow();
     });
 });
