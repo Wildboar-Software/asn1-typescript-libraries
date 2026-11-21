@@ -134,6 +134,7 @@ function normalizeNumericOnly (raw: string): string {
     return stripped.length === 0 ? " " : stripped;
 }
 
+export
 function normalizeCountryChoice (
     cn: { x121_dcc_code: string } | { iso_3166_alpha2_code: string },
 ): string | null {
@@ -147,7 +148,7 @@ function normalizeCountryChoice (
     }
     if ("iso_3166_alpha2_code" in cn) {
         const code = normalizeMSString(cn.iso_3166_alpha2_code);
-        return code.length === 0 ? null : code;
+        return (code.length === 0 || code === " ") ? null : code;
     }
     return null;
 }

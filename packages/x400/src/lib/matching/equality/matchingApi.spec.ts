@@ -272,4 +272,76 @@ describe("X.400 matchers decode the assertion", () => {
         expect(() => mSSingleSubstringListMatch(underlineOnlyList, stored(validList))).toThrow();
         expect(() => mSSingleSubstringListElementsMatch(underlineOnlyList, stored(validList))).toThrow();
     });
+
+    test("mTSIdentifierMatch trims printable domains, case-folds/maps country-name, and equates numeric/printable domain spaces (X.413 §12.4.13)", () => {
+        const asserted = _encode_MTSIdentifier(
+            new MTSIdentifier(
+                new GlobalDomainIdentifier(
+                    { iso_3166_alpha2_code: " us " },
+                    { printable: "  123  45  " },
+                    { printable: "  Acme   Corp " },
+                ),
+                "  msg   001 ",
+            ),
+            DER,
+        );
+        const storedEquiv = _encode_MTSIdentifier(
+            new MTSIdentifier(
+                new GlobalDomainIdentifier(
+                    { x121_dcc_code: " 31 0 " },
+                    { numeric: "123 45" },
+                    { printable: "ACME CORP" },
+                ),
+                "MSG 001",
+            ),
+            DER,
+        );
+        const storedNumericPrmdA = _encode_MTSIdentifier(
+            new MTSIdentifier(
+                new GlobalDomainIdentifier(
+                    { iso_3166_alpha2_code: "GB" },
+                    { printable: "  BT  " },
+                    { numeric: "98 76" },
+                ),
+                "id-1",
+            ),
+            DER,
+        );
+        const storedNumericPrmdB = _encode_MTSIdentifier(
+            new MTSIdentifier(
+                new GlobalDomainIdentifier(
+                    { x121_dcc_code: "234" },
+                    { printable: "bt" },
+                    { printable: " 98  76 " },
+                ),
+                "ID-1",
+            ),
+            DER,
+        );
+        const storedDifferentLocal = _encode_MTSIdentifier(
+            new MTSIdentifier(
+                new GlobalDomainIdentifier(
+                    { iso_3166_alpha2_code: "US" },
+                    { numeric: "12345" },
+                    { printable: "ACME CORP" },
+                ),
+                "MSG 002",
+            ),
+            DER,
+        );
+
+        expect(mTSIdentifierMatch(asserted, stored(storedEquiv))).toBe(true);
+        expect(mTSIdentifierMatch(storedNumericPrmdA, stored(storedNumericPrmdB))).toBe(true);
+        expect(mTSIdentifierMatch(asserted, stored(storedDifferentLocal))).toBe(false);
+
+        const emptyCountry = _encode_MTSIdentifier(
+            new MTSIdentifier(
+                new GlobalDomainIdentifier({ iso_3166_alpha2_code: "  " }, { printable: "ATT" }),
+                "id-1",
+            ),
+            DER,
+        );
+        expect(() => mTSIdentifierMatch(emptyCountry, stored(storedEquiv))).toThrow();
+        expect(mTSIdentifierMatch(storedEquiv, stored(emptyCountry))).toBeUndefined();
+    });
 });

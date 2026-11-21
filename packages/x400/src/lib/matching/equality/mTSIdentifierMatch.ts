@@ -1,97 +1,128 @@
+import { ASN1CharactersError, type ASN1Element } from "@wildboar/asn1";
 import { createEqualityMatcher, type Matcher } from "@wildboar/x500";
 import {
+    type AdministrationDomainName,
+    type CountryName,
+    type MTSIdentifier,
+    type PrivateDomainIdentifier,
     _decode_MTSIdentifier,
 } from "@wildboar/x400/MTSAbstractService";
-import { x121_dcc_country_code_to_iso_3166 } from "@wildboar/or-address";
-import { normalizeMSString, normalizeNumericOnly } from "./orAddressUtilities.js";
+import {
+    normalizeCountryChoice,
+    normalizeMSString,
+    normalizeNumericOnly,
+    normalizeNumericOrPrintable,
+} from "./orAddressUtilities.js";
 
-// MTSIdentifier ::= [APPLICATION 4]  SEQUENCE {
-//     global-domain-identifier  GlobalDomainIdentifier,
-//     local-identifier          LocalIdentifier
-//   }
+interface PreparedMTSIdentifier {
+    readonly countryChoice?: CountryName;
+    readonly country: string;
+    readonly admdIsNumeric: boolean;
+    readonly admd: string;
+    readonly prmdIsNumeric?: boolean;
+    readonly prmd?: string;
+    readonly localId: string;
+}
 
-// LocalIdentifier ::= IA5String(SIZE (1..ub-local-id-length))
-
-// GlobalDomainIdentifier ::= [APPLICATION 3]  SEQUENCE {
-//     country-name                CountryName,
-//     administration-domain-name  AdministrationDomainName,
-//     private-domain-identifier   PrivateDomainIdentifier OPTIONAL
-// }
-
-// AdministrationDomainName ::= [APPLICATION 2]  CHOICE {
-//     numeric    NumericString(SIZE (0..ub-domain-name-length)),
-//     printable  PrintableString(SIZE (0..ub-domain-name-length))
-// }
-
-// PrivateDomainIdentifier ::= CHOICE {
-//     numeric    NumericString(SIZE (1..ub-domain-name-length)),
-//     printable  PrintableString(SIZE (1..ub-domain-name-length))
-// }
-
-
-export
-const mTSIdentifierMatch: Matcher = createEqualityMatcher(
-    _decode_MTSIdentifier,
-    (assertion, value): boolean => {
-    const a = assertion;
-    const v = _decode_MTSIdentifier(value);
-    const aglob = a.global_domain_identifier;
-    const vglob = v.global_domain_identifier;
-
-    // Country Comparison
-    const aCountry = ("x121_dcc_code" in aglob.country_name)
-        ? aglob.country_name.x121_dcc_code
-        : aglob.country_name.iso_3166_alpha2_code;
-    const vCountry = ("x121_dcc_code" in vglob.country_name)
-        ? vglob.country_name.x121_dcc_code
-        : vglob.country_name.iso_3166_alpha2_code;
-    const aCountryISO = x121_dcc_country_code_to_iso_3166(Number.parseInt(aCountry, 10)) ?? aCountry;
-    const vCountryISO = x121_dcc_country_code_to_iso_3166(Number.parseInt(vCountry, 10)) ?? vCountry;
-    if (aCountryISO !== vCountryISO) {
-        return false;
+function rawDomainChoice (
+    domain: AdministrationDomainName | PrivateDomainIdentifier,
+): { isNumeric: boolean; text: string } {
+    if ("numeric" in domain) {
+        return { isNumeric: true, text: domain.numeric };
     }
+    return { isNumeric: false, text: domain.printable };
+}
 
-    // Administration Domain Name Comparison
-    const aadn = aglob.administration_domain_name;
-    const vadn = vglob.administration_domain_name;
-    const aadnStr = ("numeric" in aadn)
-        ? normalizeNumericOnly(aadn.numeric)
-        : normalizeMSString(aadn.printable, true);
-    const vadnStr = ("numeric" in vadn)
-        ? normalizeNumericOnly(vadn.numeric)
-        : normalizeMSString(vadn.printable, true);
-    if (aadnStr !== vadnStr) {
-        return false;
+function decodeRawMTSIdentifier (mts: MTSIdentifier, el: ASN1Element): PreparedMTSIdentifier {
+    const glob = mts.global_domain_identifier;
+    const rawCountry = ("x121_dcc_code" in glob.country_name)
+        ? glob.country_name.x121_dcc_code
+        : glob.country_name.iso_3166_alpha2_code;
+    if (rawCountry.trim().length === 0) {
+        throw new ASN1CharactersError("mTSIdentifierMatch: empty country-name", el);
     }
-
-    // Private Domain Identifier Comparison
-    if (!!aglob.private_domain_identifier !== !!vglob.private_domain_identifier) {
-        return false;
-    }
-    if (aglob.private_domain_identifier && vglob.private_domain_identifier) {
-        const apdn = aglob.private_domain_identifier;
-        const vpdn = vglob.private_domain_identifier;
-        const apdnStr = ("numeric" in apdn)
-            ? normalizeNumericOnly(apdn.numeric)
-            : normalizeMSString(apdn.printable, true);
-        const vpdnStr = ("numeric" in vpdn)
-            ? normalizeNumericOnly(vpdn.numeric)
-            : normalizeMSString(vpdn.printable, true);
-        if (apdnStr !== vpdnStr) {
-            return false;
+    const admd = rawDomainChoice(glob.administration_domain_name);
+    let prmd: { isNumeric: boolean; text: string } | undefined;
+    if (glob.private_domain_identifier !== undefined) {
+        prmd = rawDomainChoice(glob.private_domain_identifier);
+        if (prmd.text.length === 0) {
+            throw new ASN1CharactersError("mTSIdentifierMatch: empty private-domain-identifier", el);
         }
     }
-
-    // Local Identifier Comparison
-    if (
-        normalizeMSString(a.local_identifier, true)
-        !== normalizeMSString(v.local_identifier, true)
-    ) {
-        return false;
+    if (mts.local_identifier.length === 0) {
+        throw new ASN1CharactersError("mTSIdentifierMatch: empty local-identifier", el);
     }
+    return {
+        countryChoice: glob.country_name,
+        country: rawCountry,
+        admdIsNumeric: admd.isNumeric,
+        admd: admd.text,
+        prmdIsNumeric: prmd?.isNumeric,
+        prmd: prmd?.text,
+        localId: mts.local_identifier,
+    };
+}
 
-    return true;
+function 
+normalizePreparedMTSIdentifier (
+    raw: PreparedMTSIdentifier,
+    el?: ASN1Element,
+): PreparedMTSIdentifier {
+    const country = raw.countryChoice
+        ? normalizeCountryChoice(raw.countryChoice)
+        : normalizeMSString(raw.country, true);
+    if (!country) {
+        throw new ASN1CharactersError("mTSIdentifierMatch: invalid country-name", el);
+    }
+    const admd = raw.admdIsNumeric
+        ? normalizeNumericOnly(raw.admd)
+        : normalizeNumericOrPrintable(raw.admd);
+    const prmd = raw.prmd !== undefined
+        ? (raw.prmdIsNumeric
+            ? normalizeNumericOnly(raw.prmd)
+            : normalizeNumericOrPrintable(raw.prmd))
+        : undefined;
+    const localId = normalizeMSString(raw.localId, true);
+    return {
+        country,
+        admdIsNumeric: raw.admdIsNumeric,
+        admd,
+        prmdIsNumeric: raw.prmdIsNumeric,
+        prmd,
+        localId,
+    };
+}
+
+function decodeMTSIdentifierAssertion (el: ASN1Element): PreparedMTSIdentifier {
+    return decodeRawMTSIdentifier(_decode_MTSIdentifier(el), el);
+}
+
+/**
+ * ITU-T Rec. X.413 (06/1999), clause 12.4.13 `mTSIdentifierMatch`.
+ *
+ * Matches `country-name` (applying X.121 / ISO 3166 equivalence),
+ * `administration-domain-name`, optional `private-domain-identifier`, and
+ * `local-identifier` using `MS-string-match` (and X.402 §18.4(b) numeric /
+ * printable domain equivalence).
+ */
+export
+const mTSIdentifierMatch: Matcher = createEqualityMatcher(
+    decodeMTSIdentifierAssertion,
+    (assertion: PreparedMTSIdentifier, value: ASN1Element): boolean => {
+        const v = normalizePreparedMTSIdentifier(
+            decodeRawMTSIdentifier(_decode_MTSIdentifier(value), value),
+            value,
+        );
+        return (
+            assertion.country === v.country
+            && assertion.admd === v.admd
+            && assertion.prmd === v.prmd
+            && assertion.localId === v.localId
+        );
     },
+    undefined,
+    false,
+    normalizePreparedMTSIdentifier,
 );
 
 export default mTSIdentifierMatch;
