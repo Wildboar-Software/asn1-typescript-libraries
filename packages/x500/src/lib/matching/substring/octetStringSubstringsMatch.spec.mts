@@ -137,11 +137,11 @@ describe("octetStringSubstringsMatch", () => {
             undefined,
             MATCH_FLAG_CONSTANT_TIME,
         )).toBe(false);
-        expect(octetStringSubstringsMatch(
+        expect(() => octetStringSubstringsMatch(
             assertion([]),
             value,
             undefined,
             MATCH_FLAG_CONSTANT_TIME,
-        )).toBeUndefined();
+        )).toThrow();
     });
 });

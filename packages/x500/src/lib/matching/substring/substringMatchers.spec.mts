@@ -10,6 +10,9 @@ import {
     _encodePrintableString,
 } from "@wildboar/asn1/functional";
 import {
+    Attribute,
+} from "../../modules/InformationFramework/Attribute.ta.mjs";
+import {
     AttributeTypeAndValue,
 } from "../../modules/InformationFramework/AttributeTypeAndValue.ta.mjs";
 import {
@@ -119,9 +122,8 @@ describe("caseIgnoreSubstringsMatch", () => {
             expect(String(spy.mock.calls[0][0])).toContain("caseIgnoreSubstringsMatch");
             spy.mockClear();
 
-            expect(caseIgnoreSubstringsMatch(assertion([]), atav, undefined, MATCH_FLAG_DEBUG)).toBeUndefined();
-            expect(spy).toHaveBeenCalledTimes(1);
-            expect(String(spy.mock.calls[0][0])).toContain("caseIgnoreSubstringsMatch");
+            expect(() => caseIgnoreSubstringsMatch(assertion([]), atav, undefined, MATCH_FLAG_DEBUG)).toThrow();
+            expect(() => caseIgnoreSubstringsMatch([{ control: new Attribute(type_, []) }], atav)).toThrow();
         } finally {
             spy.mockRestore();
         }
@@ -338,7 +340,7 @@ describe("caseIgnoreListSubstringsMatch", () => {
             [{ any_: "a" }],
             postal([ "Main", "\uFFFD" ]),
         )).toBeUndefined();
-        expect(caseIgnoreListSubstringsMatch(assertion([]), atav)).toBeUndefined();
+        expect(() => caseIgnoreListSubstringsMatch(assertion([]), atav)).toThrow();
     });
 
     it("skips value preparation when each line is already normalized", () => {

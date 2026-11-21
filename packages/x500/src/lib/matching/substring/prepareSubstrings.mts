@@ -2,7 +2,6 @@ import {
     ASN1CharactersError,
     ASN1Element,
 } from "@wildboar/asn1";
-import type { Attribute } from "../../modules/InformationFramework/Attribute.ta.mjs";
 import type { FilterItem_substrings_strings_Item } from "../../modules/DirectoryAbstractService/FilterItem-substrings-strings-Item.ta.mjs";
 import {
     _decode_SubstringAssertion,
@@ -27,13 +26,6 @@ export { normalizeTelephoneNumber };
  * preparation fails or the prepared string would be empty.
  */
 export type StringPreparer = (raw: string) => string | undefined;
-
-type SubstringChoice<T> =
-    | { readonly initial: T }
-    | { readonly any_: T }
-    | { readonly final: T }
-    | { readonly control: Attribute }
-    | ASN1Element;
 
 /**
  * Prepare `raw` for an assertion piece. Failure and an empty
@@ -88,13 +80,22 @@ function anchorError (rule: string, message: string): Error {
 }
 
 /**
- * At most one `initial`, and it is the first piece that is not
- * `control`. At most one `final`, and it is the last such piece.
- * `control` is ignored by these rules.
+ * Require at least one `initial`, `any`, or `final` piece (`control`-only or
+ * empty assertions are malformed). When `checkPlacement` is true, also require
+ * at most one `initial` (first non-`control` piece) and at most one `final`
+ * (last non-`control` piece).
+ *
+ * NOTE: The X.500 / X.400 specifications do not technically allow a `control`
+ * attribute before `initial`, because `initial` is specified as the first
+ * element, while `control` applies to subsequent substring elements. Ignoring
+ * `control` when checking `initial` (and `final`) placement respects that
+ * intent so a leading `control` can govern `initial`, and does no harm.
  */
+export
 function validateAnchors<T> (
     pieces: readonly AssertedSubstring<T>[],
     rule: string,
+    checkPlacement: boolean = true,
 ): void {
     let initialAt = -1;
     let finalAt = -1;
@@ -109,23 +110,30 @@ function validateAnchors<T> (
             firstMatch = i;
         }
         lastMatch = i;
-        if ("initial" in piece) {
-            if (initialAt >= 0) {
-                throw anchorError(rule, "more than one initial");
+        if (checkPlacement) {
+            if ("initial" in piece) {
+                if (initialAt >= 0) {
+                    throw anchorError(rule, "more than one initial");
+                }
+                initialAt = i;
+            } else if ("final" in piece) {
+                if (finalAt >= 0) {
+                    throw anchorError(rule, "more than one final");
+                }
+                finalAt = i;
             }
-            initialAt = i;
-        } else if ("final" in piece) {
-            if (finalAt >= 0) {
-                throw anchorError(rule, "more than one final");
-            }
-            finalAt = i;
         }
     }
-    if (initialAt >= 0 && initialAt !== firstMatch) {
-        throw anchorError(rule, "initial is not the first substring");
+    if (firstMatch < 0) {
+        throw anchorError(rule, "assertion contains no initial, any, or final substring");
     }
-    if (finalAt >= 0 && finalAt !== lastMatch) {
-        throw anchorError(rule, "final is not the last substring");
+    if (checkPlacement) {
+        if (initialAt >= 0 && initialAt !== firstMatch) {
+            throw anchorError(rule, "initial is not the first substring");
+        }
+        if (finalAt >= 0 && finalAt !== lastMatch) {
+            throw anchorError(rule, "final is not the last substring");
+        }
     }
 }
 
@@ -136,7 +144,7 @@ function validateAnchors<T> (
  */
 export
 function mapSubstringChoices<T, U> (
-    items: readonly SubstringChoice<T>[],
+    items: readonly (Readonly<AssertedSubstring<T>> | ASN1Element)[],
     convert: (component: T) => U,
     rule: string,
     flags: number = 0,
@@ -159,9 +167,7 @@ function mapSubstringChoices<T, U> (
             throw anchorError(rule, "unrecognized substring alternative");
         }
     }
-    if (!(flags & MATCH_FLAG_ASSERTION_VALIDATED)) {
-        validateAnchors(out, rule);
-    }
+    validateAnchors(out, rule, !(flags & MATCH_FLAG_ASSERTION_VALIDATED));
     return out;
 }
 
@@ -170,6 +176,7 @@ function mapSubstringChoices<T, U> (
  * is an assertion error even when the assertion is trusted to be
  * normalized already.
  */
+export
 function nonEmptyPiece (raw: string, rule: string, el?: ASN1Element): string {
     if (raw.length === 0) {
         throw new ASN1CharactersError(`${rule}: empty substring`, el);

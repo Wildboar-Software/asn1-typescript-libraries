@@ -1,6 +1,27 @@
-import { ASN1Element } from "@wildboar/asn1";
-import { createEqualityMatcher, type Matcher } from "@wildboar/x500";
+import {
+    ASN1ConstructionError,
+    ASN1TagClass,
+    ASN1UniversalType,
+    type ASN1Element,
+    type OBJECT_IDENTIFIER,
+} from "@wildboar/asn1";
 import type { FilterItem_substrings_strings_Item } from "@wildboar/x500/DirectoryAbstractService";
+import {
+    createEqualityMatcher,
+    MATCH_FLAG_ASSERTION_VALIDATED,
+    MATCH_FLAG_VALUE_NORMALIZED,
+    type AssertedSubstring,
+    type Matcher,
+    type TypedEquationFunction,
+} from "@wildboar/x500";
+import {
+    decodeFilterPieces,
+    matchPreparedString,
+    nonEmptyPiece,
+    normalizePieces,
+    validateAnchors,
+    type StringPreparer,
+} from "@wildboar/x500/matching/substring";
 import { _decode_SubstringAssertion } from "@wildboar/x400/MSMatchingRules";
 import {
     decodeMSStringElement,
@@ -8,98 +29,89 @@ import {
     normalizeMSString,
 } from "./orAddressUtilities.js";
 
-type MSSubstring =
-    | { initial: string }
-    | { any_: string }
-    | { final: string }
-    | { unrecognized: true };
+const RULE = "mSSubstringsMatch";
 
-function substringFromMSString (
-    element: ASN1Element,
-): string {
-    return decodeMSStringElement(element);
+export const prepareMSIgnore: StringPreparer = (raw) => {
+    const s = normalizeMSString(raw, true);
+    return s.length === 0 ? undefined : s;
+};
+
+/**
+ * ITU-T Rec. X.413 (06/1999), clause 12.2.3 `mSSubstringsMatch`.
+ */
+export
+function mSSubstringsMatchTyped (
+    assertion: AssertedSubstring<string>[],
+    value: ASN1Element,
+    _getEqualityMatcher?: (attributeType: OBJECT_IDENTIFIER) => Matcher | undefined,
+    flags: number = 0,
+): boolean | undefined {
+    const raw = decodeMSStringElement(value);
+    const prepared = (flags & MATCH_FLAG_VALUE_NORMALIZED)
+        ? raw
+        : normalizeMSString(raw, true);
+    return matchPreparedString(assertion, prepared, value, flags, RULE);
 }
 
-function decodeMSSubstrings (el: ASN1Element): MSSubstring[] {
-    return _decode_SubstringAssertion(el).map((item): MSSubstring => {
+mSSubstringsMatchTyped satisfies TypedEquationFunction<AssertedSubstring<string>[]>;
+
+export
+function decodeMSSubstringsMatchAssertion (
+    el: ASN1Element,
+    flags: number = 0,
+): AssertedSubstring<string>[] {
+    if (
+        (el.tagClass !== ASN1TagClass.universal)
+        || (el.tagNumber !== ASN1UniversalType.sequence)
+    ) {
+        throw new ASN1ConstructionError(`${RULE}: expected SEQUENCE`, el);
+    }
+    const decoded = _decode_SubstringAssertion(el);
+    const out: AssertedSubstring<string>[] = new Array(decoded.length);
+    for (let i = 0; i < decoded.length; i++) {
+        const item = decoded[i];
         if ("initial" in item) {
-            return { initial: msStringToString(item.initial) };
+            out[i] = { initial: nonEmptyPiece(msStringToString(item.initial), RULE, el) };
+        } else if ("any_" in item) {
+            out[i] = { any_: nonEmptyPiece(msStringToString(item.any_), RULE, el) };
+        } else if ("final" in item) {
+            out[i] = { final: nonEmptyPiece(msStringToString(item.final), RULE, el) };
+        } else {
+            throw new Error(`${RULE}: unrecognized substring alternative`);
         }
-        if ("final" in item) {
-            return { final: msStringToString(item.final) };
-        }
-        if ("any_" in item) {
-            return { any_: msStringToString(item.any_) };
-        }
-        return { unrecognized: true };
-    });
+    }
+    // NOTE: `validateAnchors` allows `control` attributes before `initial`
+    // (relevant for `decodeMSSubstringsMatchFilterPieces` below), and rejects
+    // assertions containing no `initial`, `any`, or `final` piece. Although
+    // the specifications do not formally allow `control` before `initial`,
+    // permitting it respects the intent of `control` and does no harm.
+    validateAnchors(out, RULE, !(flags & MATCH_FLAG_ASSERTION_VALIDATED));
+    return out;
 }
 
-function msSubstringsFromFilter (
+export
+function decodeMSSubstringsMatchFilterPieces (
     items: FilterItem_substrings_strings_Item[],
-): MSSubstring[] {
-    return items.map((item): MSSubstring => {
-        if (ASN1Element.isElement(item)) {
-            return { unrecognized: true };
-        }
-        if ("initial" in item) {
-            return { initial: substringFromMSString(item.initial) };
-        }
-        if ("any_" in item) {
-            return { any_: substringFromMSString(item.any_) };
-        }
-        if ("final" in item) {
-            return { final: substringFromMSString(item.final) };
-        }
-        return { unrecognized: true };
-    });
+    flags: number = 0,
+): AssertedSubstring<string>[] {
+    return decodeFilterPieces(items, decodeMSStringElement, RULE, flags);
 }
 
-function normalizeMSSubstrings (assertion: MSSubstring[]): MSSubstring[] {
-    return assertion.map((item): MSSubstring => {
-        if ("initial" in item) {
-            return { initial: item.initial.toUpperCase() };
-        }
-        if ("final" in item) {
-            return { final: item.final.toUpperCase() };
-        }
-        if ("any_" in item) {
-            return { any_: item.any_.toUpperCase() };
-        }
-        return item;
-    });
+export
+function normalizeMSSubstringsMatchAssertion (
+    assertion: AssertedSubstring<string>[],
+    el?: ASN1Element,
+): AssertedSubstring<string>[] {
+    return normalizePieces(assertion, prepareMSIgnore, RULE, el);
 }
 
 export
 const mSSubstringsMatch: Matcher = createEqualityMatcher(
-    decodeMSSubstrings,
-    (assertion, value: ASN1Element): boolean => {
-        const v: string = normalizeMSString(decodeMSStringElement(value), true);
-        let lastAnyMatch: number = -1;
-        for (const sa of assertion) {
-            if ("initial" in sa) {
-                if (!v.startsWith(sa.initial)) {
-                    return false;
-                }
-            } else if ("final" in sa) {
-                if (!v.endsWith(sa.final)) {
-                    return false;
-                }
-            } else if ("any_" in sa) {
-                const nextMatch = v.indexOf(sa.any_, lastAnyMatch + 1);
-                if (nextMatch < 0) {
-                    return false;
-                }
-                lastAnyMatch = nextMatch;
-            } else {
-                return false;
-            }
-        }
-        return true;
-    },
-    msSubstringsFromFilter,
+    decodeMSSubstringsMatchAssertion,
+    mSSubstringsMatchTyped,
+    decodeMSSubstringsMatchFilterPieces,
     true,
-    normalizeMSSubstrings,
+    normalizeMSSubstringsMatchAssertion,
 );
 
 export default mSSubstringsMatch;

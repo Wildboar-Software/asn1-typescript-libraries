@@ -15,3 +15,11 @@ export * from "./numericStringSubstringsMatch.mjs";
 export * from "./octetStringSubstringsMatch.mjs";
 export * from "./storedPrefixMatch.mjs";
 export * from "./telephoneNumberSubstringsMatch.mjs";
+export {
+    decodeFilterPieces,
+    matchPreparedString,
+    nonEmptyPiece,
+    normalizePieces,
+    validateAnchors,
+    type StringPreparer,
+} from "./prepareSubstrings.mjs";
