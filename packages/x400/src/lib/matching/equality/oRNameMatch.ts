@@ -35,7 +35,7 @@ function matchORNames (
     value: ORName,
     getEqualityMatcher?: (attributeType: OBJECT_IDENTIFIER) => Matcher | undefined,
     flags: number = 0,
-): boolean {
+): boolean | undefined {
     const a = assertion;
     const v = value;
     const innerFlags = flags & ~(MATCH_FLAG_ELEMENTS_MATCH | MATCH_FLAG_SUBSTRING_MATCH);

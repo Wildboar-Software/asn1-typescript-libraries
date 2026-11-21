@@ -96,6 +96,20 @@ export class ORDescriptor {
             _o.telephone_number
         );
     }
+
+    /**
+     * @summary Checks if the ORDescriptor is empty
+     * @returns {boolean} True if the ORDescriptor is empty, false otherwise.
+     * @public
+     * @method
+     */
+    public isEmpty(): boolean {
+        return (
+            (this.formal_name === undefined || this.formal_name.isEmpty())
+            && this.free_form_name === undefined
+            && this.telephone_number === undefined
+        );
+    }
 }
 
 /**

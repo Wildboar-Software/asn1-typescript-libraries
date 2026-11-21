@@ -1,4 +1,4 @@
-import { ASN1Element, ASN1TagClass, ASN1UniversalType } from "@wildboar/asn1";
+import { ASN1Element, ASN1TagClass, ASN1UniversalType, type OBJECT_IDENTIFIER } from "@wildboar/asn1";
 import { createEqualityMatcher, type Matcher } from "@wildboar/x500";
 import {
     _decode_CirculationMember,
@@ -24,7 +24,9 @@ export
 function circulationMemberElementsMatchTyped (
     assertion: CirculationMember,
     value: ASN1Element,
-): boolean {
+    getEqualityMatcher?: (attributeType: OBJECT_IDENTIFIER) => Matcher | undefined,
+    flags?: number,
+): boolean | undefined {
     const recipient = valueRecipientElement(value);
     // This should not happen, because it is a required field.
     if (!recipient) {
@@ -33,6 +35,8 @@ function circulationMemberElementsMatchTyped (
     return oRDescriptorElementsMatchTyped(
         assertion.circulation_recipient.recipient,
         recipient,
+        getEqualityMatcher,
+        flags,
     );
 }
 

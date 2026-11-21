@@ -7,7 +7,7 @@ import {
     _decode_ORDescriptor,
     type ORDescriptor,
 } from "@wildboar/x400/IPMSInformationObjects";
-import { matchORNames } from "./oRNameMatch.js";
+import { MATCH_FLAG_SUBSTRING_MATCH, matchORNames } from "./oRNameMatch.js";
 import { normalizeMSString, teletexBytesToString } from "./orAddressUtilities.js";
 
 // ORDescriptor ::= SET {
@@ -17,33 +17,106 @@ import { normalizeMSString, teletexBytesToString } from "./orAddressUtilities.js
 // }
 
 export
-function oRDescriptorMatchTyped (
-    assertion: ORDescriptor,
-    value: ASN1Element,
+function validateORDescriptorAssertion (
+    d: ORDescriptor,
+    rule: string,
+    substringMode: boolean = false,
+): ORDescriptor {
+    if (d.isEmpty()) {
+        throw new Error(`${rule}: assertion is empty`);
+    }
+    if (d.free_form_name !== undefined) {
+        const norm = normalizeMSString(teletexBytesToString(d.free_form_name), true);
+        if (substringMode && norm.length === 0) {
+            throw new Error(`${rule}: free-form-name substring in assertion is empty`);
+        }
+    }
+    if (d.telephone_number !== undefined) {
+        const norm = normalizeMSString(d.telephone_number, true);
+        if (substringMode && norm.length === 0) {
+            throw new Error(`${rule}: telephone-number substring in assertion is empty`);
+        }
+    }
+    return d;
+}
+
+export
+function decodeNonEmptyORDescriptorAssertion (
+    rule: string,
+    substringMode: boolean = false,
+): (el: ASN1Element) => ORDescriptor {
+    return (el: ASN1Element): ORDescriptor => (
+        validateORDescriptorAssertion(_decode_ORDescriptor(el), rule, substringMode)
+    );
+}
+
+/**
+ * Shared implementation for ITU-T Rec. X.420 (06/1999) §§19.7.3–19.7.5
+ * (`oRDescriptorMatch`, `oRDescriptorElementsMatch`, and
+ * `oRDescriptorSubstringElementsMatch`).
+ */
+export
+function matchORDescriptors (
+    a: ORDescriptor,
+    v: ORDescriptor,
     getEqualityMatcher?: (attributeType: OBJECT_IDENTIFIER) => Matcher | undefined,
-    flags?: number,
-): boolean {
-    const a = assertion;
-    const v = _decode_ORDescriptor(value);
-    if (!!a.formal_name && !!v.formal_name) {
+    flags: number = 0,
+): boolean | undefined {
+    if (
+        !v.formal_name
+        && (v.free_form_name === undefined)
+        && (v.telephone_number === undefined)
+    ) {
+        return undefined;
+    }
+    const substringMode = !!(flags & MATCH_FLAG_SUBSTRING_MATCH);
+    // (a) `formal-name` is present in both values. Per X.420 §19.7.3, (b) and
+    //     (c) only apply when `formal-name` is absent in either or both values.
+    if (a.formal_name && v.formal_name) {
+        if (v.formal_name.isEmpty()) {
+            return undefined;
+        }
         return matchORNames(a.formal_name, v.formal_name, getEqualityMatcher, flags);
     }
-    if (!!a.free_form_name && !!v.free_form_name) {
+    // (b) `formal-name` absent in at least one value, `free-form-name` in both.
+    if ((a.free_form_name !== undefined) && (v.free_form_name !== undefined)) {
         const aname = normalizeMSString(teletexBytesToString(a.free_form_name), true);
         const vname = normalizeMSString(teletexBytesToString(v.free_form_name), true);
-        return (aname === vname);
+        const freeFormMatches = substringMode
+            ? (aname.length > 0 && vname.indexOf(aname) >= 0)
+            : (aname === vname);
+        if (freeFormMatches) {
+            return true;
+        }
     }
-    if (!!a.telephone_number && !!v.telephone_number) {
+    // (c) `formal-name` absent in at least one value, `telephone-number` in both.
+    if ((a.telephone_number !== undefined) && (v.telephone_number !== undefined)) {
         const aname = normalizeMSString(a.telephone_number, true);
         const vname = normalizeMSString(v.telephone_number, true);
-        return (aname === vname);
+        const phoneMatches = substringMode
+            ? (aname.length > 0 && vname.indexOf(aname) >= 0)
+            : (aname === vname);
+        if (phoneMatches) {
+            return true;
+        }
     }
     return false;
 }
 
 export
+function oRDescriptorMatchTyped (
+    assertion: ORDescriptor,
+    value: ASN1Element,
+    getEqualityMatcher?: (attributeType: OBJECT_IDENTIFIER) => Matcher | undefined,
+    flags: number = 0,
+): boolean | undefined {
+    const v = _decode_ORDescriptor(value);
+    return matchORDescriptors(assertion, v, getEqualityMatcher, flags);
+}
+
+export
 const oRDescriptorMatch: Matcher = createEqualityMatcher(
-    _decode_ORDescriptor,
+    decodeNonEmptyORDescriptorAssertion("oRDescriptorMatch"),
     oRDescriptorMatchTyped,
 );
 

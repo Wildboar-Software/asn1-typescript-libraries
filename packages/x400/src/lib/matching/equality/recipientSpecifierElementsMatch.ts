@@ -1,4 +1,4 @@
-import { ASN1Element, ASN1TagClass } from "@wildboar/asn1";
+import { ASN1Element, ASN1TagClass, type OBJECT_IDENTIFIER } from "@wildboar/asn1";
 import { createEqualityMatcher, type Matcher } from "@wildboar/x500";
 import {
     _decode_RecipientSpecifier,
@@ -10,7 +10,9 @@ export
 function recipientSpecifierElementsMatchTyped (
     assertion: RecipientSpecifier,
     value: ASN1Element,
-): boolean {
+    getEqualityMatcher?: (attributeType: OBJECT_IDENTIFIER) => Matcher | undefined,
+    flags?: number,
+): boolean | undefined {
     const recipient = value.set.find((el) => (
         (el.tagClass === ASN1TagClass.context)
         && (el.tagNumber === 0)
@@ -18,7 +20,12 @@ function recipientSpecifierElementsMatchTyped (
     if (!recipient) { // This should not happen, because it is a required field.
         return false;
     }
-    return oRDescriptorElementsMatchTyped(assertion.recipient, recipient);
+    return oRDescriptorElementsMatchTyped(
+        assertion.recipient,
+        recipient,
+        getEqualityMatcher,
+        flags,
+    );
 }
 
 export

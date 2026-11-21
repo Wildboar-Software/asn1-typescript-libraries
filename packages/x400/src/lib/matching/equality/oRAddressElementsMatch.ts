@@ -11,7 +11,7 @@ import {
 } from "./orAddressUtilities.js";
 
 export
-function orAddressIsSubset (asserted: ORAddress, value: ORAddress): boolean {
+function orAddressIsSubset (asserted: ORAddress, value: ORAddress): boolean | undefined {
     if (asserted.isEmptyOrAddress() || value.isEmptyOrAddress()) {
         return undefined;
     }
