@@ -1,36 +1,61 @@
+import type { ASN1Element, OBJECT_IDENTIFIER } from "@wildboar/asn1";
 import { createEqualityMatcher, type Matcher } from "@wildboar/x500";
 import { _decode_DistributionCode } from "@wildboar/x400/IPMSHeadingExtensions";
 import { normalizeMSString, univOrBmpToString } from "./orAddressUtilities.js";
 
+interface PreparedDistributionCode {
+    readonly oidCode?: OBJECT_IDENTIFIER;
+    readonly alphanumericCode?: string;
+}
+
+function decodeDistributionCodeAssertion (el: ASN1Element): PreparedDistributionCode {
+    const d = _decode_DistributionCode(el);
+    return {
+        oidCode: d.oid_code,
+        alphanumericCode: d.alphanumeric_code
+            ? univOrBmpToString(d.alphanumeric_code)
+            : undefined,
+    };
+}
+
+function normalizeDistributionCodeAssertion (
+    a: PreparedDistributionCode,
+): PreparedDistributionCode {
+    if (a.alphanumericCode === undefined) {
+        return a;
+    }
+    return {
+        oidCode: a.oidCode,
+        alphanumericCode: normalizeMSString(a.alphanumericCode, true),
+    };
+}
+
 // NOTE: The or-descriptor is not used for this matching rule.
 export
 const distributionCodeMatch: Matcher = createEqualityMatcher(
-    _decode_DistributionCode,
-    (assertion, value): boolean => {
+    decodeDistributionCodeAssertion,
+    (assertion: PreparedDistributionCode, value): boolean => {
         const v = _decode_DistributionCode(value);
         const a = assertion;
-        if (a.oid_code && v.oid_code) {
-            const oidCodesMatch = a.oid_code.isEqualTo(v.oid_code);
-            if (!oidCodesMatch) {
+        if (a.oidCode && v.oid_code) {
+            if (!a.oidCode.isEqualTo(v.oid_code)) {
                 return false;
             }
-            if (a.alphanumeric_code && v.alphanumeric_code) {
-                const acode = normalizeMSString(univOrBmpToString(a.alphanumeric_code), true);
+            if ((a.alphanumericCode !== undefined) && v.alphanumeric_code) {
                 const vcode = normalizeMSString(univOrBmpToString(v.alphanumeric_code), true);
-                return (acode === vcode);
-            } else if (!a.alphanumeric_code && !v.alphanumeric_code) {
-                return true;
-            } else {
-                return false;
+                return (a.alphanumericCode === vcode);
             }
-        } else if (a.alphanumeric_code && v.alphanumeric_code) {
-            const acode = normalizeMSString(univOrBmpToString(a.alphanumeric_code), true);
-            const vcode = normalizeMSString(univOrBmpToString(v.alphanumeric_code), true);
-            return (acode === vcode);
-        } else {
-            return false;
+            return (a.alphanumericCode === undefined) && !v.alphanumeric_code;
         }
+        if ((a.alphanumericCode !== undefined) && v.alphanumeric_code) {
+            const vcode = normalizeMSString(univOrBmpToString(v.alphanumeric_code), true);
+            return (a.alphanumericCode === vcode);
+        }
+        return false;
     },
+    undefined,
+    false,
+    normalizeDistributionCodeAssertion,
 );
 
 export default distributionCodeMatch;

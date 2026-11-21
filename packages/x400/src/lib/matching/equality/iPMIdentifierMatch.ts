@@ -1,12 +1,11 @@
 import type { ASN1Element, OBJECT_IDENTIFIER } from "@wildboar/asn1";
 import { createEqualityMatcher, type Matcher } from "@wildboar/x500";
-import {
-    type IPMIdentifier,
-    _decode_IPMIdentifier,
-} from "@wildboar/x400/IPMSInformationObjects";
+import { _decode_IPMIdentifier } from "@wildboar/x400/IPMSInformationObjects";
 import { strict as assert } from "node:assert";
 import { matchORNames, validateNonEmptyORNameAssertion } from "./oRNameMatch.js";
 import { normalizeMSString } from "./orAddressUtilities.js";
+import { IPMIdentifier } from "@wildboar/x400/IPMSInformationObjects";
+
 
 function decodeIPMIdentifierAssertion (el: ASN1Element): IPMIdentifier {
     const decoded = _decode_IPMIdentifier(el);
@@ -16,11 +15,20 @@ function decodeIPMIdentifierAssertion (el: ASN1Element): IPMIdentifier {
     return decoded;
 }
 
+function normalizeIPMIdentifierAssertion (
+    a: IPMIdentifier,
+): IPMIdentifier {
+    return new IPMIdentifier(
+        a.user,
+        normalizeMSString(a.user_relative_identifier, true),
+    );
+}
+
 export
 const iPMIdentifierMatch: Matcher = createEqualityMatcher(
     decodeIPMIdentifierAssertion,
     (
-        assertion,
+        assertion: IPMIdentifier,
         value,
         getEqualityMatcher?: (attributeType: OBJECT_IDENTIFIER) => Matcher | undefined,
         flags?: number,
@@ -30,9 +38,8 @@ const iPMIdentifierMatch: Matcher = createEqualityMatcher(
         if (!!a.user !== !!v.user) {
             return false;
         }
-        const auri = normalizeMSString(a.user_relative_identifier, true);
         const vuri = normalizeMSString(v.user_relative_identifier, true);
-        if (auri !== vuri) {
+        if (a.user_relative_identifier !== vuri) {
             return false;
         }
         if (a.user) {
@@ -41,6 +48,9 @@ const iPMIdentifierMatch: Matcher = createEqualityMatcher(
         }
         return true;
     },
+    undefined,
+    false,
+    normalizeIPMIdentifierAssertion,
 );
 
 export default iPMIdentifierMatch;

@@ -13,16 +13,23 @@ import {
     Attribute_valuesWithContext_Item,
 } from "@wildboar/x500/InformationFramework";
 import {
+    BuiltInStandardAttributes,
+    ExtensionAttribute,
     GlobalDomainIdentifier,
     MTSIdentifier,
+    ORName,
     UniversalOrBMPString,
     _encode_ContentCorrelator,
     _encode_ContentIdentifier,
     _encode_MTSIdentifier,
+    _encode_ORName,
     _encode_UniversalOrBMPString,
+    teletex_common_name,
 } from "@wildboar/x400/MTSAbstractService";
 import {
+    IPMIdentifier,
     ORDescriptor,
+    _encode_IPMIdentifier,
     _encode_ORDescriptor,
 } from "@wildboar/x400/IPMSInformationObjects";
 import {
@@ -34,6 +41,7 @@ import {
 } from "@wildboar/x400/IPMSMessageStoreAttributes";
 import contentCorrelatorMatch from "./contentCorrelatorMatch.js";
 import contentIdentifierMatch from "./contentIdentifierMatch.js";
+import iPMIdentifierMatch from "./iPMIdentifierMatch.js";
 import iPMLocationMatch from "./iPMLocationMatch.js";
 import mSSingleSubstringListMatch from "./mSSingleSubstringListMatch.js";
 import mSSingleSubstringListElementsMatch from "./mSSingleSubstringListElementsMatch.js";
@@ -43,6 +51,7 @@ import mSSubstringsMatch from "./mSSubstringsMatch.js";
 import mTSIdentifierMatch from "./mTSIdentifierMatch.js";
 import oRDescriptorMatch from "./oRDescriptorMatch.js";
 import oRDescriptorSubstringElementsMatch from "./oRDescriptorSubstringElementsMatch.js";
+import oRNameMatch from "./oRNameMatch.js";
 import valueCountMatch from "./valueCountMatch.js";
 import mSStringOrderingMatch from "../ordering/mSStringOrderingMatch.js";
 import mSSingleSubstringMatch from "../substring/mSSingleSubstringMatch.js";
@@ -410,5 +419,33 @@ describe("X.400 matchers decode the assertion", () => {
         expect(() => valueCountMatch($._encodeInteger(0, DER), multiAttr)).toThrow();
         expect(() => valueCountMatch($._encodeInteger(-1, DER), multiAttr)).toThrow();
         expect(() => valueCountMatch(ms("3"), multiAttr)).toThrow();
+    });
+
+    test("up-front assertion preparation throws on malformed T.61 accents and honors MATCH_FLAG_ASSERTION_NORMALIZED (Issues 3.1 & 3.2)", () => {
+        // Two consecutive T.61 accent bytes (0xC1 0xC1) must throw in assertionDecoder, not return undefined
+        const badT61Desc = _encode_ORDescriptor(
+            new ORDescriptor(undefined, new Uint8Array([0xc1, 0xc1, 0x61])),
+            DER,
+        );
+        const goodDesc = _encode_ORDescriptor(
+            new ORDescriptor(undefined, new Uint8Array([0x61])),
+            DER,
+        );
+        expect(() => oRDescriptorMatch(badT61Desc, stored(goodDesc))).toThrow();
+
+        // contentCorrelatorMatch & iPMIdentifierMatch respect MATCH_FLAG_ASSERTION_NORMALIZED
+        const ccUnnormalized = _encode_ContentCorrelator({ ia5text: "  ref  1 " }, DER);
+        const ccClean = _encode_ContentCorrelator({ ia5text: "ref 1" }, DER);
+        expect(contentCorrelatorMatch(ccUnnormalized, stored(ccClean))).toBe(true);
+        expect(
+            contentCorrelatorMatch(ccUnnormalized, stored(ccClean), undefined, MATCH_FLAG_ASSERTION_NORMALIZED),
+        ).toBe(false);
+
+        const ipmUnnormalized = _encode_IPMIdentifier(new IPMIdentifier(undefined, "  id  1 "), DER);
+        const ipmClean = _encode_IPMIdentifier(new IPMIdentifier(undefined, "ID 1"), DER);
+        expect(iPMIdentifierMatch(ipmUnnormalized, stored(ipmClean))).toBe(true);
+        expect(
+            iPMIdentifierMatch(ipmUnnormalized, stored(ipmClean), undefined, MATCH_FLAG_ASSERTION_NORMALIZED),
+        ).toBe(false);
     });
 });
