@@ -1,6 +1,6 @@
 import { createEqualityMatcher, type Matcher } from "@wildboar/x500";
 import { _decode_InformationCategory } from "@wildboar/x400/IPMSHeadingExtensions";
-import { univOrBmpToString } from "./orAddressUtilities.js";
+import { normalizeMSString, univOrBmpToString } from "./orAddressUtilities.js";
 
 export
 const informationCategoryMatch: Matcher = createEqualityMatcher(
@@ -14,8 +14,8 @@ const informationCategoryMatch: Matcher = createEqualityMatcher(
                 return false;
             }
             if (v.description && a.description) {
-                const vdesc = univOrBmpToString(v.description).trim().replace(/\s+/g, " ").toUpperCase();
-                const adesc = univOrBmpToString(a.description).trim().replace(/\s+/g, " ").toUpperCase();
+                const vdesc = normalizeMSString(univOrBmpToString(v.description), true);
+                const adesc = normalizeMSString(univOrBmpToString(a.description), true);
                 return (vdesc === adesc);
             } else {
                 return true;
@@ -24,8 +24,8 @@ const informationCategoryMatch: Matcher = createEqualityMatcher(
             if (!v.description || !a.description) {
                 return false;
             }
-            const vdesc = univOrBmpToString(v.description).trim().replace(/\s+/g, " ").toUpperCase();
-            const adesc = univOrBmpToString(a.description).trim().replace(/\s+/g, " ").toUpperCase();
+            const vdesc = normalizeMSString(univOrBmpToString(v.description), true);
+            const adesc = normalizeMSString(univOrBmpToString(a.description), true);
             return (vdesc === adesc);
         } else {
             return false;

@@ -11,6 +11,7 @@ import {
     type ORDescriptor,
 } from "@wildboar/x400/IPMSInformationObjects";
 import { oRNameSubstringElementsMatchTyped } from "./oRNameSubstringElementsMatch.js";
+import { normalizeMSString } from "./orAddressUtilities.js";
 
 // ORDescriptor ::= SET {
 //     formal-name       ORName OPTIONAL,
@@ -38,14 +39,14 @@ function oRDescriptorSubstringElementsMatchTyped (
         );
     }
     if (!!a.free_form_name && !!v.free_form_name) {
-        const aname = teletexToString(a.free_form_name).trim().replace(/\s+/g, " ").toUpperCase();
-        const vname = teletexToString(v.free_form_name).trim().replace(/\s+/g, " ").toUpperCase();
-        return (vname.indexOf(aname) >= 0);
+        const aname = normalizeMSString(teletexToString(a.free_form_name), true);
+        const vname = normalizeMSString(teletexToString(v.free_form_name), true);
+        return aname.length === 0 ? vname.length === 0 : (vname.indexOf(aname) >= 0);
     }
     if (!!a.telephone_number && !!v.telephone_number) {
-        const aname = a.telephone_number.trim().replace(/\s+/g, " ").toUpperCase();
-        const vname = v.telephone_number.trim().replace(/\s+/g, " ").toUpperCase();
-        return (vname.indexOf(aname) >= 0);
+        const aname = normalizeMSString(a.telephone_number, true);
+        const vname = normalizeMSString(v.telephone_number, true);
+        return aname.length === 0 ? vname.length === 0 : (vname.indexOf(aname) >= 0);
     }
     return false;
 }

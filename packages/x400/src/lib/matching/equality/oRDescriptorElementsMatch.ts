@@ -6,6 +6,7 @@ import {
     type ORDescriptor,
 } from "@wildboar/x400/IPMSInformationObjects";
 import { orAddressIsSubset } from "./oRAddressElementsMatch.js";
+import { normalizeMSString } from "./orAddressUtilities.js";
 
 // ORDescriptor ::= SET {
 //     formal-name       ORName OPTIONAL,
@@ -24,13 +25,13 @@ function oRDescriptorElementsMatchTyped (
         return orAddressIsSubset(a.formal_name, v.formal_name);
     }
     if (!!a.free_form_name && !!v.free_form_name) {
-        const aname = teletexToString(a.free_form_name).trim().replace(/\s+/g, " ").toUpperCase();
-        const vname = teletexToString(v.free_form_name).trim().replace(/\s+/g, " ").toUpperCase();
+        const aname = normalizeMSString(teletexToString(a.free_form_name), true);
+        const vname = normalizeMSString(teletexToString(v.free_form_name), true);
         return (aname === vname);
     }
     if (!!a.telephone_number && !!v.telephone_number) {
-        const aname = a.telephone_number.trim().replace(/\s+/g, " ").toUpperCase();
-        const vname = v.telephone_number.trim().replace(/\s+/g, " ").toUpperCase();
+        const aname = normalizeMSString(a.telephone_number, true);
+        const vname = normalizeMSString(v.telephone_number, true);
         return (aname === vname);
     }
     return false;

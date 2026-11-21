@@ -5,6 +5,7 @@ import {
 } from "@wildboar/x400/IPMSInformationObjects";
 import { strict as assert } from "node:assert";
 import { matchORNames } from "./oRNameMatch.js";
+import { normalizeMSString } from "./orAddressUtilities.js";
 
 export
 const iPMIdentifierMatch: Matcher = createEqualityMatcher(
@@ -20,8 +21,8 @@ const iPMIdentifierMatch: Matcher = createEqualityMatcher(
         if (!!a.user !== !!v.user) {
             return false;
         }
-        const auri = a.user_relative_identifier.trim().replace(/\s+/g, " ").toUpperCase();
-        const vuri = v.user_relative_identifier.trim().replace(/\s+/g, " ").toUpperCase();
+        const auri = normalizeMSString(a.user_relative_identifier, true);
+        const vuri = normalizeMSString(v.user_relative_identifier, true);
         if (auri !== vuri) {
             return false;
         }

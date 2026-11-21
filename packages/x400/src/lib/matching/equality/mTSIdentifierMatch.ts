@@ -3,6 +3,7 @@ import {
     _decode_MTSIdentifier,
 } from "@wildboar/x400/MTSAbstractService";
 import { x121_dcc_country_code_to_iso_3166 } from "@wildboar/or-address";
+import { normalizeMSString, normalizeNumericOnly } from "./orAddressUtilities.js";
 
 // MTSIdentifier ::= [APPLICATION 4]  SEQUENCE {
 //     global-domain-identifier  GlobalDomainIdentifier,
@@ -54,12 +55,12 @@ const mTSIdentifierMatch: Matcher = createEqualityMatcher(
     const aadn = aglob.administration_domain_name;
     const vadn = vglob.administration_domain_name;
     const aadnStr = ("numeric" in aadn)
-        ? aadn.numeric.trim().replace(/\s+/g, "")
-        : aadn.printable.replace(/\s+/g, " ");
+        ? normalizeNumericOnly(aadn.numeric)
+        : normalizeMSString(aadn.printable, true);
     const vadnStr = ("numeric" in vadn)
-        ? vadn.numeric.trim().replace(/\s+/g, "")
-        : vadn.printable.replace(/\s+/g, " ");
-    if (aadnStr.toUpperCase() !== vadnStr.toUpperCase()) {
+        ? normalizeNumericOnly(vadn.numeric)
+        : normalizeMSString(vadn.printable, true);
+    if (aadnStr !== vadnStr) {
         return false;
     }
 
@@ -71,20 +72,20 @@ const mTSIdentifierMatch: Matcher = createEqualityMatcher(
         const apdn = aglob.private_domain_identifier;
         const vpdn = vglob.private_domain_identifier;
         const apdnStr = ("numeric" in apdn)
-            ? apdn.numeric.trim().replace(/\s+/g, "")
-            : apdn.printable.replace(/\s+/g, " ");
+            ? normalizeNumericOnly(apdn.numeric)
+            : normalizeMSString(apdn.printable, true);
         const vpdnStr = ("numeric" in vpdn)
-            ? vpdn.numeric.trim().replace(/\s+/g, "")
-            : vpdn.printable.replace(/\s+/g, " ");
-        if (apdnStr.toUpperCase() !== vpdnStr.toUpperCase()) {
+            ? normalizeNumericOnly(vpdn.numeric)
+            : normalizeMSString(vpdn.printable, true);
+        if (apdnStr !== vpdnStr) {
             return false;
         }
     }
 
     // Local Identifier Comparison
     if (
-        a.local_identifier.trim().replace(/\s+/g, " ").toUpperCase()
-        !== v.local_identifier.trim().replace(/\s+/g, " ").toUpperCase()
+        normalizeMSString(a.local_identifier, true)
+        !== normalizeMSString(v.local_identifier, true)
     ) {
         return false;
     }

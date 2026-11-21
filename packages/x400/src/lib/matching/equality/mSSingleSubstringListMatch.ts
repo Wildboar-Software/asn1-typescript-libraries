@@ -1,4 +1,10 @@
-import type { ASN1Element } from "@wildboar/asn1";
+import {
+    ASN1CharactersError,
+    ASN1ConstructionError,
+    ASN1TagClass,
+    ASN1UniversalType,
+    type ASN1Element,
+} from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { createEqualityMatcher, type Matcher } from "@wildboar/x500";
 import {
@@ -9,7 +15,18 @@ import {
 const decodeMSStringSequence = $._decodeSequenceOf<string>(() => decodeMSStringElement);
 
 function decodeMSStringList (el: ASN1Element): string[] {
-    return decodeMSStringSequence(el);
+    if (
+        (el.tagClass !== ASN1TagClass.universal)
+        || (el.tagNumber !== ASN1UniversalType.sequence)
+    ) {
+        throw new ASN1ConstructionError("mSSingleSubstringListMatch: expected SEQUENCE", el);
+    }
+    return decodeMSStringSequence(el).map((str) => {
+        if (str.length === 0) {
+            throw new ASN1CharactersError("mSSingleSubstringListMatch: empty MSString", el);
+        }
+        return str;
+    });
 }
 
 function normalizeCaseIgnoreList (assertion: string[]): string[] {
@@ -20,12 +37,22 @@ export
 const mSSingleSubstringListMatch: Matcher = createEqualityMatcher(
     decodeMSStringList,
     (assertion, value: ASN1Element): boolean => {
+        if (
+            (value.tagClass !== ASN1TagClass.universal)
+            || (value.tagNumber !== ASN1UniversalType.sequence)
+        ) {
+            throw new ASN1ConstructionError("mSSingleSubstringListMatch: expected SEQUENCE", value);
+        }
         const vElements = value.sequenceOf;
         if (assertion.length !== vElements.length) {
             return false;
         }
         for (let i = 0; i < assertion.length; i++) {
-            const vi = normalizeMSString(decodeMSStringElement(vElements[i]), true);
+            const raw = decodeMSStringElement(vElements[i]);
+            if (raw.length === 0) {
+                throw new ASN1CharactersError("mSSingleSubstringListMatch: empty MSString", vElements[i]);
+            }
+            const vi = normalizeMSString(raw, true);
             if (vi.indexOf(assertion[i]) < 0) {
                 return false;
             }

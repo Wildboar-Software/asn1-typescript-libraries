@@ -104,6 +104,7 @@ function removeAsciiSpaces (s: string): string {
  * encoded as either a `NumericString` or a `PrintableString`. Preserve single
  * `" "` (reserved in X.402 §18.3.1 for any ADMD) and `""` distinctly.
  */
+export
 function normalizeNumericOrPrintable (raw: string): string {
     const ms = normalizeMSString(raw);
     if (ms === " ") {
@@ -115,6 +116,7 @@ function normalizeNumericOrPrintable (raw: string): string {
     return ms;
 }
 
+export
 function normalizeNumericOnly (raw: string): string {
     if (raw.length === 0) {
         return "";

@@ -6,17 +6,10 @@ import {
 } from "@wildboar/x400/MTSAbstractService";
 import {
     compareORAddressInfo,
+    normalizeMSString,
     type ORAddressInfo,
     orAddressToInfo,
 } from "./orAddressUtilities.js";
-
-function normalizeSubstringPiece (s: string): string {
-    if (s.length === 0) {
-        return "";
-    }
-    const trimmed = s.replace(/\s+/g, " ").trim().toUpperCase();
-    return trimmed.length === 0 ? " " : trimmed;
-}
 
 export
 function isSubstringSubset (value: unknown, assertion: unknown): boolean {
@@ -33,8 +26,8 @@ function isSubstringSubset (value: unknown, assertion: unknown): boolean {
         return false;
     }
     if (typeof value === "string" && typeof assertion === "string") {
-        const a = normalizeSubstringPiece(assertion);
-        const v = normalizeSubstringPiece(value);
+        const a = normalizeMSString(assertion, true);
+        const v = normalizeMSString(value, true);
         if (a.length === 0) {
             return v.length === 0;
         }

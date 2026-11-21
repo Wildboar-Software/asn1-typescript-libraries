@@ -1,6 +1,6 @@
 import { createEqualityMatcher, type Matcher } from "@wildboar/x500";
 import { _decode_DistributionCode } from "@wildboar/x400/IPMSHeadingExtensions";
-import { univOrBmpToString } from "./orAddressUtilities.js";
+import { normalizeMSString, univOrBmpToString } from "./orAddressUtilities.js";
 
 // NOTE: The or-descriptor is not used for this matching rule.
 export
@@ -15,8 +15,8 @@ const distributionCodeMatch: Matcher = createEqualityMatcher(
                 return false;
             }
             if (a.alphanumeric_code && v.alphanumeric_code) {
-                const acode = univOrBmpToString(a.alphanumeric_code).trim().replace(/\s+/g, " ").toUpperCase();
-                const vcode = univOrBmpToString(v.alphanumeric_code).trim().replace(/\s+/g, " ").toUpperCase();
+                const acode = normalizeMSString(univOrBmpToString(a.alphanumeric_code), true);
+                const vcode = normalizeMSString(univOrBmpToString(v.alphanumeric_code), true);
                 return (acode === vcode);
             } else if (!a.alphanumeric_code && !v.alphanumeric_code) {
                 return true;
@@ -24,8 +24,8 @@ const distributionCodeMatch: Matcher = createEqualityMatcher(
                 return false;
             }
         } else if (a.alphanumeric_code && v.alphanumeric_code) {
-            const acode = univOrBmpToString(a.alphanumeric_code).trim().replace(/\s+/g, " ").toUpperCase();
-            const vcode = univOrBmpToString(v.alphanumeric_code).trim().replace(/\s+/g, " ").toUpperCase();
+            const acode = normalizeMSString(univOrBmpToString(a.alphanumeric_code), true);
+            const vcode = normalizeMSString(univOrBmpToString(v.alphanumeric_code), true);
             return (acode === vcode);
         } else {
             return false;

@@ -1,19 +1,32 @@
 import { ASN1Element, DERElement, ObjectIdentifier } from "@wildboar/asn1";
+import * as $ from "@wildboar/asn1/functional";
 import { DER } from "@wildboar/asn1/functional";
 import { AttributeTypeAndValue } from "@wildboar/x500/InformationFramework";
 import {
+    GlobalDomainIdentifier,
+    MTSIdentifier,
     UniversalOrBMPString,
+    _encode_ContentCorrelator,
     _encode_ContentIdentifier,
+    _encode_MTSIdentifier,
     _encode_UniversalOrBMPString,
 } from "@wildboar/x400/MTSAbstractService";
+import {
+    ORDescriptor,
+    _encode_ORDescriptor,
+} from "@wildboar/x400/IPMSInformationObjects";
 import {
     _encode_MSString,
     _encode_SubstringAssertion,
 } from "@wildboar/x400/MSMatchingRules";
+import contentCorrelatorMatch from "./contentCorrelatorMatch.js";
 import contentIdentifierMatch from "./contentIdentifierMatch.js";
+import mSSingleSubstringListMatch from "./mSSingleSubstringListMatch.js";
 import mSStringMatch from "./mSStringMatch.js";
 import mSStringCaseSensitiveMatch from "./msStringCaseSensitiveMatch.js";
 import mSSubstringsMatch from "./mSSubstringsMatch.js";
+import mTSIdentifierMatch from "./mTSIdentifierMatch.js";
+import oRDescriptorSubstringElementsMatch from "./oRDescriptorSubstringElementsMatch.js";
 import mSStringOrderingMatch from "../ordering/mSStringOrderingMatch.js";
 import mSSingleSubstringMatch from "../substring/mSSingleSubstringMatch.js";
 import {
@@ -159,5 +172,51 @@ describe("X.400 matchers decode the assertion", () => {
                 stored(storedExtendedSubject),
             ),
         ).toBe(true);
+    });
+
+    test("whitespace-only strings normalize to a single significant space per X.413 §12.2 / X.402 §18.3.1", () => {
+        // oRDescriptorSubstringElementsMatch: space-only assertion must NOT match spaceless string
+        const spaceDesc = _encode_ORDescriptor(new ORDescriptor(undefined, undefined, "   "), DER);
+        const spacelessDesc = _encode_ORDescriptor(new ORDescriptor(undefined, undefined, "18005551212"), DER);
+        const spacedDesc = _encode_ORDescriptor(new ORDescriptor(undefined, undefined, "1 800 555 1212"), DER);
+        expect(oRDescriptorSubstringElementsMatch(spaceDesc, stored(spacelessDesc))).toBe(false);
+        expect(oRDescriptorSubstringElementsMatch(spaceDesc, stored(spacedDesc))).toBe(true);
+
+        // mSSingleSubstringListMatch: space-only element must NOT match spaceless element
+        const encodeList = $._encodeSequenceOf<ASN1Element>(() => (el) => el, DER);
+        const spaceList = encodeList([ms("   ")], DER);
+        const spacelessList = encodeList([ms("Hello")], DER);
+        const spacedList = encodeList([ms("Hello World")], DER);
+        expect(mSSingleSubstringListMatch(spaceList, stored(spacelessList))).toBe(false);
+        expect(mSSingleSubstringListMatch(spaceList, stored(spacedList))).toBe(true);
+
+        // mTSIdentifierMatch: single-space ADMD (" ") must remain distinct from empty ADMD ("")
+        const mtsSpaceAdmd = _encode_MTSIdentifier(
+            new MTSIdentifier(
+                new GlobalDomainIdentifier({ iso_3166_alpha2_code: "US" }, { numeric: " " }),
+                "msg-1",
+            ),
+            DER,
+        );
+        const mtsEmptyAdmd = _encode_MTSIdentifier(
+            new MTSIdentifier(
+                new GlobalDomainIdentifier({ iso_3166_alpha2_code: "US" }, { numeric: "" }),
+                "msg-1",
+            ),
+            DER,
+        );
+        expect(mTSIdentifierMatch(mtsSpaceAdmd, stored(mtsEmptyAdmd))).toBe(false);
+        expect(mTSIdentifierMatch(mtsSpaceAdmd, stored(mtsSpaceAdmd))).toBe(true);
+
+        // contentCorrelatorMatch & contentIdentifierMatch: "   " == " ", and != ""
+        const ccSpaces = _encode_ContentCorrelator({ ia5text: "   " }, DER);
+        const ccSingleSpace = _encode_ContentCorrelator({ ia5text: " " }, DER);
+        const ccEmpty = _encode_ContentCorrelator({ ia5text: "" }, DER);
+        expect(contentCorrelatorMatch(ccSpaces, stored(ccSingleSpace))).toBe(true);
+        expect(contentCorrelatorMatch(ccSpaces, stored(ccEmpty))).toBe(false);
+
+        const ciSpaces = _encode_ContentIdentifier("   ", DER);
+        const ciSingleSpace = _encode_ContentIdentifier(" ", DER);
+        expect(contentIdentifierMatch(ciSpaces, stored(ciSingleSpace))).toBe(true);
     });
 });
