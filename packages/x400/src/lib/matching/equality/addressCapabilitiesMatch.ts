@@ -1,104 +1,86 @@
+import type { ASN1Element } from "@wildboar/asn1";
 import { createEqualityMatcher, type Matcher } from "@wildboar/x500";
 import {
+    type AddressCapabilities,
     _decode_AddressCapabilities,
 } from "@wildboar/x400/MHSDirectoryObjectsAndAttributes";
+import { capabilityToCanonicalKey } from "./capabilityMatch.js";
 import {
-    Capability,
-} from "@wildboar/x400/MHSDirectoryObjectsAndAttributes";
-import { orAddressesMatch } from "./orAddressUtilities.js";
+    compareORAddressInfo,
+    normalizeMSString,
+    type ORAddressInfo,
+    orAddressToInfo,
+} from "./orAddressUtilities.js";
 
-// addressCapabilitiesMatch MATCHING-RULE ::= {
-//     SYNTAX  AddressCapabilities
-//     ID      id-mr-address-capabilities-match
-// }
+interface PreparedAddressCapabilities {
+    readonly description: string | undefined;
+    readonly address: ORAddressInfo;
+    readonly capabilities: ReadonlySet<string>;
+}
 
-// AddressCapabilities ::= SEQUENCE {
-//     description   GeneralString OPTIONAL,
-//     address       ORAddress,
-//     capabilities  SET OF Capability
-//   }
+function prepareAddressCapabilities (ac: AddressCapabilities): PreparedAddressCapabilities | null {
+    if (ac.address.isEmptyOrAddress()) {
+        return null;
+    }
+    const address = orAddressToInfo(ac.address);
+    if (!address) {
+        return null;
+    }
+    const description = ac.description !== undefined
+        ? normalizeMSString(ac.description, true)
+        : undefined;
+    const capabilities = new Set<string>();
+    for (const cap of ac.capabilities) {
+        capabilities.add(capabilityToCanonicalKey(cap));
+    }
+    return {
+        description,
+        address,
+        capabilities,
+    };
+}
 
-//   Capability ::= SET {
-//     content-types
-//       [0]  SET OF ExtendedContentType OPTIONAL,
-//     maximum-content-length                 [1]  ContentLength OPTIONAL,
-//     encoded-information-types-constraints
-//       [2]  EncodedInformationTypesConstraints OPTIONAL,
-//     security-labels                        [3]  SecurityContext OPTIONAL,
-//     ...
-// }
+function decodeAddressCapabilitiesAssertion (el: ASN1Element): PreparedAddressCapabilities {
+    const decoded = _decode_AddressCapabilities(el);
+    const prepared = prepareAddressCapabilities(decoded);
+    if (!prepared) {
+        throw new Error("addressCapabilitiesMatch: malformed or empty ORAddress in assertion");
+    }
+    return prepared;
+}
 
-// ExtendedContentType ::= RELATIVE-OID
-// ContentLength ::= INTEGER(0..ub-content-length)
-// SecurityContext ::= SET SIZE (1..ub-security-labels) OF SecurityLabel
-
-// SecurityLabel ::= SET {
-//     security-policy-identifier  SecurityPolicyIdentifier OPTIONAL,
-//     security-classification     SecurityClassification OPTIONAL,
-//     privacy-mark                PrivacyMark OPTIONAL,
-//     security-categories         SecurityCategories OPTIONAL
-// }
-
-// SecurityPolicyIdentifier ::= OBJECT IDENTIFIER
-
-// SecurityClassification ::= INTEGER {
-// unmarked(0), unclassified(1), restricted(2), confidential(3), secret(4),
-// top-secret(5)}(0..ub-integer-options)
-
-// PrivacyMark ::= PrintableString(SIZE (1..ub-privacy-mark-length))
-
-// SecurityCategories ::= SET SIZE (1..ub-security-categories) OF SecurityCategory
-
-// SecurityCategory ::= SEQUENCE {
-// type   [0]  SECURITY-CATEGORY.&id({SecurityCategoriesTable}),
-// value  [1]  SECURITY-CATEGORY.&Type({SecurityCategoriesTable}{@type})
-// }
-
-// SECURITY-CATEGORY ::= TYPE-IDENTIFIER
-
+/**
+ * ITU-T Rec. X.402 (06/1999), Annex A.3.4 `addressCapabilitiesMatch`.
+ *
+ * Returns `true` iff:
+ * a) the `description` elements contain equivalent strings (or both are absent);
+ * b) the `address` elements match per `oRAddressMatch`; and
+ * c) the `capabilities` `SET OF Capability` elements contain equivalent components.
+ */
 export
 const addressCapabilitiesMatch: Matcher = createEqualityMatcher(
-    _decode_AddressCapabilities,
-    (assertion, value): boolean => {
-    const a = assertion;
-    const v = _decode_AddressCapabilities(value);
-    if (a.description && (a.description !== v.description?.trim())) {
-        return false;
-    }
-    if (!orAddressesMatch(a.address, v.address)) {
-        return false;
-    }
-    const valueCapsByContentType: Map<string, Capability> = new Map();
-    for (const cap of v.capabilities) {
-        for (const eit of cap.content_types ?? []) {
-            const key = eit.join(".");
-            valueCapsByContentType.set(key, cap);
+    decodeAddressCapabilitiesAssertion,
+    (assertion: PreparedAddressCapabilities, value: ASN1Element): boolean | undefined => {
+        const vDecoded = _decode_AddressCapabilities(value);
+        const v = prepareAddressCapabilities(vDecoded);
+        if (!v) {
+            return undefined;
         }
-    }
-    /**
-     * The specification is not clear at all on what it means for two
-     * capabilities to be equivalent. For a lack of better knowledge, this
-     * implementation just checks that all asserted extended content types
-     * are supported and that the supported content length does not exceed the
-     * asserted content length. That should be good enough for most use cases.
-     */
-    for (const cap of a.capabilities) {
-        for (const eit of cap.content_types ?? []) {
-            const key = eit.join(".");
-            const existingCap = valueCapsByContentType.get(key);
-            if (!existingCap) {
-                return false;
-            }
-            if (
-                existingCap.maximum_content_length !== undefined
-                && cap.maximum_content_length !== undefined
-                && (existingCap.maximum_content_length < cap.maximum_content_length)
-            ) {
+        if (assertion.capabilities.size !== v.capabilities.size) {
+            return false;
+        }
+        if (assertion.description !== v.description) {
+            return false;
+        }
+        if (!compareORAddressInfo(assertion.address, v.address, "exact")) {
+            return false;
+        }
+        for (const key of assertion.capabilities) {
+            if (!v.capabilities.has(key)) {
                 return false;
             }
         }
-    }
-    return true;
+        return true;
     },
 );
 
