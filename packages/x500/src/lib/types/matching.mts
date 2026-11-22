@@ -166,28 +166,32 @@ export type SubstringsMatcher = Matcher;
 
 /**
  * Matching rule implementation for a context matching rule.
- * 
+ *
  * `assertion` is an assertion of the syntax specified by the context type.
- * 
- * `values` are the values of the context.
- * 
+ *
+ * `values` are the stored context values, as an array so the matcher can
+ * scan them by index. Do not mutate the array: it may be the context's
+ * own `contextValues`.
+ *
  * `getEqualityMatcher` is a function that takes an attribute type and returns
  * the corresponding value equality matcher. This is generally so that
  * distinguished names within a value can be matched, such as in a
  * `NameAndOptionalUID`.
- * 
+ *
  * `flags` contains flags that modulate matching behavior, generally in ways
  * that do not make the matching incorrect, such as enabling debugging output,
  * performing constant-time matching, skipping string preparation, etc. These
  * flags are generally used for enhanced security or performance.
- * 
- * Functions of this type signature return a `boolean` that indicates whether
- * the values match the assertion. There is no `undefined` return value.
+ *
+ * Functions of this type signature return a `boolean`. There is no
+ * `undefined` return value: context matching has no UNDEFINED outcome.
+ * An invalid stored value is a non-match for that value. A malformed
+ * assertion throws.
  */
 export
 type ContextMatcher = (
     assertion: ASN1Element,
-    values: IterableIterator<ASN1Element>,
+    values: readonly ASN1Element[],
     getEqualityMatcher?: (attributeType: AttributeType) => Matcher | undefined,
     flags?: number,
 ) => boolean;

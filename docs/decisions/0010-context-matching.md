@@ -35,7 +35,7 @@ type AttributeType = OBJECT_IDENTIFIER;
 
 type ContextMatcher = (
     assertion: ASN1Element,
-    values: IterableIterator<ASN1Element>,
+    values: readonly ASN1Element[],
     getEqualityMatcher?: (attributeType: AttributeType) => EqualityMatcher | undefined,
     flags?: number,
 ) => boolean;
@@ -50,12 +50,13 @@ Regarding the options considered above:
    failed to match, so context matchers do not need to consider this.
 3. In light of the prior two points, the whole context object does not need to
    be passed in either: all that remains is the values.
-4. Context matchers will not return `undefined`. Context matcher seem to have
-   no such ternary concept: there is either a match or not. Malformed values
-   should just throw or be ignored.
+4. Context matchers will not return `undefined`. Context matchers have
+   no ternary concept: there is either a match or not. An invalid stored
+   value is a non-match for that value. A malformed assertion throws.
 
-In addition to this, the values do not need to be an array. Anything iterable
-will suffice.
+Stored values are an array so matchers can scan them by index. Context
+evaluation is performance sensitive, and creating an iterator for every
+asserted value is unnecessary.
 
 The `getEqualityMatcher` function is passed in for the purposes of comparing
 distinguished names in context values. This is needed for evaluating the

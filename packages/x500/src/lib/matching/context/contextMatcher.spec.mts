@@ -48,14 +48,14 @@ describe("context matchers", () => {
     it("matches a language code against any stored value", () => {
         const en = _encodePrintableString("en", DER);
         const fr = _encodePrintableString("fr", DER);
-        expect(languageContext(en, [fr, en].values())).toBe(true);
-        expect(languageContext(en, [fr].values())).toBe(false);
-        expect(languageContext(en, [].values())).toBe(false);
-        expect(() => languageContext(_encodeInteger(1, DER), [en].values())).toThrow();
+        expect(languageContext(en, [fr, en])).toBe(true);
+        expect(languageContext(en, [fr])).toBe(false);
+        expect(languageContext(en, [])).toBe(false);
+        expect(() => languageContext(_encodeInteger(1, DER), [en])).toThrow();
 
         const bad = _encodeInteger(1, DER);
-        expect(languageContext(en, [bad, en].values())).toBe(true);
-        expect(languageContext(en, [bad].values())).toBe(false);
+        expect(languageContext(en, [bad, en])).toBe(true);
+        expect(languageContext(en, [bad])).toBe(false);
     });
 
     it("logs an invalid context value, and still reads every value in constant time", () => {
@@ -64,7 +64,7 @@ describe("context matchers", () => {
         const bad = _encodeInteger(1, DER);
         const spy = vi.spyOn(console, "error").mockImplementation(() => {});
         try {
-            expect(languageContext(en, [bad, bad].values(), undefined, MATCH_FLAG_DEBUG)).toBe(false);
+            expect(languageContext(en, [bad, bad], undefined, MATCH_FLAG_DEBUG)).toBe(false);
             expect(spy).toHaveBeenCalledTimes(2);
             const contextType = id_avc_language.dotDelimitedNotation;
             expect(String(spy.mock.calls[0][0])).toContain("index 0");
@@ -73,39 +73,15 @@ describe("context matchers", () => {
             expect(String(spy.mock.calls[1][0])).toContain(contextType);
 
             spy.mockClear();
-            let earlyPulls = 0;
-            const earlySource = [fr, en, bad].values();
-            const earlyValues: IterableIterator<ASN1Element> = {
-                next () {
-                    earlyPulls += 1;
-                    return earlySource.next();
-                },
-                [Symbol.iterator] () {
-                    return this;
-                },
-            };
-            expect(languageContext(en, earlyValues)).toBe(true);
-            expect(earlyPulls).toBe(2);
+            expect(languageContext(en, [fr, en, bad], undefined, MATCH_FLAG_DEBUG)).toBe(true);
+            expect(spy).not.toHaveBeenCalled();
 
-            let pulls = 0;
-            const source = [fr, en, bad].values();
-            const values: IterableIterator<ASN1Element> = {
-                next () {
-                    pulls += 1;
-                    return source.next();
-                },
-                [Symbol.iterator] () {
-                    return this;
-                },
-            };
             expect(languageContext(
                 en,
-                values,
+                [fr, en, bad],
                 undefined,
                 MATCH_FLAG_DEBUG | MATCH_FLAG_CONSTANT_TIME,
             )).toBe(true);
-            // Three values, then the iterator reports that it is done.
-            expect(pulls).toBe(4);
             expect(spy).toHaveBeenCalledTimes(1);
             expect(String(spy.mock.calls[0][0])).toContain("index 2");
             expect(String(spy.mock.calls[0][0])).toContain(id_avc_language.dotDelimitedNotation);
@@ -118,11 +94,11 @@ describe("context matchers", () => {
         const assertion = _encode_AttributeOptionList([ "LANG-fr" ], DER);
         const en = _encode_AttributeOptionList([ "lang-en" ], DER);
         const fr = _encode_AttributeOptionList([ "lang-fr", "x" ], DER);
-        expect(ldapAttributeOptionContext(assertion, [en, fr].values())).toBe(true);
-        expect(ldapAttributeOptionContext(assertion, [en].values())).toBe(false);
+        expect(ldapAttributeOptionContext(assertion, [en, fr])).toBe(true);
+        expect(ldapAttributeOptionContext(assertion, [en])).toBe(false);
         expect(ldapAttributeOptionContext(
             assertion,
-            [_encodeInteger(1, DER), fr].values(),
+            [_encodeInteger(1, DER), fr],
         )).toBe(true);
         expect(evaluateLDAPAttributeOptionContextTyped(
             [ "binary", "lang-en" ],
@@ -142,8 +118,8 @@ describe("context matchers", () => {
         const a = oid("1.2.3");
         const b = oid("1.2.4");
         const c = oid("1.2.5");
-        expect(localeContext(a, [b, a].values())).toBe(true);
-        expect(localeContext(a, [b, c].values())).toBe(false);
+        expect(localeContext(a, [b, a])).toBe(true);
+        expect(localeContext(a, [b, c])).toBe(false);
 
         const ext = new DERElement(
             ASN1TagClass.context,
@@ -157,12 +133,12 @@ describe("context matchers", () => {
             3,
             new Uint8Array([ 4, 5, 6 ]),
         );
-        expect(localeContext(ext, [other, ext].values())).toBe(true);
-        expect(localeContext(ext, [other].values())).toBe(false);
+        expect(localeContext(ext, [other, ext])).toBe(true);
+        expect(localeContext(ext, [other])).toBe(false);
 
         const spy = vi.spyOn(console, "error").mockImplementation(() => {});
         try {
-            expect(localeContext(ext, [ext].values(), undefined, MATCH_FLAG_DEBUG)).toBe(true);
+            expect(localeContext(ext, [ext], undefined, MATCH_FLAG_DEBUG)).toBe(true);
             expect(spy).toHaveBeenCalledTimes(1);
             expect(String(spy.mock.calls[0][0])).toContain("localeContext");
         } finally {
@@ -182,8 +158,8 @@ describe("context matchers", () => {
             new Date(2026, 0, 1, 12, 13, 13),
             new Date(2026, 0, 1, 12, 13, 15),
         );
-        expect(temporalContext(at, [miss, hit].values())).toBe(true);
-        expect(temporalContext(at, [miss].values())).toBe(false);
-        expect(temporalContext(at, [].values())).toBe(false);
+        expect(temporalContext(at, [miss, hit])).toBe(true);
+        expect(temporalContext(at, [miss])).toBe(false);
+        expect(temporalContext(at, [])).toBe(false);
     });
 });

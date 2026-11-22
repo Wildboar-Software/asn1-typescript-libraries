@@ -12,11 +12,18 @@ import compareElements from "../comparators/compareElements.mjs";
 /**
  * Encoding comparison used when the context type has no matcher. TRUE
  * iff any stored value has the same encoding as the assertion.
+ *
+ * A value that cannot be read, including a decoding error, is a
+ * non-match. The scan continues with the remaining stored values.
  */
 const compareElementsContextMatcher: ContextMatcher = (assertion, values) => {
-    for (const value of values) {
-        if (compareElements(assertion, value)) {
-            return true;
+    for (let i = 0; i < values.length; i++) {
+        try {
+            if (compareElements(assertion, values[i])) {
+                return true;
+            }
+        } catch {
+            // Invalid stored value: non-match.
         }
     }
     return false;
@@ -43,7 +50,10 @@ const compareElementsContextMatcher: ContextMatcher = (assertion, values) => {
  * @param {Function} getEqualityMatcher Equality matcher lookup passed through
  *  to the context matcher for nested distinguished-name comparison
  * @param {number} flags Matching flags passed through to the context matcher
- * @returns {Boolean} `true` if the context assertion matches
+ * @returns {Boolean} `true` if the context assertion matches. An invalid
+ *  stored context value is a non-match for that value. This function does
+ *  not return the UNDEFINED outcome used by attribute value matching. A
+ *  malformed assertion is reported by the context matcher throwing.
  * @function
  */
 export
@@ -57,22 +67,31 @@ function evaluateContextAssertion (
 ): boolean {
     const matcher = getContextMatcher(ca.contextType) ?? compareElementsContextMatcher;
     const isAbsentMatch: boolean = determineAbsentMatch(ca.contextType);
-    let storedValues: ASN1Element[] | undefined;
-    for (const context of contexts) {
+    let stored: readonly ASN1Element[] | undefined;
+    let merged: ASN1Element[] | undefined;
+    for (let i = 0; i < contexts.length; i++) {
+        const context = contexts[i];
         if (!context.contextType.isEqualTo(ca.contextType)) {
             continue;
         }
-        if (!storedValues) {
-            // Reuse the first matching context's array; copy only if another
+        const values = context.contextValues;
+        if (stored === undefined) {
+            // Reuse the first matching context's array. Copy only if another
             // context of this type appears, so the original is never mutated.
-            storedValues = context.contextValues;
-        } else {
-            storedValues = storedValues.concat(context.contextValues);
+            stored = values;
+            continue;
+        }
+        if (merged === undefined) {
+            merged = stored.slice();
+            stored = merged;
+        }
+        for (let j = 0; j < values.length; j++) {
+            merged.push(values[j]);
         }
     }
     // A ContextAssertion is true for a particular attribute value if:
     // b) the attribute value contains no contexts of the asserted contextType; or
-    if (!storedValues || storedValues.length === 0) {
+    if (stored === undefined || stored.length === 0) {
         /**
          * This is not documented in the section describing `ContextAssertion`s,
          * but rather, in the definition of a context type, in Section 13.9.2 of
@@ -80,15 +99,16 @@ function evaluateContextAssertion (
          */
         return isAbsentMatch;
     }
-    // a) the attribute value has a context of the same contextType of the ContextAssertion and any of the
-    // stored contextValues of that context matches with any of the asserted contextValues according to
-    // the definition of how a match is determined for that contextType.
-    return ca.contextValues.some((assertedValue) => matcher(
-        assertedValue,
-        storedValues.values(),
-        getEqualityMatcher,
-        flags,
-    ));
+    // a) the attribute value has a context of the same contextType of the
+    // ContextAssertion and any stored context value of that context matches
+    // any asserted context value, according to the context type's match.
+    const asserted = ca.contextValues;
+    for (let i = 0; i < asserted.length; i++) {
+        if (matcher(asserted[i], stored, getEqualityMatcher, flags)) {
+            return true;
+        }
+    }
+    return false;
 }
 
 export default evaluateContextAssertion;

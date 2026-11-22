@@ -1,4 +1,5 @@
-import { ObjectIdentifier, DERElement, ASN1TagClass, ASN1Construction, ASN1UniversalType } from "@wildboar/asn1";
+import { ObjectIdentifier, DERElement, ASN1TagClass, ASN1Construction, ASN1UniversalType, type ASN1Element } from "@wildboar/asn1";
+import { DER, _encodeInteger, _encodePrintableString } from "@wildboar/asn1/functional";
 import {
     evaluateContextAssertion,
 } from "./evaluateContextAssertion.mjs";
@@ -15,6 +16,7 @@ import { AttributeValueAssertion } from "../modules/InformationFramework/Attribu
 import type { Filter } from "../modules/DirectoryAbstractService/Filter.ta.mjs";
 import type { Name } from "../modules/InformationFramework/Name.ta.mjs";
 import { createEqualityMatcher, type ContextMatcher } from "../types/matching.mjs";
+import { languageContext } from "../matching/context/languageContext.mjs";
 
 const CONTEXT_TYPE = ObjectIdentifier.fromString("1.2.3.4.5");
 const ATTR_TYPE = ObjectIdentifier.fromString("2.5.4.3");
@@ -49,13 +51,26 @@ const stringEquality = createEqualityMatcher(
     (assertion, stored) => assertion === stored.utf8String,
 );
 const stringContext: ContextMatcher = (assertion, values) => {
-    for (const v of values) {
-        if (assertion.utf8String === v.utf8String) {
+    const asserted = assertion.utf8String;
+    for (let i = 0; i < values.length; i++) {
+        if (asserted === values[i].utf8String) {
             return true;
         }
     }
     return false;
 };
+
+function valueThatThrows (): ASN1Element {
+    const element = _encodeInteger(1, DER);
+    return new Proxy(element, {
+        get (target, prop, receiver) {
+            if (prop === "value") {
+                throw new Error("undecodable context value");
+            }
+            return Reflect.get(target, prop, receiver);
+        },
+    });
+}
 
 function assertion (value: DERElement): ContextAssertion {
     return new ContextAssertion(CONTEXT_TYPE, [ value ]);
@@ -102,6 +117,57 @@ describe("evaluateContextAssertion", () => {
             () => undefined,
             () => true,
         )).toBe(false);
+    });
+
+    it("matches a value stored on a later context of the same type", () => {
+        const contexts = [
+            new Context(CONTEXT_TYPE, [ FR ], false),
+            new Context(CONTEXT_TYPE, [ EN ], false),
+        ];
+        expect(evaluateContextAssertion(
+            new ContextAssertion(CONTEXT_TYPE, [ FR, EN ]),
+            contexts,
+            () => stringContext,
+            () => false,
+        )).toBe(true);
+        expect(contexts[0].contextValues).toEqual([ FR ]);
+        expect(contexts[1].contextValues).toEqual([ EN ]);
+    });
+
+    it("treats an undecodable stored context value as a non-match", () => {
+        const en = _encodePrintableString("en", DER);
+        const bad = _encodeInteger(1, DER);
+        const undecodable = valueThatThrows();
+        expect(evaluateContextAssertion(
+            new ContextAssertion(CONTEXT_TYPE, [ en ]),
+            [ new Context(CONTEXT_TYPE, [ bad ], false) ],
+            () => languageContext,
+            () => false,
+        )).toBe(false);
+        expect(evaluateContextAssertion(
+            new ContextAssertion(CONTEXT_TYPE, [ en ]),
+            [ new Context(CONTEXT_TYPE, [ bad, en ], false) ],
+            () => languageContext,
+            () => false,
+        )).toBe(true);
+        expect(() => evaluateContextAssertion(
+            new ContextAssertion(CONTEXT_TYPE, [ bad ]),
+            [ new Context(CONTEXT_TYPE, [ en ], false) ],
+            () => languageContext,
+            () => false,
+        )).toThrow();
+        expect(evaluateContextAssertion(
+            new ContextAssertion(CONTEXT_TYPE, [ _encodeInteger(1, DER) ]),
+            [ new Context(CONTEXT_TYPE, [ undecodable ], false) ],
+            () => undefined,
+            () => false,
+        )).toBe(false);
+        expect(evaluateContextAssertion(
+            new ContextAssertion(CONTEXT_TYPE, [ _encodeInteger(1, DER) ]),
+            [ new Context(CONTEXT_TYPE, [ undecodable, _encodeInteger(1, DER) ], false) ],
+            () => undefined,
+            () => false,
+        )).toBe(true);
     });
 
     it("matches via absentMatch when the value has no context of that type", () => {
