@@ -94,6 +94,8 @@ export const MATCH_FLAG_APPROXIMATE: MatchFlags =          1 << 10;
  * `WeakMap` from the assertion `ASN1Element` (by object identity) to
  * the value its assertion decoder returned. When this flag is set and
  * that element is already in the map, the decoder is not called.
+ * Membership is `WeakMap.get`: a decoded `undefined` is not reused,
+ * because `get` also returns `undefined` when the key is absent.
  *
  * The cached value is that decoder output, taken before assertion
  * normalization. `MATCH_FLAG_ASSERTION_NORMALIZED` still decides
@@ -493,16 +495,17 @@ function createEqualityMatcher<A>(
                 );
             }
             decodedAssertion = subtringsConverter(assertion, flags);
-        } else if (
-            (flags & MATCH_FLAG_READ_ASSERTION_CACHE)
-            && assertionCache.has(assertion)
-        ) {
-            // `has` treats a stored `undefined` as a hit. `get` alone cannot.
-            decodedAssertion = assertionCache.get(assertion) as A;
         } else {
-            decodedAssertion = assertionDecoder(assertion, flags);
-            if (flags & MATCH_FLAG_WRITE_ASSERTION_CACHE) {
-                assertionCache.set(assertion, decodedAssertion);
+            const cached = (flags & MATCH_FLAG_READ_ASSERTION_CACHE)
+                ? assertionCache.get(assertion)
+                : undefined;
+            if (cached !== undefined) {
+                decodedAssertion = cached;
+            } else {
+                decodedAssertion = assertionDecoder(assertion, flags);
+                if (flags & MATCH_FLAG_WRITE_ASSERTION_CACHE) {
+                    assertionCache.set(assertion, decodedAssertion);
+                }
             }
         }
         if (assertionNormalizer && !(flags & MATCH_FLAG_ASSERTION_NORMALIZED)) {

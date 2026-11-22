@@ -561,7 +561,7 @@ suite("decoded assertion cache", () => {
         expect(decoder).toHaveBeenCalledTimes(1);
     });
 
-    test("a cached undefined assertion is a hit", () => {
+    test("a decoded undefined is decoded again", () => {
         const decoder = vi.fn((_el: ASN1Element): number | undefined => undefined);
         const match = createEqualityMatcher<number | undefined>(
             decoder,
@@ -570,7 +570,7 @@ suite("decoded assertion cache", () => {
         const assertion = integer(1);
         expect(match(assertion, integerATAV(1), undefined, readAndWrite)).toBe(false);
         expect(match(assertion, integerATAV(1), undefined, readAndWrite)).toBe(false);
-        expect(decoder).toHaveBeenCalledTimes(1);
+        expect(decoder).toHaveBeenCalledTimes(2);
     });
 
     test("normalization still runs on a hit, and the cache keeps the decoded value", () => {
