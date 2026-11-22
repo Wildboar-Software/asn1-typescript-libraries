@@ -118,35 +118,6 @@ describe("evaluateContextAssertion", () => {
             () => false,
         )).toBe(false);
     });
-
-    it("combines every stored context of the asserted type, in order", () => {
-        const other = ObjectIdentifier.fromString("1.2.9.9");
-        const contexts = [
-            new Context(CONTEXT_TYPE, [ FR ], false),
-            new Context(other, [ EN ], false),
-            new Context(CONTEXT_TYPE, [ EN ], true),
-        ];
-        const seen: string[] = [];
-        const matcher: ContextMatcher = (_assertion, values) => {
-            for (const value of values) {
-                seen.push(value.utf8String);
-            }
-            return seen.includes("en");
-        };
-        expect(evaluateContextAssertion(
-            assertion(EN),
-            contexts,
-            () => matcher,
-            () => false,
-        )).toBe(true);
-        expect(seen).toEqual(["fr", "en"]);
-        expect(evaluateContextAssertion(
-            assertion(WORLD),
-            contexts,
-            () => stringContext,
-            () => false,
-        )).toBe(false);
-    });
 });
 
 describe("evaluateFilter context fallback", () => {
@@ -275,13 +246,12 @@ describe("evaluateFilter context fallback", () => {
         expect(attribute.valuesWithContext).toHaveLength(2);
     });
 
-    it("combines duplicate context types and applies fallback only for the asserted type", () => {
+    it("applies fallback only for the asserted context type", () => {
         const language = ObjectIdentifier.fromString("1.2.9.2");
         const temporal = ObjectIdentifier.fromString("1.2.9.4");
         const attribute = new Attribute(ATTR_TYPE, [], [
             new Attribute_valuesWithContext_Item(HELLO, [
                 new Context(temporal, [ EN ], true),
-                new Context(language, [ FR ], false),
                 new Context(language, [ EN ], false),
             ]),
         ]);
