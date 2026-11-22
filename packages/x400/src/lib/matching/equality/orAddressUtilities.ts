@@ -253,14 +253,14 @@ interface ORAddressInfo {
 }
 
 /**
- * PSAP addresses are `PresentationAddress` values. Do not use `instanceof`:
+ * Numeric extended-network-address values are tuples, so they are arrays.
+ * The other alternative is a presentation address. Do not use `instanceof`:
  * a second copy of the class (duplicate package versions) would fail it.
- * Numeric extended-network-address values are tuples and have no `nAddresses`.
  */
 function isPsapAddress (
     value: NonNullable<ORAddressInfo["extendedNetworkAddress"]>,
 ): value is PresentationAddress {
-    return Array.isArray((value as PresentationAddress).nAddresses);
+    return !Array.isArray(value);
 }
 
 function personalNameFromJSON (json: PersonalNameJSON, normalize: boolean): PersonalNameInfo | null {
@@ -572,8 +572,8 @@ function process_universal_unformatted_postal_address_ext (info: ORAddressInfo, 
 
 function process_extended_network_address_ext (info: ORAddressInfo, value: ASN1Element, normalize: boolean): ORAddressInfo | null {
     // Use MTSAbstractService's ExtendedNetworkAddress decoder so `psap_address`
-    // is a PresentationAddress (it has an `nAddresses` array). Do not identify
-    // it with `instanceof`; another copy of the class would fail that check.
+    // is a PresentationAddress. The numeric alternative is a tuple (an array);
+    // do not identify the class with `instanceof`.
     const param = _decode_ExtendedNetworkAddress(value);
     if ("e163_4_address" in param) {
         if (param.e163_4_address.number_.length === 0) {
