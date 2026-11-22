@@ -2,9 +2,12 @@ import type { ASN1Element, OBJECT_IDENTIFIER } from "@wildboar/asn1";
 import { compareRDNSequence } from "@wildboar/dn";
 import {
     createEqualityMatcher,
+    MATCH_FLAG_CONSTANT_TIME,
     type Matcher,
 } from "@wildboar/x500";
 import {
+    BuiltInStandardAttributes,
+    ORAddress,
     type ORName,
     _decode_ORName,
 } from "@wildboar/x400/MTSAbstractService";
@@ -17,6 +20,10 @@ import {
 
 export const MATCH_FLAG_ELEMENTS_MATCH: number = 1 << 29;
 export const MATCH_FLAG_SUBSTRING_MATCH: number = 1 << 30;
+
+const DUMMY_OR_ADDRESS = new ORAddress(
+    new BuiltInStandardAttributes({ iso_3166_alpha2_code: "XX" }),
+);
 
 export
 function validateNonEmptyORNameAssertion (decoded: ORName, rule: string): ORName {
@@ -33,46 +40,41 @@ function decodeNonEmptyORNameAssertion (rule: string): (el: ASN1Element) => ORNa
     );
 }
 
-export
-function matchORNames (
-    assertion: ORName,
-    value: ORName,
-    getEqualityMatcher?: (attributeType: OBJECT_IDENTIFIER) => Matcher | undefined,
-    flags: number = 0,
+function matchORAddressesByFlags (
+    a: ORAddress,
+    v: ORAddress,
+    outerFlags: number,
+    innerFlags: number,
 ): boolean | undefined {
-    const a = assertion;
-    const v = value;
+    if (outerFlags & MATCH_FLAG_SUBSTRING_MATCH) {
+        return oRAddressSubstringElementsMatchTyped(a, v, innerFlags);
+    }
+    if (outerFlags & MATCH_FLAG_ELEMENTS_MATCH) {
+        return oRAddressElementsMatchTyped(a, v, innerFlags);
+    }
+    return orAddressesMatch(a, v, innerFlags);
+}
+
+function matchORNamesFast (
+    a: ORName,
+    v: ORName,
+    getEqualityMatcher: ((attributeType: OBJECT_IDENTIFIER) => Matcher | undefined) | undefined,
+    flags: number,
+): boolean | undefined {
     const innerFlags = flags & ~(MATCH_FLAG_ELEMENTS_MATCH | MATCH_FLAG_SUBSTRING_MATCH);
-    // An empty RDNSequence is the Directory root and is a present name.
-    // Treating it as absent makes a stored root DN look empty, so the rule
-    // returns undefined (unmatchable) instead of comparing it.
+    // An empty rdnSequence is the Directory root and is present.
+    // Only a missing directory-name component is absent.
     const aHasDN: boolean = a.directory_name !== undefined;
     const vHasDN: boolean = v.directory_name !== undefined;
-    // a) If the presented OR-name contains only an OR-address, the rule matches if the presented value matches an
-    // OR-address in the stored value according to the OR-address-match rule.
-    const presentedContainsOnlyORAddress: boolean = (
-        !aHasDN
-        && !a.isEmptyOrAddress()
-    );
-    if (presentedContainsOnlyORAddress) {
+    const aHasAddr: boolean = !a.isEmptyOrAddress();
+
+    if (!aHasDN && aHasAddr) {
         if (v.isEmptyOrAddress()) {
             return false;
         }
-        if (flags & MATCH_FLAG_SUBSTRING_MATCH) {
-            return oRAddressSubstringElementsMatchTyped(a, v, innerFlags);
-        }
-        if (flags & MATCH_FLAG_ELEMENTS_MATCH) {
-            return oRAddressElementsMatchTyped(a, v, innerFlags);
-        }
-        return orAddressesMatch(a, v, innerFlags);
+        return matchORAddressesByFlags(a, v, flags, innerFlags);
     }
-    // b) If the presented OR-name contains only a directory-name, the rule matches if the presented value matches a
-    // directory-name in the stored value according to the Distinguished Name Match rule.
-    const presentedContainsOnlyDirectoryName: boolean = (
-        a.isEmptyOrAddress()
-        && aHasDN
-    );
-    if (presentedContainsOnlyDirectoryName) {
+    if (!aHasAddr && aHasDN) {
         if (!vHasDN || !v.directory_name || !a.directory_name) {
             return false;
         }
@@ -82,13 +84,7 @@ function matchORNames (
             namingEqualityMatcher(getEqualityMatcher, innerFlags),
         );
     }
-    // c) If the presented OR-name contains both an OR-address and a directory-name, the rule matches if either of
-    // the rules described above matches.
-    const presentedContainsBothORAddressAndDirectoryName: boolean = (
-        aHasDN
-        && !a.isEmptyOrAddress()
-    );
-    if (presentedContainsBothORAddressAndDirectoryName) {
+    if (aHasDN && aHasAddr) {
         if (vHasDN && v.directory_name && a.directory_name) {
             const namesMatch = compareRDNSequence(
                 a.directory_name.rdnSequence,
@@ -100,16 +96,67 @@ function matchORNames (
             }
         }
         if (!v.isEmptyOrAddress()) {
-            if (flags & MATCH_FLAG_SUBSTRING_MATCH) {
-                return oRAddressSubstringElementsMatchTyped(a, v, innerFlags);
-            }
-            if (flags & MATCH_FLAG_ELEMENTS_MATCH) {
-                return oRAddressElementsMatchTyped(a, v, innerFlags);
-            }
-            return orAddressesMatch(a, v, innerFlags);
+            return matchORAddressesByFlags(a, v, flags, innerFlags);
         }
     }
     return false;
+}
+
+function matchORNamesConstantTime (
+    a: ORName,
+    v: ORName,
+    getEqualityMatcher: ((attributeType: OBJECT_IDENTIFIER) => Matcher | undefined) | undefined,
+    flags: number,
+): boolean | undefined {
+    const innerFlags = flags & ~(MATCH_FLAG_ELEMENTS_MATCH | MATCH_FLAG_SUBSTRING_MATCH);
+    const aHasDN: boolean = a.directory_name !== undefined;
+    const vHasDN: boolean = v.directory_name !== undefined;
+    const aHasAddr: boolean = !a.isEmptyOrAddress();
+    const vHasAddr: boolean = !v.isEmptyOrAddress();
+
+    let dnMatch = false;
+    if (aHasDN && a.directory_name) {
+        const cmp = compareRDNSequence(
+            a.directory_name.rdnSequence,
+            v.directory_name?.rdnSequence ?? [],
+            namingEqualityMatcher(getEqualityMatcher, innerFlags),
+        );
+        dnMatch = vHasDN && cmp;
+    }
+
+    let addrMatch: boolean | undefined = false;
+    if (aHasAddr) {
+        const rawAddrMatch = matchORAddressesByFlags(
+            a,
+            vHasAddr ? v : DUMMY_OR_ADDRESS,
+            flags,
+            innerFlags,
+        );
+        addrMatch = vHasAddr ? rawAddrMatch : false;
+    }
+
+    if (!aHasDN && aHasAddr) {
+        return addrMatch;
+    }
+    if (!aHasAddr && aHasDN) {
+        return dnMatch;
+    }
+    if (aHasDN && aHasAddr) {
+        return dnMatch ? true : addrMatch;
+    }
+    return false;
+}
+
+export
+function matchORNames (
+    assertion: ORName,
+    value: ORName,
+    getEqualityMatcher?: (attributeType: OBJECT_IDENTIFIER) => Matcher | undefined,
+    flags: number = 0,
+): boolean | undefined {
+    return (flags & MATCH_FLAG_CONSTANT_TIME)
+        ? matchORNamesConstantTime(assertion, value, getEqualityMatcher, flags)
+        : matchORNamesFast(assertion, value, getEqualityMatcher, flags);
 }
 
 export

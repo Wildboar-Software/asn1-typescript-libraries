@@ -9,6 +9,7 @@ import {
 } from "@wildboar/asn1";
 import {
     createEqualityMatcher,
+    MATCH_FLAG_CONSTANT_TIME,
     type Matcher,
 } from "@wildboar/x500";
 import {
@@ -22,12 +23,17 @@ import {
 import { findRecipientElement } from "./recipientSpecifierMatch.js";
 
 export
-function findCirculationRecipientElement (value: ASN1Element): ASN1Element | undefined {
+function findCirculationRecipientElement (
+    value: ASN1Element,
+    flags: number = 0,
+): ASN1Element | undefined {
     if (value.construction !== ASN1Construction.constructed) {
         return undefined;
     }
+    const ct = flags & MATCH_FLAG_CONSTANT_TIME;
     const bytes = value.value;
     const el = new BERElement();
+    let found: ASN1Element | undefined;
     let i = 0;
     while (i < bytes.length) {
         i += el.fromBytes(bytes.subarray(i), true);
@@ -35,10 +41,14 @@ function findCirculationRecipientElement (value: ASN1Element): ASN1Element | und
             (el.tagClass === ASN1TagClass.universal)
             && (el.tagNumber === ASN1UniversalType.set)
         ) {
-            return findRecipientElement(el);
+            const inner = findRecipientElement(el, flags);
+            if (!ct) {
+                return inner;
+            }
+            found = inner;
         }
     }
-    return undefined;
+    return found;
 }
 
 export
@@ -66,7 +76,7 @@ function circulationMemberMatchTyped (
     getEqualityMatcher?: (attributeType: OBJECT_IDENTIFIER) => Matcher | undefined,
     flags: number = 0,
 ): boolean | undefined {
-    const recipient = findCirculationRecipientElement(value);
+    const recipient = findCirculationRecipientElement(value, flags);
     if (!recipient) {
         return undefined;
     }

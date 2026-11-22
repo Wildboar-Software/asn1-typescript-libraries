@@ -11,7 +11,7 @@ export
 const recipientSpecifierSingleElementMatch: Matcher = createEqualityMatcher(
     decodeORNameSingleElementAssertion,
     (assertion: string, value: ASN1Element, getEqualityMatcher, flags = 0): boolean | undefined => {
-        const recipient = findRecipientElement(value);
+        const recipient = findRecipientElement(value, flags);
         if (!recipient) {
             return undefined;
         }

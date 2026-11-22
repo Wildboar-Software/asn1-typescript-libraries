@@ -57,12 +57,15 @@ import {
     universal_unique_postal_name,
     x121_dcc_country_code_to_iso_3166,
 } from "@wildboar/or-address";
-import type { PresentationAddress } from "@wildboar/x500/SelectedAttributeTypes";
+import { PresentationAddress } from "@wildboar/x500/SelectedAttributeTypes";
 import { presentationAddressMatchTyped } from "@wildboar/x500/matching/equality";
 import {
     MATCH_FLAG_ASSERTION_NORMALIZED,
+    MATCH_FLAG_CONSTANT_TIME,
     MATCH_FLAG_VALUE_NORMALIZED,
+    matchStringSubstrings,
 } from "@wildboar/x500";
+import { ctStringsEqual, stringsEqual } from "../constantTime.js";
 import type { MSString } from "@wildboar/x400/MSMatchingRules";
 import { _decode_ExtendedNetworkAddress } from "@wildboar/x400/MTSAbstractService";
 
@@ -116,6 +119,21 @@ function prepareMSStringValue (
     return (flags & MATCH_FLAG_VALUE_NORMALIZED)
         ? raw
         : normalizeMSString(raw, caseFold);
+}
+
+export
+function matchMSSubstring (
+    stored: string,
+    needle: string,
+    flags: number = 0,
+): boolean {
+    if (needle.length === 0) {
+        return stored.length === 0;
+    }
+    if (flags & MATCH_FLAG_CONSTANT_TIME) {
+        return matchStringSubstrings(stored, [ { any_: needle } ], flags);
+    }
+    return stored.indexOf(needle) >= 0;
 }
 
 function removeAsciiSpaces (s: string): string {
@@ -918,17 +936,15 @@ function matchStringsByMode (
     asserted: string,
     stored: string,
     mode: ORAddressCompareMode,
+    flags: number = 0,
 ): boolean {
     if (mode === "substrings") {
-        if (asserted.length === 0) {
-            return stored.length === 0;
-        }
-        return stored.indexOf(asserted) >= 0;
+        return matchMSSubstring(stored, asserted, flags);
     }
-    return asserted === stored;
+    return stringsEqual(asserted, stored, flags & MATCH_FLAG_CONSTANT_TIME);
 }
 
-function matchPersonalNameField (
+function matchPersonalNameFieldFast (
     asserted: string | undefined,
     stored: string | undefined,
     mode: ORAddressCompareMode,
@@ -941,20 +957,47 @@ function matchPersonalNameField (
     return matchStringsByMode(a, b, mode);
 }
 
-function personalNameMatches (
+function personalNameMatchesFast (
     apn: PersonalNameInfo,
     bpn: PersonalNameInfo,
     mode: ORAddressCompareMode,
 ): boolean {
     return (
         matchStringsByMode(apn.surname, bpn.surname, mode)
-        && matchPersonalNameField(apn.givenName, bpn.givenName, mode)
-        && matchPersonalNameField(apn.initials, bpn.initials, mode)
-        && matchPersonalNameField(apn.generationQualifier, bpn.generationQualifier, mode)
+        && matchPersonalNameFieldFast(apn.givenName, bpn.givenName, mode)
+        && matchPersonalNameFieldFast(apn.initials, bpn.initials, mode)
+        && matchPersonalNameFieldFast(apn.generationQualifier, bpn.generationQualifier, mode)
     );
 }
 
-function orderedOUsMatch (
+function matchPersonalNameFieldConstantTime (
+    asserted: string | undefined,
+    stored: string | undefined,
+    mode: ORAddressCompareMode,
+    flags: number,
+): boolean {
+    if (mode !== "exact" && (asserted === undefined || asserted === "")) {
+        return true;
+    }
+    const contentOk = matchStringsByMode(asserted ?? "", stored ?? "", mode, flags);
+    const presenceOk = (asserted === undefined) === (stored === undefined);
+    return presenceOk && contentOk;
+}
+
+function personalNameMatchesConstantTime (
+    apn: PersonalNameInfo,
+    bpn: PersonalNameInfo,
+    mode: ORAddressCompareMode,
+    flags: number,
+): boolean {
+    const sOk = matchStringsByMode(apn.surname, bpn.surname, mode, flags);
+    const gOk = matchPersonalNameFieldConstantTime(apn.givenName, bpn.givenName, mode, flags);
+    const iOk = matchPersonalNameFieldConstantTime(apn.initials, bpn.initials, mode, flags);
+    const qOk = matchPersonalNameFieldConstantTime(apn.generationQualifier, bpn.generationQualifier, mode, flags);
+    return sOk && gOk && iOk && qOk;
+}
+
+function orderedOUsMatchFast (
     aOUs: readonly string[],
     bOUs: readonly string[],
     mode: ORAddressCompareMode,
@@ -986,9 +1029,41 @@ function orderedOUsMatch (
     return true;
 }
 
+function orderedOUsMatchConstantTime (
+    aOUs: readonly string[],
+    bOUs: readonly string[],
+    mode: ORAddressCompareMode,
+    flags: number,
+): boolean {
+    if (mode === "exact") {
+        let matched = aOUs.length === bOUs.length;
+        const count = Math.max(aOUs.length, bOUs.length);
+        for (let i = 0; i < count; i++) {
+            if (!ctStringsEqual(aOUs[i] ?? "", bOUs[i] ?? "")) {
+                matched = false;
+            }
+        }
+        return matched;
+    }
+    let ai = 0;
+    const count = Math.max(aOUs.length, bOUs.length);
+    for (let i = 0; i < count; i++) {
+        const aIdx = ai < aOUs.length ? ai : (aOUs.length > 0 ? aOUs.length - 1 : 0);
+        const aItem = aOUs[aIdx] ?? "";
+        const bItem = i < bOUs.length ? bOUs[i] : "";
+        const hit = matchStringsByMode(aItem, bItem, mode, flags)
+            && (i < bOUs.length)
+            && (ai < aOUs.length);
+        if (hit) {
+            ai++;
+        }
+    }
+    return aOUs.length <= bOUs.length && ai === aOUs.length;
+}
+
 const MAX_REPERTOIRE_FORMS = 3;
 
-function stringCandidateSetsMatch (
+function stringCandidateSetsMatchFast (
     aForms: ReadonlySet<string>,
     bForms: ReadonlySet<string>,
     mode: ORAddressCompareMode,
@@ -1023,7 +1098,36 @@ function stringCandidateSetsMatch (
     return false;
 }
 
-function candidateArraysMatch<T> (
+function stringCandidateSetsMatchConstantTime (
+    aForms: ReadonlySet<string>,
+    bForms: ReadonlySet<string> | undefined,
+    mode: ORAddressCompareMode,
+    flags: number,
+): boolean {
+    let found = false;
+    let ai = 0;
+    for (const af of aForms) {
+        if (++ai > MAX_REPERTOIRE_FORMS) {
+            break;
+        }
+        if (!bForms || bForms.size === 0) {
+            matchStringsByMode(af, "", mode, flags);
+            continue;
+        }
+        let bi = 0;
+        for (const bf of bForms) {
+            if (++bi > MAX_REPERTOIRE_FORMS) {
+                break;
+            }
+            if (matchStringsByMode(af, bf, mode, flags)) {
+                found = true;
+            }
+        }
+    }
+    return !!bForms && found;
+}
+
+function candidateArraysMatchFast<T> (
     aForms: readonly T[],
     bForms: readonly T[],
     match: (a: T, b: T) => boolean,
@@ -1040,7 +1144,25 @@ function candidateArraysMatch<T> (
     return false;
 }
 
-function ddaMapsMatch (
+function candidateArraysMatchConstantTime<T> (
+    aForms: readonly T[],
+    bForms: readonly T[],
+    match: (a: T, b: T) => boolean,
+): boolean {
+    const aLimit = Math.min(aForms.length, MAX_REPERTOIRE_FORMS);
+    const bLimit = Math.min(bForms.length, MAX_REPERTOIRE_FORMS);
+    let found = false;
+    for (let ai = 0; ai < aLimit; ai++) {
+        for (let bi = 0; bi < bLimit; bi++) {
+            if (match(aForms[ai], bForms[bi])) {
+                found = true;
+            }
+        }
+    }
+    return found;
+}
+
+function ddaMapsMatchFast (
     aMap: ReadonlyMap<string, string>,
     bMap: ReadonlyMap<string, string>,
     mode: ORAddressCompareMode,
@@ -1057,11 +1179,40 @@ function ddaMapsMatch (
     return true;
 }
 
-export
-function compareORAddressInfo (
+function ddaMapsMatchConstantTime (
+    aMap: ReadonlyMap<string, string>,
+    bMap: ReadonlyMap<string, string>,
+    mode: ORAddressCompareMode,
+    flags: number,
+): boolean {
+    let allMatched = (mode !== "exact") || (aMap.size === bMap.size);
+    for (const [ ak, av ] of aMap) {
+        if (bMap.size === 0) {
+            ctStringsEqual(ak, "");
+            matchStringsByMode(av, "", mode, flags);
+            allMatched = false;
+            continue;
+        }
+        let found = false;
+        for (const [ bk, bv ] of bMap) {
+            const keyOk = ctStringsEqual(ak, bk);
+            const valOk = matchStringsByMode(av, bv, mode, flags);
+            if (keyOk && valOk) {
+                found = true;
+            }
+        }
+        if (!found) {
+            allMatched = false;
+        }
+    }
+    return allMatched;
+}
+
+function compareORAddressInfoFast (
     aInfo: ORAddressInfo,
     bInfo: ORAddressInfo,
     mode: ORAddressCompareMode,
+    flags: number,
 ): boolean {
     const exact = mode === "exact";
 
@@ -1086,7 +1237,7 @@ function compareORAddressInfo (
             return false;
         }
         if (aForms) {
-            if (!bForms || !stringCandidateSetsMatch(aForms, bForms, mode)) {
+            if (!bForms || !stringCandidateSetsMatchFast(aForms, bForms, mode)) {
                 return false;
             }
         }
@@ -1098,7 +1249,7 @@ function compareORAddressInfo (
     if (aInfo.personalName) {
         if (
             !bInfo.personalName
-            || !candidateArraysMatch(aInfo.personalName, bInfo.personalName, (apn, bpn) => personalNameMatches(apn, bpn, mode))
+            || !candidateArraysMatchFast(aInfo.personalName, bInfo.personalName, (apn, bpn) => personalNameMatchesFast(apn, bpn, mode))
         ) {
             return false;
         }
@@ -1110,7 +1261,7 @@ function compareORAddressInfo (
     if (aInfo.organizationalUnitNames) {
         if (
             !bInfo.organizationalUnitNames
-            || !candidateArraysMatch(aInfo.organizationalUnitNames, bInfo.organizationalUnitNames, (aOUs, bOUs) => orderedOUsMatch(aOUs, bOUs, mode))
+            || !candidateArraysMatchFast(aInfo.organizationalUnitNames, bInfo.organizationalUnitNames, (aOUs, bOUs) => orderedOUsMatchFast(aOUs, bOUs, mode))
         ) {
             return false;
         }
@@ -1122,7 +1273,7 @@ function compareORAddressInfo (
     if (aInfo.builtInDomainDefinedAttributes) {
         if (
             !bInfo.builtInDomainDefinedAttributes
-            || !candidateArraysMatch(aInfo.builtInDomainDefinedAttributes, bInfo.builtInDomainDefinedAttributes, (aMap, bMap) => ddaMapsMatch(aMap, bMap, mode))
+            || !candidateArraysMatchFast(aInfo.builtInDomainDefinedAttributes, bInfo.builtInDomainDefinedAttributes, (aMap, bMap) => ddaMapsMatchFast(aMap, bMap, mode))
         ) {
             return false;
         }
@@ -1132,7 +1283,6 @@ function compareORAddressInfo (
         return false;
     }
     if (aInfo.terminalType !== undefined) {
-        // Loose equality so a number matches the same bigint.
         if (bInfo.terminalType === undefined || aInfo.terminalType != bInfo.terminalType) {
             return false;
         }
@@ -1153,7 +1303,7 @@ function compareORAddressInfo (
             if (!aIsPsap || !bIsPsap) {
                 return false;
             }
-            return presentationAddressMatchTyped(aExt, bExt);
+            return presentationAddressMatchTyped(aExt, bExt, undefined, flags) === true;
         }
         if (!matchStringsByMode(aExt[0], bExt[0], mode)) {
             return false;
@@ -1172,6 +1322,138 @@ function compareORAddressInfo (
     return true;
 }
 
+const DUMMY_PERSONAL_NAMES: readonly PersonalNameInfo[] = [ { surname: "" } ];
+const DUMMY_OU_LISTS: readonly (readonly string[])[] = [ [] ];
+const DUMMY_DDA_MAPS: readonly ReadonlyMap<string, string>[] = [ new Map() ];
+const DUMMY_PSAP = new PresentationAddress(undefined, undefined, undefined, []);
+
+function compareORAddressInfoConstantTime (
+    aInfo: ORAddressInfo,
+    bInfo: ORAddressInfo,
+    mode: ORAddressCompareMode,
+    flags: number,
+): boolean {
+    const exact = mode === "exact";
+    let matched = true;
+
+    for (const key of SCALAR_STRING_KEYS) {
+        const av = aInfo[key];
+        const bv = bInfo[key];
+        if (av !== undefined) {
+            const contentOk = matchStringsByMode(av, bv ?? "", mode, flags);
+            if (bv === undefined || !contentOk) {
+                matched = false;
+            }
+        } else if (exact && bv !== undefined) {
+            matched = false;
+        }
+    }
+
+    for (const key of MULTI_STRING_KEYS) {
+        const aForms = aInfo[key];
+        const bForms = bInfo[key];
+        if (aForms) {
+            if (!stringCandidateSetsMatchConstantTime(aForms, bForms, mode, flags)) {
+                matched = false;
+            }
+        } else if (exact && bForms) {
+            matched = false;
+        }
+    }
+
+    if (aInfo.personalName) {
+        const bPNs = bInfo.personalName ?? DUMMY_PERSONAL_NAMES;
+        const pnOk = candidateArraysMatchConstantTime(
+            aInfo.personalName,
+            bPNs,
+            (apn, bpn) => personalNameMatchesConstantTime(apn, bpn, mode, flags),
+        );
+        if (!bInfo.personalName || !pnOk) {
+            matched = false;
+        }
+    } else if (exact && bInfo.personalName) {
+        matched = false;
+    }
+
+    if (aInfo.organizationalUnitNames) {
+        const bOUs = bInfo.organizationalUnitNames ?? DUMMY_OU_LISTS;
+        const ouOk = candidateArraysMatchConstantTime(
+            aInfo.organizationalUnitNames,
+            bOUs,
+            (aList, bList) => orderedOUsMatchConstantTime(aList, bList, mode, flags),
+        );
+        if (!bInfo.organizationalUnitNames || !ouOk) {
+            matched = false;
+        }
+    } else if (exact && bInfo.organizationalUnitNames) {
+        matched = false;
+    }
+
+    if (aInfo.builtInDomainDefinedAttributes) {
+        const bDDAs = bInfo.builtInDomainDefinedAttributes ?? DUMMY_DDA_MAPS;
+        const ddaOk = candidateArraysMatchConstantTime(
+            aInfo.builtInDomainDefinedAttributes,
+            bDDAs,
+            (aMap, bMap) => ddaMapsMatchConstantTime(aMap, bMap, mode, flags),
+        );
+        if (!bInfo.builtInDomainDefinedAttributes || !ddaOk) {
+            matched = false;
+        }
+    } else if (exact && bInfo.builtInDomainDefinedAttributes) {
+        matched = false;
+    }
+
+    if (aInfo.terminalType !== undefined) {
+        if (bInfo.terminalType === undefined || aInfo.terminalType != bInfo.terminalType) {
+            matched = false;
+        }
+    } else if (exact && bInfo.terminalType !== undefined) {
+        matched = false;
+    }
+
+    const aExt = aInfo.extendedNetworkAddress;
+    const bExt = bInfo.extendedNetworkAddress;
+    if (aExt) {
+        if (isPsapAddress(aExt)) {
+            const bIsPsap = !!bExt && isPsapAddress(bExt);
+            const bPsap = bIsPsap ? bExt : DUMMY_PSAP;
+            const psapOk = presentationAddressMatchTyped(aExt, bPsap, undefined, flags) === true;
+            if (!bIsPsap || !psapOk) {
+                matched = false;
+            }
+        } else {
+            const bTuple = (bExt && !isPsapAddress(bExt)) ? bExt : undefined;
+            const numOk = matchStringsByMode(aExt[0], bTuple ? bTuple[0] : "", mode, flags);
+            let subOk = true;
+            if (aExt[1] !== undefined) {
+                const subContentOk = matchStringsByMode(aExt[1], bTuple?.[1] ?? "", mode, flags);
+                subOk = (bTuple?.[1] !== undefined) && subContentOk;
+            } else if (exact && bTuple?.[1] !== undefined) {
+                subOk = false;
+            }
+            if (!bTuple || !numOk || !subOk) {
+                matched = false;
+            }
+        }
+    } else if (exact && bExt) {
+        matched = false;
+    }
+
+    return matched;
+}
+
+export
+function compareORAddressInfo (
+    aInfo: ORAddressInfo,
+    bInfo: ORAddressInfo,
+    mode: ORAddressCompareMode,
+    flags: number = 0,
+): boolean {
+    return (flags & MATCH_FLAG_CONSTANT_TIME)
+        ? compareORAddressInfoConstantTime(aInfo, bInfo, mode, flags)
+        : compareORAddressInfoFast(aInfo, bInfo, mode, flags);
+}
+
 export
 function orAddressesMatch (a: ORAddress, b: ORAddress, flags: number = 0): boolean | undefined {
     if (a.isEmptyOrAddress() || b.isEmptyOrAddress()) {
@@ -1182,7 +1464,7 @@ function orAddressesMatch (a: ORAddress, b: ORAddress, flags: number = 0): boole
     if (!aInfo || !bInfo) {
         return undefined;
     }
-    return compareORAddressInfo(aInfo, bInfo, "exact");
+    return compareORAddressInfo(aInfo, bInfo, "exact", flags);
 }
 
 export

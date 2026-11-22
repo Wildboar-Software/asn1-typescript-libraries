@@ -8,9 +8,11 @@ import {
 import { _decode_UniversalOrBMPString } from "@wildboar/or-address";
 import {
     createEqualityMatcher,
+    MATCH_FLAG_CONSTANT_TIME,
     MATCH_FLAG_VALUE_NORMALIZED,
     type Matcher,
 } from "@wildboar/x500";
+import { ctStringsEqual } from "../constantTime.js";
 import {
     _decode_ORName,
     type ORName,
@@ -92,7 +94,7 @@ function readSingleDNString (el: ASN1Element): string | undefined {
     }
 }
 
-function atavMatchesNormalizedAssertion (
+function atavMatchesFast (
     el: ASN1Element,
     assertion: string,
     flags: number,
@@ -101,7 +103,6 @@ function atavMatchesNormalizedAssertion (
     if (single !== undefined) {
         return prepareMSStringValue(single, true, flags) === assertion;
     }
-    // Support string-list naming attributes such as `PostalAddress` (`SEQUENCE OF DirectoryString`).
     if (
         el.tagClass === ASN1TagClass.universal
         && el.tagNumber === ASN1UniversalType.sequence
@@ -125,6 +126,43 @@ function atavMatchesNormalizedAssertion (
     return false;
 }
 
+function atavMatchesConstantTime (
+    el: ASN1Element,
+    assertion: string,
+    flags: number,
+): boolean {
+    const single = readSingleDNString(el);
+    if (single !== undefined) {
+        return ctStringsEqual(assertion, prepareMSStringValue(single, true, flags));
+    }
+    if (
+        el.tagClass === ASN1TagClass.universal
+        && el.tagNumber === ASN1UniversalType.sequence
+    ) {
+        try {
+            const seq = el.sequence;
+            const limit = Math.min(seq.length, MAX_DN_STRING_LIST_ITEMS);
+            let matched = false;
+            let nonString = false;
+            for (let i = 0; i < limit; i++) {
+                const itemStr = readSingleDNString(seq[i]);
+                if (itemStr === undefined) {
+                    nonString = true;
+                    ctStringsEqual(assertion, "");
+                } else if (ctStringsEqual(assertion, prepareMSStringValue(itemStr, true, flags))) {
+                    matched = true;
+                }
+            }
+            return !nonString && matched;
+        } catch {
+            ctStringsEqual(assertion, "");
+            return false;
+        }
+    }
+    ctStringsEqual(assertion, "");
+    return false;
+}
+
 export
 function decodeORNameSingleElementAssertion (el: ASN1Element): string {
     const str = decodeMSStringElement(el);
@@ -139,23 +177,17 @@ function normalizeORNameSingleElementAssertion (assertion: string): string {
     return normalizeMSString(assertion, true);
 }
 
-export
-function matchORNameSingleElement (
+function matchORNameSingleElementFast (
     assertion: string,
     v: ORName,
-    flags: number = 0,
+    flags: number,
 ): boolean | undefined {
-    if (v.isEmpty()) {
-        return undefined;
-    }
     const normVal = !(flags & MATCH_FLAG_VALUE_NORMALIZED);
     if (!v.isEmptyOrAddress()) {
         const vInfo = orAddressToInfo(v, normVal);
         if (!vInfo) {
             return undefined;
         }
-        // ITU-T Rec. X.413 §12.4.7: `terminal-type` and the extended form of
-        // `network-address` are not considered by `oRNameSingleElementMatch`.
         const {
             extendedNetworkAddress: _ext,
             terminalType: _tt,
@@ -175,13 +207,74 @@ function matchORNameSingleElement (
     if (v.directory_name) {
         for (const rdn of v.directory_name.rdnSequence) {
             for (const atav of rdn) {
-                if (atavMatchesNormalizedAssertion(atav.value, assertion, flags)) {
+                if (atavMatchesFast(atav.value, assertion, flags)) {
                     return true;
                 }
             }
         }
     }
     return false;
+}
+
+function matchORNameSingleElementConstantTime (
+    assertion: string,
+    v: ORName,
+    flags: number,
+): boolean | undefined {
+    const normVal = !(flags & MATCH_FLAG_VALUE_NORMALIZED);
+    let matched = false;
+    let invalidAddress = false;
+    if (!v.isEmptyOrAddress()) {
+        const vInfo = orAddressToInfo(v, normVal);
+        if (!vInfo) {
+            invalidAddress = true;
+        } else {
+            const {
+                extendedNetworkAddress: _ext,
+                terminalType: _tt,
+                ...searchableInfo
+            } = vInfo;
+            for (const strInValue of extractStrings(searchableInfo)) {
+                const candidate = normVal ? normalizeORNameSingleElementAssertion(strInValue) : strInValue;
+                if (ctStringsEqual(assertion, candidate)) {
+                    matched = true;
+                }
+            }
+            for (const strInValue of extractStrings(v.built_in_standard_attributes.toJSON())) {
+                const candidate = normVal ? normalizeORNameSingleElementAssertion(strInValue) : strInValue;
+                if (ctStringsEqual(assertion, candidate)) {
+                    matched = true;
+                }
+            }
+        }
+    }
+    if (v.directory_name) {
+        for (const rdn of v.directory_name.rdnSequence) {
+            for (const atav of rdn) {
+                if (atavMatchesConstantTime(atav.value, assertion, flags)) {
+                    matched = true;
+                }
+            }
+        }
+    }
+    if (matched) {
+        return true;
+    }
+    return invalidAddress ? undefined : false;
+}
+
+export
+function matchORNameSingleElement (
+    assertion: string,
+    v: ORName,
+    flags: number = 0,
+): boolean | undefined {
+    if (v.isEmpty()) {
+        return undefined;
+    }
+    return (flags & MATCH_FLAG_CONSTANT_TIME)
+        ? matchORNameSingleElementConstantTime(assertion, v, flags)
+        : matchORNameSingleElementFast(assertion, v, flags);
 }
 
 export

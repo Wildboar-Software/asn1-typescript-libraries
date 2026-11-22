@@ -6,6 +6,8 @@ import type {
 import {
     type ContextMatcher,
     type Matcher,
+    MATCH_FLAG_CONSTANT_TIME,
+    MATCH_FLAG_HIGH_WORK_BUDGET,
 } from "../types/matching.mjs";
 import compareElements from "../comparators/compareElements.mjs";
 
@@ -32,6 +34,9 @@ const compareElementsContextMatcher: ContextMatcher = (assertion, values) => {
  * defined in terms of the other values of the same attribute, so callers that
  * have those siblings must apply it themselves after this function returns
  * `false`.
+ * 
+ * This assumes context types are unique, which they are required to be per
+ * value. This means that we stop on the first matching context.
  *
  * @param {ContextAssertion} ca The context assertion to be evaluated
  * @param {Context[]} contexts The contexts to be evaluated
@@ -56,39 +61,52 @@ function evaluateContextAssertion (
     flags: number = 0,
 ): boolean {
     const matcher = getContextMatcher(ca.contextType) ?? compareElementsContextMatcher;
-    const isAbsentMatch: boolean = determineAbsentMatch(ca.contextType);
-    let storedValues: ASN1Element[] | undefined;
-    for (const context of contexts) {
+    let hadContextOfAssertedType = false;
+    const constantTime = flags & MATCH_FLAG_CONSTANT_TIME;
+    // Denial-of-service protection: limit the number of assertions.
+    const max = Math.min(
+        ca.contextValues.length,
+        (flags & MATCH_FLAG_HIGH_WORK_BUDGET)
+            ? 1000
+            : 100
+    );
+    let matched = false;
+    for (let i = 0; i < contexts.length; i++) {
+        const context = contexts[i];
         if (!context.contextType.isEqualTo(ca.contextType)) {
             continue;
         }
-        if (!storedValues) {
-            // Reuse the first matching context's array; copy only if another
-            // context of this type appears, so the original is never mutated.
-            storedValues = context.contextValues;
-        } else {
-            storedValues = storedValues.concat(context.contextValues);
+        if (context.contextValues.length === 0) {
+            break;
+        }
+        hadContextOfAssertedType = true;
+        for (let j = 0; j < max; j++) {
+            const assertedValue = ca.contextValues[j];
+            const storedValues = (context.contextValues.length > max)
+                ? context.contextValues.slice(0, max)
+                : context.contextValues;
+            if (matcher(assertedValue, storedValues.values(), getEqualityMatcher, flags)) {
+                matched = true;
+                if (!constantTime) {
+                    break;
+                }
+            }
+        }
+        if (!constantTime) {
+            break;
         }
     }
     // A ContextAssertion is true for a particular attribute value if:
     // b) the attribute value contains no contexts of the asserted contextType; or
-    if (!storedValues || storedValues.length === 0) {
+    if (!hadContextOfAssertedType) {
         /**
          * This is not documented in the section describing `ContextAssertion`s,
          * but rather, in the definition of a context type, in Section 13.9.2 of
          * ITU Recommendation X.501 (2016).
          */
-        return isAbsentMatch;
+        return determineAbsentMatch(ca.contextType);
     }
-    // a) the attribute value has a context of the same contextType of the ContextAssertion and any of the
-    // stored contextValues of that context matches with any of the asserted contextValues according to
-    // the definition of how a match is determined for that contextType.
-    return ca.contextValues.some((assertedValue) => matcher(
-        assertedValue,
-        storedValues.values(),
-        getEqualityMatcher,
-        flags,
-    ));
+    return matched;
 }
 
 export default evaluateContextAssertion;
