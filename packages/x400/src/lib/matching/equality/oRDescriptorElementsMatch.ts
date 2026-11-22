@@ -6,8 +6,11 @@ import {
 } from "@wildboar/x400/IPMSInformationObjects";
 import { MATCH_FLAG_ELEMENTS_MATCH } from "./oRNameMatch.js";
 import {
-    decodeNonEmptyORDescriptorAssertion,
+    decodePreparedORDescriptorAssertion,
     matchORDescriptors,
+    matchPreparedORDescriptor,
+    normalizePreparedORDescriptor,
+    type PreparedORDescriptor,
 } from "./oRDescriptorMatch.js";
 
 export
@@ -28,8 +31,25 @@ function oRDescriptorElementsMatchTyped (
 
 export
 const oRDescriptorElementsMatch: Matcher = createEqualityMatcher(
-    decodeNonEmptyORDescriptorAssertion("oRDescriptorElementsMatch"),
-    oRDescriptorElementsMatchTyped,
+    decodePreparedORDescriptorAssertion("oRDescriptorElementsMatch"),
+    (
+        assertion: PreparedORDescriptor,
+        value: ASN1Element,
+        getEqualityMatcher?: (attributeType: OBJECT_IDENTIFIER) => Matcher | undefined,
+        flags: number = 0,
+    ): boolean | undefined => {
+        const v = _decode_ORDescriptor(value);
+        return matchPreparedORDescriptor(
+            assertion,
+            v,
+            getEqualityMatcher,
+            flags | MATCH_FLAG_ELEMENTS_MATCH,
+            true,
+        );
+    },
+    undefined,
+    false,
+    normalizePreparedORDescriptor,
 );
 
 export default oRDescriptorElementsMatch;

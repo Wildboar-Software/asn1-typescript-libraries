@@ -2,18 +2,21 @@ import { Buffer } from "node:buffer";
 import { ASN1Element, DERElement, ObjectIdentifier } from "@wildboar/asn1";
 import { DER } from "@wildboar/asn1/functional";
 import { AttributeTypeAndValue } from "@wildboar/x500/InformationFramework";
+import { PresentationAddress } from "@wildboar/x500/SelectedAttributeTypes";
 import {
     BuiltInDomainDefinedAttribute,
     BuiltInStandardAttributes,
     ExtendedNetworkAddress_e163_4_address,
     ExtensionAttribute,
     ORAddress,
+    PDSParameter,
     PersonalName,
     UniversalDomainDefinedAttribute,
     UniversalOrBMPString,
     UniversalPersonalName,
     _encode_ExtendedNetworkAddress,
     _encode_ORAddress,
+    _encode_PDSParameter,
     _encode_PhysicalDeliveryCountryName,
     _encode_PostalCode,
     _encode_TeletexCommonName,
@@ -24,6 +27,7 @@ import {
     extended_network_address,
     physical_delivery_country_name,
     postal_code,
+    street_address,
     teletex_common_name,
     universal_common_name,
     universal_domain_defined_attributes,
@@ -33,6 +37,7 @@ import {
 import oRAddressMatch from "./oRAddressMatch.js";
 import oRAddressElementsMatch from "./oRAddressElementsMatch.js";
 import {
+    compareORAddressInfo,
     orAddressesMatch,
     recursivelyNormalize,
 } from "./orAddressUtilities.js";
@@ -349,5 +354,54 @@ describe("ORAddress matching utilities, oRAddressMatch, and oRAddressElementsMat
         );
         expect(orAddressesMatch(callerAddr, callerAddr)).toBe(true);
         expect(callerOUs).toEqual(["  Sales ", "West"]);
+    });
+
+    test("PDSParameter JSON uses dashed component names, so printable and teletex forms match", () => {
+        const printable = _encode_ORAddress(
+            new ORAddress(new BuiltInStandardAttributes({ iso_3166_alpha2_code: "US" }), undefined, [
+                new ExtensionAttribute(
+                    street_address["&id"]!,
+                    _encode_PDSParameter(new PDSParameter("  Main Street "), DER),
+                ),
+            ]),
+            DER,
+        );
+        const teletex = _encode_ORAddress(
+            new ORAddress(new BuiltInStandardAttributes({ iso_3166_alpha2_code: "US" }), undefined, [
+                new ExtensionAttribute(
+                    street_address["&id"]!,
+                    _encode_PDSParameter(new PDSParameter(undefined, Buffer.from("Main Street")), DER),
+                ),
+            ]),
+            DER,
+        );
+        expect(new PDSParameter("Main Street").toJSON()).toEqual({
+            "printable-string": "Main Street",
+            "teletex-string": undefined,
+        });
+        expect(oRAddressMatch(printable, stored(teletex))).toBe(true);
+    });
+
+    test("PSAP comparison does not require PresentationAddress to be the same class instance", () => {
+        const nsap = new Uint8Array([0x49, 0x01]);
+        const real = new PresentationAddress(undefined, undefined, undefined, [nsap]);
+        const duck = {
+            pSelector: undefined,
+            sSelector: undefined,
+            tSelector: undefined,
+            nAddresses: [nsap],
+        } as PresentationAddress;
+        expect(real instanceof PresentationAddress).toBe(true);
+        expect(duck instanceof PresentationAddress).toBe(false);
+        expect(compareORAddressInfo(
+            { countryName: "US", extendedNetworkAddress: real },
+            { countryName: "US", extendedNetworkAddress: duck },
+            "exact",
+        )).toBe(true);
+        expect(compareORAddressInfo(
+            { countryName: "US", extendedNetworkAddress: ["18005551212", "42"] },
+            { countryName: "US", extendedNetworkAddress: duck },
+            "exact",
+        )).toBe(false);
     });
 });

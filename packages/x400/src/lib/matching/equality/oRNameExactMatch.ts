@@ -25,8 +25,10 @@ function matchORNameExactFast (
     getEqualityMatcher: ((attributeType: OBJECT_IDENTIFIER) => Matcher | undefined) | undefined,
     flags: number,
 ): boolean | undefined {
-    const directoryNameAsserted: boolean = !!a.directory_name?.rdnSequence.length;
-    const directoryNamePresent: boolean = !!v.directory_name?.rdnSequence.length;
+    // An empty rdnSequence is the Directory root and is present.
+    // Only a missing directory-name component is absent.
+    const directoryNameAsserted: boolean = a.directory_name !== undefined;
+    const directoryNamePresent: boolean = v.directory_name !== undefined;
     if (directoryNameAsserted !== directoryNamePresent) {
         return false;
     }
@@ -58,8 +60,8 @@ function matchORNameExactConstantTime (
     getEqualityMatcher: ((attributeType: OBJECT_IDENTIFIER) => Matcher | undefined) | undefined,
     flags: number,
 ): boolean | undefined {
-    const aHasDN = !!a.directory_name?.rdnSequence.length;
-    const vHasDN = !!v.directory_name?.rdnSequence.length;
+    const aHasDN = a.directory_name !== undefined;
+    const vHasDN = v.directory_name !== undefined;
     const dnPresenceOk = aHasDN === vHasDN;
     let namesMatch = true;
     if (aHasDN && a.directory_name) {

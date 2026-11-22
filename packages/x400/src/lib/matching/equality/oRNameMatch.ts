@@ -62,8 +62,10 @@ function matchORNamesFast (
     flags: number,
 ): boolean | undefined {
     const innerFlags = flags & ~(MATCH_FLAG_ELEMENTS_MATCH | MATCH_FLAG_SUBSTRING_MATCH);
-    const aHasDN: boolean = !!a.directory_name?.rdnSequence.length;
-    const vHasDN: boolean = !!v.directory_name?.rdnSequence.length;
+    // An empty rdnSequence is the Directory root and is present.
+    // Only a missing directory-name component is absent.
+    const aHasDN: boolean = a.directory_name !== undefined;
+    const vHasDN: boolean = v.directory_name !== undefined;
     const aHasAddr: boolean = !a.isEmptyOrAddress();
 
     if (!aHasDN && aHasAddr) {
@@ -107,8 +109,8 @@ function matchORNamesConstantTime (
     flags: number,
 ): boolean | undefined {
     const innerFlags = flags & ~(MATCH_FLAG_ELEMENTS_MATCH | MATCH_FLAG_SUBSTRING_MATCH);
-    const aHasDN: boolean = !!a.directory_name?.rdnSequence.length;
-    const vHasDN: boolean = !!v.directory_name?.rdnSequence.length;
+    const aHasDN: boolean = a.directory_name !== undefined;
+    const vHasDN: boolean = v.directory_name !== undefined;
     const aHasAddr: boolean = !a.isEmptyOrAddress();
     const vHasAddr: boolean = !v.isEmptyOrAddress();
 
