@@ -6,7 +6,10 @@ import {
     ASN1UniversalType,
     BERElement,
 } from "@wildboar/asn1";
-import type { TypedEquationFunction } from "@wildboar/x500";
+import {
+    MATCH_FLAG_CONSTANT_TIME,
+    type TypedEquationFunction,
+} from "@wildboar/x500";
 
 // ORAddressAndOptionalDirectoryName is just an alias for ORName.
 //
@@ -110,15 +113,22 @@ function matchRedirectionOrDLExpansionHistory<A> (
     inner: TypedEquationFunction<A>,
 ): TypedEquationFunction<A> {
     return (assertion, value, getEqualityMatcher, flags): boolean | undefined => {
+        const ct = (flags ?? 0) & MATCH_FLAG_CONSTANT_TIME;
+        let matched = false;
         let sawUndefined = false;
         for (const target of extractORNameElements(value)) {
             const result = inner(assertion, target, getEqualityMatcher, flags);
             if (result === true) {
-                return true;
-            }
-            if (result === undefined) {
+                if (!ct) {
+                    return true;
+                }
+                matched = true;
+            } else if (result === undefined) {
                 sawUndefined = true;
             }
+        }
+        if (matched) {
+            return true;
         }
         return sawUndefined ? undefined : false;
     };

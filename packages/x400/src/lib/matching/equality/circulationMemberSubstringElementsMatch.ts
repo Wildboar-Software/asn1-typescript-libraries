@@ -17,7 +17,7 @@ function circulationMemberSubstringElementsMatchTyped (
     getEqualityMatcher?: (attributeType: OBJECT_IDENTIFIER) => Matcher | undefined,
     flags: number = 0,
 ): boolean | undefined {
-    const recipient = findCirculationRecipientElement(value);
+    const recipient = findCirculationRecipientElement(value, flags);
     if (!recipient) {
         return undefined;
     }
