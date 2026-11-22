@@ -89,10 +89,10 @@ export class PDSParameter {
      * @public
      * @function
      */
-    public toJSON(): { printable_string?: string | undefined, teletex_string?: string | undefined } {
+    public toJSON(): { "printable-string"?: string | undefined, "teletex-string"?: string | undefined } {
         return {
-            printable_string: this.printable_string?.toString(),
-            teletex_string: this.teletex_string
+            "printable-string": this.printable_string?.toString(),
+            "teletex-string": this.teletex_string
                 ? teletexToString(this.teletex_string)
                 : undefined,
         };

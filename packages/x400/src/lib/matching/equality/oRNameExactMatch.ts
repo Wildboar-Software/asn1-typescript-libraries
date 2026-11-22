@@ -23,8 +23,9 @@ const oRNameExactMatch: Matcher = createEqualityMatcher(
         if (v.isEmpty()) {
             return undefined;
         }
-        const directoryNameAsserted: boolean = !!a.directory_name?.rdnSequence.length;
-        const directoryNamePresent: boolean = !!v.directory_name?.rdnSequence.length;
+        // Empty RDNSequence is the root DN (present). Only a missing component is absent.
+        const directoryNameAsserted: boolean = a.directory_name !== undefined;
+        const directoryNamePresent: boolean = v.directory_name !== undefined;
         if (directoryNameAsserted !== directoryNamePresent) {
             return false;
         }

@@ -43,8 +43,11 @@ function matchORNames (
     const a = assertion;
     const v = value;
     const innerFlags = flags & ~(MATCH_FLAG_ELEMENTS_MATCH | MATCH_FLAG_SUBSTRING_MATCH);
-    const aHasDN: boolean = !!a.directory_name?.rdnSequence.length;
-    const vHasDN: boolean = !!v.directory_name?.rdnSequence.length;
+    // An empty RDNSequence is the Directory root and is a present name.
+    // Treating it as absent makes a stored root DN look empty, so the rule
+    // returns undefined (unmatchable) instead of comparing it.
+    const aHasDN: boolean = a.directory_name !== undefined;
+    const vHasDN: boolean = v.directory_name !== undefined;
     // a) If the presented OR-name contains only an OR-address, the rule matches if the presented value matches an
     // OR-address in the stored value according to the OR-address-match rule.
     const presentedContainsOnlyORAddress: boolean = (

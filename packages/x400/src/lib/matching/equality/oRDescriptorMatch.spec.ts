@@ -9,6 +9,10 @@ import {
 import * as $ from "@wildboar/asn1/functional";
 import { DER } from "@wildboar/asn1/functional";
 import { AttributeTypeAndValue as DNAtav, type Name } from "@wildboar/dn";
+import {
+    MATCH_FLAG_ASSERTION_NORMALIZED,
+    MATCH_FLAG_VALUE_NORMALIZED,
+} from "@wildboar/x500";
 import { AttributeTypeAndValue } from "@wildboar/x500/InformationFramework";
 import { caseIgnoreMatch } from "@wildboar/x500/matching/equality";
 import {
@@ -243,5 +247,92 @@ describe("oRDescriptorMatch, oRDescriptorElementsMatch, and oRDescriptorSubstrin
         const primitiveEl = $._encodeBoolean(true, DER);
         expect(recipientSpecifierMatch(validRecipSpec, stored(primitiveEl))).toBeUndefined();
         expect(circulationMemberMatch(uncheckedCirc, stored(primitiveEl))).toBeUndefined();
+    });
+
+    test("normalizes free-form-name, telephone-number, and formal-name unless the caller already did", () => {
+        const messy = _encode_ORDescriptor(
+            new ORDescriptor(undefined, Buffer.from("  alice  "), "  +1   555 "),
+            DER,
+        );
+        const clean = _encode_ORDescriptor(
+            new ORDescriptor(undefined, Buffer.from("ALICE"), "+1 555"),
+            DER,
+        );
+        expect(oRDescriptorMatch(messy, stored(clean))).toBe(true);
+        expect(oRDescriptorElementsMatch(messy, stored(clean))).toBe(true);
+        expect(
+            oRDescriptorMatch(messy, stored(clean), undefined, MATCH_FLAG_ASSERTION_NORMALIZED),
+        ).toBe(false);
+        expect(
+            oRDescriptorMatch(clean, stored(messy), undefined, MATCH_FLAG_VALUE_NORMALIZED),
+        ).toBe(false);
+        expect(
+            oRDescriptorMatch(
+                clean,
+                stored(clean),
+                undefined,
+                MATCH_FLAG_ASSERTION_NORMALIZED | MATCH_FLAG_VALUE_NORMALIZED,
+            ),
+        ).toBe(true);
+
+        const lowerFormal = _encode_ORDescriptor(
+            new ORDescriptor(new ORName(
+                new BuiltInStandardAttributes(
+                    { iso_3166_alpha2_code: "US" },
+                    undefined,
+                    undefined,
+                    undefined,
+                    undefined,
+                    "acme",
+                ),
+            )),
+            DER,
+        );
+        const upperFormal = _encode_ORDescriptor(
+            new ORDescriptor(new ORName(
+                new BuiltInStandardAttributes(
+                    { iso_3166_alpha2_code: "US" },
+                    undefined,
+                    undefined,
+                    undefined,
+                    undefined,
+                    "ACME",
+                ),
+            )),
+            DER,
+        );
+        expect(oRDescriptorMatch(lowerFormal, stored(upperFormal))).toBe(true);
+        expect(
+            oRDescriptorMatch(lowerFormal, stored(upperFormal), undefined, MATCH_FLAG_ASSERTION_NORMALIZED),
+        ).toBe(false);
+    });
+
+    test("a stored root directory-name is matchable, and elements matching ignores an undecodable checkmark", () => {
+        const rootFormal = new ORName(
+            new BuiltInStandardAttributes(),
+            undefined,
+            undefined,
+            { rdnSequence: [] },
+        );
+        const rootDesc = _encode_ORDescriptor(new ORDescriptor(rootFormal), DER);
+        expect(oRDescriptorMatch(rootDesc, stored(rootDesc))).toBe(true);
+        expect(oRNameMatch(
+            _encode_ORName(rootFormal, DER),
+            stored(_encode_ORName(aliceFormal, DER)),
+        )).toBe(false);
+
+        const recip = _encode_RecipientSpecifier(
+            new RecipientSpecifier(new ORDescriptor(aliceFormal)),
+            DER,
+        );
+        const bogusCheck = new DERElement();
+        bogusCheck.integer = 7;
+        const partialAssertion = DERElement.fromSet([recip, bogusCheck]);
+        const storedCirc = _encode_CirculationMember(
+            new CirculationMember(new RecipientSpecifier(new ORDescriptor(aliceFormal))),
+            DER,
+        );
+        expect(circulationMemberElementsMatch(partialAssertion, stored(storedCirc))).toBe(true);
+        expect(() => circulationMemberMatch(partialAssertion, stored(storedCirc))).toThrow();
     });
 });

@@ -57,7 +57,7 @@ import {
     universal_unique_postal_name,
     x121_dcc_country_code_to_iso_3166,
 } from "@wildboar/or-address";
-import { PresentationAddress } from "@wildboar/x500/SelectedAttributeTypes";
+import type { PresentationAddress } from "@wildboar/x500/SelectedAttributeTypes";
 import { presentationAddressMatchTyped } from "@wildboar/x500/matching/equality";
 import {
     MATCH_FLAG_ASSERTION_NORMALIZED,
@@ -234,6 +234,17 @@ interface ORAddressInfo {
     terminalType?: INTEGER;
 }
 
+/**
+ * PSAP addresses are `PresentationAddress` values. Do not use `instanceof`:
+ * a second copy of the class (duplicate package versions) would fail it.
+ * Numeric extended-network-address values are tuples and have no `nAddresses`.
+ */
+function isPsapAddress (
+    value: NonNullable<ORAddressInfo["extendedNetworkAddress"]>,
+): value is PresentationAddress {
+    return Array.isArray((value as PresentationAddress).nAddresses);
+}
+
 function personalNameFromJSON (json: PersonalNameJSON, normalize: boolean): PersonalNameInfo | null {
     const norm = (s: string): string => (normalize ? normalizeMSString(s) : s);
     if (json.surname.length === 0) {
@@ -310,22 +321,24 @@ type ExtensionHandler = (
 
 function makePDSHandler (
     field: PDSMultiField,
-    decode: (el: ASN1Element) => { toJSON(): { printable_string?: string; teletex_string?: string } },
+    decode: (el: ASN1Element) => { toJSON(): { "printable-string"?: string; "teletex-string"?: string } },
 ): ExtensionHandler {
     return (info: ORAddressInfo, value: ASN1Element, normalize: boolean): ORAddressInfo | null => {
-        const { printable_string, teletex_string } = decode(value).toJSON();
+        const json = decode(value).toJSON();
+        const printableString = json["printable-string"];
+        const teletexString = json["teletex-string"];
         const out: string[] = [];
-        if (printable_string !== undefined) {
-            if (printable_string.length === 0) {
+        if (printableString !== undefined) {
+            if (printableString.length === 0) {
                 return null;
             }
-            out.push(normalize ? normalizeMSString(printable_string) : printable_string);
+            out.push(normalize ? normalizeMSString(printableString) : printableString);
         }
-        if (teletex_string !== undefined) {
-            if (teletex_string.length === 0) {
+        if (teletexString !== undefined) {
+            if (teletexString.length === 0) {
                 return null;
             }
-            out.push(normalize ? normalizeMSString(teletex_string) : teletex_string);
+            out.push(normalize ? normalizeMSString(teletexString) : teletexString);
         }
         if (out.length === 0) {
             return null;
@@ -541,7 +554,8 @@ function process_universal_unformatted_postal_address_ext (info: ORAddressInfo, 
 
 function process_extended_network_address_ext (info: ORAddressInfo, value: ASN1Element, normalize: boolean): ORAddressInfo | null {
     // Use MTSAbstractService's ExtendedNetworkAddress decoder so `psap_address`
-    // is an instance of `@wildboar/x500`'s `PresentationAddress`.
+    // is a PresentationAddress (it has an `nAddresses` array). Do not identify
+    // it with `instanceof`; another copy of the class would fail that check.
     const param = _decode_ExtendedNetworkAddress(value);
     if ("e163_4_address" in param) {
         if (param.e163_4_address.number_.length === 0) {
@@ -855,7 +869,7 @@ function normalizeORAddressInfo (raw: ORAddressInfo): ORAddressInfo | null {
         out.terminalType = raw.terminalType;
     }
     if (raw.extendedNetworkAddress !== undefined) {
-        if (raw.extendedNetworkAddress instanceof PresentationAddress) {
+        if (isPsapAddress(raw.extendedNetworkAddress)) {
             out.extendedNetworkAddress = raw.extendedNetworkAddress;
         } else {
             out.extendedNetworkAddress = [
@@ -1133,8 +1147,8 @@ function compareORAddressInfo (
         if (!bExt) {
             return false;
         }
-        const aIsPsap = aExt instanceof PresentationAddress;
-        const bIsPsap = bExt instanceof PresentationAddress;
+        const aIsPsap = isPsapAddress(aExt);
+        const bIsPsap = isPsapAddress(bExt);
         if (aIsPsap || bIsPsap) {
             if (!aIsPsap || !bIsPsap) {
                 return false;

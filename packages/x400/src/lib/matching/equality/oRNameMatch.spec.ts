@@ -53,7 +53,7 @@ describe("oRNameExactMatch, oRNameMatch, oRNameElementsMatch, and oRNameSubstrin
     const bothAliceUSAcme = encodeORName({ country: "US", org: "Acme", dn: cnName("Alice") });
     const bothBobUSAcme = encodeORName({ country: "US", org: "Acme", dn: cnName("Bob") });
 
-    test("all four ORName matchers throw on empty assertions and empty root-DSE DN assertions", () => {
+    test("all four ORName matchers throw on empty assertions but compare a present root DN", () => {
         for (const matcher of [
             oRNameExactMatch,
             oRNameMatch,
@@ -61,11 +61,13 @@ describe("oRNameExactMatch, oRNameMatch, oRNameElementsMatch, and oRNameSubstrin
             oRNameSubstringElementsMatch,
         ]) {
             expect(() => matcher(empty, stored(dnAlice))).toThrow();
-            expect(() => matcher(emptyRootDN, stored(dnAlice))).toThrow();
+            // Root DN is present, so it is a real assertion and does not match Alice.
+            expect(matcher(emptyRootDN, stored(dnAlice))).toBe(false);
+            expect(matcher(emptyRootDN, stored(emptyRootDN))).toBe(true);
         }
     });
 
-    test("all four ORName matchers return undefined on empty stored ORName values", () => {
+    test("empty stored ORNames are unmatchable, but a stored root DN is compared", () => {
         for (const matcher of [
             oRNameExactMatch,
             oRNameMatch,
@@ -73,8 +75,20 @@ describe("oRNameExactMatch, oRNameMatch, oRNameElementsMatch, and oRNameSubstrin
             oRNameSubstringElementsMatch,
         ]) {
             expect(matcher(dnAlice, stored(empty))).toBeUndefined();
-            expect(matcher(dnAlice, stored(emptyRootDN))).toBeUndefined();
+            // An empty RDNSequence is the Directory root, not an absent name.
+            expect(matcher(dnAlice, stored(emptyRootDN))).toBe(false);
         }
+    });
+
+    test("exact match distinguishes an absent directory-name from the root DN", () => {
+        const addrWithRoot = encodeORName({ country: "US", org: "Acme", dn: { rdnSequence: [] } });
+        const addrWithoutDn = encodeORName({ country: "US", org: "Acme" });
+        expect(oRNameExactMatch(addrWithRoot, stored(addrWithoutDn))).toBe(false);
+        expect(oRNameExactMatch(addrWithoutDn, stored(addrWithRoot))).toBe(false);
+        expect(oRNameExactMatch(addrWithRoot, stored(addrWithRoot))).toBe(true);
+        // OR-name-match still succeeds on the O/R address when the names differ.
+        expect(oRNameMatch(addrWithRoot, stored(addrWithoutDn))).toBe(true);
+        expect(oRNameMatch(emptyRootDN, stored(addrWithRoot))).toBe(true);
     });
 
     test("oRNameExactMatch requires identical presence of ORAddress and directory-name", () => {

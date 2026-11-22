@@ -124,13 +124,18 @@ export class ORName extends ORAddress {
     }
 
     /**
-     * @summary Checks if the ORName is empty: no ORAddress and no (or empty) directory name
+     * @summary Checks if the ORName is empty: no ORAddress and no directory name
+     * @description
+     *
+     * An empty `rdnSequence` is the Directory root and is a present directory
+     * name. Only a missing `directory-name` component counts as absent.
+     *
      * @returns `true` if the ORName is empty.
      * @public
      * @method
      */
     public override isEmpty(): boolean {
-        return super.isEmptyOrAddress() && !this.directory_name?.rdnSequence.length;
+        return super.isEmptyOrAddress() && (this.directory_name === undefined);
     }
 }
 
