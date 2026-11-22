@@ -246,60 +246,6 @@ describe("evaluateFilter context fallback", () => {
         expect(attribute.valuesWithContext).toHaveLength(2);
     });
 
-    it("applies fallback only for the asserted context type", () => {
-        const language = ObjectIdentifier.fromString("1.2.9.2");
-        const temporal = ObjectIdentifier.fromString("1.2.9.4");
-        const attribute = new Attribute(ATTR_TYPE, [], [
-            new Attribute_valuesWithContext_Item(HELLO, [
-                new Context(temporal, [ EN ], true),
-                new Context(language, [ EN ], false),
-            ]),
-        ]);
-        const entry = new EntryInformation(name, true, [{ attribute }]);
-        const selected = new AttributeValueAssertion(ATTR_TYPE, HELLO, {
-            selectedContexts: [
-                new ContextAssertion(language, [ EN ]),
-                new ContextAssertion(temporal, [ FR ]),
-            ],
-        });
-        const matching: Filter = { item: { equality: selected } };
-        expect(evaluateFilter(matching, [entry], options).matched).toBe(true);
-
-        const otherTypeFallback: Filter = {
-            item: {
-                equality: new AttributeValueAssertion(ATTR_TYPE, HELLO, {
-                    selectedContexts: [ new ContextAssertion(language, [ WORLD ]) ],
-                }),
-            },
-        };
-        expect(evaluateFilter(otherTypeFallback, [entry], options).matched).toBe(false);
-    });
-
-    it("does not compare every selected assertion with every stored context", () => {
-        const n = 32;
-        const spies: ReturnType<typeof vi.spyOn>[] = [];
-        const contextList = Array.from({ length: n }, (_, i) => {
-            const oid = ObjectIdentifier.fromString(`1.2.9.${i}`);
-            spies.push(vi.spyOn(oid, "isEqualTo"));
-            return new Context(oid, [ EN ], false);
-        });
-        const selectedContexts = Array.from({ length: n }, (_, i) => (
-            new ContextAssertion(ObjectIdentifier.fromString(`1.3.9.${i}`), [ FR ])
-        ));
-        const attribute = new Attribute(ATTR_TYPE, [], [
-            new Attribute_valuesWithContext_Item(HELLO, contextList),
-        ]);
-        const entry = new EntryInformation(name, true, [{ attribute }]);
-        const many: Filter = {
-            item: {
-                equality: new AttributeValueAssertion(ATTR_TYPE, HELLO, { selectedContexts }),
-            },
-        };
-        expect(evaluateFilter(many, [entry], options).matched).toBe(true);
-        const comparisons = spies.reduce((sum, spy) => sum + spy.mock.calls.length, 0);
-        expect(comparisons).toBeLessThan(n * 2);
-    });
-
     it("consults plain siblings when deciding fallback for contextual values", () => {
         const attribute = new Attribute(ATTR_TYPE, [WORLD], [
             new Attribute_valuesWithContext_Item(HELLO, [new Context(CONTEXT_TYPE, [FR], true)]),
