@@ -1,9 +1,11 @@
 import { ASN1CharactersError, type ASN1Element } from "@wildboar/asn1";
 import {
     createEqualityMatcher,
+    MATCH_FLAG_CONSTANT_TIME,
     MATCH_FLAG_VALUE_NORMALIZED,
     type Matcher,
 } from "@wildboar/x500";
+import { ctStringsEqual } from "../constantTime.js";
 import {
     type AdministrationDomainName,
     type CountryName,
@@ -67,8 +69,7 @@ function decodeRawMTSIdentifier (mts: MTSIdentifier, el: ASN1Element): PreparedM
     };
 }
 
-function 
-normalizePreparedMTSIdentifier (
+function normalizePreparedMTSIdentifier (
     raw: PreparedMTSIdentifier,
     el?: ASN1Element,
 ): PreparedMTSIdentifier {
@@ -101,13 +102,34 @@ function decodeMTSIdentifierAssertion (el: ASN1Element): PreparedMTSIdentifier {
     return decodeRawMTSIdentifier(_decode_MTSIdentifier(el), el);
 }
 
+function matchMTSIdentifierFast (
+    assertion: PreparedMTSIdentifier,
+    v: PreparedMTSIdentifier,
+): boolean {
+    return (
+        assertion.country === v.country
+        && assertion.admd === v.admd
+        && assertion.prmd === v.prmd
+        && assertion.localId === v.localId
+    );
+}
+
+function matchMTSIdentifierConstantTime (
+    assertion: PreparedMTSIdentifier,
+    v: PreparedMTSIdentifier,
+): boolean {
+    const prmdPresenceOk = (assertion.prmd === undefined) === (v.prmd === undefined);
+    const countryOk = ctStringsEqual(assertion.country, v.country);
+    const admdOk = ctStringsEqual(assertion.admd, v.admd);
+    const prmdOk = assertion.prmd !== undefined
+        ? ctStringsEqual(assertion.prmd, v.prmd ?? "")
+        : true;
+    const localOk = ctStringsEqual(assertion.localId, v.localId);
+    return prmdPresenceOk && countryOk && admdOk && prmdOk && localOk;
+}
+
 /**
  * ITU-T Rec. X.413 (06/1999), clause 12.4.13 `mTSIdentifierMatch`.
- *
- * Matches `country-name` (applying X.121 / ISO 3166 equivalence),
- * `administration-domain-name`, optional `private-domain-identifier`, and
- * `local-identifier` using `MS-string-match` (and X.402 §18.4(b) numeric /
- * printable domain equivalence).
  */
 export
 const mTSIdentifierMatch: Matcher = createEqualityMatcher(
@@ -117,12 +139,9 @@ const mTSIdentifierMatch: Matcher = createEqualityMatcher(
         const v = (flags & MATCH_FLAG_VALUE_NORMALIZED)
             ? rawV
             : normalizePreparedMTSIdentifier(rawV, value);
-        return (
-            assertion.country === v.country
-            && assertion.admd === v.admd
-            && assertion.prmd === v.prmd
-            && assertion.localId === v.localId
-        );
+        return (flags & MATCH_FLAG_CONSTANT_TIME)
+            ? matchMTSIdentifierConstantTime(assertion, v)
+            : matchMTSIdentifierFast(assertion, v);
     },
     undefined,
     false,

@@ -5,7 +5,11 @@ import {
     ASN1UniversalType,
     BERElement,
 } from "@wildboar/asn1";
-import { createEqualityMatcher, type Matcher } from "@wildboar/x500";
+import {
+    createEqualityMatcher,
+    MATCH_FLAG_CONSTANT_TIME,
+    type Matcher,
+} from "@wildboar/x500";
 import { _decode_RedirectionReason } from "@wildboar/x400/MTSAbstractService";
 
 function readRedirectionReasonFromElement (redirectionEl: BERElement): number | bigint {
@@ -29,7 +33,7 @@ function readRedirectionReasonFromElement (redirectionEl: BERElement): number | 
 export
 const redirectionReasonMatch: Matcher = createEqualityMatcher(
     _decode_RedirectionReason,
-    (assertion, value): boolean => {
+    (assertion, value, _getEqualityMatcher, flags = 0): boolean => {
         if (
             (value.tagClass !== ASN1TagClass.universal)
             || (value.tagNumber !== ASN1UniversalType.sequence)
@@ -55,15 +59,20 @@ const redirectionReasonMatch: Matcher = createEqualityMatcher(
             }
         }
         // `RedirectionHistory` (`SEQUENCE SIZE (1..ub-redirections) OF Redirection`)
+        const ct = flags & MATCH_FLAG_CONSTANT_TIME;
+        let matched = false;
         const item = new BERElement();
         let i = 0;
         while (i < bytes.length) {
             i += item.fromBytes(bytes.subarray(i), true);
             if (readRedirectionReasonFromElement(item) == assertion) {
-                return true;
+                if (!ct) {
+                    return true;
+                }
+                matched = true;
             }
         }
-        return false;
+        return matched;
     },
     undefined,
     true,

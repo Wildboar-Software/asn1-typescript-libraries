@@ -11,7 +11,7 @@ export
 const circulationMemberSingleElementMatch: Matcher = createEqualityMatcher(
     decodeORNameSingleElementAssertion,
     (assertion: string, value: ASN1Element, getEqualityMatcher, flags = 0): boolean | undefined => {
-        const recipient = findCirculationRecipientElement(value);
+        const recipient = findCirculationRecipientElement(value, flags);
         if (!recipient) {
             return undefined;
         }

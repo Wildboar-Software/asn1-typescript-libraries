@@ -1,5 +1,9 @@
-import { Buffer } from "node:buffer";
-import { createEqualityMatcher, type Matcher } from "@wildboar/x500";
+import {
+    createEqualityMatcher,
+    MATCH_FLAG_CONSTANT_TIME,
+    type Matcher,
+} from "@wildboar/x500";
+import { bytesEqual, stringsEqual } from "../constantTime.js";
 import {
     type ContentCorrelator,
     _decode_ContentCorrelator,
@@ -19,13 +23,15 @@ const contentCorrelatorMatch: Matcher = createEqualityMatcher(
     (assertion, value, _getEqualityMatcher, flags = 0): boolean => {
         const a = assertion;
         const v = _decode_ContentCorrelator(value);
+        const ct = flags & MATCH_FLAG_CONSTANT_TIME;
         if (("octets" in a) && ("octets" in v)) {
-            return !Buffer.compare(a.octets, v.octets);
-        } else if (("ia5text" in a) && ("ia5text" in v)) {
-            return (a.ia5text === prepareMSStringValue(v.ia5text, false, flags)); // case-sensitive.
-        } else {
-            return false;
+            return bytesEqual(a.octets, v.octets, ct);
         }
+        if (("ia5text" in a) && ("ia5text" in v)) {
+            const vText = prepareMSStringValue(v.ia5text, false, flags);
+            return stringsEqual(a.ia5text, vText, ct);
+        }
+        return false;
     },
     undefined,
     false,

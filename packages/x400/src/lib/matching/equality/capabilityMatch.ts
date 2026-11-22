@@ -7,9 +7,11 @@ import {
 } from "@wildboar/asn1";
 import {
     createEqualityMatcher,
+    MATCH_FLAG_CONSTANT_TIME,
     MATCH_FLAG_VALUE_NORMALIZED,
     type Matcher,
 } from "@wildboar/x500";
+import { stringsEqual } from "../constantTime.js";
 import {
     type Capability,
     _decode_Capability,
@@ -148,7 +150,7 @@ const capabilityMatch: Matcher = createEqualityMatcher(
             _decode_Capability(value),
             !(flags & MATCH_FLAG_VALUE_NORMALIZED),
         );
-        return assertionKey === vKey;
+        return stringsEqual(assertionKey, vKey, flags & MATCH_FLAG_CONSTANT_TIME);
     },
     undefined,
     false,

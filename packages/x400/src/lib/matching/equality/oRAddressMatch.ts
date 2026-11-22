@@ -44,7 +44,7 @@ const oRAddressMatch: Matcher = createEqualityMatcher(
         if (!vInfo) {
             return undefined;
         }
-        return compareORAddressInfo(assertion, vInfo, "exact");
+        return compareORAddressInfo(assertion, vInfo, "exact", flags);
     },
     undefined,
     false,

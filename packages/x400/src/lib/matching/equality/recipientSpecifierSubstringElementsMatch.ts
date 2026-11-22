@@ -17,7 +17,7 @@ function recipientSpecifierSubstringElementsMatchTyped (
     getEqualityMatcher?: (attributeType: OBJECT_IDENTIFIER) => Matcher | undefined,
     flags: number = 0,
 ): boolean | undefined {
-    const recipient = findRecipientElement(value);
+    const recipient = findRecipientElement(value, flags);
     if (!recipient) {
         return undefined;
     }

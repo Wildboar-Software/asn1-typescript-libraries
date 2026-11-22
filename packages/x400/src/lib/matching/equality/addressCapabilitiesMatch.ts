@@ -1,9 +1,11 @@
 import type { ASN1Element } from "@wildboar/asn1";
 import {
     createEqualityMatcher,
+    MATCH_FLAG_CONSTANT_TIME,
     MATCH_FLAG_VALUE_NORMALIZED,
     type Matcher,
 } from "@wildboar/x500";
+import { ctStringsEqual } from "../constantTime.js";
 import {
     type AddressCapabilities,
     type Capability,
@@ -81,6 +83,60 @@ function normalizeAddressCapabilitiesAssertion (
     return raw;
 }
 
+function matchAddressCapabilitiesFast (
+    assertion: PreparedAddressCapabilities,
+    v: PreparedAddressCapabilities,
+    flags: number,
+): boolean {
+    if (assertion.capabilities.size !== v.capabilities.size) {
+        return false;
+    }
+    if (assertion.description !== v.description) {
+        return false;
+    }
+    if (!compareORAddressInfo(assertion.address, v.address, "exact", flags)) {
+        return false;
+    }
+    for (const key of assertion.capabilities) {
+        if (!v.capabilities.has(key)) {
+            return false;
+        }
+    }
+    return true;
+}
+
+function matchAddressCapabilitiesConstantTime (
+    assertion: PreparedAddressCapabilities,
+    v: PreparedAddressCapabilities,
+    flags: number,
+): boolean {
+    const descPresenceMatches =
+        (assertion.description === undefined) === (v.description === undefined);
+    const descContentMatches = assertion.description !== undefined
+        ? ctStringsEqual(assertion.description, v.description ?? "")
+        : true;
+    const addrMatches = compareORAddressInfo(assertion.address, v.address, "exact", flags);
+    const sizesMatch = assertion.capabilities.size === v.capabilities.size;
+    let allCapsMatch = true;
+    for (const aKey of assertion.capabilities) {
+        if (v.capabilities.size === 0) {
+            ctStringsEqual(aKey, "");
+            allCapsMatch = false;
+            continue;
+        }
+        let found = false;
+        for (const vKey of v.capabilities) {
+            if (ctStringsEqual(aKey, vKey)) {
+                found = true;
+            }
+        }
+        if (!found) {
+            allCapsMatch = false;
+        }
+    }
+    return descPresenceMatches && descContentMatches && addrMatches && sizesMatch && allCapsMatch;
+}
+
 /**
  * ITU-T Rec. X.402 (06/1999), Annex A.3.4 `addressCapabilitiesMatch`.
  */
@@ -96,21 +152,9 @@ const addressCapabilitiesMatch: Matcher = createEqualityMatcher(
         if (!v) {
             return undefined;
         }
-        if (assertion.capabilities.size !== v.capabilities.size) {
-            return false;
-        }
-        if (assertion.description !== v.description) {
-            return false;
-        }
-        if (!compareORAddressInfo(assertion.address, v.address, "exact")) {
-            return false;
-        }
-        for (const key of assertion.capabilities) {
-            if (!v.capabilities.has(key)) {
-                return false;
-            }
-        }
-        return true;
+        return (flags & MATCH_FLAG_CONSTANT_TIME)
+            ? matchAddressCapabilitiesConstantTime(assertion, v, flags)
+            : matchAddressCapabilitiesFast(assertion, v, flags);
     },
     undefined,
     false,

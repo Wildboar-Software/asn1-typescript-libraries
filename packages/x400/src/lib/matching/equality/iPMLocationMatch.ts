@@ -5,7 +5,11 @@ import {
     ASN1UniversalType,
     BERElement,
 } from "@wildboar/asn1";
-import { createEqualityMatcher, type Matcher } from "@wildboar/x500";
+import {
+    createEqualityMatcher,
+    MATCH_FLAG_CONSTANT_TIME,
+    type Matcher,
+} from "@wildboar/x500";
 import { _decode_SequenceNumber } from "@wildboar/x400/MSAbstractService";
 
 // IPMLocation ::= CHOICE {
@@ -16,7 +20,7 @@ import { _decode_SequenceNumber } from "@wildboar/x400/MSAbstractService";
 export
 const iPMLocationMatch: Matcher = createEqualityMatcher(
     _decode_SequenceNumber,
-    (assertion, value: ASN1Element): boolean | undefined => {
+    (assertion, value: ASN1Element, _getEqualityMatcher, flags = 0): boolean | undefined => {
         if (value.tagClass !== ASN1TagClass.universal) {
             // Unrecognized future `CHOICE` extension.
             return undefined;
@@ -30,6 +34,8 @@ const iPMLocationMatch: Matcher = createEqualityMatcher(
         ) {
             return undefined;
         }
+        const ct = flags & MATCH_FLAG_CONSTANT_TIME;
+        let matched = false;
         const bytes = value.value;
         const el = new BERElement();
         let i = 0;
@@ -37,10 +43,13 @@ const iPMLocationMatch: Matcher = createEqualityMatcher(
             i += el.fromBytes(bytes.subarray(i), true);
             // Loose equality so a number matches the same bigint.
             if (el.integer == assertion) {
-                return true;
+                if (!ct) {
+                    return true;
+                }
+                matched = true;
             }
         }
-        return false;
+        return matched;
     },
     undefined,
     true,

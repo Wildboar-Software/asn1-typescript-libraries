@@ -36,7 +36,7 @@ function orAddressIsSubset (
     if (!aInfo || !bInfo) {
         return undefined;
     }
-    return compareORAddressInfo(aInfo, bInfo, "elements");
+    return compareORAddressInfo(aInfo, bInfo, "elements", flags);
 }
 
 function decodeORAddressElementsAssertion (el: ASN1Element): ORAddressInfo {
@@ -71,7 +71,7 @@ const oRAddressElementsMatch: Matcher = createEqualityMatcher(
         if (!vInfo) {
             return undefined;
         }
-        return compareORAddressInfo(assertion, vInfo, "elements");
+        return compareORAddressInfo(assertion, vInfo, "elements", flags);
     },
     undefined,
     false,

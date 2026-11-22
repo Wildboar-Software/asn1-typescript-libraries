@@ -6,9 +6,14 @@ import {
     type ASN1Element,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { createEqualityMatcher, type Matcher } from "@wildboar/x500";
+import {
+    createEqualityMatcher,
+    MATCH_FLAG_CONSTANT_TIME,
+    type Matcher,
+} from "@wildboar/x500";
 import {
     decodeMSStringElement,
+    matchMSSubstring,
     normalizeMSString,
     prepareMSStringValue,
 } from "./orAddressUtilities.js";
@@ -44,6 +49,56 @@ function decodeMSStringList (el: ASN1Element): string[] {
     });
 }
 
+function matchSubstringListElementsFast (
+    assertion: readonly string[],
+    vElements: readonly ASN1Element[],
+    flags: number,
+): boolean {
+    if (assertion.length > vElements.length) {
+        return false;
+    }
+    for (let i = 0; i < assertion.length; i++) {
+        const raw = decodeMSStringElement(vElements[i]);
+        if (raw.length === 0) {
+            throw new ASN1CharactersError("mSSingleSubstringListElementsMatch: empty MSString", vElements[i]);
+        }
+        const vi = prepareMSStringValue(raw, true, flags);
+        if (vi.indexOf(assertion[i]) < 0) {
+            return false;
+        }
+    }
+    return true;
+}
+
+function matchSubstringListElementsConstantTime (
+    assertion: readonly string[],
+    vElements: readonly ASN1Element[],
+    flags: number,
+): boolean {
+    let matched = assertion.length <= vElements.length;
+    const count = Math.max(assertion.length, vElements.length);
+    for (let i = 0; i < count; i++) {
+        let vi = "";
+        if (i < vElements.length) {
+            const raw = decodeMSStringElement(vElements[i]);
+            if (raw.length === 0) {
+                // Just to waste time.
+                matchMSSubstring(assertion[i] ?? "", assertion[i] ?? "", flags);
+                continue;
+            }
+            vi = prepareMSStringValue(raw, true, flags);
+        }
+        if (i < assertion.length) {
+            if (!matchMSSubstring(vi, assertion[i], flags)) {
+                matched = false;
+            }
+        } else {
+            matchMSSubstring(vi, " ", flags);
+        }
+    }
+    return matched;
+}
+
 export
 const mSSingleSubstringListElementsMatch: Matcher = createEqualityMatcher(
     decodeMSStringList,
@@ -55,21 +110,9 @@ const mSSingleSubstringListElementsMatch: Matcher = createEqualityMatcher(
             throw new ASN1ConstructionError("mSSingleSubstringListElementsMatch: expected SEQUENCE", value);
         }
         const vElements = value.sequenceOf;
-        if (assertion.length > vElements.length) {
-            return false;
-        }
-        for (let i = 0; i < assertion.length; i++) {
-            const raw = decodeMSStringElement(vElements[i]);
-            if (raw.length === 0) {
-                // This is required by type constraints of the MSString type.
-                throw new ASN1CharactersError("mSSingleSubstringListElementsMatch: empty MSString", vElements[i]);
-            }
-            const vi = prepareMSStringValue(raw, true, flags);
-            if (vi.indexOf(assertion[i]) < 0) {
-                return false;
-            }
-        }
-        return true;
+        return (flags & MATCH_FLAG_CONSTANT_TIME)
+            ? matchSubstringListElementsConstantTime(assertion, vElements, flags)
+            : matchSubstringListElementsFast(assertion, vElements, flags);
     },
     undefined,
     true,

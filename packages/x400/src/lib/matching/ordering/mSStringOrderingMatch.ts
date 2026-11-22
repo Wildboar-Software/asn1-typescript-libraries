@@ -2,8 +2,10 @@ import { ASN1Element } from "@wildboar/asn1";
 import { compareCodePoints } from "@wildboar/dn";
 import {
     createOrderingMatcher,
+    MATCH_FLAG_CONSTANT_TIME,
     type Matcher,
 } from "@wildboar/x500";
+import { ctCompareCodePoints } from "../constantTime.js";
 import {
     decodeMSStringElement,
     normalizeMSString,
@@ -21,7 +23,10 @@ const mSStringOrderingMatch: Matcher = createOrderingMatcher(
         const v = (typeof value === "string")
             ? value
             : prepareMSStringValue(decodeMSStringElement(value), true, flags);
-        return compareCodePoints(assertion, v);
+        const compare = (flags & MATCH_FLAG_CONSTANT_TIME)
+            ? ctCompareCodePoints
+            : compareCodePoints;
+        return compare(assertion, v);
     },
     normalizeCaseIgnoreMSString,
 );
