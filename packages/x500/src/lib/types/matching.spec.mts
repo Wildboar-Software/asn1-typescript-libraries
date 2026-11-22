@@ -11,6 +11,8 @@ import {
     MATCH_FLAG_DEBUG,
     MATCH_FLAG_USED_FOR_NAME,
     MATCH_FLAG_ASSERTION_NORMALIZED,
+    MATCH_FLAG_READ_ASSERTION_CACHE,
+    MATCH_FLAG_WRITE_ASSERTION_CACHE,
     createSubstringsMatcher,
     createEqualityMatcher,
     type TypedEquationFunction,
@@ -460,5 +462,224 @@ suite("filter-item result precedence", () => {
         } finally {
             spy.mockRestore();
         }
+    });
+});
+
+suite("decoded assertion cache", () => {
+    const equalsValue = (assertion: INTEGER, value: ASN1Element) => (
+        BigInt(assertion) === BigInt(value.integer)
+    );
+    const readAndWrite = MATCH_FLAG_READ_ASSERTION_CACHE | MATCH_FLAG_WRITE_ASSERTION_CACHE;
+
+    test("read and write together decode once and reuse that assertion", () => {
+        const decoder = vi.fn((el: ASN1Element) => el.integer);
+        const match = createEqualityMatcher(decoder, equalsValue);
+        const assertion = integer(5);
+        expect(match(assertion, integerATAV(5), undefined, readAndWrite)).toBe(true);
+        expect(match(assertion, integerATAV(4), undefined, readAndWrite)).toBe(false);
+        expect(match(assertion, integerATAV(5), undefined, MATCH_FLAG_READ_ASSERTION_CACHE)).toBe(true);
+        expect(decoder).toHaveBeenCalledTimes(1);
+    });
+
+    test("a read with nothing stored still decodes", () => {
+        const decoder = vi.fn((el: ASN1Element) => el.integer);
+        const match = createEqualityMatcher(decoder, equalsValue);
+        const assertion = integer(5);
+        expect(match(assertion, integerATAV(5), undefined, MATCH_FLAG_READ_ASSERTION_CACHE)).toBe(true);
+        expect(match(assertion, integerATAV(5), undefined, MATCH_FLAG_READ_ASSERTION_CACHE)).toBe(true);
+        expect(decoder).toHaveBeenCalledTimes(2);
+    });
+
+    test("calls without the cache flags decode every time", () => {
+        const decoder = vi.fn((el: ASN1Element) => el.integer);
+        const match = createEqualityMatcher(decoder, equalsValue);
+        const assertion = integer(5);
+        expect(match(assertion, integerATAV(5))).toBe(true);
+        expect(match(assertion, integerATAV(5), undefined, MATCH_FLAG_NONE)).toBe(true);
+        expect(decoder).toHaveBeenCalledTimes(2);
+    });
+
+    test("write without read replaces the stored assertion", () => {
+        let decoded: INTEGER = 1;
+        const decoder = vi.fn(() => decoded);
+        const match = createEqualityMatcher(decoder, equalsValue);
+        const assertion = integer(0);
+        expect(match(assertion, integerATAV(1), undefined, MATCH_FLAG_WRITE_ASSERTION_CACHE)).toBe(true);
+        decoded = 2;
+        expect(match(assertion, integerATAV(2), undefined, MATCH_FLAG_WRITE_ASSERTION_CACHE)).toBe(true);
+        expect(match(assertion, integerATAV(2), undefined, MATCH_FLAG_READ_ASSERTION_CACHE)).toBe(true);
+        expect(match(assertion, integerATAV(1), undefined, MATCH_FLAG_READ_ASSERTION_CACHE)).toBe(false);
+        expect(decoder).toHaveBeenCalledTimes(2);
+    });
+
+    test("a thrown decoder leaves the cache empty", () => {
+        const decoder = vi.fn((el: ASN1Element) => {
+            if (Number(el.integer) === 0) {
+                throw new Error("malformed assertion");
+            }
+            return el.integer;
+        });
+        const match = createEqualityMatcher(decoder, equalsValue);
+        const assertion = integer(0);
+        expect(() => match(assertion, integerATAV(0), undefined, MATCH_FLAG_WRITE_ASSERTION_CACHE))
+            .toThrow(/malformed assertion/);
+        expect(() => match(assertion, integerATAV(0), undefined, MATCH_FLAG_READ_ASSERTION_CACHE))
+            .toThrow(/malformed assertion/);
+        expect(decoder).toHaveBeenCalledTimes(2);
+    });
+
+    test("the cache key is the element object, not its encoding", () => {
+        const decoder = vi.fn((el: ASN1Element) => el.integer);
+        const match = createEqualityMatcher(decoder, equalsValue);
+        const first = integer(5);
+        const second = integer(5);
+        expect(match(first, integerATAV(5), undefined, MATCH_FLAG_WRITE_ASSERTION_CACHE)).toBe(true);
+        expect(match(second, integerATAV(5), undefined, MATCH_FLAG_READ_ASSERTION_CACHE)).toBe(true);
+        expect(decoder).toHaveBeenCalledTimes(2);
+        expect(match(first, integerATAV(5), undefined, MATCH_FLAG_READ_ASSERTION_CACHE)).toBe(true);
+        expect(decoder).toHaveBeenCalledTimes(2);
+    });
+
+    test("each matcher keeps a separate cache", () => {
+        const decoderA = vi.fn((el: ASN1Element) => el.integer);
+        const decoderB = vi.fn((el: ASN1Element) => el.integer);
+        const matchA = createEqualityMatcher(decoderA, equalsValue);
+        const matchB = createEqualityMatcher(decoderB, equalsValue);
+        const assertion = integer(5);
+        expect(matchA(assertion, integerATAV(5), undefined, MATCH_FLAG_WRITE_ASSERTION_CACHE)).toBe(true);
+        expect(matchB(assertion, integerATAV(5), undefined, MATCH_FLAG_READ_ASSERTION_CACHE)).toBe(true);
+        expect(decoderA).toHaveBeenCalledTimes(1);
+        expect(decoderB).toHaveBeenCalledTimes(1);
+    });
+
+    test("a decoded zero is stored and reused", () => {
+        const decoder = vi.fn((el: ASN1Element) => el.integer);
+        const match = createEqualityMatcher(decoder, equalsValue);
+        const assertion = integer(0);
+        expect(match(assertion, integerATAV(0), undefined, readAndWrite)).toBe(true);
+        expect(match(assertion, integerATAV(1), undefined, readAndWrite)).toBe(false);
+        expect(decoder).toHaveBeenCalledTimes(1);
+    });
+
+    test("a cached undefined assertion is a hit", () => {
+        const decoder = vi.fn((_el: ASN1Element): number | undefined => undefined);
+        const match = createEqualityMatcher<number | undefined>(
+            decoder,
+            () => false,
+        );
+        const assertion = integer(1);
+        expect(match(assertion, integerATAV(1), undefined, readAndWrite)).toBe(false);
+        expect(match(assertion, integerATAV(1), undefined, readAndWrite)).toBe(false);
+        expect(decoder).toHaveBeenCalledTimes(1);
+    });
+
+    test("normalization still runs on a hit, and the cache keeps the decoded value", () => {
+        const decoder = vi.fn((el: ASN1Element) => el.integer);
+        const normalizer = vi.fn((assertion: INTEGER) => -BigInt(assertion));
+        const match = createEqualityMatcher(
+            decoder,
+            equalsValue,
+            undefined,
+            false,
+            normalizer,
+        );
+        const assertion = integer(5);
+        expect(match(assertion, integerATAV(-5), undefined, readAndWrite)).toBe(true);
+        expect(normalizer).toHaveBeenLastCalledWith(5, assertion);
+        expect(match(assertion, integerATAV(-5), undefined, readAndWrite)).toBe(true);
+        expect(decoder).toHaveBeenCalledTimes(1);
+        expect(normalizer).toHaveBeenCalledTimes(2);
+        expect(match(
+            assertion,
+            integerATAV(5),
+            undefined,
+            MATCH_FLAG_READ_ASSERTION_CACHE | MATCH_FLAG_ASSERTION_NORMALIZED,
+        )).toBe(true);
+        expect(match(
+            assertion,
+            integerATAV(-5),
+            undefined,
+            MATCH_FLAG_READ_ASSERTION_CACHE | MATCH_FLAG_ASSERTION_NORMALIZED,
+        )).toBe(false);
+        expect(decoder).toHaveBeenCalledTimes(1);
+        expect(normalizer).toHaveBeenCalledTimes(2);
+    });
+
+    test("a name-matching rejection still stores the decoded assertion", () => {
+        const decoder = vi.fn((el: ASN1Element) => el.integer);
+        const match = createEqualityMatcher(decoder, equalsValue, undefined, true);
+        const assertion = integer(5);
+        expect(match(
+            assertion,
+            integerATAV(5),
+            undefined,
+            MATCH_FLAG_WRITE_ASSERTION_CACHE | MATCH_FLAG_USED_FOR_NAME,
+        )).toBeUndefined();
+        expect(match(assertion, integerATAV(5), undefined, MATCH_FLAG_READ_ASSERTION_CACHE)).toBe(true);
+        expect(decoder).toHaveBeenCalledTimes(1);
+    });
+
+    test("several attribute values share one cached decode", () => {
+        const decoder = vi.fn((el: ASN1Element) => el.integer);
+        const match = createEqualityMatcher(decoder, equalsValue);
+        const assertion = integer(5);
+        const attr = new Attribute(
+            oidC["&id"],
+            [integer(1), integer(5), integer(9)],
+        );
+        const flags = readAndWrite | MATCH_FLAG_CONSTANT_TIME;
+        expect(match(assertion, attr, undefined, flags)).toBe(true);
+        expect(match(assertion, attr, undefined, flags)).toBe(true);
+        expect(decoder).toHaveBeenCalledTimes(1);
+    });
+
+    test("a substrings list is converted on every call", () => {
+        const decoder = vi.fn((el: ASN1Element) => el.integer);
+        const converter = vi.fn((strings: FilterSubstring[]) => strings.length);
+        const match = createEqualityMatcher<number>(
+            decoder,
+            (assertion, value) => assertion === Number(value.integer),
+            converter,
+        );
+        const strings: FilterSubstring[] = [
+            { initial: _encodePrintableString("ab", DER) },
+        ];
+        const atav = integerATAV(1);
+        expect(match(strings, atav, undefined, readAndWrite)).toBe(true);
+        expect(match(strings, atav, undefined, readAndWrite)).toBe(true);
+        expect(converter).toHaveBeenCalledTimes(2);
+        expect(decoder).not.toHaveBeenCalled();
+    });
+
+    test("createOrderingMatcher caches the decoded assertion", () => {
+        const decoder = vi.fn((el: ASN1Element) => el.integer);
+        const match = createOrderingMatcher(decoder, integerOrderingMatchTyped);
+        const assertion = integer(5);
+        expect(match(assertion, integerATAV(1), undefined, readAndWrite)).toBe(true);
+        expect(match(assertion, integerATAV(9), undefined, readAndWrite)).toBe(false);
+        expect(decoder).toHaveBeenCalledTimes(1);
+    });
+
+    test("createSubstringsMatcher caches an encoded assertion", () => {
+        const decoder = vi.fn((el: ASN1Element): AssertedSubstring<string>[] => [
+            { initial: el.printableString },
+        ]);
+        const converter = vi.fn((_strings: FilterSubstring[]): AssertedSubstring<string>[] => {
+            throw new Error("encoded assertions do not use the substrings converter");
+        });
+        const match = createSubstringsMatcher(
+            decoder,
+            getStringSubstringsMatcher((value) => value.printableString),
+            converter,
+        );
+        const assertion = _encodePrintableString("hello", DER);
+        const value = new AttributeTypeAndValue(
+            description["&id"],
+            _encodePrintableString("hello world", DER),
+        );
+        expect(match(assertion, value, undefined, readAndWrite)).toBe(true);
+        expect(match(assertion, value, undefined, readAndWrite)).toBe(true);
+        expect(decoder).toHaveBeenCalledTimes(1);
+        expect(converter).not.toHaveBeenCalled();
     });
 });
