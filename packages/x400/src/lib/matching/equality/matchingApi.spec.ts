@@ -14,17 +14,17 @@ import {
 } from "@wildboar/x500/InformationFramework";
 import {
     BuiltInStandardAttributes,
-    ExtensionAttribute,
     GlobalDomainIdentifier,
     MTSIdentifier,
+    ORAddress,
     ORName,
     UniversalOrBMPString,
     _encode_ContentCorrelator,
     _encode_ContentIdentifier,
     _encode_MTSIdentifier,
+    _encode_ORAddress,
     _encode_ORName,
     _encode_UniversalOrBMPString,
-    teletex_common_name,
 } from "@wildboar/x400/MTSAbstractService";
 import {
     IPMIdentifier,
@@ -45,10 +45,12 @@ import iPMIdentifierMatch from "./iPMIdentifierMatch.js";
 import iPMLocationMatch from "./iPMLocationMatch.js";
 import mSSingleSubstringListMatch from "./mSSingleSubstringListMatch.js";
 import mSSingleSubstringListElementsMatch from "./mSSingleSubstringListElementsMatch.js";
+import mSStringListMatch from "./mSStringListMatch.js";
 import mSStringMatch from "./mSStringMatch.js";
 import mSStringCaseSensitiveMatch from "./msStringCaseSensitiveMatch.js";
 import mSSubstringsMatch from "./mSSubstringsMatch.js";
 import mTSIdentifierMatch from "./mTSIdentifierMatch.js";
+import oRAddressMatch from "./oRAddressMatch.js";
 import oRDescriptorMatch from "./oRDescriptorMatch.js";
 import oRDescriptorSubstringElementsMatch from "./oRDescriptorSubstringElementsMatch.js";
 import oRNameMatch from "./oRNameMatch.js";
@@ -59,6 +61,7 @@ import {
     MATCH_FLAG_ASSERTION_NORMALIZED,
     MATCH_FLAG_ORDERING_OR_EQUAL,
     MATCH_FLAG_USED_FOR_NAME,
+    MATCH_FLAG_VALUE_NORMALIZED,
 } from "@wildboar/x500";
 import oRNameSingleElementMatch from "./oRNameSingleElementMatch.js";
 
@@ -447,5 +450,43 @@ describe("X.400 matchers decode the assertion", () => {
         expect(
             iPMIdentifierMatch(ipmUnnormalized, stored(ipmClean), undefined, MATCH_FLAG_ASSERTION_NORMALIZED),
         ).toBe(false);
+    });
+
+    test("honors MATCH_FLAG_VALUE_NORMALIZED, MATCH_FLAG_ASSERTION_NORMALIZED, and MATCH_FLAG_USED_FOR_NAME (Issue 4.2)", () => {
+        expect(mSStringMatch(ms("HELLO"), stored(ms("hello")), undefined, MATCH_FLAG_VALUE_NORMALIZED)).toBe(false);
+        expect(mSStringMatch(ms("HELLO"), stored(ms("HELLO")), undefined, MATCH_FLAG_VALUE_NORMALIZED)).toBe(true);
+
+        const addrLower = _encode_ORAddress(
+            new ORAddress(new BuiltInStandardAttributes({ iso_3166_alpha2_code: "US" }, undefined, undefined, undefined, undefined, "acme")),
+            DER,
+        );
+        const addrUpper = _encode_ORAddress(
+            new ORAddress(new BuiltInStandardAttributes({ iso_3166_alpha2_code: "US" }, undefined, undefined, undefined, undefined, "ACME")),
+            DER,
+        );
+        expect(oRAddressMatch(addrLower, stored(addrUpper), undefined, MATCH_FLAG_ASSERTION_NORMALIZED)).toBe(false);
+        expect(oRAddressMatch(addrUpper, stored(addrLower), undefined, MATCH_FLAG_VALUE_NORMALIZED)).toBe(false);
+        expect(
+            oRAddressMatch(addrUpper, stored(addrUpper), undefined, MATCH_FLAG_ASSERTION_NORMALIZED | MATCH_FLAG_VALUE_NORMALIZED),
+        ).toBe(true);
+
+        const nameLower = _encode_ORName(
+            new ORName(new BuiltInStandardAttributes({ iso_3166_alpha2_code: "US" }, undefined, undefined, undefined, undefined, "acme")),
+            DER,
+        );
+        const nameUpper = _encode_ORName(
+            new ORName(new BuiltInStandardAttributes({ iso_3166_alpha2_code: "US" }, undefined, undefined, undefined, undefined, "ACME")),
+            DER,
+        );
+        expect(oRNameMatch(nameLower, stored(nameUpper), undefined, MATCH_FLAG_ASSERTION_NORMALIZED)).toBe(false);
+        expect(oRNameMatch(nameUpper, stored(nameLower), undefined, MATCH_FLAG_VALUE_NORMALIZED)).toBe(false);
+        expect(
+            oRNameMatch(nameUpper, stored(nameUpper), undefined, MATCH_FLAG_ASSERTION_NORMALIZED | MATCH_FLAG_VALUE_NORMALIZED),
+        ).toBe(true);
+
+        const encodeList = $._encodeSequenceOf<ASN1Element>(() => (el) => el, DER);
+        const singleList = encodeList([ms("A")], DER);
+        expect(mSStringListMatch(singleList, stored(singleList), undefined, MATCH_FLAG_USED_FOR_NAME)).toBeUndefined();
+        expect(mSSingleSubstringListMatch(singleList, stored(singleList), undefined, MATCH_FLAG_USED_FOR_NAME)).toBeUndefined();
     });
 });

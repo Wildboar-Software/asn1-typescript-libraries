@@ -4,7 +4,11 @@ import {
     createOrderingMatcher,
     type Matcher,
 } from "@wildboar/x500";
-import { decodeMSStringElement, normalizeMSString } from "../equality/orAddressUtilities.js";
+import {
+    decodeMSStringElement,
+    normalizeMSString,
+    prepareMSStringValue,
+} from "../equality/orAddressUtilities.js";
 
 function normalizeCaseIgnoreMSString (assertion: string): string {
     return normalizeMSString(assertion, true);
@@ -13,10 +17,10 @@ function normalizeCaseIgnoreMSString (assertion: string): string {
 export
 const mSStringOrderingMatch: Matcher = createOrderingMatcher(
     decodeMSStringElement,
-    (assertion: string, value: string | ASN1Element): number => {
+    (assertion: string, value: string | ASN1Element, _getEqualityMatcher, flags = 0): number => {
         const v = (typeof value === "string")
             ? value
-            : normalizeCaseIgnoreMSString(decodeMSStringElement(value));
+            : prepareMSStringValue(decodeMSStringElement(value), true, flags);
         return compareCodePoints(assertion, v);
     },
     normalizeCaseIgnoreMSString,

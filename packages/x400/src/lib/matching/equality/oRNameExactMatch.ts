@@ -47,7 +47,7 @@ const oRNameExactMatch: Matcher = createEqualityMatcher(
         if (a.isEmptyOrAddress()) {
             return true;
         }
-        return orAddressesMatch(a, v);
+        return orAddressesMatch(a, v, flags);
     },
 );
 

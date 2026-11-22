@@ -10,6 +10,7 @@ import { createEqualityMatcher, type Matcher } from "@wildboar/x500";
 import {
     decodeMSStringElement,
     normalizeMSString,
+    prepareMSStringValue,
 } from "./orAddressUtilities.js";
 
 const decodeMSStringSequence = $._decodeSequenceOf<string>(() => decodeMSStringElement);
@@ -46,7 +47,7 @@ function decodeMSStringList (el: ASN1Element): string[] {
 export
 const mSSingleSubstringListElementsMatch: Matcher = createEqualityMatcher(
     decodeMSStringList,
-    (assertion, value: ASN1Element): boolean => {
+    (assertion, value: ASN1Element, _getEqualityMatcher, flags = 0): boolean => {
         if (
             (value.tagClass !== ASN1TagClass.universal)
             || (value.tagNumber !== ASN1UniversalType.sequence)
@@ -63,7 +64,7 @@ const mSSingleSubstringListElementsMatch: Matcher = createEqualityMatcher(
                 // This is required by type constraints of the MSString type.
                 throw new ASN1CharactersError("mSSingleSubstringListElementsMatch: empty MSString", vElements[i]);
             }
-            const vi = normalizeCaseIgnoreElement(raw);
+            const vi = prepareMSStringValue(raw, true, flags);
             if (vi.indexOf(assertion[i]) < 0) {
                 return false;
             }

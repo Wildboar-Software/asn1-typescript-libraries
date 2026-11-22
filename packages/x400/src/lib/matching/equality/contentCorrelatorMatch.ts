@@ -4,7 +4,7 @@ import {
     type ContentCorrelator,
     _decode_ContentCorrelator,
 } from "@wildboar/x400/MTSAbstractService";
-import { normalizeMSString } from "./orAddressUtilities.js";
+import { normalizeMSString, prepareMSStringValue } from "./orAddressUtilities.js";
 
 function normalizeContentCorrelator (assertion: ContentCorrelator): ContentCorrelator {
     if ("ia5text" in assertion) {
@@ -16,13 +16,13 @@ function normalizeContentCorrelator (assertion: ContentCorrelator): ContentCorre
 export
 const contentCorrelatorMatch: Matcher = createEqualityMatcher(
     _decode_ContentCorrelator,
-    (assertion, value): boolean => {
+    (assertion, value, _getEqualityMatcher, flags = 0): boolean => {
         const a = assertion;
         const v = _decode_ContentCorrelator(value);
         if (("octets" in a) && ("octets" in v)) {
             return !Buffer.compare(a.octets, v.octets);
         } else if (("ia5text" in a) && ("ia5text" in v)) {
-            return (a.ia5text === normalizeMSString(v.ia5text, false)); // case-sensitive.
+            return (a.ia5text === prepareMSStringValue(v.ia5text, false, flags)); // case-sensitive.
         } else {
             return false;
         }

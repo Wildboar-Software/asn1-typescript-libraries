@@ -10,12 +10,12 @@ import { findRecipientElement } from "./recipientSpecifierMatch.js";
 export
 const recipientSpecifierSingleElementMatch: Matcher = createEqualityMatcher(
     decodeORNameSingleElementAssertion,
-    (assertion: string, value: ASN1Element): boolean | undefined => {
+    (assertion: string, value: ASN1Element, getEqualityMatcher, flags = 0): boolean | undefined => {
         const recipient = findRecipientElement(value);
         if (!recipient) {
             return undefined;
         }
-        return oRDescriptorSingleElementMatchTyped(assertion, recipient);
+        return oRDescriptorSingleElementMatchTyped(assertion, recipient, getEqualityMatcher, flags);
     },
     undefined,
     true,

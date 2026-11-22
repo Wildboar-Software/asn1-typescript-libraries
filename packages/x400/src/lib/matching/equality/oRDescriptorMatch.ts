@@ -1,6 +1,8 @@
 import type { ASN1Element, OBJECT_IDENTIFIER } from "@wildboar/asn1";
 import {
     createEqualityMatcher,
+    MATCH_FLAG_ASSERTION_NORMALIZED,
+    MATCH_FLAG_VALUE_NORMALIZED,
     type Matcher,
 } from "@wildboar/x500";
 import {
@@ -83,8 +85,10 @@ function matchORDescriptors (
     }
     // (b) `formal-name` absent in at least one value, `free-form-name` in both.
     if ((a.free_form_name !== undefined) && (v.free_form_name !== undefined)) {
-        const aname = normalizeMSString(teletexBytesToString(a.free_form_name), true);
-        const vname = normalizeMSString(teletexBytesToString(v.free_form_name), true);
+        const aRaw = teletexBytesToString(a.free_form_name);
+        const vRaw = teletexBytesToString(v.free_form_name);
+        const aname = (flags & MATCH_FLAG_ASSERTION_NORMALIZED) ? aRaw : normalizeMSString(aRaw, true);
+        const vname = (flags & MATCH_FLAG_VALUE_NORMALIZED) ? vRaw : normalizeMSString(vRaw, true);
         const freeFormMatches = substringMode
             ? (aname.length > 0 && vname.indexOf(aname) >= 0)
             : (aname === vname);
@@ -94,8 +98,12 @@ function matchORDescriptors (
     }
     // (c) `formal-name` absent in at least one value, `telephone-number` in both.
     if ((a.telephone_number !== undefined) && (v.telephone_number !== undefined)) {
-        const aname = normalizeMSString(a.telephone_number, true);
-        const vname = normalizeMSString(v.telephone_number, true);
+        const aname = (flags & MATCH_FLAG_ASSERTION_NORMALIZED)
+            ? a.telephone_number
+            : normalizeMSString(a.telephone_number, true);
+        const vname = (flags & MATCH_FLAG_VALUE_NORMALIZED)
+            ? v.telephone_number
+            : normalizeMSString(v.telephone_number, true);
         const phoneMatches = substringMode
             ? (aname.length > 0 && vname.indexOf(aname) >= 0)
             : (aname === vname);

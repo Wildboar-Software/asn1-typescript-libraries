@@ -3,14 +3,23 @@ import {
     type ASN1Element,
     ASN1TagClass,
     ASN1UniversalType,
+    type OBJECT_IDENTIFIER,
 } from "@wildboar/asn1";
 import { _decode_UniversalOrBMPString } from "@wildboar/or-address";
-import { createEqualityMatcher, type Matcher } from "@wildboar/x500";
-import { _decode_ORName, type ORName } from "@wildboar/x400/MTSAbstractService";
+import {
+    createEqualityMatcher,
+    MATCH_FLAG_VALUE_NORMALIZED,
+    type Matcher,
+} from "@wildboar/x500";
+import {
+    _decode_ORName,
+    type ORName,
+} from "@wildboar/x400/MTSAbstractService";
 import {
     decodeMSStringElement,
     normalizeMSString,
     orAddressToInfo,
+    prepareMSStringValue,
     teletexBytesToString,
 } from "./orAddressUtilities.js";
 
@@ -86,10 +95,11 @@ function readSingleDNString (el: ASN1Element): string | undefined {
 function atavMatchesNormalizedAssertion (
     el: ASN1Element,
     assertion: string,
+    flags: number,
 ): boolean {
     const single = readSingleDNString(el);
     if (single !== undefined) {
-        return normalizeMSString(single, true) === assertion;
+        return prepareMSStringValue(single, true, flags) === assertion;
     }
     // Support string-list naming attributes such as `PostalAddress` (`SEQUENCE OF DirectoryString`).
     if (
@@ -104,7 +114,7 @@ function atavMatchesNormalizedAssertion (
                 if (itemStr === undefined) {
                     return false;
                 }
-                if (normalizeMSString(itemStr, true) === assertion) {
+                if (prepareMSStringValue(itemStr, true, flags) === assertion) {
                     return true;
                 }
             }
@@ -133,12 +143,14 @@ export
 function matchORNameSingleElement (
     assertion: string,
     v: ORName,
+    flags: number = 0,
 ): boolean | undefined {
     if (v.isEmpty()) {
         return undefined;
     }
+    const normVal = !(flags & MATCH_FLAG_VALUE_NORMALIZED);
     if (!v.isEmptyOrAddress()) {
-        const vInfo = orAddressToInfo(v);
+        const vInfo = orAddressToInfo(v, normVal);
         if (!vInfo) {
             return undefined;
         }
@@ -150,12 +162,12 @@ function matchORNameSingleElement (
             ...searchableInfo
         } = vInfo;
         for (const strInValue of extractStrings(searchableInfo)) {
-            if (normalizeORNameSingleElementAssertion(strInValue) === assertion) {
+            if ((normVal ? normalizeORNameSingleElementAssertion(strInValue) : strInValue) === assertion) {
                 return true;
             }
         }
         for (const strInValue of extractStrings(v.built_in_standard_attributes.toJSON())) {
-            if (normalizeORNameSingleElementAssertion(strInValue) === assertion) {
+            if ((normVal ? normalizeORNameSingleElementAssertion(strInValue) : strInValue) === assertion) {
                 return true;
             }
         }
@@ -163,7 +175,7 @@ function matchORNameSingleElement (
     if (v.directory_name) {
         for (const rdn of v.directory_name.rdnSequence) {
             for (const atav of rdn) {
-                if (atavMatchesNormalizedAssertion(atav.value, assertion)) {
+                if (atavMatchesNormalizedAssertion(atav.value, assertion, flags)) {
                     return true;
                 }
             }
@@ -176,9 +188,11 @@ export
 function oRNameSingleElementMatchTyped (
     assertion: string,
     value: ASN1Element,
+    _getEqualityMatcher?: (attributeType: OBJECT_IDENTIFIER) => Matcher | undefined,
+    flags: number = 0,
 ): boolean | undefined {
     const v = _decode_ORName(value);
-    return matchORNameSingleElement(assertion, v);
+    return matchORNameSingleElement(assertion, v, flags);
 }
 
 export

@@ -56,12 +56,12 @@ function matchORNames (
             return false;
         }
         if (flags & MATCH_FLAG_SUBSTRING_MATCH) {
-            return oRAddressSubstringElementsMatchTyped(a, v);
+            return oRAddressSubstringElementsMatchTyped(a, v, innerFlags);
         }
         if (flags & MATCH_FLAG_ELEMENTS_MATCH) {
-            return oRAddressElementsMatchTyped(a, v);
+            return oRAddressElementsMatchTyped(a, v, innerFlags);
         }
-        return orAddressesMatch(a, v);
+        return orAddressesMatch(a, v, innerFlags);
     }
     // b) If the presented OR-name contains only a directory-name, the rule matches if the presented value matches a
     // directory-name in the stored value according to the Distinguished Name Match rule.
@@ -98,12 +98,12 @@ function matchORNames (
         }
         if (!v.isEmptyOrAddress()) {
             if (flags & MATCH_FLAG_SUBSTRING_MATCH) {
-                return oRAddressSubstringElementsMatchTyped(a, v);
+                return oRAddressSubstringElementsMatchTyped(a, v, innerFlags);
             }
             if (flags & MATCH_FLAG_ELEMENTS_MATCH) {
-                return oRAddressElementsMatchTyped(a, v);
+                return oRAddressElementsMatchTyped(a, v, innerFlags);
             }
-            return orAddressesMatch(a, v);
+            return orAddressesMatch(a, v, innerFlags);
         }
     }
     return false;

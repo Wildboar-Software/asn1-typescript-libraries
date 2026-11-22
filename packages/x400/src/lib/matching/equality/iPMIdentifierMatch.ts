@@ -3,7 +3,7 @@ import { createEqualityMatcher, type Matcher } from "@wildboar/x500";
 import { _decode_IPMIdentifier } from "@wildboar/x400/IPMSInformationObjects";
 import { strict as assert } from "node:assert";
 import { matchORNames, validateNonEmptyORNameAssertion } from "./oRNameMatch.js";
-import { normalizeMSString } from "./orAddressUtilities.js";
+import { normalizeMSString, prepareMSStringValue } from "./orAddressUtilities.js";
 import { IPMIdentifier } from "@wildboar/x400/IPMSInformationObjects";
 
 
@@ -31,14 +31,14 @@ const iPMIdentifierMatch: Matcher = createEqualityMatcher(
         assertion: IPMIdentifier,
         value,
         getEqualityMatcher?: (attributeType: OBJECT_IDENTIFIER) => Matcher | undefined,
-        flags?: number,
+        flags: number = 0,
     ): boolean | undefined => {
         const a = assertion;
         const v = _decode_IPMIdentifier(value);
         if (!!a.user !== !!v.user) {
             return false;
         }
-        const vuri = normalizeMSString(v.user_relative_identifier, true);
+        const vuri = prepareMSStringValue(v.user_relative_identifier, true, flags);
         if (a.user_relative_identifier !== vuri) {
             return false;
         }

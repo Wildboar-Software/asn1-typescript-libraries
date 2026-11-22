@@ -59,6 +59,10 @@ import {
 } from "@wildboar/or-address";
 import { PresentationAddress } from "@wildboar/x500/SelectedAttributeTypes";
 import { presentationAddressMatchTyped } from "@wildboar/x500/matching/equality";
+import {
+    MATCH_FLAG_ASSERTION_NORMALIZED,
+    MATCH_FLAG_VALUE_NORMALIZED,
+} from "@wildboar/x500";
 import type { MSString } from "@wildboar/x400/MSMatchingRules";
 import { _decode_ExtendedNetworkAddress } from "@wildboar/x400/MTSAbstractService";
 
@@ -101,6 +105,17 @@ function normalizeMSString (raw: string, caseFold: boolean = true): string {
     return caseFold
         ? spaceNormalized.toUpperCase().normalize("NFC")
         : spaceNormalized;
+}
+
+export
+function prepareMSStringValue (
+    raw: string,
+    caseFold: boolean = true,
+    flags: number = 0,
+): string {
+    return (flags & MATCH_FLAG_VALUE_NORMALIZED)
+        ? raw
+        : normalizeMSString(raw, caseFold);
 }
 
 function removeAsciiSpaces (s: string): string {
@@ -219,36 +234,38 @@ interface ORAddressInfo {
     terminalType?: INTEGER;
 }
 
-function personalNameFromJSON (json: PersonalNameJSON): PersonalNameInfo | null {
+function personalNameFromJSON (json: PersonalNameJSON, normalize: boolean): PersonalNameInfo | null {
+    const norm = (s: string): string => (normalize ? normalizeMSString(s) : s);
     if (json.surname.length === 0) {
         return null;
     }
     const info: PersonalNameInfo = {
-        surname: normalizeMSString(json.surname),
+        surname: norm(json.surname),
     };
     if (json["given-name"] !== undefined) {
         if (json["given-name"].length === 0) {
             return null;
         }
-        info.givenName = normalizeMSString(json["given-name"]);
+        info.givenName = norm(json["given-name"]);
     }
     if (json.initials !== undefined) {
         if (json.initials.length === 0) {
             return null;
         }
-        info.initials = normalizeMSString(json.initials);
+        info.initials = norm(json.initials);
     }
     if (json["generation-qualifier"] !== undefined) {
         if (json["generation-qualifier"].length === 0) {
             return null;
         }
-        info.generationQualifier = normalizeMSString(json["generation-qualifier"]);
+        info.generationQualifier = norm(json["generation-qualifier"]);
     }
     return info;
 }
 
 function buildDomainDefinedMap (
     ddas: readonly DomainDefinedAttributeJSON[],
+    normalize: boolean,
 ): Map<string, string> | null {
     if (ddas.length === 0) {
         return null;
@@ -258,10 +275,13 @@ function buildDomainDefinedMap (
         if (type.length === 0 || value.length === 0) {
             return null;
         }
-        const key = normalizeMSString(type);
-        const val = normalizeMSString(value);
+        const key = normalize ? normalizeMSString(type) : type;
+        const val = normalize ? normalizeMSString(value) : value;
         const existing = dict.get(key);
-        if (existing !== undefined && existing !== val) {
+        if (
+            existing !== undefined
+            && (normalizeMSString(existing) !== val)
+        ) {
             return null; // Conflicting duplicate type within same repertoire list
         }
         dict.set(key, val);
@@ -282,24 +302,30 @@ type PDSMultiField =
     | "uniquePostalName"
     | "localPostalAttributes";
 
+type ExtensionHandler = (
+    info: ORAddressInfo,
+    value: ASN1Element,
+    normalize: boolean,
+) => ORAddressInfo | null;
+
 function makePDSHandler (
     field: PDSMultiField,
     decode: (el: ASN1Element) => { toJSON(): { printable_string?: string; teletex_string?: string } },
-) {
-    return (info: ORAddressInfo, value: ASN1Element): ORAddressInfo | null => {
+): ExtensionHandler {
+    return (info: ORAddressInfo, value: ASN1Element, normalize: boolean): ORAddressInfo | null => {
         const { printable_string, teletex_string } = decode(value).toJSON();
         const out: string[] = [];
         if (printable_string !== undefined) {
             if (printable_string.length === 0) {
                 return null;
             }
-            out.push(normalizeMSString(printable_string));
+            out.push(normalize ? normalizeMSString(printable_string) : printable_string);
         }
         if (teletex_string !== undefined) {
             if (teletex_string.length === 0) {
                 return null;
             }
-            out.push(normalizeMSString(teletex_string));
+            out.push(normalize ? normalizeMSString(teletex_string) : teletex_string);
         }
         if (out.length === 0) {
             return null;
@@ -312,64 +338,66 @@ function makePDSHandler (
 function makeUniversalPDSHandler (
     field: PDSMultiField,
     decode: (el: ASN1Element) => UniversalOrBMPString,
-) {
-    return (info: ORAddressInfo, value: ASN1Element): ORAddressInfo | null => {
+): ExtensionHandler {
+    return (info: ORAddressInfo, value: ASN1Element, normalize: boolean): ORAddressInfo | null => {
         const raw = decode(value).toString();
         if (raw.length === 0) {
             return null;
         }
-        info[field] = addStringCandidates(info[field], [ normalizeMSString(raw) ]);
+        info[field] = addStringCandidates(info[field], [ normalize ? normalizeMSString(raw) : raw ]);
         return info;
     };
 }
 
-function process_common_name_ext (info: ORAddressInfo, value: ASN1Element): ORAddressInfo | null {
+function process_common_name_ext (info: ORAddressInfo, value: ASN1Element, normalize: boolean): ORAddressInfo | null {
     const raw = common_name.decoderFor["&Type"]!(value);
     if (raw.length === 0) {
         return null;
     }
-    info.commonName = addStringCandidates(info.commonName, [ normalizeMSString(raw) ]);
+    info.commonName = addStringCandidates(info.commonName, [ normalize ? normalizeMSString(raw) : raw ]);
     return info;
 }
 
-function process_teletex_common_name_ext (info: ORAddressInfo, value: ASN1Element): ORAddressInfo | null {
+function process_teletex_common_name_ext (info: ORAddressInfo, value: ASN1Element, normalize: boolean): ORAddressInfo | null {
     const raw = teletex_common_name.decoderFor["&Type"]!(value);
     if (raw.length === 0) {
         return null;
     }
-    info.commonName = addStringCandidates(info.commonName, [ normalizeMSString(teletexToString(raw)) ]);
+    const str = teletexBytesToString(raw);
+    info.commonName = addStringCandidates(info.commonName, [ normalize ? normalizeMSString(str) : str ]);
     return info;
 }
 
-function process_universal_common_name_ext (info: ORAddressInfo, value: ASN1Element): ORAddressInfo | null {
+function process_universal_common_name_ext (info: ORAddressInfo, value: ASN1Element, normalize: boolean): ORAddressInfo | null {
     const raw = universal_common_name.decoderFor["&Type"]!(value).toString();
     if (raw.length === 0) {
         return null;
     }
-    info.commonName = addStringCandidates(info.commonName, [ normalizeMSString(raw) ]);
+    info.commonName = addStringCandidates(info.commonName, [ normalize ? normalizeMSString(raw) : raw ]);
     return info;
 }
 
-function process_teletex_organization_name_ext (info: ORAddressInfo, value: ASN1Element): ORAddressInfo | null {
+function process_teletex_organization_name_ext (info: ORAddressInfo, value: ASN1Element, normalize: boolean): ORAddressInfo | null {
     const raw = teletex_organization_name.decoderFor["&Type"]!(value);
     if (raw.length === 0) {
         return null;
     }
-    info.organizationName = addStringCandidates(info.organizationName, [ normalizeMSString(teletexToString(raw)) ]);
+    const str = teletexBytesToString(raw);
+    info.organizationName = addStringCandidates(info.organizationName, [ normalize ? normalizeMSString(str) : str ]);
     return info;
 }
 
-function process_universal_organization_name_ext (info: ORAddressInfo, value: ASN1Element): ORAddressInfo | null {
+function process_universal_organization_name_ext (info: ORAddressInfo, value: ASN1Element, normalize: boolean): ORAddressInfo | null {
     const raw = universal_organization_name.decoderFor["&Type"]!(value).toString();
     if (raw.length === 0) {
         return null;
     }
-    info.organizationName = addStringCandidates(info.organizationName, [ normalizeMSString(raw) ]);
+    info.organizationName = addStringCandidates(info.organizationName, [ normalize ? normalizeMSString(raw) : raw ]);
     return info;
 }
 
-function process_teletex_personal_name_ext (info: ORAddressInfo, value: ASN1Element): ORAddressInfo | null {
-    const parsed = personalNameFromJSON(teletex_personal_name.decoderFor["&Type"]!(value).toJSON());
+function process_teletex_personal_name_ext (info: ORAddressInfo, value: ASN1Element, normalize: boolean): ORAddressInfo | null {
+    const parsed = personalNameFromJSON(teletex_personal_name.decoderFor["&Type"]!(value).toJSON(), normalize);
     if (!parsed) {
         return null;
     }
@@ -377,8 +405,8 @@ function process_teletex_personal_name_ext (info: ORAddressInfo, value: ASN1Elem
     return info;
 }
 
-function process_universal_personal_name_ext (info: ORAddressInfo, value: ASN1Element): ORAddressInfo | null {
-    const parsed = personalNameFromJSON(universal_personal_name.decoderFor["&Type"]!(value).toJSON());
+function process_universal_personal_name_ext (info: ORAddressInfo, value: ASN1Element, normalize: boolean): ORAddressInfo | null {
+    const parsed = personalNameFromJSON(universal_personal_name.decoderFor["&Type"]!(value).toJSON(), normalize);
     if (!parsed) {
         return null;
     }
@@ -386,42 +414,43 @@ function process_universal_personal_name_ext (info: ORAddressInfo, value: ASN1El
     return info;
 }
 
-function process_teletex_organizational_unit_names_ext (info: ORAddressInfo, value: ASN1Element): ORAddressInfo | null {
+function process_teletex_organizational_unit_names_ext (info: ORAddressInfo, value: ASN1Element, normalize: boolean): ORAddressInfo | null {
     const ouns = teletex_organizational_unit_names.decoderFor["&Type"]!(value);
     if (ouns.length === 0) {
         return null;
     }
-    const normalized: string[] = [];
+    const out: string[] = [];
     for (const ou of ouns) {
         if (ou.length === 0) {
             return null;
         }
-        normalized.push(normalizeMSString(teletexToString(ou)));
+        const str = teletexBytesToString(ou);
+        out.push(normalize ? normalizeMSString(str) : str);
     }
-    info.organizationalUnitNames = appendCandidates(info.organizationalUnitNames, [ normalized ]);
+    info.organizationalUnitNames = appendCandidates(info.organizationalUnitNames, [ out ]);
     return info;
 }
 
-function process_universal_organizational_unit_names_ext (info: ORAddressInfo, value: ASN1Element): ORAddressInfo | null {
+function process_universal_organizational_unit_names_ext (info: ORAddressInfo, value: ASN1Element, normalize: boolean): ORAddressInfo | null {
     const ouns = universal_organizational_unit_names.decoderFor["&Type"]!(value);
     if (ouns.length === 0) {
         return null;
     }
-    const normalized: string[] = [];
+    const out: string[] = [];
     for (const ou of ouns) {
         const raw = ou.toString();
         if (raw.length === 0) {
             return null;
         }
-        normalized.push(normalizeMSString(raw));
+        out.push(normalize ? normalizeMSString(raw) : raw);
     }
-    info.organizationalUnitNames = appendCandidates(info.organizationalUnitNames, [ normalized ]);
+    info.organizationalUnitNames = appendCandidates(info.organizationalUnitNames, [ out ]);
     return info;
 }
 
-function process_teletex_domain_defined_attributes_ext (info: ORAddressInfo, value: ASN1Element): ORAddressInfo | null {
+function process_teletex_domain_defined_attributes_ext (info: ORAddressInfo, value: ASN1Element, normalize: boolean): ORAddressInfo | null {
     const attrs = teletex_domain_defined_attributes.decoderFor["&Type"]!(value);
-    const dict = buildDomainDefinedMap(attrs.map((dda) => dda.toJSON()));
+    const dict = buildDomainDefinedMap(attrs.map((dda) => dda.toJSON()), normalize);
     if (!dict) {
         return null;
     }
@@ -429,9 +458,9 @@ function process_teletex_domain_defined_attributes_ext (info: ORAddressInfo, val
     return info;
 }
 
-function process_universal_domain_defined_attributes_ext (info: ORAddressInfo, value: ASN1Element): ORAddressInfo | null {
+function process_universal_domain_defined_attributes_ext (info: ORAddressInfo, value: ASN1Element, normalize: boolean): ORAddressInfo | null {
     const attrs = universal_domain_defined_attributes.decoderFor["&Type"]!(value);
-    const dict = buildDomainDefinedMap(attrs.map((dda) => dda.toJSON()));
+    const dict = buildDomainDefinedMap(attrs.map((dda) => dda.toJSON()), normalize);
     if (!dict) {
         return null;
     }
@@ -439,17 +468,25 @@ function process_universal_domain_defined_attributes_ext (info: ORAddressInfo, v
     return info;
 }
 
-function process_pds_name_ext (info: ORAddressInfo, value: ASN1Element): ORAddressInfo | null {
+function process_pds_name_ext (info: ORAddressInfo, value: ASN1Element, normalize: boolean): ORAddressInfo | null {
     const raw = pds_name.decoderFor["&Type"]!(value);
     if (raw.length === 0) {
         return null;
     }
-    info.pdsName = normalizeMSString(raw);
+    info.pdsName = normalize ? normalizeMSString(raw) : raw;
     return info;
 }
 
-function process_physical_delivery_country_name_ext (info: ORAddressInfo, value: ASN1Element): ORAddressInfo | null {
+function process_physical_delivery_country_name_ext (info: ORAddressInfo, value: ASN1Element, normalize: boolean): ORAddressInfo | null {
     const pdcn = physical_delivery_country_name.decoderFor["&Type"]!(value);
+    if (!normalize) {
+        const raw = ("x121_dcc_code" in pdcn) ? pdcn.x121_dcc_code : pdcn.iso_3166_alpha2_code;
+        if (raw.trim().length === 0) {
+            return null;
+        }
+        info.physicalDeliveryCountryName = raw;
+        return info;
+    }
     const normalized = normalizeCountryChoice(pdcn);
     if (!normalized) {
         return null;
@@ -458,17 +495,17 @@ function process_physical_delivery_country_name_ext (info: ORAddressInfo, value:
     return info;
 }
 
-function process_postal_code_ext (info: ORAddressInfo, value: ASN1Element): ORAddressInfo | null {
+function process_postal_code_ext (info: ORAddressInfo, value: ASN1Element, normalize: boolean): ORAddressInfo | null {
     const pc = postal_code.decoderFor["&Type"]!(value);
     const raw = ("numeric_code" in pc) ? pc.numeric_code : pc.printable_code;
     if (raw.length === 0) {
         return null;
     }
-    info.postalCode = normalizeNumericOrPrintable(raw);
+    info.postalCode = normalize ? normalizeNumericOrPrintable(raw) : raw;
     return info;
 }
 
-function process_unformatted_postal_address_ext (info: ORAddressInfo, value: ASN1Element): ORAddressInfo | null {
+function process_unformatted_postal_address_ext (info: ORAddressInfo, value: ASN1Element, normalize: boolean): ORAddressInfo | null {
     const json = unformatted_postal_address.decoderFor["&Type"]!(value).toJSON();
     const candidates: string[] = [];
     const lines = json["printable-address"];
@@ -476,14 +513,15 @@ function process_unformatted_postal_address_ext (info: ORAddressInfo, value: ASN
         if (lines.length === 0 || lines.some((line) => line.length === 0)) {
             return null;
         }
-        candidates.push(normalizeMSString(lines.join("\r\n")));
+        const joined = lines.join("\r\n");
+        candidates.push(normalize ? normalizeMSString(joined) : joined);
     }
     const ttex = json["teletex-string"];
     if (ttex !== undefined) {
         if (ttex.length === 0) {
             return null;
         }
-        candidates.push(normalizeMSString(ttex));
+        candidates.push(normalize ? normalizeMSString(ttex) : ttex);
     }
     if (candidates.length === 0) {
         return null;
@@ -492,16 +530,16 @@ function process_unformatted_postal_address_ext (info: ORAddressInfo, value: ASN
     return info;
 }
 
-function process_universal_unformatted_postal_address_ext (info: ORAddressInfo, value: ASN1Element): ORAddressInfo | null {
+function process_universal_unformatted_postal_address_ext (info: ORAddressInfo, value: ASN1Element, normalize: boolean): ORAddressInfo | null {
     const raw = universal_unformatted_postal_address.decoderFor["&Type"]!(value).toString();
     if (raw.length === 0) {
         return null;
     }
-    info.unformattedPostalAddress = addStringCandidates(info.unformattedPostalAddress, [ normalizeMSString(raw) ]);
+    info.unformattedPostalAddress = addStringCandidates(info.unformattedPostalAddress, [ normalize ? normalizeMSString(raw) : raw ]);
     return info;
 }
 
-function process_extended_network_address_ext (info: ORAddressInfo, value: ASN1Element): ORAddressInfo | null {
+function process_extended_network_address_ext (info: ORAddressInfo, value: ASN1Element, normalize: boolean): ORAddressInfo | null {
     // Use MTSAbstractService's ExtendedNetworkAddress decoder so `psap_address`
     // is an instance of `@wildboar/x500`'s `PresentationAddress`.
     const param = _decode_ExtendedNetworkAddress(value);
@@ -509,13 +547,17 @@ function process_extended_network_address_ext (info: ORAddressInfo, value: ASN1E
         if (param.e163_4_address.number_.length === 0) {
             return null;
         }
-        const numberPart = normalizeNumericOnly(param.e163_4_address.number_);
+        const numberPart = normalize
+            ? normalizeNumericOnly(param.e163_4_address.number_)
+            : param.e163_4_address.number_;
         let subaddressPart: string | undefined;
         if (param.e163_4_address.sub_address !== undefined) {
             if (param.e163_4_address.sub_address.length === 0) {
                 return null;
             }
-            subaddressPart = normalizeNumericOnly(param.e163_4_address.sub_address);
+            subaddressPart = normalize
+                ? normalizeNumericOnly(param.e163_4_address.sub_address)
+                : param.e163_4_address.sub_address;
         }
         info.extendedNetworkAddress = [ numberPart, subaddressPart ];
     } else if ("psap_address" in param) {
@@ -531,7 +573,7 @@ function process_terminal_type_ext (info: ORAddressInfo, value: ASN1Element): OR
     return info;
 }
 
-const handlers: Map<number, (info: ORAddressInfo, value: ASN1Element) => (ORAddressInfo | null)> = new Map([
+const handlers: Map<number, ExtensionHandler> = new Map([
     [ Number(common_name["&id"]!), process_common_name_ext ],
     [ Number(teletex_common_name["&id"]!), process_teletex_common_name_ext ],
     [ Number(universal_common_name["&id"]!), process_universal_common_name_ext ],
@@ -613,57 +655,67 @@ function compareBuiltInStandardAttributes (
 }
 
 export
-function orAddressToInfo (addr: ORAddress): ORAddressInfo | null {
+function orAddressToInfo (addr: ORAddress, normalize: boolean = true): ORAddressInfo | null {
     let ret: ORAddressInfo = {};
     const bisa = addr.built_in_standard_attributes;
     if (bisa.country_name) {
-        const c = bisa.getISO3166Country();
-        const country = c !== undefined
-            ? normalizeMSString(c)
-            : normalizeCountryChoice(bisa.country_name);
-        if (!country) {
-            return null;
+        if (!normalize) {
+            const raw = ("x121_dcc_code" in bisa.country_name)
+                ? bisa.country_name.x121_dcc_code
+                : bisa.country_name.iso_3166_alpha2_code;
+            if (raw.trim().length === 0) {
+                return null;
+            }
+            ret.countryName = raw;
+        } else {
+            const c = bisa.getISO3166Country();
+            const country = c !== undefined
+                ? normalizeMSString(c)
+                : normalizeCountryChoice(bisa.country_name);
+            if (!country) {
+                return null;
+            }
+            ret.countryName = country;
         }
-        ret.countryName = country;
     }
     const admd = bisa.getADMDString();
     if (admd !== undefined) {
-        ret.administrationDomainName = normalizeNumericOrPrintable(admd);
+        ret.administrationDomainName = normalize ? normalizeNumericOrPrintable(admd) : admd;
     }
     if (bisa.network_address !== undefined) {
         if (bisa.network_address.length === 0) {
             return null;
         }
-        ret.networkAddress = normalizeNumericOnly(bisa.network_address);
+        ret.networkAddress = normalize ? normalizeNumericOnly(bisa.network_address) : bisa.network_address;
     }
     if (bisa.terminal_identifier !== undefined) {
         if (bisa.terminal_identifier.length === 0) {
             return null;
         }
-        ret.terminalIdentifier = normalizeMSString(bisa.terminal_identifier);
+        ret.terminalIdentifier = normalize ? normalizeMSString(bisa.terminal_identifier) : bisa.terminal_identifier;
     }
     const prmd = bisa.getPRMDString();
     if (prmd !== undefined) {
         if (prmd.length === 0) {
             return null;
         }
-        ret.privateDomainName = normalizeNumericOrPrintable(prmd);
+        ret.privateDomainName = normalize ? normalizeNumericOrPrintable(prmd) : prmd;
     }
     if (bisa.organization_name !== undefined) {
         if (bisa.organization_name.length === 0) {
             return null;
         }
-        ret.organizationName = new Set([ normalizeMSString(bisa.organization_name) ]);
+        ret.organizationName = new Set([ normalize ? normalizeMSString(bisa.organization_name) : bisa.organization_name ]);
     }
     if (bisa.numeric_user_identifier !== undefined) {
         if (bisa.numeric_user_identifier.length === 0) {
             return null;
         }
-        ret.numericUserIdentifier = normalizeNumericOnly(bisa.numeric_user_identifier);
+        ret.numericUserIdentifier = normalize ? normalizeNumericOnly(bisa.numeric_user_identifier) : bisa.numeric_user_identifier;
     }
     if (bisa.personal_name) {
         const json: PersonalNameJSON = bisa.personal_name.toJSON();
-        const parsed = personalNameFromJSON(json);
+        const parsed = personalNameFromJSON(json, normalize);
         if (!parsed) {
             return null;
         }
@@ -673,19 +725,20 @@ function orAddressToInfo (addr: ORAddress): ORAddressInfo | null {
         if (bisa.organizational_unit_names.length === 0) {
             return null;
         }
-        const normalizedOUs: string[] = [];
+        const outOUs: string[] = [];
         for (const ou of bisa.organizational_unit_names) {
             if (ou.length === 0) {
                 return null;
             }
-            normalizedOUs.push(normalizeMSString(ou));
+            outOUs.push(normalize ? normalizeMSString(ou) : ou);
         }
-        ret.organizationalUnitNames = [ normalizedOUs ];
+        ret.organizationalUnitNames = [ outOUs ];
     }
 
     if (addr.built_in_domain_defined_attributes !== undefined) {
         const dict = buildDomainDefinedMap(
             addr.built_in_domain_defined_attributes.map((dda) => dda.toJSON()),
+            normalize,
         );
         if (!dict) {
             return null;
@@ -704,7 +757,7 @@ function orAddressToInfo (addr: ORAddress): ORAddressInfo | null {
         if (!handler) {
             return null; // Extension not understood.
         }
-        const handlerResult = handler(ret, ext.extension_attribute_value);
+        const handlerResult = handler(ret, ext.extension_attribute_value, normalize);
         if (!handlerResult) {
             return null;
         }
@@ -712,6 +765,108 @@ function orAddressToInfo (addr: ORAddress): ORAddressInfo | null {
     }
 
     return ret;
+}
+
+function normalizeCountryString (raw: string): string | null {
+    return DIGITS_AND_SPACES_ONLY.test(raw)
+        ? normalizeCountryChoice({ x121_dcc_code: raw })
+        : normalizeCountryChoice({ iso_3166_alpha2_code: raw });
+}
+
+export
+function normalizeORAddressInfo (raw: ORAddressInfo): ORAddressInfo | null {
+    const out: ORAddressInfo = {};
+    if (raw.countryName !== undefined) {
+        const c = normalizeCountryString(raw.countryName);
+        if (!c) {
+            return null;
+        }
+        out.countryName = c;
+    }
+    if (raw.administrationDomainName !== undefined) {
+        out.administrationDomainName = normalizeNumericOrPrintable(raw.administrationDomainName);
+    }
+    if (raw.networkAddress !== undefined) {
+        out.networkAddress = normalizeNumericOnly(raw.networkAddress);
+    }
+    if (raw.terminalIdentifier !== undefined) {
+        out.terminalIdentifier = normalizeMSString(raw.terminalIdentifier);
+    }
+    if (raw.privateDomainName !== undefined) {
+        out.privateDomainName = normalizeNumericOrPrintable(raw.privateDomainName);
+    }
+    if (raw.numericUserIdentifier !== undefined) {
+        out.numericUserIdentifier = normalizeNumericOnly(raw.numericUserIdentifier);
+    }
+    if (raw.pdsName !== undefined) {
+        out.pdsName = normalizeMSString(raw.pdsName);
+    }
+    if (raw.physicalDeliveryCountryName !== undefined) {
+        const c = normalizeCountryString(raw.physicalDeliveryCountryName);
+        if (!c) {
+            return null;
+        }
+        out.physicalDeliveryCountryName = c;
+    }
+    if (raw.postalCode !== undefined) {
+        out.postalCode = normalizeNumericOrPrintable(raw.postalCode);
+    }
+    for (const key of MULTI_STRING_KEYS) {
+        const set = raw[key];
+        if (set) {
+            const normSet = new Set<string>();
+            for (const s of set) {
+                normSet.add(normalizeMSString(s));
+            }
+            out[key] = normSet;
+        }
+    }
+    if (raw.personalName) {
+        out.personalName = raw.personalName.map((pn) => ({
+            surname: normalizeMSString(pn.surname),
+            ...(pn.givenName !== undefined ? { givenName: normalizeMSString(pn.givenName) } : {}),
+            ...(pn.initials !== undefined ? { initials: normalizeMSString(pn.initials) } : {}),
+            ...(pn.generationQualifier !== undefined ? { generationQualifier: normalizeMSString(pn.generationQualifier) } : {}),
+        }));
+    }
+    if (raw.organizationalUnitNames) {
+        out.organizationalUnitNames = raw.organizationalUnitNames.map(
+            (ous) => ous.map((ou) => normalizeMSString(ou)),
+        );
+    }
+    if (raw.builtInDomainDefinedAttributes) {
+        const maps: Map<string, string>[] = [];
+        for (const rawMap of raw.builtInDomainDefinedAttributes) {
+            const dict = new Map<string, string>();
+            for (const [ k, v ] of rawMap) {
+                const nk = normalizeMSString(k);
+                const nv = normalizeMSString(v);
+                const existing = dict.get(nk);
+                if (existing !== undefined && existing !== nv) {
+                    return null;
+                }
+                dict.set(nk, nv);
+            }
+            maps.push(dict);
+        }
+        out.builtInDomainDefinedAttributes = maps;
+    }
+    if (raw.terminalType !== undefined) {
+        out.terminalType = raw.terminalType;
+    }
+    if (raw.extendedNetworkAddress !== undefined) {
+        if (raw.extendedNetworkAddress instanceof PresentationAddress) {
+            out.extendedNetworkAddress = raw.extendedNetworkAddress;
+        } else {
+            out.extendedNetworkAddress = [
+                normalizeNumericOnly(raw.extendedNetworkAddress[0]),
+                raw.extendedNetworkAddress[1] !== undefined
+                    ? normalizeNumericOnly(raw.extendedNetworkAddress[1])
+                    : undefined,
+            ];
+        }
+    }
+    return out;
 }
 
 const SCALAR_STRING_KEYS = [
@@ -1004,12 +1159,12 @@ function compareORAddressInfo (
 }
 
 export
-function orAddressesMatch (a: ORAddress, b: ORAddress): boolean | undefined {
+function orAddressesMatch (a: ORAddress, b: ORAddress, flags: number = 0): boolean | undefined {
     if (a.isEmptyOrAddress() || b.isEmptyOrAddress()) {
         return undefined;
     }
-    const aInfo: ORAddressInfo | null = orAddressToInfo(a);
-    const bInfo: ORAddressInfo | null = orAddressToInfo(b);
+    const aInfo: ORAddressInfo | null = orAddressToInfo(a, !(flags & MATCH_FLAG_ASSERTION_NORMALIZED));
+    const bInfo: ORAddressInfo | null = orAddressToInfo(b, !(flags & MATCH_FLAG_VALUE_NORMALIZED));
     if (!aInfo || !bInfo) {
         return undefined;
     }

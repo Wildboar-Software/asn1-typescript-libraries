@@ -10,6 +10,7 @@ import { createEqualityMatcher, type Matcher } from "@wildboar/x500";
 import {
     decodeMSStringElement,
     normalizeMSString,
+    prepareMSStringValue,
 } from "./orAddressUtilities.js";
 
 const decodeMSStringSequence = $._decodeSequenceOf<string>(() => decodeMSStringElement);
@@ -42,7 +43,7 @@ function normalizeCaseIgnoreList (assertion: string[]): string[] {
 export
 const mSSingleSubstringListMatch: Matcher = createEqualityMatcher(
     decodeMSStringList,
-    (assertion, value: ASN1Element): boolean => {
+    (assertion, value: ASN1Element, _getEqualityMatcher, flags = 0): boolean => {
         if (
             (value.tagClass !== ASN1TagClass.universal)
             || (value.tagNumber !== ASN1UniversalType.sequence)
@@ -58,7 +59,7 @@ const mSSingleSubstringListMatch: Matcher = createEqualityMatcher(
             if (raw.length === 0) {
                 throw new ASN1CharactersError("mSSingleSubstringListMatch: empty MSString", vElements[i]);
             }
-            const vi = normalizeMSString(raw, true);
+            const vi = prepareMSStringValue(raw, true, flags);
             if (vi.indexOf(assertion[i]) < 0) {
                 return false;
             }
@@ -66,7 +67,7 @@ const mSSingleSubstringListMatch: Matcher = createEqualityMatcher(
         return true;
     },
     undefined,
-    false,
+    true,
     normalizeCaseIgnoreList,
 );
 

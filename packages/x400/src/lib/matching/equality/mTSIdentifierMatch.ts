@@ -1,5 +1,9 @@
 import { ASN1CharactersError, type ASN1Element } from "@wildboar/asn1";
-import { createEqualityMatcher, type Matcher } from "@wildboar/x500";
+import {
+    createEqualityMatcher,
+    MATCH_FLAG_VALUE_NORMALIZED,
+    type Matcher,
+} from "@wildboar/x500";
 import {
     type AdministrationDomainName,
     type CountryName,
@@ -108,11 +112,11 @@ function decodeMTSIdentifierAssertion (el: ASN1Element): PreparedMTSIdentifier {
 export
 const mTSIdentifierMatch: Matcher = createEqualityMatcher(
     decodeMTSIdentifierAssertion,
-    (assertion: PreparedMTSIdentifier, value: ASN1Element): boolean => {
-        const v = normalizePreparedMTSIdentifier(
-            decodeRawMTSIdentifier(_decode_MTSIdentifier(value), value),
-            value,
-        );
+    (assertion: PreparedMTSIdentifier, value: ASN1Element, _getEqualityMatcher, flags = 0): boolean => {
+        const rawV = decodeRawMTSIdentifier(_decode_MTSIdentifier(value), value);
+        const v = (flags & MATCH_FLAG_VALUE_NORMALIZED)
+            ? rawV
+            : normalizePreparedMTSIdentifier(rawV, value);
         return (
             assertion.country === v.country
             && assertion.admd === v.admd

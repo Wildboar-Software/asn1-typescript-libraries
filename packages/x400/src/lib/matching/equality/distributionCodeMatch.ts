@@ -1,7 +1,11 @@
 import type { ASN1Element, OBJECT_IDENTIFIER } from "@wildboar/asn1";
 import { createEqualityMatcher, type Matcher } from "@wildboar/x500";
 import { _decode_DistributionCode } from "@wildboar/x400/IPMSHeadingExtensions";
-import { normalizeMSString, univOrBmpToString } from "./orAddressUtilities.js";
+import {
+    normalizeMSString,
+    prepareMSStringValue,
+    univOrBmpToString,
+} from "./orAddressUtilities.js";
 
 interface PreparedDistributionCode {
     readonly oidCode?: OBJECT_IDENTIFIER;
@@ -34,7 +38,7 @@ function normalizeDistributionCodeAssertion (
 export
 const distributionCodeMatch: Matcher = createEqualityMatcher(
     decodeDistributionCodeAssertion,
-    (assertion: PreparedDistributionCode, value): boolean => {
+    (assertion: PreparedDistributionCode, value, _getEqualityMatcher, flags = 0): boolean => {
         const v = _decode_DistributionCode(value);
         const a = assertion;
         if (a.oidCode && v.oid_code) {
@@ -42,13 +46,13 @@ const distributionCodeMatch: Matcher = createEqualityMatcher(
                 return false;
             }
             if ((a.alphanumericCode !== undefined) && v.alphanumeric_code) {
-                const vcode = normalizeMSString(univOrBmpToString(v.alphanumeric_code), true);
+                const vcode = prepareMSStringValue(univOrBmpToString(v.alphanumeric_code), true, flags);
                 return (a.alphanumericCode === vcode);
             }
             return (a.alphanumericCode === undefined) && !v.alphanumeric_code;
         }
         if ((a.alphanumericCode !== undefined) && v.alphanumeric_code) {
-            const vcode = normalizeMSString(univOrBmpToString(v.alphanumeric_code), true);
+            const vcode = prepareMSStringValue(univOrBmpToString(v.alphanumeric_code), true, flags);
             return (a.alphanumericCode === vcode);
         }
         return false;

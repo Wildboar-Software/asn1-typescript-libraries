@@ -1,45 +1,43 @@
-import type { ASN1Element } from "@wildboar/asn1";
+import type { ASN1Element, OBJECT_IDENTIFIER } from "@wildboar/asn1";
 import { createEqualityMatcher, type Matcher } from "@wildboar/x500";
 import {
     _decode_ORDescriptor,
     type ORDescriptor,
 } from "@wildboar/x400/IPMSInformationObjects";
-import { teletexBytesToString } from "./orAddressUtilities.js";
+import {
+    prepareMSStringValue,
+    teletexBytesToString,
+} from "./orAddressUtilities.js";
 import {
     decodeORNameSingleElementAssertion,
     matchORNameSingleElement,
     normalizeORNameSingleElementAssertion,
 } from "./oRNameSingleElementMatch.js";
 
-// ORDescriptor ::= SET {
-//     formal-name       ORName OPTIONAL,
-//     free-form-name    [0]  FreeFormName OPTIONAL,
-//     telephone-number  [1]  TelephoneNumber OPTIONAL
-// }
-
 export
 function matchORDescriptorSingleElement (
     assertion: string,
     v: ORDescriptor,
+    flags: number = 0,
 ): boolean | undefined {
     if (v.isEmpty()) {
         return undefined;
     }
     let sawUndefined = false;
     if (v.free_form_name !== undefined && v.free_form_name.length > 0) {
-        const vname = normalizeORNameSingleElementAssertion(teletexBytesToString(v.free_form_name));
+        const vname = prepareMSStringValue(teletexBytesToString(v.free_form_name), true, flags);
         if (vname === assertion) {
             return true;
         }
     }
     if (v.telephone_number !== undefined && v.telephone_number.length > 0) {
-        const vname = normalizeORNameSingleElementAssertion(v.telephone_number);
+        const vname = prepareMSStringValue(v.telephone_number, true, flags);
         if (vname === assertion) {
             return true;
         }
     }
     if (v.formal_name) {
-        const formalMatch = matchORNameSingleElement(assertion, v.formal_name);
+        const formalMatch = matchORNameSingleElement(assertion, v.formal_name, flags);
         if (formalMatch === true) {
             return true;
         }
@@ -54,9 +52,11 @@ export
 function oRDescriptorSingleElementMatchTyped (
     assertion: string,
     value: ASN1Element,
+    _getEqualityMatcher?: (attributeType: OBJECT_IDENTIFIER) => Matcher | undefined,
+    flags: number = 0,
 ): boolean | undefined {
     const v = _decode_ORDescriptor(value);
-    return matchORDescriptorSingleElement(assertion, v);
+    return matchORDescriptorSingleElement(assertion, v, flags);
 }
 
 export

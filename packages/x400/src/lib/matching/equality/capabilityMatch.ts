@@ -5,7 +5,11 @@ import {
     ASN1TagClass,
     ASN1UniversalType,
 } from "@wildboar/asn1";
-import { createEqualityMatcher, type Matcher } from "@wildboar/x500";
+import {
+    createEqualityMatcher,
+    MATCH_FLAG_VALUE_NORMALIZED,
+    type Matcher,
+} from "@wildboar/x500";
 import {
     type Capability,
     _decode_Capability,
@@ -89,7 +93,7 @@ function canonicalizeSecurityCategory (cat: SecurityCategory): string {
     ]);
 }
 
-function canonicalizeSecurityLabel (label: SecurityLabel): string {
+function canonicalizeSecurityLabel (label: SecurityLabel, normalize: boolean): string {
     const categories = label.security_categories
         ? Array.from(new Set(label.security_categories.map(canonicalizeSecurityCategory))).sort()
         : null;
@@ -99,7 +103,7 @@ function canonicalizeSecurityLabel (label: SecurityLabel): string {
             ? label.security_classification.toString()
             : null,
         label.privacy_mark !== undefined
-            ? normalizeMSString(label.privacy_mark, true)
+            ? (normalize ? normalizeMSString(label.privacy_mark, true) : label.privacy_mark)
             : null,
         categories,
     ]);
@@ -110,7 +114,7 @@ function canonicalizeSecurityLabel (label: SecurityLabel): string {
  * X.402 `Capability` value (ITU-T Rec. X.402 Annex A.3.4).
  */
 export
-function capabilityToCanonicalKey (cap: Capability): string {
+function capabilityToCanonicalKey (cap: Capability, normalize: boolean = true): string {
     const contentTypes = cap.content_types
         ? Array.from(new Set(cap.content_types.map((roid) => roid.join(".")))).sort()
         : null;
@@ -119,7 +123,7 @@ function capabilityToCanonicalKey (cap: Capability): string {
         : null;
     const eitConstraints = canonicalizeEitConstraints(cap.encoded_information_types_constraints);
     const securityLabels = cap.security_labels
-        ? Array.from(new Set(cap.security_labels.map(canonicalizeSecurityLabel))).sort()
+        ? Array.from(new Set(cap.security_labels.map((lbl) => canonicalizeSecurityLabel(lbl, normalize)))).sort()
         : null;
     const unrecognized = cap._unrecognizedExtensionsList?.length
         ? cap._unrecognizedExtensionsList.map((el) => elementToKey(el)).sort()
@@ -135,11 +139,22 @@ function capabilityToCanonicalKey (cap: Capability): string {
 
 export
 const capabilityMatch: Matcher = createEqualityMatcher(
-    (el: ASN1Element): string => capabilityToCanonicalKey(_decode_Capability(el)),
-    (assertionKey: string, value: ASN1Element): boolean => {
-        const vKey = capabilityToCanonicalKey(_decode_Capability(value));
+    (el: ASN1Element): Capability | string => _decode_Capability(el),
+    (assertion: Capability | string, value: ASN1Element, _getEqualityMatcher, flags = 0): boolean => {
+        const assertionKey = typeof assertion === "string"
+            ? assertion
+            : capabilityToCanonicalKey(assertion, false);
+        const vKey = capabilityToCanonicalKey(
+            _decode_Capability(value),
+            !(flags & MATCH_FLAG_VALUE_NORMALIZED),
+        );
         return assertionKey === vKey;
     },
+    undefined,
+    false,
+    (assertion: Capability | string): string => (
+        typeof assertion === "string" ? assertion : capabilityToCanonicalKey(assertion, true)
+    ),
 );
 
 export default capabilityMatch;

@@ -1,7 +1,11 @@
 import type { ASN1Element, OBJECT_IDENTIFIER } from "@wildboar/asn1";
 import { createEqualityMatcher, type Matcher } from "@wildboar/x500";
 import { _decode_InformationCategory } from "@wildboar/x400/IPMSHeadingExtensions";
-import { normalizeMSString, univOrBmpToString } from "./orAddressUtilities.js";
+import {
+    normalizeMSString,
+    prepareMSStringValue,
+    univOrBmpToString,
+} from "./orAddressUtilities.js";
 
 interface PreparedInformationCategory {
     readonly reference?: OBJECT_IDENTIFIER;
@@ -33,7 +37,7 @@ function normalizeInformationCategoryAssertion (
 export
 const informationCategoryMatch: Matcher = createEqualityMatcher(
     decodeInformationCategoryAssertion,
-    (assertion: PreparedInformationCategory, value): boolean => {
+    (assertion: PreparedInformationCategory, value, _getEqualityMatcher, flags = 0): boolean => {
         const v = _decode_InformationCategory(value);
         const a = assertion;
         if (v.reference && a.reference) {
@@ -41,7 +45,7 @@ const informationCategoryMatch: Matcher = createEqualityMatcher(
                 return false;
             }
             if (v.description && (a.description !== undefined)) {
-                const vdesc = normalizeMSString(univOrBmpToString(v.description), true);
+                const vdesc = prepareMSStringValue(univOrBmpToString(v.description), true, flags);
                 return (vdesc === a.description);
             }
             return true;
@@ -50,7 +54,7 @@ const informationCategoryMatch: Matcher = createEqualityMatcher(
             if (!v.description || (a.description === undefined)) {
                 return false;
             }
-            const vdesc = normalizeMSString(univOrBmpToString(v.description), true);
+            const vdesc = prepareMSStringValue(univOrBmpToString(v.description), true, flags);
             return (vdesc === a.description);
         }
         return false;
