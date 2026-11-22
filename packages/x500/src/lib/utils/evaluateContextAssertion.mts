@@ -64,7 +64,7 @@ function evaluateContextAssertion (
     let hadContextOfAssertedType = false;
     const constantTime = flags & MATCH_FLAG_CONSTANT_TIME;
     // Denial-of-service protection: limit the number of assertions.
-    const maxAssertions = Math.min(
+    const max = Math.min(
         ca.contextValues.length,
         (flags & MATCH_FLAG_HIGH_WORK_BUDGET)
             ? 1000
@@ -80,9 +80,12 @@ function evaluateContextAssertion (
             break;
         }
         hadContextOfAssertedType = true;
-        for (let j = 0; j < maxAssertions; j++) {
+        for (let j = 0; j < max; j++) {
             const assertedValue = ca.contextValues[j];
-            if (matcher(assertedValue, context.contextValues.values(), getEqualityMatcher, flags)) {
+            const storedValues = (context.contextValues.length > max)
+                ? context.contextValues.slice(0, max)
+                : context.contextValues;
+            if (matcher(assertedValue, storedValues.values(), getEqualityMatcher, flags)) {
                 matched = true;
                 if (!constantTime) {
                     break;
