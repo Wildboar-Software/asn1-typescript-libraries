@@ -68,7 +68,7 @@ function evaluateContextAssertion (
         ca.contextValues.length,
         (flags & MATCH_FLAG_HIGH_WORK_BUDGET)
             ? 1000
-            : 20
+            : 100
     );
     let matched = false;
     for (let i = 0; i < contexts.length; i++) {
