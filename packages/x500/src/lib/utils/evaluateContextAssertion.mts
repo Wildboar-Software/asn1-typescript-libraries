@@ -58,16 +58,29 @@ function evaluateContextAssertion (
     const matcher = getContextMatcher(ca.contextType) ?? compareElementsContextMatcher;
     const isAbsentMatch: boolean = determineAbsentMatch(ca.contextType);
     let storedValues: ASN1Element[] | undefined;
+    // True once `storedValues` is a private copy. The first matching context's
+    // array is reused; a later context of this type copies it, then appends.
+    // Appending keeps the merge linear in the number of stored values.
+    let ownsStoredValues = false;
     for (const context of contexts) {
         if (!context.contextType.isEqualTo(ca.contextType)) {
             continue;
         }
-        if (!storedValues) {
-            // Reuse the first matching context's array; copy only if another
-            // context of this type appears, so the original is never mutated.
-            storedValues = context.contextValues;
-        } else {
-            storedValues = storedValues.concat(context.contextValues);
+        const values = context.contextValues;
+        if (!storedValues || storedValues.length === 0) {
+            storedValues = values;
+            ownsStoredValues = false;
+            continue;
+        }
+        if (values.length === 0) {
+            continue;
+        }
+        if (!ownsStoredValues) {
+            storedValues = storedValues.slice();
+            ownsStoredValues = true;
+        }
+        for (let i = 0; i < values.length; i++) {
+            storedValues.push(values[i]);
         }
     }
     // A ContextAssertion is true for a particular attribute value if:

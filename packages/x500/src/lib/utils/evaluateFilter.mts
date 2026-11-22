@@ -296,11 +296,81 @@ function getAttributesFromEntry (entry: EntryInformation, dnAttributes: boolean 
 const NO_CONTEXTS: readonly Context[] = [];
 
 /**
- * Cache of whether any value of an Attribute already satisfied a
- * ContextAssertion via X.501 §8.9.2.4 (a) or (b). Keyed by object identity
- * of the Attribute and the ContextAssertion so each pair is scanned once.
+ * Contexts of one type on a single attribute value, in stored order.
+ * `fallback` is true when any of those contexts has `fallback` TRUE.
  */
-type DirectContextMatchCache = WeakMap<Attribute, Map<ContextAssertion, boolean | undefined>>;
+interface ContextsOfType {
+    contexts: Context[];
+    fallback: boolean;
+}
+
+/** One value's contexts keyed by the dotted context-type OID. */
+type ContextsByType = Map<string, ContextsOfType>;
+
+/**
+ * Per-attribute memo for context selection.
+ *
+ * `byAssertion` records whether any value already satisfied a
+ * ContextAssertion via X.501 §8.9.2.4 (a) or (b). `byContextList` indexes
+ * each value's contexts by type so later assertions do not scan them again.
+ * Both are keyed by object identity: the Attribute, the ContextAssertion,
+ * and the context-list array.
+ */
+interface AttributeContextMatches {
+    byAssertion: Map<ContextAssertion, boolean | undefined>;
+    byContextList: Map<readonly Context[], ContextsByType>;
+}
+
+type DirectContextMatchCache = WeakMap<Attribute, AttributeContextMatches>;
+
+function contextMatchesFor (
+    cache: DirectContextMatchCache,
+    attribute: Attribute,
+): AttributeContextMatches {
+    let state = cache.get(attribute);
+    if (!state) {
+        state = {
+            byAssertion: new Map(),
+            byContextList: new Map(),
+        };
+        cache.set(attribute, state);
+    }
+    return state;
+}
+
+/**
+ * Index one value's contexts by context type. Building the index is linear
+ * in the number of contexts; each selected assertion is then one map lookup.
+ * The same index is reused for every assertion and for the sibling scan.
+ */
+function contextsByType (
+    state: AttributeContextMatches,
+    contexts: readonly Context[],
+): ContextsByType {
+    const cached = state.byContextList.get(contexts);
+    if (cached) {
+        return cached;
+    }
+    const grouped: ContextsByType = new Map();
+    for (let i = 0; i < contexts.length; i++) {
+        const context = contexts[i];
+        const key = context.contextType.toString();
+        const existing = grouped.get(key);
+        if (existing) {
+            existing.contexts.push(context);
+            if (context.fallback) {
+                existing.fallback = true;
+            }
+        } else {
+            grouped.set(key, {
+                contexts: [context],
+                fallback: !!context.fallback,
+            });
+        }
+    }
+    state.byContextList.set(contexts, grouped);
+    return grouped;
+}
 
 /** A context evaluation error means that selection is uncertain, not FALSE. */
 function contextAssertionMatches (
@@ -334,34 +404,40 @@ function attributeHasDirectContextMatch (
     options: EvaluateFilterSettings,
     cache: DirectContextMatchCache,
 ): boolean | undefined {
-    let byAssertion = cache.get(attribute);
-    if (!byAssertion) {
-        byAssertion = new Map();
-        cache.set(attribute, byAssertion);
-    } else if (byAssertion.has(ca)) {
-        return byAssertion.get(ca);
+    const state = contextMatchesFor(cache, attribute);
+    if (state.byAssertion.has(ca)) {
+        return state.byAssertion.get(ca);
     }
     let indeterminate = false;
+    const typeKey = ca.contextType.toString();
+    // Only contexts of the asserted type can satisfy (a). A value with none
+    // of that type takes the absent-match path, the same as an empty list.
+    const consider = (contexts: readonly Context[]): boolean | undefined => {
+        const ofType = contexts.length === 0
+            ? undefined
+            : contextsByType(state, contexts).get(typeKey);
+        return contextAssertionMatches(ca, ofType?.contexts ?? NO_CONTEXTS, options);
+    };
     if (attribute.values.length > 0) {
         // With no contexts, the assertion is governed by the context type's
         // absentMatch setting; the encoded attribute values are not examined.
-        const result = contextAssertionMatches(ca, NO_CONTEXTS, options);
+        const result = consider(NO_CONTEXTS);
         if (result === true) {
-            byAssertion.set(ca, true);
+            state.byAssertion.set(ca, true);
             return true;
         }
         indeterminate = result === undefined;
     }
     for (const vwc of attribute.valuesWithContext ?? []) {
-        const result = contextAssertionMatches(ca, vwc.contextList, options);
+        const result = consider(vwc.contextList);
         if (result === true) {
-            byAssertion.set(ca, true);
+            state.byAssertion.set(ca, true);
             return true;
         }
         indeterminate ||= result === undefined;
     }
     const matched = indeterminate ? undefined : false;
-    byAssertion.set(ca, matched);
+    state.byAssertion.set(ca, matched);
     return matched;
 }
 
@@ -372,7 +448,10 @@ function attributeHasDirectContextMatch (
  * `attribute` is the containing Attribute. It is not the subject of the
  * match; fallback (c) is defined in terms of the *other* values of that
  * same attribute, so the sibling scan needs the whole Attribute.
- * `directMatchCache` memoizes that sibling scan per `(attribute, assertion)`.
+ * `directMatchCache` memoizes that sibling scan per `(attribute, assertion)`
+ * and indexes each value's contexts by type. Matching one value against every
+ * selected assertion is therefore linear in the number of contexts plus the
+ * number of assertions, rather than their product.
  */
 function valueSatisfiesSelectedContexts (
     selectedContexts: ContextAssertion[] | undefined,
@@ -384,26 +463,23 @@ function valueSatisfiesSelectedContexts (
     if (!selectedContexts) {
         return true;
     }
+    const state = contextMatchesFor(directMatchCache, attribute);
+    const grouped = valueContexts.length === 0
+        ? undefined
+        : contextsByType(state, valueContexts);
     let indeterminate = false;
     for (let i = 0; i < selectedContexts.length; i++) {
         const ca = selectedContexts[i];
+        const ofType = grouped?.get(ca.contextType.toString());
         // (a) stored context of this type matches, or (b) no context of this type.
-        const directMatch = contextAssertionMatches(ca, valueContexts, options);
+        const directMatch = contextAssertionMatches(ca, ofType?.contexts ?? NO_CONTEXTS, options);
         if (directMatch === true) {
             continue;
         }
-        // If this value has no fallback of this type, do not consult siblings.
-        let hasFallback = false;
-        for (let j = 0; j < valueContexts.length; j++) {
-            const c = valueContexts[j];
-            if (c.contextType.isEqualTo(ca.contextType) && c.fallback) {
-                hasFallback = true;
-                break;
-            }
-        }
-        // X.501 §8.9.2.4 (c): fallback applies only if **none** of the
-        // attribute's values already satisfied the assertion via (a) or (b).
-        if (hasFallback) {
+        // X.501 §8.9.2.4 (c): fallback applies only if this value has fallback
+        // for the asserted type and **none** of the attribute's values already
+        // satisfied the assertion via (a) or (b).
+        if (ofType?.fallback) {
             const siblingMatch = attributeHasDirectContextMatch(attribute, ca, options, directMatchCache);
             if (siblingMatch === false) {
                 continue;
