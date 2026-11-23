@@ -573,7 +573,7 @@ suite("decoded assertion cache", () => {
         expect(decoder).toHaveBeenCalledTimes(2);
     });
 
-    test("normalization still runs on a hit, and the cache keeps the decoded value", () => {
+    test("a hit reuses the normalized assertion and does not normalize again", () => {
         const decoder = vi.fn((el: ASN1Element) => el.integer);
         const normalizer = vi.fn((assertion: INTEGER) => -BigInt(assertion));
         const match = createEqualityMatcher(
@@ -587,22 +587,88 @@ suite("decoded assertion cache", () => {
         expect(match(assertion, integerATAV(-5), undefined, readAndWrite)).toBe(true);
         expect(normalizer).toHaveBeenLastCalledWith(5, assertion);
         expect(match(assertion, integerATAV(-5), undefined, readAndWrite)).toBe(true);
-        expect(decoder).toHaveBeenCalledTimes(1);
-        expect(normalizer).toHaveBeenCalledTimes(2);
-        expect(match(
-            assertion,
-            integerATAV(5),
-            undefined,
-            MATCH_FLAG_READ_ASSERTION_CACHE | MATCH_FLAG_ASSERTION_NORMALIZED,
-        )).toBe(true);
+        expect(match(assertion, integerATAV(5), undefined, readAndWrite)).toBe(false);
         expect(match(
             assertion,
             integerATAV(-5),
             undefined,
             MATCH_FLAG_READ_ASSERTION_CACHE | MATCH_FLAG_ASSERTION_NORMALIZED,
-        )).toBe(false);
+        )).toBe(true);
         expect(decoder).toHaveBeenCalledTimes(1);
+        expect(normalizer).toHaveBeenCalledTimes(1);
+    });
+
+    test("MATCH_FLAG_ASSERTION_NORMALIZED caches the decoded assertion as normalized", () => {
+        const decoder = vi.fn((el: ASN1Element) => el.integer);
+        const normalizer = vi.fn((assertion: INTEGER) => -BigInt(assertion));
+        const match = createEqualityMatcher(
+            decoder,
+            equalsValue,
+            undefined,
+            false,
+            normalizer,
+        );
+        const assertion = integer(5);
+        expect(match(
+            assertion,
+            integerATAV(5),
+            undefined,
+            MATCH_FLAG_WRITE_ASSERTION_CACHE | MATCH_FLAG_ASSERTION_NORMALIZED,
+        )).toBe(true);
+        expect(match(assertion, integerATAV(5), undefined, MATCH_FLAG_READ_ASSERTION_CACHE)).toBe(true);
+        expect(match(assertion, integerATAV(-5), undefined, MATCH_FLAG_READ_ASSERTION_CACHE)).toBe(false);
+        expect(decoder).toHaveBeenCalledTimes(1);
+        expect(normalizer).not.toHaveBeenCalled();
+    });
+
+    test("a thrown normalizer leaves the cache empty", () => {
+        const decoder = vi.fn((el: ASN1Element) => el.integer);
+        let fail = true;
+        const normalizer = vi.fn((assertion: INTEGER) => {
+            if (fail) {
+                throw new Error("normalization failed");
+            }
+            return assertion;
+        });
+        const match = createEqualityMatcher(
+            decoder,
+            equalsValue,
+            undefined,
+            false,
+            normalizer,
+        );
+        const assertion = integer(5);
+        expect(() => match(
+            assertion,
+            integerATAV(5),
+            undefined,
+            MATCH_FLAG_WRITE_ASSERTION_CACHE,
+        )).toThrow(/normalization failed/);
+        fail = false;
+        expect(match(assertion, integerATAV(5), undefined, MATCH_FLAG_READ_ASSERTION_CACHE)).toBe(true);
+        expect(decoder).toHaveBeenCalledTimes(2);
         expect(normalizer).toHaveBeenCalledTimes(2);
+    });
+
+    test("a substrings list is normalized on every call and is not cached", () => {
+        const converter = vi.fn((strings: FilterSubstring[]) => strings.length);
+        const normalizer = vi.fn((count: number) => count);
+        const match = createEqualityMatcher<number>(
+            (el) => Number(el.integer),
+            (assertion, value) => assertion === Number(value.integer),
+            converter,
+            false,
+            normalizer,
+        );
+        const strings: FilterSubstring[] = [
+            { initial: _encodePrintableString("ab", DER) },
+        ];
+        const atav = integerATAV(1);
+        expect(match(strings, atav, undefined, readAndWrite)).toBe(true);
+        expect(match(strings, atav, undefined, readAndWrite)).toBe(true);
+        expect(converter).toHaveBeenCalledTimes(2);
+        expect(normalizer).toHaveBeenCalledTimes(2);
+        expect(normalizer).toHaveBeenLastCalledWith(1, undefined);
     });
 
     test("a name-matching rejection still stores the decoded assertion", () => {
