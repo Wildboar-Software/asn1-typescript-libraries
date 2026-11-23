@@ -84,6 +84,13 @@ interface EvaluateFilterReturn {
 
 export
 interface EvaluateFilterSettings {
+    /**
+     * The maximum number of contexts to consider for a single value.
+     *
+     * @readonly
+     * @property
+     */
+    readonly maxValueContexts?: number;
 
     /**
      * A function that accepts an attribute type and returns a function
@@ -384,8 +391,25 @@ function valueSatisfiesSelectedContexts (
     if (!selectedContexts) {
         return true;
     }
+    const max = (options.maxValueContexts ?? 100);
+    const tooManyContexts = selectedContexts.length > max;
+    const assertionsOutnumberContexts = selectedContexts.length > valueContexts.length;
+    if (tooManyContexts && assertionsOutnumberContexts) {
+        /* Since all of them have to match, there are too many of them to match,
+        and the number of assertions outnumbers of the number of contexts that
+        even could possibly match (assuming the assertions match 1:1 to
+        contexts), we just give up immediately and return `undefined`. */
+        return undefined;
+    }
     let indeterminate = false;
     for (let i = 0; i < selectedContexts.length; i++) {
+        if (i >= max) {
+            /* Denial-of-service handling: this is handled here rather than
+            before the loop ever runs so we can return an explicit `FALSE` if
+            we determine that a context definitely does not match. In other
+            words, we still try matching to have a chance to return `FALSE`. */
+            return undefined;
+        }
         const ca = selectedContexts[i];
         // (a) stored context of this type matches, or (b) no context of this type.
         const directMatch = contextAssertionMatches(ca, valueContexts, options);
