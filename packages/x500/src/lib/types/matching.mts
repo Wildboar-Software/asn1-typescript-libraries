@@ -91,15 +91,16 @@ export const MATCH_FLAG_APPROXIMATE: MatchFlags =          1 << 10;
  *
  * Each matcher returned by `createEqualityMatcher`,
  * `createOrderingMatcher`, and `createSubstringsMatcher` keeps a
- * `WeakMap` from the assertion `ASN1Element` (by object identity) to
- * the assertion after decoding and normalization are finished. When
- * this flag is set and `WeakMap.get` returns a value, that value is
- * used as-is: the decoder and the assertion normalizer are not called.
+ * `WeakMap` from the assertion `ASN1Element` or the substrings
+ * `FilterItem` string list (by object identity) to the assertion
+ * after decoding and normalization are finished. When this flag is
+ * set and `WeakMap.get` returns a value, that value is used as-is:
+ * the decoder, the substrings converter, and the assertion normalizer
+ * are not called.
  *
  * A stored `undefined` is not reused, because `get` also returns
- * `undefined` when the key is absent. A substrings `FilterItem`
- * string list is not an `ASN1Element`, so this flag does not apply
- * to it.
+ * `undefined` when the key is absent. A different array object with
+ * the same substring entries is a different key.
  *
  * A hit also skips validation the decoder would have applied for this
  * call's other flags. The stored value was normalized by the call that
@@ -111,20 +112,20 @@ export const MATCH_FLAG_READ_ASSERTION_CACHE: MatchFlags = 1 << 11;
 /**
  * Store this call's normalized assertion in the matcher's cache.
  *
- * The assertion is decoded, then normalized, and only then saved in
- * the matcher's `WeakMap` under the assertion `ASN1Element`. When the
- * matcher was created with no `assertionNormalizer`, the decoded value
- * is already normalized and that is what is stored. When
+ * The assertion is decoded, or converted from a substrings
+ * `FilterItem` list, then normalized, and only then saved. The
+ * `WeakMap` key is that `ASN1Element` or that array. When the matcher
+ * was created with no `assertionNormalizer`, the decoded or converted
+ * value is already normalized and that is what is stored. When
  * `MATCH_FLAG_ASSERTION_NORMALIZED` is set, the normalizer is skipped
- * and the decoded value is stored as the normalized assertion.
+ * and that value is stored as the normalized assertion.
  *
  * The entry is written only after that preparation returns. A thrown
- * decoder or normalizer leaves the map unchanged. When the read flag
- * is also set and `get` returns a value, preparation is skipped, so
- * this flag does not replace that entry. Without the read flag, a
- * successful preparation replaces any entry for the element.
- *
- * Substrings given as a `FilterItem` string list are not stored.
+ * decoder, substrings converter, or normalizer leaves the map
+ * unchanged. When the read flag is also set and `get` returns a
+ * value, preparation is skipped, so this flag does not replace that
+ * entry. Without the read flag, a successful preparation replaces any
+ * entry for the same key.
  */
 export const MATCH_FLAG_WRITE_ASSERTION_CACHE: MatchFlags = 1 << 12;
 
@@ -435,12 +436,12 @@ function useOrderingAsEquality<A>(
  *
  * The returned function uses `MATCH_FLAG_READ_ASSERTION_CACHE` and
  * `MATCH_FLAG_WRITE_ASSERTION_CACHE`. It keeps a `WeakMap` from an
- * assertion `ASN1Element` to the assertion after decoding and
- * normalization. The write flag stores that value. The read flag uses
- * it and skips both `assertionDecoder` and `assertionNormalizer`.
- * With no `assertionNormalizer`, the decoded value is the normalized
- * assertion. A substrings list is not entered in the cache. The cache
- * belongs to the returned matcher.
+ * assertion `ASN1Element` or a substrings `FilterItem` list to the
+ * assertion after decoding and normalization. The write flag stores
+ * that value. The read flag uses it and skips the decoder, the
+ * substrings converter, and `assertionNormalizer`. With no
+ * `assertionNormalizer`, the decoded or converted value is the
+ * normalized assertion. The cache belongs to the returned matcher.
  *
  * If `assertionSyntaxDiffersFromValueSyntax` is `true`, the returned function
  * uses `MATCH_FLAG_USED_FOR_NAME` to reject the comparison as UNDEFINED. X.501
@@ -450,8 +451,9 @@ function useOrderingAsEquality<A>(
  * All parameters of the returned function are used as they are described,
  * including the `matchedValues` parameter, to which the matched values are
  * pushed, if provided. `flags` is also passed to `assertionDecoder` and
- * `subtringsConverter`, except that an assertion-cache hit calls neither
- * `assertionDecoder` nor `assertionNormalizer`.
+ * `subtringsConverter`, except that an assertion-cache hit calls
+ * neither `assertionDecoder`, `subtringsConverter`, nor
+ * `assertionNormalizer`.
  * 
  * @param assertionDecoder function that decodes something from an ASN.1 encoding
  * @param valueMatcher function that takes a typed assertion and a value and returns a
@@ -478,8 +480,11 @@ function createEqualityMatcher<A>(
     assertionNormalizer?: AssertionNormalizer<A>,
 ): Matcher {
     // Per returned matcher. Values are normalized assertions, keyed by
-    // the assertion element object.
-    const assertionCache = new WeakMap<ASN1Element, A>();
+    // the assertion element or the filter substrings array.
+    const assertionCache = new WeakMap<
+        ASN1Element | FilterItem_substrings_strings_Item[],
+        A
+    >();
     return function (
         assertion: ASN1Element | FilterItem_substrings_strings_Item[],
         valueOrValues: AttributeTypeAndValue | Attribute,
@@ -488,7 +493,12 @@ function createEqualityMatcher<A>(
         matchedValues?: Attribute,
     ): boolean | undefined {
         let decodedAssertion: A;
-        if (Array.isArray(assertion)) {
+        const cached = (flags & MATCH_FLAG_READ_ASSERTION_CACHE)
+            ? assertionCache.get(assertion)
+            : undefined;
+        if (cached !== undefined) {
+            decodedAssertion = cached;
+        } else if (Array.isArray(assertion)) {
             if (!subtringsConverter) {
                 const oid = valueOrValues.type_.dotDelimitedNotation;
                 throw new Error(
@@ -500,22 +510,18 @@ function createEqualityMatcher<A>(
             if (assertionNormalizer && !(flags & MATCH_FLAG_ASSERTION_NORMALIZED)) {
                 decodedAssertion = assertionNormalizer(decodedAssertion, undefined);
             }
+            if (flags & MATCH_FLAG_WRITE_ASSERTION_CACHE) {
+                assertionCache.set(assertion, decodedAssertion);
+            }
         } else {
-            const cached = (flags & MATCH_FLAG_READ_ASSERTION_CACHE)
-                ? assertionCache.get(assertion)
-                : undefined;
-            if (cached !== undefined) {
-                decodedAssertion = cached;
-            } else {
-                decodedAssertion = assertionDecoder(assertion, flags);
-                // No normalizer means the decoded value is already normalized.
-                // MATCH_FLAG_ASSERTION_NORMALIZED means the caller normalized it.
-                if (assertionNormalizer && !(flags & MATCH_FLAG_ASSERTION_NORMALIZED)) {
-                    decodedAssertion = assertionNormalizer(decodedAssertion, assertion);
-                }
-                if (flags & MATCH_FLAG_WRITE_ASSERTION_CACHE) {
-                    assertionCache.set(assertion, decodedAssertion);
-                }
+            decodedAssertion = assertionDecoder(assertion, flags);
+            // No normalizer means the decoded value is already normalized.
+            // MATCH_FLAG_ASSERTION_NORMALIZED means the caller normalized it.
+            if (assertionNormalizer && !(flags & MATCH_FLAG_ASSERTION_NORMALIZED)) {
+                decodedAssertion = assertionNormalizer(decodedAssertion, assertion);
+            }
+            if (flags & MATCH_FLAG_WRITE_ASSERTION_CACHE) {
+                assertionCache.set(assertion, decodedAssertion);
             }
         }
         if (
@@ -699,9 +705,9 @@ function createOrderingMatcher<A>(
  * @description
  *
  * `MATCH_FLAG_READ_ASSERTION_CACHE` and `MATCH_FLAG_WRITE_ASSERTION_CACHE`
- * apply to an encoded assertion as they do for {@link createEqualityMatcher}.
- * The cached value is the normalized assertion. A `FilterItem` substrings
- * list is not cached.
+ * apply to an encoded assertion and to a `FilterItem` substrings list
+ * as they do for {@link createEqualityMatcher}. The cached value is
+ * the normalized assertion. The list is keyed by object identity.
  *
  * @param assertionDecoder function that decodes something from an ASN.1 encoding
  * @param valueMatcher function that takes a typed assertion and a value and returns a

@@ -650,9 +650,9 @@ suite("decoded assertion cache", () => {
         expect(normalizer).toHaveBeenCalledTimes(2);
     });
 
-    test("a substrings list is normalized on every call and is not cached", () => {
+    test("a substrings list is normalized once and then reused", () => {
         const converter = vi.fn((strings: FilterSubstring[]) => strings.length);
-        const normalizer = vi.fn((count: number) => count);
+        const normalizer = vi.fn((count: number) => -count);
         const match = createEqualityMatcher<number>(
             (el) => Number(el.integer),
             (assertion, value) => assertion === Number(value.integer),
@@ -663,12 +663,13 @@ suite("decoded assertion cache", () => {
         const strings: FilterSubstring[] = [
             { initial: _encodePrintableString("ab", DER) },
         ];
-        const atav = integerATAV(1);
+        const atav = integerATAV(-1);
         expect(match(strings, atav, undefined, readAndWrite)).toBe(true);
-        expect(match(strings, atav, undefined, readAndWrite)).toBe(true);
-        expect(converter).toHaveBeenCalledTimes(2);
-        expect(normalizer).toHaveBeenCalledTimes(2);
         expect(normalizer).toHaveBeenLastCalledWith(1, undefined);
+        expect(match(strings, atav, undefined, readAndWrite)).toBe(true);
+        expect(match(strings, integerATAV(1), undefined, readAndWrite)).toBe(false);
+        expect(converter).toHaveBeenCalledTimes(1);
+        expect(normalizer).toHaveBeenCalledTimes(1);
     });
 
     test("a name-matching rejection still stores the decoded assertion", () => {
@@ -699,7 +700,7 @@ suite("decoded assertion cache", () => {
         expect(decoder).toHaveBeenCalledTimes(1);
     });
 
-    test("a substrings list is converted on every call", () => {
+    test("a substrings list is cached by array identity", () => {
         const decoder = vi.fn((el: ASN1Element) => el.integer);
         const converter = vi.fn((strings: FilterSubstring[]) => strings.length);
         const match = createEqualityMatcher<number>(
@@ -710,11 +711,39 @@ suite("decoded assertion cache", () => {
         const strings: FilterSubstring[] = [
             { initial: _encodePrintableString("ab", DER) },
         ];
+        const sameEntries: FilterSubstring[] = [
+            { initial: strings[0].initial },
+        ];
         const atav = integerATAV(1);
         expect(match(strings, atav, undefined, readAndWrite)).toBe(true);
         expect(match(strings, atav, undefined, readAndWrite)).toBe(true);
+        expect(match(sameEntries, atav, undefined, readAndWrite)).toBe(true);
         expect(converter).toHaveBeenCalledTimes(2);
         expect(decoder).not.toHaveBeenCalled();
+    });
+
+    test("a thrown substrings converter leaves the cache empty", () => {
+        let fail = true;
+        const converter = vi.fn((_strings: FilterSubstring[]) => {
+            if (fail) {
+                throw new Error("substrings malformed");
+            }
+            return 1;
+        });
+        const match = createEqualityMatcher<number>(
+            (el) => Number(el.integer),
+            (assertion, value) => assertion === Number(value.integer),
+            converter,
+        );
+        const strings: FilterSubstring[] = [
+            { initial: _encodePrintableString("ab", DER) },
+        ];
+        const atav = integerATAV(1);
+        expect(() => match(strings, atav, undefined, MATCH_FLAG_WRITE_ASSERTION_CACHE))
+            .toThrow(/substrings malformed/);
+        fail = false;
+        expect(match(strings, atav, undefined, MATCH_FLAG_READ_ASSERTION_CACHE)).toBe(true);
+        expect(converter).toHaveBeenCalledTimes(2);
     });
 
     test("createOrderingMatcher caches the decoded assertion", () => {
@@ -730,9 +759,9 @@ suite("decoded assertion cache", () => {
         const decoder = vi.fn((el: ASN1Element): AssertedSubstring<string>[] => [
             { initial: el.printableString },
         ]);
-        const converter = vi.fn((_strings: FilterSubstring[]): AssertedSubstring<string>[] => {
-            throw new Error("encoded assertions do not use the substrings converter");
-        });
+        const converter = vi.fn((strings: FilterSubstring[]): AssertedSubstring<string>[] => [
+            { initial: (strings[0] as { initial: ASN1Element }).initial.printableString },
+        ]);
         const match = createSubstringsMatcher(
             decoder,
             getStringSubstringsMatcher((value) => value.printableString),
@@ -747,5 +776,13 @@ suite("decoded assertion cache", () => {
         expect(match(assertion, value, undefined, readAndWrite)).toBe(true);
         expect(decoder).toHaveBeenCalledTimes(1);
         expect(converter).not.toHaveBeenCalled();
+
+        const strings: FilterSubstring[] = [
+            { initial: _encodePrintableString("hello", DER) },
+        ];
+        expect(match(strings, value, undefined, readAndWrite)).toBe(true);
+        expect(match(strings, value, undefined, readAndWrite)).toBe(true);
+        expect(converter).toHaveBeenCalledTimes(1);
+        expect(decoder).toHaveBeenCalledTimes(1);
     });
 });
