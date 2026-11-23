@@ -428,24 +428,18 @@ function selectFromEntry (
                 return typeAndContextAssertions.every((taca): boolean => {
                     if ("all" in taca.contextAssertions) {
                         for (const ca of taca.contextAssertions.all) {
-                            if (evaluateContextAssertion(
+                            const eval1 = evaluateContextAssertion(
                                 ca,
                                 contexts,
                                 getContextMatcher,
                                 determineAbsentMatch,
-                            )) {
+                            );
+                            if (eval1) {
                                 continue;
                             }
                             // This value failed (a) and (b). If it has no fallback
                             // of this type, it cannot match via (c).
-                            let hasFallback = false;
-                            for (let j = 0; j < contexts.length; j++) {
-                                const c = contexts[j];
-                                if (c.contextType.isEqualTo(ca.contextType) && c.fallback) {
-                                    hasFallback = true;
-                                    break;
-                                }
-                            }
+                            const hasFallback = (eval1 === null);
                             if (!hasFallback) {
                                 return false;
                             }
@@ -468,7 +462,7 @@ function selectFromEntry (
                         const preferred: number = taca.contextAssertions.preference
                             // Slice so we don't repeatedly retry already superseded assertions.
                             .slice(0, ((existingPreference > -1) ? existingPreference : Infinity))
-                            .findIndex((ca: ContextAssertion): boolean => evaluateContextAssertion(
+                            .findIndex((ca: ContextAssertion): boolean => !!evaluateContextAssertion(
                                 ca,
                                 contexts,
                                 getContextMatcher,
@@ -524,7 +518,7 @@ function selectFromEntry (
                     assert(prefIndex > -1);
                     const pref = taca.contextAssertions.preference[prefIndex];
                     assert(pref);
-                    return evaluateContextAssertion(
+                    return !!evaluateContextAssertion(
                         pref,
                         contexts,
                         getContextMatcher,
