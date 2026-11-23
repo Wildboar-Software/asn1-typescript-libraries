@@ -69,7 +69,7 @@ describe("evaluateContextAssertion", () => {
             contexts,
             () => stringContext,
             () => true,
-        )).toBe(true);
+        )).toBeTruthy();
         expect(evaluateContextAssertion(
             assertion(FR),
             contexts,
@@ -85,7 +85,7 @@ describe("evaluateContextAssertion", () => {
             contexts,
             () => stringContext,
             () => true,
-        )).toBe(false);
+        )).toBeFalsy();
     });
 
     it("matches unrecognized context types by comparing encodings", () => {
@@ -95,7 +95,7 @@ describe("evaluateContextAssertion", () => {
             contexts,
             () => undefined,
             () => true,
-        )).toBe(true);
+        )).toBeTruthy()
         expect(evaluateContextAssertion(
             assertion(FR),
             contexts,

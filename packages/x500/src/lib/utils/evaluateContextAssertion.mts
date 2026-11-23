@@ -48,7 +48,12 @@ const compareElementsContextMatcher: ContextMatcher = (assertion, values) => {
  * @param {Function} getEqualityMatcher Equality matcher lookup passed through
  *  to the context matcher for nested distinguished-name comparison
  * @param {number} flags Matching flags passed through to the context matcher
- * @returns {Boolean} `true` if the context assertion matches
+ * @returns the matching context, if there is one, otherwise `true` if the
+ *  context type is absent-matching, otherwise `undefined` if iteration limits
+ *  were exceeded, otherwise `null` if the context that did not match had
+ *  `fallback` set to `TRUE`, otherwise `false`. Despite all these return value
+ *  types, you can still interpret a truthy return value as "matched" and a
+ *  falsey one as "not matched".
  * @function
  */
 export
@@ -59,9 +64,8 @@ function evaluateContextAssertion (
     determineAbsentMatch: (contextType: OBJECT_IDENTIFIER) => boolean,
     getEqualityMatcher?: (attributeType: OBJECT_IDENTIFIER) => Matcher | undefined,
     flags: number = 0,
-): boolean {
+): Context | boolean | null | undefined {
     const matcher = getContextMatcher(ca.contextType) ?? compareElementsContextMatcher;
-    let hadContextOfAssertedType = false;
     const constantTime = flags & MATCH_FLAG_CONSTANT_TIME;
     // Denial-of-service protection: limit the number of assertions.
     const max = Math.min(
@@ -70,7 +74,8 @@ function evaluateContextAssertion (
             ? 1000
             : 100
     );
-    let matched = false;
+    let contextOfAssertedType: Context | undefined;
+    let matched: boolean | undefined = false;
     for (let i = 0; i < contexts.length; i++) {
         const context = contexts[i];
         if (!context.contextType.isEqualTo(ca.contextType)) {
@@ -79,14 +84,24 @@ function evaluateContextAssertion (
         if (context.contextValues.length === 0) {
             break;
         }
-        hadContextOfAssertedType = true;
-        for (let j = 0; j < max; j++) {
+        contextOfAssertedType = context;
+        for (let j = 0; j < ca.contextValues.length; j++) {
+            if (j >= max) {
+                return undefined;
+            }
             const assertedValue = ca.contextValues[j];
             const storedValues = (context.contextValues.length > max)
                 ? context.contextValues.slice(0, max)
                 : context.contextValues;
-            if (matcher(assertedValue, storedValues.values(), getEqualityMatcher, flags)) {
-                matched = true;
+            try {
+                if (matcher(assertedValue, storedValues.values(), getEqualityMatcher, flags)) {
+                    matched = true;
+                    if (!constantTime) {
+                        break;
+                    }
+                }
+            } catch {
+                matched = undefined;
                 if (!constantTime) {
                     break;
                 }
@@ -96,9 +111,15 @@ function evaluateContextAssertion (
             break;
         }
     }
+    if (matched === undefined) {
+        return undefined;
+    }
+    if (matched === true) {
+        return contextOfAssertedType;
+    }
     // A ContextAssertion is true for a particular attribute value if:
     // b) the attribute value contains no contexts of the asserted contextType; or
-    if (!hadContextOfAssertedType) {
+    if (!contextOfAssertedType) {
         /**
          * This is not documented in the section describing `ContextAssertion`s,
          * but rather, in the definition of a context type, in Section 13.9.2 of
@@ -106,7 +127,7 @@ function evaluateContextAssertion (
          */
         return determineAbsentMatch(ca.contextType);
     }
-    return matched;
+    return contextOfAssertedType?.fallback ? null : matched;
 }
 
 export default evaluateContextAssertion;

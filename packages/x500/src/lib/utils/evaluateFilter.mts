@@ -307,7 +307,7 @@ function contextAssertionMatches (
     ca: ContextAssertion,
     contexts: readonly Context[],
     options: EvaluateFilterSettings,
-): boolean | undefined {
+): Context | boolean | null | undefined {
     try {
         return evaluateContextAssertion(
             ca,
@@ -346,7 +346,7 @@ function attributeHasDirectContextMatch (
         // With no contexts, the assertion is governed by the context type's
         // absentMatch setting; the encoded attribute values are not examined.
         const result = contextAssertionMatches(ca, NO_CONTEXTS, options);
-        if (result === true) {
+        if (result) {
             byAssertion.set(ca, true);
             return true;
         }
@@ -354,7 +354,7 @@ function attributeHasDirectContextMatch (
     }
     for (const vwc of attribute.valuesWithContext ?? []) {
         const result = contextAssertionMatches(ca, vwc.contextList, options);
-        if (result === true) {
+        if (result) {
             byAssertion.set(ca, true);
             return true;
         }
@@ -389,18 +389,11 @@ function valueSatisfiesSelectedContexts (
         const ca = selectedContexts[i];
         // (a) stored context of this type matches, or (b) no context of this type.
         const directMatch = contextAssertionMatches(ca, valueContexts, options);
-        if (directMatch === true) {
+        if (directMatch) {
             continue;
         }
         // If this value has no fallback of this type, do not consult siblings.
-        let hasFallback = false;
-        for (let j = 0; j < valueContexts.length; j++) {
-            const c = valueContexts[j];
-            if (c.contextType.isEqualTo(ca.contextType) && c.fallback) {
-                hasFallback = true;
-                break;
-            }
-        }
+        const hasFallback = (directMatch === null);
         // X.501 §8.9.2.4 (c): fallback applies only if **none** of the
         // attribute's values already satisfied the assertion via (a) or (b).
         if (hasFallback) {
@@ -413,7 +406,7 @@ function valueSatisfiesSelectedContexts (
                 continue;
             }
         }
-        if (directMatch === false) {
+        if (directMatch === false || directMatch === null) {
             return false;
         }
         // Continue checking: a definite FALSE assertion dominates UNDEFINED.
@@ -468,7 +461,7 @@ function selectAttributeValues (
         // We still have to check this for context-less values, due to absent
         // match settings.
         const result = valueSatisfiesSelectedContexts(selectedContexts, NO_CONTEXTS, attribute, options, directMatchCache);
-        if (result !== true) {
+        if (!result) {
             selectedValues = [];
             if (result === undefined) {
                 indeterminate = new Attribute(attribute.type_, permitted.values, []);
