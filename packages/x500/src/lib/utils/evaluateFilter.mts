@@ -572,6 +572,74 @@ function matcherForItem (
 }
 
 /**
+ * Look up the governing `RequestAttribute` profile for an asserted `type_` per
+ * ITU-T Rec. X.501 (2019), Sections 16.6 and 16.10.2:
+ * - First check for a direct profile for `type_`.
+ * - Otherwise, check for a supertype profile with `includeSubtypes: TRUE`,
+ *   preferring the most specific supertype if multiple supertypes match.
+ * - Friend attributes do not inherit or supply `RequestAttribute` profiles
+ *   (X.501 Section 8.7).
+ */
+function findRequestAttributeProfile (
+    type_: AttributeType,
+    reqAttrs: Map<string, RequestAttribute>,
+    options: EvaluateFilterSettings,
+): RequestAttribute | undefined {
+    const direct = reqAttrs.get(type_.toString());
+    if (direct) {
+        return direct;
+    }
+    let best: RequestAttribute | undefined;
+    for (const candidate of reqAttrs.values()) {
+        if (candidate.attributeType.isEqualTo(type_)) {
+            return candidate;
+        }
+        if (
+            !candidate.includeSubtypes
+            || !options.isAttributeSubtype(type_, candidate.attributeType)
+        ) {
+            continue;
+        }
+        if (
+            !best
+            || (
+                options.isAttributeSubtype(candidate.attributeType, best.attributeType)
+                && !options.isAttributeSubtype(best.attributeType, candidate.attributeType)
+            )
+        ) {
+            best = candidate;
+        }
+    }
+    return best;
+}
+
+function evaluateProfileDefaults (
+    profile: RequestAttribute,
+    matcher: Matcher,
+    assertion: FilterAssertion,
+    options: EvaluateFilterSettings,
+    flags: number,
+): boolean | undefined {
+    if (!profile.defaultValues) {
+        return false;
+    }
+    if (profile.defaultValues.length === 0) {
+        // X.501 §16.10.2.d: an empty defaultValues sequence takes all possible values.
+        return true;
+    }
+    // NOTE: This does not consider entryType at all, because it is undocumented entirely.
+    const defaultValues = profile.defaultValues.flatMap((dv) => dv.values);
+    return matchAttribute(
+        matcher,
+        assertion,
+        new Attribute(profile.attributeType, defaultValues),
+        options,
+        undefined,
+        flags,
+    );
+}
+
+/**
  * Evaluate an equality, ordering, substrings, or approximate filter item.
  *
  * `flags` is what distinguishes the element assertions:
@@ -618,20 +686,9 @@ function evaluateFilterAssertion (
     // Determine presence before value permissions and context selection:
     // an unusable stored attribute is still present and cannot use defaults.
     if ((relevantAttributes.length === 0) && options?.requestAttributes?.size) {
-        const req_attrs = options.requestAttributes;
-        // NOTE: This does NOT check parent types of the asserted value.
-        const profiled_type: AttributeType | undefined = friendTypes
-            .find((rattr) => req_attrs.has(rattr.toString()));
-        // "" will never match anything. It's just to make this a one-liner.
-        const profile = req_attrs.get(profiled_type?.toString() ?? "");
-        if (profile?.defaultValues) {
-            if (profile.defaultValues.length === 0) {
-                // No matched values are returned intentionally, since these are defaults.
-                return true;
-            }
-            // NOTE: This does not consider entryType at all, because it is undocumented entirely.
-            const default_values = profile.defaultValues.flatMap((dv) => dv.values);
-            const result = matchAttribute(matcher, assertion, new Attribute(profile.attributeType, default_values), options, undefined, flags);
+        const profile = findRequestAttributeProfile(type_, options.requestAttributes, options);
+        if (profile && (substrings || options.permittedToMatch(profile.attributeType))) {
+            const result = evaluateProfileDefaults(profile, matcher, assertion, options, flags);
             indeterminate ||= result === undefined;
             if (result === true) {
                 // No matched values are returned intentionally, since these are defaults.
@@ -806,69 +863,21 @@ function evaluateMatchingRuleAssertion (
     };
     // X.511 7.8.2: validate each selected attribute's actual type as well as
     // the asserted type, including friends, subtypes, and DN attributes.
+    // X.501 16.6: when `type_` is omitted under a governing search-rule,
+    // restrict evaluation to attributes represented by a request-attribute-profile.
     const selectedAttributes = mra.type_
         ? attributes
             .filter((attr): boolean => friendTypes.some((f) => options.isAttributeSubtype(attr.type_, f)))
-        : attributes;
+        : options.requestAttributes
+            ? attributes
+                .filter((attr): boolean => findRequestAttributeProfile(attr.type_, options.requestAttributes!, options) !== undefined)
+            : attributes;
     const relevantAttributes = selectedAttributes.filter((attr) => (
         options.permittedToMatch(attr.type_) && isCompatibleCandidate(attr.type_)
     ));
     const matchedValues: Attribute[] = [];
     let matched = false;
-    if (relevantAttributes.length === 0) {
-        // Service-profile defaults must satisfy the same applicability check.
-        // Skip an incompatible friend's profile rather than accepting its
-        // values (or its unconditional, empty default-value set).
-        const profile = friendTypes
-            .map((type) => options.requestAttributes?.get(type.toString()))
-            .find((candidate) => candidate
-                && options.permittedToMatch(candidate.attributeType)
-                && isCompatibleCandidate(candidate.attributeType));
-        if (profile?.defaultValues) {
-            if (profile.defaultValues.length === 0) {
-                // No matched values are returned intentionally, since these are defaults.
-                return true;
-            }
-            // NOTE: This does not consider entryType at all, because it is undocumented entirely.
-            const default_values = profile.defaultValues.flatMap((dv) => dv.values);
-            const result = matchAttribute(matcher, mra.matchValue, new Attribute(profile.attributeType, default_values), options, undefined);
-            indeterminate ||= result === undefined;
-            if (result === true) {
-                // No matched values are returned intentionally, since these are defaults.
-                return true;
-            }
-        }
-        // I, Jonathan M. Wilbur, do not understand the following AI-generated
-        // code (region with heavy comments). I am still going to let this in
-        // just on the grounds that this is a rarely used code path: using
-        // extensibleMatch and getting it very wrong.
-
-        // No permitted, compatible stored attributes reached this branch.
-        // !profile also rules out a permitted, compatible service profile.
-        // With neither, applicability has not been established if:
-        // - a selected attribute/profile was explicitly rejected as incompatible; or
-        // - type_ was omitted, so no asserted type was checked up front.
-        // This is different from a defined comparison that simply found no match.
-        if (!profile && (incompatibleCandidateFound || !mra.type_)) {
-            // performExactly rejects observed incompatibility. For an untyped
-            // assertion, also retain the existing error when entry/DN attributes
-            // were present but none could be used. An empty untyped search with
-            // no incompatible profile has no observed use to reject.
-            if (options.performExactly && (incompatibleCandidateFound || attributes.length > 0)) {
-                throw new CannotPerformExactly(rule.toString());
-            }
-            // Return UNDEFINED, not [] (FALSE), so NOT cannot turn this lack
-            // of an applicable comparison into a successful match.
-            return undefined;
-        }
-        // A compatible explicit type or profile established applicability;
-        // preserve an ordinary non-match, or an indeterminate matcher result.
-        return indeterminate ? undefined : [];
-    }
     for (const attr of relevantAttributes) {
-        if (!options.permittedToMatch(attr.type_)) {
-            continue;
-        }
         const result = matchAttribute(matcher, mra.matchValue, attr, options, matchedValues);
         indeterminate ||= result === undefined;
         if (result === true) {
@@ -880,6 +889,77 @@ function evaluateMatchingRuleAssertion (
     }
     if (matched) {
         return matchedValues.length > 0 ? matchedValues : true;
+    }
+
+    let compatibleProfileFound = false;
+    if (mra.type_) {
+        // If the attribute is absent from the entry, AND there are request-attribute profiles,
+        if ((selectedAttributes.length === 0) && options.requestAttributes?.size) {
+            const profile = findRequestAttributeProfile(mra.type_, options.requestAttributes, options);
+            if (
+                profile
+                && options.permittedToMatch(profile.attributeType)
+                && isCompatibleCandidate(profile.attributeType)
+            ) {
+                compatibleProfileFound = true;
+                const result = evaluateProfileDefaults(profile, matcher, mra.matchValue, options, 0);
+                indeterminate ||= result === undefined;
+                if (result === true) {
+                    // No matched values are returned intentionally, since these are defaults.
+                    return true;
+                }
+            }
+        }
+    // If the user did not specify a type, but there are request attribute
+    // profiles that can supply defaults, check if they are compatible and use
+    // them if so.
+    } else if (options.requestAttributes) {
+        for (const profile of options.requestAttributes.values()) {
+            if (
+                !options.permittedToMatch(profile.attributeType)
+                || !isCompatibleCandidate(profile.attributeType)
+            ) {
+                continue;
+            }
+            compatibleProfileFound = true;
+            const presentInEntry = selectedAttributes.some((attr) => (
+                profile.includeSubtypes
+                    ? options.isAttributeSubtype(attr.type_, profile.attributeType)
+                    : attr.type_.isEqualTo(profile.attributeType)
+            ));
+            if (presentInEntry) {
+                continue;
+            }
+            const result = evaluateProfileDefaults(profile, matcher, mra.matchValue, options, 0);
+            indeterminate ||= result === undefined;
+            if (result === true) {
+                // No matched values are returned intentionally, since these are defaults.
+                return true;
+            }
+        }
+    }
+
+    if (
+        // All attributes were filtered out by compatibility or access control
+        (relevantAttributes.length === 0)
+        // No compatible profile was found
+        && !compatibleProfileFound
+        // An incompatible candidate was found, or no type was specified
+        && (incompatibleCandidateFound || !mra.type_)
+    ) {
+        if (
+            options.performExactly
+            && (
+                incompatibleCandidateFound
+                // Only reachable if all were not permitted to match
+                || (selectedAttributes.length > 0)
+            )
+        ) {
+            throw new CannotPerformExactly(
+                "01a20d41-27a5-7257-962f-77A363F4630A: CANNOT_PERFORM_EXACTLY_INDETERMINATE: "
+                + rule.toString());
+        }
+        return undefined;
     }
     return indeterminate ? undefined : [];
 }

@@ -935,18 +935,28 @@ describe("extensible matching-rule applicability (M4)", () => {
             }
         });
 
-        it("checks default-profile compatibility, including empty default-value sets", () => {
+        it("checks default-profile compatibility on includeSubtypes supertypes and untyped profiles, including empty default-value sets", () => {
+            const subtypeExtensible: Filter = { item: { extensibleMatch: new MatchingRuleAssertion([RULE], subtype, value("assertion")) } };
+            const untypedExtensible: Filter = { item: { extensibleMatch: new MatchingRuleAssertion([RULE], undefined, value("assertion")) } };
+            const entries = [new EntryInformation({ rdnSequence: [] })];
             for (const defaultValues of [[], [new RequestAttribute_defaultValues_Item(undefined, [value("true")])]]) {
-                const options = {
+                const supertypeOptions = {
+                    ...applicabilitySettings([subtype], performExactly),
+                    requestAttributes: new Map([[TYPE.toString(), new RequestAttribute(TYPE, true, undefined, defaultValues)]]),
+                };
+                const untypedOptions = {
                     ...applicabilitySettings([TYPE], performExactly),
                     requestAttributes: new Map([[friend.toString(), new RequestAttribute(friend, undefined, undefined, defaultValues)]]),
                 };
-                const entries = [new EntryInformation({ rdnSequence: [] })];
                 if (performExactly) {
-                    expect(() => evaluateFilter(extensible(), entries, options)).toThrow(CannotPerformExactly);
+                    expect(() => evaluateFilter(subtypeExtensible, entries, supertypeOptions)).toThrow(CannotPerformExactly);
+                    expect(() => evaluateFilter(untypedExtensible, entries, untypedOptions)).toThrow(CannotPerformExactly);
                 } else {
-                    expect(evaluateFilter(extensible(), entries, options).matched).toBeUndefined();
+                    expect(evaluateFilter(subtypeExtensible, entries, supertypeOptions).matched).toBeUndefined();
+                    expect(evaluateFilter(untypedExtensible, entries, untypedOptions).matched).toBeUndefined();
                 }
+                // A friend's RequestAttribute profile does not apply to a typed assertion on TYPE (X.501 §8.7, §16.10.2).
+                expect(evaluateFilter(extensible(), entries, untypedOptions).matched).toBe(false);
             }
         });
 
@@ -981,30 +991,59 @@ describe("extensible matching-rule applicability (M4)", () => {
         expect([...result.contributingEntries]).toEqual([0]);
     });
 
-    it("still permits compatible default profiles", () => {
-        const options = {
+    it("permits compatible direct and includeSubtypes supertype default profiles, but ignores friend profiles", () => {
+        const subtypeExtensible: Filter = { item: { extensibleMatch: new MatchingRuleAssertion([RULE], subtype, value("assertion")) } };
+        const entries = [new EntryInformation({ rdnSequence: [] })];
+        const supertypeDefaults = {
+            ...applicabilitySettings(selectedTypes, true),
+            requestAttributes: new Map([[TYPE.toString(), new RequestAttribute(TYPE, true, undefined, [
+                new RequestAttribute_defaultValues_Item(undefined, [value("true")]),
+            ])]]),
+        };
+        expect(evaluateFilter(subtypeExtensible, entries, supertypeDefaults).matched).toBe(true);
+
+        const withoutIncludeSubtypes = {
+            ...applicabilitySettings(selectedTypes, true),
+            requestAttributes: new Map([[TYPE.toString(), new RequestAttribute(TYPE, false, undefined, [
+                new RequestAttribute_defaultValues_Item(undefined, [value("true")]),
+            ])]]),
+        };
+        expect(evaluateFilter(subtypeExtensible, entries, withoutIncludeSubtypes).matched).toBe(false);
+
+        const friendDefaults = {
             ...applicabilitySettings(selectedTypes, true),
             requestAttributes: new Map([[friend.toString(), new RequestAttribute(friend, undefined, undefined, [
                 new RequestAttribute_defaultValues_Item(undefined, [value("true")]),
             ])]]),
         };
-        expect(evaluateFilter(extensible(), [new EntryInformation({ rdnSequence: [] })], options).matched).toBe(true);
+        expect(evaluateFilter(extensible(), entries, friendDefaults).matched).toBe(false);
     });
 
-    it.each([false, true])("can use a compatible default profile after skipping an incompatible friend, performExactly=%s", (performExactly) => {
+    it.each([false, true])("evaluates all compatible requestAttributes profiles for untyped extensibleMatch, performExactly=%s", (performExactly) => {
+        const untypedExtensible: Filter = { item: { extensibleMatch: new MatchingRuleAssertion([RULE], undefined, value("assertion")) } };
+        const unprofiled = ObjectIdentifier.fromString("1.2.3.99");
         const options = {
-            ...applicabilitySettings([TYPE, subtype], performExactly),
-            getFriends: () => [friend, subtype],
+            ...applicabilitySettings([TYPE, subtype, unprofiled], performExactly),
             requestAttributes: new Map([
                 [friend.toString(), new RequestAttribute(friend, undefined, undefined, [
-                    new RequestAttribute_defaultValues_Item(undefined, [value("false")]),
+                    new RequestAttribute_defaultValues_Item(undefined, [value("true")]),
                 ])],
+                [TYPE.toString(), new RequestAttribute(TYPE, undefined, undefined, undefined)],
                 [subtype.toString(), new RequestAttribute(subtype, undefined, undefined, [
                     new RequestAttribute_defaultValues_Item(undefined, [value("true")]),
                 ])],
             ]),
         };
-        expect(evaluateFilter(extensible(), [new EntryInformation({ rdnSequence: [] })], options).matched).toBe(true);
+        // Skips incompatible `friend` and default-less `TYPE` to match `subtype` defaults.
+        expect(evaluateFilter(untypedExtensible, [new EntryInformation({ rdnSequence: [] })], options).matched).toBe(true);
+        // Stored `TYPE` = "false" does not block absent `subtype`'s defaults from matching.
+        expect(evaluateFilter(untypedExtensible, [entry(TYPE, "false")], options).matched).toBe(true);
+        // Stored `subtype` = "false" prevents `subtype` defaults from being used, and unprofiled attributes are ignored (X.501 §16.6).
+        const nonMatchingEntry = new EntryInformation({ rdnSequence: [] }, true, [
+            entry(subtype, "false").information![0],
+            entry(unprofiled, "true").information![0],
+        ]);
+        expect(evaluateFilter(untypedExtensible, [nonMatchingEntry], options).matched).toBe(false);
     });
 });
 
@@ -1067,5 +1106,71 @@ describe("contextPresent with matchedValuesOnly (X.511 §11.2.2.a)", () => {
         const negResult = evaluateFilter({ not: filter }, [nonMatchingEntry], options);
         expect(negResult.matched).toBe(true);
         expect(negResult.matchedValues).toBeUndefined();
+    });
+});
+
+describe("requestAttributes profile lookup (X.501 §8.7, §16.6, §16.10.2)", () => {
+    const grandparent = ObjectIdentifier.fromString("1.2.3.10");
+    const parent = ObjectIdentifier.fromString("1.2.3.11");
+    const friend = ObjectIdentifier.fromString("1.2.3.12");
+    const emptyEntries = [new EntryInformation({ rdnSequence: [] })];
+
+    const hierarchySubtype: EvaluateFilterSettings["isAttributeSubtype"] = (a, b) => (
+        a.isEqualTo(b)
+        || (a.isEqualTo(TYPE) && (b.isEqualTo(parent) || b.isEqualTo(grandparent)))
+        || (a.isEqualTo(parent) && b.isEqualTo(grandparent))
+    );
+
+    describe.each<Kind>(["equality", "approximateMatch", "greaterOrEqual", "lessOrEqual", "substrings", "extensibleMatch"])("%s", (kind) => {
+        it("uses includeSubtypes supertype defaults (preferring most specific supertype) and ignores friend profiles", () => {
+            const base: EvaluateFilterSettings = {
+                ...settings(kind),
+                getFriends: () => [friend],
+                isAttributeSubtype: hierarchySubtype,
+            };
+
+            // Friend profiles never supply defaults (even empty `[]` all-values defaults or invalid values).
+            for (const friendDefaults of [[], [new RequestAttribute_defaultValues_Item(undefined, [value("throw")])]]) {
+                const withFriendProfile: EvaluateFilterSettings = {
+                    ...base,
+                    requestAttributes: new Map([[friend.toString(), new RequestAttribute(friend, true, undefined, friendDefaults)]]),
+                };
+                expect(evaluateFilter(leaf(kind), emptyEntries, withFriendProfile).matched).toBe(false);
+            }
+
+            // Supertype without includeSubtypes does not apply to subtype TYPE.
+            const withoutSubtypes: EvaluateFilterSettings = {
+                ...base,
+                requestAttributes: new Map([[parent.toString(), new RequestAttribute(parent, undefined, undefined, [])]]),
+            };
+            expect(evaluateFilter(leaf(kind), emptyEntries, withoutSubtypes).matched).toBe(false);
+
+            // Most specific includeSubtypes supertype (`parent`) wins over `grandparent` regardless of Map order.
+            const parentProfile = new RequestAttribute(parent, true, undefined, [
+                new RequestAttribute_defaultValues_Item(undefined, [value("true")]),
+            ]);
+            const grandparentProfile = new RequestAttribute(grandparent, true, undefined, [
+                new RequestAttribute_defaultValues_Item(undefined, [value("false")]),
+            ]);
+            for (const entries of [
+                [[parent.toString(), parentProfile], [grandparent.toString(), grandparentProfile]] as const,
+                [[grandparent.toString(), grandparentProfile], [parent.toString(), parentProfile]] as const,
+            ]) {
+                expect(evaluateFilter(leaf(kind), emptyEntries, {
+                    ...base,
+                    requestAttributes: new Map(entries),
+                }).matched).toBe(true);
+            }
+
+            // A direct profile for TYPE (even without defaultValues) overrides a supertype profile.
+            const overridden: EvaluateFilterSettings = {
+                ...base,
+                requestAttributes: new Map([
+                    [parent.toString(), parentProfile],
+                    [TYPE.toString(), new RequestAttribute(TYPE)],
+                ]),
+            };
+            expect(evaluateFilter(leaf(kind), emptyEntries, overridden).matched).toBe(false);
+        });
     });
 });
