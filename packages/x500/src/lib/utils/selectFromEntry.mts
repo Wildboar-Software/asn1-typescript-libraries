@@ -299,54 +299,109 @@ function selectFromEntry (
         ? groupByOID(eis.contextSelection.selectedContexts, (sc) => sc.type_)
         : undefined;
 
-    // TODO: Pre-allocate this array.
-    const selectedByType: Attribute[] = [];
     const einfo = entry.information ?? [];
-    for (let i = 0; i < einfo.length; i++) {
-        const info = einfo[i];
-        let attributeType!: OBJECT_IDENTIFIER;
-        if ("attributeType" in info) {
-            attributeType = info.attributeType;
-        } else if ("attribute" in info) {
-            attributeType = info.attribute.type_;
-        } else {
-            continue;
-        }
-        const isOperational = isOperationalAttribute(attributeType);
-        const supertypes = getAttributeSupertypes(attributeType);
-        if (isOperational) {
-            if (
-                eis.extraAttributes
-                && ("allOperationalAttributes" in eis.extraAttributes)
-            ) {
-                const attr = Attribute.fromEntryInfoItem(info);
-                attr && selectedByType.push(attr);
+    // Every recognized item is kept when all user and all operational
+    // attributes are requested, so the result can be filled by index.
+    // When selection can drop items, pushing into a packed array is faster
+    // than allocating that upper bound and shrinking it.
+    const keepAllRecognized = !attributes
+        && !!eis.extraAttributes
+        && ("allOperationalAttributes" in eis.extraAttributes);
+    let selectedByType: Attribute[];
+    if (keepAllRecognized) {
+        const n = einfo.length;
+        selectedByType = new Array(n);
+        let count = 0;
+        let i = 0;
+        for (; i < n; i++) {
+            const info = einfo[i];
+            let attributeType!: OBJECT_IDENTIFIER;
+            if ("attributeType" in info) {
+                attributeType = info.attributeType;
+            } else if ("attribute" in info) {
+                attributeType = info.attribute.type_;
+            } else {
+                break;
             }
-            if (extraAttributes) {
-                const has = [
-                    attributeType,
-                    ...supertypes,
-                ].some((type_) => extraAttributes.has(type_.toString()));
-                if (has) {
-                    const attr = Attribute.fromEntryInfoItem(info);
-                    attr && selectedByType.push(attr);
+            // Results are unused when every attribute is requested, but the
+            // callbacks still run so callers observe the same invocations.
+            isOperationalAttribute(attributeType);
+            getAttributeSupertypes(attributeType);
+            const attr = Attribute.fromEntryInfoItem(info);
+            if (!attr) {
+                break;
+            }
+            selectedByType[i] = attr;
+            count++;
+        }
+        if (count !== n) {
+            for (let j = i + 1; j < n; j++) {
+                const info = einfo[j];
+                let attributeType!: OBJECT_IDENTIFIER;
+                if ("attributeType" in info) {
+                    attributeType = info.attributeType;
+                } else if ("attribute" in info) {
+                    attributeType = info.attribute.type_;
+                } else {
+                    continue;
                 }
+                isOperationalAttribute(attributeType);
+                getAttributeSupertypes(attributeType);
+                const attr = Attribute.fromEntryInfoItem(info);
+                if (attr) {
+                    selectedByType[count++] = attr;
+                }
+            }
+            selectedByType.length = count;
+        }
+    } else {
+        selectedByType = [];
+        for (let i = 0; i < einfo.length; i++) {
+            const info = einfo[i];
+            let attributeType!: OBJECT_IDENTIFIER;
+            if ("attributeType" in info) {
+                attributeType = info.attributeType;
+            } else if ("attribute" in info) {
+                attributeType = info.attribute.type_;
             } else {
                 continue;
             }
-        } else {
-            if (attributes) {
-                const has = [
-                    attributeType,
-                    ...supertypes,
-                ].some((type_) => attributes.has(type_.toString()));
-                if (has) {
+            const isOperational = isOperationalAttribute(attributeType);
+            const supertypes = getAttributeSupertypes(attributeType);
+            if (isOperational) {
+                if (
+                    eis.extraAttributes
+                    && ("allOperationalAttributes" in eis.extraAttributes)
+                ) {
                     const attr = Attribute.fromEntryInfoItem(info);
                     attr && selectedByType.push(attr);
                 }
+                if (extraAttributes) {
+                    const has = [
+                        attributeType,
+                        ...supertypes,
+                    ].some((type_) => extraAttributes.has(type_.toString()));
+                    if (has) {
+                        const attr = Attribute.fromEntryInfoItem(info);
+                        attr && selectedByType.push(attr);
+                    }
+                } else {
+                    continue;
+                }
             } else {
-                const attr = Attribute.fromEntryInfoItem(info);
-                attr && selectedByType.push(attr);
+                if (attributes) {
+                    const has = [
+                        attributeType,
+                        ...supertypes,
+                    ].some((type_) => attributes.has(type_.toString()));
+                    if (has) {
+                        const attr = Attribute.fromEntryInfoItem(info);
+                        attr && selectedByType.push(attr);
+                    }
+                } else {
+                    const attr = Attribute.fromEntryInfoItem(info);
+                    attr && selectedByType.push(attr);
+                }
             }
         }
     }
@@ -452,13 +507,24 @@ function selectFromEntry (
         attributesSelectedByContext = afterPreference;
     }
 
-    // TODO: Pre-allocate this array.
-    const infos: EntryInformation_information_Item[] = [];
-    for (const attr of attributesSelectedByContext) {
-        const info = attributeToInformationItem(attr, infoTypes, eis.returnContexts);
-        if (info) {
-            infos.push(info);
+    // The two defined infoTypes always yield one item per attribute. Any other
+    // infoTypes yields none. Exact index assignment is faster than push.
+    const selectedCount = attributesSelectedByContext.length;
+    let infos: EntryInformation_information_Item[];
+    if (
+        infoTypes === EntryInformationSelection_infoTypes_attributeTypesOnly
+        || infoTypes === EntryInformationSelection_infoTypes_attributeTypesAndValues
+    ) {
+        infos = new Array(selectedCount);
+        for (let i = 0; i < selectedCount; i++) {
+            infos[i] = attributeToInformationItem(
+                attributesSelectedByContext[i],
+                infoTypes,
+                eis.returnContexts,
+            )!;
         }
+    } else {
+        infos = [];
     }
 
     return new EntryInformation(

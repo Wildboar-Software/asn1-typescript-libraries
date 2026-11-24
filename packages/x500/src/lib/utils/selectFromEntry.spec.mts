@@ -1,4 +1,4 @@
-import { ObjectIdentifier } from "@wildboar/asn1";
+import { DERElement, ObjectIdentifier } from "@wildboar/asn1";
 import { DER, _encodeGeneralizedTime, _encodeUTF8String } from "@wildboar/asn1/functional";
 import {
     EntryInformationSelection,
@@ -147,5 +147,52 @@ describe("selectFromEntry defaults (M24)", () => {
             ? new Attribute(commonName, [plainValue], [contextual])
             : new Attribute(commonName, [plainValue, contextualValue]),
         }]);
+    });
+
+    it("keeps every recognized attribute, including past an extension, when all operational attributes are requested", () => {
+        const extension = new DERElement();
+        extension.integer = 7;
+        const first = _encodeUTF8String("Alice", DER);
+        const second = _encodeUTF8String("Alicia", DER);
+        const stamp = _encodeGeneralizedTime(new Date("2026-01-01T00:00:00Z"), DER);
+        const seen: string[] = [];
+        const entry = new EntryInformation({ rdnSequence: [] }, true, [
+            { attribute: new Attribute(commonName, [first]) },
+            extension,
+            { attribute: new Attribute(commonName, [second]) },
+            { attribute: new Attribute(createTimestamp, [stamp]) },
+        ]);
+        const result = selectFromEntry(
+            new EntryInformationSelection(undefined, undefined, { allOperationalAttributes: null }),
+            entry,
+            () => undefined,
+            () => undefined,
+            (type) => {
+                seen.push(type.toString());
+                return type.isEqualTo(createTimestamp);
+            },
+            () => [],
+            () => true,
+        );
+        expect(result.information).toEqual([
+            { attribute: new Attribute(commonName, [first, second]) },
+            { attribute: new Attribute(createTimestamp, [stamp]) },
+        ]);
+        expect(seen).toEqual([
+            commonName.toString(),
+            commonName.toString(),
+            createTimestamp.toString(),
+        ]);
+    });
+
+    it("returns no attribute information for an infoTypes alternative other than types or types and values", () => {
+        const entry = new EntryInformation({ rdnSequence: [] }, true, [
+            { attribute: new Attribute(commonName, [_encodeUTF8String("Alice", DER)]) },
+        ]);
+        const result = selectFromEntry(
+            new EntryInformationSelection(undefined, 2),
+            entry, () => undefined, () => undefined, () => false, () => [], () => true,
+        );
+        expect(result.information).toEqual([]);
     });
 });
