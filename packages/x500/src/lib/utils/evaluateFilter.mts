@@ -25,7 +25,7 @@ import type {
 import {
     Attribute,
 } from "../modules/InformationFramework/Attribute.ta.mjs";
-import type {
+import {
     EntryInformation,
 } from "../modules/DirectoryAbstractService/EntryInformation.ta.mjs";
 import type {
@@ -639,6 +639,8 @@ function evaluateProfileDefaults (
     );
 }
 
+type FilterItemEvalMode = "all" | "stored" | "defaults";
+
 /**
  * Evaluate an equality, ordering, substrings, or approximate filter item.
  *
@@ -659,6 +661,7 @@ function evaluateFilterAssertion (
     options: EvaluateFilterSettings,
     flags: number,
     selectedContexts?: ContextAssertion[],
+    mode: FilterItemEvalMode = "all",
 ): Attribute[] | boolean | undefined {
     let indeterminate = false;
     const rawMatcher = matcherForItem(type_, assertion, options, flags);
@@ -683,9 +686,36 @@ function evaluateFilterAssertion (
     const matchedValues: Attribute[] = [];
     let matched = false;
     const substrings = Array.isArray(assertion);
+    if (mode !== "defaults") {
+        const directMatchCache: DirectContextMatchCache = new WeakMap();
+        for (const attr of relevantAttributes) {
+            // Substrings checks permission per value. The other items also
+            // require permission on the stored attribute type.
+            if (!substrings && !options.permittedToMatch(attr.type_)) {
+                continue;
+            }
+            const result = matchAttribute(matcher, assertion, attr, options, matchedValues, flags, selectedContexts, directMatchCache);
+            indeterminate ||= result === undefined;
+            if (result === true) {
+                matched = true;
+                if (!options.matchedValuesOnly) {
+                    return matchedValues.length > 0 ? matchedValues : true;
+                }
+            }
+        }
+        if (matched) {
+            return matchedValues.length > 0 ? matchedValues : true;
+        }
+    }
     // Determine presence before value permissions and context selection:
-    // an unusable stored attribute is still present and cannot use defaults.
-    if ((relevantAttributes.length === 0) && options?.requestAttributes?.size) {
+    // an unusable stored attribute of `type_` (or subtype) is still present
+    // and cannot use defaults, whereas a non-matching friend attribute does
+    // not count as presence of `type_` (X.501 §16.10.2.d, X.511 §7.8.2).
+    if (
+        (mode !== "stored")
+        && options?.requestAttributes?.size
+        && !attributes.some((attr) => options.isAttributeSubtype(attr.type_, type_))
+    ) {
         const profile = findRequestAttributeProfile(type_, options.requestAttributes, options);
         if (profile && (substrings || options.permittedToMatch(profile.attributeType))) {
             const result = evaluateProfileDefaults(profile, matcher, assertion, options, flags);
@@ -696,25 +726,6 @@ function evaluateFilterAssertion (
             }
         }
     }
-    const directMatchCache: DirectContextMatchCache = new WeakMap();
-    for (const attr of relevantAttributes) {
-        // Substrings checks permission per value. The other items also
-        // require permission on the stored attribute type.
-        if (!substrings && !options.permittedToMatch(attr.type_)) {
-            continue;
-        }
-        const result = matchAttribute(matcher, assertion, attr, options, matchedValues, flags, selectedContexts, directMatchCache);
-        indeterminate ||= result === undefined;
-        if (result === true) {
-            matched = true;
-            if (!options.matchedValuesOnly) {
-                return matchedValues.length > 0 ? matchedValues : true;
-            }
-        }
-    }
-    if (matched) {
-        return matchedValues.length > 0 ? matchedValues : true;
-    }
     return indeterminate ? undefined : [];
 }
 
@@ -723,6 +734,7 @@ function evaluateEquality (
     ava: AttributeValueAssertion,
     entry: EntryInformation,
     options: EvaluateFilterSettings,
+    mode: FilterItemEvalMode = "all",
 ): Attribute[] | boolean | undefined {
     return evaluateFilterAssertion(
         ava.type_,
@@ -731,6 +743,7 @@ function evaluateEquality (
         options,
         0,
         assertedContexts(ava),
+        mode,
     );
 }
 
@@ -739,6 +752,7 @@ function evaluateApprox (
     ava: AttributeValueAssertion,
     entry: EntryInformation,
     options: EvaluateFilterSettings,
+    mode: FilterItemEvalMode = "all",
 ): Attribute[] | boolean | undefined {
     return evaluateFilterAssertion(
         ava.type_,
@@ -747,6 +761,7 @@ function evaluateApprox (
         options,
         MATCH_FLAG_APPROXIMATE,
         assertedContexts(ava),
+        mode,
     );
 }
 
@@ -756,6 +771,7 @@ function evaluateOrdering (
     ava: AttributeValueAssertion,
     entry: EntryInformation,
     options: EvaluateFilterSettings,
+    mode: FilterItemEvalMode = "all",
 ): Attribute[] | boolean | undefined {
     const flags = MATCH_FLAG_ORDERING_OR_EQUAL
         | (gte ? MATCH_FLAG_ORDERING_GREATER : 0);
@@ -766,6 +782,7 @@ function evaluateOrdering (
         options,
         flags,
         assertedContexts(ava),
+        mode,
     );
 }
 
@@ -774,8 +791,9 @@ function evaluateSubstring (
     sub: FilterItem_substrings,
     entry: EntryInformation,
     options: EvaluateFilterSettings,
+    mode: FilterItemEvalMode = "all",
 ): Attribute[] | boolean | undefined {
-    return evaluateFilterAssertion(sub.type_, sub.strings, entry, options, 0);
+    return evaluateFilterAssertion(sub.type_, sub.strings, entry, options, 0, undefined, mode);
 }
 
 export
@@ -805,6 +823,7 @@ function evaluateMatchingRuleAssertion (
     mra: MatchingRuleAssertion,
     entry: EntryInformation,
     options: EvaluateFilterSettings,
+    mode: FilterItemEvalMode = "all",
 ): Attribute[] | boolean | undefined {
     if (mra.type_ && !options.permittedToMatch(mra.type_)) {
         return undefined;
@@ -877,36 +896,46 @@ function evaluateMatchingRuleAssertion (
     ));
     const matchedValues: Attribute[] = [];
     let matched = false;
-    for (const attr of relevantAttributes) {
-        const result = matchAttribute(matcher, mra.matchValue, attr, options, matchedValues);
-        indeterminate ||= result === undefined;
-        if (result === true) {
-            matched = true;
-            if (!options.matchedValuesOnly) {
-                return matchedValues.length > 0 ? matchedValues : true;
+    if (mode !== "defaults") {
+        for (const attr of relevantAttributes) {
+            const result = matchAttribute(matcher, mra.matchValue, attr, options, matchedValues);
+            indeterminate ||= result === undefined;
+            if (result === true) {
+                matched = true;
+                if (!options.matchedValuesOnly) {
+                    return matchedValues.length > 0 ? matchedValues : true;
+                }
             }
         }
-    }
-    if (matched) {
-        return matchedValues.length > 0 ? matchedValues : true;
+        if (matched) {
+            return matchedValues.length > 0 ? matchedValues : true;
+        }
     }
 
     let compatibleProfileFound = false;
     if (mra.type_) {
-        // If the attribute is absent from the entry, AND there are request-attribute profiles,
-        if ((selectedAttributes.length === 0) && options.requestAttributes?.size) {
+        // If the attribute (and its subtypes) is absent from the entry, AND there are request-attribute profiles,
+        if (
+            options.requestAttributes?.size
+            && !attributes.some((attr) => options.isAttributeSubtype(attr.type_, mra.type_!))
+        ) {
             const profile = findRequestAttributeProfile(mra.type_, options.requestAttributes, options);
-            if (
-                profile
-                && options.permittedToMatch(profile.attributeType)
-                && isCompatibleCandidate(profile.attributeType)
-            ) {
-                compatibleProfileFound = true;
-                const result = evaluateProfileDefaults(profile, matcher, mra.matchValue, options, 0);
-                indeterminate ||= result === undefined;
-                if (result === true) {
-                    // No matched values are returned intentionally, since these are defaults.
-                    return true;
+            if (profile && options.permittedToMatch(profile.attributeType)) {
+                if (mode === "stored") {
+                    if (
+                        (profile.defaultValues !== undefined)
+                        && options.isMatchingRuleCompatibleWithAttributeType(rule, profile.attributeType)
+                    ) {
+                        compatibleProfileFound = true;
+                    }
+                } else if (isCompatibleCandidate(profile.attributeType)) {
+                    compatibleProfileFound = true;
+                    const result = evaluateProfileDefaults(profile, matcher, mra.matchValue, options, 0);
+                    indeterminate ||= result === undefined;
+                    if (result === true) {
+                        // No matched values are returned intentionally, since these are defaults.
+                        return true;
+                    }
                 }
             }
         }
@@ -922,6 +951,9 @@ function evaluateMatchingRuleAssertion (
                 continue;
             }
             compatibleProfileFound = true;
+            if (mode === "stored") {
+                continue;
+            }
             const presentInEntry = selectedAttributes.some((attr) => (
                 profile.includeSubtypes
                     ? options.isAttributeSubtype(attr.type_, profile.attributeType)
@@ -1026,29 +1058,30 @@ function evaluateFilterItem (
     filterItem: FilterItem,
     entry: EntryInformation,
     options: EvaluateFilterSettings,
+    mode: FilterItemEvalMode = "all",
 ): Attribute[] | boolean | undefined {
     if ("equality" in filterItem) {
         if (filterItem.equality.type_.isEqualTo(id_mr_approximateStringMatch)) {
-            return evaluateApprox(filterItem.equality, entry, options);
+            return evaluateApprox(filterItem.equality, entry, options, mode);
         }
-        return evaluateEquality(filterItem.equality, entry, options);
+        return evaluateEquality(filterItem.equality, entry, options, mode);
     } else if ("substrings" in filterItem) {
-        return evaluateSubstring(filterItem.substrings, entry, options);
+        return evaluateSubstring(filterItem.substrings, entry, options, mode);
     } else if ("greaterOrEqual" in filterItem) {
-        return evaluateOrdering(true, filterItem.greaterOrEqual, entry, options);
+        return evaluateOrdering(true, filterItem.greaterOrEqual, entry, options, mode);
     } else if ("lessOrEqual" in filterItem) {
-        return evaluateOrdering(false, filterItem.lessOrEqual, entry, options);
+        return evaluateOrdering(false, filterItem.lessOrEqual, entry, options, mode);
     } else if ("present" in filterItem) {
-        return evaluateAttributePresence(filterItem.present, entry, options);
+        return mode === "defaults" ? false : evaluateAttributePresence(filterItem.present, entry, options);
     } else if ("approximateMatch" in filterItem) {
-        return evaluateApprox(filterItem.approximateMatch, entry, options);
+        return evaluateApprox(filterItem.approximateMatch, entry, options, mode);
     } else if ("extensibleMatch" in filterItem) {
         if (filterItem.extensibleMatch.matchingRule[0]?.isEqualTo(id_mr_nullMatch)) {
-            return true;
+            return mode === "defaults" ? false : true;
         }
-        return evaluateMatchingRuleAssertion(filterItem.extensibleMatch, entry, options);
+        return evaluateMatchingRuleAssertion(filterItem.extensibleMatch, entry, options, mode);
     } else if ("contextPresent" in filterItem) {
-        return evaluateAttributeTypeAssertion(filterItem.contextPresent, entry, options);
+        return mode === "defaults" ? false : evaluateAttributeTypeAssertion(filterItem.contextPresent, entry, options);
     } else {
         return undefined;
     }
@@ -1149,7 +1182,7 @@ function evaluateFilterAtDepth (
             const member = family[i];
             let result: ReturnType<typeof evaluateFilterItem>;
             try {
-                result = evaluateFilterItem(filter.item, member, options);
+                result = evaluateFilterItem(filter.item, member, options, "stored");
             } catch (error) {
                 if (error instanceof CannotPerformExactly) {
                     throw error;
@@ -1169,6 +1202,32 @@ function evaluateFilterAtDepth (
             }
             if (Array.isArray(result) && result.length > 0) {
                 familyResults.push(new MatchedEntryInfo(i, result));
+            }
+        }
+        // X.501 §16.10.2.d & X.511 §7.13: evaluate RequestAttribute.defaultValues
+        // only when no member of the family grouping holds the attribute, and
+        // without marking any member as a contributing entry.
+        if (!matched && (family.length > 0) && options.requestAttributes?.size) {
+            const pooledFamily = family.length === 1
+                ? family[0]
+                : new EntryInformation(
+                    { rdnSequence: family.flatMap((m) => m.name.rdnSequence) },
+                    true,
+                    family.flatMap((m) => m.information ?? []),
+                );
+            let defaultResult: ReturnType<typeof evaluateFilterItem>;
+            try {
+                defaultResult = evaluateFilterItem(filter.item, pooledFamily, options, "defaults");
+            } catch (error) {
+                if (error instanceof CannotPerformExactly) {
+                    throw error;
+                }
+                defaultResult = undefined;
+            }
+            if (defaultResult === undefined) {
+                undefinedResultFound = true;
+            } else if ((defaultResult === true) || (Array.isArray(defaultResult) && defaultResult.length > 0)) {
+                matched = true;
             }
         }
         return {
