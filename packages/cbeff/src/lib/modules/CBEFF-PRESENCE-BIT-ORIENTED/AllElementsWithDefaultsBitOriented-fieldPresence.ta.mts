@@ -16,7 +16,33 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * AllElementsWithDefaultsBitOriented-fieldPresence ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * AllElementsWithDefaultsBitOriented-fieldPresence ::= SEQUENCE {
+ *     encryptOpts         BOOLEAN,
+ *     integOpts           BOOLEAN,
+ *     subHeaderCount      BOOLEAN,
+ *     bdbLength           BOOLEAN,
+ *     bioType             BOOLEAN,
+ *     bioSubtype          BOOLEAN,
+ *     chaResp             BOOLEAN,
+ *     bdbCreation         BOOLEAN,
+ *     bdbIndex            BOOLEAN,
+ *     procLevel           BOOLEAN,
+ *     product             BOOLEAN,
+ *     purpose             BOOLEAN,
+ *     quality             BOOLEAN,
+ *     bdbValidity         BOOLEAN,
+ *     birCreation         BOOLEAN,
+ *     birCreator          BOOLEAN,
+ *     birIndex            BOOLEAN,
+ *     patronFormat        BOOLEAN,
+ *     payload             BOOLEAN,
+ *     birValidity         BOOLEAN,
+ *     patronHdrVersion    BOOLEAN,
+ *     sbFormat            BOOLEAN,
+ *     cbeffVers           BOOLEAN,
+ *     sb                  BOOLEAN
+ *     -- Original typo read: sb OCTET STRING BOOLEAN
+ * }
  * ```
  * 
  * @class

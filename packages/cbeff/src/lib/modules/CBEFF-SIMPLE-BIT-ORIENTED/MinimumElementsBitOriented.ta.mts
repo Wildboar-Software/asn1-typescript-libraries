@@ -17,11 +17,11 @@ import { MinimumElementsBitOriented_format, _decode_MinimumElementsBitOriented_f
  * 
  * ```asn1
  * MinimumElementsBitOriented ::= SEQUENCE {
- *     / * This patron format contains only mandatory data elements
- *     and uses bit-level encoding for optimal use of encoding space.* /
- *     / * This patron format supports only the abstract values
- *     NO ENCRYPTION and NO INTEGRITY, which are encoded as zero length
- *     fields.* /
+ *     -- This patron format contains only mandatory data elements
+ *     -- and uses bit-level encoding for optimal use of encoding space.
+ *     -- This patron format supports only the abstract values
+ *     -- NO ENCRYPTION and NO INTEGRITY, which are encoded as zero length
+ *     -- fields.
  *     format  SEQUENCE {
  *         owner   INTEGER (0..65535) DEFAULT 257,
  *         -- 257 is the biometric organization identifier of ISO/IEC JTC 1/SC 37

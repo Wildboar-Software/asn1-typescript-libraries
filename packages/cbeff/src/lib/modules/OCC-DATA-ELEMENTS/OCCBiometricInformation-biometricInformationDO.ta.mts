@@ -16,7 +16,10 @@ import { OCCfunctionalityInformation, _decode_OCCfunctionalityInformation, _enco
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * OCCBiometricInformation-biometricInformationDO ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * OCCBiometricInformation-biometricInformationDO ::= SET {
+ *     comparisonParameters        [17] OCCcomparisonParameters OPTIONAL,
+ *     functionalityInformation    [18] OCCfunctionalityInformation OPTIONAL
+ * }
  * ```
  * 
  * @class

@@ -31,9 +31,9 @@ import { PresenceByteOriented_fieldPresence, _decode_PresenceByteOriented_fieldP
  * 
  * ```asn1
  * PresenceByteOriented ::= SEQUENCE {
- * / * This patron format contains all data elements but makes full use of default values to allow
- * omission of fields. A bit map is present at the start of the encoding to determine which
- * fields are present. * /
+ *     -- This patron format contains all data elements but makes full use of default values to allow
+ *     -- omission of fields. A bit map is present at the start of the encoding to determine which
+ *     -- fields are present.
  *     format              BDBFormat,
  *     fieldPresence       SEQUENCE {
  *         bioType             BOOLEAN,

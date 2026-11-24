@@ -26,7 +26,27 @@ import { SBIR_bdbInfo_bdbBiometric, _decode_SBIR_bdbInfo_bdbBiometric, _encode_S
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * SBIR-bdbInfo ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * SBIR-bdbInfo ::= SET {
+ *     bdbFormat               [7]   BDBFormat,
+ *     bdbEncryption           [0]   EncryptionOptions,
+ *     bdbBiometric            [1]   SEQUENCE {
+ *         bdbBiometricType          [1] BiometricType,
+ *         bdbBiometricSubtype       [2] BiometricSubtype OPTIONAL
+ *     } OPTIONAL,
+ *     bdbProcessedLevel       [21]  ProcessedLevel OPTIONAL,
+ *     bdbPurpose              [22]  Purpose OPTIONAL,
+ *     bdbCreationDate         [3]   DATE-TIME OPTIONAL,
+ *     bdbValidityPeriod       [5]   ValidityPeriod OPTIONAL,
+ *     bdbChallengeResponse    [19]  ChallengeResponse OPTIONAL,
+ *     bdbIndex                [20]  BDBIndex OPTIONAL,
+ *     bdbProduct              [6]   Product OPTIONAL,
+ *     bdbCaptureDevice        [2]   RegistryID OPTIONAL,
+ *     bdbFeatureExtractionAlg [4]   RegistryID OPTIONAL,
+ *     bdbComparisonAlg        [9]   RegistryID OPTIONAL,
+ *     bdbCompressionAlg       [10]  RegistryID OPTIONAL,
+ *     bdbQuality              [23]  ConstructedQuality OPTIONAL,
+ *     bdbPADMechanism         [29]  RegistryID OPTIONAL
+ * }
  * ```
  * 
  * @class

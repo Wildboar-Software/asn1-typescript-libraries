@@ -16,7 +16,33 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * BIR-fieldPresence ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * BIR-fieldPresence ::= SEQUENCE {
+ *     bdbFormat               BOOLEAN,
+ *     bdbEncryption           BOOLEAN,
+ *     bdbBiometricType        BOOLEAN,
+ *     bdbBiometricSubtype     BOOLEAN,
+ *     bdbChallengeResponse    BOOLEAN,
+ *     bdbCreationDate         BOOLEAN,
+ *     bdbIndex                BOOLEAN,
+ *     bdbProcessedLevel       BOOLEAN,
+ *     bdbProduct              BOOLEAN,
+ *     bdbCaptureDevice        BOOLEAN,
+ *     bdbFeatureExtAlg        BOOLEAN,
+ *     bdbComparisonAlg        BOOLEAN,
+ *     bdbQualityAlg           BOOLEAN,
+ *     bdbCompressionAlg       BOOLEAN,
+ *     bdbPurpose              BOOLEAN,
+ *     bdbQuality              BOOLEAN,
+ *     bdbValidityPeriod       BOOLEAN,
+ *     birCreationDate         BOOLEAN,
+ *     birCreator              BOOLEAN,
+ *     birIndex                BOOLEAN,
+ *     birValidityPeriod       BOOLEAN,
+ *     sbFormat                BOOLEAN,
+ *     bdb                     BOOLEAN,
+ *     children                BOOLEAN,
+ *     sb                      BOOLEAN
+ * }
  * ```
  * 
  * @class

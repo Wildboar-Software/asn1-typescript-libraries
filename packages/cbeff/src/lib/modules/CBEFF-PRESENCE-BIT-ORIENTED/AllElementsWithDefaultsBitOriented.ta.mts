@@ -40,9 +40,9 @@ import { AllElementsWithDefaultsBitOriented_fieldPresence, _decode_AllElementsWi
  * 
  * ```asn1
  * AllElementsWithDefaultsBitOriented ::= SEQUENCE {
- * / * This patron format contains all data elements but makes full use of default values to allow
- * omission of fields. It encodes each CBEFF data element into a fixed-width bit field. A bit map
- * is present at the start of the encoding to determine which fields are present. * /
+ *     -- This patron format contains all data elements but makes full use of default values to allow
+ *     -- omission of fields. It encodes each CBEFF data element into a fixed-width bit field. A bit map
+ *     -- is present at the start of the encoding to determine which fields are present.
  *     format              BDBFormat,
  *     fieldPresence       SEQUENCE {
  *         encryptOpts         BOOLEAN,

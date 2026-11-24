@@ -18,7 +18,17 @@ import { type StandardBDBType, _decode_StandardBDBType, _encode_StandardBDBType 
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * BiometricInformationTemplateExplicit-bdbData ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * BiometricInformationTemplateExplicit-bdbData ::= SET {
+ *     -- A CBEFF BDB, mandatory for off-card-comparison
+ *     challengeCardholder     [0] CardholderChallengeType OPTIONAL,
+ *     -- defined in BDB-DATA-ELEMENTS
+ *     standardBDB             [1] StandardBDBType OPTIONAL,
+ *     -- defined in BDB-DATA-ELEMENTS
+ *     proprietaryBDB          [2] ProprietaryBDBType OPTIONAL,
+ *     -- defined in BDB-DATA-ELEMENTS
+ *     referenceQualifier      [3] OCTET STRING (SIZE(1)) OPTIONAL,
+ *     biometricData           [APPLICATION 46] OCTET STRING OPTIONAL -- primitive DO only
+ * }
  * ```
  * 
  * @class

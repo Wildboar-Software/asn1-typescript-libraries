@@ -19,7 +19,7 @@ import * as $ from '@wildboar/asn1/functional';
  * ### ASN.1 Definition:
  *
  * ```asn1
- * CBEFFVersion-cbeff-major ::= INTEGER { -- REMOVED_FROM_UNNESTING -- }
+ * CBEFFVersion-cbeff-major ::= INTEGER { version2(2) } (0..15)
  * ```
  */
 export type CBEFFVersion_cbeff_major = INTEGER;

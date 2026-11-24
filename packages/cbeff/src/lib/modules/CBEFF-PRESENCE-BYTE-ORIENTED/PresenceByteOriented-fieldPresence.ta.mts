@@ -16,7 +16,22 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * PresenceByteOriented-fieldPresence ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * PresenceByteOriented-fieldPresence ::= SEQUENCE {
+ *     bioType             BOOLEAN,
+ *     bioSubtype          BOOLEAN,
+ *     bdbCreation         BOOLEAN,
+ *     procLevel           BOOLEAN,
+ *     bdbProduct          BOOLEAN,
+ *     bdbPurpose          BOOLEAN,
+ *     bdbQuality          BOOLEAN,
+ *     bdbValidity         BOOLEAN,
+ *     birCreation         BOOLEAN,
+ *     birValidity         BOOLEAN,
+ *     patronHdrVersion    BOOLEAN,
+ *     cbeffVers           BOOLEAN,
+ *     subHeaderCount      BOOLEAN,
+ *     bdbLength           BOOLEAN
+ * }
  * ```
  * 
  * @class

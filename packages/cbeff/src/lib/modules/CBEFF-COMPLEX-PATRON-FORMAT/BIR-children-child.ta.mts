@@ -16,7 +16,13 @@ import { BIR_children_child_childBirPatronFormat, _decode_BIR_children_child_chi
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * BIR-children-child ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * BIR-children-child ::= SEQUENCE {
+ *     childBirPatronFormat    SEQUENCE {
+ *         childBirPatronFormatOwner   INTEGER (0..65535),
+ *         childBirPatronFormatType    INTEGER (0..65535)
+ *     },
+ *     childBir                OCTET STRING (SIZE(0..4294967295))
+ * }
  * ```
  * 
  * @class

@@ -16,7 +16,11 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * MinimumElementsByteOriented-format ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * MinimumElementsByteOriented-format ::= SEQUENCE {
+ *     owner   INTEGER (1..65535) DEFAULT 257,
+ *     -- 257 is the biometric organization identifier of ISO/IEC JTC 1/SC 37
+ *     type    INTEGER (1..63, ..., 64..65535)
+ * }
  * ```
  * 
  * @class

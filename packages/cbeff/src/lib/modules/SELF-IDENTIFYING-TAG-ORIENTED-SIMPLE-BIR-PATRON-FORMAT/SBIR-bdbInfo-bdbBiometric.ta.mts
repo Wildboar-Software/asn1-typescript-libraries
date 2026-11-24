@@ -16,7 +16,10 @@ import { _decode_BiometricType, _encode_BiometricType, type BiometricType } from
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * SBIR-bdbInfo-bdbBiometric ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * SBIR-bdbInfo-bdbBiometric ::= SEQUENCE {
+ *     bdbBiometricType          [1] BiometricType,
+ *     bdbBiometricSubtype       [2] BiometricSubtype OPTIONAL
+ * }
  * ```
  * 
  * @class

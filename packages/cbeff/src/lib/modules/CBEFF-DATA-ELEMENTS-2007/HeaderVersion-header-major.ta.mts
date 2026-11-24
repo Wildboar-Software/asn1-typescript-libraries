@@ -19,7 +19,7 @@ import * as $ from '@wildboar/asn1/functional';
  * ### ASN.1 Definition:
  *
  * ```asn1
- * HeaderVersion-header-major ::= INTEGER { -- REMOVED_FROM_UNNESTING -- }
+ * HeaderVersion-header-major ::= INTEGER { version1(1) } (0..15)
  * ```
  */
 export type HeaderVersion_header_major = INTEGER;

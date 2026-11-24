@@ -16,7 +16,10 @@ import { RegistryID, _decode_RegistryID, _encode_RegistryID } from "../CBEFF-DAT
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * BIR-children-child ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * BIR-children-child ::= SEQUENCE {
+ *     childBirPatronFormat    RegistryID,
+ *     childBir                OCTET STRING (SIZE (0..4294967295))
+ * }
  * ```
  * 
  * @class

@@ -14,7 +14,9 @@ import { RegistryID, _decode_RegistryID, _encode_RegistryID } from "../CBEFF-DAT
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * ComplexSBIR-sbInfo ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * ComplexSBIR-sbInfo ::= SET {
+ *     sbFormat [0] RegistryID
+ * }
  * ```
  * 
  * @class

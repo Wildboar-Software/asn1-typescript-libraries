@@ -24,7 +24,20 @@ import { type ProductID, _decode_ProductID, _encode_ProductID } from "../CBEFF-S
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * BiometricHeaderTemplateExplicit-biometricInformationDO ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * BiometricHeaderTemplateExplicit-biometricInformationDO ::= SET {
+ *     patronHeaderVersion      [0]  PatronHeaderVersion DEFAULT '0100'H,
+ *     bdbBiometricType         [1]  BiometricType OPTIONAL,
+ *     bdbBiometricSubType      [2]  BiometricSubtype OPTIONAL,
+ *     -- Required to be absent unless bdbBiometricType is present
+ *     bdbCreationDate          [3]  BCDTime OPTIONAL,
+ *     -- CBEFF_BDB_creation_date
+ *     birCreator               [4]  Creator OPTIONAL,
+ *     bdbValidityPeriod        [5]  BCDDatePeriod OPTIONAL,
+ *     bdbPID                   [6]  ProductID OPTIONAL,
+ *     bdbFormatOwner           [7]  FormatOwner,
+ *     bdbFormatType            [8]  FormatType,
+ *     birIndex                 [16] BIRIndex OPTIONAL
+ * }
  * ```
  * 
  * @class

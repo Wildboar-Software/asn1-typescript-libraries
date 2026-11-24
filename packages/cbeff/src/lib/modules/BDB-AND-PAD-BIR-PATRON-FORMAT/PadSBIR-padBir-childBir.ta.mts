@@ -15,7 +15,10 @@ import { SBIR, _decode_SBIR, _encode_SBIR } from "../SELF-IDENTIFYING-TAG-ORIENT
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * PadSBIR-padBir-childBir ::= CHOICE { -- REMOVED_FROM_UNNESTING -- }
+ * PadSBIR-padBir-childBir ::= CHOICE {
+ *     simpleBIR   [APPLICATION 96] SBIR,       -- As per clause 16
+ *     complexBIR  [APPLICATION 97] ComplexSBIR -- As per clause 17
+ * }
  * ```
  */
 export

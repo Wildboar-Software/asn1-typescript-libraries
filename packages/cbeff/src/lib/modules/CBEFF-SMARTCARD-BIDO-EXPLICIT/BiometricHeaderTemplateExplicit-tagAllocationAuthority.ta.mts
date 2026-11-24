@@ -16,7 +16,12 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * BiometricHeaderTemplateExplicit-tagAllocationAuthority ::= CHOICE { -- REMOVED_FROM_UNNESTING -- }
+ * BiometricHeaderTemplateExplicit-tagAllocationAuthority ::= CHOICE {
+ *     oid         OBJECT IDENTIFIER,
+ *     country     [APPLICATION 1] OCTET STRING,
+ *     issuerID    [APPLICATION 2] OCTET STRING,
+ *     application [APPLICATION 15] OCTET STRING
+ * }
  * ```
  */
 export

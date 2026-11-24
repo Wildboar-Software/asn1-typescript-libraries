@@ -16,7 +16,10 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * BIR-sbFormat ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * BIR-sbFormat ::= SEQUENCE {
+ *     sbFormatOwner   INTEGER (0..65535),
+ *     sbFormatType    INTEGER (0..65535)
+ * }
  * ```
  * 
  * @class

@@ -21,7 +21,15 @@ import { ValidityPeriod, _decode_ValidityPeriod, _encode_ValidityPeriod } from "
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * ComplexSBIR-birInfo ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * ComplexSBIR-birInfo ::= SET {
+ *     birIntegrity        [0]  IntegrityOptions,
+ *     birCreationDate     [24] DATE-TIME OPTIONAL,
+ *     birValidityPeriod   [27] ValidityPeriod OPTIONAL,
+ *     birCreator          [4]  Creator OPTIONAL,
+ *     birIndex            [16] BIRIndex OPTIONAL,
+ *     birPayload          [1]  Payload OPTIONAL,
+ *     birPointer          [2]  OCTET STRING (SIZE (0..65535)) OPTIONAL
+ * }
  * ```
  * 
  * @class
