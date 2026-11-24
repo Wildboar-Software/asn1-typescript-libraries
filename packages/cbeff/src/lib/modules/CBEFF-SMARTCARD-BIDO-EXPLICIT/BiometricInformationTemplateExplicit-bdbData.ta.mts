@@ -6,6 +6,7 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
+import { assertOctetSize } from "../../constraints.mjs";
 import { type CardholderChallengeType, _decode_CardholderChallengeType, _encode_CardholderChallengeType } from "../CBEFF-SMARTCARD-BIDO-EXPLICIT/CardholderChallengeType.ta.mjs";
 import { type ProprietaryBDBType, _decode_ProprietaryBDBType, _encode_ProprietaryBDBType } from "../CBEFF-SMARTCARD-BIDO-EXPLICIT/ProprietaryBDBType.ta.mjs";
 import { type StandardBDBType, _decode_StandardBDBType, _encode_StandardBDBType } from "../CBEFF-SMARTCARD-BIDO-EXPLICIT/StandardBDBType.ta.mjs";
@@ -73,6 +74,7 @@ class BiometricInformationTemplateExplicit_bdbData {
         referenceQualifier?: OPTIONAL<OCTET_STRING>,
         biometricData?: OPTIONAL<OCTET_STRING>
     ) {
+        if (referenceQualifier !== undefined) assertOctetSize(referenceQualifier, 1, 1, "BiometricInformationTemplateExplicit.bdbData.referenceQualifier");
         this.challengeCardholder = challengeCardholder;
         this.standardBDB = standardBDB;
         this.proprietaryBDB = proprietaryBDB;

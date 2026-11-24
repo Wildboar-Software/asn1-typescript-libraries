@@ -6,6 +6,7 @@ import {
     type INTEGER
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
+import { assertIntegerRange } from "../../constraints.mjs";
 
 
 
@@ -43,6 +44,8 @@ class BIR_children_child_childBirPatronFormat {
         childBirPatronFormatOwner: INTEGER,
         childBirPatronFormatType: INTEGER
     ) {
+        assertIntegerRange(childBirPatronFormatOwner, 0, 65535, "BIR.children.childBirPatronFormatOwner");
+        assertIntegerRange(childBirPatronFormatType, 0, 65535, "BIR.children.childBirPatronFormatType");
         this.childBirPatronFormatOwner = childBirPatronFormatOwner;
         this.childBirPatronFormatType = childBirPatronFormatType;
     }

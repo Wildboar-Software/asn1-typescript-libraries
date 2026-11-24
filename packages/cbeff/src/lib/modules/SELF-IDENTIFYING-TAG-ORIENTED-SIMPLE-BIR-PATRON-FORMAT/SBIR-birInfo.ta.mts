@@ -7,6 +7,7 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
+import { assertOctetSize } from "../../constraints.mjs";
 import { type BIRIndex, _decode_BIRIndex, _encode_BIRIndex } from "../CBEFF-DATA-ELEMENTS/BIRIndex.ta.mjs";
 import { type Creator, _decode_Creator, _encode_Creator } from "../CBEFF-DATA-ELEMENTS/Creator.ta.mjs";
 import { type IntegrityOptions, _decode_IntegrityOptions, _encode_IntegrityOptions } from "../CBEFF-DATA-ELEMENTS/IntegrityOptions.ta.mjs";
@@ -88,6 +89,7 @@ class SBIR_birInfo {
         birPayload?: OPTIONAL<Payload>,
         birPointer?: OPTIONAL<OCTET_STRING>
     ) {
+        if (birPointer !== undefined) assertOctetSize(birPointer, 0, 65535, "SBIR.birInfo.birPointer");
         this.birIntegrity = birIntegrity;
         this.birCreationDate = birCreationDate;
         this.birValidityPeriod = birValidityPeriod;

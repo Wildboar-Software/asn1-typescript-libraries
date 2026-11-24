@@ -6,6 +6,7 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
+import { assertIntegerRange, assertQuality } from "../../constraints.mjs";
 import { type Quality, _decode_Quality, _encode_Quality } from "../CBEFF-DATA-ELEMENTS/Quality.ta.mjs";
 
 
@@ -51,6 +52,9 @@ class ConstructedQuality {
         id: INTEGER,
         score: Quality
     ) {
+        assertIntegerRange(organization, 0, 65535, "ConstructedQuality.organization");
+        assertIntegerRange(id, 0, 65535, "ConstructedQuality.id");
+        assertQuality(score, "ConstructedQuality.score");
         this.organization = organization;
         this.id = id;
         this.score = score;

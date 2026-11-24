@@ -7,6 +7,7 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
+import { assertIntegerRange, assertOctetSize, assertSequenceSize } from "../../constraints.mjs";
 import { BIR_bdbFormat, _decode_BIR_bdbFormat, _encode_BIR_bdbFormat } from "../CBEFF-COMPLEX-PATRON-FORMAT/BIR-bdbFormat.ta.mjs";
 import { BIR_children_child, _decode_BIR_children_child, _encode_BIR_children_child } from "../CBEFF-COMPLEX-PATRON-FORMAT/BIR-children-child.ta.mjs";
 import { BIR_fieldPresence, _decode_BIR_fieldPresence, _encode_BIR_fieldPresence } from "../CBEFF-COMPLEX-PATRON-FORMAT/BIR-fieldPresence.ta.mjs";
@@ -267,6 +268,25 @@ class BIR {
         children: BIR_children_child[],
         sb?: OPTIONAL<OCTET_STRING>
     ) {
+        assertIntegerRange(patronHeaderVersion, 0, 255, "BIR.patronHeaderVersion");
+        assertIntegerRange(cbeffVersion, 0, 255, "BIR.cbeffVersion");
+        if (bdbEncryption !== undefined) assertIntegerRange(bdbEncryption, 0, 255, "BIR.bdbEncryption");
+        assertIntegerRange(birIntegrity, 0, 255, "BIR.birIntegrity");
+        if (bdbChallengeResponse !== undefined) assertOctetSize(bdbChallengeResponse, 0, 65535, "BIR.bdbChallengeResponse");
+        if (bdbCreationDate !== undefined) assertOctetSize(bdbCreationDate, 8, 15, "BIR.bdbCreationDate");
+        if (bdbIndex !== undefined) assertOctetSize(bdbIndex, 0, 65535, "BIR.bdbIndex");
+        if (bdbProcessedLevel !== undefined) assertIntegerRange(bdbProcessedLevel, 0, 255, "BIR.bdbProcessedLevel");
+        if (bdbPurpose !== undefined) assertIntegerRange(bdbPurpose, 0, 255, "BIR.bdbPurpose");
+        if (bdbQuality !== undefined) assertIntegerRange(bdbQuality, 0, 255, "BIR.bdbQuality");
+        if (bdbValidityPeriod !== undefined) assertOctetSize(bdbValidityPeriod, 15, 31, "BIR.bdbValidityPeriod");
+        if (birCreationDate !== undefined) assertOctetSize(birCreationDate, 8, 15, "BIR.birCreationDate");
+        if (birCreator !== undefined) assertOctetSize(birCreator, 0, 65535, "BIR.birCreator");
+        if (birIndex !== undefined) assertOctetSize(birIndex, 0, 65535, "BIR.birIndex");
+        if (birPayload !== undefined) assertOctetSize(birPayload, 0, 65535, "BIR.birPayload");
+        if (birValidityPeriod !== undefined) assertOctetSize(birValidityPeriod, 15, 31, "BIR.birValidityPeriod");
+        if (bdb !== undefined) assertOctetSize(bdb, 0, 4294967295, "BIR.bdb");
+        assertSequenceSize(children.length, 0, 255, "BIR.children");
+        if (sb !== undefined) assertOctetSize(sb, 0, 4294967295, "BIR.sb");
         this.patronHeaderVersion = patronHeaderVersion;
         this.cbeffVersion = cbeffVersion;
         this.fieldPresence = fieldPresence;

@@ -7,6 +7,7 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
+import { assertIntegerRange, assertOctetSize } from "../../constraints.mjs";
 import { type BDBCreationDate, _decode_BDBCreationDate, _encode_BDBCreationDate } from "../CBEFF-DATA-ELEMENTS/BDBCreationDate.ta.mjs";
 import { BDBFormat, _decode_BDBFormat, _encode_BDBFormat } from "../CBEFF-DATA-ELEMENTS/BDBFormat.ta.mjs";
 import { type BDBIndex, _decode_BDBIndex, _encode_BDBIndex } from "../CBEFF-DATA-ELEMENTS/BDBIndex.ta.mjs";
@@ -297,6 +298,8 @@ class AllElementsWithDefaultsBitOriented {
         bdb: BiometricDataBlock,
         sb?: OPTIONAL<OCTET_STRING>
     ) {
+        if (bdbLength !== undefined) assertIntegerRange(bdbLength, 0, 4294967295, "AllElementsWithDefaultsBitOriented.bdbLength");
+        if (sb !== undefined) assertOctetSize(sb, 0, 4294967295, "AllElementsWithDefaultsBitOriented.sb");
         this.format = format;
         this.fieldPresence = fieldPresence;
         this.encryptOpts = encryptOpts;

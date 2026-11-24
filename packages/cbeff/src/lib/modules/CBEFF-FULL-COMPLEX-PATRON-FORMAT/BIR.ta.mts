@@ -7,6 +7,7 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
+import { assertIntegerRange, assertOctetSize, assertSequenceSize } from "../../constraints.mjs";
 import { BDBFormat, _decode_BDBFormat, _encode_BDBFormat } from "../CBEFF-DATA-ELEMENTS/BDBFormat.ta.mjs";
 import { type BDBIndex, _decode_BDBIndex, _encode_BDBIndex } from "../CBEFF-DATA-ELEMENTS/BDBIndex.ta.mjs";
 import { type BiometricSubtype, BiometricSubtype_noValueAvailable, _decode_BiometricSubtype, _encode_BiometricSubtype } from "../CBEFF-DATA-ELEMENTS/BiometricSubtype.ta.mjs";
@@ -311,6 +312,17 @@ class BIR {
         children: BIR_children_child[],
         sb?: OPTIONAL<OCTET_STRING>
     ) {
+        assertIntegerRange(patronHeaderVersion, 0, 255, "BIR.patronHeaderVersion");
+        assertIntegerRange(cbeffVersion, 0, 255, "BIR.cbeffVersion");
+        if (bdbEncryption !== undefined) assertIntegerRange(bdbEncryption, 0, 255, "BIR.bdbEncryption");
+        assertIntegerRange(birIntegrity, 0, 255, "BIR.birIntegrity");
+        if (bdbCreationDate !== undefined) assertOctetSize(bdbCreationDate, 8, 15, "BIR.bdbCreationDate");
+        if (bdbValidityPeriod !== undefined) assertOctetSize(bdbValidityPeriod, 15, 31, "BIR.bdbValidityPeriod");
+        if (birCreationDate !== undefined) assertOctetSize(birCreationDate, 8, 15, "BIR.birCreationDate");
+        if (birValidityPeriod !== undefined) assertOctetSize(birValidityPeriod, 15, 31, "BIR.birValidityPeriod");
+        if (bdb !== undefined) assertOctetSize(bdb, 0, 4294967295, "BIR.bdb");
+        assertSequenceSize(children.length, 0, 255, "BIR.children");
+        if (sb !== undefined) assertOctetSize(sb, 0, 4294967295, "BIR.sb");
         this.patronHeaderVersion = patronHeaderVersion;
         this.cbeffVersion = cbeffVersion;
         this.fieldPresence = fieldPresence;

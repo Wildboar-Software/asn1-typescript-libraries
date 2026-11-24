@@ -7,6 +7,7 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
+import { assertOctetSize } from "../../constraints.mjs";
 import { BiometricHeaderTemplate, _decode_BiometricHeaderTemplate, _encode_BiometricHeaderTemplate } from "../CBEFF-SMARTCARD-BIDO/BiometricHeaderTemplate.ta.mjs";
 
 
@@ -72,6 +73,8 @@ class BiometricInformationTemplate {
         bdbReferenceData?: OPTIONAL<EXTERNAL>,
         birPayLoad?: OPTIONAL<OCTET_STRING>
     ) {
+        if (algorithmReference !== undefined) assertOctetSize(algorithmReference, 1, 1, "BiometricInformationTemplate.algorithmReference");
+        if (referenceDataQualifier !== undefined) assertOctetSize(referenceDataQualifier, 1, 1, "BiometricInformationTemplate.referenceDataQualifier");
         this.algorithmReference = algorithmReference;
         this.referenceDataQualifier = referenceDataQualifier;
         this.biometricHeaderTemplate = biometricHeaderTemplate;

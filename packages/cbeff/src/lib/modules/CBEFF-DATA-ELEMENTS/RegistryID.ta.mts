@@ -6,6 +6,7 @@ import {
     type INTEGER
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
+import { assertIntegerRange } from "../../constraints.mjs";
 
 
 
@@ -45,6 +46,8 @@ class RegistryID {
         organization: INTEGER,
         id: INTEGER
     ) {
+        assertIntegerRange(organization, 1, 65535, "RegistryID.organization");
+        assertIntegerRange(id, 1, 65535, "RegistryID.id");
         this.organization = organization;
         this.id = id;
     }

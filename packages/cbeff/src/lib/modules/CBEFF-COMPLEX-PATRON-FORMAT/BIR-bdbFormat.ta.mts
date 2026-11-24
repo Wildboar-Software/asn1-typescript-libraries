@@ -6,6 +6,7 @@ import {
     type INTEGER
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
+import { assertIntegerRange } from "../../constraints.mjs";
 
 
 
@@ -43,6 +44,8 @@ class BIR_bdbFormat {
         bdbFormatOwner: INTEGER,
         bdbFormatType: INTEGER
     ) {
+        assertIntegerRange(bdbFormatOwner, 0, 65535, "BIR.bdbFormat.bdbFormatOwner");
+        assertIntegerRange(bdbFormatType, 0, 65535, "BIR.bdbFormat.bdbFormatType");
         this.bdbFormatOwner = bdbFormatOwner;
         this.bdbFormatType = bdbFormatType;
     }

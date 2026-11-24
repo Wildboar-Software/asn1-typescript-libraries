@@ -10,6 +10,7 @@ import {
   ASN1ConstructionError as _ConstructionError,
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
+import { assertIntegerRange } from "../../constraints.mjs";
 import {
   type CBEFFVersion_cbeff_major,
   _decode_CBEFFVersion_cbeff_major,
@@ -52,6 +53,8 @@ export class CBEFFVersion {
     cbeff_major: CBEFFVersion_cbeff_major,
     cbeff_minor: CBEFFVersion_cbeff_minor
   ) {
+        assertIntegerRange(cbeff_major, 0, 15, "CBEFFVersion.cbeff-major");
+        assertIntegerRange(cbeff_minor, 0, 15, "CBEFFVersion.cbeff-minor");
     this.cbeff_major = cbeff_major;
     this.cbeff_minor = cbeff_minor;
   }

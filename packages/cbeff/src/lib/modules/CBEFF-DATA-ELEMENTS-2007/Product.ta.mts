@@ -12,6 +12,7 @@ import {
   ASN1ConstructionError as _ConstructionError,
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
+import { assertIntegerRange } from "../../constraints.mjs";
 
 /**
  * @summary Product
@@ -45,6 +46,8 @@ export class Product {
     product_owner?: OPTIONAL<INTEGER>,
     product_type?: OPTIONAL<INTEGER>
   ) {
+        if (product_owner !== undefined) assertIntegerRange(product_owner, 1, 65535, "Product.product-owner");
+        if (product_type !== undefined) assertIntegerRange(product_type, 1, 65535, "Product.product-type");
     this.product_owner = product_owner;
     this.product_type = product_type;
   }

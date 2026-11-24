@@ -11,6 +11,7 @@ import {
   ASN1ConstructionError as _ConstructionError,
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
+import { assertIntegerRange } from "../../constraints.mjs";
 
 /**
  * @summary HeaderVersion_header_major
@@ -39,7 +40,11 @@ export const HeaderVersion_header_major_version1: 1 = 1 satisfies HeaderVersion_
 export const version1: 1 = HeaderVersion_header_major_version1; /* SHORT_NAMED_INTEGER_VALUE */
 
 
-export const _decode_HeaderVersion_header_major: $.ASN1Decoder<INTEGER> = $._decodeInteger;
+export const _decode_HeaderVersion_header_major: $.ASN1Decoder<INTEGER> = (el: _Element) => {
+    const value = $._decodeInteger(el);
+    assertIntegerRange(value, 0, 15, "HeaderVersion.header-major");
+    return value;
+};
 
 
 export const _encode_HeaderVersion_header_major: $.ASN1Encoder<INTEGER> = $._encodeInteger;

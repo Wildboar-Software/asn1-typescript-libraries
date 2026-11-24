@@ -10,6 +10,7 @@ import {
   ASN1ConstructionError as _ConstructionError,
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
+import { assertIntegerRange } from "../../constraints.mjs";
 import {
   type HeaderVersion_header_major,
   _decode_HeaderVersion_header_major,
@@ -52,6 +53,8 @@ export class HeaderVersion {
     header_major: HeaderVersion_header_major,
     header_minor: HeaderVersion_header_minor
   ) {
+        assertIntegerRange(header_major, 0, 15, "HeaderVersion.header-major");
+        assertIntegerRange(header_minor, 0, 15, "HeaderVersion.header-minor");
     this.header_major = header_major;
     this.header_minor = header_minor;
   }

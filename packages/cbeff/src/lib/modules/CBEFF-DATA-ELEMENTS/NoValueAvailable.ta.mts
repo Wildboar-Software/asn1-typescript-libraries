@@ -2,7 +2,9 @@
 import {
     type INTEGER
 } from "@wildboar/asn1";
+import { type ASN1Element as _Element } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
+import { assertIntegerRange } from "../../constraints.mjs";
 
 
 
@@ -19,8 +21,11 @@ import * as $ from "@wildboar/asn1/functional";
 export
 type NoValueAvailable = INTEGER;
 
-export
-const _decode_NoValueAvailable: $.ASN1Decoder<NoValueAvailable> = $._decodeInteger;
+export const _decode_NoValueAvailable: $.ASN1Decoder<NoValueAvailable> = (el: _Element) => {
+    const value = $._decodeInteger(el);
+    assertIntegerRange(value, 255, 255, "NoValueAvailable");
+    return value;
+};
 
 export
 const _encode_NoValueAvailable: $.ASN1Encoder<NoValueAvailable> = $._encodeInteger;

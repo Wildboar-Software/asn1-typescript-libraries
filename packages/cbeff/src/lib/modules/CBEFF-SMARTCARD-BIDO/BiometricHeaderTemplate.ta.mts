@@ -6,6 +6,7 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
+import { assertSubtypeRequiresType } from "../../constraints.mjs";
 import { type BCDDatePeriod, _decode_BCDDatePeriod, _encode_BCDDatePeriod } from "../CBEFF-SMARTCARD-BIDO/BCDDatePeriod.ta.mjs";
 import { type BCDTime, _decode_BCDTime, _encode_BCDTime } from "../CBEFF-SMARTCARD-BIDO/BCDTime.ta.mjs";
 import { type BiometricSubType, _decode_BiometricSubType, _encode_BiometricSubType } from "../CBEFF-SMARTCARD-BIDO/BiometricSubType.ta.mjs";
@@ -128,6 +129,7 @@ class BiometricHeaderTemplate {
         birIndex?: OPTIONAL<BIRIndex>,
         matchingAlgParameters?: OPTIONAL<OCTET_STRING>
     ) {
+        assertSubtypeRequiresType(bdbBiometricType !== undefined, bdbBiometricSubType !== undefined, "BiometricHeaderTemplate");
         this.patronHeaderVersion = patronHeaderVersion;
         this.bdbBiometricType = bdbBiometricType;
         this.bdbBiometricSubType = bdbBiometricSubType;

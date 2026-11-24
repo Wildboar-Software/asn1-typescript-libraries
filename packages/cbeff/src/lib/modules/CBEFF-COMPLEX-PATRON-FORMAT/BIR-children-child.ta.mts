@@ -6,6 +6,7 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
+import { assertOctetSize } from "../../constraints.mjs";
 import { BIR_children_child_childBirPatronFormat, _decode_BIR_children_child_childBirPatronFormat, _encode_BIR_children_child_childBirPatronFormat } from "../CBEFF-COMPLEX-PATRON-FORMAT/BIR-children-child-childBirPatronFormat.ta.mjs";
 
 
@@ -46,6 +47,7 @@ class BIR_children_child {
         childBirPatronFormat: BIR_children_child_childBirPatronFormat,
         childBir: OCTET_STRING
     ) {
+        assertOctetSize(childBir, 0, 4294967295, "BIR.children.childBir");
         this.childBirPatronFormat = childBirPatronFormat;
         this.childBir = childBir;
     }

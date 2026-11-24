@@ -12,6 +12,7 @@ import {
   ASN1ConstructionError as _ConstructionError,
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
+import { assertIntegerRange } from "../../constraints.mjs";
 
 /**
  * @summary PatronFormat
@@ -45,6 +46,8 @@ export class PatronFormat {
     patron_format_owner?: OPTIONAL<INTEGER>,
     patron_format_type?: OPTIONAL<INTEGER>
   ) {
+        if (patron_format_owner !== undefined) assertIntegerRange(patron_format_owner, 1, 65535, "PatronFormat.patron-format-owner");
+        if (patron_format_type !== undefined) assertIntegerRange(patron_format_type, 1, 65535, "PatronFormat.patron-format-type");
     this.patron_format_owner = patron_format_owner;
     this.patron_format_type = patron_format_type;
   }

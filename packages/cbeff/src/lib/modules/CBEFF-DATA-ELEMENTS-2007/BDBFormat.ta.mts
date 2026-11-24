@@ -11,6 +11,7 @@ import {
   ASN1ConstructionError as _ConstructionError,
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
+import { assertIntegerRange } from "../../constraints.mjs";
 
 /**
  * @summary BDBFormat
@@ -44,6 +45,8 @@ export class BDBFormat {
     format_owner: INTEGER,
     format_type: INTEGER
   ) {
+        assertIntegerRange(format_owner, 1, 65535, "BDBFormat.format-owner");
+        assertIntegerRange(format_type, 1, 65535, "BDBFormat.format-type");
     this.format_owner = format_owner;
     this.format_type = format_type;
   }

@@ -6,6 +6,7 @@ import {
     type INTEGER
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
+import { assertIntegerRange } from "../../constraints.mjs";
 
 
 
@@ -43,6 +44,8 @@ class BDBFormat {
         organization: INTEGER,
         id: INTEGER
     ) {
+        assertIntegerRange(organization, 0, 65535, "BDBFormat.organization");
+        assertIntegerRange(id, 0, 65535, "BDBFormat.id");
         this.organization = organization;
         this.id = id;
     }

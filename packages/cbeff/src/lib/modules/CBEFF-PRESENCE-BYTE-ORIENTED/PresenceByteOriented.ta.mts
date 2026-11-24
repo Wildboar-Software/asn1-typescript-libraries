@@ -6,6 +6,7 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
+import { assertIntegerRange } from "../../constraints.mjs";
 import { type BDBCreationDate, _decode_BDBCreationDate, _encode_BDBCreationDate } from "../CBEFF-DATA-ELEMENTS/BDBCreationDate.ta.mjs";
 import { BDBFormat, _decode_BDBFormat, _encode_BDBFormat } from "../CBEFF-DATA-ELEMENTS/BDBFormat.ta.mjs";
 import { type BDBValidityPeriod, _decode_BDBValidityPeriod, _encode_BDBValidityPeriod } from "../CBEFF-DATA-ELEMENTS/BDBValidityPeriod.ta.mjs";
@@ -205,6 +206,8 @@ class PresenceByteOriented {
         bdbLength: OPTIONAL<INTEGER>,
         bdb: BiometricDataBlock
     ) {
+        if (patronHdrVersion !== undefined) assertIntegerRange(patronHdrVersion, 0, 255, "PresenceByteOriented.patronHdrVersion");
+        if (bdbLength !== undefined) assertIntegerRange(bdbLength, 0, 4294967295, "PresenceByteOriented.bdbLength");
         this.format = format;
         this.fieldPresence = fieldPresence;
         this.bdbFormat = bdbFormat;

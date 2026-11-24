@@ -6,6 +6,7 @@ import {
     type INTEGER
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
+import { assertIntegerRange } from "../../constraints.mjs";
 
 
 
@@ -44,6 +45,8 @@ class Version {
         major: INTEGER,
         minor: INTEGER
     ) {
+        assertIntegerRange(major, 0, 255, "Version.major");
+        assertIntegerRange(minor, 0, 255, "Version.minor");
         this.major = major;
         this.minor = minor;
     }

@@ -12,6 +12,7 @@ import {
   ASN1ConstructionError as _ConstructionError,
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
+import { assertIntegerRange } from "../../constraints.mjs";
 
 /**
  * @summary SBFormat
@@ -45,6 +46,8 @@ export class SBFormat {
     sb_owner?: OPTIONAL<INTEGER>,
     sb_type?: OPTIONAL<INTEGER>
   ) {
+        if (sb_owner !== undefined) assertIntegerRange(sb_owner, 1, 65535, "SBFormat.sb-owner");
+        if (sb_type !== undefined) assertIntegerRange(sb_type, 1, 65535, "SBFormat.sb-type");
     this.sb_owner = sb_owner;
     this.sb_type = sb_type;
   }

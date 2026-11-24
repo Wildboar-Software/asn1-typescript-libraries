@@ -11,6 +11,7 @@ import {
   ASN1ConstructionError as _ConstructionError,
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
+import { assertIntegerRange } from "../../constraints.mjs";
 
 /**
  * @summary OneBit
@@ -25,7 +26,11 @@ import * as $ from '@wildboar/asn1/functional';
 export type OneBit = INTEGER;
 
 
-export const _decode_OneBit: $.ASN1Decoder<INTEGER> = $._decodeInteger;
+export const _decode_OneBit: $.ASN1Decoder<INTEGER> = (el: _Element) => {
+    const value = $._decodeInteger(el);
+    assertIntegerRange(value, 0, 1, "OneBit");
+    return value;
+};
 
 
 export const _encode_OneBit: $.ASN1Encoder<INTEGER> = $._encodeInteger;

@@ -11,6 +11,7 @@ import {
   ASN1ConstructionError as _ConstructionError,
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
+import { assertBitSize } from "../../constraints.mjs";
 
 /**
  * @summary Vein_only
@@ -111,7 +112,11 @@ export const Vein_only_reserved2: number = 0; /* LONG_NAMED_BIT */
 export const reserved2: number = Vein_only_reserved2; /* SHORT_NAMED_BIT */
 
 
-export const _decode_Vein_only: $.ASN1Decoder<BIT_STRING> = $._decodeBitString;
+export const _decode_Vein_only: $.ASN1Decoder<BIT_STRING> = (el: _Element) => {
+    const value = $._decodeBitString(el);
+    assertBitSize(value, 7, "Vein-only");
+    return value;
+};
 
 
 export const _encode_Vein_only: $.ASN1Encoder<BIT_STRING> = $._encodeBitString;

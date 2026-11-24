@@ -6,6 +6,7 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
+import { assertOctetSize } from "../../constraints.mjs";
 import { RegistryID, _decode_RegistryID, _encode_RegistryID } from "../CBEFF-DATA-ELEMENTS/RegistryID.ta.mjs";
 import { Version, _decode_Version, _encode_Version } from "../CBEFF-DATA-ELEMENTS/Version.ta.mjs";
 import { SBIR_bdbData, _decode_SBIR_bdbData, _encode_SBIR_bdbData } from "../SELF-IDENTIFYING-TAG-ORIENTED-SIMPLE-BIR-PATRON-FORMAT/SBIR-bdbData.ta.mjs";
@@ -133,6 +134,7 @@ class SBIR {
         bdbData?: OPTIONAL<SBIR_bdbData>,
         sb?: OPTIONAL<OCTET_STRING>
     ) {
+        if (sb !== undefined) assertOctetSize(sb, 0, 4294967295, "SBIR.sb");
         this.birSelfId = birSelfId;
         this.cbeffVersion = cbeffVersion;
         this.patronHeaderVersion = patronHeaderVersion;

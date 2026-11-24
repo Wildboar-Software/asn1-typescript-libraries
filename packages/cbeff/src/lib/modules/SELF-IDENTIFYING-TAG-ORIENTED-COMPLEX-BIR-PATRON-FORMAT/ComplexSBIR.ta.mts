@@ -6,6 +6,7 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
+import { assertIntegerRange, assertSequenceSize } from "../../constraints.mjs";
 import { RegistryID, _decode_RegistryID, _encode_RegistryID } from "../CBEFF-DATA-ELEMENTS/RegistryID.ta.mjs";
 import { Version, _decode_Version, _encode_Version } from "../CBEFF-DATA-ELEMENTS/Version.ta.mjs";
 import { ComplexSBIR_birInfo, _decode_ComplexSBIR_birInfo, _encode_ComplexSBIR_birInfo } from "../SELF-IDENTIFYING-TAG-ORIENTED-COMPLEX-BIR-PATRON-FORMAT/ComplexSBIR-birInfo.ta.mjs";
@@ -107,6 +108,8 @@ class ComplexSBIR {
         children: ComplexSBIR_children_childBir[],
         sb?: OPTIONAL<SBType>
     ) {
+        assertIntegerRange(numChildren, 1, 255, "ComplexSBIR.numChildren");
+        assertSequenceSize(children.length, 1, 255, "ComplexSBIR.children");
         this.birSelfId = birSelfId;
         this.cbeffVersion = cbeffVersion;
         this.patronHeaderVersion = patronHeaderVersion;

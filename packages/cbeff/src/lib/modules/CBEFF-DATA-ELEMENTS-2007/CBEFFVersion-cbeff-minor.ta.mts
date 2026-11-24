@@ -11,6 +11,7 @@ import {
   ASN1ConstructionError as _ConstructionError,
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
+import { assertIntegerRange } from "../../constraints.mjs";
 
 /**
  * @summary CBEFFVersion_cbeff_minor
@@ -39,7 +40,11 @@ export const CBEFFVersion_cbeff_minor_version0: 0 = 0 satisfies CBEFFVersion_cbe
 export const version0: 0 = CBEFFVersion_cbeff_minor_version0; /* SHORT_NAMED_INTEGER_VALUE */
 
 
-export const _decode_CBEFFVersion_cbeff_minor: $.ASN1Decoder<INTEGER> = $._decodeInteger;
+export const _decode_CBEFFVersion_cbeff_minor: $.ASN1Decoder<INTEGER> = (el: _Element) => {
+    const value = $._decodeInteger(el);
+    assertIntegerRange(value, 0, 15, "CBEFFVersion.cbeff-minor");
+    return value;
+};
 
 
 export const _encode_CBEFFVersion_cbeff_minor: $.ASN1Encoder<INTEGER> = $._encodeInteger;

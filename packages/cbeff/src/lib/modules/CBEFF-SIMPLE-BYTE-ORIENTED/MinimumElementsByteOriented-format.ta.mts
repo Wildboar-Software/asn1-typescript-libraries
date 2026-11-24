@@ -6,6 +6,7 @@ import {
     type OPTIONAL
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
+import { assertIntegerRange } from "../../constraints.mjs";
 
 
 
@@ -44,6 +45,8 @@ class MinimumElementsByteOriented_format {
         owner: OPTIONAL<INTEGER>,
         type_: INTEGER
     ) {
+        if (owner !== undefined) assertIntegerRange(owner, 1, 65535, "MinimumElementsByteOriented.format.owner");
+        assertIntegerRange(type_, 1, 65535, "MinimumElementsByteOriented.format.type");
         this.owner = owner;
         this.type_ = type_;
     }

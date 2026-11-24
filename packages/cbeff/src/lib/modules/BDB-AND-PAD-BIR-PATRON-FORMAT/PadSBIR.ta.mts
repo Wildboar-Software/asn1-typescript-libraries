@@ -6,6 +6,7 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
+import { assertIntegerRange } from "../../constraints.mjs";
 import { type PadSBIR_biometricdataBir_childBir, _decode_PadSBIR_biometricdataBir_childBir, _encode_PadSBIR_biometricdataBir_childBir } from "../BDB-AND-PAD-BIR-PATRON-FORMAT/PadSBIR-biometricdataBir-childBir.ta.mjs";
 import { PadSBIR_birInfo, _decode_PadSBIR_birInfo, _encode_PadSBIR_birInfo } from "../BDB-AND-PAD-BIR-PATRON-FORMAT/PadSBIR-birInfo.ta.mjs";
 import { type PadSBIR_padBir_childBir, _decode_PadSBIR_padBir_childBir, _encode_PadSBIR_padBir_childBir } from "../BDB-AND-PAD-BIR-PATRON-FORMAT/PadSBIR-padBir-childBir.ta.mjs";
@@ -119,6 +120,7 @@ class PadSBIR {
         padBir: PadSBIR_padBir_childBir[],
         sb?: OPTIONAL<SBType>
     ) {
+        assertIntegerRange(numChildren, 2, 255, "PadSBIR.numChildren");
         this.birSelfId = birSelfId;
         this.cbeffVersion = cbeffVersion;
         this.patronHeaderVersion = patronHeaderVersion;

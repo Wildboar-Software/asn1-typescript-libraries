@@ -11,6 +11,7 @@ import {
   ASN1ConstructionError as _ConstructionError,
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
+import { assertOctetSize } from "../../constraints.mjs";
 
 /**
  * @summary BDBIndex
@@ -25,7 +26,11 @@ import * as $ from '@wildboar/asn1/functional';
 export type BDBIndex = OCTET_STRING; // OctetStringType
 
 
-export const _decode_BDBIndex: $.ASN1Decoder<OCTET_STRING> = $._decodeOctetString;
+export const _decode_BDBIndex: $.ASN1Decoder<OCTET_STRING> = (el: _Element) => {
+    const value = $._decodeOctetString(el);
+    assertOctetSize(value, 16, 16, "BDBIndex");
+    return value;
+};
 
 
 export const _encode_BDBIndex: $.ASN1Encoder<OCTET_STRING> = $._encodeOctetString;

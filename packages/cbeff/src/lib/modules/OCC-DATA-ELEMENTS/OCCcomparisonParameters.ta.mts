@@ -7,6 +7,7 @@ import {
     type OPTIONAL
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
+import { assertIntegerRange } from "../../constraints.mjs";
 
 
 
@@ -84,6 +85,8 @@ class OCCcomparisonParameters {
         verificationTypes?: OPTIONAL<INTEGER>,
         estimationTime?: OPTIONAL<INTEGER>
     ) {
+        if (verificationTypes !== undefined) assertIntegerRange(verificationTypes, 0, 255, "OCCcomparisonParameters.verificationTypes");
+        if (estimationTime !== undefined) assertIntegerRange(estimationTime, 0, 65535, "OCCcomparisonParameters.estimationTime");
         this.minimumMaximumProbeSize = minimumMaximumProbeSize;
         this.orderingFeatures = orderingFeatures;
         this.featureHandlingIndicator = featureHandlingIndicator;

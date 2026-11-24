@@ -5,6 +5,7 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
+import { assertSubtypeRequiresType } from "../../constraints.mjs";
 import { type BiometricSubtype, _decode_BiometricSubtype, _encode_BiometricSubtype } from "../CBEFF-DATA-ELEMENTS/BiometricSubtype.ta.mjs";
 import { type BiometricType, _decode_BiometricType, _encode_BiometricType } from "../CBEFF-DATA-ELEMENTS/BiometricType.ta.mjs";
 import { type BIRIndex, _decode_BIRIndex, _encode_BIRIndex } from "../CBEFF-DATA-ELEMENTS/BIRIndex.ta.mjs";
@@ -117,6 +118,7 @@ class BiometricHeaderTemplateExplicit_biometricInformationDO {
         bdbFormatType: FormatType,
         birIndex?: OPTIONAL<BIRIndex>
     ) {
+        assertSubtypeRequiresType(bdbBiometricType !== undefined, bdbBiometricSubType !== undefined, "BiometricHeaderTemplateExplicit.biometricInformationDO");
         this.patronHeaderVersion = patronHeaderVersion;
         this.bdbBiometricType = bdbBiometricType;
         this.bdbBiometricSubType = bdbBiometricSubType;

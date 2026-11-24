@@ -7,6 +7,7 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
+import { assertIntegerRange } from "../../constraints.mjs";
 import { type Quality, _decode_Quality, _encode_Quality } from "../CBEFF-DATA-ELEMENTS/Quality.ta.mjs";
 import { RegistryID, _decode_RegistryID, _encode_RegistryID } from "../CBEFF-DATA-ELEMENTS/RegistryID.ta.mjs";
 
@@ -101,6 +102,10 @@ class OCCfunctionalityInformation {
         verificationTypes?: OPTIONAL<OCTET_STRING>,
         comparisonAlgID?: OPTIONAL<RegistryID>
     ) {
+        if (maximumProbeSize !== undefined) assertIntegerRange(maximumProbeSize, 0, 16777215, "OCCfunctionalityInformation.maximumProbeSize");
+        if (maximumReferenceSize !== undefined) assertIntegerRange(maximumReferenceSize, 0, 16777215, "OCCfunctionalityInformation.maximumReferenceSize");
+        if (supportedNumberReferences !== undefined) assertIntegerRange(supportedNumberReferences, 0, 255, "OCCfunctionalityInformation.supportedNumberReferences");
+        if (enrolmentPossibility !== undefined) assertIntegerRange(enrolmentPossibility, 0, 255, "OCCfunctionalityInformation.enrolmentPossibility");
         this.maximumProbeSize = maximumProbeSize;
         this.maximumReferenceSize = maximumReferenceSize;
         this.supportedNumberReferences = supportedNumberReferences;

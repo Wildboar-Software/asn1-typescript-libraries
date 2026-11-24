@@ -2,7 +2,9 @@
 import {
     type OCTET_STRING
 } from "@wildboar/asn1";
+import { type ASN1Element as _Element } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
+import { assertOctetSize } from "../constraints.mjs";
 
 
 
@@ -19,8 +21,11 @@ import * as $ from "@wildboar/asn1/functional";
 export
 type BCDDatePeriod = OCTET_STRING; // OctetStringType
 
-export
-const _decode_BCDDatePeriod: $.ASN1Decoder<BCDDatePeriod> = $._decodeOctetString;
+export const _decode_BCDDatePeriod: $.ASN1Decoder<BCDDatePeriod> = (el: _Element) => {
+    const value = $._decodeOctetString(el);
+    assertOctetSize(value, 8, 8, "BCDDatePeriod");
+    return value;
+};
 
 export
 const _encode_BCDDatePeriod: $.ASN1Encoder<BCDDatePeriod> = $._encodeOctetString;
