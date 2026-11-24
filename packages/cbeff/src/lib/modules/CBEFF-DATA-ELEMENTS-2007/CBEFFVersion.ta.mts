@@ -135,10 +135,8 @@ export function _decode_CBEFFVersion(el: _Element): CBEFFVersion {
       }
       sequence[0].name = 'cbeff-major';
       sequence[1].name = 'cbeff-minor';
-      let cbeff_major!: CBEFFVersion_cbeff_major;
-      let cbeff_minor!: CBEFFVersion_cbeff_minor;
-      cbeff_major = _decode_CBEFFVersion_cbeff_major(sequence[0]);
-      cbeff_minor = _decode_CBEFFVersion_cbeff_minor(sequence[1]);
+      const cbeff_major = _decode_CBEFFVersion_cbeff_major(sequence[0]);
+      const cbeff_minor = _decode_CBEFFVersion_cbeff_minor(sequence[1]);
       return new CBEFFVersion(cbeff_major, cbeff_minor);
     };
   }

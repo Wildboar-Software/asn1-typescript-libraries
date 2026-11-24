@@ -127,10 +127,8 @@ export function _decode_BDBFormat(el: _Element): BDBFormat {
       }
       sequence[0].name = 'format-owner';
       sequence[1].name = 'format-type';
-      let format_owner!: INTEGER;
-      let format_type!: INTEGER;
-      format_owner = $._decodeInteger(sequence[0]);
-      format_type = $._decodeInteger(sequence[1]);
+      const format_owner = $._decodeInteger(sequence[0]);
+      const format_type = $._decodeInteger(sequence[1]);
       return new BDBFormat(format_owner, format_type);
     };
   }

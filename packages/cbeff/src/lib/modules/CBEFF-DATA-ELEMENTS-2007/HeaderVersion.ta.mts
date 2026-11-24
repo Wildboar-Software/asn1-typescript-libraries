@@ -135,10 +135,8 @@ export function _decode_HeaderVersion(el: _Element): HeaderVersion {
       }
       sequence[0].name = 'header-major';
       sequence[1].name = 'header-minor';
-      let header_major!: HeaderVersion_header_major;
-      let header_minor!: HeaderVersion_header_minor;
-      header_major = _decode_HeaderVersion_header_major(sequence[0]);
-      header_minor = _decode_HeaderVersion_header_minor(sequence[1]);
+      const header_major = _decode_HeaderVersion_header_major(sequence[0]);
+      const header_minor = _decode_HeaderVersion_header_minor(sequence[1]);
       return new HeaderVersion(header_major, header_minor);
     };
   }
