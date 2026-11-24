@@ -1,11 +1,10 @@
 /* eslint-disable */
 import {
     type ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { BiometricInformationTemplateExplicit, _decode_BiometricInformationTemplateExplicit, _encode_BiometricInformationTemplateExplicit } from "../CBEFF-SMARTCARD-BIDO-EXPLICIT/BiometricInformationTemplateExplicit.ta.mjs";
-
 
 /**
  * @summary GroupBIT
@@ -48,6 +47,5 @@ function _encode_GroupBIT (value: GroupBIT, elGetter: $.ASN1Encoder<any>): _Elem
     if (!_cached_encoder_for_GroupBIT) { _cached_encoder_for_GroupBIT = $._encode_implicit(_TagClass.application, 97, () => $._encodeSetOf<BiometricInformationTemplateExplicit>(() => _encode_BiometricInformationTemplateExplicit, $.BER), $.BER); }
     return _cached_encoder_for_GroupBIT(value, elGetter);
 }
-
 
 /* eslint-enable */

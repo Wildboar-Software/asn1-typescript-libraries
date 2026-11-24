@@ -4,7 +4,7 @@ import {
     type OCTET_STRING,
     type OPTIONAL,
     type ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { assertOctetSize } from "../../constraints.mjs";
@@ -13,7 +13,6 @@ import { type Creator, _decode_Creator, _encode_Creator } from "../CBEFF-DATA-EL
 import { type IntegrityOptions, _decode_IntegrityOptions, _encode_IntegrityOptions } from "../CBEFF-DATA-ELEMENTS/IntegrityOptions.ta.mjs";
 import { type Payload, _decode_Payload, _encode_Payload } from "../CBEFF-DATA-ELEMENTS/Payload.ta.mjs";
 import { ValidityPeriod, _decode_ValidityPeriod, _encode_ValidityPeriod } from "../CBEFF-DATA-ELEMENTS/ValidityPeriod.ta.mjs";
-
 
 /**
  * @summary ComplexSBIR_birInfo
@@ -114,7 +113,6 @@ class ComplexSBIR_birInfo {
     public static _from_object (_o: { [_K in keyof (ComplexSBIR_birInfo)]: (ComplexSBIR_birInfo)[_K] }): ComplexSBIR_birInfo {
         return new ComplexSBIR_birInfo(_o.birIntegrity, _o.birCreationDate, _o.birValidityPeriod, _o.birCreator, _o.birIndex, _o.birPayload, _o.birPointer);
     }
-
 
 }
 
@@ -249,6 +247,5 @@ function _encode_ComplexSBIR_birInfo (value: ComplexSBIR_birInfo, elGetter: $.AS
 }; }
     return _cached_encoder_for_ComplexSBIR_birInfo(value, elGetter);
 }
-
 
 /* eslint-enable */

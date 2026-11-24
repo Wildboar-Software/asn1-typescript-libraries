@@ -4,7 +4,7 @@ import {
     type OCTET_STRING,
     type OPTIONAL,
     type ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { assertIntegerRange, assertOctetSize, assertSequenceSize } from "../../constraints.mjs";
@@ -15,7 +15,6 @@ import { BIR_sbFormat, _decode_BIR_sbFormat, _encode_BIR_sbFormat } from "../CBE
 import { type BiometricSubtype, BiometricSubtype_noValueAvailable, _decode_BiometricSubtype, _encode_BiometricSubtype } from "../CBEFF-DATA-ELEMENTS/BiometricSubtype.ta.mjs";
 import { type BiometricType, BiometricType_noValueAvailable, _decode_BiometricType, _encode_BiometricType } from "../CBEFF-DATA-ELEMENTS/BiometricType.ta.mjs";
 import { type Product, _decode_Product, _encode_Product } from "../CBEFF-DATA-ELEMENTS/Product.ta.mjs";
-
 
 /**
  * @summary BIR
@@ -591,6 +590,5 @@ function _encode_BIR (value: BIR, elGetter: $.ASN1Encoder<any>): _Element {
 }; }
     return _cached_encoder_for_BIR(value, elGetter);
 }
-
 
 /* eslint-enable */

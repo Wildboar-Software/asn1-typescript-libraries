@@ -3,7 +3,7 @@ import {
     type INTEGER,
     type OPTIONAL,
     type ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { assertIntegerRange } from "../../constraints.mjs";
@@ -22,7 +22,6 @@ import { type Quality, _decode_Quality, _encode_Quality } from "../CBEFF-DATA-EL
 import { type SubheaderCount, _decode_SubheaderCount, _encode_SubheaderCount } from "../CBEFF-DATA-ELEMENTS/SubheaderCount.ta.mjs";
 import { Version, _decode_Version, _encode_Version } from "../CBEFF-DATA-ELEMENTS/Version.ta.mjs";
 import { PresenceByteOriented_fieldPresence, _decode_PresenceByteOriented_fieldPresence, _encode_PresenceByteOriented_fieldPresence } from "../CBEFF-PRESENCE-BYTE-ORIENTED/PresenceByteOriented-fieldPresence.ta.mjs";
-
 
 /**
  * @summary PresenceByteOriented
@@ -306,13 +305,15 @@ class PresenceByteOriented {
      * @static
      * @method
      */
-    public static get _default_value_for_bdbLength () { return 0; }        /**
+    public static get _default_value_for_bdbLength () { return 0; }
+    /**
          * @summary The enum used as the type of the component `procLevel`
          * @public
          * @static
          */
 
-    public static _enum_for_procLevel: typeof _enum_for_ProcessedLevel = _enum_for_ProcessedLevel;        /**
+    public static _enum_for_procLevel: typeof _enum_for_ProcessedLevel = _enum_for_ProcessedLevel;
+    /**
          * @summary The enum used as the type of the component `bdbPurpose`
          * @public
          * @static
@@ -519,6 +520,5 @@ function _encode_PresenceByteOriented (value: PresenceByteOriented, elGetter: $.
 }; }
     return _cached_encoder_for_PresenceByteOriented(value, elGetter);
 }
-
 
 /* eslint-enable */

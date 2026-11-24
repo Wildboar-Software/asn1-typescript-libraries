@@ -1,12 +1,10 @@
 /* eslint-disable */
 import {
-    type INTEGER
+    type INTEGER,
 } from "@wildboar/asn1";
 import { type ASN1Element as _Element } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { assertQuality } from "../../constraints.mjs";
-
-
 
 /**
  * @summary Quality

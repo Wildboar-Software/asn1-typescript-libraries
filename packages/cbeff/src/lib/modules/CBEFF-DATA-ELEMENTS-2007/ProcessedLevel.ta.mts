@@ -1,14 +1,5 @@
 /* eslint-disable */
-import {
-  ASN1Element as _Element,
-  ASN1TagClass as _TagClass,
-  ASN1Construction as _Construction,
-  ASN1UniversalType as _UniversalType,
-  ObjectIdentifier as _OID,
-  External as _External,
-  EmbeddedPDV as _PDV,
-  ASN1ConstructionError as _ConstructionError,
-} from '@wildboar/asn1';
+
 import * as $ from '@wildboar/asn1/functional';
 
 /**
@@ -127,11 +118,8 @@ export const ProcessedLevel_processed: 3 =
 export const processed: 3 =
   ProcessedLevel.processed; /* SHORT_NAMED_ENUMERATED_VALUE */
 
-
 export const _decode_ProcessedLevel: $.ASN1Decoder<ProcessedLevel> = $._decodeEnumerated as $.ASN1Decoder<ProcessedLevel>;
 
-
 export const _encode_ProcessedLevel: $.ASN1Encoder<ProcessedLevel> = $._encodeEnumerated as $.ASN1Encoder<ProcessedLevel>;
-
 
 /* eslint-enable */

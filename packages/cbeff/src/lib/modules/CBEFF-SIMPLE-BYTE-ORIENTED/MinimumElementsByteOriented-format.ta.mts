@@ -3,12 +3,10 @@ import {
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     type INTEGER,
-    type OPTIONAL
+    type OPTIONAL,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { assertIntegerRange } from "../../constraints.mjs";
-
-
 
 /**
  * @summary MinimumElementsByteOriented_format
@@ -168,6 +166,5 @@ function _encode_MinimumElementsByteOriented_format (value: MinimumElementsByteO
 }; }
     return _cached_encoder_for_MinimumElementsByteOriented_format(value, elGetter);
 }
-
 
 /* eslint-enable */

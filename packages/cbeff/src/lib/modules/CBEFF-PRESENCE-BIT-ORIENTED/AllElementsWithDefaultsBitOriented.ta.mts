@@ -4,7 +4,7 @@ import {
     type OCTET_STRING,
     type OPTIONAL,
     type ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { assertIntegerRange, assertOctetSize } from "../../constraints.mjs";
@@ -31,7 +31,6 @@ import { type SubheaderCount, _decode_SubheaderCount, _encode_SubheaderCount } f
 import { ValidityPeriod, _decode_ValidityPeriod, _encode_ValidityPeriod } from "../CBEFF-DATA-ELEMENTS/ValidityPeriod.ta.mjs";
 import { Version, _decode_Version, _encode_Version } from "../CBEFF-DATA-ELEMENTS/Version.ta.mjs";
 import { AllElementsWithDefaultsBitOriented_fieldPresence, _decode_AllElementsWithDefaultsBitOriented_fieldPresence, _encode_AllElementsWithDefaultsBitOriented_fieldPresence } from "../CBEFF-PRESENCE-BIT-ORIENTED/AllElementsWithDefaultsBitOriented-fieldPresence.ta.mjs";
-
 
 /**
  * @summary AllElementsWithDefaultsBitOriented
@@ -421,13 +420,15 @@ class AllElementsWithDefaultsBitOriented {
      * @static
      * @method
      */
-    public static get _default_value_for_cbeffVers () { return Version._from_object({ major: 4, minor: 0 }); }        /**
+    public static get _default_value_for_cbeffVers () { return Version._from_object({ major: 4, minor: 0 }); }
+    /**
          * @summary The enum used as the type of the component `procLevel`
          * @public
          * @static
          */
 
-    public static _enum_for_procLevel: typeof _enum_for_ProcessedLevel = _enum_for_ProcessedLevel;        /**
+    public static _enum_for_procLevel: typeof _enum_for_ProcessedLevel = _enum_for_ProcessedLevel;
+    /**
          * @summary The enum used as the type of the component `purpose`
          * @public
          * @static
@@ -695,6 +696,5 @@ function _encode_AllElementsWithDefaultsBitOriented (value: AllElementsWithDefau
 }; }
     return _cached_encoder_for_AllElementsWithDefaultsBitOriented(value, elGetter);
 }
-
 
 /* eslint-enable */

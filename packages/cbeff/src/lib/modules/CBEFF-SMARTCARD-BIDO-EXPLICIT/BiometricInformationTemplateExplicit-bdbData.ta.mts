@@ -3,14 +3,13 @@ import {
     type OCTET_STRING,
     type OPTIONAL,
     type ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { assertOctetSize } from "../../constraints.mjs";
 import { type CardholderChallengeType, _decode_CardholderChallengeType, _encode_CardholderChallengeType } from "../CBEFF-SMARTCARD-BIDO-EXPLICIT/CardholderChallengeType.ta.mjs";
 import { type ProprietaryBDBType, _decode_ProprietaryBDBType, _encode_ProprietaryBDBType } from "../CBEFF-SMARTCARD-BIDO-EXPLICIT/ProprietaryBDBType.ta.mjs";
 import { type StandardBDBType, _decode_StandardBDBType, _encode_StandardBDBType } from "../CBEFF-SMARTCARD-BIDO-EXPLICIT/StandardBDBType.ta.mjs";
-
 
 /**
  * @summary BiometricInformationTemplateExplicit_bdbData
@@ -97,7 +96,6 @@ class BiometricInformationTemplateExplicit_bdbData {
     public static _from_object (_o: { [_K in keyof (BiometricInformationTemplateExplicit_bdbData)]: (BiometricInformationTemplateExplicit_bdbData)[_K] }): BiometricInformationTemplateExplicit_bdbData {
         return new BiometricInformationTemplateExplicit_bdbData(_o.challengeCardholder, _o.standardBDB, _o.proprietaryBDB, _o.referenceQualifier, _o.biometricData);
     }
-
 
 }
 
@@ -220,6 +218,5 @@ function _encode_BiometricInformationTemplateExplicit_bdbData (value: BiometricI
 }; }
     return _cached_encoder_for_BiometricInformationTemplateExplicit_bdbData(value, elGetter);
 }
-
 
 /* eslint-enable */

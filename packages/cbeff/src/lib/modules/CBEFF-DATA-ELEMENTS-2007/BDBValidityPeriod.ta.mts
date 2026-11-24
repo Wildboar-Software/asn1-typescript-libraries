@@ -3,12 +3,6 @@ import {
   type OPTIONAL,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
-  ASN1Construction as _Construction,
-  ASN1UniversalType as _UniversalType,
-  ObjectIdentifier as _OID,
-  External as _External,
-  EmbeddedPDV as _PDV,
-  ASN1ConstructionError as _ConstructionError,
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
@@ -185,6 +179,5 @@ export function _encode_BDBValidityPeriod(
   }
   return _cached_encoder_for_BDBValidityPeriod(value, elGetter);
 }
-
 
 /* eslint-enable */

@@ -3,7 +3,7 @@ import {
     type OCTET_STRING,
     type OPTIONAL,
     type ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { assertSubtypeRequiresType } from "../../constraints.mjs";
@@ -17,7 +17,6 @@ import { type FormatOwner, _decode_FormatOwner, _encode_FormatOwner } from "../C
 import { type FormatType, _decode_FormatType, _encode_FormatType } from "../CBEFF-SMARTCARD-BIDO/FormatType.ta.mjs";
 import { type PatronHeaderVersion, _decode_PatronHeaderVersion, _encode_PatronHeaderVersion } from "../CBEFF-SMARTCARD-BIDO/PatronHeaderVersion.ta.mjs";
 import { type ProductID, _decode_ProductID, _encode_ProductID } from "../CBEFF-SMARTCARD-BIDO/ProductID.ta.mjs";
-
 
 /**
  * @summary BiometricHeaderTemplate
@@ -325,6 +324,5 @@ function _encode_BiometricHeaderTemplate (value: BiometricHeaderTemplate, elGett
 }; }
     return _cached_encoder_for_BiometricHeaderTemplate(value, elGetter);
 }
-
 
 /* eslint-enable */

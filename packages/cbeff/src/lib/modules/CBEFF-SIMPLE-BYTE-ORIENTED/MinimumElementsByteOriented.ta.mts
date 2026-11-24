@@ -2,12 +2,11 @@
 import {
     ASN1ConstructionError as _ConstructionError,
     type ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { type BiometricDataBlock, _decode_BiometricDataBlock, _encode_BiometricDataBlock } from "../CBEFF-DATA-ELEMENTS/BiometricDataBlock.ta.mjs";
 import { MinimumElementsByteOriented_format, _decode_MinimumElementsByteOriented_format, _encode_MinimumElementsByteOriented_format } from "../CBEFF-SIMPLE-BYTE-ORIENTED/MinimumElementsByteOriented-format.ta.mjs";
-
 
 /**
  * @summary MinimumElementsByteOriented
@@ -71,7 +70,6 @@ class MinimumElementsByteOriented {
     public static _from_object (_o: { [_K in keyof (MinimumElementsByteOriented)]: (MinimumElementsByteOriented)[_K] }): MinimumElementsByteOriented {
         return new MinimumElementsByteOriented(_o.format, _o.bdb);
     }
-
 
 }
 
@@ -162,6 +160,5 @@ function _encode_MinimumElementsByteOriented (value: MinimumElementsByteOriented
 }; }
     return _cached_encoder_for_MinimumElementsByteOriented(value, elGetter);
 }
-
 
 /* eslint-enable */

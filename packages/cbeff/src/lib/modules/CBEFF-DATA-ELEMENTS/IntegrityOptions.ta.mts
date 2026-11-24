@@ -1,10 +1,8 @@
 /* eslint-disable */
 import {
-    type BOOLEAN
+    type BOOLEAN,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-
-
 
 /**
  * @summary IntegrityOptions

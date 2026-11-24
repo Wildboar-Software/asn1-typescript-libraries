@@ -4,13 +4,12 @@ import {
     type OCTET_STRING,
     type OPTIONAL,
     type ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { assertIntegerRange } from "../../constraints.mjs";
 import { type Quality, _decode_Quality, _encode_Quality } from "../CBEFF-DATA-ELEMENTS/Quality.ta.mjs";
 import { RegistryID, _decode_RegistryID, _encode_RegistryID } from "../CBEFF-DATA-ELEMENTS/RegistryID.ta.mjs";
-
 
 /**
  * @summary OCCfunctionalityInformation
@@ -132,7 +131,6 @@ class OCCfunctionalityInformation {
     public static _from_object (_o: { [_K in keyof (OCCfunctionalityInformation)]: (OCCfunctionalityInformation)[_K] }): OCCfunctionalityInformation {
         return new OCCfunctionalityInformation(_o.maximumProbeSize, _o.maximumReferenceSize, _o.supportedNumberReferences, _o.enrolmentPossibility, _o.minimumVerificationQuality, _o.minimumQualityRequirements, _o.proprietaryData, _o.verificationTypes, _o.comparisonAlgID);
     }
-
 
 }
 
@@ -283,6 +281,5 @@ function _encode_OCCfunctionalityInformation (value: OCCfunctionalityInformation
 }; }
     return _cached_encoder_for_OCCfunctionalityInformation(value, elGetter);
 }
-
 
 /* eslint-enable */

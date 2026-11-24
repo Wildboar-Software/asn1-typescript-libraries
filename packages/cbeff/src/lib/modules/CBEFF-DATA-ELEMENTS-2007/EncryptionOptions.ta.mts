@@ -1,14 +1,6 @@
 /* eslint-disable */
 import {
   type BOOLEAN,
-  ASN1Element as _Element,
-  ASN1TagClass as _TagClass,
-  ASN1Construction as _Construction,
-  ASN1UniversalType as _UniversalType,
-  ObjectIdentifier as _OID,
-  External as _External,
-  EmbeddedPDV as _PDV,
-  ASN1ConstructionError as _ConstructionError,
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 
@@ -24,11 +16,8 @@ import * as $ from '@wildboar/asn1/functional';
  */
 export type EncryptionOptions = BOOLEAN; // BooleanType
 
-
 export const _decode_EncryptionOptions: $.ASN1Decoder<boolean> = $._decodeBoolean;
 
-
 export const _encode_EncryptionOptions: $.ASN1Encoder<boolean> = $._encodeBoolean;
-
 
 /* eslint-enable */

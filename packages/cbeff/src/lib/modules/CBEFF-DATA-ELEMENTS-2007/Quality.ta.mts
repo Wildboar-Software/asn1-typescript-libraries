@@ -2,13 +2,6 @@
 import {
   type INTEGER,
   ASN1Element as _Element,
-  ASN1TagClass as _TagClass,
-  ASN1Construction as _Construction,
-  ASN1UniversalType as _UniversalType,
-  ObjectIdentifier as _OID,
-  External as _External,
-  EmbeddedPDV as _PDV,
-  ASN1ConstructionError as _ConstructionError,
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import { assertIntegerRange } from "../../constraints.mjs";
@@ -69,15 +62,12 @@ export const Quality_quality_not_recorded: -1 = -1 satisfies Quality; /* LONG_NA
  */
 export const quality_not_recorded: -1 = Quality_quality_not_recorded; /* SHORT_NAMED_INTEGER_VALUE */
 
-
 export const _decode_Quality: $.ASN1Decoder<INTEGER> = (el: _Element) => {
     const value = $._decodeInteger(el);
     assertIntegerRange(value, -3, 100, "Quality");
     return value;
 };
 
-
 export const _encode_Quality: $.ASN1Encoder<INTEGER> = $._encodeInteger;
-
 
 /* eslint-enable */

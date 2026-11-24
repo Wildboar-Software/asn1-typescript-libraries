@@ -2,7 +2,6 @@
 import * as $ from "@wildboar/asn1/functional";
 import { ValidityPeriod, _decode_ValidityPeriod, _encode_ValidityPeriod } from "../CBEFF-DATA-ELEMENTS/ValidityPeriod.ta.mjs";
 
-
 /**
  * @summary BDBValidityPeriod
  * @description

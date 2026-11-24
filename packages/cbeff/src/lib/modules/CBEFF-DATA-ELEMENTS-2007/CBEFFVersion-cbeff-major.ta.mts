@@ -2,13 +2,6 @@
 import {
   type INTEGER,
   ASN1Element as _Element,
-  ASN1TagClass as _TagClass,
-  ASN1Construction as _Construction,
-  ASN1UniversalType as _UniversalType,
-  ObjectIdentifier as _OID,
-  External as _External,
-  EmbeddedPDV as _PDV,
-  ASN1ConstructionError as _ConstructionError,
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import { assertIntegerRange } from "../../constraints.mjs";
@@ -39,15 +32,12 @@ export const CBEFFVersion_cbeff_major_version2: 2 = 2 satisfies CBEFFVersion_cbe
  */
 export const version2: 2 = CBEFFVersion_cbeff_major_version2; /* SHORT_NAMED_INTEGER_VALUE */
 
-
 export const _decode_CBEFFVersion_cbeff_major: $.ASN1Decoder<INTEGER> = (el: _Element) => {
     const value = $._decodeInteger(el);
     assertIntegerRange(value, 0, 15, "CBEFFVersion.cbeff-major");
     return value;
 };
 
-
 export const _encode_CBEFFVersion_cbeff_major: $.ASN1Encoder<INTEGER> = $._encodeInteger;
-
 
 /* eslint-enable */

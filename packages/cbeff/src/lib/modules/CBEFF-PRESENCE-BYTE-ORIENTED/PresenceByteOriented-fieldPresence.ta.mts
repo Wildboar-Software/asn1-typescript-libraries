@@ -3,11 +3,9 @@ import {
     ASN1ConstructionError as _ConstructionError,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    type BOOLEAN
+    type BOOLEAN,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-
-
 
 /**
  * @summary PresenceByteOriented_fieldPresence
@@ -171,7 +169,6 @@ class PresenceByteOriented_fieldPresence {
         return new PresenceByteOriented_fieldPresence(_o.bioType, _o.bioSubtype, _o.bdbCreation, _o.procLevel, _o.bdbProduct, _o.bdbPurpose, _o.bdbQuality, _o.bdbValidity, _o.birCreation, _o.birValidity, _o.patronHdrVersion, _o.cbeffVers, _o.subHeaderCount, _o.bdbLength);
     }
 
-
 }
 
 /**
@@ -321,6 +318,5 @@ function _encode_PresenceByteOriented_fieldPresence (value: PresenceByteOriented
 }; }
     return _cached_encoder_for_PresenceByteOriented_fieldPresence(value, elGetter);
 }
-
 
 /* eslint-enable */

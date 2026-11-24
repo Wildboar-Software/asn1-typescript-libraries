@@ -4,7 +4,7 @@ import {
     type OCTET_STRING,
     type OPTIONAL,
     type ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { assertIntegerRange, assertOctetSize, assertSequenceSize } from "../../constraints.mjs";
@@ -23,7 +23,6 @@ import { type Quality, _decode_Quality, _encode_Quality } from "../CBEFF-DATA-EL
 import { RegistryID, _decode_RegistryID, _encode_RegistryID } from "../CBEFF-DATA-ELEMENTS/RegistryID.ta.mjs";
 import { BIR_children_child, _decode_BIR_children_child, _encode_BIR_children_child } from "../CBEFF-FULL-COMPLEX-PATRON-FORMAT/BIR-children-child.ta.mjs";
 import { BIR_fieldPresence, _decode_BIR_fieldPresence, _encode_BIR_fieldPresence } from "../CBEFF-FULL-COMPLEX-PATRON-FORMAT/BIR-fieldPresence.ta.mjs";
-
 
 /**
  * @summary BIR
@@ -384,13 +383,15 @@ class BIR {
      * @static
      * @method
      */
-    public static get _default_value_for_bdbBiometricSubtype () { return BiometricSubtype_noValueAvailable; }        /**
+    public static get _default_value_for_bdbBiometricSubtype () { return BiometricSubtype_noValueAvailable; }
+    /**
          * @summary The enum used as the type of the component `bdbProcessedLevel`
          * @public
          * @static
          */
 
-    public static _enum_for_bdbProcessedLevel: typeof _enum_for_ProcessedLevel = _enum_for_ProcessedLevel;        /**
+    public static _enum_for_bdbProcessedLevel: typeof _enum_for_ProcessedLevel = _enum_for_ProcessedLevel;
+    /**
          * @summary The enum used as the type of the component `bdbPurpose`
          * @public
          * @static
@@ -679,6 +680,5 @@ function _encode_BIR (value: BIR, elGetter: $.ASN1Encoder<any>): _Element {
 }; }
     return _cached_encoder_for_BIR(value, elGetter);
 }
-
 
 /* eslint-enable */

@@ -2,13 +2,6 @@
 import {
   type BIT_STRING,
   ASN1Element as _Element,
-  ASN1TagClass as _TagClass,
-  ASN1Construction as _Construction,
-  ASN1UniversalType as _UniversalType,
-  ObjectIdentifier as _OID,
-  External as _External,
-  EmbeddedPDV as _PDV,
-  ASN1ConstructionError as _ConstructionError,
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import { assertBitSize } from "../../constraints.mjs";
@@ -111,15 +104,12 @@ export const Any_sub_type_little_finger: number = 0; /* LONG_NAMED_BIT */
  */
 export const little_finger: number = Any_sub_type_little_finger; /* SHORT_NAMED_BIT */
 
-
 export const _decode_Any_sub_type: $.ASN1Decoder<BIT_STRING> = (el: _Element) => {
     const value = $._decodeBitString(el);
     assertBitSize(value, 7, "Any-sub-type");
     return value;
 };
 
-
 export const _encode_Any_sub_type: $.ASN1Encoder<BIT_STRING> = $._encodeBitString;
-
 
 /* eslint-enable */

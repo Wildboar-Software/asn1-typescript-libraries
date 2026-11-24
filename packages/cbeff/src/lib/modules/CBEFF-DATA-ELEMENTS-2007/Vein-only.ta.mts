@@ -2,13 +2,6 @@
 import {
   type BIT_STRING,
   ASN1Element as _Element,
-  ASN1TagClass as _TagClass,
-  ASN1Construction as _Construction,
-  ASN1UniversalType as _UniversalType,
-  ObjectIdentifier as _OID,
-  External as _External,
-  EmbeddedPDV as _PDV,
-  ASN1ConstructionError as _ConstructionError,
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import { assertBitSize } from "../../constraints.mjs";
@@ -111,15 +104,12 @@ export const Vein_only_reserved2: number = 0; /* LONG_NAMED_BIT */
  */
 export const reserved2: number = Vein_only_reserved2; /* SHORT_NAMED_BIT */
 
-
 export const _decode_Vein_only: $.ASN1Decoder<BIT_STRING> = (el: _Element) => {
     const value = $._decodeBitString(el);
     assertBitSize(value, 7, "Vein-only");
     return value;
 };
 
-
 export const _encode_Vein_only: $.ASN1Encoder<BIT_STRING> = $._encodeBitString;
-
 
 /* eslint-enable */

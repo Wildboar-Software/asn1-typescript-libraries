@@ -2,12 +2,11 @@
 import {
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    type OPTIONAL
+    type OPTIONAL,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { _decode_BiometricSubtype, _encode_BiometricSubtype, type BiometricSubtype } from "../CBEFF-DATA-ELEMENTS/BiometricSubtype.ta.mjs";
 import { _decode_BiometricType, _encode_BiometricType, type BiometricType } from "../CBEFF-DATA-ELEMENTS/BiometricType.ta.mjs";
-
 
 /**
  * @summary SBIR_bdbInfo_bdbBiometric
@@ -62,7 +61,6 @@ class SBIR_bdbInfo_bdbBiometric {
     public static _from_object (_o: { [_K in keyof (SBIR_bdbInfo_bdbBiometric)]: (SBIR_bdbInfo_bdbBiometric)[_K] }): SBIR_bdbInfo_bdbBiometric {
         return new SBIR_bdbInfo_bdbBiometric(_o.bdbBiometricType, _o.bdbBiometricSubtype);
     }
-
 
 }
 
@@ -158,6 +156,5 @@ function _encode_SBIR_bdbInfo_bdbBiometric (value: SBIR_bdbInfo_bdbBiometric, el
 }; }
     return _cached_encoder_for_SBIR_bdbInfo_bdbBiometric(value, elGetter);
 }
-
 
 /* eslint-enable */

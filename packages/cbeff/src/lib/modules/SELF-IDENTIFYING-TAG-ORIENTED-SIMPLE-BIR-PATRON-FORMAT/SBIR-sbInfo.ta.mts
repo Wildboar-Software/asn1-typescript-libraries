@@ -1,11 +1,10 @@
 /* eslint-disable */
 import {
     type ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { RegistryID, _decode_RegistryID, _encode_RegistryID } from "../CBEFF-DATA-ELEMENTS/RegistryID.ta.mjs";
-
 
 /**
  * @summary SBIR_sbInfo
@@ -51,7 +50,6 @@ class SBIR_sbInfo {
     public static _from_object (_o: { [_K in keyof (SBIR_sbInfo)]: (SBIR_sbInfo)[_K] }): SBIR_sbInfo {
         return new SBIR_sbInfo(_o.sbFormat);
     }
-
 
 }
 
@@ -144,6 +142,5 @@ function _encode_SBIR_sbInfo (value: SBIR_sbInfo, elGetter: $.ASN1Encoder<any>):
 }; }
     return _cached_encoder_for_SBIR_sbInfo(value, elGetter);
 }
-
 
 /* eslint-enable */

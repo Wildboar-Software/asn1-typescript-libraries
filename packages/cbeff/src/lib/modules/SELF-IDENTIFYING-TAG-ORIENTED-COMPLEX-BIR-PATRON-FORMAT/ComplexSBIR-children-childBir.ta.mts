@@ -1,12 +1,11 @@
 /* eslint-disable */
 import {
     type ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ComplexSBIR, _decode_ComplexSBIR, _encode_ComplexSBIR } from "../SELF-IDENTIFYING-TAG-ORIENTED-COMPLEX-BIR-PATRON-FORMAT/ComplexSBIR.ta.mjs";
 import { SBIR, _decode_SBIR, _encode_SBIR } from "../SELF-IDENTIFYING-TAG-ORIENTED-SIMPLE-BIR-PATRON-FORMAT/SBIR.ta.mjs";
-
 
 /**
  * @summary ComplexSBIR_children_childBir
@@ -60,6 +59,5 @@ function _encode_ComplexSBIR_children_childBir (value: ComplexSBIR_children_chil
 }, $.BER); }
     return _cached_encoder_for_ComplexSBIR_children_childBir(value, elGetter);
 }
-
 
 /* eslint-enable */

@@ -3,11 +3,9 @@ import {
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     type DATE_TIME,
-    type OPTIONAL
+    type OPTIONAL,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-
-
 
 /**
  * @summary ValidityPeriod
@@ -62,7 +60,6 @@ class ValidityPeriod {
     public static _from_object (_o: { [_K in keyof (ValidityPeriod)]: (ValidityPeriod)[_K] }): ValidityPeriod {
         return new ValidityPeriod(_o.notValidBefore, _o.notValidAfter);
     }
-
 
 }
 
@@ -160,6 +157,5 @@ function _encode_ValidityPeriod (value: ValidityPeriod, elGetter: $.ASN1Encoder<
 }; }
     return _cached_encoder_for_ValidityPeriod(value, elGetter);
 }
-
 
 /* eslint-enable */

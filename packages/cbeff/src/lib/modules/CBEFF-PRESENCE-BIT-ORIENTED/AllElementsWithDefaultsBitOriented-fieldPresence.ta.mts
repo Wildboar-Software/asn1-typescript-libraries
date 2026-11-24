@@ -3,11 +3,9 @@ import {
     ASN1ConstructionError as _ConstructionError,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    type BOOLEAN
+    type BOOLEAN,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-
-
 
 /**
  * @summary AllElementsWithDefaultsBitOriented_fieldPresence
@@ -262,7 +260,6 @@ class AllElementsWithDefaultsBitOriented_fieldPresence {
         return new AllElementsWithDefaultsBitOriented_fieldPresence(_o.encryptOpts, _o.integOpts, _o.subHeaderCount, _o.bdbLength, _o.bioType, _o.bioSubtype, _o.chaResp, _o.bdbCreation, _o.bdbIndex, _o.procLevel, _o.product, _o.purpose, _o.quality, _o.bdbValidity, _o.birCreation, _o.birCreator, _o.birIndex, _o.patronFormat, _o.payload, _o.birValidity, _o.patronHdrVersion, _o.sbFormat, _o.cbeffVers, _o.sb);
     }
 
-
 }
 
 /**
@@ -462,6 +459,5 @@ function _encode_AllElementsWithDefaultsBitOriented_fieldPresence (value: AllEle
 }; }
     return _cached_encoder_for_AllElementsWithDefaultsBitOriented_fieldPresence(value, elGetter);
 }
-
 
 /* eslint-enable */

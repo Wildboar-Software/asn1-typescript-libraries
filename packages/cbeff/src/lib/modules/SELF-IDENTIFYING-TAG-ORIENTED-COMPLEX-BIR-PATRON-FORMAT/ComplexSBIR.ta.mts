@@ -3,7 +3,7 @@ import {
     type INTEGER,
     type OPTIONAL,
     type ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { assertIntegerRange, assertSequenceSize } from "../../constraints.mjs";
@@ -13,7 +13,6 @@ import { ComplexSBIR_birInfo, _decode_ComplexSBIR_birInfo, _encode_ComplexSBIR_b
 import { type ComplexSBIR_children_childBir, _decode_ComplexSBIR_children_childBir, _encode_ComplexSBIR_children_childBir } from "../SELF-IDENTIFYING-TAG-ORIENTED-COMPLEX-BIR-PATRON-FORMAT/ComplexSBIR-children-childBir.ta.mjs";
 import { ComplexSBIR_sbInfo, _decode_ComplexSBIR_sbInfo, _encode_ComplexSBIR_sbInfo } from "../SELF-IDENTIFYING-TAG-ORIENTED-COMPLEX-BIR-PATRON-FORMAT/ComplexSBIR-sbInfo.ta.mjs";
 import { type SBType, _decode_SBType, _encode_SBType } from "../SELF-IDENTIFYING-TAG-ORIENTED-COMPLEX-BIR-PATRON-FORMAT/SBType.ta.mjs";
-
 
 /**
  * @summary ComplexSBIR
@@ -135,7 +134,6 @@ class ComplexSBIR {
     public static _from_object (_o: { [_K in keyof (ComplexSBIR)]: (ComplexSBIR)[_K] }): ComplexSBIR {
         return new ComplexSBIR(_o.birSelfId, _o.cbeffVersion, _o.patronHeaderVersion, _o.numChildren, _o.birInfo, _o.sbInfo, _o.children, _o.sb);
     }
-
 
 }
 
@@ -263,6 +261,5 @@ function _encode_ComplexSBIR (value: ComplexSBIR, elGetter: $.ASN1Encoder<any>):
 }, $.BER); }
     return _cached_encoder_for_ComplexSBIR(value, elGetter);
 }
-
 
 /* eslint-enable */

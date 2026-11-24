@@ -3,12 +3,11 @@ import {
     type INTEGER,
     ASN1ConstructionError as _ConstructionError,
     type ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { assertIntegerRange, assertQuality } from "../../constraints.mjs";
 import { type Quality, _decode_Quality, _encode_Quality } from "../CBEFF-DATA-ELEMENTS/Quality.ta.mjs";
-
 
 /**
  * @summary ConstructedQuality
@@ -75,7 +74,6 @@ class ConstructedQuality {
     public static _from_object (_o: { [_K in keyof (ConstructedQuality)]: (ConstructedQuality)[_K] }): ConstructedQuality {
         return new ConstructedQuality(_o.organization, _o.id, _o.score);
     }
-
 
 }
 
@@ -171,6 +169,5 @@ function _encode_ConstructedQuality (value: ConstructedQuality, elGetter: $.ASN1
 }; }
     return _cached_encoder_for_ConstructedQuality(value, elGetter);
 }
-
 
 /* eslint-enable */

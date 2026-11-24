@@ -3,12 +3,10 @@ import {
     ASN1ConstructionError as _ConstructionError,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    type INTEGER
+    type INTEGER,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { assertIntegerRange } from "../../constraints.mjs";
-
-
 
 /**
  * @summary RegistryID
@@ -67,7 +65,6 @@ class RegistryID {
     public static _from_object (_o: { [_K in keyof (RegistryID)]: (RegistryID)[_K] }): RegistryID {
         return new RegistryID(_o.organization, _o.id);
     }
-
 
 }
 
@@ -158,6 +155,5 @@ function _encode_RegistryID (value: RegistryID, elGetter: $.ASN1Encoder<any>): _
 }; }
     return _cached_encoder_for_RegistryID(value, elGetter);
 }
-
 
 /* eslint-enable */

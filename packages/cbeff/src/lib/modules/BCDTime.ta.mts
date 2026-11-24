@@ -1,12 +1,10 @@
 /* eslint-disable */
 import {
-    type OCTET_STRING
+    type OCTET_STRING,
 } from "@wildboar/asn1";
 import { type ASN1Element as _Element } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { assertOctetSize } from "../constraints.mjs";
-
-
 
 /**
  * @summary BCDTime

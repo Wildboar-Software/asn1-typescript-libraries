@@ -3,12 +3,10 @@ import {
     ASN1ConstructionError as _ConstructionError,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    type INTEGER
+    type INTEGER,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { assertIntegerRange } from "../../constraints.mjs";
-
-
 
 /**
  * @summary BIR_bdbFormat
@@ -65,7 +63,6 @@ class BIR_bdbFormat {
     public static _from_object (_o: { [_K in keyof (BIR_bdbFormat)]: (BIR_bdbFormat)[_K] }): BIR_bdbFormat {
         return new BIR_bdbFormat(_o.bdbFormatOwner, _o.bdbFormatType);
     }
-
 
 }
 
@@ -156,6 +153,5 @@ function _encode_BIR_bdbFormat (value: BIR_bdbFormat, elGetter: $.ASN1Encoder<an
 }; }
     return _cached_encoder_for_BIR_bdbFormat(value, elGetter);
 }
-
 
 /* eslint-enable */

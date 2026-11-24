@@ -3,12 +3,11 @@ import {
     type OPTIONAL,
     type ASN1Element as _Element,
     ObjectIdentifier as _OID,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { BiometricHeaderTemplateExplicit_biometricInformationDO, _decode_BiometricHeaderTemplateExplicit_biometricInformationDO, _encode_BiometricHeaderTemplateExplicit_biometricInformationDO } from "../CBEFF-SMARTCARD-BIDO-EXPLICIT/BiometricHeaderTemplateExplicit-biometricInformationDO.ta.mjs";
 import { type BiometricHeaderTemplateExplicit_tagAllocationAuthority, _decode_BiometricHeaderTemplateExplicit_tagAllocationAuthority, _encode_BiometricHeaderTemplateExplicit_tagAllocationAuthority } from "../CBEFF-SMARTCARD-BIDO-EXPLICIT/BiometricHeaderTemplateExplicit-tagAllocationAuthority.ta.mjs";
-
 
 /**
  * @summary BiometricHeaderTemplateExplicit
@@ -187,6 +186,5 @@ function _encode_BiometricHeaderTemplateExplicit (value: BiometricHeaderTemplate
 }; }
     return _cached_encoder_for_BiometricHeaderTemplateExplicit(value, elGetter);
 }
-
 
 /* eslint-enable */

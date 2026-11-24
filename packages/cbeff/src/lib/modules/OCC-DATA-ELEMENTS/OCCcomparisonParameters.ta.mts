@@ -4,12 +4,10 @@ import {
     ASN1TagClass as _TagClass,
     type INTEGER,
     type OCTET_STRING,
-    type OPTIONAL
+    type OPTIONAL,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { assertIntegerRange } from "../../constraints.mjs";
-
-
 
 /**
  * @summary OCCcomparisonParameters
@@ -111,7 +109,6 @@ class OCCcomparisonParameters {
     public static _from_object (_o: { [_K in keyof (OCCcomparisonParameters)]: (OCCcomparisonParameters)[_K] }): OCCcomparisonParameters {
         return new OCCcomparisonParameters(_o.minimumMaximumProbeSize, _o.orderingFeatures, _o.featureHandlingIndicator, _o.alignmentInformation, _o.minimumVerificationQuality, _o.verificationTypes, _o.estimationTime);
     }
-
 
 }
 
@@ -248,6 +245,5 @@ function _encode_OCCcomparisonParameters (value: OCCcomparisonParameters, elGett
 }; }
     return _cached_encoder_for_OCCcomparisonParameters(value, elGetter);
 }
-
 
 /* eslint-enable */

@@ -3,11 +3,9 @@ import {
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     type OBJECT_IDENTIFIER,
-    type OCTET_STRING
+    type OCTET_STRING,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-
-
 
 /**
  * @summary OCCBiometricInformation_tagAllocationAuthority
@@ -69,6 +67,5 @@ function _encode_OCCBiometricInformation_tagAllocationAuthority (value: OCCBiome
 }, $.BER); }
     return _cached_encoder_for_OCCBiometricInformation_tagAllocationAuthority(value, elGetter);
 }
-
 
 /* eslint-enable */

@@ -1,14 +1,5 @@
 /* eslint-disable */
-import {
-  ASN1Element as _Element,
-  ASN1TagClass as _TagClass,
-  ASN1Construction as _Construction,
-  ASN1UniversalType as _UniversalType,
-  ObjectIdentifier as _OID,
-  External as _External,
-  EmbeddedPDV as _PDV,
-  ASN1ConstructionError as _ConstructionError,
-} from '@wildboar/asn1';
+
 import * as $ from '@wildboar/asn1/functional';
 
 /**
@@ -180,11 +171,8 @@ export const Purpose_audit: 6 =
  */
 export const audit: 6 = Purpose.audit; /* SHORT_NAMED_ENUMERATED_VALUE */
 
-
 export const _decode_Purpose: $.ASN1Decoder<Purpose> = $._decodeEnumerated as $.ASN1Decoder<Purpose>;
 
-
 export const _encode_Purpose: $.ASN1Encoder<Purpose> = $._encodeEnumerated as $.ASN1Encoder<Purpose>;
-
 
 /* eslint-enable */

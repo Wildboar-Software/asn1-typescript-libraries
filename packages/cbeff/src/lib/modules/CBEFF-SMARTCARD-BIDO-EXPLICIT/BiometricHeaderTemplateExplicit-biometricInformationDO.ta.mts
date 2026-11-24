@@ -2,7 +2,7 @@
 import {
     type OPTIONAL,
     type ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { assertSubtypeRequiresType } from "../../constraints.mjs";
@@ -16,7 +16,6 @@ import { type FormatOwner, _decode_FormatOwner, _encode_FormatOwner } from "../C
 import { type FormatType, _decode_FormatType, _encode_FormatType } from "../CBEFF-SMARTCARD-BIDO-EXPLICIT/FormatType.ta.mjs";
 import { type PatronHeaderVersion, _decode_PatronHeaderVersion, _encode_PatronHeaderVersion } from "../CBEFF-SMARTCARD-BIDO-EXPLICIT/PatronHeaderVersion.ta.mjs";
 import { type ProductID, _decode_ProductID, _encode_ProductID } from "../CBEFF-SMARTCARD-BIDO-EXPLICIT/ProductID.ta.mjs";
-
 
 /**
  * @summary BiometricHeaderTemplateExplicit_biometricInformationDO
@@ -306,6 +305,5 @@ function _encode_BiometricHeaderTemplateExplicit_biometricInformationDO (value: 
 }; }
     return _cached_encoder_for_BiometricHeaderTemplateExplicit_biometricInformationDO(value, elGetter);
 }
-
 
 /* eslint-enable */

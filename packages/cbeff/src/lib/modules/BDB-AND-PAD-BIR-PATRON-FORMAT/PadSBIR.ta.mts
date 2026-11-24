@@ -3,7 +3,7 @@ import {
     type INTEGER,
     type OPTIONAL,
     type ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { assertIntegerRange } from "../../constraints.mjs";
@@ -14,7 +14,6 @@ import { PadSBIR_sbInfo, _decode_PadSBIR_sbInfo, _encode_PadSBIR_sbInfo } from "
 import { type SBType, _decode_SBType, _encode_SBType } from "../BDB-AND-PAD-BIR-PATRON-FORMAT/SBType.ta.mjs";
 import { RegistryID, _decode_RegistryID, _encode_RegistryID } from "../CBEFF-DATA-ELEMENTS/RegistryID.ta.mjs";
 import { Version, _decode_Version, _encode_Version } from "../CBEFF-DATA-ELEMENTS/Version.ta.mjs";
-
 
 /**
  * @summary PadSBIR
@@ -148,7 +147,6 @@ class PadSBIR {
         return new PadSBIR(_o.birSelfId, _o.cbeffVersion, _o.patronHeaderVersion, _o.numChildren, _o.birInfo, _o.sbInfo, _o.biometricdataBir, _o.padBir, _o.sb);
     }
 
-
 }
 
 /**
@@ -280,6 +278,5 @@ function _encode_PadSBIR (value: PadSBIR, elGetter: $.ASN1Encoder<any>): _Elemen
 }, $.BER); }
     return _cached_encoder_for_PadSBIR(value, elGetter);
 }
-
 
 /* eslint-enable */
