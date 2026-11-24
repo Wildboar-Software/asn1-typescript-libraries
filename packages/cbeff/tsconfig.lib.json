@@ -7,13 +7,20 @@
     "emitDeclarationOnly": false,
     "forceConsistentCasingInFileNames": true,
     "strict": true,
+    "strictNullChecks": true,
+    "noImplicitAny": true,
+    "noImplicitOverride": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    "isolatedDeclarations": true,
+    "erasableSyntaxOnly": true,
     "importHelpers": true,
     "types": [
       "node"
     ]
   },
   "include": [
-    "src/**/*.ts"
+    "**/*.mts"
   ],
   "references": [],
   "exclude": [

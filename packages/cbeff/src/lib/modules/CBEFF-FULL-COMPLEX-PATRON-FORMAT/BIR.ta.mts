@@ -376,14 +376,14 @@ class BIR {
      * @static
      * @method
      */
-    public static get _default_value_for_bdbBiometricType () { return BiometricType_noValueAvailable; }
+    public static get _default_value_for_bdbBiometricType (): BiometricType { return BiometricType_noValueAvailable; }
     /**
      * @summary Getter that returns the default value for `bdbBiometricSubtype`.
      * @public
      * @static
      * @method
      */
-    public static get _default_value_for_bdbBiometricSubtype () { return BiometricSubtype_noValueAvailable; }
+    public static get _default_value_for_bdbBiometricSubtype (): BiometricSubtype { return BiometricSubtype_noValueAvailable; }
     /**
          * @summary The enum used as the type of the component `bdbProcessedLevel`
          * @public

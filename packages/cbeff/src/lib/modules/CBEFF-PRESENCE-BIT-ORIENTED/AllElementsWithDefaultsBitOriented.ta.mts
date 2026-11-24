@@ -378,49 +378,49 @@ class AllElementsWithDefaultsBitOriented {
      * @static
      * @method
      */
-    public static get _default_value_for_bioType () { return BiometricType_noValueAvailable; }
+    public static get _default_value_for_bioType (): BiometricType { return BiometricType_noValueAvailable; }
     /**
      * @summary Getter that returns the default value for `bioSubtype`.
      * @public
      * @static
      * @method
      */
-    public static get _default_value_for_bioSubtype () { return BiometricSubtype_noValueAvailable; }
+    public static get _default_value_for_bioSubtype (): BiometricSubtype { return BiometricSubtype_noValueAvailable; }
     /**
      * @summary Getter that returns the default value for `procLevel`.
      * @public
      * @static
      * @method
      */
-    public static get _default_value_for_procLevel () { return ProcessedLevel_noValueAvailable; }
+    public static get _default_value_for_procLevel (): ProcessedLevel { return ProcessedLevel_noValueAvailable; }
     /**
      * @summary Getter that returns the default value for `purpose`.
      * @public
      * @static
      * @method
      */
-    public static get _default_value_for_purpose () { return Purpose_noValueAvailable; }
+    public static get _default_value_for_purpose (): Purpose { return Purpose_noValueAvailable; }
     /**
      * @summary Getter that returns the default value for `quality`.
      * @public
      * @static
      * @method
      */
-    public static get _default_value_for_quality () { return BiometricType_noValueAvailable; }
+    public static get _default_value_for_quality (): Quality { return BiometricType_noValueAvailable; }
     /**
      * @summary Getter that returns the default value for `patronHdrVersion`.
      * @public
      * @static
      * @method
      */
-    public static get _default_value_for_patronHdrVersion () { return Version._from_object({ major: 1, minor: 0 }); }
+    public static get _default_value_for_patronHdrVersion (): Version { return Version._from_object({ major: 1, minor: 0 }); }
     /**
      * @summary Getter that returns the default value for `cbeffVers`.
      * @public
      * @static
      * @method
      */
-    public static get _default_value_for_cbeffVers () { return Version._from_object({ major: 4, minor: 0 }); }
+    public static get _default_value_for_cbeffVers (): Version { return Version._from_object({ major: 4, minor: 0 }); }
     /**
          * @summary The enum used as the type of the component `procLevel`
          * @public

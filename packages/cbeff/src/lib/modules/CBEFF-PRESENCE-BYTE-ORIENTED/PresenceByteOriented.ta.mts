@@ -249,35 +249,35 @@ class PresenceByteOriented {
      * @static
      * @method
      */
-    public static get _default_value_for_bioType () { return BiometricType_noValueAvailable; }
+    public static get _default_value_for_bioType (): BiometricType { return BiometricType_noValueAvailable; }
     /**
      * @summary Getter that returns the default value for `bioSubtype`.
      * @public
      * @static
      * @method
      */
-    public static get _default_value_for_bioSubtype () { return BiometricSubtype_noValueAvailable; }
+    public static get _default_value_for_bioSubtype (): BiometricSubtype { return BiometricSubtype_noValueAvailable; }
     /**
      * @summary Getter that returns the default value for `procLevel`.
      * @public
      * @static
      * @method
      */
-    public static get _default_value_for_procLevel () { return ProcessedLevel_noValueAvailable; }
+    public static get _default_value_for_procLevel (): ProcessedLevel { return ProcessedLevel_noValueAvailable; }
     /**
      * @summary Getter that returns the default value for `bdbPurpose`.
      * @public
      * @static
      * @method
      */
-    public static get _default_value_for_bdbPurpose () { return Purpose_noValueAvailable; }
+    public static get _default_value_for_bdbPurpose (): Purpose { return Purpose_noValueAvailable; }
     /**
      * @summary Getter that returns the default value for `bdbQuality`.
      * @public
      * @static
      * @method
      */
-    public static get _default_value_for_bdbQuality () { return BiometricType_noValueAvailable; }
+    public static get _default_value_for_bdbQuality (): Quality { return BiometricType_noValueAvailable; }
     /**
      * @summary Getter that returns the default value for `patronHdrVersion`.
      * @public
@@ -291,7 +291,7 @@ class PresenceByteOriented {
      * @static
      * @method
      */
-    public static get _default_value_for_cbeffVers () { return Version._from_object({ major: 4, minor: 0 }); }
+    public static get _default_value_for_cbeffVers (): Version { return Version._from_object({ major: 4, minor: 0 }); }
     /**
      * @summary Getter that returns the default value for `subHeaderCount`.
      * @public
