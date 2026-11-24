@@ -440,6 +440,73 @@ function attributeToInformationItem (
 }
 
 /**
+ * Whether `attributeType` or one of its supertypes was requested.
+ * Supertypes are looked up only when the type itself was not requested.
+ */
+function typeIsSelected (
+    attributeType: OBJECT_IDENTIFIER,
+    selected: Set<string>,
+    getAttributeSupertypes: (attributeType: OBJECT_IDENTIFIER) => OBJECT_IDENTIFIER[],
+): boolean {
+    if (selected.has(attributeType.toString())) {
+        return true;
+    }
+    const supertypes = getAttributeSupertypes(attributeType);
+    for (let i = 0; i < supertypes.length; i++) {
+        if (selected.has(supertypes[i].toString())) {
+            return true;
+        }
+    }
+    return false;
+}
+
+function collectSelectedAttributes (
+    einfo: EntryInformation["information"],
+    attributes: Set<string> | undefined,
+    extraAttributes: Set<string> | undefined,
+    eis: EntryInformationSelection,
+    isOperationalAttribute: (attributeType: OBJECT_IDENTIFIER) => boolean | undefined,
+    getAttributeSupertypes: (attributeType: OBJECT_IDENTIFIER) => OBJECT_IDENTIFIER[],
+): Attribute[] {
+    const items = einfo ?? [];
+    const selectedByType: Attribute[] = [];
+    for (let i = 0; i < items.length; i++) {
+        const info = items[i];
+        let attributeType!: OBJECT_IDENTIFIER;
+        if ("attributeType" in info) {
+            attributeType = info.attributeType;
+        } else if ("attribute" in info) {
+            attributeType = info.attribute.type_;
+        } else {
+            continue;
+        }
+        if (isOperationalAttribute(attributeType)) {
+            if (
+                eis.extraAttributes
+                && ("allOperationalAttributes" in eis.extraAttributes)
+            ) {
+                const attr = Attribute.fromEntryInfoItem(info);
+                attr && selectedByType.push(attr);
+            }
+            if (
+                extraAttributes
+                && typeIsSelected(attributeType, extraAttributes, getAttributeSupertypes)
+            ) {
+                const attr = Attribute.fromEntryInfoItem(info);
+                attr && selectedByType.push(attr);
+            }
+        } else if (!attributes) {
+            const attr = Attribute.fromEntryInfoItem(info);
+            attr && selectedByType.push(attr);
+        } else if (typeIsSelected(attributeType, attributes, getAttributeSupertypes)) {
+            const attr = Attribute.fromEntryInfoItem(info);
+            attr && selectedByType.push(attr);
+        }
+    }
+    return selectedByType;
+}
+
+/**
  * @summary Select information from an entry to produce `EntryInformation`
  * @description
  *
@@ -555,47 +622,39 @@ function selectFromEntry (
         : undefined;
 
     // TODO: Pre-allocate this array.
-    const selectedByType: Attribute[] = [];
-    const einfo = entry.information ?? [];
-    for (let i = 0; i < einfo.length; i++) {
-        const info = einfo[i];
-        let attributeType!: OBJECT_IDENTIFIER;
-        if ("attributeType" in info) {
-            attributeType = info.attributeType;
-        } else if ("attribute" in info) {
-            attributeType = info.attribute.type_;
-        } else {
-            continue;
-        }
-        const isOperational = isOperationalAttribute(attributeType);
-        const supertypes = getAttributeSupertypes(attributeType);
-        if (isOperational) {
-            if (
-                eis.extraAttributes
-                && ("allOperationalAttributes" in eis.extraAttributes)
-            ) {
-                const attr = Attribute.fromEntryInfoItem(info);
-                attr && selectedByType.push(attr);
-            }
-            if (extraAttributes) {
-                const has = [
-                    attributeType,
-                    ...supertypes,
-                ].some((type_) => extraAttributes.has(type_.toString()));
-                if (has) {
-                    const attr = Attribute.fromEntryInfoItem(info);
-                    attr && selectedByType.push(attr);
-                }
+    // Selecting every user attribute stays in this function and still asks for
+    // supertypes. Skipping that callback, or moving this loop out, made the
+    // types-only path slower. A select set takes the other function, which
+    // asks for supertypes only after the type itself misses.
+    const selectedByType: Attribute[] = (attributes || extraAttributes)
+        ? collectSelectedAttributes(
+            entry.information,
+            attributes,
+            extraAttributes,
+            eis,
+            isOperationalAttribute,
+            getAttributeSupertypes,
+        )
+        : [];
+    if (!attributes && !extraAttributes) {
+        const einfo = entry.information ?? [];
+        for (let i = 0; i < einfo.length; i++) {
+            const info = einfo[i];
+            let attributeType!: OBJECT_IDENTIFIER;
+            if ("attributeType" in info) {
+                attributeType = info.attributeType;
+            } else if ("attribute" in info) {
+                attributeType = info.attribute.type_;
             } else {
                 continue;
             }
-        } else {
-            if (attributes) {
-                const has = [
-                    attributeType,
-                    ...supertypes,
-                ].some((type_) => attributes.has(type_.toString()));
-                if (has) {
+            const isOperational = isOperationalAttribute(attributeType);
+            getAttributeSupertypes(attributeType);
+            if (isOperational) {
+                if (
+                    eis.extraAttributes
+                    && ("allOperationalAttributes" in eis.extraAttributes)
+                ) {
                     const attr = Attribute.fromEntryInfoItem(info);
                     attr && selectedByType.push(attr);
                 }
