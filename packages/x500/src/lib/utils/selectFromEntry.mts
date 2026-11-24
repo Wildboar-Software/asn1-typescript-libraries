@@ -45,6 +45,8 @@ import {
 import { evaluateTypeAndContextAssertion } from "./evaluateTypeAndContextAssertion.mjs";
 
 const ALL_ATTRIBUTE_TYPES: string = id_oa_allAttributeTypes.toString();
+const FAMILY_INFORMATION_ID: OBJECT_IDENTIFIER = family_information["&id"];
+const EMPTY_CONTEXT_ASSERTIONS: TypeAndContextAssertion[] = [];
 
 /**
  * Combine attributes of the same type. Type-only information items become
@@ -55,46 +57,226 @@ function mergeAttributes (attrs: Attribute[]): Attribute {
     if (attrs.length === 1) {
         return attrs[0];
     }
-    const values: ASN1Element[] = [];
-    const valuesWithContext: Attribute_valuesWithContext_Item[] = [];
-    for (const attr of attrs) {
-        values.push(...attr.values);
-        if (attr.valuesWithContext) {
-            valuesWithContext.push(...attr.valuesWithContext);
+    let valueCount = 0;
+    let contextCount = 0;
+    for (let i = 0; i < attrs.length; i++) {
+        const attr = attrs[i];
+        valueCount += attr.values.length;
+        contextCount += attr.valuesWithContext?.length ?? 0;
+    }
+    const values: ASN1Element[] = new Array(valueCount);
+    let valueIndex = 0;
+    let valuesWithContext: Attribute_valuesWithContext_Item[] | undefined;
+    let contextIndex = 0;
+    if (contextCount > 0) {
+        valuesWithContext = new Array(contextCount);
+    }
+    for (let i = 0; i < attrs.length; i++) {
+        const attr = attrs[i];
+        const attrValues = attr.values;
+        for (let v = 0; v < attrValues.length; v++) {
+            values[valueIndex++] = attrValues[v];
+        }
+        const attrContexts = attr.valuesWithContext;
+        if (attrContexts && valuesWithContext) {
+            for (let c = 0; c < attrContexts.length; c++) {
+                valuesWithContext[contextIndex++] = attrContexts[c];
+            }
         }
     }
     return new Attribute(
         attrs[0].type_,
         values,
-        valuesWithContext.length > 0 ? valuesWithContext : undefined,
+        valuesWithContext,
     );
+}
+
+/**
+ * One entry per attribute type, in first-seen order. `selectedByType` is
+ * dense for `selectedCount` elements.
+ */
+function mergeSelectedAttributes (selectedByType: Attribute[], selectedCount: number): Attribute[] {
+    const grouped = new Map<string, Attribute[]>();
+    for (let i = 0; i < selectedCount; i++) {
+        const attr = selectedByType[i];
+        const key = attr.type_.toString();
+        const group = grouped.get(key);
+        if (group) {
+            group.push(attr);
+        } else {
+            grouped.set(key, [attr]);
+        }
+    }
+    const merged: Attribute[] = new Array(grouped.size);
+    let count = 0;
+    for (const group of grouped.values()) {
+        merged[count++] = group.length === 1 ? group[0] : mergeAttributes(group);
+    }
+    return merged;
 }
 
 /**
  * Values without contexts always survive context selection (X.501 §8.9.2.4
  * (b)), so only `valuesWithContext` is filtered. An attribute that had values
  * and loses them all is dropped; a type-only empty attribute is kept.
+ *
+ * `keep` runs once per contextual value. When every value is kept, the
+ * original attribute is returned and no result array is allocated.
  */
 function filterAttribute (
     attr: Attribute,
     keep: (contexts: Context[]) => boolean,
 ): Attribute | undefined {
-    if (!attr.valuesWithContext?.length) {
+    const existing = attr.valuesWithContext;
+    if (!existing?.length) {
         return attr;
     }
-    const valuesWithContext = attr.valuesWithContext
-        .filter((vwc) => keep(vwc.contextList));
-    if (valuesWithContext.length === attr.valuesWithContext.length) {
+    let firstDrop = -1;
+    for (let i = 0; i < existing.length; i++) {
+        if (!keep(existing[i].contextList)) {
+            firstDrop = i;
+            break;
+        }
+    }
+    if (firstDrop === -1) {
         return attr;
     }
-    if ((attr.values.length === 0) && (valuesWithContext.length === 0)) {
+    // At least one value was dropped, so the result is shorter than `existing`.
+    const kept: Attribute_valuesWithContext_Item[] = new Array(existing.length - 1);
+    for (let i = 0; i < firstDrop; i++) {
+        kept[i] = existing[i];
+    }
+    let count = firstDrop;
+    for (let i = firstDrop + 1; i < existing.length; i++) {
+        const item = existing[i];
+        if (keep(item.contextList)) {
+            kept[count++] = item;
+        }
+    }
+    if ((attr.values.length === 0) && (count === 0)) {
         return undefined;
     }
-    return new Attribute(
-        attr.type_,
-        attr.values,
-        valuesWithContext.length > 0 ? valuesWithContext : undefined,
-    );
+    if (count === 0) {
+        return new Attribute(attr.type_, attr.values);
+    }
+    kept.length = count;
+    return new Attribute(attr.type_, attr.values, kept);
+}
+
+/**
+ * Whether `attributeType` or one of its supertypes was requested.
+ * Supertypes are looked up only when the type itself was not requested.
+ */
+function typeIsSelected (
+    attributeType: OBJECT_IDENTIFIER,
+    selected: Set<string>,
+    getAttributeSupertypes: (attributeType: OBJECT_IDENTIFIER) => OBJECT_IDENTIFIER[],
+): boolean {
+    if (selected.has(attributeType.toString())) {
+        return true;
+    }
+    const supertypes = getAttributeSupertypes(attributeType);
+    for (let i = 0; i < supertypes.length; i++) {
+        if (selected.has(supertypes[i].toString())) {
+            return true;
+        }
+    }
+    return false;
+}
+
+/**
+ * Context assertions that apply to `type_`: its own, then
+ * `id-oa-allAttributeTypes`, then each supertype. Order matches the
+ * insertion order of the set previously built per value, which matters
+ * because preference assertions record a winner as they are evaluated.
+ */
+function contextAssertionsFor (
+    type_: OBJECT_IDENTIFIER,
+    supertypes: readonly OBJECT_IDENTIFIER[],
+    selectedContexts: Map<string, TypeAndContextAssertion[]>,
+): TypeAndContextAssertion[] {
+    const typeKey = type_.toString();
+    const own = selectedContexts.get(typeKey) ?? EMPTY_CONTEXT_ASSERTIONS;
+    const allTypes = typeKey === ALL_ATTRIBUTE_TYPES
+        ? EMPTY_CONTEXT_ASSERTIONS
+        : (selectedContexts.get(ALL_ATTRIBUTE_TYPES) ?? EMPTY_CONTEXT_ASSERTIONS);
+    if (supertypes.length === 0) {
+        if (own.length === 0) {
+            return allTypes;
+        }
+        if (allTypes.length === 0) {
+            return own;
+        }
+        const combined: TypeAndContextAssertion[] = new Array(own.length + allTypes.length);
+        for (let i = 0; i < own.length; i++) {
+            combined[i] = own[i];
+        }
+        for (let i = 0; i < allTypes.length; i++) {
+            combined[own.length + i] = allTypes[i];
+        }
+        return combined;
+    }
+    const seen = new Set<string>();
+    seen.add(typeKey);
+    seen.add(ALL_ATTRIBUTE_TYPES);
+    const extraKeys: string[] = [];
+    let extraCount = 0;
+    for (let i = 0; i < supertypes.length; i++) {
+        const key = supertypes[i].toString();
+        if (seen.has(key)) {
+            continue;
+        }
+        seen.add(key);
+        extraKeys.push(key);
+        extraCount += selectedContexts.get(key)?.length ?? 0;
+    }
+    const total = own.length + allTypes.length + extraCount;
+    if (total === 0) {
+        return EMPTY_CONTEXT_ASSERTIONS;
+    }
+    const combined: TypeAndContextAssertion[] = new Array(total);
+    let count = 0;
+    for (let i = 0; i < own.length; i++) {
+        combined[count++] = own[i];
+    }
+    for (let i = 0; i < allTypes.length; i++) {
+        combined[count++] = allTypes[i];
+    }
+    for (let i = 0; i < extraKeys.length; i++) {
+        const group = selectedContexts.get(extraKeys[i]);
+        if (!group) {
+            continue;
+        }
+        for (let j = 0; j < group.length; j++) {
+            combined[count++] = group[j];
+        }
+    }
+    return combined;
+}
+
+function hasPreferenceAssertion (assertions: readonly TypeAndContextAssertion[]): boolean {
+    for (let i = 0; i < assertions.length; i++) {
+        if ("preference" in assertions[i].contextAssertions) {
+            return true;
+        }
+    }
+    return false;
+}
+
+function contextListHasFallback (
+    preference: readonly ContextAssertion[],
+    contexts: readonly Context[],
+): boolean {
+    for (let p = 0; p < preference.length; p++) {
+        const assertedType = preference[p].contextType;
+        for (let c = 0; c < contexts.length; c++) {
+            const context = contexts[c];
+            if (context.contextType.isEqualTo(assertedType) && context.fallback) {
+                return true;
+            }
+        }
+    }
+    return false;
 }
 
 function useAttributeTypesInFamilyEntries (entries: FamilyEntries): FamilyEntries {
@@ -126,22 +308,49 @@ function useAttributeTypesInFamilyValue (value: ASN1Element): ASN1Element {
     );
 }
 
+function copyValues (
+    attr: Attribute,
+    transform: ((value: ASN1Element) => ASN1Element) | undefined,
+): ASN1Element[] {
+    const contextual = attr.valuesWithContext;
+    const plain = attr.values;
+    if (!transform && !contextual?.length) {
+        // Copy so a caller can mutate the result without changing the entry.
+        return plain.slice();
+    }
+    const values: ASN1Element[] = new Array(plain.length + (contextual?.length ?? 0));
+    let count = 0;
+    if (transform) {
+        for (let i = 0; i < plain.length; i++) {
+            values[count++] = transform(plain[i]);
+        }
+        if (contextual) {
+            for (let i = 0; i < contextual.length; i++) {
+                values[count++] = transform(contextual[i].value);
+            }
+        }
+    } else {
+        for (let i = 0; i < plain.length; i++) {
+            values[count++] = plain[i];
+        }
+        const contexts = contextual!;
+        for (let i = 0; i < contexts.length; i++) {
+            values[count++] = contexts[i].value;
+        }
+    }
+    return values;
+}
+
 function attributeToInformationItem (
     attr: Attribute,
     infoTypes: EntryInformationSelection_infoTypes,
     returnContexts: boolean | undefined,
-): EntryInformation_information_Item | undefined {
-    const isFamily = family_information["&id"].isEqualTo(attr.type_);
+): EntryInformation_information_Item {
+    const isFamily = FAMILY_INFORMATION_ID.isEqualTo(attr.type_);
     if (infoTypes === EntryInformationSelection_infoTypes_attributeTypesOnly && !isFamily) {
         return {
             attributeType: attr.type_,
         };
-    }
-    if (
-        (infoTypes !== EntryInformationSelection_infoTypes_attributeTypesOnly)
-        && (infoTypes !== EntryInformationSelection_infoTypes_attributeTypesAndValues)
-    ) {
-        return undefined;
     }
     /**
      * From ITU Recommendation X.511, Section 7.6:
@@ -159,12 +368,8 @@ function attributeToInformationItem (
         ? useAttributeTypesInFamilyValue
         : undefined;
     if (!returnContexts) {
-        const values: ASN1Element[] = [];
-        for (const value of attr.iterValuesOmittingContexts()) {
-            values.push(transform ? transform(value) : value);
-        }
         return {
-            attribute: new Attribute(attr.type_, values),
+            attribute: new Attribute(attr.type_, copyValues(attr, transform)),
         };
     }
     if (!transform) {
@@ -172,14 +377,28 @@ function attributeToInformationItem (
             attribute: attr,
         };
     }
+    const plain = attr.values;
+    const values: ASN1Element[] = new Array(plain.length);
+    for (let i = 0; i < plain.length; i++) {
+        values[i] = transform(plain[i]);
+    }
+    const contextual = attr.valuesWithContext;
+    let valuesWithContext: Attribute_valuesWithContext_Item[] | undefined;
+    if (contextual) {
+        valuesWithContext = new Array(contextual.length);
+        for (let i = 0; i < contextual.length; i++) {
+            const item = contextual[i];
+            valuesWithContext[i] = new Attribute_valuesWithContext_Item(
+                transform(item.value),
+                item.contextList,
+            );
+        }
+    }
     return {
         attribute: new Attribute(
             attr.type_,
-            attr.values.map(transform),
-            attr.valuesWithContext?.map((vwc) => new Attribute_valuesWithContext_Item(
-                transform(vwc.value),
-                vwc.contextList,
-            )),
+            values,
+            valuesWithContext,
         ),
     };
 }
@@ -284,8 +503,26 @@ function selectFromEntry (
     getAttributeSupertypes: (attributeType: OBJECT_IDENTIFIER) => OBJECT_IDENTIFIER[],
     determineAbsentMatch: (contextType: OBJECT_IDENTIFIER) => boolean,
 ): EntryInformation {
+    const selectedInformation = (
+        information: EntryInformation_information_Item[],
+    ): EntryInformation => new EntryInformation(
+        entry.name,
+        entry.fromEntry,
+        information,
+        entry.incompleteEntry,
+        entry.partialName,
+        entry.derivedEntry,
+        entry._unrecognizedExtensionsList,
+    );
+
     // Constructed selections may omit ASN.1 DEFAULT fields that the decoder fills.
     const infoTypes = eis.infoTypes ?? EntryInformationSelection._default_value_for_infoTypes;
+    if (
+        infoTypes !== EntryInformationSelection_infoTypes_attributeTypesOnly
+        && infoTypes !== EntryInformationSelection_infoTypes_attributeTypesAndValues
+    ) {
+        return selectedInformation([]);
+    }
     const attributes: Set<string> | undefined = (eis.attributes && ("select" in eis.attributes))
         ? new Set(eis.attributes.select.map((attr) => attr.toString()))
         : undefined;
@@ -299,9 +536,12 @@ function selectFromEntry (
         ? groupByOID(eis.contextSelection.selectedContexts, (sc) => sc.type_)
         : undefined;
 
-    // TODO: Pre-allocate this array.
-    const selectedByType: Attribute[] = [];
     const einfo = entry.information ?? [];
+    // Each information item contributes at most one attribute for a well-formed
+    // `extraAttributes` CHOICE. A malformed value that sets both alternatives
+    // can contribute two; assignment past this length grows the array.
+    const selectedByType: Attribute[] = new Array(einfo.length);
+    let selectedCount = 0;
     for (let i = 0; i < einfo.length; i++) {
         const info = einfo[i];
         let attributeType!: OBJECT_IDENTIFIER;
@@ -312,164 +552,158 @@ function selectFromEntry (
         } else {
             continue;
         }
-        const isOperational = isOperationalAttribute(attributeType);
-        const supertypes = getAttributeSupertypes(attributeType);
-        if (isOperational) {
+        if (isOperationalAttribute(attributeType)) {
             if (
                 eis.extraAttributes
                 && ("allOperationalAttributes" in eis.extraAttributes)
             ) {
                 const attr = Attribute.fromEntryInfoItem(info);
-                attr && selectedByType.push(attr);
-            }
-            if (extraAttributes) {
-                const has = [
-                    attributeType,
-                    ...supertypes,
-                ].some((type_) => extraAttributes.has(type_.toString()));
-                if (has) {
-                    const attr = Attribute.fromEntryInfoItem(info);
-                    attr && selectedByType.push(attr);
+                if (attr) {
+                    selectedByType[selectedCount++] = attr;
                 }
-            } else {
-                continue;
             }
-        } else {
-            if (attributes) {
-                const has = [
-                    attributeType,
-                    ...supertypes,
-                ].some((type_) => attributes.has(type_.toString()));
-                if (has) {
-                    const attr = Attribute.fromEntryInfoItem(info);
-                    attr && selectedByType.push(attr);
-                }
-            } else {
+            if (
+                extraAttributes
+                && typeIsSelected(attributeType, extraAttributes, getAttributeSupertypes)
+            ) {
                 const attr = Attribute.fromEntryInfoItem(info);
-                attr && selectedByType.push(attr);
+                if (attr) {
+                    selectedByType[selectedCount++] = attr;
+                }
+            }
+        } else if (
+            !attributes
+            || typeIsSelected(attributeType, attributes, getAttributeSupertypes)
+        ) {
+            const attr = Attribute.fromEntryInfoItem(info);
+            if (attr) {
+                selectedByType[selectedCount++] = attr;
             }
         }
     }
+    if (selectedCount === 0) {
+        return selectedInformation([]);
+    }
+    selectedByType.length = selectedCount;
 
-    const selectedAttributes: Attribute[] = Array.from(
-        groupByOID(selectedByType, (attr) => attr.type_).values(),
-        mergeAttributes,
-    );
-
-    const preferences: Map<ContextAssertion[], number> = new Map();
-    const directMatchCache = new Map();
+    const selectedAttributes = mergeSelectedAttributes(selectedByType, selectedCount);
 
     let attributesSelectedByContext = selectedAttributes;
     if (selectedContexts) {
+        const preferences = new Map<ContextAssertion[], number>();
+        const directMatchCache = new Map();
         const afterAll: Attribute[] = new Array(selectedAttributes.length);
+        const assertionsByAttribute: TypeAndContextAssertion[][] = new Array(selectedAttributes.length);
         let afterAllCount = 0;
+        let sawPreference = false;
         for (let i = 0; i < selectedAttributes.length; i++) {
             const attr = selectedAttributes[i];
-            const filtered = filterAttribute(attr, (contexts: Context[]): boolean => {
-                // A ContextAssertion is true for a particular attribute value if:
-                // ...the attribute value contains no contexts of the asserted contextType
-                if (contexts.length === 0) {
+            const assertions = contextAssertionsFor(
+                attr.type_,
+                getAttributeSupertypes(attr.type_),
+                selectedContexts,
+            );
+            if (hasPreferenceAssertion(assertions)) {
+                sawPreference = true;
+            }
+            const filtered = assertions.length === 0
+                ? attr
+                : filterAttribute(attr, (contexts: Context[]): boolean => {
+                    // A ContextAssertion is true for a particular attribute value if:
+                    // ...the attribute value contains no contexts of the asserted contextType
+                    if (contexts.length === 0) {
+                        return true;
+                    }
+                    for (let a = 0; a < assertions.length; a++) {
+                        if (!(evaluateTypeAndContextAssertion(
+                            assertions[a],
+                            attr,
+                            contexts,
+                            selectedAttributes,
+                            getEqualityMatcher,
+                            getContextMatcher,
+                            determineAbsentMatch,
+                            preferences,
+                            directMatchCache,
+                        ) ?? false)) {
+                            return false;
+                        }
+                    }
                     return true;
-                }
-                const TYPE_OID: string = attr.type_.toString();
-                const typeAndSuperTypes: Set<string> = new Set([
-                    TYPE_OID,
-                    ALL_ATTRIBUTE_TYPES,
-                    ...getAttributeSupertypes(attr.type_).map((oid) => oid.toString()),
-                ]);
-                const typeAndContextAssertions = Array.from(typeAndSuperTypes)
-                    .flatMap((oid) => selectedContexts.get(oid) ?? []);
-                if (typeAndContextAssertions.length === 0) {
-                    return true; // There are no context assertions for this attribute type.
-                }
-                return typeAndContextAssertions.every((taca): boolean => evaluateTypeAndContextAssertion(
-                    taca,
-                    attr,
-                    contexts,
-                    selectedAttributes,
-                    getEqualityMatcher,
-                    getContextMatcher,
-                    determineAbsentMatch,
-                    preferences,
-                    directMatchCache,
-                ) ?? false);
-            });
+                });
             if (filtered) {
+                assertionsByAttribute[afterAllCount] = assertions;
                 afterAll[afterAllCount++] = filtered;
             }
         }
         afterAll.length = afterAllCount;
-        const afterPreference: Attribute[] = new Array(afterAllCount);
-        let afterPreferenceCount = 0;
-        for (let i = 0; i < afterAllCount; i++) {
-            const attr = afterAll[i];
-            const filtered = filterAttribute(attr, (contexts: Context[]): boolean => {
-                // A ContextAssertion is true for a particular attribute value if:
-                // ...the attribute value contains no contexts of the asserted contextType
-                if (contexts.length === 0) {
+        if (!sawPreference) {
+            attributesSelectedByContext = afterAll;
+        } else {
+            assertionsByAttribute.length = afterAllCount;
+            const afterPreference: Attribute[] = new Array(afterAllCount);
+            let afterPreferenceCount = 0;
+            for (let i = 0; i < afterAllCount; i++) {
+                const attr = afterAll[i];
+                const assertions = assertionsByAttribute[i];
+                if (!hasPreferenceAssertion(assertions)) {
+                    afterPreference[afterPreferenceCount++] = attr;
+                    continue;
+                }
+                const filtered = filterAttribute(attr, (contexts: Context[]): boolean => {
+                    // A ContextAssertion is true for a particular attribute value if:
+                    // ...the attribute value contains no contexts of the asserted contextType
+                    if (contexts.length === 0) {
+                        return true;
+                    }
+                    for (let a = 0; a < assertions.length; a++) {
+                        const taca = assertions[a];
+                        if (!("preference" in taca.contextAssertions)) {
+                            continue; // We already filtered by this.
+                        }
+                        const preference = taca.contextAssertions.preference;
+                        const prefIndex = preferences.get(preference);
+                        if (prefIndex === undefined) {
+                            // No value matched any preference assertion via (a)/(b).
+                            // Keep this value only if it is a fallback for one of them.
+                            if (!contextListHasFallback(preference, contexts)) {
+                                return false;
+                            }
+                            continue;
+                        }
+                        assert(prefIndex > -1);
+                        const pref = preference[prefIndex];
+                        assert(pref);
+                        if (!evaluateContextAssertion(
+                            pref,
+                            contexts,
+                            getContextMatcher,
+                            determineAbsentMatch,
+                        )) {
+                            return false;
+                        }
+                    }
                     return true;
-                }
-                const TYPE_OID: string = attr.type_.toString();
-                const typeAndSuperTypes: Set<string> = new Set([
-                    TYPE_OID,
-                    ALL_ATTRIBUTE_TYPES,
-                    ...getAttributeSupertypes(attr.type_).map((oid) => oid.toString()),
-                ]);
-                const typeAndContextAssertions = Array.from(typeAndSuperTypes)
-                    .flatMap((oid) => selectedContexts.get(oid) ?? []);
-                if (typeAndContextAssertions.length === 0) {
-                    return true; // There are no context assertions for this attribute type.
-                }
-                return typeAndContextAssertions.every((taca): boolean => {
-                    if (!("preference" in taca.contextAssertions)) {
-                        return true; // We already filtered by this.
-                    }
-                    const prefIndex = preferences.get(taca.contextAssertions.preference);
-                    if (prefIndex === undefined) {
-                        // No value matched any preference assertion via (a)/(b).
-                        // Keep this value only if it is a fallback for one of them.
-                        return taca.contextAssertions.preference.some((pref) => contexts.some((c) => (
-                            c.contextType.isEqualTo(pref.contextType)
-                            && c.fallback
-                        )));
-                    }
-                    assert(prefIndex > -1);
-                    const pref = taca.contextAssertions.preference[prefIndex];
-                    assert(pref);
-                    return !!evaluateContextAssertion(
-                        pref,
-                        contexts,
-                        getContextMatcher,
-                        determineAbsentMatch,
-                    );
                 });
-            });
-            if (filtered) {
-                afterPreference[afterPreferenceCount++] = filtered;
+                if (filtered) {
+                    afterPreference[afterPreferenceCount++] = filtered;
+                }
             }
-        }
-        afterPreference.length = afterPreferenceCount;
-        attributesSelectedByContext = afterPreference;
-    }
-
-    // TODO: Pre-allocate this array.
-    const infos: EntryInformation_information_Item[] = [];
-    for (const attr of attributesSelectedByContext) {
-        const info = attributeToInformationItem(attr, infoTypes, eis.returnContexts);
-        if (info) {
-            infos.push(info);
+            afterPreference.length = afterPreferenceCount;
+            attributesSelectedByContext = afterPreference;
         }
     }
 
-    return new EntryInformation(
-        entry.name,
-        entry.fromEntry,
-        infos,
-        entry.incompleteEntry,
-        entry.partialName,
-        entry.derivedEntry,
-        entry._unrecognizedExtensionsList,
-    );
+    const infos: EntryInformation_information_Item[] = new Array(attributesSelectedByContext.length);
+    for (let i = 0; i < attributesSelectedByContext.length; i++) {
+        infos[i] = attributeToInformationItem(
+            attributesSelectedByContext[i],
+            infoTypes,
+            eis.returnContexts,
+        );
+    }
+
+    return selectedInformation(infos);
 }
 
 export default selectFromEntry;
