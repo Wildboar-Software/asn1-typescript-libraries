@@ -1007,3 +1007,65 @@ describe("extensible matching-rule applicability (M4)", () => {
         expect(evaluateFilter(extensible(), [new EntryInformation({ rdnSequence: [] })], options).matched).toBe(true);
     });
 });
+
+describe("contextPresent with matchedValuesOnly (X.511 §11.2.2.a)", () => {
+    it.each([false, true])("retains only context-matching values when matchedValuesOnly=%s", (matchedValuesOnly) => {
+        const subtype = ObjectIdentifier.fromString("1.2.3.12");
+        const en = value("en");
+        const fr = value("fr");
+        const filter: Filter = {
+            item: {
+                contextPresent: new AttributeTypeAssertion(TYPE, [
+                    new ContextAssertion(RULE, [en]),
+                ]),
+            },
+        };
+        const matchVwc = new Attribute_valuesWithContext_Item(value("hello"), [new Context(RULE, [en])]);
+        const nonMatchVwc = new Attribute_valuesWithContext_Item(value("bonjour"), [new Context(RULE, [fr])]);
+        const subMatchVwc = new Attribute_valuesWithContext_Item(value("hi"), [new Context(RULE, [en])]);
+        const entry = new EntryInformation({ rdnSequence: [] }, true, [
+            { attribute: new Attribute(TYPE, [value("plain")], [matchVwc, nonMatchVwc]) },
+            { attribute: new Attribute(subtype, [], [nonMatchVwc]) },
+            { attribute: new Attribute(ObjectIdentifier.fromString("1.2.3.13"), [], [subMatchVwc]) },
+        ]);
+        const options: EvaluateFilterSettings = {
+            ...settings("equality", matchedValuesOnly),
+            determineAbsentMatch: () => false,
+            getContextMatcher: () => (asserted, stored) => {
+                for (const s of stored) {
+                    if (s.utf8String === asserted.utf8String) {
+                        return true;
+                    }
+                }
+                return false;
+            },
+            isAttributeSubtype: (a, b) => a.isEqualTo(b)
+                || (a.isEqualTo(subtype) && b.isEqualTo(TYPE))
+                || (a.toString() === "1.2.3.13" && b.isEqualTo(TYPE)),
+        };
+
+        const result = evaluateFilter(filter, [entry], options);
+        expect(result.matched).toBe(true);
+        if (matchedValuesOnly) {
+            expect(result.matchedValues).toHaveLength(1);
+            const attrs = result.matchedValues![0].attributes;
+            // Only the two attributes whose assertion was TRUE are included, with non-matching values omitted
+            expect(attrs).toHaveLength(2);
+            expect(attrs[0].type_.isEqualTo(TYPE)).toBe(true);
+            expect(attrs[0].values).toEqual([]);
+            expect(attrs[0].valuesWithContext).toEqual([matchVwc]);
+            expect(attrs[1].type_.toString()).toBe("1.2.3.13");
+            expect(attrs[1].valuesWithContext).toEqual([subMatchVwc]);
+        } else {
+            expect(result.matchedValues).toEqual([]);
+        }
+
+        // Negated contextPresent has no matchedValues effect (X.511 §11.2.2.a bullet 3)
+        const nonMatchingEntry = new EntryInformation({ rdnSequence: [] }, true, [
+            { attribute: new Attribute(TYPE, [], [nonMatchVwc]) },
+        ]);
+        const negResult = evaluateFilter({ not: filter }, [nonMatchingEntry], options);
+        expect(negResult.matched).toBe(true);
+        expect(negResult.matchedValues).toBeUndefined();
+    });
+});

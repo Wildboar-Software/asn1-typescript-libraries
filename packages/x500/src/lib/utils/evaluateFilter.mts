@@ -251,14 +251,10 @@ interface EvaluateFilterSettings {
 
 type AnyFunction = (...args: any[]) => any;
 
-interface MatchState {
-    indeterminate: boolean;
-}
-
 // Default maximum number of filter nodes on one recursive path, including the root.
 const MAX_FILTER_DEPTH = 128;
 
-function handleErrors (matcher: AnyFunction | undefined, state?: MatchState): AnyFunction | undefined {
+function handleErrors (matcher: AnyFunction | undefined): AnyFunction | undefined {
     if (!matcher) {
         return undefined;
     }
@@ -266,16 +262,10 @@ function handleErrors (matcher: AnyFunction | undefined, state?: MatchState): An
         try {
             const result = matcher(...args);
             if (result === undefined || (typeof result === "number" && Number.isNaN(result))) {
-                if (state) {
-                    state.indeterminate = true;
-                }
                 return undefined;
             }
             return result;
         } catch {
-            if (state) {
-                state.indeterminate = true;
-            }
             return undefined;
         }
     };
@@ -899,7 +889,7 @@ function evaluateAttributeTypeAssertion (
     ata: AttributeTypeAssertion,
     entry: EntryInformation,
     options: EvaluateFilterSettings,
-): boolean | undefined {
+): Attribute[] | boolean | undefined {
     if (!options.permittedToMatch(ata.type_)) {
         return undefined;
     }
@@ -916,24 +906,39 @@ function evaluateAttributeTypeAssertion (
     if (relevantAttributes.length === 0) {
         return false;
     }
-    if (!ata.assertedContexts || (ata.assertedContexts.length === 0)) {
-        return true;
-    }
-    const state: MatchState = { indeterminate: false };
-    const contextsMatch = handleErrors(valueSatisfiesSelectedContexts, state)!;
+    const noAssertedContexts = !ata.assertedContexts?.length;
+    const matchedValues: Attribute[] = [];
+    let matched = false;
+    let sawIndeterminate = false;
     const directMatchCache: DirectContextMatchCache = new WeakMap();
     for (const attr of relevantAttributes) {
-        if (attr.values.length > 0
-            && contextsMatch(ata.assertedContexts, NO_CONTEXTS, attr, options, directMatchCache)) {
-            return true;
-        }
-        for (const vwc of attr.valuesWithContext ?? []) {
-            if (contextsMatch(ata.assertedContexts, vwc.contextList, attr, options, directMatchCache)) {
+        if (noAssertedContexts && attr.isEmpty()) {
+            if (!options.matchedValuesOnly) {
                 return true;
             }
+            matched = true;
+            continue;
         }
+        const { selected, indeterminate } = selectAttributeValues(
+            attr,
+            options,
+            ata.assertedContexts,
+            directMatchCache,
+        );
+        const taken = takeMatchedAttribute(selected);
+        if (taken) {
+            matched = true;
+            if (!options.matchedValuesOnly) {
+                return true;
+            }
+            matchedValues.push(taken);
+        }
+        sawIndeterminate ||= !!indeterminate && !indeterminate.isEmpty();
     }
-    return state.indeterminate ? undefined : false;
+    if (matched) {
+        return matchedValues.length > 0 ? matchedValues : true;
+    }
+    return sawIndeterminate ? undefined : false;
 }
 
 export
