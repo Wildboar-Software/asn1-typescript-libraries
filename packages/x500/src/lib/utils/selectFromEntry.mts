@@ -79,136 +79,22 @@ function filterAttribute (
     attr: Attribute,
     keep: (contexts: Context[]) => boolean,
 ): Attribute | undefined {
-    const source = attr.valuesWithContext;
-    if (!source?.length) {
+    if (!attr.valuesWithContext?.length) {
         return attr;
     }
-    const valuesWithContext: Attribute_valuesWithContext_Item[] = new Array(source.length);
-    let kept = 0;
-    for (let i = 0; i < source.length; i++) {
-        const vwc = source[i];
-        if (keep(vwc.contextList)) {
-            valuesWithContext[kept++] = vwc;
-        }
-    }
-    if (kept === source.length) {
+    const valuesWithContext = attr.valuesWithContext
+        .filter((vwc) => keep(vwc.contextList));
+    if (valuesWithContext.length === attr.valuesWithContext.length) {
         return attr;
     }
-    if ((attr.values.length === 0) && (kept === 0)) {
+    if ((attr.values.length === 0) && (valuesWithContext.length === 0)) {
         return undefined;
     }
-    if (kept === 0) {
-        return new Attribute(
-            attr.type_,
-            attr.values,
-        );
-    }
-    valuesWithContext.length = kept;
     return new Attribute(
         attr.type_,
         attr.values,
-        valuesWithContext,
+        valuesWithContext.length > 0 ? valuesWithContext : undefined,
     );
-}
-
-/**
- * Context assertions that govern `type_`, in evaluation order: the type
- * itself, `id-oa-allAttributeTypes`, then its supertypes.
- */
-function contextAssertionsForType (
-    type_: OBJECT_IDENTIFIER,
-    selectedContexts: Map<string, TypeAndContextAssertion[]>,
-    getAttributeSupertypes: (attributeType: OBJECT_IDENTIFIER) => OBJECT_IDENTIFIER[],
-): TypeAndContextAssertion[] {
-    const supertypes = getAttributeSupertypes(type_);
-    const seen: Set<string> = new Set();
-    const keys: string[] = new Array(supertypes.length + 2);
-    const typeKey = type_.toString();
-    seen.add(typeKey);
-    keys[0] = typeKey;
-    let keyCount = 1;
-    if (typeKey !== ALL_ATTRIBUTE_TYPES) {
-        seen.add(ALL_ATTRIBUTE_TYPES);
-        keys[keyCount++] = ALL_ATTRIBUTE_TYPES;
-    }
-    for (let i = 0; i < supertypes.length; i++) {
-        const key = supertypes[i].toString();
-        if (seen.has(key)) {
-            continue;
-        }
-        seen.add(key);
-        keys[keyCount++] = key;
-    }
-    let assertionCount = 0;
-    for (let i = 0; i < keyCount; i++) {
-        const found = selectedContexts.get(keys[i]);
-        if (found) {
-            assertionCount += found.length;
-        }
-    }
-    const assertions: TypeAndContextAssertion[] = new Array(assertionCount);
-    let n = 0;
-    for (let i = 0; i < keyCount; i++) {
-        const found = selectedContexts.get(keys[i]);
-        if (!found) {
-            continue;
-        }
-        for (let j = 0; j < found.length; j++) {
-            assertions[n++] = found[j];
-        }
-    }
-    return assertions;
-}
-
-/**
- * One context-selection pass. The assertion list for an attribute type is
- * built once, on the first contextual value, and reused for the rest.
- */
-function takeFilteredAttributes (
-    source: Attribute[],
-    selectedContexts: Map<string, TypeAndContextAssertion[]>,
-    getAttributeSupertypes: (attributeType: OBJECT_IDENTIFIER) => OBJECT_IDENTIFIER[],
-    predicate: (
-        attr: Attribute,
-        contexts: Context[],
-        applicable: TypeAndContextAssertion[],
-    ) => boolean,
-): Attribute[] {
-    const keptAttrs: Attribute[] = new Array(source.length);
-    let kept = 0;
-    for (let i = 0; i < source.length; i++) {
-        const attr = source[i];
-        if (!attr.valuesWithContext?.length) {
-            keptAttrs[kept++] = attr;
-            continue;
-        }
-        let applicable: TypeAndContextAssertion[] | undefined;
-        const filtered = filterAttribute(attr, (contexts) => {
-            // A ContextAssertion is true for a particular attribute value if:
-            // ...the attribute value contains no contexts of the asserted contextType
-            if (contexts.length === 0) {
-                return true;
-            }
-            let assertions = applicable;
-            if (assertions === undefined) {
-                assertions = contextAssertionsForType(
-                    attr.type_,
-                    selectedContexts,
-                    getAttributeSupertypes,
-                );
-                applicable = assertions;
-            }
-            if (assertions.length === 0) {
-                return true; // There are no context assertions for this attribute type.
-            }
-            return predicate(attr, contexts, assertions);
-        });
-        if (filtered) {
-            keptAttrs[kept++] = filtered;
-        }
-    }
-    keptAttrs.length = kept;
-    return keptAttrs;
 }
 
 function useAttributeTypesInFamilyEntries (entries: FamilyEntries): FamilyEntries {
@@ -475,13 +361,28 @@ function selectFromEntry (
 
     let attributesSelectedByContext = selectedAttributes;
     if (selectedContexts) {
-        const contextsByType = selectedContexts;
-        const afterAll = takeFilteredAttributes(
-            selectedAttributes,
-            contextsByType,
-            getAttributeSupertypes,
-            (attr, contexts, applicable) => applicable.every((taca): boolean => (
-                evaluateTypeAndContextAssertion(
+        const afterAll: Attribute[] = new Array(selectedAttributes.length);
+        let afterAllCount = 0;
+        for (let i = 0; i < selectedAttributes.length; i++) {
+            const attr = selectedAttributes[i];
+            const filtered = filterAttribute(attr, (contexts: Context[]): boolean => {
+                // A ContextAssertion is true for a particular attribute value if:
+                // ...the attribute value contains no contexts of the asserted contextType
+                if (contexts.length === 0) {
+                    return true;
+                }
+                const TYPE_OID: string = attr.type_.toString();
+                const typeAndSuperTypes: Set<string> = new Set([
+                    TYPE_OID,
+                    ALL_ATTRIBUTE_TYPES,
+                    ...getAttributeSupertypes(attr.type_).map((oid) => oid.toString()),
+                ]);
+                const typeAndContextAssertions = Array.from(typeAndSuperTypes)
+                    .flatMap((oid) => selectedContexts.get(oid) ?? []);
+                if (typeAndContextAssertions.length === 0) {
+                    return true; // There are no context assertions for this attribute type.
+                }
+                return typeAndContextAssertions.every((taca): boolean => evaluateTypeAndContextAssertion(
                     taca,
                     attr,
                     contexts,
@@ -491,37 +392,64 @@ function selectFromEntry (
                     determineAbsentMatch,
                     preferences,
                     directMatchCache,
-                ) ?? false
-            )),
-        );
-        attributesSelectedByContext = takeFilteredAttributes(
-            afterAll,
-            contextsByType,
-            getAttributeSupertypes,
-            (attr, contexts, applicable) => applicable.every((taca): boolean => {
-                if (!("preference" in taca.contextAssertions)) {
-                    return true; // We already filtered by this.
+                ) ?? false);
+            });
+            if (filtered) {
+                afterAll[afterAllCount++] = filtered;
+            }
+        }
+        afterAll.length = afterAllCount;
+        const afterPreference: Attribute[] = new Array(afterAllCount);
+        let afterPreferenceCount = 0;
+        for (let i = 0; i < afterAllCount; i++) {
+            const attr = afterAll[i];
+            const filtered = filterAttribute(attr, (contexts: Context[]): boolean => {
+                // A ContextAssertion is true for a particular attribute value if:
+                // ...the attribute value contains no contexts of the asserted contextType
+                if (contexts.length === 0) {
+                    return true;
                 }
-                const prefIndex = preferences.get(taca.contextAssertions.preference);
-                if (prefIndex === undefined) {
-                    // No value matched any preference assertion via (a)/(b).
-                    // Keep this value only if it is a fallback for one of them.
-                    return taca.contextAssertions.preference.some((pref) => contexts.some((c) => (
-                        c.contextType.isEqualTo(pref.contextType)
-                        && c.fallback
-                    )));
+                const TYPE_OID: string = attr.type_.toString();
+                const typeAndSuperTypes: Set<string> = new Set([
+                    TYPE_OID,
+                    ALL_ATTRIBUTE_TYPES,
+                    ...getAttributeSupertypes(attr.type_).map((oid) => oid.toString()),
+                ]);
+                const typeAndContextAssertions = Array.from(typeAndSuperTypes)
+                    .flatMap((oid) => selectedContexts.get(oid) ?? []);
+                if (typeAndContextAssertions.length === 0) {
+                    return true; // There are no context assertions for this attribute type.
                 }
-                assert(prefIndex > -1);
-                const pref = taca.contextAssertions.preference[prefIndex];
-                assert(pref);
-                return !!evaluateContextAssertion(
-                    pref,
-                    contexts,
-                    getContextMatcher,
-                    determineAbsentMatch,
-                );
-            }),
-        );
+                return typeAndContextAssertions.every((taca): boolean => {
+                    if (!("preference" in taca.contextAssertions)) {
+                        return true; // We already filtered by this.
+                    }
+                    const prefIndex = preferences.get(taca.contextAssertions.preference);
+                    if (prefIndex === undefined) {
+                        // No value matched any preference assertion via (a)/(b).
+                        // Keep this value only if it is a fallback for one of them.
+                        return taca.contextAssertions.preference.some((pref) => contexts.some((c) => (
+                            c.contextType.isEqualTo(pref.contextType)
+                            && c.fallback
+                        )));
+                    }
+                    assert(prefIndex > -1);
+                    const pref = taca.contextAssertions.preference[prefIndex];
+                    assert(pref);
+                    return !!evaluateContextAssertion(
+                        pref,
+                        contexts,
+                        getContextMatcher,
+                        determineAbsentMatch,
+                    );
+                });
+            });
+            if (filtered) {
+                afterPreference[afterPreferenceCount++] = filtered;
+            }
+        }
+        afterPreference.length = afterPreferenceCount;
+        attributesSelectedByContext = afterPreference;
     }
 
     // TODO: Pre-allocate this array.
