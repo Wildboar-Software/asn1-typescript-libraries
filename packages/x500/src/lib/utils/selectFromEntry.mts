@@ -24,7 +24,7 @@ import {
 import {
     Attribute_valuesWithContext_Item,
 } from "../modules/InformationFramework/Attribute-valuesWithContext-Item.ta.mjs";
-import type { ContextMatcher } from "../types/matching.mjs";
+import type { ContextMatcher, EqualityMatcher } from "../types/matching.mjs";
 import {
     id_oa_allAttributeTypes,
 } from "../modules/InformationFramework/id-oa-allAttributeTypes.va.mjs";
@@ -42,10 +42,9 @@ import {
 import {
     FamilyEntry,
 } from "../modules/DirectoryAbstractService/FamilyEntry.ta.mjs";
+import { evaluateTypeAndContextAssertion } from "./evaluateTypeAndContextAssertion.mjs";
 
 const ALL_ATTRIBUTE_TYPES: string = id_oa_allAttributeTypes.toString();
-
-type DirectContextMatchCache = Map<string, Map<ContextAssertion, boolean>>;
 
 /**
  * Combine attributes of the same type. Type-only information items become
@@ -96,67 +95,6 @@ function filterAttribute (
         attr.values,
         valuesWithContext.length > 0 ? valuesWithContext : undefined,
     );
-}
-
-function* iterContextsOfAttribute (attr: Attribute): IterableIterator<Context[]> {
-    // One empty list stands for every context-less value: X.501 §8.9.2.4 (b)
-    // does not distinguish them, and the sibling walk stops at the first match.
-    if (attr.values.length > 0) {
-        yield [];
-    }
-    if (attr.valuesWithContext) {
-        for (const item of attr.valuesWithContext) {
-            yield item.contextList;
-        }
-    }
-}
-
-/**
- * Whether any selected value of `type_` already satisfies `ca` via
- * X.501 §8.9.2.4 (a) or (b). Cached on `(type OID, ca)` so the sibling
- * walk runs once per pair.
- */
-function typeHasDirectContextMatch (
-    selectedAttributes: Attribute[],
-    type_: OBJECT_IDENTIFIER,
-    ca: ContextAssertion,
-    getContextMatcher: (contextType: OBJECT_IDENTIFIER) => ContextMatcher | undefined,
-    determineAbsentMatch: (contextType: OBJECT_IDENTIFIER) => boolean,
-    cache: DirectContextMatchCache,
-): boolean {
-    const typeKey = type_.toString();
-    let byAssertion = cache.get(typeKey);
-    if (!byAssertion) {
-        byAssertion = new Map();
-        cache.set(typeKey, byAssertion);
-    } else {
-        const cached = byAssertion.get(ca);
-        if (cached !== undefined) {
-            return cached;
-        }
-    }
-    let matched = false;
-    for (const attr of selectedAttributes) {
-        if (!attr.type_.isEqualTo(type_)) {
-            continue;
-        }
-        for (const contexts of iterContextsOfAttribute(attr)) {
-            if (evaluateContextAssertion(
-                ca,
-                contexts,
-                getContextMatcher,
-                determineAbsentMatch,
-            )) {
-                matched = true;
-                break;
-            }
-        }
-        if (matched) {
-            break;
-        }
-    }
-    byAssertion.set(ca, matched);
-    return matched;
 }
 
 function useAttributeTypesInFamilyEntries (entries: FamilyEntries): FamilyEntries {
@@ -340,9 +278,10 @@ export
 function selectFromEntry (
     eis: EntryInformationSelection,
     entry: EntryInformation,
+    getEqualityMatcher: (contextType: OBJECT_IDENTIFIER) => EqualityMatcher | undefined,
+    getContextMatcher: (contextType: OBJECT_IDENTIFIER) => ContextMatcher | undefined,
     isOperationalAttribute: (attributeType: OBJECT_IDENTIFIER) => boolean | undefined,
     getAttributeSupertypes: (attributeType: OBJECT_IDENTIFIER) => OBJECT_IDENTIFIER[],
-    getContextMatcher: (contextType: OBJECT_IDENTIFIER) => ContextMatcher | undefined,
     determineAbsentMatch: (contextType: OBJECT_IDENTIFIER) => boolean,
 ): EntryInformation {
     // Constructed selections may omit ASN.1 DEFAULT fields that the decoder fills.
@@ -360,43 +299,57 @@ function selectFromEntry (
         ? groupByOID(eis.contextSelection.selectedContexts, (sc) => sc.type_)
         : undefined;
 
-    const selectedByType: Attribute[] = (entry.information ?? [])
-        .filter((info): boolean => {
-            let attributeType!: OBJECT_IDENTIFIER;
-            if ("attributeType" in info) {
-                attributeType = info.attributeType;
-            } else if ("attribute" in info) {
-                attributeType = info.attribute.type_;
-            } else {
-                return false;
+    // TODO: Pre-allocate this array.
+    const selectedByType: Attribute[] = [];
+    const einfo = entry.information ?? [];
+    for (let i = 0; i < einfo.length; i++) {
+        const info = einfo[i];
+        let attributeType!: OBJECT_IDENTIFIER;
+        if ("attributeType" in info) {
+            attributeType = info.attributeType;
+        } else if ("attribute" in info) {
+            attributeType = info.attribute.type_;
+        } else {
+            continue;
+        }
+        const isOperational = isOperationalAttribute(attributeType);
+        const supertypes = getAttributeSupertypes(attributeType);
+        if (isOperational) {
+            if (
+                eis.extraAttributes
+                && ("allOperationalAttributes" in eis.extraAttributes)
+            ) {
+                const attr = Attribute.fromEntryInfoItem(info);
+                attr && selectedByType.push(attr);
             }
-            const isOperational = isOperationalAttribute(attributeType);
-            const supertypes = getAttributeSupertypes(attributeType);
-            if (isOperational) {
-                if (eis.extraAttributes && ("allOperationalAttributes" in eis.extraAttributes)) {
-                    return true;
-                }
-                if (extraAttributes) {
-                    return [
-                        attributeType,
-                        ...supertypes,
-                    ].some((type_) => extraAttributes.has(type_.toString()));
-                } else {
-                    return false;
+            if (extraAttributes) {
+                const has = [
+                    attributeType,
+                    ...supertypes,
+                ].some((type_) => extraAttributes.has(type_.toString()));
+                if (has) {
+                    const attr = Attribute.fromEntryInfoItem(info);
+                    attr && selectedByType.push(attr);
                 }
             } else {
-                if (attributes) {
-                    return [
-                        attributeType,
-                        ...supertypes,
-                    ].some((type_) => attributes.has(type_.toString()));
-                } else {
-                    return true;
-                }
+                continue;
             }
-        })
-        .map(Attribute.fromEntryInfoItem)
-        .filter((attr): attr is Attribute => !!attr);
+        } else {
+            if (attributes) {
+                const has = [
+                    attributeType,
+                    ...supertypes,
+                ].some((type_) => attributes.has(type_.toString()));
+                if (has) {
+                    const attr = Attribute.fromEntryInfoItem(info);
+                    attr && selectedByType.push(attr);
+                }
+            } else {
+                const attr = Attribute.fromEntryInfoItem(info);
+                attr && selectedByType.push(attr);
+            }
+        }
+    }
 
     const selectedAttributes: Attribute[] = Array.from(
         groupByOID(selectedByType, (attr) => attr.type_).values(),
@@ -404,10 +357,11 @@ function selectFromEntry (
     );
 
     const preferences: Map<ContextAssertion[], number> = new Map();
-    const directMatchCache: DirectContextMatchCache = new Map();
+    const directMatchCache = new Map();
 
-    const attributesSelectedByContext = selectedContexts
-        ? selectedAttributes
+    let attributesSelectedByContext = selectedAttributes;
+    if (selectedContexts) {
+        attributesSelectedByContext = selectedAttributes
             .map((attr): Attribute | undefined => filterAttribute(attr, (contexts: Context[]): boolean => {
                 // A ContextAssertion is true for a particular attribute value if:
                 // ...the attribute value contains no contexts of the asserted contextType
@@ -425,64 +379,17 @@ function selectFromEntry (
                 if (typeAndContextAssertions.length === 0) {
                     return true; // There are no context assertions for this attribute type.
                 }
-                return typeAndContextAssertions.every((taca): boolean => {
-                    if ("all" in taca.contextAssertions) {
-                        for (const ca of taca.contextAssertions.all) {
-                            const eval1 = evaluateContextAssertion(
-                                ca,
-                                contexts,
-                                getContextMatcher,
-                                determineAbsentMatch,
-                            );
-                            if (eval1) {
-                                continue;
-                            }
-                            // This value failed (a) and (b). If it has no fallback
-                            // of this type, it cannot match via (c).
-                            const hasFallback = (eval1 === null);
-                            if (!hasFallback) {
-                                return false;
-                            }
-                            // Fallback is denied if any sibling of the same type
-                            // already matched via (a)/(b).
-                            if (typeHasDirectContextMatch(
-                                selectedAttributes,
-                                attr.type_,
-                                ca,
-                                getContextMatcher,
-                                determineAbsentMatch,
-                                directMatchCache,
-                            )) {
-                                return false;
-                            }
-                        }
-                        return true;
-                    } else if ("preference" in taca.contextAssertions) { // This first pass only establishes the preference, but does not filter by it.
-                        const existingPreference = preferences.get(taca.contextAssertions.preference) ?? -1;
-                        const preferred: number = taca.contextAssertions.preference
-                            // Slice so we don't repeatedly retry already superseded assertions.
-                            .slice(0, ((existingPreference > -1) ? existingPreference : Infinity))
-                            .findIndex((ca: ContextAssertion): boolean => !!evaluateContextAssertion(
-                                ca,
-                                contexts,
-                                getContextMatcher,
-                                determineAbsentMatch,
-                            ));
-                        if ( // To become the new preferred context assertion,
-                            (preferred > -1) // ...obviously, there must be a match
-                            && ( // ...but also,
-                                (existingPreference < 0) // there must either be no existing preference, or
-                                // ...it must also be _more_ preferred than the existing preference to supplant it.
-                                || (preferred < existingPreference)
-                            )
-                        ) {
-                            preferences.set(taca.contextAssertions.preference, preferred);
-                        }
-                        return true;
-                    } else {
-                        return false; // We do not understand any other type of context assertion.
-                    }
-                });
+                return typeAndContextAssertions.every((taca): boolean => evaluateTypeAndContextAssertion(
+                    taca,
+                    attr,
+                    contexts,
+                    selectedAttributes,
+                    getEqualityMatcher,
+                    getContextMatcher,
+                    determineAbsentMatch,
+                    preferences,
+                    directMatchCache,
+                ) ?? false);
             }))
             .filter((attr): attr is Attribute => !!attr)
             .map((attr): Attribute | undefined => filterAttribute(attr, (contexts: Context[]): boolean => {
@@ -527,8 +434,10 @@ function selectFromEntry (
                 });
             }))
             .filter((attr): attr is Attribute => !!attr)
-        : selectedAttributes;
+            ;
+    }
 
+    // TODO: Pre-allocate this array.
     const infos: EntryInformation_information_Item[] = [];
     for (const attr of attributesSelectedByContext) {
         const info = attributeToInformationItem(attr, infoTypes, eis.returnContexts);

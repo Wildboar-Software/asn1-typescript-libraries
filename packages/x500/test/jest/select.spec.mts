@@ -58,13 +58,10 @@ const ID_ORG_NAME: OBJECT_IDENTIFIER = ObjectIdentifier.fromParts([ 2, 5, 4, 10 
 const ID_DSE_TYPE: OBJECT_IDENTIFIER = ObjectIdentifier.fromParts([ 2, 5, 12, 0 ]);
 const ID_MY_ACCESS_POINT: OBJECT_IDENTIFIER = ObjectIdentifier.fromParts([ 2, 5, 12, 1 ]);
 const ID_LANGUAGE: OBJECT_IDENTIFIER = ObjectIdentifier.fromParts([ 2, 5, 31, 0 ]);
-const NEVER_OPERATIONAL: Parameters<typeof selectFromEntry>[2] = () => false;
-const ALWAYS_OPERATIONAL: Parameters<typeof selectFromEntry>[2] = () => true;
-const NO_SUPERTYPES: Parameters<typeof selectFromEntry>[3] = () => [];
-const NAME_SUPERTYPE: Parameters<typeof selectFromEntry>[3] = () => [ ID_NAME ];
-const ALWAYS_MATCHES: Parameters<typeof selectFromEntry>[4] = () => () => true;
-const NEVER_MATCHES: Parameters<typeof selectFromEntry>[4] = () => () => false;
-const STRING_MATCHES: Parameters<typeof selectFromEntry>[4] = () => (assertion, values) => {
+const NO_EQUALITY_MATCHER: Parameters<typeof selectFromEntry>[2] = () => undefined;
+const ALWAYS_MATCHES: Parameters<typeof selectFromEntry>[3] = () => () => true;
+const NEVER_MATCHES: Parameters<typeof selectFromEntry>[3] = () => () => false;
+const STRING_MATCHES: Parameters<typeof selectFromEntry>[3] = () => (assertion, values) => {
     for (const value of values) {
         if (assertion.utf8String === value.utf8String) {
             return true;
@@ -72,6 +69,10 @@ const STRING_MATCHES: Parameters<typeof selectFromEntry>[4] = () => (assertion, 
     }
     return false;
 };
+const NEVER_OPERATIONAL: Parameters<typeof selectFromEntry>[4] = () => false;
+const ALWAYS_OPERATIONAL: Parameters<typeof selectFromEntry>[4] = () => true;
+const NO_SUPERTYPES: Parameters<typeof selectFromEntry>[5] = () => [];
+const NAME_SUPERTYPE: Parameters<typeof selectFromEntry>[5] = () => [ ID_NAME ];
 
 const COMMON_NAME: Attribute = new Attribute(
     ID_COMMON_NAME,
@@ -192,9 +193,10 @@ describe("selectFromEntry()", () => {
         const entryAfter = selectFromEntry(
             selection,
             entryBefore,
+            NO_EQUALITY_MATCHER,
+            ALWAYS_MATCHES,
             NEVER_OPERATIONAL,
             NO_SUPERTYPES,
-            ALWAYS_MATCHES,
             () => true, // TRUE is the default for &absentMatch.
         );
         expect(entryAfter.information!.length).toBe(entryBefore.information!.length);
@@ -217,9 +219,10 @@ describe("selectFromEntry()", () => {
         const entryAfter = selectFromEntry(
             selection,
             entryBefore,
+            NO_EQUALITY_MATCHER,
+            ALWAYS_MATCHES,
             NEVER_OPERATIONAL,
             NO_SUPERTYPES,
-            ALWAYS_MATCHES,
             () => true, // TRUE is the default for &absentMatch.
         );
         expect(entryAfter.information!.length).toBe(entryBefore.information!.length);
@@ -248,9 +251,10 @@ describe("selectFromEntry()", () => {
         const entryAfter = selectFromEntry(
             selection,
             entryBefore,
+            NO_EQUALITY_MATCHER,
+            ALWAYS_MATCHES,
             NEVER_OPERATIONAL,
             NO_SUPERTYPES,
-            ALWAYS_MATCHES,
             () => true, // TRUE is the default for &absentMatch.
         );
         expect(entryAfter.information!.length).toBe(1);
@@ -279,9 +283,10 @@ describe("selectFromEntry()", () => {
         const entryAfter = selectFromEntry(
             selection,
             entryBefore,
+            NO_EQUALITY_MATCHER,
+            ALWAYS_MATCHES,
             ALWAYS_OPERATIONAL,
             NO_SUPERTYPES,
-            ALWAYS_MATCHES,
             () => true, // TRUE is the default for &absentMatch.
         );
         expect(entryAfter.information!.length).toBe(0);
@@ -306,9 +311,10 @@ describe("selectFromEntry()", () => {
         const entryAfter = selectFromEntry(
             selection,
             entryBefore,
+            NO_EQUALITY_MATCHER,
+            ALWAYS_MATCHES,
             ALWAYS_OPERATIONAL,
             NO_SUPERTYPES,
-            ALWAYS_MATCHES,
             () => true, // TRUE is the default for &absentMatch.
         );
         expect(entryAfter.information!.length).toBe(1);
@@ -336,9 +342,10 @@ describe("selectFromEntry()", () => {
         const entryAfter = selectFromEntry(
             selection,
             entryBefore,
+            NO_EQUALITY_MATCHER,
+            ALWAYS_MATCHES,
             ALWAYS_OPERATIONAL,
             NO_SUPERTYPES,
-            ALWAYS_MATCHES,
             () => true, // TRUE is the default for &absentMatch.
         );
         expect(entryAfter.information!.length).toBe(1);
@@ -379,9 +386,10 @@ describe("selectFromEntry()", () => {
         const entryAfter = selectFromEntry(
             selection,
             entryBefore,
+            NO_EQUALITY_MATCHER,
+            STRING_MATCHES,
             NEVER_OPERATIONAL,
             NO_SUPERTYPES,
-            STRING_MATCHES,
             () => true, // TRUE is the default for &absentMatch.
         );
         expect(entryAfter.information!.length).toBe(1);
@@ -418,9 +426,10 @@ describe("selectFromEntry()", () => {
         const entryAfter = selectFromEntry(
             selection,
             entryBefore,
+            NO_EQUALITY_MATCHER,
+            STRING_MATCHES,
             NEVER_OPERATIONAL,
             NO_SUPERTYPES,
-            STRING_MATCHES,
             () => true, // TRUE is the default for &absentMatch.
         );
         expect(entryAfter.information!.length).toBe(0);
@@ -484,9 +493,10 @@ describe("selectFromEntry()", () => {
         const entryAfter = selectFromEntry(
             selection,
             entryBefore,
+            NO_EQUALITY_MATCHER,
+            STRING_MATCHES,
             NEVER_OPERATIONAL,
             NO_SUPERTYPES,
-            STRING_MATCHES,
             () => true, // TRUE is the default for &absentMatch.
         );
         expect(entryAfter.information!.length).toBe(1);
@@ -546,9 +556,10 @@ describe("selectFromEntry()", () => {
         const entryAfter = selectFromEntry(
             selection,
             entryBefore,
+            NO_EQUALITY_MATCHER,
+            STRING_MATCHES,
             NEVER_OPERATIONAL,
             NO_SUPERTYPES,
-            STRING_MATCHES,
             () => true, // TRUE is the default for &absentMatch.
         );
         expect(entryAfter.information!.length).toBe(1);
@@ -634,9 +645,10 @@ describe("selectFromEntry()", () => {
         const entryAfter = selectFromEntry(
             selection,
             entryBefore,
+            NO_EQUALITY_MATCHER,
+            STRING_MATCHES,
             NEVER_OPERATIONAL,
             NO_SUPERTYPES,
-            STRING_MATCHES,
             () => true, // TRUE is the default for &absentMatch.
         );
         expect(entryAfter.information!.length).toBe(1);
@@ -723,9 +735,10 @@ describe("selectFromEntry()", () => {
         const entryAfter = selectFromEntry(
             selection,
             entryBefore,
+            NO_EQUALITY_MATCHER,
+            STRING_MATCHES,
             NEVER_OPERATIONAL,
             NO_SUPERTYPES,
-            STRING_MATCHES,
             () => true, // TRUE is the default for &absentMatch.
         );
         expect(entryAfter.information!.length).toBe(1);
@@ -767,9 +780,10 @@ describe("selectFromEntry()", () => {
         const entryAfter = selectFromEntry(
             selection,
             entryBefore,
+            NO_EQUALITY_MATCHER,
+            STRING_MATCHES,
             NEVER_OPERATIONAL,
             NAME_SUPERTYPE,
-            STRING_MATCHES,
             () => true, // TRUE is the default for &absentMatch.
         );
         expect(entryAfter.information!.length).toBe(1);
@@ -848,9 +862,10 @@ describe("selectFromEntry()", () => {
         const entryAfter = selectFromEntry(
             selection,
             entryBefore,
+            NO_EQUALITY_MATCHER,
+            STRING_MATCHES,
             NEVER_OPERATIONAL,
             NAME_SUPERTYPE,
-            STRING_MATCHES,
             () => true, // TRUE is the default for &absentMatch.
         );
         expect(entryAfter.information!.length).toBe(1);
@@ -937,9 +952,10 @@ describe("selectFromEntry()", () => {
         const entryAfter = selectFromEntry(
             selection,
             entryBefore,
+            NO_EQUALITY_MATCHER,
+            STRING_MATCHES,
             NEVER_OPERATIONAL,
             NO_SUPERTYPES,
-            STRING_MATCHES,
             () => true, // TRUE is the default for &absentMatch.
         );
         expect(entryAfter.information!.length).toBe(1);
@@ -991,9 +1007,10 @@ describe("selectFromEntry()", () => {
         const entryAfter = selectFromEntry(
             selection,
             entryBefore,
+            NO_EQUALITY_MATCHER,
+            ALWAYS_MATCHES,
             NEVER_OPERATIONAL,
             NO_SUPERTYPES,
-            ALWAYS_MATCHES,
             () => true, // TRUE is the default for &absentMatch.
         );
         expect(entryAfter.information!.length).toBe(entryBefore.information!.length);

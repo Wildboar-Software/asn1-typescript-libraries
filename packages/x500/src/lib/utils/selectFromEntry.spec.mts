@@ -49,7 +49,7 @@ describe.skip("contextual family-information selection (M25)", () => {
         const result = selectFromEntry(
             new EntryInformationSelection(undefined, EntryInformationSelection_infoTypes_attributeTypesOnly,
                 undefined, undefined, returnContexts),
-            entry, () => false, () => [], () => undefined, () => true,
+            entry, () => undefined, () => undefined, () => false, () => [], () => true,
         );
         const info = result.information![0];
         if (!("attribute" in info)) throw new Error("The family carrier must retain its values");
@@ -75,7 +75,7 @@ describe("selectFromEntry defaults (M24)", () => {
         const selection = new EntryInformationSelection();
         expect(selection.infoTypes).toBeUndefined();
 
-        const result = selectFromEntry(selection, entry, () => false, () => [], () => undefined, () => true);
+        const result = selectFromEntry(selection, entry, () => undefined, () => undefined, () => false, () => [], () => true);
         expect(result.information).toEqual([{ attribute: new Attribute(commonName, [value]) }]);
         expect(result).not.toBe(entry);
         expect(result.name).toBe(name);
@@ -95,7 +95,7 @@ describe("selectFromEntry defaults (M24)", () => {
         const explicit = new EntryInformationSelection(undefined, EntryInformationSelection_infoTypes_attributeTypesAndValues);
         const decoded = _decode_EntryInformationSelection(_encode_EntryInformationSelection(omitted, DER));
         const select = (selection: EntryInformationSelection) => selectFromEntry(
-            selection, entry, () => false, () => [], () => undefined, () => true,
+            selection, entry, () => undefined, () => undefined, () => false, () => [], () => true,
         );
         expect(select(omitted)).toEqual(select(explicit));
         expect(select(omitted)).toEqual(select(decoded));
@@ -107,7 +107,7 @@ describe("selectFromEntry defaults (M24)", () => {
         ]);
         const result = selectFromEntry(
             new EntryInformationSelection(undefined, EntryInformationSelection_infoTypes_attributeTypesOnly),
-            entry, () => false, () => [], () => undefined, () => true,
+            entry, () => undefined, () => undefined, () => false, () => [], () => true,
         );
         expect(result.information).toEqual([{ attributeType: commonName }]);
     });
@@ -121,12 +121,12 @@ describe("selectFromEntry defaults (M24)", () => {
         ]);
         const result = selectFromEntry(
             new EntryInformationSelection({ select: [commonName] }),
-            entry, (type) => type.isEqualTo(createTimestamp), () => [], () => undefined, () => true,
+            entry, () => undefined, () => undefined, (type) => type.isEqualTo(createTimestamp), () => [], () => true,
         );
         expect(result.information).toEqual([{ attribute: alice }]);
         const defaultResult = selectFromEntry(
             new EntryInformationSelection(), entry,
-            (type) => type.isEqualTo(createTimestamp), () => [], () => undefined, () => true,
+            () => undefined, () => undefined, (type) => type.isEqualTo(createTimestamp), () => [], () => true,
         );
         expect(defaultResult.information).toHaveLength(2);
     });
@@ -141,7 +141,7 @@ describe("selectFromEntry defaults (M24)", () => {
         ]);
         const result = selectFromEntry(
             new EntryInformationSelection(undefined, undefined, undefined, undefined, returnContexts),
-            entry, () => false, () => [], () => undefined, () => true,
+            entry, () => undefined, () => undefined, () => false, () => [], () => true,
         );
         expect(result.information).toEqual([{ attribute: returnContexts
             ? new Attribute(commonName, [plainValue], [contextual])
