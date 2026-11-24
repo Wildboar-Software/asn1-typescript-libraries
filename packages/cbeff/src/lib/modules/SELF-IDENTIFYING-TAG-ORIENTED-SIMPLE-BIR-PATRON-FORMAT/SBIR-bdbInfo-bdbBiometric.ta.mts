@@ -5,8 +5,8 @@ import {
     type OPTIONAL
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { _decode_BiometricSubtype, _encode_BiometricSubtype, BiometricSubtype } from "../CBEFF-DATA-ELEMENTS/BiometricSubtype.ta.mjs";
-import { _decode_BiometricType, _encode_BiometricType, BiometricType } from "../CBEFF-DATA-ELEMENTS/BiometricType.ta.mjs";
+import { _decode_BiometricSubtype, _encode_BiometricSubtype, type BiometricSubtype } from "../CBEFF-DATA-ELEMENTS/BiometricSubtype.ta.mjs";
+import { _decode_BiometricType, _encode_BiometricType, type BiometricType } from "../CBEFF-DATA-ELEMENTS/BiometricType.ta.mjs";
 
 
 /**

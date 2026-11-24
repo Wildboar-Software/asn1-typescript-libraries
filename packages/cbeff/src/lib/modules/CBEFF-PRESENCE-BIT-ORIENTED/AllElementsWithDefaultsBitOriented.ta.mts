@@ -7,26 +7,26 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { BDBCreationDate, _decode_BDBCreationDate, _encode_BDBCreationDate } from "../CBEFF-DATA-ELEMENTS/BDBCreationDate.ta.mjs";
+import { type BDBCreationDate, _decode_BDBCreationDate, _encode_BDBCreationDate } from "../CBEFF-DATA-ELEMENTS/BDBCreationDate.ta.mjs";
 import { BDBFormat, _decode_BDBFormat, _encode_BDBFormat } from "../CBEFF-DATA-ELEMENTS/BDBFormat.ta.mjs";
-import { BDBIndex, _decode_BDBIndex, _encode_BDBIndex } from "../CBEFF-DATA-ELEMENTS/BDBIndex.ta.mjs";
-import { BiometricDataBlock, _decode_BiometricDataBlock, _encode_BiometricDataBlock } from "../CBEFF-DATA-ELEMENTS/BiometricDataBlock.ta.mjs";
-import { BiometricSubtype, _decode_BiometricSubtype, _encode_BiometricSubtype } from "../CBEFF-DATA-ELEMENTS/BiometricSubtype.ta.mjs";
-import { BiometricType, _decode_BiometricType, _encode_BiometricType } from "../CBEFF-DATA-ELEMENTS/BiometricType.ta.mjs";
-import { BIRCreationDate, _decode_BIRCreationDate, _encode_BIRCreationDate } from "../CBEFF-DATA-ELEMENTS/BIRCreationDate.ta.mjs";
-import { BIRIndex, _decode_BIRIndex, _encode_BIRIndex } from "../CBEFF-DATA-ELEMENTS/BIRIndex.ta.mjs";
-import { ChallengeResponse, _decode_ChallengeResponse, _encode_ChallengeResponse } from "../CBEFF-DATA-ELEMENTS/ChallengeResponse.ta.mjs";
-import { Creator, _decode_Creator, _encode_Creator } from "../CBEFF-DATA-ELEMENTS/Creator.ta.mjs";
-import { EncryptionOptions, _decode_EncryptionOptions, _encode_EncryptionOptions } from "../CBEFF-DATA-ELEMENTS/EncryptionOptions.ta.mjs";
-import { IntegrityOptions, _decode_IntegrityOptions, _encode_IntegrityOptions } from "../CBEFF-DATA-ELEMENTS/IntegrityOptions.ta.mjs";
-import { PatronFormat, _decode_PatronFormat, _encode_PatronFormat } from "../CBEFF-DATA-ELEMENTS/PatronFormat.ta.mjs";
-import { Payload, _decode_Payload, _encode_Payload } from "../CBEFF-DATA-ELEMENTS/Payload.ta.mjs";
+import { type BDBIndex, _decode_BDBIndex, _encode_BDBIndex } from "../CBEFF-DATA-ELEMENTS/BDBIndex.ta.mjs";
+import { type BiometricDataBlock, _decode_BiometricDataBlock, _encode_BiometricDataBlock } from "../CBEFF-DATA-ELEMENTS/BiometricDataBlock.ta.mjs";
+import { type BiometricSubtype, BiometricSubtype_noValueAvailable, _decode_BiometricSubtype, _encode_BiometricSubtype } from "../CBEFF-DATA-ELEMENTS/BiometricSubtype.ta.mjs";
+import { type BiometricType, BiometricType_noValueAvailable, _decode_BiometricType, _encode_BiometricType } from "../CBEFF-DATA-ELEMENTS/BiometricType.ta.mjs";
+import { type BIRCreationDate, _decode_BIRCreationDate, _encode_BIRCreationDate } from "../CBEFF-DATA-ELEMENTS/BIRCreationDate.ta.mjs";
+import { type BIRIndex, _decode_BIRIndex, _encode_BIRIndex } from "../CBEFF-DATA-ELEMENTS/BIRIndex.ta.mjs";
+import { type ChallengeResponse, _decode_ChallengeResponse, _encode_ChallengeResponse } from "../CBEFF-DATA-ELEMENTS/ChallengeResponse.ta.mjs";
+import { type Creator, _decode_Creator, _encode_Creator } from "../CBEFF-DATA-ELEMENTS/Creator.ta.mjs";
+import { type EncryptionOptions, _decode_EncryptionOptions, _encode_EncryptionOptions } from "../CBEFF-DATA-ELEMENTS/EncryptionOptions.ta.mjs";
+import { type IntegrityOptions, _decode_IntegrityOptions, _encode_IntegrityOptions } from "../CBEFF-DATA-ELEMENTS/IntegrityOptions.ta.mjs";
+import { type PatronFormat, _decode_PatronFormat, _encode_PatronFormat } from "../CBEFF-DATA-ELEMENTS/PatronFormat.ta.mjs";
+import { type Payload, _decode_Payload, _encode_Payload } from "../CBEFF-DATA-ELEMENTS/Payload.ta.mjs";
 import { ProcessedLevel, ProcessedLevel_noValueAvailable /* IMPORTED_LONG_ENUMERATION_ITEM */, _decode_ProcessedLevel, _encode_ProcessedLevel, _enum_for_ProcessedLevel } from "../CBEFF-DATA-ELEMENTS/ProcessedLevel.ta.mjs";
-import { Product, _decode_Product, _encode_Product } from "../CBEFF-DATA-ELEMENTS/Product.ta.mjs";
+import { type Product, _decode_Product, _encode_Product } from "../CBEFF-DATA-ELEMENTS/Product.ta.mjs";
 import { Purpose, Purpose_noValueAvailable /* IMPORTED_LONG_ENUMERATION_ITEM */, _decode_Purpose, _encode_Purpose, _enum_for_Purpose } from "../CBEFF-DATA-ELEMENTS/Purpose.ta.mjs";
-import { Quality, _decode_Quality, _encode_Quality } from "../CBEFF-DATA-ELEMENTS/Quality.ta.mjs";
-import { SBFormat, _decode_SBFormat, _encode_SBFormat } from "../CBEFF-DATA-ELEMENTS/SBFormat.ta.mjs";
-import { SubheaderCount, _decode_SubheaderCount, _encode_SubheaderCount } from "../CBEFF-DATA-ELEMENTS/SubheaderCount.ta.mjs";
+import { type Quality, _decode_Quality, _encode_Quality } from "../CBEFF-DATA-ELEMENTS/Quality.ta.mjs";
+import { type SBFormat, _decode_SBFormat, _encode_SBFormat } from "../CBEFF-DATA-ELEMENTS/SBFormat.ta.mjs";
+import { type SubheaderCount, _decode_SubheaderCount, _encode_SubheaderCount } from "../CBEFF-DATA-ELEMENTS/SubheaderCount.ta.mjs";
 import { ValidityPeriod, _decode_ValidityPeriod, _encode_ValidityPeriod } from "../CBEFF-DATA-ELEMENTS/ValidityPeriod.ta.mjs";
 import { Version, _decode_Version, _encode_Version } from "../CBEFF-DATA-ELEMENTS/Version.ta.mjs";
 import { AllElementsWithDefaultsBitOriented_fieldPresence, _decode_AllElementsWithDefaultsBitOriented_fieldPresence, _encode_AllElementsWithDefaultsBitOriented_fieldPresence } from "../CBEFF-PRESENCE-BIT-ORIENTED/AllElementsWithDefaultsBitOriented-fieldPresence.ta.mjs";
@@ -376,14 +376,14 @@ class AllElementsWithDefaultsBitOriented {
      * @static
      * @method
      */
-    public static get _default_value_for_bioType () { return noValueAvailable; }
+    public static get _default_value_for_bioType () { return BiometricType_noValueAvailable; }
     /**
      * @summary Getter that returns the default value for `bioSubtype`.
      * @public
      * @static
      * @method
      */
-    public static get _default_value_for_bioSubtype () { return noValueAvailable; }
+    public static get _default_value_for_bioSubtype () { return BiometricSubtype_noValueAvailable; }
     /**
      * @summary Getter that returns the default value for `procLevel`.
      * @public
@@ -404,7 +404,7 @@ class AllElementsWithDefaultsBitOriented {
      * @static
      * @method
      */
-    public static get _default_value_for_quality () { return noValueAvailable; }
+    public static get _default_value_for_quality () { return BiometricType_noValueAvailable; }
     /**
      * @summary Getter that returns the default value for `patronHdrVersion`.
      * @public

@@ -7,7 +7,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { BiometricHeaderTemplateExplicit_biometricInformationDO, _decode_BiometricHeaderTemplateExplicit_biometricInformationDO, _encode_BiometricHeaderTemplateExplicit_biometricInformationDO } from "../CBEFF-SMARTCARD-BIDO-EXPLICIT/BiometricHeaderTemplateExplicit-biometricInformationDO.ta.mjs";
-import { BiometricHeaderTemplateExplicit_tagAllocationAuthority, _decode_BiometricHeaderTemplateExplicit_tagAllocationAuthority, _encode_BiometricHeaderTemplateExplicit_tagAllocationAuthority } from "../CBEFF-SMARTCARD-BIDO-EXPLICIT/BiometricHeaderTemplateExplicit-tagAllocationAuthority.ta.mjs";
+import { type BiometricHeaderTemplateExplicit_tagAllocationAuthority, _decode_BiometricHeaderTemplateExplicit_tagAllocationAuthority, _encode_BiometricHeaderTemplateExplicit_tagAllocationAuthority } from "../CBEFF-SMARTCARD-BIDO-EXPLICIT/BiometricHeaderTemplateExplicit-tagAllocationAuthority.ta.mjs";
 
 
 /**

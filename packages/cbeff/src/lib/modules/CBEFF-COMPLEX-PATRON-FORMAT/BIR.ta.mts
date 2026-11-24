@@ -11,9 +11,9 @@ import { BIR_bdbFormat, _decode_BIR_bdbFormat, _encode_BIR_bdbFormat } from "../
 import { BIR_children_child, _decode_BIR_children_child, _encode_BIR_children_child } from "../CBEFF-COMPLEX-PATRON-FORMAT/BIR-children-child.ta.mjs";
 import { BIR_fieldPresence, _decode_BIR_fieldPresence, _encode_BIR_fieldPresence } from "../CBEFF-COMPLEX-PATRON-FORMAT/BIR-fieldPresence.ta.mjs";
 import { BIR_sbFormat, _decode_BIR_sbFormat, _encode_BIR_sbFormat } from "../CBEFF-COMPLEX-PATRON-FORMAT/BIR-sbFormat.ta.mjs";
-import { BiometricSubtype, _decode_BiometricSubtype, _encode_BiometricSubtype } from "../CBEFF-DATA-ELEMENTS/BiometricSubtype.ta.mjs";
-import { BiometricType, _decode_BiometricType, _encode_BiometricType } from "../CBEFF-DATA-ELEMENTS/BiometricType.ta.mjs";
-import { Product, _decode_Product, _encode_Product } from "../CBEFF-DATA-ELEMENTS/Product.ta.mjs";
+import { type BiometricSubtype, BiometricSubtype_noValueAvailable, _decode_BiometricSubtype, _encode_BiometricSubtype } from "../CBEFF-DATA-ELEMENTS/BiometricSubtype.ta.mjs";
+import { type BiometricType, BiometricType_noValueAvailable, _decode_BiometricType, _encode_BiometricType } from "../CBEFF-DATA-ELEMENTS/BiometricType.ta.mjs";
+import { type Product, _decode_Product, _encode_Product } from "../CBEFF-DATA-ELEMENTS/Product.ta.mjs";
 
 
 /**
@@ -316,14 +316,14 @@ class BIR {
      * @static
      * @method
      */
-    public static get _default_value_for_bdbBiometricType () { return noValueAvailable; }
+    public static get _default_value_for_bdbBiometricType () { return BiometricType_noValueAvailable; }
     /**
      * @summary Getter that returns the default value for `bdbBiometricSubtype`.
      * @public
      * @static
      * @method
      */
-    public static get _default_value_for_bdbBiometricSubtype () { return noValueAvailable; }
+    public static get _default_value_for_bdbBiometricSubtype () { return BiometricSubtype_noValueAvailable; }
 }
 
 /**

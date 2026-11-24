@@ -6,9 +6,9 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { CardholderChallengeType, _decode_CardholderChallengeType, _encode_CardholderChallengeType } from "../CBEFF-SMARTCARD-BIDO-EXPLICIT/CardholderChallengeType.ta.mjs";
-import { ProprietaryBDBType, _decode_ProprietaryBDBType, _encode_ProprietaryBDBType } from "../CBEFF-SMARTCARD-BIDO-EXPLICIT/ProprietaryBDBType.ta.mjs";
-import { StandardBDBType, _decode_StandardBDBType, _encode_StandardBDBType } from "../CBEFF-SMARTCARD-BIDO-EXPLICIT/StandardBDBType.ta.mjs";
+import { type CardholderChallengeType, _decode_CardholderChallengeType, _encode_CardholderChallengeType } from "../CBEFF-SMARTCARD-BIDO-EXPLICIT/CardholderChallengeType.ta.mjs";
+import { type ProprietaryBDBType, _decode_ProprietaryBDBType, _encode_ProprietaryBDBType } from "../CBEFF-SMARTCARD-BIDO-EXPLICIT/ProprietaryBDBType.ta.mjs";
+import { type StandardBDBType, _decode_StandardBDBType, _encode_StandardBDBType } from "../CBEFF-SMARTCARD-BIDO-EXPLICIT/StandardBDBType.ta.mjs";
 
 
 /**

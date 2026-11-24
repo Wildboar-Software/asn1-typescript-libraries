@@ -9,9 +9,9 @@ import * as $ from "@wildboar/asn1/functional";
 import { RegistryID, _decode_RegistryID, _encode_RegistryID } from "../CBEFF-DATA-ELEMENTS/RegistryID.ta.mjs";
 import { Version, _decode_Version, _encode_Version } from "../CBEFF-DATA-ELEMENTS/Version.ta.mjs";
 import { ComplexSBIR_birInfo, _decode_ComplexSBIR_birInfo, _encode_ComplexSBIR_birInfo } from "../SELF-IDENTIFYING-TAG-ORIENTED-COMPLEX-BIR-PATRON-FORMAT/ComplexSBIR-birInfo.ta.mjs";
-import { ComplexSBIR_children_childBir, _decode_ComplexSBIR_children_childBir, _encode_ComplexSBIR_children_childBir } from "../SELF-IDENTIFYING-TAG-ORIENTED-COMPLEX-BIR-PATRON-FORMAT/ComplexSBIR-children-childBir.ta.mjs";
+import { type ComplexSBIR_children_childBir, _decode_ComplexSBIR_children_childBir, _encode_ComplexSBIR_children_childBir } from "../SELF-IDENTIFYING-TAG-ORIENTED-COMPLEX-BIR-PATRON-FORMAT/ComplexSBIR-children-childBir.ta.mjs";
 import { ComplexSBIR_sbInfo, _decode_ComplexSBIR_sbInfo, _encode_ComplexSBIR_sbInfo } from "../SELF-IDENTIFYING-TAG-ORIENTED-COMPLEX-BIR-PATRON-FORMAT/ComplexSBIR-sbInfo.ta.mjs";
-import { SBType, _decode_SBType, _encode_SBType } from "../SELF-IDENTIFYING-TAG-ORIENTED-COMPLEX-BIR-PATRON-FORMAT/SBType.ta.mjs";
+import { type SBType, _decode_SBType, _encode_SBType } from "../SELF-IDENTIFYING-TAG-ORIENTED-COMPLEX-BIR-PATRON-FORMAT/SBType.ta.mjs";
 
 
 /**

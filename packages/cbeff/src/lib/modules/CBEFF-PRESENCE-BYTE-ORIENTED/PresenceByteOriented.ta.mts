@@ -6,19 +6,19 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { BDBCreationDate, _decode_BDBCreationDate, _encode_BDBCreationDate } from "../CBEFF-DATA-ELEMENTS/BDBCreationDate.ta.mjs";
+import { type BDBCreationDate, _decode_BDBCreationDate, _encode_BDBCreationDate } from "../CBEFF-DATA-ELEMENTS/BDBCreationDate.ta.mjs";
 import { BDBFormat, _decode_BDBFormat, _encode_BDBFormat } from "../CBEFF-DATA-ELEMENTS/BDBFormat.ta.mjs";
-import { BDBValidityPeriod, _decode_BDBValidityPeriod, _encode_BDBValidityPeriod } from "../CBEFF-DATA-ELEMENTS/BDBValidityPeriod.ta.mjs";
-import { BiometricDataBlock, _decode_BiometricDataBlock, _encode_BiometricDataBlock } from "../CBEFF-DATA-ELEMENTS/BiometricDataBlock.ta.mjs";
-import { BiometricSubtype, _decode_BiometricSubtype, _encode_BiometricSubtype } from "../CBEFF-DATA-ELEMENTS/BiometricSubtype.ta.mjs";
-import { BiometricType, _decode_BiometricType, _encode_BiometricType } from "../CBEFF-DATA-ELEMENTS/BiometricType.ta.mjs";
-import { BIRCreationDate, _decode_BIRCreationDate, _encode_BIRCreationDate } from "../CBEFF-DATA-ELEMENTS/BIRCreationDate.ta.mjs";
-import { BIRValidityPeriod, _decode_BIRValidityPeriod, _encode_BIRValidityPeriod } from "../CBEFF-DATA-ELEMENTS/BIRValidityPeriod.ta.mjs";
+import { type BDBValidityPeriod, _decode_BDBValidityPeriod, _encode_BDBValidityPeriod } from "../CBEFF-DATA-ELEMENTS/BDBValidityPeriod.ta.mjs";
+import { type BiometricDataBlock, _decode_BiometricDataBlock, _encode_BiometricDataBlock } from "../CBEFF-DATA-ELEMENTS/BiometricDataBlock.ta.mjs";
+import { type BiometricSubtype, BiometricSubtype_noValueAvailable, _decode_BiometricSubtype, _encode_BiometricSubtype } from "../CBEFF-DATA-ELEMENTS/BiometricSubtype.ta.mjs";
+import { type BiometricType, BiometricType_noValueAvailable, _decode_BiometricType, _encode_BiometricType } from "../CBEFF-DATA-ELEMENTS/BiometricType.ta.mjs";
+import { type BIRCreationDate, _decode_BIRCreationDate, _encode_BIRCreationDate } from "../CBEFF-DATA-ELEMENTS/BIRCreationDate.ta.mjs";
+import { type BIRValidityPeriod, _decode_BIRValidityPeriod, _encode_BIRValidityPeriod } from "../CBEFF-DATA-ELEMENTS/BIRValidityPeriod.ta.mjs";
 import { ProcessedLevel, ProcessedLevel_noValueAvailable /* IMPORTED_LONG_ENUMERATION_ITEM */, _decode_ProcessedLevel, _encode_ProcessedLevel, _enum_for_ProcessedLevel } from "../CBEFF-DATA-ELEMENTS/ProcessedLevel.ta.mjs";
-import { Product, _decode_Product, _encode_Product } from "../CBEFF-DATA-ELEMENTS/Product.ta.mjs";
+import { type Product, _decode_Product, _encode_Product } from "../CBEFF-DATA-ELEMENTS/Product.ta.mjs";
 import { Purpose, Purpose_noValueAvailable /* IMPORTED_LONG_ENUMERATION_ITEM */, _decode_Purpose, _encode_Purpose, _enum_for_Purpose } from "../CBEFF-DATA-ELEMENTS/Purpose.ta.mjs";
-import { Quality, _decode_Quality, _encode_Quality } from "../CBEFF-DATA-ELEMENTS/Quality.ta.mjs";
-import { SubheaderCount, _decode_SubheaderCount, _encode_SubheaderCount } from "../CBEFF-DATA-ELEMENTS/SubheaderCount.ta.mjs";
+import { type Quality, _decode_Quality, _encode_Quality } from "../CBEFF-DATA-ELEMENTS/Quality.ta.mjs";
+import { type SubheaderCount, _decode_SubheaderCount, _encode_SubheaderCount } from "../CBEFF-DATA-ELEMENTS/SubheaderCount.ta.mjs";
 import { Version, _decode_Version, _encode_Version } from "../CBEFF-DATA-ELEMENTS/Version.ta.mjs";
 import { PresenceByteOriented_fieldPresence, _decode_PresenceByteOriented_fieldPresence, _encode_PresenceByteOriented_fieldPresence } from "../CBEFF-PRESENCE-BYTE-ORIENTED/PresenceByteOriented-fieldPresence.ta.mjs";
 
@@ -247,14 +247,14 @@ class PresenceByteOriented {
      * @static
      * @method
      */
-    public static get _default_value_for_bioType () { return noValueAvailable; }
+    public static get _default_value_for_bioType () { return BiometricType_noValueAvailable; }
     /**
      * @summary Getter that returns the default value for `bioSubtype`.
      * @public
      * @static
      * @method
      */
-    public static get _default_value_for_bioSubtype () { return noValueAvailable; }
+    public static get _default_value_for_bioSubtype () { return BiometricSubtype_noValueAvailable; }
     /**
      * @summary Getter that returns the default value for `procLevel`.
      * @public
@@ -275,7 +275,7 @@ class PresenceByteOriented {
      * @static
      * @method
      */
-    public static get _default_value_for_bdbQuality () { return noValueAvailable; }
+    public static get _default_value_for_bdbQuality () { return BiometricType_noValueAvailable; }
     /**
      * @summary Getter that returns the default value for `patronHdrVersion`.
      * @public

@@ -5,7 +5,7 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { BiometricDataBlock, _decode_BiometricDataBlock, _encode_BiometricDataBlock } from "../CBEFF-DATA-ELEMENTS/BiometricDataBlock.ta.mjs";
+import { type BiometricDataBlock, _decode_BiometricDataBlock, _encode_BiometricDataBlock } from "../CBEFF-DATA-ELEMENTS/BiometricDataBlock.ta.mjs";
 import { MinimumElementsByteOriented_format, _decode_MinimumElementsByteOriented_format, _encode_MinimumElementsByteOriented_format } from "../CBEFF-SIMPLE-BYTE-ORIENTED/MinimumElementsByteOriented-format.ta.mjs";
 
 
