@@ -361,8 +361,11 @@ function selectFromEntry (
 
     let attributesSelectedByContext = selectedAttributes;
     if (selectedContexts) {
-        attributesSelectedByContext = selectedAttributes
-            .map((attr): Attribute | undefined => filterAttribute(attr, (contexts: Context[]): boolean => {
+        const afterAll: Attribute[] = new Array(selectedAttributes.length);
+        let afterAllCount = 0;
+        for (let i = 0; i < selectedAttributes.length; i++) {
+            const attr = selectedAttributes[i];
+            const filtered = filterAttribute(attr, (contexts: Context[]): boolean => {
                 // A ContextAssertion is true for a particular attribute value if:
                 // ...the attribute value contains no contexts of the asserted contextType
                 if (contexts.length === 0) {
@@ -390,9 +393,17 @@ function selectFromEntry (
                     preferences,
                     directMatchCache,
                 ) ?? false);
-            }))
-            .filter((attr): attr is Attribute => !!attr)
-            .map((attr): Attribute | undefined => filterAttribute(attr, (contexts: Context[]): boolean => {
+            });
+            if (filtered) {
+                afterAll[afterAllCount++] = filtered;
+            }
+        }
+        afterAll.length = afterAllCount;
+        const afterPreference: Attribute[] = new Array(afterAllCount);
+        let afterPreferenceCount = 0;
+        for (let i = 0; i < afterAllCount; i++) {
+            const attr = afterAll[i];
+            const filtered = filterAttribute(attr, (contexts: Context[]): boolean => {
                 // A ContextAssertion is true for a particular attribute value if:
                 // ...the attribute value contains no contexts of the asserted contextType
                 if (contexts.length === 0) {
@@ -432,9 +443,13 @@ function selectFromEntry (
                         determineAbsentMatch,
                     );
                 });
-            }))
-            .filter((attr): attr is Attribute => !!attr)
-            ;
+            });
+            if (filtered) {
+                afterPreference[afterPreferenceCount++] = filtered;
+            }
+        }
+        afterPreference.length = afterPreferenceCount;
+        attributesSelectedByContext = afterPreference;
     }
 
     // TODO: Pre-allocate this array.
