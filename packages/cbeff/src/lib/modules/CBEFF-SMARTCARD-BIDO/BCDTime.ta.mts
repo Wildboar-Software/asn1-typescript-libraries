@@ -1,34 +1,28 @@
 /* eslint-disable */
 import {
-  type OCTET_STRING,
-  ASN1Element as _Element,
-  ASN1TagClass as _TagClass,
-  ASN1Construction as _Construction,
-  ASN1UniversalType as _UniversalType,
-  ObjectIdentifier as _OID,
-  External as _External,
-  EmbeddedPDV as _PDV,
-  ASN1ConstructionError as _ConstructionError,
-} from '@wildboar/asn1';
-import * as $ from '@wildboar/asn1/functional';
+    type OCTET_STRING
+} from "@wildboar/asn1";
+import * as $ from "@wildboar/asn1/functional";
+
+
 
 /**
  * @summary BCDTime
  * @description
- *
+ * 
  * ### ASN.1 Definition:
- *
+ * 
  * ```asn1
- * BCDTime  ::=  OCTET STRING(SIZE (7))
+ * BCDTime  ::=  OCTET STRING (SIZE(7))
  * ```
  */
-export type BCDTime = OCTET_STRING; // OctetStringType
+export
+type BCDTime = OCTET_STRING; // OctetStringType
 
+export
+const _decode_BCDTime: $.ASN1Decoder<BCDTime> = $._decodeOctetString;
 
-export const _decode_BCDTime: $.ASN1Decoder<OCTET_STRING> = $._decodeOctetString;
-
-
-export const _encode_BCDTime: $.ASN1Encoder<OCTET_STRING> = $._encodeOctetString;
-
+export
+const _encode_BCDTime: $.ASN1Encoder<BCDTime> = $._encodeOctetString;
 
 /* eslint-enable */

@@ -1,0 +1,55 @@
+CBEFF-PRESENCE-BYTE-ORIENTED
+{iso(1) standard(0) cbeff(19785) modules(0) presence-byte-oriented(5)}
+DEFINITIONS
+AUTOMATIC TAGS ::=
+BEGIN
+IMPORTS
+
+    BDBFormat, SubheaderCount, BiometricType, BiometricSubtype, BDBCreationDate,
+    ProcessedLevel, Product, Purpose, Quality, BDBValidityPeriod, BIRCreationDate,
+    BIRValidityPeriod, Version, BiometricDataBlock
+        FROM CBEFF-DATA-ELEMENTS
+    ;
+
+PresenceByteOriented ::= SEQUENCE {
+/* This patron format contains all data elements but makes full use of default values to allow
+omission of fields. A bit map is present at the start of the encoding to determine which
+fields are present. */
+    format              BDBFormat,
+    fieldPresence       SEQUENCE {
+        bioType             BOOLEAN,
+        bioSubtype          BOOLEAN,
+        bdbCreation         BOOLEAN,
+        procLevel           BOOLEAN,
+        bdbProduct          BOOLEAN,
+        bdbPurpose          BOOLEAN,
+        bdbQuality          BOOLEAN,
+        bdbValidity         BOOLEAN,
+        birCreation         BOOLEAN,
+        birValidity         BOOLEAN,
+        patronHdrVersion    BOOLEAN,
+        cbeffVers           BOOLEAN,
+        subHeaderCount      BOOLEAN,
+        bdbLength           BOOLEAN
+    },
+    bdbFormat           BDBFormat,
+    bioType             BiometricType DEFAULT noValueAvailable,
+    bioSubtype          BiometricSubtype DEFAULT noValueAvailable,
+    bdbCreation         BDBCreationDate OPTIONAL,
+    procLevel           ProcessedLevel DEFAULT noValueAvailable,
+    bdbProduct          Product OPTIONAL,
+    bdbPurpose          Purpose DEFAULT noValueAvailable,
+    bdbQuality          Quality DEFAULT noValueAvailable,
+    bdbValidity         BDBValidityPeriod OPTIONAL,
+    birCreation         BIRCreationDate OPTIONAL,
+    birValidity         BIRValidityPeriod OPTIONAL,
+    -- Original typo read: patronHdrVersion    Version INTEGER (0..255) DEFAULT 1,
+    patronHdrVersion    INTEGER (0..255) DEFAULT 1,
+    -- Component names corrected to match Version (major, minor).
+    cbeffVers           Version DEFAULT {major 4, minor 0},
+    subHeaderCount      SubheaderCount DEFAULT 0,
+    bdbLength           INTEGER (0..4294967295) DEFAULT 0,
+    bdb                 BiometricDataBlock
+}
+
+END

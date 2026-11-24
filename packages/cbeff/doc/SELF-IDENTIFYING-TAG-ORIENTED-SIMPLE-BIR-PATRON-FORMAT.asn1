@@ -1,0 +1,72 @@
+SELF-IDENTIFYING-TAG-ORIENTED-SIMPLE-BIR-PATRON-FORMAT
+{iso(1) standard(0) cbeff(19785) modules(0) self-id-tagged-simple(12)}
+DEFINITIONS AUTOMATIC TAGS ::=
+BEGIN
+IMPORTS
+
+	BDBFormat, BiometricType, BiometricSubtype, ProcessedLevel, Product, Purpose,
+	ValidityPeriod, Version, RegistryID, EncryptionOptions, IntegrityOptions,
+	Creator, BIRIndex, Payload, BDBIndex, ChallengeResponse, ConstructedQuality
+		FROM CBEFF-DATA-ELEMENTS
+     -- The following data elements are defined by the BDB format provider
+     -- (e.g. ISO/IEC 19794-x)
+	-- CardholderChallengeType, StandardBDBType, ProprietaryBDBType
+	-- 	FROM BDB-DATA-ELEMENTS
+	;
+
+-- BDB-DATA-ELEMENTS is an example module. These assignments are meant to be
+-- provided by the BDB format provider. They are effectively an implicit
+-- OCTET STRING.
+CardholderChallengeType ::= OCTET STRING
+StandardBDBType ::= OCTET STRING
+ProprietaryBDBType ::= OCTET STRING
+
+SBIR ::= [APPLICATION 96] IMPLICIT SEQUENCE {
+	birSelfId           	[6]   RegistryID,
+	cbeffVersion        	[28]  Version,
+	patronHeaderVersion 	[0]   Version,
+	birInfo             	[7]   SET {
+		birIntegrity      		[0]   IntegrityOptions,
+		birCreationDate   		[24]  DATE-TIME OPTIONAL,
+		birValidityPeriod 		[27]  ValidityPeriod OPTIONAL,
+		birCreator        		[4]   Creator OPTIONAL,
+		birIndex          		[16]  BIRIndex OPTIONAL,
+		birPayload        		[1]   Payload OPTIONAL,
+		birPointer        		[2]   OCTET STRING (SIZE(0..65535)) OPTIONAL
+	},
+	bdbInfo            		[3] SET {
+		bdbFormat               [7]   BDBFormat,
+		bdbEncryption           [0]   EncryptionOptions,
+		bdbBiometric            [1]   SEQUENCE {
+			bdbBiometricType          [1] BiometricType,
+			bdbBiometricSubtype       [2] BiometricSubtype OPTIONAL
+		} OPTIONAL,
+		bdbProcessedLevel       [21]  ProcessedLevel OPTIONAL,
+		bdbPurpose              [22]  Purpose OPTIONAL,
+		bdbCreationDate         [3]   DATE-TIME OPTIONAL,
+		bdbValidityPeriod       [5]   ValidityPeriod OPTIONAL,
+		bdbChallengeResponse    [19]  ChallengeResponse OPTIONAL,
+		bdbIndex                [20]  BDBIndex OPTIONAL,
+		bdbProduct              [6]   Product OPTIONAL,
+		bdbCaptureDevice        [2]   RegistryID OPTIONAL,
+		bdbFeatureExtractionAlg [4]   RegistryID OPTIONAL,
+		bdbComparisonAlg        [9]   RegistryID OPTIONAL,
+		bdbCompressionAlg       [10]  RegistryID OPTIONAL,
+		bdbQuality              [23]  ConstructedQuality OPTIONAL,
+		bdbPADMechanism         [29]  RegistryID OPTIONAL
+	},
+	sbInfo         			[4] SET { sbFormat [0] RegistryID } OPTIONAL,
+	bdbData              	[APPLICATION 46] SET {
+		challengeCardholder  [0] CardholderChallengeType OPTIONAL,
+		-- defined in BDB-DATA-ELEMENTS
+		standardBDB          [1] StandardBDBType OPTIONAL,
+		-- defined in BDB-DATA-ELEMENTS
+		proprietaryBDB       [2] ProprietaryBDBType OPTIONAL,
+		-- defined in BDB-DATA-ELEMENTS
+		referenceQualifier   [3] OCTET STRING (SIZE(1)) OPTIONAL,
+		biometricData        [APPLICATION 46] OCTET STRING OPTIONAL
+	} OPTIONAL,
+	sb     					[18]  OCTET STRING (SIZE(0..4294967295)) OPTIONAL
+}
+
+END

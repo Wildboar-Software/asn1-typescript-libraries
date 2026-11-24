@@ -1,0 +1,45 @@
+SELF-IDENTIFYING-TAG-ORIENTED-COMPLEX-BIR-PATRON-FORMAT
+{iso(1) standard(0) cbeff(19785) modules(0) self-id-tagged-complex(13)}
+DEFINITIONS AUTOMATIC TAGS ::=
+BEGIN
+IMPORTS
+
+    ValidityPeriod, Version, RegistryID, IntegrityOptions, Creator, BIRIndex,
+    Payload
+        FROM CBEFF-DATA-ELEMENTS
+
+    SBIR
+        FROM SELF-IDENTIFYING-TAG-ORIENTED-SIMPLE-BIR-PATRON-FORMAT
+
+    -- The following data elements are defined by the BDB format provider
+    -- (e.g. ISO/IEC 19785-4)
+    -- SBType
+    --     FROM SB-DATA-ELEMENTS
+    ;
+
+-- The following data elements are defined by the BDB format provider
+SBType ::= OCTET STRING (SIZE(0..4294967295))
+
+ComplexSBIR ::= [APPLICATION 97] IMPLICIT SEQUENCE {
+    birSelfId           [6]  RegistryID,
+    cbeffVersion        [28] Version,
+    patronHeaderVersion [0]  Version,
+    numChildren         [5]  INTEGER (1..255),
+    birInfo             [7]  SET {
+        birIntegrity        [0]  IntegrityOptions,
+        birCreationDate     [24] DATE-TIME OPTIONAL,
+        birValidityPeriod   [27] ValidityPeriod OPTIONAL,
+        birCreator          [4]  Creator OPTIONAL,
+        birIndex            [16] BIRIndex OPTIONAL,
+        birPayload          [1] Payload OPTIONAL,
+        birPointer          [2] OCTET STRING (SIZE (0..65535)) OPTIONAL
+    },
+    sbInfo              [4]   SET { sbFormat [0] RegistryID } OPTIONAL,
+    children            [1]   SEQUENCE (SIZE (1..255)) OF childBir CHOICE {
+        simpleBIR   [APPLICATION 96] SBIR,        -- As per clause 16
+        complexBIR  [APPLICATION 97] ComplexSBIR  -- As per clause 17
+    },
+    sb                  [18] SBType OPTIONAL
+}
+
+END

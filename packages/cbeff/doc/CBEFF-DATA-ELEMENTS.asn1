@@ -1,0 +1,294 @@
+CBEFF-DATA-ELEMENTS
+{iso(1) standard(0) cbeff(19785) modules(0) types-for-cbeff-data-elements(1)}
+DEFINITIONS
+AUTOMATIC TAGS ::=
+BEGIN
+
+/*
+The following elements do not need an individual definition, as they
+are either basic data types (BDBCreationDate vs DATE-TIME),
+or equal to other defined data types (e.g. Product vs. RegistryID):
+*/
+SubheaderCount ::= INTEGER (0..255)
+BDBCreationDate ::= DATE-TIME
+-- A patron format that uses this type shall specify
+-- its encoding for noValueAvailable
+BDBValidityPeriod ::= ValidityPeriod
+BIRCreationDate ::= DATE-TIME
+-- A patron format that uses this type shall specify
+-- its encoding for noValueAvailable
+Product ::= RegistryID
+PatronFormat ::= RegistryID
+BIRValidityPeriod ::= ValidityPeriod
+BiometricDataBlock ::= OCTET STRING
+SBFormat ::= RegistryID
+EncryptionOptions ::= BOOLEAN
+-- NO ENCRYPTION = false, ENCRYPTION = true.
+
+IntegrityOptions ::= BOOLEAN
+-- NO INTEGRITY = false, INTEGRITY = true.
+
+BiometricType ::= INTEGER {
+    noValueAvailable        (0),
+    multipleBiometricTypes  (1),
+    face                    (2),
+    voice                   (4),
+    finger                  (8),
+    iris                    (16),
+    retina                  (32),
+    handGeometry            (64),
+    signatureSign           (128),
+    keystroke               (256),
+    lipMovement             (512),
+    gait                    (4096),
+    vein                    (8192),
+    dna                     (16384),
+    ear                     (32768),
+    foot                    (65536),
+    scent                   (131072),
+    bodyPhotography         (262144),
+    frictionRidge           (524288),
+    thermal                 (1048576),
+    presentationAttackData  (2097152)
+} (0..16777215)
+-- To include multiple biometric types in one instance of the
+-- BiometricType field, use the bitwise OR of each of the values.
+-- For example, for a BDB that will contain face and fingerprint
+-- use BiometricType = multipleBiometricTypes + face + finger (11)
+
+BiometricSubtype ::= INTEGER {
+    noValueAvailable                (0),
+    left                            (1),
+    right                           (2),
+    thumb                           (4),
+    leftThumb                       (5),
+    rightThumb                      (6),
+    index                           (8),
+    leftIndex                       (9),
+    rightIndex                      (10),
+    middle                          (16),
+    leftMiddle                      (17),
+    rightMiddle                     (18),
+    ring                            (32),
+    leftRing                        (33),
+    rightRing                       (34),
+    little                          (64),
+    leftLittle                      (65),
+    rightLittle                     (66),
+    palm                            (132),
+    leftPalm                        (133),
+    rightPalm                       (134),
+    backOfHand                      (136),
+    leftBackOfHand                  (137),
+    rightBackOfHand                 (138),
+    wrist                           (144),
+    leftWrist                       (145),
+    rightWrist                      (146),
+
+    -- The following values are valid combinations
+    -- of biometric subtypes within a single byte field. The
+    -- values are the bitwise OR of other biometric subtype values.
+    leftAndRight                    (3),
+    bothThumbs                      (7),
+    bothIndex                       (11),
+    thumbIndex                      (12),
+    leftThumbIndex                  (13),
+    rightThumbIndex                 (14),
+    bothThumbIndex                  (15),
+    bothMiddle                      (19),
+    thumbMiddle                     (20),
+    leftThumbMiddle                 (21),
+    rightThumbMiddle                (22),
+    bothThumbMiddle                 (23),
+    indexMiddle                     (24),
+    leftIndexMiddle                 (25),
+    rightIndexMiddle                (26),
+    bothIndexMiddle                 (27),
+    thumbIndexMiddle                (28),
+    leftThumbIndexMiddle            (29),
+    rightThumbIndexMiddle           (30),
+    bothThumbIndexMiddle            (31),
+    bothRing                        (35),
+    thumbRing                       (36),
+    leftThumbRing                   (37),
+    rightThumbRing                  (38),
+    bothThumbRing                   (39),
+    ringIndex                       (40),
+    leftRingIndex                   (41),
+    rightRingIndex                  (42),
+    bothRingIndex                   (43),
+    thumbIndexRing                  (44),
+    leftThumbIndexRing              (45),
+    rightThumbIndexRing             (46),
+    bothThumbIndexRing              (47),
+    middleRing                      (48),
+    leftMiddleRing                  (49),
+    rightMiddleRing                 (50),
+    bothMiddleRing                  (51),
+    thumbMiddleRing                 (52),
+    leftThumbMiddleRing             (53),
+    rightThumbMiddleRing            (54),
+    bothThumbMiddleRing             (55),
+    indexMiddleRing                 (56),
+    leftIndexMiddleRing             (57),
+    rightIndexMiddleRing            (58),
+    bothIndexMiddleRing             (59),
+    thumbIndexMiddleRing            (60),
+    leftThumbIndexMiddleRing        (61),
+    rightThumbIndexMiddleRing       (62),
+    bothThumbIndexMiddleRing        (63),
+    bothLittle                      (67),
+    thumbLittle                     (68),
+    leftThumbLittle                 (69),
+    rightThumbLittle                (70),
+    bothThumbLittle                 (71),
+    indexLittle                     (72),
+    leftIndexLittle                 (73),
+    rightIndexLittle                (74),
+    bothIndexLittle                 (75),
+    thumbIndexLittle                (76),
+    leftThumbIndexLittle            (77),
+    rightThumbIndexLittle           (78),
+    bothThumbIndexLittle            (79),
+    middleLittle                    (80),
+    leftMiddleLittle                (81),
+    rightMiddleLittle               (82),
+    bothMiddleLittle                (83),
+    thumbMiddleLittle               (84),
+    leftThumbMiddleLittle           (85),
+    rightThumbMiddleLittle          (86),
+    bothThumbMiddleLittle           (87),
+    indexMiddleLittle               (88),
+    leftIndexMiddleLittle           (89),
+    rightIndexMiddleLittle          (90),
+    bothIndexMiddleLittle           (91),
+    thumbIndexMiddleLittle          (92),
+    leftThumbIndexMiddleLittle      (93),
+    rightThumbIndexMiddleLittle     (94),
+    bothThumbIndexMiddleLittle      (95),
+    ringLittle                      (96),
+    leftRingLittle                  (97),
+    rightRingLittle                 (98),
+    bothRingLittle                  (99),
+    thumbRingLittle                 (100),
+    leftThumbRingLittle             (101),
+    rightThumbRingLittle            (102),
+    bothThumbRingLittle             (103),
+    indexRingLittle                 (104),
+    leftIndexRingLittle             (105),
+    rightIndexRingLittle            (106),
+    bothIndexRingLittle             (107),
+    thumbIndexRingLittle            (108),
+    leftThumbIndexRingLittle        (109),
+    rightThumbIndexRingLittle       (110),
+    bothThumbIndexRingLittle        (111),
+    middleRingLittle                (112),
+    leftMiddleRingLittle            (113),
+    rightMiddleRingLittle           (114),
+    bothMiddleRingLittle            (115),
+    thumbMiddleRingLittle           (116),
+    leftThumbMiddleRingLittle       (117),
+    rightThumbMiddleRingLittle      (118),
+    bothThumbMiddleRingLittle       (119),
+    indexMiddleRingLittle           (120),  -- four finger slap
+    leftIndexMiddleRingLittle       (121),
+    rightIndexMiddleRingLittle      (122),
+    bothIndexMiddleRingLittle       (123),
+    allFingers                      (124),
+    leftAllFingers                  (125),
+    rightAllFingers                 (126),
+    bothAllFingers                  (127),  -- tenprint
+    bothPalms                       (135),
+    bothBackOfHand                  (139),
+    palmBackOfHand                  (140),
+    leftPalmBackOfHand              (141),
+    rightPalmBackOfHand             (142),
+    bothPalmBackOfHand              (143),
+    bothWrist                       (147),
+    palmWrist                       (148),
+    leftPalmWrist                   (149),
+    rightPalmWrist                  (150),
+    bothPalmWrist                   (151),
+    backOfHandWrist                 (152),
+    leftBackOfHandWrist             (153),
+    rightBackOfHandWrist            (154),
+    bothBackOfHandWrist             (155),
+    palmBackOfHandWrist             (156),
+    leftPalmBackOfHandWrist         (157),
+    rightPalmBackOfHandWrist        (158),
+    bothPalmBackOfHandWrist         (159)
+} (0 .. 255)
+   -- For implementations that include multiple biometric subtypes
+   -- in a single BiometricSubtype byte field, only those combinations
+   -- listed above are defined. To specify combinations not defined
+   -- above, multiple instances of the BiometricSubtype field are needed
+
+ChallengeResponse ::= OCTET STRING (SIZE (0..65535))
+-- A patron format that uses this type shall specify
+-- its encoding for noValueAvailable
+BDBIndex ::= OCTET STRING (SIZE (0..65535))
+-- A patron format that uses this type shall specify
+-- its encoding for noValueAvailable
+
+ProcessedLevel ::= ENUMERATED {
+   noValueAvailable     (0),
+   raw                  (1),
+   intermediate         (2),
+   processed            (3)
+}
+
+Purpose ::= ENUMERATED {
+   noValueAvailable     (0),
+   verify               (1),
+   identify             (2),
+   enrol                (3),
+   enrolVerify          (4),
+   enrolIdentify        (5),
+   audit                (6)
+}
+
+QualityNotSupported ::= INTEGER (254)
+NoValueAvailable ::= INTEGER (255)
+Quality ::= INTEGER (0..100 | QualityNotSupported | NoValueAvailable)
+
+ConstructedQuality ::= SEQUENCE {
+    organization    [0] INTEGER (0..65535),
+    id              [1] INTEGER (0..65535),
+    score           [2] Quality
+}
+
+BDBFormat ::= SEQUENCE {
+    organization    INTEGER (0..65535),
+    id              INTEGER (0..65535)
+}
+
+RegistryID ::= SEQUENCE {
+    organization    INTEGER (1..65535),
+    id              INTEGER (1..65535)
+    -- id is a model number or an algorithm identifier, or anything
+    -- identifying a product line, but never a serial number
+}
+
+Creator ::= UTF8String
+-- A patron format that uses this type shall specify
+-- its encoding for noValueAvailable
+BIRIndex ::= OCTET STRING (SIZE(0..65535))
+-- A patron format that uses this type shall specify
+-- its encoding for noValueAvailable
+
+Payload ::= OCTET STRING
+-- A patron format that uses this type shall specify
+-- its encoding for noValueAvailable
+
+ValidityPeriod ::= SEQUENCE {
+    notValidBefore  DATE-TIME OPTIONAL,
+    notValidAfter   DATE-TIME OPTIONAL
+}
+
+Version ::= SEQUENCE {
+    major   INTEGER (0..255),
+    minor   INTEGER (0..255)
+    -- noValueAvailable is encoded by {major 0, minor 0}
+}
+
+END

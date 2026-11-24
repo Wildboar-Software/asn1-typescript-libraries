@@ -1,0 +1,92 @@
+CBEFF-SMARTCARD-BIDO-EXPLICIT
+-- The abbreviation BIDO is used for Biometric Information Data Object
+{iso(1) standard(0) cbeff(19785) modules(0) tlv-encoded-explicit(15)}
+DEFINITIONS AUTOMATIC TAGS ::=
+BEGIN
+IMPORTS
+
+    BiometricType, BiometricSubtype, Creator, BIRIndex
+        FROM CBEFF-DATA-ELEMENTS
+
+    OCCBiometricInformation
+        FROM OCC-DATA-ELEMENTS
+    ;
+
+-- In all cases, omission of an optional component that represents a
+-- CBEFF data element is the encoding of the NO VALUE AVAILABLE for
+-- that data element.
+
+PatronHeaderVersion   ::= OCTET STRING (SIZE(2))
+-- CBEFF_patron_header_version
+-- The first octet encodes the major version number
+-- The second octet encodes the minor version number
+
+BCDTime               ::= OCTET STRING (SIZE(7))
+-- BCD encoded timestamp with format 'YYYYMMDDHHMMSS'
+BCDDatePeriod         ::= OCTET STRING (SIZE(8))
+-- Two concatenated BCD encoded dates with format YYYYMMDDYYYYMMDD
+-- First date shall always be earlier or equal to the second date
+ProductID             ::= OCTET STRING (SIZE(4))
+-- CBEFF_BDB_product_owner in the first two octets
+-- CBEFF_BDB_product_type in the last two octets
+FormatOwner           ::= OCTET STRING (SIZE(2))
+-- CBEFF_BDB_format_owner
+FormatType            ::= OCTET STRING (SIZE(2))
+-- CBEFF_BDB_format_type
+
+BiometricHeaderTemplateExplicit ::= SET {
+    tagAllocationAuthority   [APPLICATION 24] CHOICE {
+        oid         OBJECT IDENTIFIER,
+        country     [APPLICATION 1] OCTET STRING,
+        issuerID    [APPLICATION 2] OCTET STRING,
+        application [APPLICATION 15] OCTET STRING
+    } DEFAULT oid: {1 0 19785 3 1 19},
+    biometricInformationDO   [APPLICATION 16] SET {
+        patronHeaderVersion      [0]  PatronHeaderVersion DEFAULT '0100'H,
+        bdbBiometricType         [1]  BiometricType OPTIONAL,
+        bdbBiometricSubType      [2]  BiometricSubtype OPTIONAL,
+        -- Required to be absent unless bdbBiometricType is present
+        bdbCreationDate          [3]  BCDTime OPTIONAL,
+        -- CBEFF_BDB_creation_date
+        birCreator               [4]  Creator OPTIONAL,
+        bdbValidityPeriod        [5]  BCDDatePeriod OPTIONAL,
+        bdbPID                   [6]  ProductID OPTIONAL,
+        bdbFormatOwner           [7]  FormatOwner,
+        bdbFormatType            [8]  FormatType,
+        birIndex                 [16] BIRIndex OPTIONAL
+    }
+}
+
+-- BDB-DATA-ELEMENTS is an example module. These assignments are meant to be
+-- provided by the BDB format provider. They are effectively an implicit
+-- OCTET STRING.
+CardholderChallengeType ::= OCTET STRING
+StandardBDBType ::= OCTET STRING
+ProprietaryBDBType ::= OCTET STRING
+
+BiometricInformationTemplateExplicit ::= [APPLICATION 96] SET {
+    algorithmReference              [0] OCTET STRING (SIZE(1)) OPTIONAL,
+    -- A non-CBEFF data element, for on-card comparison – see ISO/IEC 24787
+    referenceDataQualifier          [3] OCTET STRING (SIZE(1)) OPTIONAL,
+    -- A non-CBEFF data element, for on-card comparison – see ISO/IEC 24787
+    biometricHeaderTemplateExplicit [1] BiometricHeaderTemplateExplicit,
+    occBiometricInformation         [2] OCCBiometricInformation OPTIONAL,
+    bdbData                         [APPLICATION 46] SET {
+        -- A CBEFF BDB, mandatory for off-card-comparison
+        challengeCardholder     [0] CardholderChallengeType OPTIONAL,
+        -- defined in BDB-DATA-ELEMENTS
+        standardBDB             [1] StandardBDBType OPTIONAL,
+        -- defined in BDB-DATA-ELEMENTS
+        proprietaryBDB          [2] ProprietaryBDBType OPTIONAL,
+        -- defined in BDB-DATA-ELEMENTS
+        referenceQualifier      [3] OCTET STRING (SIZE(1)) OPTIONAL,
+        biometricData           [APPLICATION 46] OCTET STRING OPTIONAL -- primitive DO only
+    } OPTIONAL,
+    -- A CBEFF BDB, mandatory for off-card-comparison
+    birPayLoad [APPLICATION 19] OCTET STRING OPTIONAL
+    -- CBEFF_BIR_payload, contents defined by ISO/IEC 24787
+}
+
+GroupBIT ::= [APPLICATION 97] SET OF BiometricInformationTemplateExplicit
+
+END

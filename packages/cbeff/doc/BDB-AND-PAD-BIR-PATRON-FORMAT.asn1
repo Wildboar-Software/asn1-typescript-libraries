@@ -1,0 +1,51 @@
+BDB-AND-PAD-BIR-PATRON-FORMAT
+{iso(1) standard(0) cbeff(19785) modules(0) padBIR(14)}
+DEFINITIONS AUTOMATIC TAGS ::=
+BEGIN
+IMPORTS
+
+    IntegrityOptions, ValidityPeriod, Version, RegistryID
+        FROM CBEFF-DATA-ELEMENTS
+
+    SBIR
+        FROM SELF-IDENTIFYING-TAG-ORIENTED-SIMPLE-BIR-PATRON-FORMAT
+
+    ComplexSBIR
+        FROM SELF-IDENTIFYING-TAG-ORIENTED-COMPLEX-BIR-PATRON-FORMAT
+
+    -- The following data elements are defined by the BDB format provider
+    -- (e.g. ISO/IEC 19785-4). SB-DATA-ELEMENTS is not part of this package.
+    -- SBType
+    --     FROM SB-DATA-ELEMENTS
+    ;
+
+-- The following data elements are defined by the BDB format provider
+SBType ::= OCTET STRING (SIZE(0..4294967295))
+
+PadSBIR ::= [APPLICATION 97] IMPLICIT SEQUENCE {
+    birSelfId               [6]  RegistryID,
+    cbeffVersion            [28] Version,
+    patronHeaderVersion     [0]  Version,
+    numChildren             [5]  INTEGER (2..255),
+    birInfo                 [7]  SET {
+        birIntegrity            [0]  IntegrityOptions,
+        birCreationDate         [24] DATE-TIME OPTIONAL,
+        birValidityPeriod       [27] ValidityPeriod OPTIONAL,
+        birCreator              [4]  OCTET STRING (SIZE(0..65535)) OPTIONAL,
+        birIndex                [16] OCTET STRING (SIZE(0..65535)) OPTIONAL,
+        birPayload              [1]  OCTET STRING (SIZE(0..65535)) OPTIONAL,
+        birPointer              [2]  OCTET STRING (SIZE(0..65535)) OPTIONAL
+    },
+    sbInfo                  [4] SET { sbFormat [0] RegistryID } OPTIONAL,
+    biometricdataBir        [1] SEQUENCE -- (SIZE(1..numChildren-1)) -- OF childBir CHOICE {
+        simpleBIR   [APPLICATION 96] SBIR,       -- As per clause 16
+        complexBIR  [APPLICATION 97] ComplexSBIR -- As per clause 17
+    },
+    padBir                [9] SEQUENCE -- (SIZE(1..numChildren-1)) -- OF childBir CHOICE {
+        simpleBIR   [APPLICATION 96] SBIR,       -- As per clause 16
+        complexBIR  [APPLICATION 97] ComplexSBIR -- As per clause 17
+    },
+    sb                    [18] SBType OPTIONAL
+}
+
+END

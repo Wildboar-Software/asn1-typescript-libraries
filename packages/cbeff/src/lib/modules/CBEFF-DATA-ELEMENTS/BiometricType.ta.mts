@@ -1,242 +1,386 @@
 /* eslint-disable */
 import {
-  type BIT_STRING,
-  ASN1Element as _Element,
-  ASN1TagClass as _TagClass,
-  ASN1Construction as _Construction,
-  ASN1UniversalType as _UniversalType,
-  ObjectIdentifier as _OID,
-  External as _External,
-  EmbeddedPDV as _PDV,
-  ASN1ConstructionError as _ConstructionError,
-} from '@wildboar/asn1';
-import * as $ from '@wildboar/asn1/functional';
+    type INTEGER
+} from "@wildboar/asn1";
+import * as $ from "@wildboar/asn1/functional";
+
+
 
 /**
  * @summary BiometricType
  * @description
- *
+ * 
  * ### ASN.1 Definition:
- *
+ * 
  * ```asn1
- * BiometricType  ::=  BIT STRING {
- *   no-value-available(0), multiple-biometric-types(1), scent(2), dna(3),
- *   ear(4), face(5), finger(6), foot(7), hand-geometry(8), vein(9), iris(10),
- *   retina(11), voice(12), gait(13), keystroke(14), lip-movement(15),
- *   signature-sign(16)}(SIZE (17), ...)
+ * BiometricType  ::=  INTEGER {
+ *     noValueAvailable        (0),
+ *     multipleBiometricTypes  (1),
+ *     face                    (2),
+ *     voice                   (4),
+ *     finger                  (8),
+ *     iris                    (16),
+ *     retina                  (32),
+ *     handGeometry            (64),
+ *     signatureSign           (128),
+ *     keystroke               (256),
+ *     lipMovement             (512),
+ *     gait                    (4096),
+ *     vein                    (8192),
+ *     dna                     (16384),
+ *     ear                     (32768),
+ *     foot                    (65536),
+ *     scent                   (131072),
+ *     bodyPhotography         (262144),
+ *     frictionRidge           (524288),
+ *     thermal                 (1048576),
+ *     presentationAttackData  (2097152)
+ * } (0..16777215)
  * ```
  */
-export type BiometricType = BIT_STRING;
+export
+type BiometricType = INTEGER;
 
 /**
- * @summary BiometricType_no_value_available
+ * @summary BiometricType_noValueAvailable
  * @constant
+ * @type {number}
  */
-export const BiometricType_no_value_available: number = 0; /* LONG_NAMED_BIT */
+export
+const BiometricType_noValueAvailable: number = 0 satisfies BiometricType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
- * @summary no_value_available
+ * @summary BiometricType_noValueAvailable
  * @constant
+ * @type {number}
  */
-export const no_value_available: number = BiometricType_no_value_available; /* SHORT_NAMED_BIT */
+export
+const noValueAvailable: number = BiometricType_noValueAvailable; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
- * @summary BiometricType_multiple_biometric_types
+ * @summary BiometricType_multipleBiometricTypes
  * @constant
+ * @type {number}
  */
-export const BiometricType_multiple_biometric_types: number = 1; /* LONG_NAMED_BIT */
+export
+const BiometricType_multipleBiometricTypes: number = 1 satisfies BiometricType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
- * @summary multiple_biometric_types
+ * @summary BiometricType_multipleBiometricTypes
  * @constant
+ * @type {number}
  */
-export const multiple_biometric_types: number = BiometricType_multiple_biometric_types; /* SHORT_NAMED_BIT */
-
-/**
- * @summary BiometricType_scent
- * @constant
- */
-export const BiometricType_scent: number = 2; /* LONG_NAMED_BIT */
-
-/**
- * @summary scent
- * @constant
- */
-export const scent: number = BiometricType_scent; /* SHORT_NAMED_BIT */
-
-/**
- * @summary BiometricType_dna
- * @constant
- */
-export const BiometricType_dna: number = 3; /* LONG_NAMED_BIT */
-
-/**
- * @summary dna
- * @constant
- */
-export const dna: number = BiometricType_dna; /* SHORT_NAMED_BIT */
-
-/**
- * @summary BiometricType_ear
- * @constant
- */
-export const BiometricType_ear: number = 4; /* LONG_NAMED_BIT */
-
-/**
- * @summary ear
- * @constant
- */
-export const ear: number = BiometricType_ear; /* SHORT_NAMED_BIT */
+export
+const multipleBiometricTypes: number = BiometricType_multipleBiometricTypes; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary BiometricType_face
  * @constant
+ * @type {number}
  */
-export const BiometricType_face: number = 5; /* LONG_NAMED_BIT */
+export
+const BiometricType_face: number = 2 satisfies BiometricType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
- * @summary face
+ * @summary BiometricType_face
  * @constant
+ * @type {number}
  */
-export const face: number = BiometricType_face; /* SHORT_NAMED_BIT */
-
-/**
- * @summary BiometricType_finger
- * @constant
- */
-export const BiometricType_finger: number = 6; /* LONG_NAMED_BIT */
-
-/**
- * @summary finger
- * @constant
- */
-export const finger: number = BiometricType_finger; /* SHORT_NAMED_BIT */
-
-/**
- * @summary BiometricType_foot
- * @constant
- */
-export const BiometricType_foot: number = 7; /* LONG_NAMED_BIT */
-
-/**
- * @summary foot
- * @constant
- */
-export const foot: number = BiometricType_foot; /* SHORT_NAMED_BIT */
-
-/**
- * @summary BiometricType_hand_geometry
- * @constant
- */
-export const BiometricType_hand_geometry: number = 8; /* LONG_NAMED_BIT */
-
-/**
- * @summary hand_geometry
- * @constant
- */
-export const hand_geometry: number = BiometricType_hand_geometry; /* SHORT_NAMED_BIT */
-
-/**
- * @summary BiometricType_vein
- * @constant
- */
-export const BiometricType_vein: number = 9; /* LONG_NAMED_BIT */
-
-/**
- * @summary vein
- * @constant
- */
-export const vein: number = BiometricType_vein; /* SHORT_NAMED_BIT */
-
-/**
- * @summary BiometricType_iris
- * @constant
- */
-export const BiometricType_iris: number = 10; /* LONG_NAMED_BIT */
-
-/**
- * @summary iris
- * @constant
- */
-export const iris: number = BiometricType_iris; /* SHORT_NAMED_BIT */
-
-/**
- * @summary BiometricType_retina
- * @constant
- */
-export const BiometricType_retina: number = 11; /* LONG_NAMED_BIT */
-
-/**
- * @summary retina
- * @constant
- */
-export const retina: number = BiometricType_retina; /* SHORT_NAMED_BIT */
+export
+const face: number = BiometricType_face; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary BiometricType_voice
  * @constant
+ * @type {number}
  */
-export const BiometricType_voice: number = 12; /* LONG_NAMED_BIT */
+export
+const BiometricType_voice: number = 4 satisfies BiometricType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
- * @summary voice
+ * @summary BiometricType_voice
  * @constant
+ * @type {number}
  */
-export const voice: number = BiometricType_voice; /* SHORT_NAMED_BIT */
+export
+const voice: number = BiometricType_voice; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
- * @summary BiometricType_gait
+ * @summary BiometricType_finger
  * @constant
+ * @type {number}
  */
-export const BiometricType_gait: number = 13; /* LONG_NAMED_BIT */
+export
+const BiometricType_finger: number = 8 satisfies BiometricType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
- * @summary gait
+ * @summary BiometricType_finger
  * @constant
+ * @type {number}
  */
-export const gait: number = BiometricType_gait; /* SHORT_NAMED_BIT */
+export
+const finger: number = BiometricType_finger; /* SHORT_NAMED_INTEGER_VALUE */
+
+/**
+ * @summary BiometricType_iris
+ * @constant
+ * @type {number}
+ */
+export
+const BiometricType_iris: number = 16 satisfies BiometricType; /* LONG_NAMED_INTEGER_VALUE */
+
+/**
+ * @summary BiometricType_iris
+ * @constant
+ * @type {number}
+ */
+export
+const iris: number = BiometricType_iris; /* SHORT_NAMED_INTEGER_VALUE */
+
+/**
+ * @summary BiometricType_retina
+ * @constant
+ * @type {number}
+ */
+export
+const BiometricType_retina: number = 32 satisfies BiometricType; /* LONG_NAMED_INTEGER_VALUE */
+
+/**
+ * @summary BiometricType_retina
+ * @constant
+ * @type {number}
+ */
+export
+const retina: number = BiometricType_retina; /* SHORT_NAMED_INTEGER_VALUE */
+
+/**
+ * @summary BiometricType_handGeometry
+ * @constant
+ * @type {number}
+ */
+export
+const BiometricType_handGeometry: number = 64 satisfies BiometricType; /* LONG_NAMED_INTEGER_VALUE */
+
+/**
+ * @summary BiometricType_handGeometry
+ * @constant
+ * @type {number}
+ */
+export
+const handGeometry: number = BiometricType_handGeometry; /* SHORT_NAMED_INTEGER_VALUE */
+
+/**
+ * @summary BiometricType_signatureSign
+ * @constant
+ * @type {number}
+ */
+export
+const BiometricType_signatureSign: number = 128 satisfies BiometricType; /* LONG_NAMED_INTEGER_VALUE */
+
+/**
+ * @summary BiometricType_signatureSign
+ * @constant
+ * @type {number}
+ */
+export
+const signatureSign: number = BiometricType_signatureSign; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary BiometricType_keystroke
  * @constant
+ * @type {number}
  */
-export const BiometricType_keystroke: number = 14; /* LONG_NAMED_BIT */
+export
+const BiometricType_keystroke: number = 256 satisfies BiometricType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
- * @summary keystroke
+ * @summary BiometricType_keystroke
  * @constant
+ * @type {number}
  */
-export const keystroke: number = BiometricType_keystroke; /* SHORT_NAMED_BIT */
+export
+const keystroke: number = BiometricType_keystroke; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
- * @summary BiometricType_lip_movement
+ * @summary BiometricType_lipMovement
  * @constant
+ * @type {number}
  */
-export const BiometricType_lip_movement: number = 15; /* LONG_NAMED_BIT */
+export
+const BiometricType_lipMovement: number = 512 satisfies BiometricType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
- * @summary lip_movement
+ * @summary BiometricType_lipMovement
  * @constant
+ * @type {number}
  */
-export const lip_movement: number = BiometricType_lip_movement; /* SHORT_NAMED_BIT */
+export
+const lipMovement: number = BiometricType_lipMovement; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
- * @summary BiometricType_signature_sign
+ * @summary BiometricType_gait
  * @constant
+ * @type {number}
  */
-export const BiometricType_signature_sign: number = 16; /* LONG_NAMED_BIT */
+export
+const BiometricType_gait: number = 4096 satisfies BiometricType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
- * @summary signature_sign
+ * @summary BiometricType_gait
  * @constant
+ * @type {number}
  */
-export const signature_sign: number = BiometricType_signature_sign; /* SHORT_NAMED_BIT */
+export
+const gait: number = BiometricType_gait; /* SHORT_NAMED_INTEGER_VALUE */
 
+/**
+ * @summary BiometricType_vein
+ * @constant
+ * @type {number}
+ */
+export
+const BiometricType_vein: number = 8192 satisfies BiometricType; /* LONG_NAMED_INTEGER_VALUE */
 
-export const _decode_BiometricType: $.ASN1Decoder<BIT_STRING> = $._decodeBitString;
+/**
+ * @summary BiometricType_vein
+ * @constant
+ * @type {number}
+ */
+export
+const vein: number = BiometricType_vein; /* SHORT_NAMED_INTEGER_VALUE */
 
+/**
+ * @summary BiometricType_dna
+ * @constant
+ * @type {number}
+ */
+export
+const BiometricType_dna: number = 16384 satisfies BiometricType; /* LONG_NAMED_INTEGER_VALUE */
 
-export const _encode_BiometricType: $.ASN1Encoder<BIT_STRING> = $._encodeBitString;
+/**
+ * @summary BiometricType_dna
+ * @constant
+ * @type {number}
+ */
+export
+const dna: number = BiometricType_dna; /* SHORT_NAMED_INTEGER_VALUE */
 
+/**
+ * @summary BiometricType_ear
+ * @constant
+ * @type {number}
+ */
+export
+const BiometricType_ear: number = 32768 satisfies BiometricType; /* LONG_NAMED_INTEGER_VALUE */
+
+/**
+ * @summary BiometricType_ear
+ * @constant
+ * @type {number}
+ */
+export
+const ear: number = BiometricType_ear; /* SHORT_NAMED_INTEGER_VALUE */
+
+/**
+ * @summary BiometricType_foot
+ * @constant
+ * @type {number}
+ */
+export
+const BiometricType_foot: number = 65536 satisfies BiometricType; /* LONG_NAMED_INTEGER_VALUE */
+
+/**
+ * @summary BiometricType_foot
+ * @constant
+ * @type {number}
+ */
+export
+const foot: number = BiometricType_foot; /* SHORT_NAMED_INTEGER_VALUE */
+
+/**
+ * @summary BiometricType_scent
+ * @constant
+ * @type {number}
+ */
+export
+const BiometricType_scent: number = 131072 satisfies BiometricType; /* LONG_NAMED_INTEGER_VALUE */
+
+/**
+ * @summary BiometricType_scent
+ * @constant
+ * @type {number}
+ */
+export
+const scent: number = BiometricType_scent; /* SHORT_NAMED_INTEGER_VALUE */
+
+/**
+ * @summary BiometricType_bodyPhotography
+ * @constant
+ * @type {number}
+ */
+export
+const BiometricType_bodyPhotography: number = 262144 satisfies BiometricType; /* LONG_NAMED_INTEGER_VALUE */
+
+/**
+ * @summary BiometricType_bodyPhotography
+ * @constant
+ * @type {number}
+ */
+export
+const bodyPhotography: number = BiometricType_bodyPhotography; /* SHORT_NAMED_INTEGER_VALUE */
+
+/**
+ * @summary BiometricType_frictionRidge
+ * @constant
+ * @type {number}
+ */
+export
+const BiometricType_frictionRidge: number = 524288 satisfies BiometricType; /* LONG_NAMED_INTEGER_VALUE */
+
+/**
+ * @summary BiometricType_frictionRidge
+ * @constant
+ * @type {number}
+ */
+export
+const frictionRidge: number = BiometricType_frictionRidge; /* SHORT_NAMED_INTEGER_VALUE */
+
+/**
+ * @summary BiometricType_thermal
+ * @constant
+ * @type {number}
+ */
+export
+const BiometricType_thermal: number = 1048576 satisfies BiometricType; /* LONG_NAMED_INTEGER_VALUE */
+
+/**
+ * @summary BiometricType_thermal
+ * @constant
+ * @type {number}
+ */
+export
+const thermal: number = BiometricType_thermal; /* SHORT_NAMED_INTEGER_VALUE */
+
+/**
+ * @summary BiometricType_presentationAttackData
+ * @constant
+ * @type {number}
+ */
+export
+const BiometricType_presentationAttackData: number = 2097152 satisfies BiometricType; /* LONG_NAMED_INTEGER_VALUE */
+
+/**
+ * @summary BiometricType_presentationAttackData
+ * @constant
+ * @type {number}
+ */
+export
+const presentationAttackData: number = BiometricType_presentationAttackData; /* SHORT_NAMED_INTEGER_VALUE */
+
+export
+const _decode_BiometricType: $.ASN1Decoder<BiometricType> = $._decodeInteger;
+
+export
+const _encode_BiometricType: $.ASN1Encoder<BiometricType> = $._encodeInteger;
 
 /* eslint-enable */

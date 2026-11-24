@@ -1,0 +1,47 @@
+OCC-DATA-ELEMENTS
+{iso(1) standard(0) 24787 2024}
+DEFINITIONS
+AUTOMATIC TAGS ::=
+BEGIN
+IMPORTS
+
+    Quality, RegistryID
+        FROM CBEFF-DATA-ELEMENTS
+    ;
+
+OCCcomparisonParameters ::= SET {
+    minimumMaximumProbeSize     [1]  INTEGER OPTIONAL,
+    orderingFeatures            [2]  OCTET STRING OPTIONAL,
+    featureHandlingIndicator    [3]  OCTET STRING OPTIONAL,
+    alignmentInformation        [4]  OCTET STRING OPTIONAL,
+    minimumVerificationQuality  [7]  OCTET STRING OPTIONAL,
+    verificationTypes           [16] INTEGER (0..255) OPTIONAL,
+    estimationTime              [17] INTEGER (0..65535) OPTIONAL
+}
+
+OCCfunctionalityInformation ::= SET {
+    maximumProbeSize            [0]  INTEGER (0..16777215) OPTIONAL,
+    maximumReferenceSize        [1]  INTEGER (0..16777215) OPTIONAL,
+    supportedNumberReferences   [2]  INTEGER (0..255) OPTIONAL,
+    enrolmentPossibility        [3]  INTEGER (0..255) OPTIONAL,
+    minimumVerificationQuality  [5]  Quality OPTIONAL,
+    minimumQualityRequirements  [7]  OCTET STRING OPTIONAL,
+    proprietaryData             [15] OCTET STRING OPTIONAL,
+    verificationTypes           [16] OCTET STRING OPTIONAL,
+    comparisonAlgID             [4]  RegistryID OPTIONAL
+}
+
+OCCBiometricInformation ::= SET {
+    tagAllocationAuthority      [APPLICATION 24] CHOICE {
+        oid             OBJECT IDENTIFIER,
+        country         [APPLICATION 1]  OCTET STRING,
+        issuerID        [APPLICATION 2]  OCTET STRING,
+        application     [APPLICATION 15] OCTET STRING
+    } DEFAULT oid: {1 0 24787 2024},
+    biometricInformationDO   [APPLICATION 16] SET {
+        comparisonParameters        [17] OCCcomparisonParameters OPTIONAL,
+        functionalityInformation    [18] OCCfunctionalityInformation OPTIONAL
+    }
+}
+
+END

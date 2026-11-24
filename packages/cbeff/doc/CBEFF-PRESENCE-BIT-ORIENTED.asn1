@@ -1,0 +1,77 @@
+CBEFF-PRESENCE-BIT-ORIENTED
+{iso(1) standard(0) cbeff(19785) modules(0)
+allElementsWithDefaultsBitOriented(4)}
+DEFINITIONS
+AUTOMATIC TAGS ::=
+BEGIN
+IMPORTS
+
+    BDBFormat, EncryptionOptions, IntegrityOptions, SubheaderCount,
+    BiometricType, BiometricSubtype, ChallengeResponse, BDBCreationDate, BDBIndex,
+    ProcessedLevel, Product, Purpose, Quality, ValidityPeriod, BIRCreationDate,
+    Creator, BIRIndex, PatronFormat, Payload, Version, SBFormat, BiometricDataBlock
+        FROM CBEFF-DATA-ELEMENTS
+    ;
+
+AllElementsWithDefaultsBitOriented ::= SEQUENCE {
+/* This patron format contains all data elements but makes full use of default values to allow
+omission of fields. It encodes each CBEFF data element into a fixed-width bit field. A bit map
+is present at the start of the encoding to determine which fields are present. */
+    format              BDBFormat,
+    fieldPresence       SEQUENCE {
+        encryptOpts         BOOLEAN,
+        integOpts           BOOLEAN,
+        subHeaderCount      BOOLEAN,
+        bdbLength           BOOLEAN,
+        bioType             BOOLEAN,
+        bioSubtype          BOOLEAN,
+        chaResp             BOOLEAN,
+        bdbCreation         BOOLEAN,
+        bdbIndex            BOOLEAN,
+        procLevel           BOOLEAN,
+        product             BOOLEAN,
+        purpose             BOOLEAN,
+        quality             BOOLEAN,
+        bdbValidity         BOOLEAN,
+        birCreation         BOOLEAN,
+        birCreator          BOOLEAN,
+        birIndex            BOOLEAN,
+        patronFormat        BOOLEAN,
+        payload             BOOLEAN,
+        birValidity         BOOLEAN,
+        patronHdrVersion    BOOLEAN,
+        sbFormat            BOOLEAN,
+        cbeffVers           BOOLEAN,
+        sb                  BOOLEAN
+        -- Original typo read: sb OCTET STRING BOOLEAN
+    },
+    encryptOpts         EncryptionOptions DEFAULT FALSE,
+    integOpts           IntegrityOptions DEFAULT FALSE,
+    subHeaderCount      SubheaderCount DEFAULT 0,
+    bdbLength           INTEGER (0..4294967295) DEFAULT 0,
+    bioType             BiometricType DEFAULT noValueAvailable,
+    bioSubtype          BiometricSubtype DEFAULT noValueAvailable,
+    chaResp             ChallengeResponse OPTIONAL,
+    bdbCreation         BDBCreationDate OPTIONAL,
+    bdbIndex            BDBIndex OPTIONAL,
+    procLevel           ProcessedLevel DEFAULT noValueAvailable,
+    product             Product OPTIONAL,
+    purpose             Purpose DEFAULT noValueAvailable,
+    quality             Quality DEFAULT noValueAvailable,
+    bdbValidity         ValidityPeriod,
+    birCreation         BIRCreationDate OPTIONAL,
+    birCreator          Creator OPTIONAL,
+    birIndex            BIRIndex OPTIONAL,
+    patronFormat        PatronFormat OPTIONAL,
+    payload             Payload OPTIONAL,
+    birValidity         ValidityPeriod,
+    -- Component names corrected to match Version (major, minor).
+    patronHdrVersion    Version DEFAULT {major 1, minor 0},
+    sbFormat            SBFormat OPTIONAL,
+    -- Component names corrected to match Version (major, minor).
+    cbeffVers           Version DEFAULT {major 4, minor 0},
+    bdb                 BiometricDataBlock,
+    sb                  OCTET STRING (SIZE(0..4294967295)) OPTIONAL
+}
+
+END

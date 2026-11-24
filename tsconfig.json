@@ -61,9 +61,6 @@
       "path": "./packages/cades"
     },
     {
-      "path": "./packages/cbeff"
-    },
-    {
       "path": "./packages/cmail"
     },
     {
@@ -311,6 +308,9 @@
     },
     {
       "path": "./packages/extra-ldap-schema"
+    },
+    {
+      "path": "./packages/cbeff"
     }
   ],
   "compilerOptions": {

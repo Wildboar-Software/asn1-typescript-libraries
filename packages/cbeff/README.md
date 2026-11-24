@@ -1,8 +1,8 @@
-# Common Biometric Exchange Formats Framework in TypeScript
+# Telebiometrics Authentication Infrastructure (TAI) ASN.1 Data Structures in TypeScript
 
-TypeScript equivalent of ASN.1 data structures derived from
-[ISO/IEC 19785-1:2020](https://www.iso.org/standard/77892.html), which defines
-Common Biometric Exchange Formats Framework.
+Data structures from the ASN.1 definitions defined in
+[ITU-T Recommendation X.1089](https://www.itu.int/rec/T-REC-X.1089) for use in
+Telebiometrics Authentication Infrastructure (TAI).
 
 See the
 [documentation](https://github.com/Wildboar-Software/asn1-typescript-libraries/blob/master/docs/all.md)

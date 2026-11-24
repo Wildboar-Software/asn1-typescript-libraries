@@ -1,0 +1,27 @@
+CBEFF-SIMPLE-BIT-ORIENTED
+{iso(1) standard(0) cbeff(19785) modules(0)
+minimumElementsWithDefaultsBitOriented(2)}
+DEFINITIONS
+AUTOMATIC TAGS ::=
+BEGIN
+IMPORTS
+
+    BiometricDataBlock
+        FROM CBEFF-DATA-ELEMENTS
+    ;
+
+MinimumElementsBitOriented ::= SEQUENCE {
+    /* This patron format contains only mandatory data elements
+    and uses bit-level encoding for optimal use of encoding space.*/
+    /* This patron format supports only the abstract values
+    NO ENCRYPTION and NO INTEGRITY, which are encoded as zero length
+    fields.*/
+    format  SEQUENCE {
+        owner   INTEGER (0..65535) DEFAULT 257,
+        -- 257 is the biometric organization identifier of ISO/IEC JTC 1/SC 37
+        type    INTEGER (0..63, ..., 64..65535)
+    },
+    bdb     BiometricDataBlock (SIZE(0..127, ..., 128..MAX))
+}
+
+END

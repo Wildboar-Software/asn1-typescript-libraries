@@ -1,53 +1,50 @@
 /* eslint-disable */
 import {
-    type OPTIONAL,
     type OCTET_STRING,
+    type OPTIONAL,
     type ASN1Element as _Element,
-    ASN1TagClass as _TagClass,
-    ASN1Construction as _Construction,
-    ASN1UniversalType as _UniversalType,
-    ObjectIdentifier as _OID,
-    External as _External,
-    EmbeddedPDV as _PDV,
-    ASN1ConstructionError as _ConstructionError,
+    ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { type PatronHeaderVersion, _decode_PatronHeaderVersion, _encode_PatronHeaderVersion } from "../CBEFF-SMARTCARD-BIDO/PatronHeaderVersion.ta.mjs";
-import { type BiometricType, _decode_BiometricType, _encode_BiometricType } from "../CBEFF-SMARTCARD-BIDO/BiometricType.ta.mjs";
-import { type BiometricSubType, _decode_BiometricSubType, _encode_BiometricSubType } from "../CBEFF-SMARTCARD-BIDO/BiometricSubType.ta.mjs";
-import { type BCDTime, _decode_BCDTime, _encode_BCDTime } from "../CBEFF-SMARTCARD-BIDO/BCDTime.ta.mjs";
-import { type Creator, _decode_Creator, _encode_Creator } from "../CBEFF-SMARTCARD-BIDO/Creator.ta.mjs";
-import { type BCDDatePeriod, _decode_BCDDatePeriod, _encode_BCDDatePeriod } from "../CBEFF-SMARTCARD-BIDO/BCDDatePeriod.ta.mjs";
-import { type ProductID, _decode_ProductID, _encode_ProductID } from "../CBEFF-SMARTCARD-BIDO/ProductID.ta.mjs";
-import { type FormatOwner, _decode_FormatOwner, _encode_FormatOwner } from "../CBEFF-SMARTCARD-BIDO/FormatOwner.ta.mjs";
-import { type FormatType, _decode_FormatType, _encode_FormatType } from "../CBEFF-SMARTCARD-BIDO/FormatType.ta.mjs";
-import { type BIRIndex, _decode_BIRIndex, _encode_BIRIndex } from "../CBEFF-SMARTCARD-BIDO/BIRIndex.ta.mjs";
+import { BCDDatePeriod, _decode_BCDDatePeriod, _encode_BCDDatePeriod } from "../CBEFF-SMARTCARD-BIDO/BCDDatePeriod.ta.mjs";
+import { BCDTime, _decode_BCDTime, _encode_BCDTime } from "../CBEFF-SMARTCARD-BIDO/BCDTime.ta.mjs";
+import { BiometricSubType, _decode_BiometricSubType, _encode_BiometricSubType } from "../CBEFF-SMARTCARD-BIDO/BiometricSubType.ta.mjs";
+import { BiometricType, _decode_BiometricType, _encode_BiometricType } from "../CBEFF-SMARTCARD-BIDO/BiometricType.ta.mjs";
+import { BIRIndex, _decode_BIRIndex, _encode_BIRIndex } from "../CBEFF-SMARTCARD-BIDO/BIRIndex.ta.mjs";
+import { Creator, _decode_Creator, _encode_Creator } from "../CBEFF-SMARTCARD-BIDO/Creator.ta.mjs";
+import { FormatOwner, _decode_FormatOwner, _encode_FormatOwner } from "../CBEFF-SMARTCARD-BIDO/FormatOwner.ta.mjs";
+import { FormatType, _decode_FormatType, _encode_FormatType } from "../CBEFF-SMARTCARD-BIDO/FormatType.ta.mjs";
+import { PatronHeaderVersion, _decode_PatronHeaderVersion, _encode_PatronHeaderVersion } from "../CBEFF-SMARTCARD-BIDO/PatronHeaderVersion.ta.mjs";
+import { ProductID, _decode_ProductID, _encode_ProductID } from "../CBEFF-SMARTCARD-BIDO/ProductID.ta.mjs";
+
+
 /**
  * @summary BiometricHeaderTemplate
  * @description
- *
+ * 
  * ### ASN.1 Definition:
- *
+ * 
  * ```asn1
  * BiometricHeaderTemplate ::= SET {
- *   patronHeaderVersion    [0]  PatronHeaderVersion DEFAULT '0101'H,
- *   -- The absence of this Data Object represents NO VALUE AVAILABLE
- *   bdbBiometricType       [1]  BiometricType OPTIONAL,
- *   bdbBiometricSubType    [2]  BiometricSubType OPTIONAL,
- *   -- Required to be absent unless bdbBiometricType is present
- *   bdbCreationDate        [3]  BCDTime OPTIONAL,
- *   -- CBEFF_BDB_creation_date
- *   birCreator             [4]  Creator OPTIONAL,
- *   bdbValidityPeriod      [5]  BCDDatePeriod OPTIONAL,
- *   bdbPID                 [6]  ProductID OPTIONAL,
- *   bdbFormatOwner         [7]  FormatOwner,
- *   bdbFormatType          [8]  FormatType,
- *   birIndex               [16]  BIRIndex OPTIONAL,
- *   matchingAlgParameters  [17]  OCTET STRING OPTIONAL
- *   -- A non-CBEFF data element &#8211; see ISO/IEC 7816-11
+ *     patronHeaderVersion     [0] PatronHeaderVersion DEFAULT '0101'H,
+ *     -- The absence of this Data Object represents NO VALUE AVAILABLE
+ *     bdbBiometricType        [1] BiometricType OPTIONAL,
+ *     bdbBiometricSubType     [2] BiometricSubType OPTIONAL,
+ *     -- Required to be absent unless bdbBiometricType is present
+ *     bdbCreationDate         [3] BCDTime OPTIONAL,
+ *     -- CBEFF_BDB_creation_date
+ *     birCreator              [4] Creator OPTIONAL,
+ *     bdbValidityPeriod       [5] BCDDatePeriod OPTIONAL,
+ *     bdbPID                  [6] ProductID OPTIONAL,
+ *     bdbFormatOwner          [7] FormatOwner,
+ *     bdbFormatType           [8] FormatType,
+ *     birIndex                [16] BIRIndex OPTIONAL,
+ *     matchingAlgParameters   [17] OCTET STRING OPTIONAL
+ *     -- A non-CBEFF data element – see ISO/IEC 7816-11
  * }
  * ```
- *
+ * 
+ * @class
  */
 export
 class BiometricHeaderTemplate {
@@ -56,67 +53,67 @@ class BiometricHeaderTemplate {
      * @public
      * @readonly
      */
-    public readonly patronHeaderVersion: OPTIONAL<PatronHeaderVersion>;
+    readonly patronHeaderVersion: OPTIONAL<PatronHeaderVersion>;
     /**
      * @summary `bdbBiometricType`.
      * @public
      * @readonly
      */
-    public readonly bdbBiometricType: OPTIONAL<BiometricType>;
+    readonly bdbBiometricType: OPTIONAL<BiometricType>;
     /**
      * @summary `bdbBiometricSubType`.
      * @public
      * @readonly
      */
-    public readonly bdbBiometricSubType: OPTIONAL<BiometricSubType>;
+    readonly bdbBiometricSubType: OPTIONAL<BiometricSubType>;
     /**
      * @summary `bdbCreationDate`.
      * @public
      * @readonly
      */
-    public readonly bdbCreationDate: OPTIONAL<BCDTime>;
+    readonly bdbCreationDate: OPTIONAL<BCDTime>;
     /**
      * @summary `birCreator`.
      * @public
      * @readonly
      */
-    public readonly birCreator: OPTIONAL<Creator>;
+    readonly birCreator: OPTIONAL<Creator>;
     /**
      * @summary `bdbValidityPeriod`.
      * @public
      * @readonly
      */
-    public readonly bdbValidityPeriod: OPTIONAL<BCDDatePeriod>;
+    readonly bdbValidityPeriod: OPTIONAL<BCDDatePeriod>;
     /**
      * @summary `bdbPID`.
      * @public
      * @readonly
      */
-    public readonly bdbPID: OPTIONAL<ProductID>;
+    readonly bdbPID: OPTIONAL<ProductID>;
     /**
      * @summary `bdbFormatOwner`.
      * @public
      * @readonly
      */
-    public readonly bdbFormatOwner: FormatOwner;
+    readonly bdbFormatOwner: FormatOwner;
     /**
      * @summary `bdbFormatType`.
      * @public
      * @readonly
      */
-    public readonly bdbFormatType: FormatType;
+    readonly bdbFormatType: FormatType;
     /**
      * @summary `birIndex`.
      * @public
      * @readonly
      */
-    public readonly birIndex?: OPTIONAL<BIRIndex>;
+    readonly birIndex: OPTIONAL<BIRIndex>;
     /**
      * @summary `matchingAlgParameters`.
      * @public
      * @readonly
      */
-    public readonly matchingAlgParameters?: OPTIONAL<OCTET_STRING>;
+    readonly matchingAlgParameters: OPTIONAL<OCTET_STRING>;
 
     constructor (
         patronHeaderVersion: OPTIONAL<PatronHeaderVersion>,
@@ -147,9 +144,9 @@ class BiometricHeaderTemplate {
     /**
      * @summary Restructures an object into a BiometricHeaderTemplate
      * @description
-     *
+     * 
      * This takes an `object` and converts it to a `BiometricHeaderTemplate`.
-     *
+     * 
      * @public
      * @static
      * @method
@@ -166,15 +163,15 @@ class BiometricHeaderTemplate {
      * @static
      * @method
      */
-    public static get _default_value_for_patronHeaderVersion (): PatronHeaderVersion { return new Uint8Array([ 0x01, 0x01 ]); }
+    public static get _default_value_for_patronHeaderVersion () { return new Uint8Array([ 0x01, 0x01 ]); }
 }
 
 /**
  * @summary The Leading Root Component Types of BiometricHeaderTemplate
  * @description
- *
+ * 
  * This is an array of `ComponentSpec`s that define how to decode the leading root component type list of a SET or SEQUENCE.
- *
+ * 
  * @constant
  */
 export
@@ -195,27 +192,27 @@ const _root_component_type_list_1_spec_for_BiometricHeaderTemplate: $.ComponentS
 /**
  * @summary The Trailing Root Component Types of BiometricHeaderTemplate
  * @description
- *
+ * 
  * This is an array of `ComponentSpec`s that define how to decode the trailing root component type list of a SET or SEQUENCE.
- *
+ * 
  * @constant
  */
 export
 const _root_component_type_list_2_spec_for_BiometricHeaderTemplate: $.ComponentSpec[] = [
-
+    
 ];
 
 /**
  * @summary The Extension Addition Component Types of BiometricHeaderTemplate
  * @description
- *
+ * 
  * This is an array of `ComponentSpec`s that define how to decode the extension addition component type list of a SET or SEQUENCE.
- *
+ * 
  * @constant
  */
 export
 const _extension_additions_list_spec_for_BiometricHeaderTemplate: $.ComponentSpec[] = [
-
+    
 ];
 
 let _cached_decoder_for_BiometricHeaderTemplate: $.ASN1Decoder<BiometricHeaderTemplate> | null = null;
@@ -223,8 +220,8 @@ let _cached_decoder_for_BiometricHeaderTemplate: $.ASN1Decoder<BiometricHeaderTe
 /**
  * @summary Decodes an ASN.1 element into a(n) BiometricHeaderTemplate
  * @function
- * @param {_Element} el The element being decoded.
- * @returns {BiometricHeaderTemplate} The decoded data structure.
+ * @param el The element being decoded.
+ * @returns The decoded data structure.
  */
 export
 function _decode_BiometricHeaderTemplate (el: _Element): BiometricHeaderTemplate {
@@ -242,6 +239,7 @@ function _decode_BiometricHeaderTemplate (el: _Element): BiometricHeaderTemplate
     let birIndex: OPTIONAL<BIRIndex>;
     let matchingAlgParameters: OPTIONAL<OCTET_STRING>;
     /* END_OF_SET_COMPONENT_DECLARATIONS */
+    /* START_OF_CALLBACKS_MAP */
     const callbacks: $.DecodingMap = {
         "patronHeaderVersion": (_el: _Element): void => { patronHeaderVersion = $._decode_implicit<PatronHeaderVersion>(() => _decode_PatronHeaderVersion)(_el); },
         "bdbBiometricType": (_el: _Element): void => { bdbBiometricType = $._decode_implicit<BiometricType>(() => _decode_BiometricType)(_el); },
@@ -255,6 +253,7 @@ function _decode_BiometricHeaderTemplate (el: _Element): BiometricHeaderTemplate
         "birIndex": (_el: _Element): void => { birIndex = $._decode_implicit<BIRIndex>(() => _decode_BIRIndex)(_el); },
         "matchingAlgParameters": (_el: _Element): void => { matchingAlgParameters = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el); }
     };
+    /* END_OF_CALLBACKS_MAP */
     $._parse_set(el, callbacks,
         _root_component_type_list_1_spec_for_BiometricHeaderTemplate,
         _extension_additions_list_spec_for_BiometricHeaderTemplate,
@@ -283,28 +282,44 @@ let _cached_encoder_for_BiometricHeaderTemplate: $.ASN1Encoder<BiometricHeaderTe
 /**
  * @summary Encodes a(n) BiometricHeaderTemplate into an ASN.1 Element.
  * @function
- * @param value The element being encoded.
+ * @param value The value being encoded.
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The BiometricHeaderTemplate, encoded as an ASN.1 Element.
  */
 export
-function _encode_BiometricHeaderTemplate (value: BiometricHeaderTemplate, elGetter: $.ASN1Encoder<BiometricHeaderTemplate>): _Element {
-    if (!_cached_encoder_for_BiometricHeaderTemplate) { _cached_encoder_for_BiometricHeaderTemplate = function (value: BiometricHeaderTemplate): _Element {
-    return $._encodeSet(([] as (_Element | undefined)[]).concat(
-        [
-            /* IF_DEFAULT */ (value.patronHeaderVersion === undefined || $.deepEq(value.patronHeaderVersion, BiometricHeaderTemplate._default_value_for_patronHeaderVersion) ? undefined : $._encode_implicit(_TagClass.context, 0, () => _encode_PatronHeaderVersion, $.BER)(value.patronHeaderVersion, $.BER)),
-            /* IF_ABSENT  */ ((value.bdbBiometricType === undefined) ? undefined : $._encode_implicit(_TagClass.context, 1, () => _encode_BiometricType, $.BER)(value.bdbBiometricType, $.BER)),
-            /* IF_ABSENT  */ ((value.bdbBiometricSubType === undefined) ? undefined : $._encode_implicit(_TagClass.context, 2, () => _encode_BiometricSubType, $.BER)(value.bdbBiometricSubType, $.BER)),
-            /* IF_ABSENT  */ ((value.bdbCreationDate === undefined) ? undefined : $._encode_implicit(_TagClass.context, 3, () => _encode_BCDTime, $.BER)(value.bdbCreationDate, $.BER)),
-            /* IF_ABSENT  */ ((value.birCreator === undefined) ? undefined : $._encode_implicit(_TagClass.context, 4, () => _encode_Creator, $.BER)(value.birCreator, $.BER)),
-            /* IF_ABSENT  */ ((value.bdbValidityPeriod === undefined) ? undefined : $._encode_implicit(_TagClass.context, 5, () => _encode_BCDDatePeriod, $.BER)(value.bdbValidityPeriod, $.BER)),
-            /* IF_ABSENT  */ ((value.bdbPID === undefined) ? undefined : $._encode_implicit(_TagClass.context, 6, () => _encode_ProductID, $.BER)(value.bdbPID, $.BER)),
-            /* REQUIRED   */ $._encode_implicit(_TagClass.context, 7, () => _encode_FormatOwner, $.BER)(value.bdbFormatOwner, $.BER),
-            /* REQUIRED   */ $._encode_implicit(_TagClass.context, 8, () => _encode_FormatType, $.BER)(value.bdbFormatType, $.BER),
-            /* IF_ABSENT  */ ((value.birIndex === undefined) ? undefined : $._encode_implicit(_TagClass.context, 16, () => _encode_BIRIndex, $.BER)(value.birIndex, $.BER)),
-            /* IF_ABSENT  */ ((value.matchingAlgParameters === undefined) ? undefined : $._encode_implicit(_TagClass.context, 17, () => $._encodeOctetString, $.BER)(value.matchingAlgParameters, $.BER))
-        ],
-    ).filter((c: (_Element | undefined)): c is _Element => (!!c)), $.BER);
+function _encode_BiometricHeaderTemplate (value: BiometricHeaderTemplate, elGetter: $.ASN1Encoder<any>): _Element {
+    if (!_cached_encoder_for_BiometricHeaderTemplate) { _cached_encoder_for_BiometricHeaderTemplate = function (value: BiometricHeaderTemplate, elGetter: $.ASN1Encoder<BiometricHeaderTemplate>): _Element {
+    const _components: _Element[] = [];
+    if (value.patronHeaderVersion !== undefined && !$.deepEq(value.patronHeaderVersion, BiometricHeaderTemplate._default_value_for_patronHeaderVersion)) {
+        _components.push(/* IF_DEFAULT */ $._encode_implicit(_TagClass.context, 0, () => _encode_PatronHeaderVersion, $.BER)(value.patronHeaderVersion, $.BER));
+    }
+    if (value.bdbBiometricType !== undefined) {
+        _components.push(/* IF_ABSENT  */ $._encode_implicit(_TagClass.context, 1, () => _encode_BiometricType, $.BER)(value.bdbBiometricType, $.BER));
+    }
+    if (value.bdbBiometricSubType !== undefined) {
+        _components.push(/* IF_ABSENT  */ $._encode_implicit(_TagClass.context, 2, () => _encode_BiometricSubType, $.BER)(value.bdbBiometricSubType, $.BER));
+    }
+    if (value.bdbCreationDate !== undefined) {
+        _components.push(/* IF_ABSENT  */ $._encode_implicit(_TagClass.context, 3, () => _encode_BCDTime, $.BER)(value.bdbCreationDate, $.BER));
+    }
+    if (value.birCreator !== undefined) {
+        _components.push(/* IF_ABSENT  */ $._encode_implicit(_TagClass.context, 4, () => _encode_Creator, $.BER)(value.birCreator, $.BER));
+    }
+    if (value.bdbValidityPeriod !== undefined) {
+        _components.push(/* IF_ABSENT  */ $._encode_implicit(_TagClass.context, 5, () => _encode_BCDDatePeriod, $.BER)(value.bdbValidityPeriod, $.BER));
+    }
+    if (value.bdbPID !== undefined) {
+        _components.push(/* IF_ABSENT  */ $._encode_implicit(_TagClass.context, 6, () => _encode_ProductID, $.BER)(value.bdbPID, $.BER));
+    }
+    _components.push(/* REQUIRED   */ $._encode_implicit(_TagClass.context, 7, () => _encode_FormatOwner, $.BER)(value.bdbFormatOwner, $.BER));
+    _components.push(/* REQUIRED   */ $._encode_implicit(_TagClass.context, 8, () => _encode_FormatType, $.BER)(value.bdbFormatType, $.BER));
+    if (value.birIndex !== undefined) {
+        _components.push(/* IF_ABSENT  */ $._encode_implicit(_TagClass.context, 16, () => _encode_BIRIndex, $.BER)(value.birIndex, $.BER));
+    }
+    if (value.matchingAlgParameters !== undefined) {
+        _components.push(/* IF_ABSENT  */ $._encode_implicit(_TagClass.context, 17, () => $._encodeOctetString, $.BER)(value.matchingAlgParameters, $.BER));
+    }
+    return $._encodeSet(_components, $.BER);
 }; }
     return _cached_encoder_for_BiometricHeaderTemplate(value, elGetter);
 }
