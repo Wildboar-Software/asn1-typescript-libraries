@@ -299,9 +299,9 @@ function selectFromEntry (
         ? groupByOID(eis.contextSelection.selectedContexts, (sc) => sc.type_)
         : undefined;
 
-    // TODO: Pre-allocate this array.
-    const selectedByType: Attribute[] = [];
     const einfo = entry.information ?? [];
+    const selectedByType: Attribute[] = new Array(einfo.length);
+    let selectedByTypeCount = 0;
     for (let i = 0; i < einfo.length; i++) {
         const info = einfo[i];
         let attributeType!: OBJECT_IDENTIFIER;
@@ -320,7 +320,9 @@ function selectFromEntry (
                 && ("allOperationalAttributes" in eis.extraAttributes)
             ) {
                 const attr = Attribute.fromEntryInfoItem(info);
-                attr && selectedByType.push(attr);
+                if (attr) {
+                    selectedByType[selectedByTypeCount++] = attr;
+                }
             }
             if (extraAttributes) {
                 const has = [
@@ -329,7 +331,9 @@ function selectFromEntry (
                 ].some((type_) => extraAttributes.has(type_.toString()));
                 if (has) {
                     const attr = Attribute.fromEntryInfoItem(info);
-                    attr && selectedByType.push(attr);
+                    if (attr) {
+                        selectedByType[selectedByTypeCount++] = attr;
+                    }
                 }
             } else {
                 continue;
@@ -342,14 +346,19 @@ function selectFromEntry (
                 ].some((type_) => attributes.has(type_.toString()));
                 if (has) {
                     const attr = Attribute.fromEntryInfoItem(info);
-                    attr && selectedByType.push(attr);
+                    if (attr) {
+                        selectedByType[selectedByTypeCount++] = attr;
+                    }
                 }
             } else {
                 const attr = Attribute.fromEntryInfoItem(info);
-                attr && selectedByType.push(attr);
+                if (attr) {
+                    selectedByType[selectedByTypeCount++] = attr;
+                }
             }
         }
     }
+    selectedByType.length = selectedByTypeCount;
 
     const selectedAttributes: Attribute[] = Array.from(
         groupByOID(selectedByType, (attr) => attr.type_).values(),
@@ -452,14 +461,19 @@ function selectFromEntry (
         attributesSelectedByContext = afterPreference;
     }
 
-    // TODO: Pre-allocate this array.
-    const infos: EntryInformation_information_Item[] = [];
-    for (const attr of attributesSelectedByContext) {
-        const info = attributeToInformationItem(attr, infoTypes, eis.returnContexts);
+    const infos: EntryInformation_information_Item[] = new Array(attributesSelectedByContext.length);
+    let infoCount = 0;
+    for (let i = 0; i < attributesSelectedByContext.length; i++) {
+        const info = attributeToInformationItem(
+            attributesSelectedByContext[i],
+            infoTypes,
+            eis.returnContexts,
+        );
         if (info) {
-            infos.push(info);
+            infos[infoCount++] = info;
         }
     }
+    infos.length = infoCount;
 
     return new EntryInformation(
         entry.name,
