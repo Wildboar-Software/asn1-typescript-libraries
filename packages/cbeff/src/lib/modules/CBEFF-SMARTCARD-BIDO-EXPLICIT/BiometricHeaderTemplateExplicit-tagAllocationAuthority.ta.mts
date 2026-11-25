@@ -3,11 +3,9 @@ import {
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     type OBJECT_IDENTIFIER,
-    type OCTET_STRING
+    type OCTET_STRING,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-
-
 
 /**
  * @summary BiometricHeaderTemplateExplicit_tagAllocationAuthority
@@ -16,7 +14,12 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * BiometricHeaderTemplateExplicit-tagAllocationAuthority ::= CHOICE { -- REMOVED_FROM_UNNESTING -- }
+ * BiometricHeaderTemplateExplicit-tagAllocationAuthority ::= CHOICE {
+ *     oid         OBJECT IDENTIFIER,
+ *     country     [APPLICATION 1] OCTET STRING,
+ *     issuerID    [APPLICATION 2] OCTET STRING,
+ *     application [APPLICATION 15] OCTET STRING
+ * }
  * ```
  */
 export
@@ -64,6 +67,5 @@ function _encode_BiometricHeaderTemplateExplicit_tagAllocationAuthority (value: 
 }, $.BER); }
     return _cached_encoder_for_BiometricHeaderTemplateExplicit_tagAllocationAuthority(value, elGetter);
 }
-
 
 /* eslint-enable */

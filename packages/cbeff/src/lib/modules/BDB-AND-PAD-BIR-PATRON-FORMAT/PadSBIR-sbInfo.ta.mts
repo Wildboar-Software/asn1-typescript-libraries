@@ -1,11 +1,10 @@
 /* eslint-disable */
 import {
     type ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { RegistryID, _decode_RegistryID, _encode_RegistryID } from "../CBEFF-DATA-ELEMENTS/RegistryID.ta.mjs";
-
 
 /**
  * @summary PadSBIR_sbInfo
@@ -14,7 +13,9 @@ import { RegistryID, _decode_RegistryID, _encode_RegistryID } from "../CBEFF-DAT
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * PadSBIR-sbInfo ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * PadSBIR-sbInfo ::= SET {
+ *     sbFormat [0] RegistryID
+ * }
  * ```
  * 
  * @class
@@ -49,7 +50,6 @@ class PadSBIR_sbInfo {
     public static _from_object (_o: { [_K in keyof (PadSBIR_sbInfo)]: (PadSBIR_sbInfo)[_K] }): PadSBIR_sbInfo {
         return new PadSBIR_sbInfo(_o.sbFormat);
     }
-
 
 }
 
@@ -142,6 +142,5 @@ function _encode_PadSBIR_sbInfo (value: PadSBIR_sbInfo, elGetter: $.ASN1Encoder<
 }; }
     return _cached_encoder_for_PadSBIR_sbInfo(value, elGetter);
 }
-
 
 /* eslint-enable */

@@ -3,11 +3,10 @@ import {
     ASN1ConstructionError as _ConstructionError,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    type INTEGER
+    type INTEGER,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-
-
+import { assertIntegerRange } from "../../constraints.mjs";
 
 /**
  * @summary BDBFormat
@@ -43,6 +42,8 @@ class BDBFormat {
         organization: INTEGER,
         id: INTEGER
     ) {
+        assertIntegerRange(organization, 0, 65535, "BDBFormat.organization");
+        assertIntegerRange(id, 0, 65535, "BDBFormat.id");
         this.organization = organization;
         this.id = id;
     }
@@ -62,7 +63,6 @@ class BDBFormat {
     public static _from_object (_o: { [_K in keyof (BDBFormat)]: (BDBFormat)[_K] }): BDBFormat {
         return new BDBFormat(_o.organization, _o.id);
     }
-
 
 }
 
@@ -153,6 +153,5 @@ function _encode_BDBFormat (value: BDBFormat, elGetter: $.ASN1Encoder<any>): _El
 }; }
     return _cached_encoder_for_BDBFormat(value, elGetter);
 }
-
 
 /* eslint-enable */

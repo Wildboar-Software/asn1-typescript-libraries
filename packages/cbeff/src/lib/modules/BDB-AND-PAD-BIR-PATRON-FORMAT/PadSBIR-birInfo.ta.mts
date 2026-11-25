@@ -4,12 +4,12 @@ import {
     type OCTET_STRING,
     type OPTIONAL,
     type ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { IntegrityOptions, _decode_IntegrityOptions, _encode_IntegrityOptions } from "../CBEFF-DATA-ELEMENTS/IntegrityOptions.ta.mjs";
+import { assertOctetSize } from "../../constraints.mjs";
+import { type IntegrityOptions, _decode_IntegrityOptions, _encode_IntegrityOptions } from "../CBEFF-DATA-ELEMENTS/IntegrityOptions.ta.mjs";
 import { ValidityPeriod, _decode_ValidityPeriod, _encode_ValidityPeriod } from "../CBEFF-DATA-ELEMENTS/ValidityPeriod.ta.mjs";
-
 
 /**
  * @summary PadSBIR_birInfo
@@ -18,7 +18,15 @@ import { ValidityPeriod, _decode_ValidityPeriod, _encode_ValidityPeriod } from "
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * PadSBIR-birInfo ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * PadSBIR-birInfo ::= SET {
+ *     birIntegrity            [0]  IntegrityOptions,
+ *     birCreationDate         [24] DATE-TIME OPTIONAL,
+ *     birValidityPeriod       [27] ValidityPeriod OPTIONAL,
+ *     birCreator              [4]  OCTET STRING (SIZE(0..65535)) OPTIONAL,
+ *     birIndex                [16] OCTET STRING (SIZE(0..65535)) OPTIONAL,
+ *     birPayload              [1]  OCTET STRING (SIZE(0..65535)) OPTIONAL,
+ *     birPointer              [2]  OCTET STRING (SIZE(0..65535)) OPTIONAL
+ * }
  * ```
  * 
  * @class
@@ -77,6 +85,10 @@ class PadSBIR_birInfo {
         birPayload?: OPTIONAL<OCTET_STRING>,
         birPointer?: OPTIONAL<OCTET_STRING>
     ) {
+        if (birCreator !== undefined) assertOctetSize(birCreator, 0, 65535, "PadSBIR.birInfo.birCreator");
+        if (birIndex !== undefined) assertOctetSize(birIndex, 0, 65535, "PadSBIR.birInfo.birIndex");
+        if (birPayload !== undefined) assertOctetSize(birPayload, 0, 65535, "PadSBIR.birInfo.birPayload");
+        if (birPointer !== undefined) assertOctetSize(birPointer, 0, 65535, "PadSBIR.birInfo.birPointer");
         this.birIntegrity = birIntegrity;
         this.birCreationDate = birCreationDate;
         this.birValidityPeriod = birValidityPeriod;
@@ -101,7 +113,6 @@ class PadSBIR_birInfo {
     public static _from_object (_o: { [_K in keyof (PadSBIR_birInfo)]: (PadSBIR_birInfo)[_K] }): PadSBIR_birInfo {
         return new PadSBIR_birInfo(_o.birIntegrity, _o.birCreationDate, _o.birValidityPeriod, _o.birCreator, _o.birIndex, _o.birPayload, _o.birPointer);
     }
-
 
 }
 
@@ -236,6 +247,5 @@ function _encode_PadSBIR_birInfo (value: PadSBIR_birInfo, elGetter: $.ASN1Encode
 }; }
     return _cached_encoder_for_PadSBIR_birInfo(value, elGetter);
 }
-
 
 /* eslint-enable */

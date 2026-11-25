@@ -1,12 +1,11 @@
 /* eslint-disable */
 import {
     type ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ComplexSBIR, _decode_ComplexSBIR, _encode_ComplexSBIR } from "../SELF-IDENTIFYING-TAG-ORIENTED-COMPLEX-BIR-PATRON-FORMAT/ComplexSBIR.ta.mjs";
 import { SBIR, _decode_SBIR, _encode_SBIR } from "../SELF-IDENTIFYING-TAG-ORIENTED-SIMPLE-BIR-PATRON-FORMAT/SBIR.ta.mjs";
-
 
 /**
  * @summary PadSBIR_padBir_childBir
@@ -15,7 +14,10 @@ import { SBIR, _decode_SBIR, _encode_SBIR } from "../SELF-IDENTIFYING-TAG-ORIENT
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * PadSBIR-padBir-childBir ::= CHOICE { -- REMOVED_FROM_UNNESTING -- }
+ * PadSBIR-padBir-childBir ::= CHOICE {
+ *     simpleBIR   [APPLICATION 96] SBIR,       -- As per clause 16
+ *     complexBIR  [APPLICATION 97] ComplexSBIR -- As per clause 17
+ * }
  * ```
  */
 export
@@ -57,6 +59,5 @@ function _encode_PadSBIR_padBir_childBir (value: PadSBIR_padBir_childBir, elGett
 }, $.BER); }
     return _cached_encoder_for_PadSBIR_padBir_childBir(value, elGetter);
 }
-
 
 /* eslint-enable */

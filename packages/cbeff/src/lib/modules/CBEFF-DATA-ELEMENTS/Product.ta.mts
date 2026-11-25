@@ -2,7 +2,6 @@
 import * as $ from "@wildboar/asn1/functional";
 import { RegistryID, _decode_RegistryID, _encode_RegistryID } from "../CBEFF-DATA-ELEMENTS/RegistryID.ta.mjs";
 
-
 /**
  * @summary Product
  * @description

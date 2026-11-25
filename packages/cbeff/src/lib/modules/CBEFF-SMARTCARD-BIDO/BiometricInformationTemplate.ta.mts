@@ -4,11 +4,11 @@ import {
     type OCTET_STRING,
     type OPTIONAL,
     type ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
+import { assertOctetSize } from "../../constraints.mjs";
 import { BiometricHeaderTemplate, _decode_BiometricHeaderTemplate, _encode_BiometricHeaderTemplate } from "../CBEFF-SMARTCARD-BIDO/BiometricHeaderTemplate.ta.mjs";
-
 
 /**
  * @summary BiometricInformationTemplate
@@ -72,6 +72,8 @@ class BiometricInformationTemplate {
         bdbReferenceData?: OPTIONAL<EXTERNAL>,
         birPayLoad?: OPTIONAL<OCTET_STRING>
     ) {
+        if (algorithmReference !== undefined) assertOctetSize(algorithmReference, 1, 1, "BiometricInformationTemplate.algorithmReference");
+        if (referenceDataQualifier !== undefined) assertOctetSize(referenceDataQualifier, 1, 1, "BiometricInformationTemplate.referenceDataQualifier");
         this.algorithmReference = algorithmReference;
         this.referenceDataQualifier = referenceDataQualifier;
         this.biometricHeaderTemplate = biometricHeaderTemplate;
@@ -94,7 +96,6 @@ class BiometricInformationTemplate {
     public static _from_object (_o: { [_K in keyof (BiometricInformationTemplate)]: (BiometricInformationTemplate)[_K] }): BiometricInformationTemplate {
         return new BiometricInformationTemplate(_o.algorithmReference, _o.referenceDataQualifier, _o.biometricHeaderTemplate, _o.bdbReferenceData, _o.birPayLoad);
     }
-
 
 }
 
@@ -215,6 +216,5 @@ function _encode_BiometricInformationTemplate (value: BiometricInformationTempla
 }, $.BER); }
     return _cached_encoder_for_BiometricInformationTemplate(value, elGetter);
 }
-
 
 /* eslint-enable */

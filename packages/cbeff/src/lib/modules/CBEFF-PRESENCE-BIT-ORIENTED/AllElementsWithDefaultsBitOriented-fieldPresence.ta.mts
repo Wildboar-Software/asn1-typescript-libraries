@@ -3,11 +3,9 @@ import {
     ASN1ConstructionError as _ConstructionError,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    type BOOLEAN
+    type BOOLEAN,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-
-
 
 /**
  * @summary AllElementsWithDefaultsBitOriented_fieldPresence
@@ -16,7 +14,33 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * AllElementsWithDefaultsBitOriented-fieldPresence ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * AllElementsWithDefaultsBitOriented-fieldPresence ::= SEQUENCE {
+ *     encryptOpts         BOOLEAN,
+ *     integOpts           BOOLEAN,
+ *     subHeaderCount      BOOLEAN,
+ *     bdbLength           BOOLEAN,
+ *     bioType             BOOLEAN,
+ *     bioSubtype          BOOLEAN,
+ *     chaResp             BOOLEAN,
+ *     bdbCreation         BOOLEAN,
+ *     bdbIndex            BOOLEAN,
+ *     procLevel           BOOLEAN,
+ *     product             BOOLEAN,
+ *     purpose             BOOLEAN,
+ *     quality             BOOLEAN,
+ *     bdbValidity         BOOLEAN,
+ *     birCreation         BOOLEAN,
+ *     birCreator          BOOLEAN,
+ *     birIndex            BOOLEAN,
+ *     patronFormat        BOOLEAN,
+ *     payload             BOOLEAN,
+ *     birValidity         BOOLEAN,
+ *     patronHdrVersion    BOOLEAN,
+ *     sbFormat            BOOLEAN,
+ *     cbeffVers           BOOLEAN,
+ *     sb                  BOOLEAN
+ *     -- Original typo read: sb OCTET STRING BOOLEAN
+ * }
  * ```
  * 
  * @class
@@ -236,7 +260,6 @@ class AllElementsWithDefaultsBitOriented_fieldPresence {
         return new AllElementsWithDefaultsBitOriented_fieldPresence(_o.encryptOpts, _o.integOpts, _o.subHeaderCount, _o.bdbLength, _o.bioType, _o.bioSubtype, _o.chaResp, _o.bdbCreation, _o.bdbIndex, _o.procLevel, _o.product, _o.purpose, _o.quality, _o.bdbValidity, _o.birCreation, _o.birCreator, _o.birIndex, _o.patronFormat, _o.payload, _o.birValidity, _o.patronHdrVersion, _o.sbFormat, _o.cbeffVers, _o.sb);
     }
 
-
 }
 
 /**
@@ -436,6 +459,5 @@ function _encode_AllElementsWithDefaultsBitOriented_fieldPresence (value: AllEle
 }; }
     return _cached_encoder_for_AllElementsWithDefaultsBitOriented_fieldPresence(value, elGetter);
 }
-
 
 /* eslint-enable */

@@ -3,11 +3,9 @@ import {
     ASN1ConstructionError as _ConstructionError,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    type BOOLEAN
+    type BOOLEAN,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-
-
 
 /**
  * @summary BIR_fieldPresence
@@ -16,7 +14,33 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * BIR-fieldPresence ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * BIR-fieldPresence ::= SEQUENCE {
+ *     bdbFormat               BOOLEAN,
+ *     bdbEncryption           BOOLEAN,
+ *     bdbBiometricType        BOOLEAN,
+ *     bdbBiometricSubtype     BOOLEAN,
+ *     bdbChallengeResponse    BOOLEAN,
+ *     bdbCreationDate         BOOLEAN,
+ *     bdbIndex                BOOLEAN,
+ *     bdbProcessedLevel       BOOLEAN,
+ *     bdbProduct              BOOLEAN,
+ *     bdbCaptureDevice        BOOLEAN,
+ *     bdbFeatureExtAlg        BOOLEAN,
+ *     bdbComparisonAlg        BOOLEAN,
+ *     bdbQualityAlg           BOOLEAN,
+ *     bdbCompressionAlg       BOOLEAN,
+ *     bdbPurpose              BOOLEAN,
+ *     bdbQuality              BOOLEAN,
+ *     bdbValidityPeriod       BOOLEAN,
+ *     birCreationDate         BOOLEAN,
+ *     birCreator              BOOLEAN,
+ *     birIndex                BOOLEAN,
+ *     birValidityPeriod       BOOLEAN,
+ *     sbFormat                BOOLEAN,
+ *     bdb                     BOOLEAN,
+ *     children                BOOLEAN,
+ *     sb                      BOOLEAN
+ * }
  * ```
  * 
  * @class
@@ -244,7 +268,6 @@ class BIR_fieldPresence {
         return new BIR_fieldPresence(_o.bdbFormat, _o.bdbEncryption, _o.bdbBiometricType, _o.bdbBiometricSubtype, _o.bdbChallengeResponse, _o.bdbCreationDate, _o.bdbIndex, _o.bdbProcessedLevel, _o.bdbProduct, _o.bdbCaptureDevice, _o.bdbFeatureExtAlg, _o.bdbComparisonAlg, _o.bdbQualityAlg, _o.bdbCompressionAlg, _o.bdbPurpose, _o.bdbQuality, _o.bdbValidityPeriod, _o.birCreationDate, _o.birCreator, _o.birIndex, _o.birValidityPeriod, _o.sbFormat, _o.bdb, _o.children, _o.sb);
     }
 
-
 }
 
 /**
@@ -449,6 +472,5 @@ function _encode_BIR_fieldPresence (value: BIR_fieldPresence, elGetter: $.ASN1En
 }; }
     return _cached_encoder_for_BIR_fieldPresence(value, elGetter);
 }
-
 
 /* eslint-enable */

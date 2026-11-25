@@ -4,17 +4,17 @@ import {
     type OCTET_STRING,
     type OPTIONAL,
     type ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
+import { assertIntegerRange, assertOctetSize, assertSequenceSize } from "../../constraints.mjs";
 import { BIR_bdbFormat, _decode_BIR_bdbFormat, _encode_BIR_bdbFormat } from "../CBEFF-COMPLEX-PATRON-FORMAT/BIR-bdbFormat.ta.mjs";
 import { BIR_children_child, _decode_BIR_children_child, _encode_BIR_children_child } from "../CBEFF-COMPLEX-PATRON-FORMAT/BIR-children-child.ta.mjs";
 import { BIR_fieldPresence, _decode_BIR_fieldPresence, _encode_BIR_fieldPresence } from "../CBEFF-COMPLEX-PATRON-FORMAT/BIR-fieldPresence.ta.mjs";
 import { BIR_sbFormat, _decode_BIR_sbFormat, _encode_BIR_sbFormat } from "../CBEFF-COMPLEX-PATRON-FORMAT/BIR-sbFormat.ta.mjs";
-import { BiometricSubtype, _decode_BiometricSubtype, _encode_BiometricSubtype } from "../CBEFF-DATA-ELEMENTS/BiometricSubtype.ta.mjs";
-import { BiometricType, _decode_BiometricType, _encode_BiometricType } from "../CBEFF-DATA-ELEMENTS/BiometricType.ta.mjs";
-import { Product, _decode_Product, _encode_Product } from "../CBEFF-DATA-ELEMENTS/Product.ta.mjs";
-
+import { type BiometricSubtype, BiometricSubtype_noValueAvailable, _decode_BiometricSubtype, _encode_BiometricSubtype } from "../CBEFF-DATA-ELEMENTS/BiometricSubtype.ta.mjs";
+import { type BiometricType, BiometricType_noValueAvailable, _decode_BiometricType, _encode_BiometricType } from "../CBEFF-DATA-ELEMENTS/BiometricType.ta.mjs";
+import { type Product, _decode_Product, _encode_Product } from "../CBEFF-DATA-ELEMENTS/Product.ta.mjs";
 
 /**
  * @summary BIR
@@ -267,6 +267,25 @@ class BIR {
         children: BIR_children_child[],
         sb?: OPTIONAL<OCTET_STRING>
     ) {
+        assertIntegerRange(patronHeaderVersion, 0, 255, "BIR.patronHeaderVersion");
+        assertIntegerRange(cbeffVersion, 0, 255, "BIR.cbeffVersion");
+        if (bdbEncryption !== undefined) assertIntegerRange(bdbEncryption, 0, 255, "BIR.bdbEncryption");
+        assertIntegerRange(birIntegrity, 0, 255, "BIR.birIntegrity");
+        if (bdbChallengeResponse !== undefined) assertOctetSize(bdbChallengeResponse, 0, 65535, "BIR.bdbChallengeResponse");
+        if (bdbCreationDate !== undefined) assertOctetSize(bdbCreationDate, 8, 15, "BIR.bdbCreationDate");
+        if (bdbIndex !== undefined) assertOctetSize(bdbIndex, 0, 65535, "BIR.bdbIndex");
+        if (bdbProcessedLevel !== undefined) assertIntegerRange(bdbProcessedLevel, 0, 255, "BIR.bdbProcessedLevel");
+        if (bdbPurpose !== undefined) assertIntegerRange(bdbPurpose, 0, 255, "BIR.bdbPurpose");
+        if (bdbQuality !== undefined) assertIntegerRange(bdbQuality, 0, 255, "BIR.bdbQuality");
+        if (bdbValidityPeriod !== undefined) assertOctetSize(bdbValidityPeriod, 15, 31, "BIR.bdbValidityPeriod");
+        if (birCreationDate !== undefined) assertOctetSize(birCreationDate, 8, 15, "BIR.birCreationDate");
+        if (birCreator !== undefined) assertOctetSize(birCreator, 0, 65535, "BIR.birCreator");
+        if (birIndex !== undefined) assertOctetSize(birIndex, 0, 65535, "BIR.birIndex");
+        if (birPayload !== undefined) assertOctetSize(birPayload, 0, 65535, "BIR.birPayload");
+        if (birValidityPeriod !== undefined) assertOctetSize(birValidityPeriod, 15, 31, "BIR.birValidityPeriod");
+        if (bdb !== undefined) assertOctetSize(bdb, 0, 4294967295, "BIR.bdb");
+        assertSequenceSize(children.length, 0, 255, "BIR.children");
+        if (sb !== undefined) assertOctetSize(sb, 0, 4294967295, "BIR.sb");
         this.patronHeaderVersion = patronHeaderVersion;
         this.cbeffVersion = cbeffVersion;
         this.fieldPresence = fieldPresence;
@@ -316,14 +335,14 @@ class BIR {
      * @static
      * @method
      */
-    public static get _default_value_for_bdbBiometricType () { return noValueAvailable; }
+    public static get _default_value_for_bdbBiometricType () { return BiometricType_noValueAvailable; }
     /**
      * @summary Getter that returns the default value for `bdbBiometricSubtype`.
      * @public
      * @static
      * @method
      */
-    public static get _default_value_for_bdbBiometricSubtype () { return noValueAvailable; }
+    public static get _default_value_for_bdbBiometricSubtype () { return BiometricSubtype_noValueAvailable; }
 }
 
 /**
@@ -571,6 +590,5 @@ function _encode_BIR (value: BIR, elGetter: $.ASN1Encoder<any>): _Element {
 }; }
     return _cached_encoder_for_BIR(value, elGetter);
 }
-
 
 /* eslint-enable */

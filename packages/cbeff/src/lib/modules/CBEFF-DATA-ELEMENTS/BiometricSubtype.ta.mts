@@ -1,10 +1,10 @@
 /* eslint-disable */
 import {
-    type INTEGER
+    type INTEGER,
 } from "@wildboar/asn1";
+import { type ASN1Element as _Element } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-
-
+import { assertIntegerRange } from "../../constraints.mjs";
 
 /**
  * @summary BiometricSubtype
@@ -2676,8 +2676,11 @@ const BiometricSubtype_bothPalmBackOfHandWrist: number = 159 satisfies Biometric
 export
 const bothPalmBackOfHandWrist: number = BiometricSubtype_bothPalmBackOfHandWrist; /* SHORT_NAMED_INTEGER_VALUE */
 
-export
-const _decode_BiometricSubtype: $.ASN1Decoder<BiometricSubtype> = $._decodeInteger;
+export const _decode_BiometricSubtype: $.ASN1Decoder<BiometricSubtype> = (el: _Element) => {
+    const value = $._decodeInteger(el);
+    assertIntegerRange(value, 0, 255, "BiometricSubtype");
+    return value;
+};
 
 export
 const _encode_BiometricSubtype: $.ASN1Encoder<BiometricSubtype> = $._encodeInteger;

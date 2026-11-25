@@ -3,11 +3,11 @@ import {
     type OCTET_STRING,
     ASN1ConstructionError as _ConstructionError,
     type ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
+import { assertOctetSize } from "../../constraints.mjs";
 import { RegistryID, _decode_RegistryID, _encode_RegistryID } from "../CBEFF-DATA-ELEMENTS/RegistryID.ta.mjs";
-
 
 /**
  * @summary BIR_children_child
@@ -16,7 +16,10 @@ import { RegistryID, _decode_RegistryID, _encode_RegistryID } from "../CBEFF-DAT
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * BIR-children-child ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * BIR-children-child ::= SEQUENCE {
+ *     childBirPatronFormat    RegistryID,
+ *     childBir                OCTET STRING (SIZE (0..4294967295))
+ * }
  * ```
  * 
  * @class
@@ -40,6 +43,7 @@ class BIR_children_child {
         childBirPatronFormat: RegistryID,
         childBir: OCTET_STRING
     ) {
+        assertOctetSize(childBir, 0, 4294967295, "BIR.children.childBir");
         this.childBirPatronFormat = childBirPatronFormat;
         this.childBir = childBir;
     }
@@ -59,7 +63,6 @@ class BIR_children_child {
     public static _from_object (_o: { [_K in keyof (BIR_children_child)]: (BIR_children_child)[_K] }): BIR_children_child {
         return new BIR_children_child(_o.childBirPatronFormat, _o.childBir);
     }
-
 
 }
 
@@ -150,6 +153,5 @@ function _encode_BIR_children_child (value: BIR_children_child, elGetter: $.ASN1
 }; }
     return _cached_encoder_for_BIR_children_child(value, elGetter);
 }
-
 
 /* eslint-enable */

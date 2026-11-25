@@ -1,10 +1,8 @@
 /* eslint-disable */
 import {
-    type ENUMERATED
+    type ENUMERATED,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-
-
 
 /**
  * @summary ProcessedLevel

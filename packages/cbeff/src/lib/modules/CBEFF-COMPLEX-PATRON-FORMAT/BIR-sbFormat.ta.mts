@@ -3,11 +3,10 @@ import {
     ASN1ConstructionError as _ConstructionError,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    type INTEGER
+    type INTEGER,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-
-
+import { assertIntegerRange } from "../../constraints.mjs";
 
 /**
  * @summary BIR_sbFormat
@@ -16,7 +15,10 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * BIR-sbFormat ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * BIR-sbFormat ::= SEQUENCE {
+ *     sbFormatOwner   INTEGER (0..65535),
+ *     sbFormatType    INTEGER (0..65535)
+ * }
  * ```
  * 
  * @class
@@ -40,6 +42,8 @@ class BIR_sbFormat {
         sbFormatOwner: INTEGER,
         sbFormatType: INTEGER
     ) {
+        assertIntegerRange(sbFormatOwner, 0, 65535, "BIR.sbFormat.sbFormatOwner");
+        assertIntegerRange(sbFormatType, 0, 65535, "BIR.sbFormat.sbFormatType");
         this.sbFormatOwner = sbFormatOwner;
         this.sbFormatType = sbFormatType;
     }
@@ -59,7 +63,6 @@ class BIR_sbFormat {
     public static _from_object (_o: { [_K in keyof (BIR_sbFormat)]: (BIR_sbFormat)[_K] }): BIR_sbFormat {
         return new BIR_sbFormat(_o.sbFormatOwner, _o.sbFormatType);
     }
-
 
 }
 
@@ -150,6 +153,5 @@ function _encode_BIR_sbFormat (value: BIR_sbFormat, elGetter: $.ASN1Encoder<any>
 }; }
     return _cached_encoder_for_BIR_sbFormat(value, elGetter);
 }
-
 
 /* eslint-enable */

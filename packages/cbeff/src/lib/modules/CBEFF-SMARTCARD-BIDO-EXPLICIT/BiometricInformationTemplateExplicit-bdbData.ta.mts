@@ -3,13 +3,13 @@ import {
     type OCTET_STRING,
     type OPTIONAL,
     type ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { CardholderChallengeType, _decode_CardholderChallengeType, _encode_CardholderChallengeType } from "../CBEFF-SMARTCARD-BIDO-EXPLICIT/CardholderChallengeType.ta.mjs";
-import { ProprietaryBDBType, _decode_ProprietaryBDBType, _encode_ProprietaryBDBType } from "../CBEFF-SMARTCARD-BIDO-EXPLICIT/ProprietaryBDBType.ta.mjs";
-import { StandardBDBType, _decode_StandardBDBType, _encode_StandardBDBType } from "../CBEFF-SMARTCARD-BIDO-EXPLICIT/StandardBDBType.ta.mjs";
-
+import { assertOctetSize } from "../../constraints.mjs";
+import { type CardholderChallengeType, _decode_CardholderChallengeType, _encode_CardholderChallengeType } from "../CBEFF-SMARTCARD-BIDO-EXPLICIT/CardholderChallengeType.ta.mjs";
+import { type ProprietaryBDBType, _decode_ProprietaryBDBType, _encode_ProprietaryBDBType } from "../CBEFF-SMARTCARD-BIDO-EXPLICIT/ProprietaryBDBType.ta.mjs";
+import { type StandardBDBType, _decode_StandardBDBType, _encode_StandardBDBType } from "../CBEFF-SMARTCARD-BIDO-EXPLICIT/StandardBDBType.ta.mjs";
 
 /**
  * @summary BiometricInformationTemplateExplicit_bdbData
@@ -18,7 +18,17 @@ import { StandardBDBType, _decode_StandardBDBType, _encode_StandardBDBType } fro
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * BiometricInformationTemplateExplicit-bdbData ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * BiometricInformationTemplateExplicit-bdbData ::= SET {
+ *     -- A CBEFF BDB, mandatory for off-card-comparison
+ *     challengeCardholder     [0] CardholderChallengeType OPTIONAL,
+ *     -- defined in BDB-DATA-ELEMENTS
+ *     standardBDB             [1] StandardBDBType OPTIONAL,
+ *     -- defined in BDB-DATA-ELEMENTS
+ *     proprietaryBDB          [2] ProprietaryBDBType OPTIONAL,
+ *     -- defined in BDB-DATA-ELEMENTS
+ *     referenceQualifier      [3] OCTET STRING (SIZE(1)) OPTIONAL,
+ *     biometricData           [APPLICATION 46] OCTET STRING OPTIONAL -- primitive DO only
+ * }
  * ```
  * 
  * @class
@@ -63,6 +73,7 @@ class BiometricInformationTemplateExplicit_bdbData {
         referenceQualifier?: OPTIONAL<OCTET_STRING>,
         biometricData?: OPTIONAL<OCTET_STRING>
     ) {
+        if (referenceQualifier !== undefined) assertOctetSize(referenceQualifier, 1, 1, "BiometricInformationTemplateExplicit.bdbData.referenceQualifier");
         this.challengeCardholder = challengeCardholder;
         this.standardBDB = standardBDB;
         this.proprietaryBDB = proprietaryBDB;
@@ -85,7 +96,6 @@ class BiometricInformationTemplateExplicit_bdbData {
     public static _from_object (_o: { [_K in keyof (BiometricInformationTemplateExplicit_bdbData)]: (BiometricInformationTemplateExplicit_bdbData)[_K] }): BiometricInformationTemplateExplicit_bdbData {
         return new BiometricInformationTemplateExplicit_bdbData(_o.challengeCardholder, _o.standardBDB, _o.proprietaryBDB, _o.referenceQualifier, _o.biometricData);
     }
-
 
 }
 
@@ -208,6 +218,5 @@ function _encode_BiometricInformationTemplateExplicit_bdbData (value: BiometricI
 }; }
     return _cached_encoder_for_BiometricInformationTemplateExplicit_bdbData(value, elGetter);
 }
-
 
 /* eslint-enable */

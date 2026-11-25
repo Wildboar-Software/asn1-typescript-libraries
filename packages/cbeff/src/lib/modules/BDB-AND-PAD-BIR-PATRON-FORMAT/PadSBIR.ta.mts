@@ -3,17 +3,17 @@ import {
     type INTEGER,
     type OPTIONAL,
     type ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { PadSBIR_biometricdataBir_childBir, _decode_PadSBIR_biometricdataBir_childBir, _encode_PadSBIR_biometricdataBir_childBir } from "../BDB-AND-PAD-BIR-PATRON-FORMAT/PadSBIR-biometricdataBir-childBir.ta.mjs";
+import { assertIntegerRange } from "../../constraints.mjs";
+import { type PadSBIR_biometricdataBir_childBir, _decode_PadSBIR_biometricdataBir_childBir, _encode_PadSBIR_biometricdataBir_childBir } from "../BDB-AND-PAD-BIR-PATRON-FORMAT/PadSBIR-biometricdataBir-childBir.ta.mjs";
 import { PadSBIR_birInfo, _decode_PadSBIR_birInfo, _encode_PadSBIR_birInfo } from "../BDB-AND-PAD-BIR-PATRON-FORMAT/PadSBIR-birInfo.ta.mjs";
-import { PadSBIR_padBir_childBir, _decode_PadSBIR_padBir_childBir, _encode_PadSBIR_padBir_childBir } from "../BDB-AND-PAD-BIR-PATRON-FORMAT/PadSBIR-padBir-childBir.ta.mjs";
+import { type PadSBIR_padBir_childBir, _decode_PadSBIR_padBir_childBir, _encode_PadSBIR_padBir_childBir } from "../BDB-AND-PAD-BIR-PATRON-FORMAT/PadSBIR-padBir-childBir.ta.mjs";
 import { PadSBIR_sbInfo, _decode_PadSBIR_sbInfo, _encode_PadSBIR_sbInfo } from "../BDB-AND-PAD-BIR-PATRON-FORMAT/PadSBIR-sbInfo.ta.mjs";
-import { SBType, _decode_SBType, _encode_SBType } from "../BDB-AND-PAD-BIR-PATRON-FORMAT/SBType.ta.mjs";
+import { type SBType, _decode_SBType, _encode_SBType } from "../BDB-AND-PAD-BIR-PATRON-FORMAT/SBType.ta.mjs";
 import { RegistryID, _decode_RegistryID, _encode_RegistryID } from "../CBEFF-DATA-ELEMENTS/RegistryID.ta.mjs";
 import { Version, _decode_Version, _encode_Version } from "../CBEFF-DATA-ELEMENTS/Version.ta.mjs";
-
 
 /**
  * @summary PadSBIR
@@ -119,6 +119,7 @@ class PadSBIR {
         padBir: PadSBIR_padBir_childBir[],
         sb?: OPTIONAL<SBType>
     ) {
+        assertIntegerRange(numChildren, 2, 255, "PadSBIR.numChildren");
         this.birSelfId = birSelfId;
         this.cbeffVersion = cbeffVersion;
         this.patronHeaderVersion = patronHeaderVersion;
@@ -145,7 +146,6 @@ class PadSBIR {
     public static _from_object (_o: { [_K in keyof (PadSBIR)]: (PadSBIR)[_K] }): PadSBIR {
         return new PadSBIR(_o.birSelfId, _o.cbeffVersion, _o.patronHeaderVersion, _o.numChildren, _o.birInfo, _o.sbInfo, _o.biometricdataBir, _o.padBir, _o.sb);
     }
-
 
 }
 
@@ -278,6 +278,5 @@ function _encode_PadSBIR (value: PadSBIR, elGetter: $.ASN1Encoder<any>): _Elemen
 }, $.BER); }
     return _cached_encoder_for_PadSBIR(value, elGetter);
 }
-
 
 /* eslint-enable */

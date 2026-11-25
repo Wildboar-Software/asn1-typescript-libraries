@@ -1,15 +1,33 @@
 {
   "name": "@wildboar/cbeff",
-  "version": "0.1.0",
+  "version": "3.0.0",
   "license": "MIT",
   "exports": {
-    ".": "./src/index.mts"
+    ".": "./src/index.mts",
+    "./BDB-AND-PAD-BIR-PATRON-FORMAT": "./src/lib/modules/BDB-AND-PAD-BIR-PATRON-FORMAT/index.mts",
+    "./CBEFF-COMPLEX-PATRON-FORMAT": "./src/lib/modules/CBEFF-COMPLEX-PATRON-FORMAT/index.mts",
+    "./CBEFF-DATA-ELEMENTS": "./src/lib/modules/CBEFF-DATA-ELEMENTS/index.mts",
+    "./CBEFF-DATA-ELEMENTS-2007": "./src/lib/modules/CBEFF-DATA-ELEMENTS-2007/index.mts",
+    "./CBEFF-FULL-COMPLEX-PATRON-FORMAT": "./src/lib/modules/CBEFF-FULL-COMPLEX-PATRON-FORMAT/index.mts",
+    "./CBEFF-PRESENCE-BIT-ORIENTED": "./src/lib/modules/CBEFF-PRESENCE-BIT-ORIENTED/index.mts",
+    "./CBEFF-PRESENCE-BYTE-ORIENTED": "./src/lib/modules/CBEFF-PRESENCE-BYTE-ORIENTED/index.mts",
+    "./CBEFF-SIMPLE-BIT-ORIENTED": "./src/lib/modules/CBEFF-SIMPLE-BIT-ORIENTED/index.mts",
+    "./CBEFF-SIMPLE-BYTE-ORIENTED": "./src/lib/modules/CBEFF-SIMPLE-BYTE-ORIENTED/index.mts",
+    "./CBEFF-SMARTCARD-BIDO": "./src/lib/modules/CBEFF-SMARTCARD-BIDO/index.mts",
+    "./CBEFF-SMARTCARD-BIDO-EXPLICIT": "./src/lib/modules/CBEFF-SMARTCARD-BIDO-EXPLICIT/index.mts",
+    "./OCC-DATA-ELEMENTS": "./src/lib/modules/OCC-DATA-ELEMENTS/index.mts",
+    "./SELF-IDENTIFYING-TAG-ORIENTED-COMPLEX-BIR-PATRON-FORMAT": "./src/lib/modules/SELF-IDENTIFYING-TAG-ORIENTED-COMPLEX-BIR-PATRON-FORMAT/index.mts",
+    "./SELF-IDENTIFYING-TAG-ORIENTED-SIMPLE-BIR-PATRON-FORMAT": "./src/lib/modules/SELF-IDENTIFYING-TAG-ORIENTED-SIMPLE-BIR-PATRON-FORMAT/index.mts"
   },
   "publish": {
     "include": [
       "LICENSE.txt",
       "README.md",
       "src/**/*.mts"
+    ],
+    "exclude": [
+      "src/**/*.test.mts",
+      "src/**/*.spec.mts"
     ]
   }
 }

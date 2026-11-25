@@ -3,21 +3,20 @@ import {
     type DATE_TIME,
     type OPTIONAL,
     type ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { BDBFormat, _decode_BDBFormat, _encode_BDBFormat } from "../CBEFF-DATA-ELEMENTS/BDBFormat.ta.mjs";
-import { BDBIndex, _decode_BDBIndex, _encode_BDBIndex } from "../CBEFF-DATA-ELEMENTS/BDBIndex.ta.mjs";
-import { ChallengeResponse, _decode_ChallengeResponse, _encode_ChallengeResponse } from "../CBEFF-DATA-ELEMENTS/ChallengeResponse.ta.mjs";
+import { type BDBIndex, _decode_BDBIndex, _encode_BDBIndex } from "../CBEFF-DATA-ELEMENTS/BDBIndex.ta.mjs";
+import { type ChallengeResponse, _decode_ChallengeResponse, _encode_ChallengeResponse } from "../CBEFF-DATA-ELEMENTS/ChallengeResponse.ta.mjs";
 import { ConstructedQuality, _decode_ConstructedQuality, _encode_ConstructedQuality } from "../CBEFF-DATA-ELEMENTS/ConstructedQuality.ta.mjs";
-import { EncryptionOptions, _decode_EncryptionOptions, _encode_EncryptionOptions } from "../CBEFF-DATA-ELEMENTS/EncryptionOptions.ta.mjs";
+import { type EncryptionOptions, _decode_EncryptionOptions, _encode_EncryptionOptions } from "../CBEFF-DATA-ELEMENTS/EncryptionOptions.ta.mjs";
 import { ProcessedLevel, _decode_ProcessedLevel, _encode_ProcessedLevel, _enum_for_ProcessedLevel } from "../CBEFF-DATA-ELEMENTS/ProcessedLevel.ta.mjs";
-import { Product, _decode_Product, _encode_Product } from "../CBEFF-DATA-ELEMENTS/Product.ta.mjs";
+import { type Product, _decode_Product, _encode_Product } from "../CBEFF-DATA-ELEMENTS/Product.ta.mjs";
 import { Purpose, _decode_Purpose, _encode_Purpose, _enum_for_Purpose } from "../CBEFF-DATA-ELEMENTS/Purpose.ta.mjs";
 import { RegistryID, _decode_RegistryID, _encode_RegistryID } from "../CBEFF-DATA-ELEMENTS/RegistryID.ta.mjs";
 import { ValidityPeriod, _decode_ValidityPeriod, _encode_ValidityPeriod } from "../CBEFF-DATA-ELEMENTS/ValidityPeriod.ta.mjs";
 import { SBIR_bdbInfo_bdbBiometric, _decode_SBIR_bdbInfo_bdbBiometric, _encode_SBIR_bdbInfo_bdbBiometric } from "../SELF-IDENTIFYING-TAG-ORIENTED-SIMPLE-BIR-PATRON-FORMAT/SBIR-bdbInfo-bdbBiometric.ta.mjs";
-
 
 /**
  * @summary SBIR_bdbInfo
@@ -26,7 +25,27 @@ import { SBIR_bdbInfo_bdbBiometric, _decode_SBIR_bdbInfo_bdbBiometric, _encode_S
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * SBIR-bdbInfo ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * SBIR-bdbInfo ::= SET {
+ *     bdbFormat               [7]   BDBFormat,
+ *     bdbEncryption           [0]   EncryptionOptions,
+ *     bdbBiometric            [1]   SEQUENCE {
+ *         bdbBiometricType          [1] BiometricType,
+ *         bdbBiometricSubtype       [2] BiometricSubtype OPTIONAL
+ *     } OPTIONAL,
+ *     bdbProcessedLevel       [21]  ProcessedLevel OPTIONAL,
+ *     bdbPurpose              [22]  Purpose OPTIONAL,
+ *     bdbCreationDate         [3]   DATE-TIME OPTIONAL,
+ *     bdbValidityPeriod       [5]   ValidityPeriod OPTIONAL,
+ *     bdbChallengeResponse    [19]  ChallengeResponse OPTIONAL,
+ *     bdbIndex                [20]  BDBIndex OPTIONAL,
+ *     bdbProduct              [6]   Product OPTIONAL,
+ *     bdbCaptureDevice        [2]   RegistryID OPTIONAL,
+ *     bdbFeatureExtractionAlg [4]   RegistryID OPTIONAL,
+ *     bdbComparisonAlg        [9]   RegistryID OPTIONAL,
+ *     bdbCompressionAlg       [10]  RegistryID OPTIONAL,
+ *     bdbQuality              [23]  ConstructedQuality OPTIONAL,
+ *     bdbPADMechanism         [29]  RegistryID OPTIONAL
+ * }
  * ```
  * 
  * @class
@@ -188,7 +207,8 @@ class SBIR_bdbInfo {
          * @static
          */
 
-    public static _enum_for_bdbProcessedLevel: typeof _enum_for_ProcessedLevel = _enum_for_ProcessedLevel;        /**
+    public static _enum_for_bdbProcessedLevel: typeof _enum_for_ProcessedLevel = _enum_for_ProcessedLevel;
+    /**
          * @summary The enum used as the type of the component `bdbPurpose`
          * @public
          * @static
@@ -389,6 +409,5 @@ function _encode_SBIR_bdbInfo (value: SBIR_bdbInfo, elGetter: $.ASN1Encoder<any>
 }; }
     return _cached_encoder_for_SBIR_bdbInfo(value, elGetter);
 }
-
 
 /* eslint-enable */

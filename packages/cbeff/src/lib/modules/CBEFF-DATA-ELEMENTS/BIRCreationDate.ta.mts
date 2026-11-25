@@ -1,10 +1,8 @@
 /* eslint-disable */
 import {
-    type DATE_TIME
+    type DATE_TIME,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-
-
 
 /**
  * @summary BIRCreationDate

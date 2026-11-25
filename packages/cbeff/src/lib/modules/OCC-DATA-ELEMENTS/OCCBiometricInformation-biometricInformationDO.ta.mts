@@ -2,12 +2,11 @@
 import {
     type OPTIONAL,
     type ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { OCCcomparisonParameters, _decode_OCCcomparisonParameters, _encode_OCCcomparisonParameters } from "../OCC-DATA-ELEMENTS/OCCcomparisonParameters.ta.mjs";
 import { OCCfunctionalityInformation, _decode_OCCfunctionalityInformation, _encode_OCCfunctionalityInformation } from "../OCC-DATA-ELEMENTS/OCCfunctionalityInformation.ta.mjs";
-
 
 /**
  * @summary OCCBiometricInformation_biometricInformationDO
@@ -16,7 +15,10 @@ import { OCCfunctionalityInformation, _decode_OCCfunctionalityInformation, _enco
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * OCCBiometricInformation-biometricInformationDO ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * OCCBiometricInformation-biometricInformationDO ::= SET {
+ *     comparisonParameters        [17] OCCcomparisonParameters OPTIONAL,
+ *     functionalityInformation    [18] OCCfunctionalityInformation OPTIONAL
+ * }
  * ```
  * 
  * @class
@@ -59,7 +61,6 @@ class OCCBiometricInformation_biometricInformationDO {
     public static _from_object (_o: { [_K in keyof (OCCBiometricInformation_biometricInformationDO)]: (OCCBiometricInformation_biometricInformationDO)[_K] }): OCCBiometricInformation_biometricInformationDO {
         return new OCCBiometricInformation_biometricInformationDO(_o.comparisonParameters, _o.functionalityInformation);
     }
-
 
 }
 
@@ -161,6 +162,5 @@ function _encode_OCCBiometricInformation_biometricInformationDO (value: OCCBiome
 }; }
     return _cached_encoder_for_OCCBiometricInformation_biometricInformationDO(value, elGetter);
 }
-
 
 /* eslint-enable */

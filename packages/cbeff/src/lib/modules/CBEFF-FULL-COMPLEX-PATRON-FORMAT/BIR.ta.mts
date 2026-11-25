@@ -4,25 +4,25 @@ import {
     type OCTET_STRING,
     type OPTIONAL,
     type ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
+import { assertIntegerRange, assertOctetSize, assertSequenceSize } from "../../constraints.mjs";
 import { BDBFormat, _decode_BDBFormat, _encode_BDBFormat } from "../CBEFF-DATA-ELEMENTS/BDBFormat.ta.mjs";
-import { BDBIndex, _decode_BDBIndex, _encode_BDBIndex } from "../CBEFF-DATA-ELEMENTS/BDBIndex.ta.mjs";
-import { BiometricSubtype, _decode_BiometricSubtype, _encode_BiometricSubtype } from "../CBEFF-DATA-ELEMENTS/BiometricSubtype.ta.mjs";
-import { BiometricType, _decode_BiometricType, _encode_BiometricType } from "../CBEFF-DATA-ELEMENTS/BiometricType.ta.mjs";
-import { BIRIndex, _decode_BIRIndex, _encode_BIRIndex } from "../CBEFF-DATA-ELEMENTS/BIRIndex.ta.mjs";
-import { ChallengeResponse, _decode_ChallengeResponse, _encode_ChallengeResponse } from "../CBEFF-DATA-ELEMENTS/ChallengeResponse.ta.mjs";
-import { Creator, _decode_Creator, _encode_Creator } from "../CBEFF-DATA-ELEMENTS/Creator.ta.mjs";
-import { Payload, _decode_Payload, _encode_Payload } from "../CBEFF-DATA-ELEMENTS/Payload.ta.mjs";
+import { type BDBIndex, _decode_BDBIndex, _encode_BDBIndex } from "../CBEFF-DATA-ELEMENTS/BDBIndex.ta.mjs";
+import { type BiometricSubtype, BiometricSubtype_noValueAvailable, _decode_BiometricSubtype, _encode_BiometricSubtype } from "../CBEFF-DATA-ELEMENTS/BiometricSubtype.ta.mjs";
+import { type BiometricType, BiometricType_noValueAvailable, _decode_BiometricType, _encode_BiometricType } from "../CBEFF-DATA-ELEMENTS/BiometricType.ta.mjs";
+import { type BIRIndex, _decode_BIRIndex, _encode_BIRIndex } from "../CBEFF-DATA-ELEMENTS/BIRIndex.ta.mjs";
+import { type ChallengeResponse, _decode_ChallengeResponse, _encode_ChallengeResponse } from "../CBEFF-DATA-ELEMENTS/ChallengeResponse.ta.mjs";
+import { type Creator, _decode_Creator, _encode_Creator } from "../CBEFF-DATA-ELEMENTS/Creator.ta.mjs";
+import { type Payload, _decode_Payload, _encode_Payload } from "../CBEFF-DATA-ELEMENTS/Payload.ta.mjs";
 import { ProcessedLevel, _decode_ProcessedLevel, _encode_ProcessedLevel, _enum_for_ProcessedLevel } from "../CBEFF-DATA-ELEMENTS/ProcessedLevel.ta.mjs";
-import { Product, _decode_Product, _encode_Product } from "../CBEFF-DATA-ELEMENTS/Product.ta.mjs";
+import { type Product, _decode_Product, _encode_Product } from "../CBEFF-DATA-ELEMENTS/Product.ta.mjs";
 import { Purpose, _decode_Purpose, _encode_Purpose, _enum_for_Purpose } from "../CBEFF-DATA-ELEMENTS/Purpose.ta.mjs";
-import { Quality, _decode_Quality, _encode_Quality } from "../CBEFF-DATA-ELEMENTS/Quality.ta.mjs";
+import { type Quality, _decode_Quality, _encode_Quality } from "../CBEFF-DATA-ELEMENTS/Quality.ta.mjs";
 import { RegistryID, _decode_RegistryID, _encode_RegistryID } from "../CBEFF-DATA-ELEMENTS/RegistryID.ta.mjs";
 import { BIR_children_child, _decode_BIR_children_child, _encode_BIR_children_child } from "../CBEFF-FULL-COMPLEX-PATRON-FORMAT/BIR-children-child.ta.mjs";
 import { BIR_fieldPresence, _decode_BIR_fieldPresence, _encode_BIR_fieldPresence } from "../CBEFF-FULL-COMPLEX-PATRON-FORMAT/BIR-fieldPresence.ta.mjs";
-
 
 /**
  * @summary BIR
@@ -311,6 +311,17 @@ class BIR {
         children: BIR_children_child[],
         sb?: OPTIONAL<OCTET_STRING>
     ) {
+        assertIntegerRange(patronHeaderVersion, 0, 255, "BIR.patronHeaderVersion");
+        assertIntegerRange(cbeffVersion, 0, 255, "BIR.cbeffVersion");
+        if (bdbEncryption !== undefined) assertIntegerRange(bdbEncryption, 0, 255, "BIR.bdbEncryption");
+        assertIntegerRange(birIntegrity, 0, 255, "BIR.birIntegrity");
+        if (bdbCreationDate !== undefined) assertOctetSize(bdbCreationDate, 8, 15, "BIR.bdbCreationDate");
+        if (bdbValidityPeriod !== undefined) assertOctetSize(bdbValidityPeriod, 15, 31, "BIR.bdbValidityPeriod");
+        if (birCreationDate !== undefined) assertOctetSize(birCreationDate, 8, 15, "BIR.birCreationDate");
+        if (birValidityPeriod !== undefined) assertOctetSize(birValidityPeriod, 15, 31, "BIR.birValidityPeriod");
+        if (bdb !== undefined) assertOctetSize(bdb, 0, 4294967295, "BIR.bdb");
+        assertSequenceSize(children.length, 0, 255, "BIR.children");
+        if (sb !== undefined) assertOctetSize(sb, 0, 4294967295, "BIR.sb");
         this.patronHeaderVersion = patronHeaderVersion;
         this.cbeffVersion = cbeffVersion;
         this.fieldPresence = fieldPresence;
@@ -365,20 +376,22 @@ class BIR {
      * @static
      * @method
      */
-    public static get _default_value_for_bdbBiometricType () { return noValueAvailable; }
+    public static get _default_value_for_bdbBiometricType (): BiometricType { return BiometricType_noValueAvailable; }
     /**
      * @summary Getter that returns the default value for `bdbBiometricSubtype`.
      * @public
      * @static
      * @method
      */
-    public static get _default_value_for_bdbBiometricSubtype () { return noValueAvailable; }        /**
+    public static get _default_value_for_bdbBiometricSubtype (): BiometricSubtype { return BiometricSubtype_noValueAvailable; }
+    /**
          * @summary The enum used as the type of the component `bdbProcessedLevel`
          * @public
          * @static
          */
 
-    public static _enum_for_bdbProcessedLevel: typeof _enum_for_ProcessedLevel = _enum_for_ProcessedLevel;        /**
+    public static _enum_for_bdbProcessedLevel: typeof _enum_for_ProcessedLevel = _enum_for_ProcessedLevel;
+    /**
          * @summary The enum used as the type of the component `bdbPurpose`
          * @public
          * @static
@@ -667,6 +680,5 @@ function _encode_BIR (value: BIR, elGetter: $.ASN1Encoder<any>): _Element {
 }; }
     return _cached_encoder_for_BIR(value, elGetter);
 }
-
 
 /* eslint-enable */

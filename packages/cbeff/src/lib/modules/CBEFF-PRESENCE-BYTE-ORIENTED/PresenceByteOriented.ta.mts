@@ -3,25 +3,25 @@ import {
     type INTEGER,
     type OPTIONAL,
     type ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { BDBCreationDate, _decode_BDBCreationDate, _encode_BDBCreationDate } from "../CBEFF-DATA-ELEMENTS/BDBCreationDate.ta.mjs";
+import { assertIntegerRange } from "../../constraints.mjs";
+import { type BDBCreationDate, _decode_BDBCreationDate, _encode_BDBCreationDate } from "../CBEFF-DATA-ELEMENTS/BDBCreationDate.ta.mjs";
 import { BDBFormat, _decode_BDBFormat, _encode_BDBFormat } from "../CBEFF-DATA-ELEMENTS/BDBFormat.ta.mjs";
-import { BDBValidityPeriod, _decode_BDBValidityPeriod, _encode_BDBValidityPeriod } from "../CBEFF-DATA-ELEMENTS/BDBValidityPeriod.ta.mjs";
-import { BiometricDataBlock, _decode_BiometricDataBlock, _encode_BiometricDataBlock } from "../CBEFF-DATA-ELEMENTS/BiometricDataBlock.ta.mjs";
-import { BiometricSubtype, _decode_BiometricSubtype, _encode_BiometricSubtype } from "../CBEFF-DATA-ELEMENTS/BiometricSubtype.ta.mjs";
-import { BiometricType, _decode_BiometricType, _encode_BiometricType } from "../CBEFF-DATA-ELEMENTS/BiometricType.ta.mjs";
-import { BIRCreationDate, _decode_BIRCreationDate, _encode_BIRCreationDate } from "../CBEFF-DATA-ELEMENTS/BIRCreationDate.ta.mjs";
-import { BIRValidityPeriod, _decode_BIRValidityPeriod, _encode_BIRValidityPeriod } from "../CBEFF-DATA-ELEMENTS/BIRValidityPeriod.ta.mjs";
+import { type BDBValidityPeriod, _decode_BDBValidityPeriod, _encode_BDBValidityPeriod } from "../CBEFF-DATA-ELEMENTS/BDBValidityPeriod.ta.mjs";
+import { type BiometricDataBlock, _decode_BiometricDataBlock, _encode_BiometricDataBlock } from "../CBEFF-DATA-ELEMENTS/BiometricDataBlock.ta.mjs";
+import { type BiometricSubtype, BiometricSubtype_noValueAvailable, _decode_BiometricSubtype, _encode_BiometricSubtype } from "../CBEFF-DATA-ELEMENTS/BiometricSubtype.ta.mjs";
+import { type BiometricType, BiometricType_noValueAvailable, _decode_BiometricType, _encode_BiometricType } from "../CBEFF-DATA-ELEMENTS/BiometricType.ta.mjs";
+import { type BIRCreationDate, _decode_BIRCreationDate, _encode_BIRCreationDate } from "../CBEFF-DATA-ELEMENTS/BIRCreationDate.ta.mjs";
+import { type BIRValidityPeriod, _decode_BIRValidityPeriod, _encode_BIRValidityPeriod } from "../CBEFF-DATA-ELEMENTS/BIRValidityPeriod.ta.mjs";
 import { ProcessedLevel, ProcessedLevel_noValueAvailable /* IMPORTED_LONG_ENUMERATION_ITEM */, _decode_ProcessedLevel, _encode_ProcessedLevel, _enum_for_ProcessedLevel } from "../CBEFF-DATA-ELEMENTS/ProcessedLevel.ta.mjs";
-import { Product, _decode_Product, _encode_Product } from "../CBEFF-DATA-ELEMENTS/Product.ta.mjs";
+import { type Product, _decode_Product, _encode_Product } from "../CBEFF-DATA-ELEMENTS/Product.ta.mjs";
 import { Purpose, Purpose_noValueAvailable /* IMPORTED_LONG_ENUMERATION_ITEM */, _decode_Purpose, _encode_Purpose, _enum_for_Purpose } from "../CBEFF-DATA-ELEMENTS/Purpose.ta.mjs";
-import { Quality, _decode_Quality, _encode_Quality } from "../CBEFF-DATA-ELEMENTS/Quality.ta.mjs";
-import { SubheaderCount, _decode_SubheaderCount, _encode_SubheaderCount } from "../CBEFF-DATA-ELEMENTS/SubheaderCount.ta.mjs";
+import { type Quality, _decode_Quality, _encode_Quality } from "../CBEFF-DATA-ELEMENTS/Quality.ta.mjs";
+import { type SubheaderCount, _decode_SubheaderCount, _encode_SubheaderCount } from "../CBEFF-DATA-ELEMENTS/SubheaderCount.ta.mjs";
 import { Version, _decode_Version, _encode_Version } from "../CBEFF-DATA-ELEMENTS/Version.ta.mjs";
 import { PresenceByteOriented_fieldPresence, _decode_PresenceByteOriented_fieldPresence, _encode_PresenceByteOriented_fieldPresence } from "../CBEFF-PRESENCE-BYTE-ORIENTED/PresenceByteOriented-fieldPresence.ta.mjs";
-
 
 /**
  * @summary PresenceByteOriented
@@ -31,9 +31,9 @@ import { PresenceByteOriented_fieldPresence, _decode_PresenceByteOriented_fieldP
  * 
  * ```asn1
  * PresenceByteOriented ::= SEQUENCE {
- * / * This patron format contains all data elements but makes full use of default values to allow
- * omission of fields. A bit map is present at the start of the encoding to determine which
- * fields are present. * /
+ *     -- This patron format contains all data elements but makes full use of default values to allow
+ *     -- omission of fields. A bit map is present at the start of the encoding to determine which
+ *     -- fields are present.
  *     format              BDBFormat,
  *     fieldPresence       SEQUENCE {
  *         bioType             BOOLEAN,
@@ -205,6 +205,8 @@ class PresenceByteOriented {
         bdbLength: OPTIONAL<INTEGER>,
         bdb: BiometricDataBlock
     ) {
+        if (patronHdrVersion !== undefined) assertIntegerRange(patronHdrVersion, 0, 255, "PresenceByteOriented.patronHdrVersion");
+        if (bdbLength !== undefined) assertIntegerRange(bdbLength, 0, 4294967295, "PresenceByteOriented.bdbLength");
         this.format = format;
         this.fieldPresence = fieldPresence;
         this.bdbFormat = bdbFormat;
@@ -247,35 +249,35 @@ class PresenceByteOriented {
      * @static
      * @method
      */
-    public static get _default_value_for_bioType () { return noValueAvailable; }
+    public static get _default_value_for_bioType (): BiometricType { return BiometricType_noValueAvailable; }
     /**
      * @summary Getter that returns the default value for `bioSubtype`.
      * @public
      * @static
      * @method
      */
-    public static get _default_value_for_bioSubtype () { return noValueAvailable; }
+    public static get _default_value_for_bioSubtype (): BiometricSubtype { return BiometricSubtype_noValueAvailable; }
     /**
      * @summary Getter that returns the default value for `procLevel`.
      * @public
      * @static
      * @method
      */
-    public static get _default_value_for_procLevel () { return ProcessedLevel_noValueAvailable; }
+    public static get _default_value_for_procLevel (): ProcessedLevel { return ProcessedLevel_noValueAvailable; }
     /**
      * @summary Getter that returns the default value for `bdbPurpose`.
      * @public
      * @static
      * @method
      */
-    public static get _default_value_for_bdbPurpose () { return Purpose_noValueAvailable; }
+    public static get _default_value_for_bdbPurpose (): Purpose { return Purpose_noValueAvailable; }
     /**
      * @summary Getter that returns the default value for `bdbQuality`.
      * @public
      * @static
      * @method
      */
-    public static get _default_value_for_bdbQuality () { return noValueAvailable; }
+    public static get _default_value_for_bdbQuality (): Quality { return BiometricType_noValueAvailable; }
     /**
      * @summary Getter that returns the default value for `patronHdrVersion`.
      * @public
@@ -289,7 +291,7 @@ class PresenceByteOriented {
      * @static
      * @method
      */
-    public static get _default_value_for_cbeffVers () { return Version._from_object({ major: 4, minor: 0 }); }
+    public static get _default_value_for_cbeffVers (): Version { return Version._from_object({ major: 4, minor: 0 }); }
     /**
      * @summary Getter that returns the default value for `subHeaderCount`.
      * @public
@@ -303,13 +305,15 @@ class PresenceByteOriented {
      * @static
      * @method
      */
-    public static get _default_value_for_bdbLength () { return 0; }        /**
+    public static get _default_value_for_bdbLength () { return 0; }
+    /**
          * @summary The enum used as the type of the component `procLevel`
          * @public
          * @static
          */
 
-    public static _enum_for_procLevel: typeof _enum_for_ProcessedLevel = _enum_for_ProcessedLevel;        /**
+    public static _enum_for_procLevel: typeof _enum_for_ProcessedLevel = _enum_for_ProcessedLevel;
+    /**
          * @summary The enum used as the type of the component `bdbPurpose`
          * @public
          * @static
@@ -516,6 +520,5 @@ function _encode_PresenceByteOriented (value: PresenceByteOriented, elGetter: $.
 }; }
     return _cached_encoder_for_PresenceByteOriented(value, elGetter);
 }
-
 
 /* eslint-enable */

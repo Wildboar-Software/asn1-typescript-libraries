@@ -3,11 +3,10 @@ import {
     ASN1ConstructionError as _ConstructionError,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    type INTEGER
+    type INTEGER,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-
-
+import { assertIntegerRange } from "../../constraints.mjs";
 
 /**
  * @summary Version
@@ -44,6 +43,8 @@ class Version {
         major: INTEGER,
         minor: INTEGER
     ) {
+        assertIntegerRange(major, 0, 255, "Version.major");
+        assertIntegerRange(minor, 0, 255, "Version.minor");
         this.major = major;
         this.minor = minor;
     }
@@ -63,7 +64,6 @@ class Version {
     public static _from_object (_o: { [_K in keyof (Version)]: (Version)[_K] }): Version {
         return new Version(_o.major, _o.minor);
     }
-
 
 }
 
@@ -154,6 +154,5 @@ function _encode_Version (value: Version, elGetter: $.ASN1Encoder<any>): _Elemen
 }; }
     return _cached_encoder_for_Version(value, elGetter);
 }
-
 
 /* eslint-enable */

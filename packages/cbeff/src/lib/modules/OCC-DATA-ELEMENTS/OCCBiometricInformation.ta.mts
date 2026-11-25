@@ -3,12 +3,11 @@ import {
     type OPTIONAL,
     type ASN1Element as _Element,
     ObjectIdentifier as _OID,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { OCCBiometricInformation_biometricInformationDO, _decode_OCCBiometricInformation_biometricInformationDO, _encode_OCCBiometricInformation_biometricInformationDO } from "../OCC-DATA-ELEMENTS/OCCBiometricInformation-biometricInformationDO.ta.mjs";
-import { OCCBiometricInformation_tagAllocationAuthority, _decode_OCCBiometricInformation_tagAllocationAuthority, _encode_OCCBiometricInformation_tagAllocationAuthority } from "../OCC-DATA-ELEMENTS/OCCBiometricInformation-tagAllocationAuthority.ta.mjs";
-
+import { type OCCBiometricInformation_tagAllocationAuthority, _decode_OCCBiometricInformation_tagAllocationAuthority, _encode_OCCBiometricInformation_tagAllocationAuthority } from "../OCC-DATA-ELEMENTS/OCCBiometricInformation-tagAllocationAuthority.ta.mjs";
 
 /**
  * @summary OCCBiometricInformation
@@ -177,6 +176,5 @@ function _encode_OCCBiometricInformation (value: OCCBiometricInformation, elGett
 }; }
     return _cached_encoder_for_OCCBiometricInformation(value, elGetter);
 }
-
 
 /* eslint-enable */

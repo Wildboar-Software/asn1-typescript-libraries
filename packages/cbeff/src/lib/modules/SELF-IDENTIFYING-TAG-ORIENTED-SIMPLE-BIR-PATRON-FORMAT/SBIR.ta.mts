@@ -3,16 +3,16 @@ import {
     type OCTET_STRING,
     type OPTIONAL,
     type ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
+import { assertOctetSize } from "../../constraints.mjs";
 import { RegistryID, _decode_RegistryID, _encode_RegistryID } from "../CBEFF-DATA-ELEMENTS/RegistryID.ta.mjs";
 import { Version, _decode_Version, _encode_Version } from "../CBEFF-DATA-ELEMENTS/Version.ta.mjs";
 import { SBIR_bdbData, _decode_SBIR_bdbData, _encode_SBIR_bdbData } from "../SELF-IDENTIFYING-TAG-ORIENTED-SIMPLE-BIR-PATRON-FORMAT/SBIR-bdbData.ta.mjs";
 import { SBIR_bdbInfo, _decode_SBIR_bdbInfo, _encode_SBIR_bdbInfo } from "../SELF-IDENTIFYING-TAG-ORIENTED-SIMPLE-BIR-PATRON-FORMAT/SBIR-bdbInfo.ta.mjs";
 import { SBIR_birInfo, _decode_SBIR_birInfo, _encode_SBIR_birInfo } from "../SELF-IDENTIFYING-TAG-ORIENTED-SIMPLE-BIR-PATRON-FORMAT/SBIR-birInfo.ta.mjs";
 import { SBIR_sbInfo, _decode_SBIR_sbInfo, _encode_SBIR_sbInfo } from "../SELF-IDENTIFYING-TAG-ORIENTED-SIMPLE-BIR-PATRON-FORMAT/SBIR-sbInfo.ta.mjs";
-
 
 /**
  * @summary SBIR
@@ -133,6 +133,7 @@ class SBIR {
         bdbData?: OPTIONAL<SBIR_bdbData>,
         sb?: OPTIONAL<OCTET_STRING>
     ) {
+        if (sb !== undefined) assertOctetSize(sb, 0, 4294967295, "SBIR.sb");
         this.birSelfId = birSelfId;
         this.cbeffVersion = cbeffVersion;
         this.patronHeaderVersion = patronHeaderVersion;
@@ -158,7 +159,6 @@ class SBIR {
     public static _from_object (_o: { [_K in keyof (SBIR)]: (SBIR)[_K] }): SBIR {
         return new SBIR(_o.birSelfId, _o.cbeffVersion, _o.patronHeaderVersion, _o.birInfo, _o.bdbInfo, _o.sbInfo, _o.bdbData, _o.sb);
     }
-
 
 }
 
@@ -288,6 +288,5 @@ function _encode_SBIR (value: SBIR, elGetter: $.ASN1Encoder<any>): _Element {
 }, $.BER); }
     return _cached_encoder_for_SBIR(value, elGetter);
 }
-
 
 /* eslint-enable */

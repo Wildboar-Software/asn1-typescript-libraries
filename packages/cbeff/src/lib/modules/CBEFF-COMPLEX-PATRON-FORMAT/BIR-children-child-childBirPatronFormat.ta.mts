@@ -3,11 +3,10 @@ import {
     ASN1ConstructionError as _ConstructionError,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    type INTEGER
+    type INTEGER,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-
-
+import { assertIntegerRange } from "../../constraints.mjs";
 
 /**
  * @summary BIR_children_child_childBirPatronFormat
@@ -16,7 +15,10 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * BIR-children-child-childBirPatronFormat ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * BIR-children-child-childBirPatronFormat ::= SEQUENCE {
+ *     childBirPatronFormatOwner   INTEGER (0..65535),
+ *     childBirPatronFormatType    INTEGER (0..65535)
+ * }
  * ```
  * 
  * @class
@@ -40,6 +42,8 @@ class BIR_children_child_childBirPatronFormat {
         childBirPatronFormatOwner: INTEGER,
         childBirPatronFormatType: INTEGER
     ) {
+        assertIntegerRange(childBirPatronFormatOwner, 0, 65535, "BIR.children.childBirPatronFormatOwner");
+        assertIntegerRange(childBirPatronFormatType, 0, 65535, "BIR.children.childBirPatronFormatType");
         this.childBirPatronFormatOwner = childBirPatronFormatOwner;
         this.childBirPatronFormatType = childBirPatronFormatType;
     }
@@ -59,7 +63,6 @@ class BIR_children_child_childBirPatronFormat {
     public static _from_object (_o: { [_K in keyof (BIR_children_child_childBirPatronFormat)]: (BIR_children_child_childBirPatronFormat)[_K] }): BIR_children_child_childBirPatronFormat {
         return new BIR_children_child_childBirPatronFormat(_o.childBirPatronFormatOwner, _o.childBirPatronFormatType);
     }
-
 
 }
 
@@ -150,6 +153,5 @@ function _encode_BIR_children_child_childBirPatronFormat (value: BIR_children_ch
 }; }
     return _cached_encoder_for_BIR_children_child_childBirPatronFormat(value, elGetter);
 }
-
 
 /* eslint-enable */
