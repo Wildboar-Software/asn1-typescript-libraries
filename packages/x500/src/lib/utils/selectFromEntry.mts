@@ -55,18 +55,37 @@ function mergeAttributes (attrs: Attribute[]): Attribute {
     if (attrs.length === 1) {
         return attrs[0];
     }
-    const values: ASN1Element[] = [];
-    const valuesWithContext: Attribute_valuesWithContext_Item[] = [];
-    for (const attr of attrs) {
-        values.push(...attr.values);
-        if (attr.valuesWithContext) {
-            valuesWithContext.push(...attr.valuesWithContext);
+    let valueCount = 0;
+    let contextCount = 0;
+    for (let i = 0; i < attrs.length; i++) {
+        const attr = attrs[i];
+        valueCount += attr.values.length;
+        contextCount += attr.valuesWithContext?.length ?? 0;
+    }
+    const values: ASN1Element[] = new Array(valueCount);
+    let valueIndex = 0;
+    let valuesWithContext: Attribute_valuesWithContext_Item[] | undefined;
+    let contextIndex = 0;
+    if (contextCount > 0) {
+        valuesWithContext = new Array(contextCount);
+    }
+    for (let i = 0; i < attrs.length; i++) {
+        const attr = attrs[i];
+        const attrValues = attr.values;
+        for (let v = 0; v < attrValues.length; v++) {
+            values[valueIndex++] = attrValues[v];
+        }
+        const attrContexts = attr.valuesWithContext;
+        if (attrContexts && valuesWithContext) {
+            for (let c = 0; c < attrContexts.length; c++) {
+                valuesWithContext[contextIndex++] = attrContexts[c];
+            }
         }
     }
     return new Attribute(
         attrs[0].type_,
         values,
-        valuesWithContext.length > 0 ? valuesWithContext : undefined,
+        valuesWithContext,
     );
 }
 
@@ -119,6 +138,39 @@ function useAttributeTypesInFamilyEntries (entries: FamilyEntries): FamilyEntrie
     );
 }
 
+function copyValues (
+    attr: Attribute,
+    transform: ((value: ASN1Element) => ASN1Element) | undefined,
+): ASN1Element[] {
+    const contextual = attr.valuesWithContext;
+    const plain = attr.values;
+    if (!transform && !contextual?.length) {
+        // Copy so a caller can mutate the result without changing the entry.
+        return plain.slice();
+    }
+    const values: ASN1Element[] = new Array(plain.length + (contextual?.length ?? 0));
+    let count = 0;
+    if (transform) {
+        for (let i = 0; i < plain.length; i++) {
+            values[count++] = transform(plain[i]);
+        }
+        if (contextual) {
+            for (let i = 0; i < contextual.length; i++) {
+                values[count++] = transform(contextual[i].value);
+            }
+        }
+    } else {
+        for (let i = 0; i < plain.length; i++) {
+            values[count++] = plain[i];
+        }
+        const contexts = contextual!;
+        for (let i = 0; i < contexts.length; i++) {
+            values[count++] = contexts[i].value;
+        }
+    }
+    return values;
+}
+
 function useAttributeTypesInFamilyValue (value: ASN1Element): ASN1Element {
     return _encode_FamilyEntries(
         useAttributeTypesInFamilyEntries(_decode_FamilyEntries(value)),
@@ -159,12 +211,8 @@ function attributeToInformationItem (
         ? useAttributeTypesInFamilyValue
         : undefined;
     if (!returnContexts) {
-        const values: ASN1Element[] = [];
-        for (const value of attr.iterValuesOmittingContexts()) {
-            values.push(transform ? transform(value) : value);
-        }
         return {
-            attribute: new Attribute(attr.type_, values),
+            attribute: new Attribute(attr.type_, copyValues(attr, transform)),
         };
     }
     if (!transform) {
@@ -362,7 +410,7 @@ function selectFromEntry (
 
     const selectedAttributes: Attribute[] = Array.from(
         groupByOID(selectedByType, (attr) => attr.type_).values(),
-        mergeAttributes,
+        (group) => group.length === 1 ? group[0] : mergeAttributes(group),
     );
 
     const preferences: Map<ContextAssertion[], number> = new Map();
