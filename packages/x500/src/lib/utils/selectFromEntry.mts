@@ -621,11 +621,10 @@ function selectFromEntry (
         ? groupByOID(eis.contextSelection.selectedContexts, (sc) => sc.type_)
         : undefined;
 
-    // TODO: Pre-allocate this array.
-    // Selecting every user attribute stays in this function and still asks for
-    // supertypes. Skipping that callback, or moving this loop out, made the
-    // types-only path slower. A select set takes the other function, which
-    // asks for supertypes only after the type itself misses.
+    const einfo = entry.information ?? [];
+    // A select set looks up supertypes only after the type itself misses.
+    // The unfiltered loop stays in this function and still asks for supertypes:
+    // skipping that callback, or moving this loop out, made types-only slower.
     const selectedByType: Attribute[] = (attributes || extraAttributes)
         ? collectSelectedAttributes(
             entry.information,
@@ -635,9 +634,9 @@ function selectFromEntry (
             isOperationalAttribute,
             getAttributeSupertypes,
         )
-        : [];
+        : new Array(einfo.length);
     if (!attributes && !extraAttributes) {
-        const einfo = entry.information ?? [];
+        let selectedByTypeCount = 0;
         for (let i = 0; i < einfo.length; i++) {
             const info = einfo[i];
             let attributeType!: OBJECT_IDENTIFIER;
@@ -656,13 +655,18 @@ function selectFromEntry (
                     && ("allOperationalAttributes" in eis.extraAttributes)
                 ) {
                     const attr = Attribute.fromEntryInfoItem(info);
-                    attr && selectedByType.push(attr);
+                    if (attr) {
+                        selectedByType[selectedByTypeCount++] = attr;
+                    }
                 }
             } else {
                 const attr = Attribute.fromEntryInfoItem(info);
-                attr && selectedByType.push(attr);
+                if (attr) {
+                    selectedByType[selectedByTypeCount++] = attr;
+                }
             }
         }
+        selectedByType.length = selectedByTypeCount;
     }
 
     const selectedAttributes: Attribute[] = Array.from(
@@ -681,14 +685,19 @@ function selectFromEntry (
         )
         : selectedAttributes;
 
-    // TODO: Pre-allocate this array.
-    const infos: EntryInformation_information_Item[] = [];
-    for (const attr of attributesSelectedByContext) {
-        const info = attributeToInformationItem(attr, infoTypes, eis.returnContexts);
+    const infos: EntryInformation_information_Item[] = new Array(attributesSelectedByContext.length);
+    let infoCount = 0;
+    for (let i = 0; i < attributesSelectedByContext.length; i++) {
+        const info = attributeToInformationItem(
+            attributesSelectedByContext[i],
+            infoTypes,
+            eis.returnContexts,
+        );
         if (info) {
-            infos.push(info);
+            infos[infoCount++] = info;
         }
     }
+    infos.length = infoCount;
 
     return new EntryInformation(
         entry.name,

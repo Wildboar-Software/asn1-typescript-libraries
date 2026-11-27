@@ -178,7 +178,7 @@ describe("attribute-level filter matching", () => {
             });
             expect(result.matched).toBe(true);
             expect(result.matchedValues).toEqual([]);
-            expect([...result.contributingEntries]).toEqual([0]);
+            expect([...result.contributingEntries]).toEqual([]);
             expect(matcher).toHaveBeenCalledTimes(1);
             expect(matcher.mock.calls[0]).toHaveLength(4);
             expect(compareValue).toHaveBeenCalledTimes(3);
@@ -197,7 +197,7 @@ describe("attribute-level filter matching", () => {
                 const result = evaluateFilter(leaf(kind), entries, withDefaults);
                 expect(result.matched).toBe(expected);
                 expect(result.matchedValues).toEqual([]);
-                expect([...result.contributingEntries]).toEqual(expected === true ? [0] : []);
+                expect([...result.contributingEntries]).toEqual([]);
                 expect(matcher).toHaveBeenCalledTimes(1);
                 expect(matcher.mock.calls[0]).toHaveLength(4);
                 expect(compareValue).toHaveBeenCalledTimes(1);
@@ -1172,5 +1172,102 @@ describe("requestAttributes profile lookup (X.501 §8.7, §16.6, §16.10.2)", ()
             };
             expect(evaluateFilter(leaf(kind), emptyEntries, overridden).matched).toBe(false);
         });
+
+        it("applies defaultValues only when no member of the family grouping holds the attribute or a subtype, ignoring non-matching friends (X.501 §16.10.2.d, X.511 §7.8.2, §7.13)", () => {
+            const subtype = ObjectIdentifier.fromString("1.2.3.14");
+            const otherType = ObjectIdentifier.fromString("1.2.3.13");
+            const profile = new RequestAttribute(TYPE, undefined, undefined, [
+                new RequestAttribute_defaultValues_Item(undefined, [value("true")]),
+            ]);
+            const options: EvaluateFilterSettings = {
+                ...settings(kind, true),
+                getFriends: () => [friend],
+                isAttributeSubtype: (a, b) => a.isEqualTo(b) || (a.isEqualTo(subtype) && b.isEqualTo(TYPE)),
+                requestAttributes: new Map([[TYPE.toString(), profile]]),
+            };
+            const emptyMember = new EntryInformation({ rdnSequence: [] });
+            const nonMatchingMember = new EntryInformation({ rdnSequence: [] }, true, [
+                { attribute: new Attribute(TYPE, [value("false")]) },
+            ]);
+            const nonMatchingSubtypeMember = new EntryInformation({ rdnSequence: [] }, true, [
+                { attribute: new Attribute(subtype, [value("false")]) },
+            ]);
+            const nonMatchingFriendMember = new EntryInformation({ rdnSequence: [] }, true, [
+                { attribute: new Attribute(friend, [value("false")]) },
+            ]);
+            const matchingFriendMember = new EntryInformation({ rdnSequence: [] }, true, [
+                { attribute: new Attribute(friend, [value("true")]) },
+            ]);
+
+            // If ANY member in the family grouping holds TYPE or a subtype of TYPE, defaults do not kick in.
+            for (const grouping of [
+                [emptyMember, nonMatchingMember],
+                [nonMatchingMember, emptyMember],
+                [emptyMember, nonMatchingSubtypeMember],
+            ]) {
+                const res = evaluateFilter(leaf(kind), grouping, options);
+                expect(res.matched).toBe(false);
+                expect([...res.contributingEntries]).toEqual([]);
+                expect(res.matchedValues).toEqual([]);
+            }
+
+            // A non-matching friend does not count as presence of TYPE, so TYPE's defaultValues still apply.
+            const friendNonMatchRes = evaluateFilter(leaf(kind), [emptyMember, nonMatchingFriendMember], options);
+            expect(friendNonMatchRes.matched).toBe(true);
+            expect([...friendNonMatchRes.contributingEntries]).toEqual([]);
+            expect(friendNonMatchRes.matchedValues).toEqual([]);
+
+            // A matching friend satisfies the assertion directly and marks that member as contributing.
+            const friendMatchRes = evaluateFilter(leaf(kind), [emptyMember, matchingFriendMember], options);
+            expect(friendMatchRes.matched).toBe(true);
+            expect([...friendMatchRes.contributingEntries]).toEqual([1]);
+            expect(friendMatchRes.matchedValues).toHaveLength(1);
+            expect(friendMatchRes.matchedValues![0].attributes[0].type_.isEqualTo(friend)).toBe(true);
+
+            // When NO member holds TYPE, defaults match without marking non-holding members as contributing.
+            const otherMember = new EntryInformation({ rdnSequence: [] }, true, [
+                { attribute: new Attribute(otherType, [value("true")]) },
+            ]);
+            const compoundFilter: Filter = {
+                and: [
+                    { item: { equality: new AttributeValueAssertion(otherType, value("assertion")) } },
+                    leaf(kind),
+                ],
+            };
+            const res = evaluateFilter(compoundFilter, [emptyMember, otherMember], options);
+            expect(res.matched).toBe(true);
+            expect([...res.contributingEntries]).toEqual([1]);
+        });
+    });
+
+    it("checks presence across the whole family grouping for untyped extensibleMatch defaults", () => {
+        const typeA = ObjectIdentifier.fromString("1.2.3.21");
+        const typeB = ObjectIdentifier.fromString("1.2.3.22");
+        const typeC = ObjectIdentifier.fromString("1.2.3.23");
+        const untyped: Filter = { item: { extensibleMatch: new MatchingRuleAssertion([RULE], undefined, value("assertion")) } };
+        const memberA = new EntryInformation({ rdnSequence: [] }, true, [{ attribute: new Attribute(typeA, [value("false")]) }]);
+        const memberB = new EntryInformation({ rdnSequence: [] }, true, [{ attribute: new Attribute(typeB, [value("false")]) }]);
+        const defaultTrue = [new RequestAttribute_defaultValues_Item(undefined, [value("true")])];
+
+        const bothPresent: EvaluateFilterSettings = {
+            ...settings("extensibleMatch"),
+            requestAttributes: new Map([
+                [typeA.toString(), new RequestAttribute(typeA, undefined, undefined, defaultTrue)],
+                [typeB.toString(), new RequestAttribute(typeB, undefined, undefined, defaultTrue)],
+            ]),
+        };
+        // Should not match because both values are non-matching, despite defaulting to true.
+        expect(evaluateFilter(untyped, [memberA, memberB], bothPresent).matched).toBe(false);
+
+        const thirdAbsent: EvaluateFilterSettings = {
+            ...bothPresent,
+            requestAttributes: new Map([
+                ...bothPresent.requestAttributes!,
+                [typeC.toString(), new RequestAttribute(typeC, undefined, undefined, defaultTrue)],
+            ]),
+        };
+        const res = evaluateFilter(untyped, [memberA, memberB], thirdAbsent);
+        expect(res.matched).toBe(true);
+        expect([...res.contributingEntries]).toEqual([]);
     });
 });
