@@ -75,34 +75,12 @@ function normalizeFilter (filter: Filter, recursionTTL: number = 20): Filter {
                 or: [],
             };
         }
+        // This entirely skips the dangerous part of normalization.
         const subfilters = filter.and
             .filter((sub) => !(("and" in sub) && (sub.and.length === 0))) // Ignore and:{} subfilters.
             .map((sub) => normalizeFilter(sub, recursionTTL - 1))
-            // "and { and {x,y,z}, p, q } is the same as and { x,y,z,p,q }"
-            .flatMap((sub) => (("and" in sub) ? sub.and : [ sub ]))
-            .map((sub) => normalizeFilter(sub, recursionTTL - 1)); // It may be necessary again.
-
-        // This is the dangerous part here:
-        // "and { or {x,y,z}, p, q} is the same as or { and {x,p,q}, and {y,p,q}, and {z,p,q} }"
-        const orsubIndex = subfilters.findIndex((sf) => ("or" in sf));
-        if (orsubIndex > -1 && (subfilters.length <= 10)) {
-            const orsub = subfilters.splice(orsubIndex, 1)[0];
-            if (!("or" in orsub)) {
-                throw new Error(); // This should never happen.
-            }
-            const difficulty: number = subfilters.length * orsub.or.length;
-            if (difficulty < 20) {
-                return ({
-                    or: orsub.or.map((subsub) => normalizeFilter({
-                        and: [ subsub, ...subfilters ],
-                    }, recursionTTL - 1)),
-                });
-            }
-        }
-
-        return {
-            and: subfilters,
-        };
+            .flatMap((sub) => ("and" in sub) ? sub.and : [sub]);
+        return { and: subfilters };
     } else if ("or" in filter) {
         if (filter.or.length === 1) {
             return normalizeFilter(filter.or[0], recursionTTL - 1);
