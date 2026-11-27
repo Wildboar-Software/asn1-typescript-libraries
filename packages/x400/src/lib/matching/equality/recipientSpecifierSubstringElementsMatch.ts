@@ -4,10 +4,13 @@ import {
     type Matcher,
 } from "@wildboar/x500";
 import type { RecipientSpecifier } from "@wildboar/x400/IPMSInformationObjects";
+import { normalizePreparedORDescriptor } from "./oRDescriptorMatch.js";
 import { oRDescriptorSubstringElementsMatchTyped } from "./oRDescriptorSubstringElementsMatch.js";
+import { MATCH_FLAG_SUBSTRING_MATCH } from "./oRNameMatch.js";
 import {
-    decodeNonEmptyRecipientSpecifierAssertion,
+    decodePreparedRecipientSpecifierAssertion,
     findRecipientElement,
+    recipientSpecifierValueMatcher,
 } from "./recipientSpecifierMatch.js";
 
 export
@@ -31,10 +34,11 @@ function recipientSpecifierSubstringElementsMatchTyped (
 
 export
 const recipientSpecifierSubstringElementsMatch: Matcher = createEqualityMatcher(
-    decodeNonEmptyRecipientSpecifierAssertion("recipientSpecifierSubstringElementsMatch", true),
-    recipientSpecifierSubstringElementsMatchTyped,
+    decodePreparedRecipientSpecifierAssertion("recipientSpecifierSubstringElementsMatch", true),
+    recipientSpecifierValueMatcher(MATCH_FLAG_SUBSTRING_MATCH),
     undefined,
     false,
+    normalizePreparedORDescriptor,
 );
 
 export default recipientSpecifierSubstringElementsMatch;

@@ -14,24 +14,41 @@ import {
 } from "@wildboar/x500/InformationFramework";
 import {
     BuiltInStandardAttributes,
+    DLExpansion,
+    ExtensionAttribute,
     GlobalDomainIdentifier,
     MTSIdentifier,
     ORAddress,
     ORName,
+    PDSParameter,
+    TeletexPersonalName,
     UniversalOrBMPString,
     _encode_ContentCorrelator,
     _encode_ContentIdentifier,
+    _encode_DLExpansion,
     _encode_MTSIdentifier,
     _encode_ORAddress,
     _encode_ORName,
+    _encode_PDSParameter,
+    _encode_TeletexPersonalName,
     _encode_UniversalOrBMPString,
+    street_address,
+    teletex_common_name,
+    teletex_personal_name,
 } from "@wildboar/x400/MTSAbstractService";
 import {
     IPMIdentifier,
     ORDescriptor,
+    RecipientSpecifier,
     _encode_IPMIdentifier,
     _encode_ORDescriptor,
+    _encode_RecipientSpecifier,
 } from "@wildboar/x400/IPMSInformationObjects";
+import {
+    CirculationMember,
+    _encode_CirculationMember,
+} from "@wildboar/x400/IPMSHeadingExtensions";
+import { AttributeTypeAndValue as DNAtav } from "@wildboar/dn";
 import {
     _encode_MSString,
     _encode_SubstringAssertion,
@@ -51,9 +68,25 @@ import mSStringCaseSensitiveMatch from "./msStringCaseSensitiveMatch.js";
 import mSSubstringsMatch from "./mSSubstringsMatch.js";
 import mTSIdentifierMatch from "./mTSIdentifierMatch.js";
 import oRAddressMatch from "./oRAddressMatch.js";
+import oRAddressElementsMatch from "./oRAddressElementsMatch.js";
+import oRAddressSubstringElementsMatch from "./oRAddressSubstringElementsMatch.js";
 import oRDescriptorMatch from "./oRDescriptorMatch.js";
+import oRDescriptorElementsMatch from "./oRDescriptorElementsMatch.js";
 import oRDescriptorSubstringElementsMatch from "./oRDescriptorSubstringElementsMatch.js";
+import oRDescriptorSingleElementMatch from "./oRDescriptorSingleElementMatch.js";
 import oRNameMatch from "./oRNameMatch.js";
+import oRNameExactMatch from "./oRNameExactMatch.js";
+import oRNameElementsMatch from "./oRNameElementsMatch.js";
+import oRNameSubstringElementsMatch from "./oRNameSubstringElementsMatch.js";
+import recipientSpecifierMatch from "./recipientSpecifierMatch.js";
+import recipientSpecifierElementsMatch from "./recipientSpecifierElementsMatch.js";
+import recipientSpecifierSubstringElementsMatch from "./recipientSpecifierSubstringElementsMatch.js";
+import circulationMemberMatch from "./circulationMemberMatch.js";
+import circulationMemberElementsMatch from "./circulationMemberElementsMatch.js";
+import circulationMemberSubstringElementsMatch from "./circulationMemberSubstringElementsMatch.js";
+import redirectionOrDLExpansionMatch from "./redirectionOrDLExpansionMatch.js";
+import redirectionOrDLExpansionElementsMatch from "./redirectionOrDLExpansionElementsMatch.js";
+import redirectionOrDLExpansionSubstringElementsMatch from "./redirectionOrDLExpansionSubstringElementsMatch.js";
 import valueCountMatch from "./valueCountMatch.js";
 import mSStringOrderingMatch from "../ordering/mSStringOrderingMatch.js";
 import mSSingleSubstringMatch from "../substring/mSSingleSubstringMatch.js";
@@ -488,5 +521,183 @@ describe("X.400 matchers decode the assertion", () => {
         const singleList = encodeList([ms("A")], DER);
         expect(mSStringListMatch(singleList, stored(singleList), undefined, MATCH_FLAG_USED_FOR_NAME)).toBeUndefined();
         expect(mSSingleSubstringListMatch(singleList, stored(singleList), undefined, MATCH_FLAG_USED_FOR_NAME)).toBeUndefined();
+    });
+
+    test("handles 200 KB TeletexString inputs without stack overflow and rejects malformed T.61 accents across all ORName/ORDescriptor matchers (Issue 3.1)", () => {
+        // 200,000 octets exceeds V8's ~100–130 KB call-stack argument spread limit.
+        const largeLower = new Uint8Array(200_000).fill(0x61); // 'a' * 200,000
+        const largeUpper = new Uint8Array(200_000).fill(0x41); // 'A' * 200,000
+        const msLargeLower = _encode_MSString({ teletex: largeLower }, DER);
+        const msLargeUpper = _encode_MSString({ teletex: largeUpper }, DER);
+        expect(mSStringMatch(msLargeLower, stored(msLargeUpper))).toBe(true);
+
+        const largeDescLower = _encode_ORDescriptor(new ORDescriptor(undefined, largeLower), DER);
+        const largeDescUpper = _encode_ORDescriptor(new ORDescriptor(undefined, largeUpper), DER);
+        expect(oRDescriptorMatch(largeDescLower, stored(largeDescUpper))).toBe(true);
+        expect(oRDescriptorSingleElementMatch(msLargeLower, stored(largeDescUpper))).toBe(true);
+
+        const largeORName = _encode_ORName(
+            new ORName(
+                new BuiltInStandardAttributes({ iso_3166_alpha2_code: "US" }),
+                undefined,
+                [
+                    new ExtensionAttribute(
+                        Number(teletex_common_name["&id"]!),
+                        $._encodeTeletexString(largeLower, DER),
+                    ),
+                ],
+            ),
+            DER,
+        );
+        expect(oRNameMatch(largeORName, stored(largeORName))).toBe(true);
+
+        // Underlined accented T.61 (`0xCC 0xC2 0x65` -> "É") in TeletexPersonalName & PDSParameter
+        const underlinedEAcute = new Uint8Array([0xcc, 0xc2, 0x65]);
+        const plainEAcute = new Uint8Array([0xc2, 0x45]);
+        const addrUnderlined = _encode_ORAddress(
+            new ORAddress(
+                new BuiltInStandardAttributes({ iso_3166_alpha2_code: "US" }),
+                undefined,
+                [
+                    new ExtensionAttribute(
+                        Number(teletex_personal_name["&id"]!),
+                        _encode_TeletexPersonalName(new TeletexPersonalName(underlinedEAcute), DER),
+                    ),
+                    new ExtensionAttribute(
+                        Number(street_address["&id"]!),
+                        _encode_PDSParameter(new PDSParameter(undefined, underlinedEAcute), DER),
+                    ),
+                ],
+            ),
+            DER,
+        );
+        const addrPlain = _encode_ORAddress(
+            new ORAddress(
+                new BuiltInStandardAttributes({ iso_3166_alpha2_code: "US" }),
+                undefined,
+                [
+                    new ExtensionAttribute(
+                        Number(teletex_personal_name["&id"]!),
+                        _encode_TeletexPersonalName(new TeletexPersonalName(plainEAcute), DER),
+                    ),
+                    new ExtensionAttribute(
+                        Number(street_address["&id"]!),
+                        _encode_PDSParameter(new PDSParameter(undefined, plainEAcute), DER),
+                    ),
+                ],
+            ),
+            DER,
+        );
+        expect(oRAddressMatch(addrUnderlined, stored(addrPlain))).toBe(true);
+
+        // Malformed T.61 double accent (`0xC1 0xC1 0x61`) in assertions must throw up-front,
+        // even when compared against a DN-only stored value that would otherwise skip ORAddress comparison.
+        const badT61 = new Uint8Array([0xc1, 0xc1, 0x61]);
+        const dnOnlyStoredValue = _encode_ORName(
+            new ORName(new BuiltInStandardAttributes(), undefined, undefined, { rdnSequence: [] }),
+            DER,
+        );
+        const badORAddressObj = new ORAddress(
+            new BuiltInStandardAttributes({ iso_3166_alpha2_code: "US" }),
+            undefined,
+            [
+                new ExtensionAttribute(
+                    Number(teletex_common_name["&id"]!),
+                    $._encodeTeletexString(badT61, DER),
+                ),
+            ],
+        );
+        const badORAddressEl = _encode_ORAddress(badORAddressObj, DER);
+        for (const matcher of [oRAddressMatch, oRAddressElementsMatch, oRAddressSubstringElementsMatch]) {
+            expect(() => matcher(badORAddressEl, stored(addrPlain))).toThrow();
+        }
+
+        const badORNameObj = new ORName(
+            badORAddressObj.built_in_standard_attributes,
+            undefined,
+            badORAddressObj.extension_attributes,
+        );
+        const badORNameEl = _encode_ORName(badORNameObj, DER);
+
+        const badDNVal = $._encodeTeletexString(badT61, DER);
+        const badDNORNameEl = _encode_ORName(
+            new ORName(new BuiltInStandardAttributes(), undefined, undefined, {
+                rdnSequence: [[new DNAtav(type_, badDNVal)]],
+            }),
+            DER,
+        );
+
+        for (const matcher of [
+            oRNameMatch,
+            oRNameExactMatch,
+            oRNameElementsMatch,
+            oRNameSubstringElementsMatch,
+        ]) {
+            expect(() => matcher(badORNameEl, stored(dnOnlyStoredValue))).toThrow();
+            expect(() => matcher(badDNORNameEl, stored(dnOnlyStoredValue))).toThrow();
+        }
+
+        const goodDLExpansion = _encode_DLExpansion(
+            new DLExpansion(
+                new ORName(new BuiltInStandardAttributes({ iso_3166_alpha2_code: "US" })),
+                new Date("2026-01-01T00:00:00Z"),
+            ),
+            DER,
+        );
+        for (const matcher of [
+            redirectionOrDLExpansionMatch,
+            redirectionOrDLExpansionElementsMatch,
+            redirectionOrDLExpansionSubstringElementsMatch,
+        ]) {
+            expect(() => matcher(badORNameEl, stored(goodDLExpansion))).toThrow();
+        }
+
+        const badIPMId = _encode_IPMIdentifier(new IPMIdentifier(badORNameObj, "id-1"), DER);
+        const goodIPMId = _encode_IPMIdentifier(new IPMIdentifier(undefined, "id-1"), DER);
+        expect(() => iPMIdentifierMatch(badIPMId, stored(goodIPMId))).toThrow();
+
+        const badFormalDescObj = new ORDescriptor(badORNameObj);
+        const badFormalDescEl = _encode_ORDescriptor(badFormalDescObj, DER);
+        const goodDescEl = _encode_ORDescriptor(new ORDescriptor(undefined, new Uint8Array([0x61])), DER);
+        for (const matcher of [
+            oRDescriptorMatch,
+            oRDescriptorElementsMatch,
+            oRDescriptorSubstringElementsMatch,
+        ]) {
+            expect(() => matcher(badFormalDescEl, stored(goodDescEl))).toThrow();
+        }
+
+        const badRS = _encode_RecipientSpecifier(new RecipientSpecifier(badFormalDescObj), DER);
+        const goodRS = _encode_RecipientSpecifier(
+            new RecipientSpecifier(new ORDescriptor(undefined, new Uint8Array([0x61]))),
+            DER,
+        );
+        for (const matcher of [
+            recipientSpecifierMatch,
+            recipientSpecifierElementsMatch,
+            recipientSpecifierSubstringElementsMatch,
+        ]) {
+            expect(() => matcher(badRS, stored(goodRS))).toThrow();
+        }
+
+        const badCM = _encode_CirculationMember(
+            new CirculationMember(new RecipientSpecifier(badFormalDescObj)),
+            DER,
+        );
+        const goodCM = _encode_CirculationMember(
+            new CirculationMember(
+                new RecipientSpecifier(
+                    new ORDescriptor(new ORName(new BuiltInStandardAttributes({ iso_3166_alpha2_code: "US" }))),
+                ),
+            ),
+            DER,
+        );
+        for (const matcher of [
+            circulationMemberMatch,
+            circulationMemberElementsMatch,
+            circulationMemberSubstringElementsMatch,
+        ]) {
+            expect(() => matcher(badCM, stored(goodCM))).toThrow();
+        }
     });
 });

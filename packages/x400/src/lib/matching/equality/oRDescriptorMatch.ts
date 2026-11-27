@@ -11,10 +11,12 @@ import {
     _decode_ORDescriptor,
     type ORDescriptor,
 } from "@wildboar/x400/IPMSInformationObjects";
-import type { ORName } from "@wildboar/x400/MTSAbstractService";
 import {
     MATCH_FLAG_SUBSTRING_MATCH,
-    matchORNames,
+    matchPreparedORNames,
+    normalizePreparedORName,
+    type PreparedORName,
+    preparedORNameFrom,
     validateNonEmptyORNameAssertion,
 } from "./oRNameMatch.js";
 import {
@@ -24,15 +26,15 @@ import {
 } from "./orAddressUtilities.js";
 
 /**
- * Assertion form of an `ORDescriptor`. `freeFormName` and `telephoneNumber`
- * are JavaScript strings (Teletex already converted). `createEqualityMatcher`
- * runs {@link normalizePreparedORDescriptor} on this unless
- * `MATCH_FLAG_ASSERTION_NORMALIZED` is set, so the value matcher compares
- * those strings as already normalized.
+ * Assertion form of an `ORDescriptor`. `formalName` has its O/R address
+ * attributes and extensions decoded up front, and `freeFormName` and
+ * `telephoneNumber` are JavaScript strings (Teletex already converted).
+ * `createEqualityMatcher` runs {@link normalizePreparedORDescriptor} on this
+ * unless `MATCH_FLAG_ASSERTION_NORMALIZED` is set.
  */
 export
 interface PreparedORDescriptor {
-    readonly formalName?: ORName;
+    readonly formalName?: PreparedORName;
     readonly freeFormName?: string;
     readonly telephoneNumber?: string;
 }
@@ -65,12 +67,32 @@ function validateORDescriptorAssertion (
 }
 
 export
-function preparedORDescriptorFrom (d: ORDescriptor): PreparedORDescriptor {
+function preparedORDescriptorFrom (
+    d: ORDescriptor,
+    rule: string = "oRDescriptorMatch",
+    substringMode: boolean = false,
+): PreparedORDescriptor {
+    if (d.isEmpty()) {
+        throw new Error(`${rule}: assertion is empty`);
+    }
+    const formalName = d.formal_name
+        ? preparedORNameFrom(d.formal_name, rule)
+        : undefined;
+    let freeFormName: string | undefined;
+    if (d.free_form_name !== undefined) {
+        freeFormName = teletexBytesToString(d.free_form_name);
+        if (substringMode && normalizeMSString(freeFormName, true).length === 0) {
+            throw new Error(`${rule}: free-form-name substring in assertion is empty`);
+        }
+    }
+    if (d.telephone_number !== undefined && substringMode) {
+        if (normalizeMSString(d.telephone_number, true).length === 0) {
+            throw new Error(`${rule}: telephone-number substring in assertion is empty`);
+        }
+    }
     return {
-        formalName: d.formal_name,
-        freeFormName: d.free_form_name !== undefined
-            ? teletexBytesToString(d.free_form_name)
-            : undefined,
+        formalName,
+        freeFormName,
         telephoneNumber: d.telephone_number,
     };
 }
@@ -81,21 +103,19 @@ function decodePreparedORDescriptorAssertion (
     substringMode: boolean = false,
 ): (el: ASN1Element) => PreparedORDescriptor {
     return (el: ASN1Element): PreparedORDescriptor => (
-        preparedORDescriptorFrom(
-            validateORDescriptorAssertion(_decode_ORDescriptor(el), rule, substringMode),
-        )
+        preparedORDescriptorFrom(_decode_ORDescriptor(el), rule, substringMode)
     );
 }
 
 /**
- * MS-string preparation for `free-form-name` and `telephone-number`.
- * `formal-name` stays an `ORName`; `matchORNames` prepares its O/R address
- * and directory-name components.
+ * MS-string and O/R-address preparation for an `ORDescriptor` assertion.
  */
 export
 function normalizePreparedORDescriptor (a: PreparedORDescriptor): PreparedORDescriptor {
     return {
-        formalName: a.formalName,
+        formalName: a.formalName
+            ? normalizePreparedORName(a.formalName)
+            : undefined,
         freeFormName: a.freeFormName !== undefined
             ? normalizeMSString(a.freeFormName, true)
             : undefined,
@@ -127,15 +147,6 @@ function storedText (raw: string, flags: number): string {
  * Shared implementation for ITU-T Rec. X.420 (06/1999) §§19.7.3–19.7.5
  * (`oRDescriptorMatch`, `oRDescriptorElementsMatch`, and
  * `oRDescriptorSubstringElementsMatch`).
- *
- * When `assertionAlreadyNormalized` is set, `freeFormName` and
- * `telephoneNumber` are compared as prepared by
- * {@link normalizePreparedORDescriptor} (or by the caller, when
- * `MATCH_FLAG_ASSERTION_NORMALIZED` skipped that step).
- *
- * `MATCH_FLAG_CONSTANT_TIME` still evaluates free-form-name and
- * telephone-number with `ctStringsEqual` / `matchMSSubstring`, then returns
- * only the formal-name result when both values have one.
  */
 function matchPreparedORDescriptorFast (
     a: PreparedORDescriptor,
@@ -151,7 +162,13 @@ function matchPreparedORDescriptorFast (
         if (v.formal_name.isEmpty()) {
             return undefined;
         }
-        return matchORNames(a.formalName, v.formal_name, getEqualityMatcher, flags);
+        return matchPreparedORNames(
+            a.formalName,
+            v.formal_name,
+            getEqualityMatcher,
+            flags,
+            assertionAlreadyNormalized,
+        );
     }
     const aFree = preparedAssertionText(a.freeFormName, flags, assertionAlreadyNormalized);
     const aPhone = preparedAssertionText(a.telephoneNumber, flags, assertionAlreadyNormalized);
@@ -191,7 +208,13 @@ function matchPreparedORDescriptorConstantTime (
     if (bothHaveFormal && a.formalName && v.formal_name) {
         formalResult = v.formal_name.isEmpty()
             ? undefined
-            : matchORNames(a.formalName, v.formal_name, getEqualityMatcher, flags);
+            : matchPreparedORNames(
+                a.formalName,
+                v.formal_name,
+                getEqualityMatcher,
+                flags,
+                assertionAlreadyNormalized,
+            );
     }
 
     let freeFormMatches = false;
@@ -260,8 +283,14 @@ function matchORDescriptors (
     getEqualityMatcher?: (attributeType: OBJECT_IDENTIFIER) => Matcher | undefined,
     flags: number = 0,
 ): boolean | undefined {
+    let prepared: PreparedORDescriptor;
+    try {
+        prepared = preparedORDescriptorFrom(a, "matchORDescriptors", !!(flags & MATCH_FLAG_SUBSTRING_MATCH));
+    } catch {
+        return a.isEmpty() ? false : undefined;
+    }
     return matchPreparedORDescriptor(
-        preparedORDescriptorFrom(a),
+        prepared,
         v,
         getEqualityMatcher,
         flags,

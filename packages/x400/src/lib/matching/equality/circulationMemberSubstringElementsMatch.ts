@@ -4,9 +4,12 @@ import {
     type Matcher,
 } from "@wildboar/x500";
 import type { CirculationMember } from "@wildboar/x400/IPMSHeadingExtensions";
+import { normalizePreparedORDescriptor } from "./oRDescriptorMatch.js";
 import { oRDescriptorSubstringElementsMatchTyped } from "./oRDescriptorSubstringElementsMatch.js";
+import { MATCH_FLAG_SUBSTRING_MATCH } from "./oRNameMatch.js";
 import {
-    decodeCirculationMemberAssertion,
+    circulationMemberValueMatcher,
+    decodePreparedCirculationMemberAssertion,
     findCirculationRecipientElement,
 } from "./circulationMemberMatch.js";
 
@@ -31,8 +34,11 @@ function circulationMemberSubstringElementsMatchTyped (
 
 export
 const circulationMemberSubstringElementsMatch: Matcher = createEqualityMatcher(
-    decodeCirculationMemberAssertion("circulationMemberSubstringElementsMatch", true),
-    circulationMemberSubstringElementsMatchTyped,
+    decodePreparedCirculationMemberAssertion("circulationMemberSubstringElementsMatch", true),
+    circulationMemberValueMatcher(MATCH_FLAG_SUBSTRING_MATCH),
+    undefined,
+    false,
+    normalizePreparedORDescriptor,
 );
 
 export default circulationMemberSubstringElementsMatch;

@@ -2,9 +2,12 @@ import type { ASN1Element, OBJECT_IDENTIFIER } from "@wildboar/asn1";
 import { createEqualityMatcher, type Matcher } from "@wildboar/x500";
 import type { RecipientSpecifier } from "@wildboar/x400/IPMSInformationObjects";
 import { oRDescriptorElementsMatchTyped } from "./oRDescriptorElementsMatch.js";
+import { normalizePreparedORDescriptor } from "./oRDescriptorMatch.js";
+import { MATCH_FLAG_ELEMENTS_MATCH } from "./oRNameMatch.js";
 import {
-    decodeNonEmptyRecipientSpecifierAssertion,
+    decodePreparedRecipientSpecifierAssertion,
     findRecipientElement,
+    recipientSpecifierValueMatcher,
 } from "./recipientSpecifierMatch.js";
 
 export
@@ -28,10 +31,11 @@ function recipientSpecifierElementsMatchTyped (
 
 export
 const recipientSpecifierElementsMatch: Matcher = createEqualityMatcher(
-    decodeNonEmptyRecipientSpecifierAssertion("recipientSpecifierElementsMatch"),
-    recipientSpecifierElementsMatchTyped,
+    decodePreparedRecipientSpecifierAssertion("recipientSpecifierElementsMatch"),
+    recipientSpecifierValueMatcher(MATCH_FLAG_ELEMENTS_MATCH),
     undefined,
     false,
+    normalizePreparedORDescriptor,
 );
 
 export default recipientSpecifierElementsMatch;

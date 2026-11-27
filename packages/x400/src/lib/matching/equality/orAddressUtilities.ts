@@ -339,12 +339,11 @@ type ExtensionHandler = (
 
 function makePDSHandler (
     field: PDSMultiField,
-    decode: (el: ASN1Element) => { toJSON(): { "printable-string"?: string; "teletex-string"?: string } },
+    decode: (el: ASN1Element) => { readonly printable_string?: string; readonly teletex_string?: Uint8Array },
 ): ExtensionHandler {
     return (info: ORAddressInfo, value: ASN1Element, normalize: boolean): ORAddressInfo | null => {
-        const json = decode(value).toJSON();
-        const printableString = json["printable-string"];
-        const teletexString = json["teletex-string"];
+        const pds = decode(value);
+        const printableString = pds.printable_string;
         const out: string[] = [];
         if (printableString !== undefined) {
             if (printableString.length === 0) {
@@ -352,10 +351,11 @@ function makePDSHandler (
             }
             out.push(normalize ? normalizeMSString(printableString) : printableString);
         }
-        if (teletexString !== undefined) {
-            if (teletexString.length === 0) {
+        if (pds.teletex_string !== undefined) {
+            if (pds.teletex_string.length === 0) {
                 return null;
             }
+            const teletexString = teletexBytesToString(pds.teletex_string);
             out.push(normalize ? normalizeMSString(teletexString) : teletexString);
         }
         if (out.length === 0) {
@@ -428,7 +428,13 @@ function process_universal_organization_name_ext (info: ORAddressInfo, value: AS
 }
 
 function process_teletex_personal_name_ext (info: ORAddressInfo, value: ASN1Element, normalize: boolean): ORAddressInfo | null {
-    const parsed = personalNameFromJSON(teletex_personal_name.decoderFor["&Type"]!(value).toJSON(), normalize);
+    const tpn = teletex_personal_name.decoderFor["&Type"]!(value);
+    const parsed = personalNameFromJSON({
+        surname: teletexBytesToString(tpn.surname),
+        "given-name": tpn.given_name !== undefined ? teletexBytesToString(tpn.given_name) : undefined,
+        initials: tpn.initials !== undefined ? teletexBytesToString(tpn.initials) : undefined,
+        "generation-qualifier": tpn.generation_qualifier !== undefined ? teletexBytesToString(tpn.generation_qualifier) : undefined,
+    }, normalize);
     if (!parsed) {
         return null;
     }
@@ -481,7 +487,16 @@ function process_universal_organizational_unit_names_ext (info: ORAddressInfo, v
 
 function process_teletex_domain_defined_attributes_ext (info: ORAddressInfo, value: ASN1Element, normalize: boolean): ORAddressInfo | null {
     const attrs = teletex_domain_defined_attributes.decoderFor["&Type"]!(value);
-    const dict = buildDomainDefinedMap(attrs.map((dda) => dda.toJSON()), normalize);
+    if (attrs.some((dda) => dda.type_.length === 0 || dda.value.length === 0)) {
+        return null;
+    }
+    const dict = buildDomainDefinedMap(
+        attrs.map((dda) => ({
+            type: teletexBytesToString(dda.type_),
+            value: teletexBytesToString(dda.value),
+        })),
+        normalize,
+    );
     if (!dict) {
         return null;
     }
@@ -537,9 +552,9 @@ function process_postal_code_ext (info: ORAddressInfo, value: ASN1Element, norma
 }
 
 function process_unformatted_postal_address_ext (info: ORAddressInfo, value: ASN1Element, normalize: boolean): ORAddressInfo | null {
-    const json = unformatted_postal_address.decoderFor["&Type"]!(value).toJSON();
+    const upa = unformatted_postal_address.decoderFor["&Type"]!(value);
     const candidates: string[] = [];
-    const lines = json["printable-address"];
+    const lines = upa.printable_address;
     if (lines !== undefined) {
         if (lines.length === 0 || lines.some((line) => line.length === 0)) {
             return null;
@@ -547,11 +562,11 @@ function process_unformatted_postal_address_ext (info: ORAddressInfo, value: ASN
         const joined = lines.join("\r\n");
         candidates.push(normalize ? normalizeMSString(joined) : joined);
     }
-    const ttex = json["teletex-string"];
-    if (ttex !== undefined) {
-        if (ttex.length === 0) {
+    if (upa.teletex_string !== undefined) {
+        if (upa.teletex_string.length === 0) {
             return null;
         }
+        const ttex = teletexBytesToString(upa.teletex_string);
         candidates.push(normalize ? normalizeMSString(ttex) : ttex);
     }
     if (candidates.length === 0) {

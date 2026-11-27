@@ -11,11 +11,16 @@ import {
     type Matcher,
 } from "@wildboar/x500";
 import {
+    _decode_ORDescriptor,
     _decode_RecipientSpecifier,
     type RecipientSpecifier,
 } from "@wildboar/x400/IPMSInformationObjects";
 import {
+    matchPreparedORDescriptor,
+    normalizePreparedORDescriptor,
     oRDescriptorMatchTyped,
+    type PreparedORDescriptor,
+    preparedORDescriptorFrom,
     validateORDescriptorAssertion,
 } from "./oRDescriptorMatch.js";
 
@@ -65,6 +70,42 @@ function decodeNonEmptyRecipientSpecifierAssertion (
 }
 
 export
+function decodePreparedRecipientSpecifierAssertion (
+    rule: string,
+    substringMode: boolean = false,
+): (el: ASN1Element) => PreparedORDescriptor {
+    return (el: ASN1Element): PreparedORDescriptor => {
+        const rs = _decode_RecipientSpecifier(el);
+        return preparedORDescriptorFrom(rs.recipient, rule, substringMode);
+    };
+}
+
+export
+function recipientSpecifierValueMatcher (
+    extraFlags: number = 0,
+): (
+    assertion: PreparedORDescriptor,
+    value: ASN1Element,
+    getEqualityMatcher?: (attributeType: OBJECT_IDENTIFIER) => Matcher | undefined,
+    flags?: number,
+) => boolean | undefined {
+    return (assertion, value, getEqualityMatcher, flags = 0): boolean | undefined => {
+        const recipient = findRecipientElement(value, flags);
+        if (!recipient) {
+            return undefined;
+        }
+        const v = _decode_ORDescriptor(recipient);
+        return matchPreparedORDescriptor(
+            assertion,
+            v,
+            getEqualityMatcher,
+            flags | extraFlags,
+            true,
+        );
+    };
+}
+
+export
 function recipientSpecifierMatchTyped (
     assertion: RecipientSpecifier,
     value: ASN1Element,
@@ -80,10 +121,11 @@ function recipientSpecifierMatchTyped (
 
 export
 const recipientSpecifierMatch: Matcher = createEqualityMatcher(
-    decodeNonEmptyRecipientSpecifierAssertion("recipientSpecifierMatch"),
-    recipientSpecifierMatchTyped,
+    decodePreparedRecipientSpecifierAssertion("recipientSpecifierMatch"),
+    recipientSpecifierValueMatcher(0),
     undefined,
     false,
+    normalizePreparedORDescriptor,
 );
 
 export default recipientSpecifierMatch;

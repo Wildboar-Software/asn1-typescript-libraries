@@ -16,8 +16,13 @@ import {
     _decode_CirculationMember,
     type CirculationMember,
 } from "@wildboar/x400/IPMSHeadingExtensions";
+import { _decode_ORDescriptor } from "@wildboar/x400/IPMSInformationObjects";
 import {
+    matchPreparedORDescriptor,
+    normalizePreparedORDescriptor,
     oRDescriptorMatchTyped,
+    type PreparedORDescriptor,
+    preparedORDescriptorFrom,
     validateORDescriptorAssertion,
 } from "./oRDescriptorMatch.js";
 import { findRecipientElement } from "./recipientSpecifierMatch.js";
@@ -70,6 +75,48 @@ function decodeCirculationMemberAssertion (
 }
 
 export
+function decodePreparedCirculationMemberAssertion (
+    rule: string,
+    substringMode: boolean = false,
+): (el: ASN1Element) => PreparedORDescriptor {
+    return (el: ASN1Element): PreparedORDescriptor => {
+        const cm = _decode_CirculationMember(el);
+        if (!cm.circulation_recipient.recipient.formal_name) {
+            throw new ASN1ConstructionError(
+                `${rule}: formal-name is required in CirculationMember assertion`,
+                el,
+            );
+        }
+        return preparedORDescriptorFrom(cm.circulation_recipient.recipient, rule, substringMode);
+    };
+}
+
+export
+function circulationMemberValueMatcher (
+    extraFlags: number = 0,
+): (
+    assertion: PreparedORDescriptor,
+    value: ASN1Element,
+    getEqualityMatcher?: (attributeType: OBJECT_IDENTIFIER) => Matcher | undefined,
+    flags?: number,
+) => boolean | undefined {
+    return (assertion, value, getEqualityMatcher, flags = 0): boolean | undefined => {
+        const recipient = findCirculationRecipientElement(value, flags);
+        if (!recipient) {
+            return undefined;
+        }
+        const v = _decode_ORDescriptor(recipient);
+        return matchPreparedORDescriptor(
+            assertion,
+            v,
+            getEqualityMatcher,
+            flags | extraFlags,
+            true,
+        );
+    };
+}
+
+export
 function circulationMemberMatchTyped (
     assertion: CirculationMember,
     value: ASN1Element,
@@ -90,8 +137,11 @@ function circulationMemberMatchTyped (
 
 export
 const circulationMemberMatch: Matcher = createEqualityMatcher(
-    decodeCirculationMemberAssertion("circulationMemberMatch"),
-    circulationMemberMatchTyped,
+    decodePreparedCirculationMemberAssertion("circulationMemberMatch"),
+    circulationMemberValueMatcher(0),
+    undefined,
+    false,
+    normalizePreparedORDescriptor,
 );
 
 export default circulationMemberMatch;

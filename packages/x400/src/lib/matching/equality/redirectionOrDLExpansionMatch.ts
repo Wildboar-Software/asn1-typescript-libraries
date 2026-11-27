@@ -5,7 +5,9 @@ import {
 } from "@wildboar/x500";
 import type { ORAddressAndOptionalDirectoryName } from "@wildboar/x400/MTSAbstractService";
 import {
-    decodeNonEmptyORNameAssertion,
+    decodePreparedORNameAssertion,
+    matchPreparedORNameElement,
+    normalizePreparedORName,
     oRNameMatchTyped,
 } from "./oRNameMatch.js";
 import { matchRedirectionOrDLExpansionHistory } from "./redirectionOrDLExpansionMatchCommon.js";
@@ -16,10 +18,11 @@ const redirectionOrDLExpansionMatchTyped: TypedEquationFunction<ORAddressAndOpti
 
 export
 const redirectionOrDLExpansionMatch: Matcher = createEqualityMatcher(
-    decodeNonEmptyORNameAssertion("redirectionOrDLExpansionMatch"),
-    redirectionOrDLExpansionMatchTyped,
+    decodePreparedORNameAssertion("redirectionOrDLExpansionMatch"),
+    matchRedirectionOrDLExpansionHistory(matchPreparedORNameElement(0)),
     undefined,
     true,
+    normalizePreparedORName,
 );
 
 export default redirectionOrDLExpansionMatch;

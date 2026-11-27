@@ -6,11 +6,16 @@ import {
 } from "@wildboar/x500";
 import { ctStringsEqual } from "../constantTime.js";
 import {
-    IPMIdentifier,
+    type IPMIdentifier,
     _decode_IPMIdentifier,
 } from "@wildboar/x400/IPMSInformationObjects";
 import { strict as assert } from "node:assert";
-import { matchORNames, validateNonEmptyORNameAssertion } from "./oRNameMatch.js";
+import {
+    matchPreparedORNames,
+    normalizePreparedORName,
+    type PreparedORName,
+    preparedORNameFrom,
+} from "./oRNameMatch.js";
 import { normalizeMSString, prepareMSStringValue } from "./orAddressUtilities.js";
 import { BuiltInStandardAttributes, ORName } from "@wildboar/x400/MTSAbstractService";
 
@@ -18,25 +23,32 @@ const DUMMY_OR_NAME = new ORName(
     new BuiltInStandardAttributes({ iso_3166_alpha2_code: "XX" }),
 );
 
-function decodeIPMIdentifierAssertion (el: ASN1Element): IPMIdentifier {
+interface PreparedIPMIdentifier {
+    readonly user?: PreparedORName;
+    readonly userRelativeIdentifier: string;
+}
+
+function decodeIPMIdentifierAssertion (el: ASN1Element): PreparedIPMIdentifier {
     const decoded = _decode_IPMIdentifier(el);
-    if (decoded.user) {
-        validateNonEmptyORNameAssertion(decoded.user, "iPMIdentifierMatch");
-    }
-    return decoded;
+    return {
+        user: decoded.user
+            ? preparedORNameFrom(decoded.user, "iPMIdentifierMatch")
+            : undefined,
+        userRelativeIdentifier: decoded.user_relative_identifier,
+    };
 }
 
 function normalizeIPMIdentifierAssertion (
-    a: IPMIdentifier,
-): IPMIdentifier {
-    return new IPMIdentifier(
-        a.user,
-        normalizeMSString(a.user_relative_identifier, true),
-    );
+    a: PreparedIPMIdentifier,
+): PreparedIPMIdentifier {
+    return {
+        user: a.user ? normalizePreparedORName(a.user) : undefined,
+        userRelativeIdentifier: normalizeMSString(a.userRelativeIdentifier, true),
+    };
 }
 
 function matchIPMIdentifierFast (
-    a: IPMIdentifier,
+    a: PreparedIPMIdentifier,
     v: IPMIdentifier,
     getEqualityMatcher: ((attributeType: OBJECT_IDENTIFIER) => Matcher | undefined) | undefined,
     flags: number,
@@ -45,28 +57,34 @@ function matchIPMIdentifierFast (
         return false;
     }
     const vuri = prepareMSStringValue(v.user_relative_identifier, true, flags);
-    if (a.user_relative_identifier !== vuri) {
+    if (a.userRelativeIdentifier !== vuri) {
         return false;
     }
     if (a.user) {
         assert(v.user);
-        return matchORNames(a.user, v.user, getEqualityMatcher, flags);
+        return matchPreparedORNames(a.user, v.user, getEqualityMatcher, flags, true);
     }
     return true;
 }
 
 function matchIPMIdentifierConstantTime (
-    a: IPMIdentifier,
+    a: PreparedIPMIdentifier,
     v: IPMIdentifier,
     getEqualityMatcher: ((attributeType: OBJECT_IDENTIFIER) => Matcher | undefined) | undefined,
     flags: number,
 ): boolean | undefined {
     const userPresenceOk = !!a.user === !!v.user;
     const vuri = prepareMSStringValue(v.user_relative_identifier, true, flags);
-    const uriOk = ctStringsEqual(a.user_relative_identifier, vuri);
+    const uriOk = ctStringsEqual(a.userRelativeIdentifier, vuri);
     let userResult: boolean | undefined = true;
     if (a.user) {
-        userResult = matchORNames(a.user, v.user ?? DUMMY_OR_NAME, getEqualityMatcher, flags);
+        userResult = matchPreparedORNames(
+            a.user,
+            v.user ?? DUMMY_OR_NAME,
+            getEqualityMatcher,
+            flags,
+            true,
+        );
     }
     if (!userPresenceOk || !uriOk) {
         return false;
@@ -78,7 +96,7 @@ export
 const iPMIdentifierMatch: Matcher = createEqualityMatcher(
     decodeIPMIdentifierAssertion,
     (
-        assertion: IPMIdentifier,
+        assertion: PreparedIPMIdentifier,
         value,
         getEqualityMatcher?: (attributeType: OBJECT_IDENTIFIER) => Matcher | undefined,
         flags: number = 0,

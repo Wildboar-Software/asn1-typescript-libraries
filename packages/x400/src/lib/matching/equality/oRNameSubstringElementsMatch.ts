@@ -7,8 +7,10 @@ import {
     type ORName,
 } from "@wildboar/x400/MTSAbstractService";
 import {
-    decodeNonEmptyORNameAssertion,
+    decodePreparedORNameAssertion,
     MATCH_FLAG_SUBSTRING_MATCH,
+    matchPreparedORNameElement,
+    normalizePreparedORName,
     oRNameMatchTyped,
 } from "./oRNameMatch.js";
 
@@ -29,8 +31,11 @@ function oRNameSubstringElementsMatchTyped (
 
 export
 const oRNameSubstringElementsMatch: Matcher = createEqualityMatcher(
-    decodeNonEmptyORNameAssertion("oRNameSubstringElementsMatch"),
-    oRNameSubstringElementsMatchTyped,
+    decodePreparedORNameAssertion("oRNameSubstringElementsMatch"),
+    matchPreparedORNameElement(MATCH_FLAG_SUBSTRING_MATCH),
+    undefined,
+    false,
+    normalizePreparedORName,
 );
 
 export default oRNameSubstringElementsMatch;

@@ -39,7 +39,7 @@
         "@wildboar/asn1": "npm:@jsr/wildboar__asn1@11.x.x",
         "@wildboar/dn": "npm:@jsr/wildboar__dn@1.x.x",
         "@wildboar/or-address": "npm:@jsr/wildboar__or-address@1.x.x",
-        "@wildboar/teletex": "npm:@jsr/wildboar__teletex@^1.0.2"
+        "@wildboar/teletex": "npm:@jsr/wildboar__teletex@^1.0.3"
     },
     "type": "module",
     "main": "./src/index.js",

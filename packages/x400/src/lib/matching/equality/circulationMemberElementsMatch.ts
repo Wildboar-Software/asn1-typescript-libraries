@@ -9,8 +9,16 @@ import {
     type ORDescriptor,
 } from "@wildboar/x400/IPMSInformationObjects";
 import { oRDescriptorElementsMatchTyped } from "./oRDescriptorElementsMatch.js";
-import { validateORDescriptorAssertion } from "./oRDescriptorMatch.js";
-import { findCirculationRecipientElement } from "./circulationMemberMatch.js";
+import {
+    normalizePreparedORDescriptor,
+    type PreparedORDescriptor,
+    preparedORDescriptorFrom,
+} from "./oRDescriptorMatch.js";
+import { MATCH_FLAG_ELEMENTS_MATCH } from "./oRNameMatch.js";
+import {
+    circulationMemberValueMatcher,
+    findCirculationRecipientElement,
+} from "./circulationMemberMatch.js";
 
 /**
  * Decode only the `circulation-recipient.recipient` O/R descriptor.
@@ -19,7 +27,7 @@ import { findCirculationRecipientElement } from "./circulationMemberMatch.js";
  * checkmark and the other recipient-specifier components are not decoded.
  * `CirculationMember` still requires `formal-name` to be present.
  */
-function decodeCirculationMemberElementsAssertion (el: ASN1Element): ORDescriptor {
+function decodeCirculationMemberElementsAssertion (el: ASN1Element): PreparedORDescriptor {
     const recipient = findCirculationRecipientElement(el);
     if (!recipient) {
         throw new ASN1ConstructionError(
@@ -34,7 +42,7 @@ function decodeCirculationMemberElementsAssertion (el: ASN1Element): ORDescripto
             el,
         );
     }
-    return validateORDescriptorAssertion(descriptor, "circulationMemberElementsMatch");
+    return preparedORDescriptorFrom(descriptor, "circulationMemberElementsMatch");
 }
 
 export
@@ -59,7 +67,10 @@ function circulationMemberElementsMatchTyped (
 export
 const circulationMemberElementsMatch: Matcher = createEqualityMatcher(
     decodeCirculationMemberElementsAssertion,
-    circulationMemberElementsMatchTyped,
+    circulationMemberValueMatcher(MATCH_FLAG_ELEMENTS_MATCH),
+    undefined,
+    false,
+    normalizePreparedORDescriptor,
 );
 
 export default circulationMemberElementsMatch;
