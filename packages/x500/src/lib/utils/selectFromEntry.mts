@@ -293,6 +293,7 @@ function selectAttributesByContext (
                     contexts,
                     getContextMatcher,
                     determineAbsentMatch,
+                    getEqualityMatcher,
                 )) {
                     return false;
                 }
@@ -315,7 +316,7 @@ function contextListHasFallback (
         const assertedType = preference[p].contextType;
         for (let c = 0; c < contexts.length; c++) {
             const context = contexts[c];
-            if (context.contextType.isEqualTo(assertedType) && context.fallback) {
+            if (context.fallback && context.contextType.isEqualTo(assertedType)) {
                 return true;
             }
         }
