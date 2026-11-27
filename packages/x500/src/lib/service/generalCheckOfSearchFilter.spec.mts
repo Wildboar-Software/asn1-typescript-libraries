@@ -215,6 +215,64 @@ describe("generalCheckOfSearchFilter", () => {
         expect(state.searchAttributeCombinationViolations).toEqual(expected_step ? [combo] : []);
     });
 
+    it("accepts an OR filter where each branch satisfies an OR attributeCombination independently", () => {
+        const filter: Filter = {
+            or: [
+                {
+                    item: {
+                        equality: new AttributeValueAssertion(
+                            commonName["&id"],
+                            commonName.encoderFor["&Type"]!({ uTF8String: "Alice" }, BER),
+                        ),
+                    },
+                },
+                {
+                    item: {
+                        equality: new AttributeValueAssertion(
+                            streetAddress["&id"],
+                            streetAddress.encoderFor["&Type"]!({ uTF8String: "123 Main St" }, BER),
+                        ),
+                    },
+                },
+            ],
+        };
+        const combo: AttributeCombination = {
+            or: [
+                { attribute: commonName["&id"] },
+                { attribute: streetAddress["&id"] },
+            ],
+        };
+        const search = new SearchArgumentData({ rdnSequence: [] }, undefined, filter);
+        const rule = new SearchRule(1, rule_oid, undefined, undefined, [
+            new RequestAttribute(commonName["&id"]),
+            new RequestAttribute(streetAddress["&id"]),
+        ], combo);
+        const [step, state] = generalCheckOfSearchFilter(search, rule, getAttributeParentTypes);
+        expect(step).toBe(0);
+        expect(state.searchAttributeCombinationViolations).toEqual([]);
+    });
+
+    it("fails closed at step 3 when a filter exceeds attributeCombination complexity limits", () => {
+        let filter: Filter = { item: { present: commonName["&id"] } };
+        for (let i = 0; i < 12; i++) {
+            filter = { not: filter };
+        }
+        const combo: AttributeCombination = {
+            or: [
+                { attribute: commonName["&id"] },
+                { attribute: streetAddress["&id"] },
+            ],
+        };
+        const search = new SearchArgumentData({ rdnSequence: [] }, undefined, filter);
+        const rule = new SearchRule(1, rule_oid, undefined, undefined, [
+            new RequestAttribute(commonName["&id"]),
+            new RequestAttribute(streetAddress["&id"]),
+        ], combo);
+        const [step, state] = generalCheckOfSearchFilter(search, rule, getAttributeParentTypes);
+        expect(step).toBe(3);
+        expect(state.searchAttributeCombinationViolations).toEqual([combo]);
+    });
+
     // TODO: "If a matched entry or compound entry does not contain any of the attributes defined in this component, it is not included in the result."
     it("is not impacted by outputAttributeTypes", () => {
         const search = new SearchArgumentData(

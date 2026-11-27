@@ -219,6 +219,7 @@ export * from './lib/errors.mjs';
 
 export {
     checkAttributeCombination,
+    type CheckAttributeCombinationOptions,
 } from "./lib/service/checkAttributeCombination.mjs";
 export {
     checkContextCombination,
