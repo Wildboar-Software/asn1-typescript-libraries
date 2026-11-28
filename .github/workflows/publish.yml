@@ -22,7 +22,7 @@ jobs:
         run: npm ci
       - name: Install dependencies for ${{ matrix.package }}
         working-directory: packages/${{ matrix.package }}
-        run: npm install
+        run: npm ci
       - name: Add commit hash to index.mts
         working-directory: packages/${{ matrix.package }}
         run: |
