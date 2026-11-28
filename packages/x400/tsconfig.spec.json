@@ -12,8 +12,6 @@
   },
   "include": [
     "**/*.mts",
-    "**/*.ts",
-    "**/*.spec.mts",
-    "**/*.spec.ts"
+    "**/*.spec.mts"
   ]
 }
