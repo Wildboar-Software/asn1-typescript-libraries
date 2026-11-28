@@ -1,8 +1,8 @@
 import {
     ASN1ConstructionError,
+    ASN1SizeError,
     ASN1TagClass,
     ASN1UniversalType,
-    ASN1ValueError,
     type INTEGER,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
@@ -55,7 +55,7 @@ const valueCountMatch: Matcher = (
     }
     const expected: INTEGER = $._decodeInteger(assertion);
     if (!(flags & MATCH_FLAG_ASSERTION_VALIDATED) && expected < 1) {
-        throw new ASN1ValueError(
+        throw new ASN1SizeError(
             `valueCountMatch: assertion must be >= 1, got ${expected.toString()}`,
             assertion,
         );

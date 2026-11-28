@@ -100,7 +100,7 @@ const mSStringListMatch: Matcher = createEqualityMatcher(
             : matchListFast(assertion, vElements, flags);
     },
     undefined,
-    true,
+    false,
     normalizeCaseIgnoreList,
 );
 

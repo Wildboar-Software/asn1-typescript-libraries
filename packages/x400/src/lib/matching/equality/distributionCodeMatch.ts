@@ -87,7 +87,7 @@ function matchDistributionCodeConstantTime (
             ? prepareMSStringValue(univOrBmpToString(v.alphanumeric_code!), true, flags)
             : "";
         const cmp = ctStringsEqual(a.alphanumericCode!, vcode);
-        alphaMatch = v.alphanumeric_code && cmp;
+        alphaMatch = !!v.alphanumeric_code && cmp;
     }
     if (bothHaveOid) {
         return oidMatch && (alphaMatch || (!aHasAlpha && !v.alphanumeric_code));

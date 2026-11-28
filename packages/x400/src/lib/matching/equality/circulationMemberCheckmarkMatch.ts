@@ -55,6 +55,9 @@ const circulationMemberCheckmarkMatch: Matcher = createEqualityMatcher(
                 ) {
                     found = true;
                 }
+                if (!ct && found && hasRecipient) {
+                    return true;
+                }
             }
         }
         if (!hasRecipient) {

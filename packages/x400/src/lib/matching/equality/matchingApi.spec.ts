@@ -528,7 +528,9 @@ describe("X.400 matchers decode the assertion", () => {
 
         const encodeList = $._encodeSequenceOf<ASN1Element>(() => (el) => el, DER);
         const singleList = encodeList([ms("A")], DER);
-        expect(mSStringListMatch(singleList, stored(singleList), undefined, MATCH_FLAG_USED_FOR_NAME)).toBeUndefined();
+        expect(mSStringMatch(ms("A"), stored(ms("a")), undefined, MATCH_FLAG_USED_FOR_NAME)).toBe(true);
+        expect(mSStringCaseSensitiveMatch(ms("A"), stored(ms("A")), undefined, MATCH_FLAG_USED_FOR_NAME)).toBe(true);
+        expect(mSStringListMatch(singleList, stored(singleList), undefined, MATCH_FLAG_USED_FOR_NAME)).toBe(true);
         expect(mSSingleSubstringListMatch(singleList, stored(singleList), undefined, MATCH_FLAG_USED_FOR_NAME)).toBeUndefined();
     });
 
