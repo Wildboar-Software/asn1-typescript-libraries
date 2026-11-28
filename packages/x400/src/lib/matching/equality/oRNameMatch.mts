@@ -114,19 +114,6 @@ function normalizePreparedORName (raw: PreparedORName): PreparedORName {
     };
 }
 
-export
-function validateNonEmptyORNameAssertion (decoded: ORName, rule: string): ORName {
-    preparedORNameFrom(decoded, rule);
-    return decoded;
-}
-
-export
-function decodeNonEmptyORNameAssertion (rule: string): (el: ASN1Element) => ORName {
-    return (el: ASN1Element): ORName => (
-        validateNonEmptyORNameAssertion(_decode_ORName(el), rule)
-    );
-}
-
 function compareModeFromFlags (outerFlags: number): ORAddressCompareMode {
     if (outerFlags & MATCH_FLAG_SUBSTRING_MATCH) {
         return "substrings";

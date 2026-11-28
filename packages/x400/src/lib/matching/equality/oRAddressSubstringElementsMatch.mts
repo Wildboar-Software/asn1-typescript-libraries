@@ -11,73 +11,10 @@ import {
 } from "@wildboar/x400/MTSAbstractService";
 import {
     compareORAddressInfo,
-    normalizeMSString,
     normalizeORAddressInfo,
     type ORAddressInfo,
     orAddressToInfo,
 } from "./orAddressUtilities.mjs";
-
-export
-function isSubstringSubset (value: unknown, assertion: unknown, depth: number = 0): boolean {
-    if (depth > 16) {
-        return false;
-    }
-    if (
-        (typeof value === "number" || typeof value === "bigint")
-        && (typeof assertion === "number" || typeof assertion === "bigint")
-    ) {
-        // Loose equality so a number matches the same bigint.
-        return value == assertion;
-    }
-    const typeofValue = typeof value;
-    const typeofAssertion = typeof assertion;
-    if (typeofValue !== typeofAssertion) {
-        return false;
-    }
-    if (typeof value === "string" && typeof assertion === "string") {
-        const a = normalizeMSString(assertion, true);
-        const v = normalizeMSString(value, true);
-        if (a.length === 0) {
-            return v.length === 0;
-        }
-        return v.indexOf(a) >= 0;
-    }
-    if (typeof value === "object" && typeof assertion === "object") {
-        if (value === null || assertion === null) {
-            return value === assertion;
-        }
-        if (ArrayBuffer.isView(value) || ArrayBuffer.isView(assertion)) {
-            return false;
-        }
-        if (Array.isArray(value) !== Array.isArray(assertion)) {
-            return false;
-        }
-        if (Array.isArray(assertion) && Array.isArray(value)) {
-            for (let i = 0; i < assertion.length; i++) {
-                if (assertion[i] === undefined) {
-                    continue;
-                }
-                if (i >= value.length || !isSubstringSubset(value[i], assertion[i], depth + 1)) {
-                    return false;
-                }
-            }
-            return true;
-        }
-        for (const [ k, aVal ] of Object.entries(assertion)) {
-            if (aVal === undefined) {
-                continue;
-            }
-            if (
-                !Object.prototype.hasOwnProperty.call(value, k)
-                || !isSubstringSubset((value as Record<string, unknown>)[k], aVal, depth + 1)
-            ) {
-                return false;
-            }
-        }
-        return true;
-    }
-    return value === assertion;
-}
 
 export
 function orAddressIsSubstringSubset (

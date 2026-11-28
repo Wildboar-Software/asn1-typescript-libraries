@@ -22,7 +22,6 @@ import {
     oRDescriptorMatchTyped,
     type PreparedORDescriptor,
     preparedORDescriptorFrom,
-    validateORDescriptorAssertion,
 } from "./oRDescriptorMatch.mjs";
 
 // Matches `@wildboar/asn1` `_parse_set`'s `components.length + 100` DoS cap
@@ -68,18 +67,6 @@ function findRecipientElement (
         }
     }
     return found;
-}
-
-export
-function decodeNonEmptyRecipientSpecifierAssertion (
-    rule: string,
-    substringMode: boolean = false,
-): (el: ASN1Element) => RecipientSpecifier {
-    return (el: ASN1Element): RecipientSpecifier => {
-        const rs = _decode_RecipientSpecifier(el);
-        validateORDescriptorAssertion(rs.recipient, rule, substringMode);
-        return rs;
-    };
 }
 
 export

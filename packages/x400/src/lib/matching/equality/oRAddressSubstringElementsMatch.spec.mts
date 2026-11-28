@@ -14,128 +14,13 @@ import {
     _encode_ORAddress,
     extended_network_address,
 } from "@wildboar/x400/MTSAbstractService";
-import oRAddressSubstringElementsMatch, {
-    isSubstringSubset,
-} from "./oRAddressSubstringElementsMatch.mjs";
+import oRAddressSubstringElementsMatch from "./oRAddressSubstringElementsMatch.mjs";
 
 const attrType = ObjectIdentifier.fromString("2.5.4.3");
 
 function stored(el: DERElement): AttributeTypeAndValue {
     return new AttributeTypeAndValue(attrType, el);
 }
-
-describe("isSubstringSubset()", () => {
-    test("#1", () => {
-        const value = {
-            asdf: "zxcv",
-            qwer: "yuiop",
-        };
-        const assertion = {
-            asdf: "xc",
-            qwer: "op",
-        };
-        expect(isSubstringSubset(value, assertion)).toBe(true);
-    });
-    test("#2", () => {
-        const value = {
-            asdf: "zxcv",
-            qwer: "yuiop",
-        };
-        const assertion = {
-            asdf: "xc",
-            qwer: "yugioh... am I right???",
-        };
-        expect(isSubstringSubset(value, assertion)).toBe(false);
-    });
-    test("#3", () => {
-        const value = {
-            asdf: "zxcv",
-            qwer: {
-                big: "boi",
-            },
-        };
-        const assertion = {
-            asdf: "xc",
-            qwer: {
-                big: "oi",
-            },
-        };
-        expect(isSubstringSubset(value, assertion)).toBe(true);
-    });
-    test("#4", () => {
-        const value = {
-            asdf: "zxcv",
-            qwer: {
-                big: "boi",
-            },
-        };
-        const assertion = {
-            asdf: "xc",
-            qwer: {
-                big: "chungus",
-            },
-        };
-        expect(isSubstringSubset(value, assertion)).toBe(false);
-    });
-    test("#5", () => {
-        const value = {
-            asdf: "zxcv",
-            qwer: {
-                big: "boi",
-            },
-        };
-        const assertion = {
-            asdf: "zxcv",
-            qwer: {
-                big: "boi",
-            },
-        };
-        expect(isSubstringSubset(value, assertion)).toBe(true);
-    });
-    test("#6", () => {
-        const value = {
-            asdf: "zxcv",
-            qwer: {
-                big: "boi",
-            },
-        };
-        const assertion = {
-            asdf: "zxcv",
-            qwer: [ "big", "boi" ],
-        };
-        expect(isSubstringSubset(value, assertion)).toBe(false);
-    });
-    test("compares integers with loose equality", () => {
-        expect(isSubstringSubset(5, 5n)).toBe(true);
-        expect(isSubstringSubset(5n, 6)).toBe(false);
-        expect(isSubstringSubset({ terminalType: 3 }, { terminalType: 3n })).toBe(true);
-        expect(isSubstringSubset({ terminalType: 3 }, { terminalType: 4 })).toBe(false);
-    });
-    test("matches when stored value has extra attributes omitted from assertion", () => {
-        expect(isSubstringSubset(
-            { countryName: "US", organizationName: "RCC", surname: "McArthur" },
-            { organizationName: "rc" },
-        )).toBe(true);
-    });
-    test("fails when stored value is missing an asserted attribute", () => {
-        expect(isSubstringSubset(
-            { countryName: "US" },
-            { countryName: "US", organizationName: "rc" },
-        )).toBe(false);
-        expect(isSubstringSubset({}, { organizationName: "rc" })).toBe(false);
-    });
-    test("ignores undefined asserted fields and rejects inherited Object.prototype keys", () => {
-        expect(isSubstringSubset(
-            { surname: "McArthur", given_name: "Douglas" },
-            { surname: "arthur", given_name: undefined },
-        )).toBe(true);
-        expect(isSubstringSubset({}, { toString: "object" })).toBe(false);
-    });
-    test("treats space-only assertion as a single significant space", () => {
-        expect(isSubstringSubset("Dundee", "   ")).toBe(false);
-        expect(isSubstringSubset("Message Store", "   ")).toBe(true);
-    });
-});
 
 describe("oRAddressSubstringElementsMatch()", () => {
     test("X.413 §12.4.3 example: OrganizationName=rc, PersonalName.surname=arthur matches superset ORAddress", () => {

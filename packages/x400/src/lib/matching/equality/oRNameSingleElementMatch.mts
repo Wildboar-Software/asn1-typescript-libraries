@@ -36,7 +36,6 @@ function assertedCountryFromMSString (assertion: string): string | null {
     return assertion.length === 2 ? assertion : null;
 }
 
-export
 function* extractStrings (value: unknown, depth: number = 0): Generator<string> {
     if (depth > 10) {
         return;

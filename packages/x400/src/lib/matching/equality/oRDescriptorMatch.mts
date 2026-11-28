@@ -17,7 +17,6 @@ import {
     normalizePreparedORName,
     type PreparedORName,
     preparedORNameFrom,
-    validateNonEmptyORNameAssertion,
 } from "./oRNameMatch.mjs";
 import {
     matchMSSubstring,
@@ -37,33 +36,6 @@ interface PreparedORDescriptor {
     readonly formalName?: PreparedORName;
     readonly freeFormName?: string;
     readonly telephoneNumber?: string;
-}
-
-export
-function validateORDescriptorAssertion (
-    d: ORDescriptor,
-    rule: string,
-    substringMode: boolean = false,
-): ORDescriptor {
-    if (d.isEmpty()) {
-        throw new Error(`${rule}: assertion is empty`);
-    }
-    if (d.formal_name) {
-        validateNonEmptyORNameAssertion(d.formal_name, rule);
-    }
-    if (d.free_form_name !== undefined) {
-        const norm = normalizeMSString(teletexBytesToString(d.free_form_name), true);
-        if (substringMode && norm.length === 0) {
-            throw new Error(`${rule}: free-form-name substring in assertion is empty`);
-        }
-    }
-    if (d.telephone_number !== undefined) {
-        const norm = normalizeMSString(d.telephone_number, true);
-        if (substringMode && norm.length === 0) {
-            throw new Error(`${rule}: telephone-number substring in assertion is empty`);
-        }
-    }
-    return d;
 }
 
 export

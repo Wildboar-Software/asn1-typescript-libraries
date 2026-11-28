@@ -23,7 +23,6 @@ import {
     oRDescriptorMatchTyped,
     type PreparedORDescriptor,
     preparedORDescriptorFrom,
-    validateORDescriptorAssertion,
 } from "./oRDescriptorMatch.mjs";
 import { findRecipientElement } from "./recipientSpecifierMatch.mjs";
 
@@ -66,24 +65,6 @@ function findCirculationRecipientElement (
         }
     }
     return found;
-}
-
-export
-function decodeCirculationMemberAssertion (
-    rule: string,
-    substringMode: boolean = false,
-): (el: ASN1Element) => CirculationMember {
-    return (el: ASN1Element): CirculationMember => {
-        const cm = _decode_CirculationMember(el);
-        if (!cm.circulation_recipient.recipient.formal_name) {
-            throw new ASN1ConstructionError(
-                `${rule}: formal-name is required in CirculationMember assertion`,
-                el,
-            );
-        }
-        validateORDescriptorAssertion(cm.circulation_recipient.recipient, rule, substringMode);
-        return cm;
-    };
 }
 
 export

@@ -17,7 +17,7 @@ import {
     terminal_type,
 } from "@wildboar/x400/MTSAbstractService";
 import { _encode_MSString } from "@wildboar/x400/MSMatchingRules";
-import oRNameSingleElementMatch, { extractStrings } from "./oRNameSingleElementMatch.mjs";
+import oRNameSingleElementMatch from "./oRNameSingleElementMatch.mjs";
 
 const testAttrType = ObjectIdentifier.fromString("2.6.4.3.51");
 const id_at_commonName = ObjectIdentifier.fromString("2.5.4.3");
@@ -31,29 +31,6 @@ function stored(el: ASN1Element): AttributeTypeAndValue {
 function ms(text: string): ASN1Element {
     return _encode_MSString({ bmp: text }, DER);
 }
-
-describe("extractStrings()", () => {
-    test("#1", () => {
-        const value = {
-            asdf: "zxcv",
-            qwer: "yuiop",
-        };
-        const expected: string[] = [ "zxcv", "yuiop" ];
-        expect(Array.from(extractStrings(value))).toEqual(expected);
-    });
-    test("#2", () => {
-        const value = {
-            asdf: "zxcv",
-            qwer: {
-                baz: "foo",
-                quux: "baz",
-            },
-            bytes: new Uint8Array([1, 2, 3]),
-        };
-        const expected: string[] = [ "zxcv", "foo", "baz" ];
-        expect(Array.from(extractStrings(value))).toEqual(expected);
-    });
-});
 
 describe("oRNameSingleElementMatch (ITU-T Rec. X.413 §12.4.7)", () => {
     test("matches mixed-case and space-padded Directory Name attributes and ignores non-string ATAVs", () => {

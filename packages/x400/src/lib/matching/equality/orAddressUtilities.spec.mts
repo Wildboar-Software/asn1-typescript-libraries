@@ -39,7 +39,6 @@ import oRAddressElementsMatch from "./oRAddressElementsMatch.mjs";
 import {
     compareORAddressInfo,
     orAddressesMatch,
-    recursivelyNormalize,
 } from "./orAddressUtilities.mjs";
 
 const testAttrType = ObjectIdentifier.fromString("2.5.4.3");
@@ -51,23 +50,6 @@ function stored(el: ASN1Element): AttributeTypeAndValue {
 function bmp(s: string, lang?: string): UniversalOrBMPString {
     return new UniversalOrBMPString({ two_octets: s }, lang);
 }
-
-describe("recursivelyNormalize()", () => {
-    test("normalizes strings without mutating the input object", () => {
-        const value = {
-            asdf: "  \r\n zx  \r\n cv",
-            qwer: "yuiop  ",
-            nested: ["  hello  world "],
-        };
-        const expected = {
-            asdf: "ZX CV",
-            qwer: "YUIOP",
-            nested: ["HELLO WORLD"],
-        };
-        expect(recursivelyNormalize(value)).toEqual(expected);
-        expect(value.nested[0]).toBe("  hello  world ");
-    });
-});
 
 describe("ORAddress matching utilities, oRAddressMatch, and oRAddressElementsMatch", () => {
     test("postal-code extension is compared (numeric vs printable) and never discarded", () => {

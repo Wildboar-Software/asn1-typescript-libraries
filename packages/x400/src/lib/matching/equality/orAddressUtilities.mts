@@ -8,10 +8,8 @@ import {
 import * as $ from "@wildboar/asn1/functional";
 import teletexToString from "@wildboar/teletex";
 import {
-    type BuiltInStandardAttributes,
     type DomainDefinedAttributeJSON,
-    ORAddress,
-    type PersonalName,
+    type ORAddress,
     type PersonalNameJSON,
     UniversalOrBMPString,
     _decode_UniversalOrBMPString,
@@ -209,7 +207,6 @@ function appendCandidates<T> (existing: T[] | undefined, items: readonly T[]): T
     return existing.concat(items);
 }
 
-export
 interface PersonalNameInfo {
     surname: string;
     givenName?: string;
@@ -662,44 +659,6 @@ const handlers: Map<number, ExtensionHandler> = new Map([
     [ Number(extended_network_address["&id"]!), process_extended_network_address_ext ],
     [ Number(terminal_type["&id"]!), process_terminal_type_ext ],
 ]);
-
-export
-function comparePersonalName (a: PersonalName, b: PersonalName): boolean {
-    if (normalizeMSString(a.surname) !== normalizeMSString(b.surname)) {
-        return false;
-    }
-    if ((a.given_name === undefined) !== (b.given_name === undefined)) {
-        return false;
-    }
-    if (a.given_name !== undefined && normalizeMSString(a.given_name) !== normalizeMSString(b.given_name!)) {
-        return false;
-    }
-    if ((a.initials === undefined) !== (b.initials === undefined)) {
-        return false;
-    }
-    if (a.initials !== undefined && normalizeMSString(a.initials) !== normalizeMSString(b.initials!)) {
-        return false;
-    }
-    if ((a.generation_qualifier === undefined) !== (b.generation_qualifier === undefined)) {
-        return false;
-    }
-    if (
-        a.generation_qualifier !== undefined
-        && normalizeMSString(a.generation_qualifier) !== normalizeMSString(b.generation_qualifier!)
-    ) {
-        return false;
-    }
-    return true;
-}
-
-export
-function compareBuiltInStandardAttributes (
-    a: BuiltInStandardAttributes,
-    b: BuiltInStandardAttributes,
-): boolean {
-    return (orAddressesMatch(new ORAddress(a), new ORAddress(b)) === true)
-        || (a.isEmpty() && b.isEmpty());
-}
 
 export
 function orAddressToInfo (addr: ORAddress, normalize: boolean = true): ORAddressInfo | null {
@@ -1540,55 +1499,4 @@ function decodeMSStringElement (el: ASN1Element): string {
                 el,
             );
     }
-}
-
-function recursivelyNormalizeAtDepth (value: unknown, depth: number): unknown {
-    if (depth > 16) {
-        return value;
-    }
-    if (typeof value === "string") {
-        return normalizeMSString(value);
-    }
-    if (ArrayBuffer.isView(value)) {
-        return value;
-    }
-    if (Array.isArray(value)) {
-        if (value.length === 0) {
-            return value;
-        }
-        return value.map((item) => recursivelyNormalizeAtDepth(item, depth + 1));
-    }
-    if (value instanceof Map) {
-        const out = new Map<unknown, unknown>();
-        for (const [ k, v ] of value) {
-            out.set(recursivelyNormalizeAtDepth(k, depth + 1), recursivelyNormalizeAtDepth(v, depth + 1));
-        }
-        return out;
-    }
-    if (value instanceof Set) {
-        const out = new Set<unknown>();
-        for (const item of value) {
-            out.add(recursivelyNormalizeAtDepth(item, depth + 1));
-        }
-        return out;
-    }
-    if (typeof value === "object" && value !== null) {
-        const out: Record<string, unknown> = {};
-        for (const [ key, val ] of Object.entries(value)) {
-            out[key] = recursivelyNormalizeAtDepth(val, depth + 1);
-        }
-        return out;
-    }
-    return value;
-}
-
-export function recursivelyNormalize (value: string): string;
-export function recursivelyNormalize<T> (value: readonly T[]): T[];
-export function recursivelyNormalize<K, V> (value: ReadonlyMap<K, V>): Map<K, V>;
-export function recursivelyNormalize<T> (value: ReadonlySet<T>): Set<T>;
-export function recursivelyNormalize<T extends ArrayBufferView> (value: T): T;
-export function recursivelyNormalize<T extends Record<string, unknown>> (value: T): T;
-export function recursivelyNormalize<T extends number | bigint | boolean | symbol | null | undefined> (value: T): T;
-export function recursivelyNormalize (value: unknown): unknown {
-    return recursivelyNormalizeAtDepth(value, 0);
 }

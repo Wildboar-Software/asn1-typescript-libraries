@@ -86,8 +86,6 @@ import circulationMemberElementsMatch from "./circulationMemberElementsMatch.mjs
 import circulationMemberSubstringElementsMatch from "./circulationMemberSubstringElementsMatch.mjs";
 import circulationMemberCheckmarkMatch from "./circulationMemberCheckmarkMatch.mjs";
 import capabilityMatch from "./capabilityMatch.mjs";
-import { recursivelyNormalize } from "./orAddressUtilities.mjs";
-import { extractStrings } from "./oRNameSingleElementMatch.mjs";
 import {
     Capability,
     _encode_Capability,
@@ -712,14 +710,7 @@ describe("X.400 matchers decode the assertion", () => {
         }
     });
 
-    test("bounds SET element scans, preserves typed arrays, and prepares assertions once across multi-valued attributes (Issue 3.2)", () => {
-        // Typed arrays (e.g. PresentationAddress selectors/nAddresses) are preserved without per-byte expansion
-        const bytes = new Uint8Array([1, 2, 3, 4, 5]);
-        const normalizedObj = recursivelyNormalize({ label: "  hello   world ", raw: bytes });
-        expect(normalizedObj.label).toBe("HELLO WORLD");
-        expect(normalizedObj.raw).toBe(bytes);
-        expect([...extractStrings({ label: "ok", raw: bytes })]).toEqual(["ok"]);
-
+    test("bounds SET element scans and prepares assertions once across multi-valued attributes (Issue 3.2)", () => {
         // Oversized SET payloads (> DoS cap) and bare `{ NULL }` SETs return undefined
         const validCM = _encode_CirculationMember(
             new CirculationMember(
