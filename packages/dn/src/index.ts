@@ -22,6 +22,8 @@ export { rdnSequenceToKey } from "./lib/RDNSequence.ta.mjs";
 export { default as distinguishedTypeToString } from "./lib/atav/distinguishedTypeToString.mjs";
 export {
     default as attributeTypeAndValueToString,
+    attributeTypeAndValueToUnescapedString,
+    attributeTypeAndValueToLdapString,
     attributeTypeAndValueToKey,
     type StringifyAttributeTypeAndValue,
 } from "./lib/atav/tostr.mjs";

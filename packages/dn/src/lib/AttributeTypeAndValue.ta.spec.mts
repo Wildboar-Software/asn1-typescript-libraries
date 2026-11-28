@@ -52,13 +52,22 @@ describe("AttributeTypeAndValue string forms", () => {
     it("uses the short name for a registered LDAP attribute type", () => {
         const value = new AttributeTypeAndValue(commonName, utf8Element("CN"));
         expect(value.toString()).toBe("cn=CN");
+        expect(value.toUnescapedString()).toBe("cn=CN");
         expect(value.toLdapString()).toBe("cn=CN");
+    });
+
+    it("escapes values in toString() and toLdapString(), and leaves them unescaped in toUnescapedString()", () => {
+        const value = new AttributeTypeAndValue(commonName, utf8Element("#Smith, Jr"));
+        expect(value.toString()).toBe("cn=\\#Smith\\, Jr");
+        expect(value.toLdapString()).toBe("cn=\\#Smith\\, Jr");
+        expect(value.toUnescapedString()).toBe("cn=#Smith, Jr");
     });
 
     it("keeps a non-LDAP short name only outside the LDAP form", () => {
         const organizationIdentifier = ObjectIdentifier.fromString("2.5.4.97");
         const value = new AttributeTypeAndValue(organizationIdentifier, utf8Element("NTRUS-123"));
         expect(value.toString()).toBe("organizationIdentifier=NTRUS-123");
+        expect(value.toUnescapedString()).toBe("organizationIdentifier=NTRUS-123");
         expect(value.toLdapString()).toBe("2.5.4.97=#0c094e545255532d313233");
     });
 
@@ -70,7 +79,7 @@ describe("AttributeTypeAndValue string forms", () => {
     it("produces identical keys for values that would match", () => {
         const a = new AttributeTypeAndValue(commonName, utf8Element("  Smith,  JOHN "));
         const b = new AttributeTypeAndValue(commonName, utf8Element("smith, john"));
-        expect(a.toKey()).toBe("2.5.4.3=smith, john");
+        expect(a.toKey()).toBe("2.5.4.3=smith\\, john");
         expect(a.toKey()).toBe(b.toKey());
     });
 });
@@ -146,18 +155,19 @@ describe("AttributeTypeAndValue string methods", () => {
         expect(parsed.type).toBe("cn");
         expect(parsed.value).toBe("Smith, J");
         const atav = AttributeTypeAndValue.fromParsedX520(parsed);
-        expect(atav.toString()).toBe("cn=Smith, J");
-        expect(atav.toString(true)).toBe("cn=Smith\\, J");
+        expect(atav.toString()).toBe("cn=Smith\\, J");
+        expect(atav.toUnescapedString()).toBe("cn=Smith, J");
+        expect(AttributeTypeAndValue.fromStringX520(atav.toString()).toUnescapedString()).toBe("cn=Smith, J");
         expect(AttributeTypeAndValue.fromStringX520("cn=Smith").toString()).toBe("cn=Smith");
         const interop = atav.toInteropString();
-        expect(AttributeTypeAndValue.fromStringX520(interop).toString()).toBe("cn=Smith, J");
+        expect(AttributeTypeAndValue.fromStringX520(interop).toString()).toBe("cn=Smith\\, J");
     });
 
     it("exposes the type name, value string, and key", () => {
         const atav = new AttributeTypeAndValue(commonName, utf8Element("Ab"));
         expect(atav.getTypeName()).toBe("cn");
         expect(atav.valueToString()).toBe("Ab");
-        expect(atav.toKey()).toBe(atav.toKey(false));
+        expect(atav.toKey()).toBe("2.5.4.3=ab");
         expect(atav.compareValue(utf8Element("ab"))).toBe(true);
     });
 

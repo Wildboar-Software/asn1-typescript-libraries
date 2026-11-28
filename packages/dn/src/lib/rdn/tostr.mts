@@ -11,8 +11,7 @@ import type { AttributeTypeAndValue } from "../AttributeTypeAndValue.ta.mjs";
  * This function stringifies a relative distinguished name according to
  * [IETF RFC 4514](https://www.rfc-editor.org/rfc/rfc4514). Each attribute
  * type and value is converted as {@link AttributeTypeAndValue.toString}
- * does, except that each value is escaped, and they are joined with `+` in
- * their existing order.
+ * does, and they are joined with `+` in their existing order.
  * 
  * @param rdn The relative distinguished name to stringify.
  * @param stringifyAtav Optional function that replaces conversion of each
@@ -30,10 +29,10 @@ function relativeDistinguishedNameToString (
         return "";
     }
     if (rdn.length === 1) {
-        return attributeTypeAndValueToString(rdn[0], true, false, stringifyAtav);
+        return attributeTypeAndValueToString(rdn[0], stringifyAtav);
     }
     return rdn
-        .map((atav) => attributeTypeAndValueToString(atav, true, false, stringifyAtav))
+        .map((atav) => attributeTypeAndValueToString(atav, stringifyAtav))
         .join("+");
 }
 

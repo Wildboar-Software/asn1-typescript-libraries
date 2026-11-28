@@ -11,12 +11,14 @@ import { prepString } from "../prepString.mjs";
  * @description
  *
  * Replaces the built-in conversion of a single {@link AttributeTypeAndValue}
- * used by {@link attributeTypeAndValueToString} and the RDN, RDN sequence, and
- * `Name` stringifiers that call it. Return `undefined` to use the built-in
- * conversion for that pair.
+ * used by {@link attributeTypeAndValueToString},
+ * {@link attributeTypeAndValueToUnescapedString},
+ * {@link attributeTypeAndValueToLdapString}, {@link attributeTypeAndValueToKey},
+ * and the RDN, RDN sequence, and `Name` stringifiers that call them. Return
+ * `undefined` to use the built-in conversion for that pair.
  *
- * `escape` is `true` when the result will be embedded in an RDN or DN string,
- * in which case the value should be escaped as in IETF RFC 4514.
+ * `escape` is `true` when the value should be escaped as in IETF RFC 4514
+ * (all callers except {@link attributeTypeAndValueToUnescapedString}).
  *
  * @param atav The attribute type and value
  * @param escape Whether to escape the value as in IETF RFC 4514
@@ -349,10 +351,10 @@ function unrecognizedToString(type_: OBJECT_IDENTIFIER, value: ASN1Element): str
     return `${type_.toString()}=${defaultValueEncoder(value)}`;
 }
 
-export function attributeTypeAndValueToString(
+function formatAttributeTypeAndValue(
     atav: AttributeTypeAndValue,
-    escape: boolean = false,
-    ldapStrict: boolean = false,
+    escape: boolean,
+    ldapStrict: boolean,
     stringifyAtav?: StringifyAttributeTypeAndValue,
 ): string {
     const custom: string | undefined = stringifyAtav?.(atav, escape);
@@ -374,6 +376,75 @@ export function attributeTypeAndValueToString(
 }
 
 /**
+ * @summary Convert an attribute type and value to an escaped string
+ * @description
+ *
+ * Uses a short attribute name when one is known, including names that are not
+ * registered LDAP descriptors, and escapes the value per IETF RFC 4514 so the
+ * result can be embedded in an RDN or DN string and round-tripped with
+ * {@link AttributeTypeAndValue.fromStringX520}. Otherwise the type is a
+ * numeric object identifier and the value is its hexadecimal BER encoding.
+ *
+ * @param atav The attribute type and value
+ * @param stringifyAtav Optional function that replaces conversion of this
+ *  attribute type and value. Return `undefined` to use the built-in
+ *  conversion.
+ * @returns A string of the form `type=escapedvalue` or `numericoid=#hex`
+ * @function
+ */
+export function attributeTypeAndValueToString(
+    atav: AttributeTypeAndValue,
+    stringifyAtav?: StringifyAttributeTypeAndValue,
+): string {
+    return formatAttributeTypeAndValue(atav, true, false, stringifyAtav);
+}
+
+/**
+ * @summary Convert an attribute type and value to an unescaped display string
+ * @description
+ *
+ * Like {@link attributeTypeAndValueToString}, except the value is not escaped
+ * per IETF RFC 4514. Suitable for standalone display, but not safe to embed
+ * directly in an RDN or DN string.
+ *
+ * @param atav The attribute type and value
+ * @param stringifyAtav Optional function that replaces conversion of this
+ *  attribute type and value. Return `undefined` to use the built-in
+ *  conversion.
+ * @returns A string of the form `type=value` or `numericoid=#hex`
+ * @function
+ */
+export function attributeTypeAndValueToUnescapedString(
+    atav: AttributeTypeAndValue,
+    stringifyAtav?: StringifyAttributeTypeAndValue,
+): string {
+    return formatAttributeTypeAndValue(atav, false, false, stringifyAtav);
+}
+
+/**
+ * @summary Convert an attribute type and value to a strict RFC 4514 LDAP string
+ * @description
+ *
+ * Like {@link attributeTypeAndValueToString}, except an attribute type that is
+ * not a registered LDAP descriptor is treated as unrecognized: the type is a
+ * numeric object identifier and the value is its hexadecimal BER encoding.
+ * String values are always escaped per IETF RFC 4514.
+ *
+ * @param atav The attribute type and value
+ * @param stringifyAtav Optional function that replaces conversion of this
+ *  attribute type and value. Return `undefined` to use the built-in
+ *  conversion.
+ * @returns A string of the form `descr=escapedvalue` or `numericoid=#hex`
+ * @function
+ */
+export function attributeTypeAndValueToLdapString(
+    atav: AttributeTypeAndValue,
+    stringifyAtav?: StringifyAttributeTypeAndValue,
+): string {
+    return formatAttributeTypeAndValue(atav, true, true, stringifyAtav);
+}
+
+/**
  * @summary Convert an attribute type and value to a comparison key
  * @description
  *
@@ -381,22 +452,20 @@ export function attributeTypeAndValueToString(
  * match under the equality matching rule of their attribute type (probably)
  * produce identical keys. The attribute type is always a numeric object
  * identifier. The value is normalized by {@link distinguishedValueToString}
- * with `comparable` set, or, if it has no string form, is its hexadecimal BER
- * encoding, which is never escaped.
+ * with `comparable` set and escaped per IETF RFC 4514, or, if it has no string
+ * form, is its hexadecimal BER encoding (which is never escaped).
  *
  * @param atav The attribute type and value
- * @param escape Whether to escape the value as in IETF RFC 4514
  * @param stringifyAtav Optional function that replaces conversion of this
  *  attribute type and value. Return `undefined` to use the built-in key.
- * @returns A string of the form `numericoid=normalizedvalue`
+ * @returns A string of the form `numericoid=escapednormalizedvalue`
  * @function
  */
 export function attributeTypeAndValueToKey(
     atav: AttributeTypeAndValue,
-    escape: boolean = false,
     stringifyAtav?: StringifyAttributeTypeAndValue,
 ): string {
-    const custom: string | undefined = stringifyAtav?.(atav, escape);
+    const custom: string | undefined = stringifyAtav?.(atav, true);
     if (custom !== undefined) {
         return custom;
     }
@@ -404,7 +473,7 @@ export function attributeTypeAndValueToKey(
     if (value === null) {
         return unrecognizedToString(atav.type_, atav.value);
     }
-    return `${atav.type_.toString()}=${escape ? escapeDistinguishedValue(value) : value}`;
+    return `${atav.type_.toString()}=${escapeDistinguishedValue(value)}`;
 }
 
 export default attributeTypeAndValueToString;

@@ -43,10 +43,10 @@ export {
  * Produces a string such that two RDNs that would match (probably) produce
  * identical keys, so they can be compared byte-for-byte or used as map keys.
  * Each attribute type and value is converted as with
- * {@link AttributeTypeAndValue.toKey}, except that the value is escaped as in
- * IETF RFC 4514. Since an RDN is a set, the keys are sorted before being
- * joined with `+`, so the order of the attribute type and value pairs does not
- * affect the result. The key is not meant to be displayed.
+ * {@link AttributeTypeAndValue.toKey}. Since an RDN is a set, the keys are
+ * sorted before being joined with `+`, so the order of the attribute type and
+ * value pairs does not affect the result. The key is not meant to be
+ * displayed.
  *
  * @param rdn The relative distinguished name
  * @param stringifyAtav Optional function that replaces conversion of each
@@ -60,7 +60,7 @@ export function relativeDistinguishedNameToKey(
     stringifyAtav?: StringifyAttributeTypeAndValue,
 ): string {
     return rdn
-        .map((atav) => attributeTypeAndValueToKey(atav, true, stringifyAtav))
+        .map((atav) => attributeTypeAndValueToKey(atav, stringifyAtav))
         .sort()
         .join("+");
 }

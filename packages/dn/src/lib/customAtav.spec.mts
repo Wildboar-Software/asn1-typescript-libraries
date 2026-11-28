@@ -3,7 +3,11 @@ import { BER, _encodeInteger, _encodeUTF8String } from "@wildboar/asn1/functiona
 import { describe, expect, it } from "vitest";
 import { AttributeTypeAndValue } from "./AttributeTypeAndValue.ta.mjs";
 import type { StringifyAttributeTypeAndValue } from "./atav/tostr.mjs";
-import attributeTypeAndValueToString, { attributeTypeAndValueToKey } from "./atav/tostr.mjs";
+import attributeTypeAndValueToString, {
+    attributeTypeAndValueToKey,
+    attributeTypeAndValueToLdapString,
+    attributeTypeAndValueToUnescapedString,
+} from "./atav/tostr.mjs";
 import { atavFromStringX520, type ParseAttributeTypeAndValue } from "./atav/fromstr.mjs";
 import { ParsedAttributeTypeAndValue } from "./ParsedAttributeTypeAndValue.mjs";
 import relativeDistinguishedNameToString from "./rdn/tostr.mjs";
@@ -67,13 +71,17 @@ describe("custom attribute type and value conversion", () => {
 
     it("uses a replacement when stringifying and falls back otherwise", () => {
         const foo = new AttributeTypeAndValue(id_foo, _encodeInteger(7n, BER));
-        expect(attributeTypeAndValueToString(foo, false, false, stringifyFoo)).toBe("foo=7");
+        expect(attributeTypeAndValueToString(foo, stringifyFoo)).toBe("foo=7");
+        expect(attributeTypeAndValueToUnescapedString(foo, stringifyFoo)).toBe("foo=7");
+        expect(attributeTypeAndValueToLdapString(foo, stringifyFoo)).toBe("foo=7");
         expect(attributeTypeAndValueToString(foo)).toBe(`${id_foo.toString()}=#020107`);
-        expect(utf8(commonName, "Smith, J").toString(true, stringifyFoo)).toBe("cn=Smith\\, J");
-        expect(foo.toString(false, stringifyFoo)).toBe("foo=7");
-        expect(foo.toLdapString(false, stringifyFoo)).toBe("foo=7");
-        expect(foo.toKey(false, keyFoo)).toBe(`${id_foo.toString()}=7`);
-        expect(attributeTypeAndValueToKey(foo, true, keyFoo)).toBe(`${id_foo.toString()}=7`);
+        expect(utf8(commonName, "Smith, J").toString(stringifyFoo)).toBe("cn=Smith\\, J");
+        expect(utf8(commonName, "Smith, J").toUnescapedString(stringifyFoo)).toBe("cn=Smith, J");
+        expect(foo.toString(stringifyFoo)).toBe("foo=7");
+        expect(foo.toUnescapedString(stringifyFoo)).toBe("foo=7");
+        expect(foo.toLdapString(stringifyFoo)).toBe("foo=7");
+        expect(foo.toKey(keyFoo)).toBe(`${id_foo.toString()}=7`);
+        expect(attributeTypeAndValueToKey(foo, keyFoo)).toBe(`${id_foo.toString()}=7`);
     });
 
     it("threads replacements through RDN, RDN sequence, and Name", () => {

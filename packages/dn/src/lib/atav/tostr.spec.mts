@@ -43,6 +43,8 @@ import type { ASN1Element } from "@wildboar/asn1";
 import { describe, expect, it } from "vitest";
 import { AttributeTypeAndValue } from "../AttributeTypeAndValue.ta.mjs";
 import attributeTypeAndValueToString, {
+    attributeTypeAndValueToLdapString,
+    attributeTypeAndValueToUnescapedString,
     defaultValueEncoder,
     distinguishedValueToString,
 } from "./tostr.mjs";
@@ -354,16 +356,26 @@ describe("distinguishedValueToString() with comparable", () => {
     });
 });
 
-describe("attributeTypeAndValueToString()", () => {
+describe("attributeTypeAndValueToString() and variants", () => {
     const commonName = ObjectIdentifier.fromParts([2, 5, 4, 3]);
+    const organizationIdentifier = ObjectIdentifier.fromParts([2, 5, 4, 97]);
 
-    it("joins the short type name and the value with an equals sign", () => {
+    it("escapes the value in attributeTypeAndValueToString()", () => {
         const atav = new AttributeTypeAndValue(commonName, _encodeUTF8String("Smith, Jr", BER));
-        expect(attributeTypeAndValueToString(atav)).toBe("cn=Smith, Jr");
+        expect(attributeTypeAndValueToString(atav)).toBe("cn=Smith\\, Jr");
     });
 
-    it("escapes the value when asked", () => {
+    it("does not escape the value in attributeTypeAndValueToUnescapedString()", () => {
         const atav = new AttributeTypeAndValue(commonName, _encodeUTF8String("Smith, Jr", BER));
-        expect(attributeTypeAndValueToString(atav, true)).toBe("cn=Smith\\, Jr");
+        expect(attributeTypeAndValueToUnescapedString(atav)).toBe("cn=Smith, Jr");
+    });
+
+    it("uses strict LDAP descriptors and escapes values in attributeTypeAndValueToLdapString()", () => {
+        const cn = new AttributeTypeAndValue(commonName, _encodeUTF8String("Smith, Jr", BER));
+        expect(attributeTypeAndValueToLdapString(cn)).toBe("cn=Smith\\, Jr");
+
+        const orgId = new AttributeTypeAndValue(organizationIdentifier, _encodeUTF8String("NTRUS-123", BER));
+        expect(attributeTypeAndValueToString(orgId)).toBe("organizationIdentifier=NTRUS-123");
+        expect(attributeTypeAndValueToLdapString(orgId)).toBe("2.5.4.97=#0c094e545255532d313233");
     });
 });

@@ -4,7 +4,12 @@ import { describe, expect, it } from "vitest";
 import { AttributeTypeAndValue } from "../AttributeTypeAndValue.ta.mjs";
 import { ParsedAttributeTypeAndValue } from "../ParsedAttributeTypeAndValue.mjs";
 import { isAttributeTypeAndValueOf } from "./brand.mjs";
-import { attributeTypeAndValueToKey, default as attributeTypeAndValueToString } from "./tostr.mjs";
+import {
+    attributeTypeAndValueToKey,
+    attributeTypeAndValueToLdapString,
+    attributeTypeAndValueToUnescapedString,
+    default as attributeTypeAndValueToString,
+} from "./tostr.mjs";
 import { atavFromStringX520 } from "./fromstr.mjs";
 import { uidOID } from "../attributeTypes.mjs";
 import { rdnSequenceFromStringX520 } from "../rdnseq/fromstr.mjs";
@@ -16,12 +21,13 @@ describe("uid / userId (0.9.2342.19200300.100.1.1)", () => {
     it("is printed as uid, including in strict LDAP mode", () => {
         const atav = new AttributeTypeAndValue(uid, _encodeUTF8String("jsmith", BER));
         expect(attributeTypeAndValueToString(atav)).toBe("uid=jsmith");
-        expect(attributeTypeAndValueToString(atav, false, true)).toBe("uid=jsmith");
+        expect(attributeTypeAndValueToLdapString(atav)).toBe("uid=jsmith");
     });
 
-    it("escapes special characters when requested", () => {
+    it("escapes special characters in toString() and keeps them raw in toUnescapedString()", () => {
         const atav = new AttributeTypeAndValue(uid, _encodeUTF8String("a,b+c", BER));
-        expect(attributeTypeAndValueToString(atav, true)).toBe("uid=a\\,b\\+c");
+        expect(attributeTypeAndValueToString(atav)).toBe("uid=a\\,b\\+c");
+        expect(attributeTypeAndValueToUnescapedString(atav)).toBe("uid=a,b+c");
     });
 
     it.each(["uid", "UID", "userId", "USERID"])("parses %s", (name) => {

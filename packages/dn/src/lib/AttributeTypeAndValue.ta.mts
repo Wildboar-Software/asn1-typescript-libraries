@@ -11,7 +11,9 @@ import {
 import * as $ from "@wildboar/asn1/functional";
 import {
     attributeTypeAndValueToKey,
+    attributeTypeAndValueToLdapString,
     attributeTypeAndValueToString,
+    attributeTypeAndValueToUnescapedString,
     defaultValueEncoder,
     distinguishedValueToString,
     type StringifyAttributeTypeAndValue,
@@ -248,50 +250,68 @@ export class AttributeTypeAndValue {
     }
 
     /**
-     * @summary Convert this `AttributeTypeAndValue` to a string
+     * @summary Convert this `AttributeTypeAndValue` to an escaped string
      * @description
      *
      * Uses a short attribute name when one is known, including names that are
-     * not registered LDAP descriptors, and the value's native string form when
-     * the syntax is recognized. Otherwise the type is a numeric object
+     * not registered LDAP descriptors, and escapes the value per IETF RFC 4514
+     * when the syntax is recognized. Otherwise the type is a numeric object
      * identifier and the value is its hexadecimal BER encoding.
      *
-     * @param escape Whether to escape the value as in IETF RFC 4514
      * @param stringifyAtav Optional function that replaces conversion of this
      *  attribute type and value. Return `undefined` to use the built-in
      *  conversion.
-     * @returns A string of the form `type=value`
+     * @returns A string of the form `type=escapedvalue` or `numericoid=#hex`
      * @function
      * @public
      */
     public toString(
-        escape: boolean = false,
         stringifyAtav?: StringifyAttributeTypeAndValue,
     ): string {
-        return attributeTypeAndValueToString(this, escape, false, stringifyAtav);
+        return attributeTypeAndValueToString(this, stringifyAtav);
     }
 
     /**
-     * @summary Convert this `AttributeTypeAndValue` to an LDAP string
+     * @summary Convert this `AttributeTypeAndValue` to an unescaped display string
+     * @description
+     *
+     * Like {@link toString}, except the value is not escaped per IETF RFC 4514.
+     * Suitable for standalone display, but not safe to embed directly in an RDN
+     * or DN string.
+     *
+     * @param stringifyAtav Optional function that replaces conversion of this
+     *  attribute type and value. Return `undefined` to use the built-in
+     *  conversion.
+     * @returns A string of the form `type=value` or `numericoid=#hex`
+     * @function
+     * @public
+     */
+    public toUnescapedString(
+        stringifyAtav?: StringifyAttributeTypeAndValue,
+    ): string {
+        return attributeTypeAndValueToUnescapedString(this, stringifyAtav);
+    }
+
+    /**
+     * @summary Convert this `AttributeTypeAndValue` to a strict RFC 4514 LDAP string
      * @description
      *
      * Like {@link toString}, except an attribute type that is not a registered
      * LDAP descriptor is unrecognized: the type is a numeric object identifier
-     * and the value is its hexadecimal BER encoding.
+     * and the value is its hexadecimal BER encoding. String values are always
+     * escaped per IETF RFC 4514.
      *
-     * @param escape Whether to escape the value as in IETF RFC 4514
      * @param stringifyAtav Optional function that replaces conversion of this
      *  attribute type and value. Return `undefined` to use the built-in
      *  conversion.
-     * @returns A string of the form `type=value`
+     * @returns A string of the form `descr=escapedvalue` or `numericoid=#hex`
      * @function
      * @public
      */
     public toLdapString(
-        escape: boolean = false,
         stringifyAtav?: StringifyAttributeTypeAndValue,
     ): string {
-        return attributeTypeAndValueToString(this, escape, true, stringifyAtav);
+        return attributeTypeAndValueToLdapString(this, stringifyAtav);
     }
 
     /**
@@ -340,25 +360,21 @@ export class AttributeTypeAndValue {
      * punycode.
      *
      * The attribute type is always a numeric object identifier, so keys do not
-     * change as attribute names become known. The value is not escaped; if it
-     * has no string form, it is its hexadecimal BER encoding. Set `escape` to
-     * escape the value, as is needed when embedding the key in an RDN or DN
-     * key; the hexadecimal form is never escaped. The key is not meant to be
-     * displayed.
+     * change as attribute names become known. String values are escaped per
+     * IETF RFC 4514; if the value has no string form, it is its hexadecimal BER
+     * encoding (which is never escaped). The key is not meant to be displayed.
      *
-     * @param escape Whether to escape the value as in IETF RFC 4514
      * @param stringifyAtav Optional function that replaces conversion of this
      *  attribute type and value to a key. Return `undefined` to use the
      *  built-in key.
-     * @returns A string of the form `numericoid=normalizedvalue`
+     * @returns A string of the form `numericoid=escapednormalizedvalue`
      * @function
      * @public
      */
     public toKey(
-        escape: boolean = false,
         stringifyAtav?: StringifyAttributeTypeAndValue,
     ): string {
-        return attributeTypeAndValueToKey(this, escape, stringifyAtav);
+        return attributeTypeAndValueToKey(this, stringifyAtav);
     }
 
     /**
