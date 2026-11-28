@@ -1,6 +1,6 @@
 import { ObjectIdentifier, type ASN1Element } from "@wildboar/asn1";
 import { DER, _encodeUTF8String } from "@wildboar/asn1/functional";
-import { evaluateEquality, evaluateApprox, evaluateMatchingRuleAssertion, evaluateFilter, MatchedEntryInfo, type EvaluateFilterSettings } from "./evaluateFilter.mjs";
+import { evaluateEquality, evaluateApprox, evaluateMatchingRuleAssertion, evaluateAttributeTypeAssertion, evaluateFilter, MatchedEntryInfo, type EvaluateFilterSettings } from "./evaluateFilter.mjs";
 import { CannotPerformExactly } from "../errors.mjs";
 import {
     MATCH_FLAG_APPROXIMATE,
@@ -1269,5 +1269,198 @@ describe("requestAttributes profile lookup (X.501 §8.7, §16.6, §16.10.2)", ()
         const res = evaluateFilter(untyped, [memberA, memberB], thirdAbsent);
         expect(res.matched).toBe(true);
         expect([...res.contributingEntries]).toEqual([]);
+    });
+});
+
+describe("matchedValues deduplication by reference", () => {
+    it.each(["and", "or"] as const)("deduplicates plain and contextual values matched across %s subfilters", (combinator) => {
+        const plainMatch = value("true");
+        const plainNonMatch = value("false");
+        const vwcMatch = new Attribute_valuesWithContext_Item(value("true"), [new Context(RULE, [value("en")])]);
+        const vwcNonMatch = new Attribute_valuesWithContext_Item(value("false"), [new Context(RULE, [value("fr")])]);
+        const entry = new EntryInformation({ rdnSequence: [] }, true, [
+            { attribute: new Attribute(TYPE, [plainMatch, plainNonMatch], [vwcMatch, vwcNonMatch]) },
+        ]);
+        const subfilters: Filter[] = [leaf("equality"), leaf("substrings"), leaf("extensibleMatch")];
+        const filter: Filter = combinator === "and" ? { and: subfilters } : { or: subfilters };
+
+        const result = evaluateFilter(filter, [entry], settings("equality", true));
+        expect(result.matched).toBe(true);
+        expect(result.matchedValues).toHaveLength(1);
+        expect(result.matchedValues![0].entryIndex).toBe(0);
+        expect(result.matchedValues![0].attributes).toHaveLength(1);
+        const attr = result.matchedValues![0].attributes[0];
+        expect(attr.type_).toBe(TYPE);
+        expect(attr.values).toHaveLength(1);
+        expect(attr.values[0]).toBe(plainMatch);
+        expect(attr.valuesWithContext).toHaveLength(1);
+        expect(attr.valuesWithContext![0]).toBe(vwcMatch);
+    });
+
+    it("merges overlapping values from OR branches and omits empty valuesWithContext", () => {
+        const v1 = value("v1");
+        const v2 = value("v2");
+        const v3 = value("v3");
+        const vwc1 = new Attribute_valuesWithContext_Item(value("v2"), [new Context(RULE, [value("ctx")])]);
+        const eqByText = createEqualityMatcher(
+            (el) => el.utf8String,
+            (assertion, stored) => assertion.split(",").includes(stored.utf8String),
+        );
+        const options: EvaluateFilterSettings = {
+            ...settings("equality", true),
+            getEqualityMatcher: () => eqByText,
+        };
+
+        // Plain-only merge keeps valuesWithContext undefined.
+        const plainEntry = new EntryInformation({ rdnSequence: [] }, true, [
+            { attribute: new Attribute(TYPE, [v1, v2, v3]) },
+        ]);
+        const filter: Filter = {
+            or: [
+                { item: { equality: new AttributeValueAssertion(TYPE, value("v1,v2")) } },
+                { item: { equality: new AttributeValueAssertion(TYPE, value("v2,v3")) } },
+            ],
+        };
+        const plainRes = evaluateFilter(filter, [plainEntry], options);
+        expect(plainRes.matched).toBe(true);
+        expect(plainRes.matchedValues).toHaveLength(1);
+        expect(plainRes.matchedValues![0].attributes).toHaveLength(1);
+        const plainAttr = plainRes.matchedValues![0].attributes[0];
+        expect(plainAttr.values).toEqual([v1, v2, v3]);
+        expect(plainAttr.values[0]).toBe(v1);
+        expect(plainAttr.values[1]).toBe(v2);
+        expect(plainAttr.values[2]).toBe(v3);
+        expect(plainAttr.valuesWithContext).toBeUndefined();
+
+        // Merging a plain-only branch with a contextual branch preserves both and deduplicates vwc1.
+        const mixedEntry = new EntryInformation({ rdnSequence: [] }, true, [
+            { attribute: new Attribute(TYPE, [v1], [vwc1]) },
+        ]);
+        const mixedRes = evaluateFilter(
+            {
+                or: [
+                    { item: { equality: new AttributeValueAssertion(TYPE, value("v1")) } },
+                    { item: { equality: new AttributeValueAssertion(TYPE, value("v2")) } },
+                    { item: { contextPresent: new AttributeTypeAssertion(TYPE, [new ContextAssertion(RULE, [value("ctx")])]) } },
+                ],
+            },
+            [mixedEntry],
+            { ...options, determineAbsentMatch: () => false },
+        );
+        expect(mixedRes.matched).toBe(true);
+        expect(mixedRes.matchedValues).toHaveLength(1);
+        expect(mixedRes.matchedValues![0].attributes).toHaveLength(1);
+        const mixedAttr = mixedRes.matchedValues![0].attributes[0];
+        expect(mixedAttr.values).toEqual([v1]);
+        expect(mixedAttr.values[0]).toBe(v1);
+        expect(mixedAttr.valuesWithContext).toHaveLength(1);
+        expect(mixedAttr.valuesWithContext![0]).toBe(vwc1);
+    });
+
+    it("deduplicates strictly by reference, keeping distinct objects with equal encodings", () => {
+        const v1 = value("true");
+        const v2 = value("true");
+        const vwc1 = new Attribute_valuesWithContext_Item(v1, [new Context(RULE, [value("en")])]);
+        const vwc2 = new Attribute_valuesWithContext_Item(v1, [new Context(RULE, [value("fr")])]);
+        const entry = new EntryInformation({ rdnSequence: [] }, true, [
+            { attribute: new Attribute(TYPE, [v1, v2, v1], [vwc1, vwc2, vwc1]) },
+        ]);
+
+        const res = evaluateFilter({ and: [leaf("equality"), leaf("equality")] }, [entry], settings("equality", true));
+        expect(res.matched).toBe(true);
+        expect(res.matchedValues).toHaveLength(1);
+        const attr = res.matchedValues![0].attributes[0];
+        expect(attr.values).toHaveLength(2);
+        expect(attr.values[0]).toBe(v1);
+        expect(attr.values[1]).toBe(v2);
+        expect(attr.valuesWithContext).toHaveLength(2);
+        expect(attr.valuesWithContext![0]).toBe(vwc1);
+        expect(attr.valuesWithContext![1]).toBe(vwc2);
+    });
+
+    it("keeps shared value references separate across distinct attribute types and family members", () => {
+        const otherType = ObjectIdentifier.fromString("2.5.4.4");
+        const shared = value("true");
+        const entry0 = new EntryInformation({ rdnSequence: [] }, true, [
+            { attribute: new Attribute(TYPE, [shared]) },
+            { attribute: new Attribute(otherType, [shared]) },
+        ]);
+        const entry1 = new EntryInformation({ rdnSequence: [] }, true, [
+            { attribute: new Attribute(TYPE, [shared]) },
+        ]);
+        const filter: Filter = {
+            and: [
+                leaf("equality"),
+                leaf("substrings"),
+                { item: { equality: new AttributeValueAssertion(otherType, value("assertion")) } },
+            ],
+        };
+
+        const res = evaluateFilter(filter, [entry0, entry1], settings("equality", true));
+        expect(res.matched).toBe(true);
+        expect(res.matchedValues).toHaveLength(2);
+        expect(res.matchedValues![0].entryIndex).toBe(0);
+        expect(res.matchedValues![0].attributes).toHaveLength(2);
+        expect(res.matchedValues![0].attributes[0].type_).toBe(TYPE);
+        expect(res.matchedValues![0].attributes[0].values).toEqual([shared]);
+        expect(res.matchedValues![0].attributes[1].type_).toBe(otherType);
+        expect(res.matchedValues![0].attributes[1].values).toEqual([shared]);
+        expect(res.matchedValues![1].entryIndex).toBe(1);
+        expect(res.matchedValues![1].attributes).toHaveLength(1);
+        expect(res.matchedValues![1].attributes[0].type_).toBe(TYPE);
+        expect(res.matchedValues![1].attributes[0].values).toEqual([shared]);
+    });
+
+    it("deduplicates DN attribute values and duplicate attributes within a single item evaluation", () => {
+        const shared = value("true");
+        const vwc = new Attribute_valuesWithContext_Item(shared, [new Context(RULE, [value("ctx")])]);
+        const sameOidDifferentInstance = ObjectIdentifier.fromString(TYPE.toString());
+        const entry = new EntryInformation(
+            { rdnSequence: [[new AttributeTypeAndValue(sameOidDifferentInstance, shared)]] },
+            true,
+            [
+                { attribute: new Attribute(TYPE, [shared, shared], [vwc, vwc]) },
+                { attribute: new Attribute(sameOidDifferentInstance, [shared], [vwc]) },
+            ],
+        );
+        const options: EvaluateFilterSettings = {
+            ...settings("equality", true),
+            dnAttribute: true,
+        };
+
+        for (const filter of [
+            leaf("equality"),
+            leaf("extensibleMatch"),
+            { item: { contextPresent: new AttributeTypeAssertion(TYPE, [new ContextAssertion(RULE, [value("ctx")])]) } } as Filter,
+        ]) {
+            const res = evaluateFilter(filter, [entry], options);
+            expect(res.matched).toBe(true);
+            expect(res.matchedValues).toHaveLength(1);
+            expect(res.matchedValues![0].attributes).toHaveLength(1);
+            const attr = res.matchedValues![0].attributes[0];
+            expect(attr.values).toHaveLength(1);
+            expect(attr.values[0]).toBe(shared);
+            expect(attr.valuesWithContext).toHaveLength(1);
+            expect(attr.valuesWithContext![0]).toBe(vwc);
+        }
+
+        // Direct item-level evaluators also deduplicate.
+        const eqAttrs = evaluateEquality(new AttributeValueAssertion(TYPE, value("assertion")), entry, options);
+        expect(Array.isArray(eqAttrs)).toBe(true);
+        expect(eqAttrs).toHaveLength(1);
+        expect((eqAttrs as Attribute[])[0].values).toEqual([shared]);
+        expect((eqAttrs as Attribute[])[0].valuesWithContext).toEqual([vwc]);
+
+        const mraAttrs = evaluateMatchingRuleAssertion(new MatchingRuleAssertion([RULE], TYPE, value("assertion"), true), entry, options);
+        expect(Array.isArray(mraAttrs)).toBe(true);
+        expect(mraAttrs).toHaveLength(1);
+        expect((mraAttrs as Attribute[])[0].values).toEqual([shared]);
+        expect((mraAttrs as Attribute[])[0].valuesWithContext).toEqual([vwc]);
+
+        const ataAttrs = evaluateAttributeTypeAssertion(new AttributeTypeAssertion(TYPE, [new ContextAssertion(RULE, [value("ctx")])]), entry, options);
+        expect(Array.isArray(ataAttrs)).toBe(true);
+        expect(ataAttrs).toHaveLength(1);
+        expect((ataAttrs as Attribute[])[0].values).toEqual([shared]);
+        expect((ataAttrs as Attribute[])[0].valuesWithContext).toEqual([vwc]);
     });
 });

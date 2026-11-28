@@ -25,13 +25,16 @@ import type {
 import {
     Attribute,
 } from "../modules/InformationFramework/Attribute.ta.mjs";
+import type {
+    Attribute_valuesWithContext_Item,
+} from "../modules/InformationFramework/Attribute-valuesWithContext-Item.ta.mjs";
 import {
     EntryInformation,
 } from "../modules/DirectoryAbstractService/EntryInformation.ta.mjs";
 import type {
     FilterItem_substrings,
 } from "../modules/DirectoryAbstractService/FilterItem-substrings.ta.mjs";
-import type { ASN1Element, OBJECT_IDENTIFIER } from "@wildboar/asn1";
+import type { ASN1Element, DotDelimitedOidString, OBJECT_IDENTIFIER } from "@wildboar/asn1";
 import type {
     FilterItem_substrings_strings_Item,
 } from "../modules/DirectoryAbstractService/FilterItem-substrings-strings-Item.ta.mjs";
@@ -246,7 +249,7 @@ interface EvaluateFilterSettings {
      * @readonly
      * @property
      */
-    readonly requestAttributes?: Map<string, RequestAttribute>;
+    readonly requestAttributes?: Map<DotDelimitedOidString, RequestAttribute>;
 }
 
 type AnyFunction = (...args: any[]) => any;
@@ -446,6 +449,107 @@ function takeMatchedAttribute (collected: Attribute): Attribute | undefined {
     return new Attribute(collected.type_, collected.values);
 }
 
+interface AttributeValuesAccumulator {
+    readonly type_: AttributeType;
+    readonly values: Set<ASN1Element>;
+    readonly valuesWithContext: Set<Attribute_valuesWithContext_Item>;
+}
+
+type EntryMatchAccumulator = Map<number, Map<DotDelimitedOidString, AttributeValuesAccumulator>>;
+
+function addAttributeToAccumulator (
+    byType: Map<DotDelimitedOidString, AttributeValuesAccumulator>,
+    attr: Attribute,
+): void {
+    const key = attr.type_.toString();
+    let acc = byType.get(key);
+    if (!acc) {
+        acc = {
+            type_: attr.type_,
+            values: new Set(),
+            valuesWithContext: new Set(),
+        };
+        byType.set(key, acc);
+    }
+    for (const v of attr.values) {
+        acc.values.add(v);
+    }
+    if (attr.valuesWithContext) {
+        for (const vwc of attr.valuesWithContext) {
+            acc.valuesWithContext.add(vwc);
+        }
+    }
+}
+
+function finalizeAccumulatedAttributes (
+    byType: Map<DotDelimitedOidString, AttributeValuesAccumulator>,
+): Attribute[] {
+    const result: Attribute[] = [];
+    for (const acc of byType.values()) {
+        if (acc.values.size === 0 && acc.valuesWithContext.size === 0) {
+            continue;
+        }
+        result.push(
+            acc.valuesWithContext.size > 0
+                ? new Attribute(acc.type_, Array.from(acc.values), Array.from(acc.valuesWithContext))
+                : new Attribute(acc.type_, Array.from(acc.values)),
+        );
+    }
+    return result;
+}
+
+/**
+ * Merge matched attributes of the same type and deduplicate their plain and
+ * contextual values by object identity.
+ */
+function deduplicateMatchedAttributes (attributes: Attribute[]): Attribute[] {
+    if (attributes.length === 0) {
+        return attributes;
+    }
+    if (
+        attributes.length === 1
+        && attributes[0].values.length <= 1
+        && (attributes[0].valuesWithContext?.length ?? 0) <= 1
+    ) {
+        return attributes;
+    }
+    const byType = new Map<DotDelimitedOidString, AttributeValuesAccumulator>();
+    for (const attr of attributes) {
+        addAttributeToAccumulator(byType, attr);
+    }
+    return finalizeAccumulatedAttributes(byType);
+}
+
+function mergeMatchedEntryInfos (
+    byEntry: EntryMatchAccumulator,
+    infos: MatchedEntryInfo[] | undefined,
+): void {
+    if (!infos?.length) {
+        return;
+    }
+    for (const info of infos) {
+        let byType = byEntry.get(info.entryIndex);
+        if (!byType) {
+            byType = new Map();
+            byEntry.set(info.entryIndex, byType);
+        }
+        for (const attr of info.attributes) {
+            addAttributeToAccumulator(byType, attr);
+        }
+    }
+}
+
+function finalizeMatchedEntryInfos (byEntry: EntryMatchAccumulator): MatchedEntryInfo[] {
+    const result: MatchedEntryInfo[] = [];
+    for (const [entryIndex, byType] of byEntry.entries()) {
+        const attributes = finalizeAccumulatedAttributes(byType);
+        if (attributes.length > 0) {
+            result.push(new MatchedEntryInfo(entryIndex, attributes));
+        }
+    }
+    return result;
+}
+
 /**
  * Select permitted values before value matching. An attribute value assertion
  * applies only to values satisfying all selected context assertions. Plain
@@ -582,7 +686,7 @@ function matcherForItem (
  */
 function findRequestAttributeProfile (
     type_: AttributeType,
-    reqAttrs: Map<string, RequestAttribute>,
+    reqAttrs: Map<DotDelimitedOidString, RequestAttribute>,
     options: EvaluateFilterSettings,
 ): RequestAttribute | undefined {
     const direct = reqAttrs.get(type_.toString());
@@ -704,7 +808,7 @@ function evaluateFilterAssertion (
             }
         }
         if (matched) {
-            return matchedValues.length > 0 ? matchedValues : true;
+            return matchedValues.length > 0 ? deduplicateMatchedAttributes(matchedValues) : true;
         }
     }
     // Determine presence before value permissions and context selection:
@@ -908,7 +1012,7 @@ function evaluateMatchingRuleAssertion (
             }
         }
         if (matched) {
-            return matchedValues.length > 0 ? matchedValues : true;
+            return matchedValues.length > 0 ? deduplicateMatchedAttributes(matchedValues) : true;
         }
     }
 
@@ -1048,7 +1152,7 @@ function evaluateAttributeTypeAssertion (
         sawIndeterminate ||= !!indeterminate && !indeterminate.isEmpty();
     }
     if (matched) {
-        return matchedValues.length > 0 ? matchedValues : true;
+        return matchedValues.length > 0 ? deduplicateMatchedAttributes(matchedValues) : true;
     }
     return sawIndeterminate ? undefined : false;
 }
@@ -1237,7 +1341,7 @@ function evaluateFilterAtDepth (
         };
     } else if ("and" in filter) {
         const newContributingEntries: Set<number> = new Set();
-        const matchedValues: MatchedEntryInfo[] = [];
+        const matchedValuesByEntry: EntryMatchAccumulator = new Map();
         for (const subfilter of filter.and) {
             const result = evaluateFilterAtDepth(subfilter, family, options, new Set(), remainingDepth - 1);
             if (result.matched === false) {
@@ -1254,7 +1358,9 @@ function evaluateFilterAtDepth (
             for (const ce of result.contributingEntries.values()) {
                 newContributingEntries.add(ce);
             }
-            result.matchedValues && matchedValues.push(...result.matchedValues);
+            if (!subresult_undefined) {
+                mergeMatchedEntryInfos(matchedValuesByEntry, result.matchedValues);
+            }
         }
         if (subresult_undefined) {
             return {
@@ -1269,11 +1375,11 @@ function evaluateFilterAtDepth (
         return {
             matched: true,
             contributingEntries: newContributingEntries,
-            matchedValues,
+            matchedValues: finalizeMatchedEntryInfos(matchedValuesByEntry),
         };
     } else if ("or" in filter) {
         const newContributingEntries: Set<number> = new Set();
-        const matchedValues: MatchedEntryInfo[] = [];
+        const matchedValuesByEntry: EntryMatchAccumulator = new Map();
         let matched: boolean = false;
         /* Unlike with and, we still have to iterate over all subfilters so that
         we can determine if other entries contribute to the match or if other
@@ -1291,7 +1397,7 @@ function evaluateFilterAtDepth (
             for (const ce of result.contributingEntries.values()) {
                 newContributingEntries.add(ce);
             }
-            result.matchedValues && matchedValues.push(...result.matchedValues);
+            mergeMatchedEntryInfos(matchedValuesByEntry, result.matchedValues);
         }
         if (matched) {
             for (const ce of contributingEntries.values()) {
@@ -1300,7 +1406,7 @@ function evaluateFilterAtDepth (
             return {
                 matched: true,
                 contributingEntries: newContributingEntries,
-                matchedValues,
+                matchedValues: finalizeMatchedEntryInfos(matchedValuesByEntry),
             };
         }
         if (subresult_undefined) {
