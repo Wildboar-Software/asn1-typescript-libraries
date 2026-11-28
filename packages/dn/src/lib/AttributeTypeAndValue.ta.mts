@@ -434,8 +434,9 @@ export class AttributeTypeAndValue {
      * @summary Split a string such as `cn=Smith` into its type and value
      * @description
      *
-     * The value is unescaped as in IETF RFC 4514, but nothing is validated or
-     * recognized. See {@link atavFromString}.
+     * String values are unescaped as in IETF RFC 4514; values beginning with an
+     * unescaped `#` are preserved verbatim with `isHexstring` set to `true`.
+     * Nothing is validated or recognized. See {@link atavFromString}.
      *
      * @param str The attribute type and value, e.g. `cn=Smith`
      * @returns The attribute type name and unescaped value

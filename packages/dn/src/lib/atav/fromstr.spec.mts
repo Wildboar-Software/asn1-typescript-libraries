@@ -1,7 +1,7 @@
-import { ASN1UniversalType } from "@wildboar/asn1";
+import { ASN1Error, ASN1UniversalType } from "@wildboar/asn1";
 import { describe, expect, it } from "vitest";
 import { ParsedAttributeTypeAndValue } from "../ParsedAttributeTypeAndValue.mjs";
-import { atavFromStringX520 } from "./fromstr.mjs";
+import atavFromString, { atavFromStringX520 } from "./fromstr.mjs";
 
 function parse(type: string, value: string) {
     return atavFromStringX520(new ParsedAttributeTypeAndValue(type, value));
@@ -338,5 +338,109 @@ describe("atavFromStringX520()", () => {
 
     it("rejects an unrecognized attribute type", () => {
         expect(() => parse("foo", "example")).toThrow(new SyntaxError('unrecognized attribute type "foo"'));
+    });
+
+    it("decodes #hexstring values for recognized attribute types", () => {
+        const cn = atavFromStringX520(atavFromString("CN=#0c03426f62"));
+        expect(cn.type_.toString()).toBe("2.5.4.3");
+        expect(cn.value.tagNumber).toBe(ASN1UniversalType.utf8String);
+        expect(cn.value.utf8String).toBe("Bob");
+
+        const cnUpper = atavFromStringX520(atavFromString("CN=#0C03426F62"));
+        expect(cnUpper.value.utf8String).toBe("Bob");
+
+        const c = atavFromStringX520(atavFromString("C=#13025553"));
+        expect(c.type_.toString()).toBe("2.5.4.6");
+        expect(c.value.tagNumber).toBe(ASN1UniversalType.printableString);
+        expect(c.value.printableString).toBe("US");
+
+        const nil = atavFromStringX520(atavFromString("CN=#0500"));
+        expect(nil.value.tagNumber).toBe(ASN1UniversalType.nill);
+    });
+
+    it("decodes numericoid=#hexstring components", () => {
+        const octet = atavFromStringX520(atavFromString("1.3.6.1.4.1.1466.0=#04024869"));
+        expect(octet.type_.toString()).toBe("1.3.6.1.4.1.1466.0");
+        expect(octet.value.tagNumber).toBe(ASN1UniversalType.octetString);
+        expect(Buffer.from(octet.value.octetString).toString("ascii")).toBe("Hi");
+
+        const cn = atavFromStringX520(atavFromString("2.5.4.3=#1303426f62"));
+        expect(cn.type_.toString()).toBe("2.5.4.3");
+        expect(cn.value.tagNumber).toBe(ASN1UniversalType.printableString);
+        expect(cn.value.printableString).toBe("Bob");
+
+        const bigArc = "2.999999999999999999999999.1";
+        const big = atavFromStringX520(atavFromString(`${bigArc}=#04024869`));
+        expect(big.type_.toString()).toBe(bigArc);
+        expect(big.value.tagNumber).toBe(ASN1UniversalType.octetString);
+    });
+
+    it("treats escaped leading # as literal text, not a hexstring", () => {
+        const escapedSharp = atavFromStringX520(atavFromString("CN=\\#0c03426f62"));
+        expect(escapedSharp.value.tagNumber).toBe(ASN1UniversalType.utf8String);
+        expect(escapedSharp.value.utf8String).toBe("#0c03426f62");
+
+        const hexEscapedSharp = atavFromStringX520(atavFromString("CN=\\230c03426f62"));
+        expect(hexEscapedSharp.value.tagNumber).toBe(ASN1UniversalType.utf8String);
+        expect(hexEscapedSharp.value.utf8String).toBe("#0c03426f62");
+
+        const nonLeadingSharp = atavFromStringX520(atavFromString("CN=Bob #1"));
+        expect(nonLeadingSharp.value.tagNumber).toBe(ASN1UniversalType.utf8String);
+        expect(nonLeadingSharp.value.utf8String).toBe("Bob #1");
+
+        const direct = parse("cn", "#0c03426f62");
+        expect(direct.value.tagNumber).toBe(ASN1UniversalType.utf8String);
+        expect(direct.value.utf8String).toBe("#0c03426f62");
+    });
+
+    it("rejects malformed #hexstring values and invalid BER", () => {
+        expect(() => atavFromStringX520(atavFromString("CN=#"))).toThrow(SyntaxError);
+        expect(() => atavFromStringX520(atavFromString("CN=#0"))).toThrow(SyntaxError);
+        expect(() => atavFromStringX520(atavFromString("CN=#04"))).toThrow(SyntaxError);
+        expect(() => atavFromStringX520(atavFromString("CN=#040"))).toThrow(SyntaxError);
+        expect(() => atavFromStringX520(atavFromString("CN=#040G"))).toThrow(SyntaxError);
+        expect(() => atavFromStringX520(atavFromString("CN=#1 Fan"))).toThrow(SyntaxError);
+        expect(() => atavFromStringX520(new ParsedAttributeTypeAndValue("CN", "0c03426f62", true)))
+            .toThrow(SyntaxError);
+        expect(() => atavFromStringX520(atavFromString("CN=#0c05426f62"))).toThrow(ASN1Error);
+        expect(() => atavFromStringX520(atavFromString("CN=#0c03426f6200"))).toThrow(ASN1Error);
+    });
+
+    it("rejects invalid numeric OIDs, unrecognized descr with hexstring, and numeric OIDs without hexstring", () => {
+        expect(() => atavFromStringX520(atavFromString("9.1=#04024869"))).toThrow(SyntaxError);
+        expect(() => atavFromStringX520(atavFromString("1.40=#04024869"))).toThrow(SyntaxError);
+        expect(() => atavFromStringX520(atavFromString("0.40=#04024869"))).toThrow(SyntaxError);
+        expect(() => atavFromStringX520(atavFromString("01.2=#04024869"))).toThrow(SyntaxError);
+        expect(() => atavFromStringX520(atavFromString("foo=#04024869"))).toThrow(
+            new SyntaxError('unrecognized attribute type "foo"'),
+        );
+        expect(() => atavFromStringX520(atavFromString("2.5.4.3=Bob"))).toThrow(SyntaxError);
+        expect(() => atavFromStringX520(atavFromString("1.3.6.1.4.1.1466.0=Hi"))).toThrow(SyntaxError);
+        expect(() => atavFromStringX520(atavFromString("1.3.6.1.4.1.1466.0=\\#04024869")))
+            .toThrow(SyntaxError);
+        expect(() => atavFromStringX520(atavFromString("1.3.6.1.4.1.1466.0=\\2304024869")))
+            .toThrow(SyntaxError);
+    });
+});
+
+describe("atavFromString()", () => {
+    it("distinguishes unescaped #hexstring values from escaped # strings", () => {
+        const hex = atavFromString("CN=#0c03426f62");
+        expect(hex.type).toBe("CN");
+        expect(hex.value).toBe("#0c03426f62");
+        expect(hex.isHexstring).toBe(true);
+
+        const escaped = atavFromString("CN=\\#0c03426f62");
+        expect(escaped.type).toBe("CN");
+        expect(escaped.value).toBe("#0c03426f62");
+        expect(escaped.isHexstring).toBe(false);
+
+        const hexEscaped = atavFromString("CN=\\230c03426f62");
+        expect(hexEscaped.value).toBe("#0c03426f62");
+        expect(hexEscaped.isHexstring).toBe(false);
+
+        const plain = atavFromString("CN=Bob #1");
+        expect(plain.value).toBe("Bob #1");
+        expect(plain.isHexstring).toBe(false);
     });
 });

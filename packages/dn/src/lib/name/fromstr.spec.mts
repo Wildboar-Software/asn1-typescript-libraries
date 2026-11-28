@@ -1,5 +1,6 @@
 import { describe, expect, it } from "vitest";
 import nameFromStringX520 from "./fromstr.mjs";
+import nameToInteropString from "./tointerop.mjs";
 import nameToString from "./tostr.mjs";
 
 describe("nameFromStringX520()", () => {
@@ -13,6 +14,12 @@ describe("nameFromStringX520()", () => {
     it("reverses nameToString()", () => {
         const str = "rdnSequence:c=US,o=Co";
         expect(nameToString(nameFromStringX520(str))).toBe(str);
+    });
+
+    it("reverses nameToInteropString()", () => {
+        const name = nameFromStringX520("rdnSequence:c=US,cn=Bob");
+        const interop = nameToInteropString(name);
+        expect(nameToString(nameFromStringX520(interop))).toBe("rdnSequence:c=US,cn=Bob");
     });
 
     it("parses the root DSE", () => {

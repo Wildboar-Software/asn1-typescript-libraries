@@ -1,6 +1,9 @@
 import { ASN1UniversalType } from "@wildboar/asn1";
 import { describe, expect, it } from "vitest";
+import compareRDNSequence from "./compare.mjs";
 import rdnSequenceFromString, { rdnSequenceFromStringX520 } from "./fromstr.mjs";
+import rdnSequenceToInteropString from "./tointerop.mjs";
+import { rdnSequenceToJER } from "./tojson.mjs";
 import rdnSequenceToString from "./tostr.mjs";
 
 function parse (dn: string): string[][][] {
@@ -145,5 +148,48 @@ describe("rdnSequenceFromStringX520()", () => {
         const dn = rdnSequenceFromStringX520("uid=jsmith,dc=example,dc=net");
         expect(dn[1][0].value.ia5String).toBe("example");
         expect(rdnSequenceToString(dn)).toBe("uid=jsmith,dc=example,dc=net");
+    });
+
+    it("decodes descr=#hexstring values as BER elements", () => {
+        const a = rdnSequenceFromStringX520("CN=#0c03426f62");
+        expect(rdnSequenceToJER(a)).toEqual([[{ type: "2.5.4.3", value: "Bob" }]]);
+        expect(rdnSequenceToString(a)).toBe("cn=Bob");
+        expect(compareRDNSequence(a, rdnSequenceFromStringX520("CN=Bob"))).toBe(true);
+
+        const c = rdnSequenceFromStringX520("C=#13025553");
+        expect(c[0][0].type_.toString()).toBe("2.5.4.6");
+        expect(c[0][0].value.tagNumber).toBe(ASN1UniversalType.printableString);
+        expect(c[0][0].value.printableString).toBe("US");
+    });
+
+    it("keeps escaped leading # values as literal text", () => {
+        const a = rdnSequenceFromStringX520("CN=\\#0c03426f62");
+        expect(a[0][0].value.utf8String).toBe("#0c03426f62");
+        expect(rdnSequenceToString(a)).toBe("cn=\\#0c03426f62");
+
+        const b = rdnSequenceFromStringX520("CN=\\230c03426f62");
+        expect(b[0][0].value.utf8String).toBe("#0c03426f62");
+        expect(rdnSequenceToString(b)).toBe("cn=\\#0c03426f62");
+    });
+
+    it("parses numericoid=#hexstring and round-trips rdnSequenceToInteropString()", () => {
+        const original = rdnSequenceFromStringX520("CN=Bob,C=US");
+        const interop = rdnSequenceToInteropString(original);
+        const parsed = rdnSequenceFromStringX520(interop);
+        expect(compareRDNSequence(parsed, original)).toBe(true);
+        expect(rdnSequenceToInteropString(parsed)).toBe(interop);
+
+        const rfcExample = rdnSequenceFromStringX520("1.3.6.1.4.1.1466.0=#04024869");
+        expect(rfcExample[0][0].type_.toString()).toBe("1.3.6.1.4.1.1466.0");
+        expect(rfcExample[0][0].value.tagNumber).toBe(ASN1UniversalType.octetString);
+        expect(Buffer.from(rfcExample[0][0].value.octetString).toString("ascii")).toBe("Hi");
+        expect(rdnSequenceToString(rfcExample)).toBe("1.3.6.1.4.1.1466.0=#04024869");
+
+        const mixed = rdnSequenceFromStringX520("CN=#0c03426f62+1.3.6.1.4.1.1466.0=#04024869,C=US");
+        expect(mixed).toHaveLength(2);
+        expect(mixed[0]).toHaveLength(2);
+        expect(mixed[0][0].value.utf8String).toBe("Bob");
+        expect(mixed[0][1].type_.toString()).toBe("1.3.6.1.4.1.1466.0");
+        expect(mixed[1][0].value.printableString).toBe("US");
     });
 });

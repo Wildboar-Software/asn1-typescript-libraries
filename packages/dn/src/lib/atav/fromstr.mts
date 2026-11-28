@@ -17,6 +17,8 @@ import {
 } from "@wildboar/asn1/functional";
 import { ParsedAttributeTypeAndValue } from "../ParsedAttributeTypeAndValue.mjs";
 import { AttributeTypeAndValue } from "../AttributeTypeAndValue.ta.mjs";
+import decodeBERElement from "../decodeBERElement.mjs";
+import { validateNumericOID } from "./validate.mjs";
 
 /**
  * @summary Parse one attribute type and value from its string form
@@ -27,9 +29,11 @@ import { AttributeTypeAndValue } from "../AttributeTypeAndValue.ta.mjs";
  * the RDN sequence and `Name` parsers that call it. Return `undefined` to use
  * the built-in conversion for that pair.
  *
- * `parsed.value` is already unescaped as in IETF RFC 4514.
+ * When `parsed.isHexstring` is `false`, `parsed.value` is already unescaped as
+ * in IETF RFC 4514. When `parsed.isHexstring` is `true`, `parsed.value` is a
+ * raw RFC 4514 `#hexstring` BER encoding.
  *
- * @param parsed The attribute type name and unescaped value
+ * @param parsed The attribute type name and parsed value
  * @returns The `AttributeTypeAndValue`, or `undefined` to use the built-in
  *  conversion
  */
@@ -377,14 +381,63 @@ const x520AttributeSyntaxes: ReadonlyMap<string, X520AttributeSyntax> = new Map(
     ["mhsterminaltypeattribute", { type: id_at_mhs_terminal_type, encode: withLength(1, 5)(encodeUnboundedDirectoryString) }],
 ]);
 
+const SHARP: number = 0x23; // #
+const NUMERIC_OID_RE: RegExp = /^(0|[1-9][0-9]*)(\.(0|[1-9][0-9]*))+$/;
+const HEX_RE: RegExp = /^[0-9A-Fa-f]+$/;
+
+function hexToBytes(hex: string): Uint8Array {
+    const bytes = new Uint8Array(hex.length >>> 1);
+    for (let i = 0; i < bytes.length; i++) {
+        bytes[i] = Number.parseInt(hex.slice(i << 1, (i << 1) + 2), 16);
+    }
+    return bytes;
+}
+
+/**
+ * @summary Decode an RFC 4514 `#hexstring` BER element.
+ */
+function decodeHexstringValue(value: string, attributeType: string): ASN1Element {
+    if (value.charCodeAt(0) !== SHARP) {
+        throw new SyntaxError(
+            `attribute type ${JSON.stringify(attributeType)}: hexstring value must start with #`,
+        );
+    }
+    const hex = value.slice(1);
+    if (hex.length === 0) {
+        throw new SyntaxError(
+            `attribute type ${JSON.stringify(attributeType)}: hexstring value must contain at least one octet`,
+        );
+    }
+    if (!HEX_RE.test(hex)) {
+        throw new SyntaxError(
+            `attribute type ${JSON.stringify(attributeType)}: hexstring value contains non-hex characters`,
+        );
+    }
+    if ((hex.length % 2) !== 0) {
+        throw new SyntaxError(
+            `attribute type ${JSON.stringify(attributeType)}: hexstring value has an odd number of hex digits`,
+        );
+    }
+    if (hex.length < 4) {
+        throw new SyntaxError(
+            `attribute type ${JSON.stringify(attributeType)}: hexstring value must contain at least two encoded octets`,
+        );
+    }
+    return decodeBERElement(hexToBytes(hex), "AttributeTypeAndValue.value");
+}
+
 /**
  * @summary Parse a recognized attribute type and value.
  * @description
  *
- * `strings.value` is the unescaped character value. The returned `value` is
- * a BER element of the attribute's directory syntax.
+ * When `strings.isHexstring` is `true`, `strings.value` is decoded as an
+ * IETF RFC 4514 `#hexstring` BER element, and `strings.type` may be either a
+ * recognized attribute short name or a dotted-decimal `numericoid`.
  *
- * @param strings The attribute type name and unescaped value.
+ * Otherwise, `strings.value` is the unescaped character value and the returned
+ * `value` is a BER element of the attribute's directory syntax.
+ *
+ * @param strings The attribute type name and parsed value.
  * @param parseAtav Optional function that replaces conversion of this
  *  attribute type and value. Return `undefined` to use the built-in X.520
  *  conversion.
@@ -399,7 +452,28 @@ export function atavFromStringX520(
         return custom;
     }
     const syntax = x520AttributeSyntaxes.get(strings.type.toLowerCase());
+    if (strings.isHexstring) {
+        let oid: OBJECT_IDENTIFIER;
+        if (syntax) {
+            oid = syntax.type;
+        } else if (NUMERIC_OID_RE.test(strings.type)) {
+            validateNumericOID(strings.type);
+            oid = ObjectIdentifier.fromStringWithBigArcs(strings.type);
+        } else {
+            throw new SyntaxError(`unrecognized attribute type ${JSON.stringify(strings.type)}`);
+        }
+        return new AttributeTypeAndValue(
+            oid,
+            decodeHexstringValue(strings.value, strings.type),
+        );
+    }
     if (!syntax) {
+        if (NUMERIC_OID_RE.test(strings.type)) {
+            validateNumericOID(strings.type);
+            throw new SyntaxError(
+                `attribute type ${JSON.stringify(strings.type)}: numeric object identifier requires a hexstring value`,
+            );
+        }
         throw new SyntaxError(`unrecognized attribute type ${JSON.stringify(strings.type)}`);
     }
     return new AttributeTypeAndValue(
@@ -413,9 +487,15 @@ export function atavFromString(str: string): ParsedAttributeTypeAndValue {
     if (equalsIndex === -1) {
         throw new SyntaxError("malformed attribute type and value");
     }
+    const type = str.slice(0, equalsIndex);
+    const rawValue = str.slice(equalsIndex + 1);
+    if (rawValue.charCodeAt(0) === SHARP) {
+        return new ParsedAttributeTypeAndValue(type, rawValue, true);
+    }
     return new ParsedAttributeTypeAndValue(
-        str.slice(0, equalsIndex),
-        unescapeDistinguishedValue(str.slice(equalsIndex + 1)),
+        type,
+        unescapeDistinguishedValue(rawValue),
+        false,
     );
 }
 

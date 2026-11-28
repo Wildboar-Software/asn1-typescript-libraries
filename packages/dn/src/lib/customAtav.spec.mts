@@ -105,5 +105,7 @@ describe("custom attribute type and value conversion", () => {
         expect(AttributeTypeAndValue.fromParsedX520(parsed, parseFoo).value.integer).toBe(3);
         expect(AttributeTypeAndValue.fromStringX520("foo=4", parseFoo).value.integer).toBe(4);
         expect(AttributeTypeAndValue.fromStringX520("cn=Bob", parseFoo).value.printableString).toBe("Bob");
+        expect(AttributeTypeAndValue.fromStringX520("1.3.6.1.4.1.1466.0=#04024869", parseFoo).type_.toString())
+            .toBe("1.3.6.1.4.1.1466.0");
     });
 });

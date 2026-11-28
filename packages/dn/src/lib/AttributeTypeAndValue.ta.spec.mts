@@ -149,6 +149,8 @@ describe("AttributeTypeAndValue string methods", () => {
         expect(atav.toString()).toBe("cn=Smith, J");
         expect(atav.toString(true)).toBe("cn=Smith\\, J");
         expect(AttributeTypeAndValue.fromStringX520("cn=Smith").toString()).toBe("cn=Smith");
+        const interop = atav.toInteropString();
+        expect(AttributeTypeAndValue.fromStringX520(interop).toString()).toBe("cn=Smith, J");
     });
 
     it("exposes the type name, value string, and key", () => {
