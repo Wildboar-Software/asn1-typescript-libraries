@@ -1,9 +1,11 @@
 import { Buffer } from "node:buffer";
 import {
     ASN1Construction,
+    ASN1ConstructionError,
     type ASN1Element,
     ASN1TagClass,
     ASN1UniversalType,
+    BERElement,
 } from "@wildboar/asn1";
 import {
     createEqualityMatcher,
@@ -46,6 +48,8 @@ function bytesToHex (bytes: Uint8Array): string {
     return Buffer.from(bytes.buffer, bytes.byteOffset, bytes.byteLength).toString("hex");
 }
 
+const MAX_OPEN_TYPE_CHILDREN = 256;
+
 function elementToKey (el: ASN1Element, depth: number = 0): string {
     const head = `${el.tagClass}:${el.tagNumber}:`;
     if (el.construction !== ASN1Construction.constructed || depth > 16) {
@@ -57,7 +61,17 @@ function elementToKey (el: ASN1Element, depth: number = 0): string {
     ) {
         return head + bytesToHex(el.deconstruct("?"));
     }
-    const children = el.sequenceOf.map((c) => elementToKey(c, depth + 1));
+    const bytes = el.value;
+    const child = new BERElement();
+    const children: string[] = [];
+    let i = 0;
+    while (i < bytes.length) {
+        if (children.length >= MAX_OPEN_TYPE_CHILDREN) {
+            throw new ASN1ConstructionError("capabilityMatch: open-type element exceeds child limit", el);
+        }
+        i += child.fromBytes(bytes.subarray(i), true);
+        children.push(elementToKey(child, depth + 1));
+    }
     if (el.tagClass === ASN1TagClass.universal && el.tagNumber === ASN1UniversalType.set) {
         children.sort();
     }
@@ -139,13 +153,16 @@ function capabilityToCanonicalKey (cap: Capability, normalize: boolean = true): 
     ]);
 }
 
+interface PreparedCapability {
+    readonly cap: Capability;
+    key?: string;
+}
+
 export
 const capabilityMatch: Matcher = createEqualityMatcher(
-    (el: ASN1Element): Capability | string => _decode_Capability(el),
-    (assertion: Capability | string, value: ASN1Element, _getEqualityMatcher, flags = 0): boolean => {
-        const assertionKey = typeof assertion === "string"
-            ? assertion
-            : capabilityToCanonicalKey(assertion, false);
+    (el: ASN1Element): PreparedCapability => ({ cap: _decode_Capability(el) }),
+    (assertion: PreparedCapability, value: ASN1Element, _getEqualityMatcher, flags = 0): boolean => {
+        const assertionKey = (assertion.key ??= capabilityToCanonicalKey(assertion.cap, false));
         const vKey = capabilityToCanonicalKey(
             _decode_Capability(value),
             !(flags & MATCH_FLAG_VALUE_NORMALIZED),
@@ -154,9 +171,10 @@ const capabilityMatch: Matcher = createEqualityMatcher(
     },
     undefined,
     false,
-    (assertion: Capability | string): string => (
-        typeof assertion === "string" ? assertion : capabilityToCanonicalKey(assertion, true)
-    ),
+    (assertion: PreparedCapability): PreparedCapability => ({
+        cap: assertion.cap,
+        key: capabilityToCanonicalKey(assertion.cap, true),
+    }),
 );
 
 export default capabilityMatch;

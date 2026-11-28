@@ -18,7 +18,10 @@ import {
 } from "./orAddressUtilities.js";
 
 export
-function isSubstringSubset (value: unknown, assertion: unknown): boolean {
+function isSubstringSubset (value: unknown, assertion: unknown, depth: number = 0): boolean {
+    if (depth > 16) {
+        return false;
+    }
     if (
         (typeof value === "number" || typeof value === "bigint")
         && (typeof assertion === "number" || typeof assertion === "bigint")
@@ -54,7 +57,7 @@ function isSubstringSubset (value: unknown, assertion: unknown): boolean {
                 if (assertion[i] === undefined) {
                     continue;
                 }
-                if (i >= value.length || !isSubstringSubset(value[i], assertion[i])) {
+                if (i >= value.length || !isSubstringSubset(value[i], assertion[i], depth + 1)) {
                     return false;
                 }
             }
@@ -66,7 +69,7 @@ function isSubstringSubset (value: unknown, assertion: unknown): boolean {
             }
             if (
                 !Object.prototype.hasOwnProperty.call(value, k)
-                || !isSubstringSubset((value as Record<string, unknown>)[k], aVal)
+                || !isSubstringSubset((value as Record<string, unknown>)[k], aVal, depth + 1)
             ) {
                 return false;
             }

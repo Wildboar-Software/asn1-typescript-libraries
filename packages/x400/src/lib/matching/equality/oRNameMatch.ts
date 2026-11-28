@@ -1,6 +1,8 @@
 import {
     ASN1Construction,
+    ASN1ConstructionError,
     type ASN1Element,
+    ASN1Error,
     ASN1TagClass,
     ASN1UniversalType,
     BERElement,
@@ -61,7 +63,11 @@ function validateElementTeletex (el: ASN1Element, depth: number = 0): void {
         const bytes = el.value;
         const child = new BERElement();
         let i = 0;
+        let count = 0;
         while (i < bytes.length) {
+            if (++count > 128) {
+                throw new ASN1ConstructionError("Teletex string contains more than 128 elements", el);
+            }
             i += child.fromBytes(bytes.subarray(i), true);
             validateElementTeletex(child, depth + 1);
         }

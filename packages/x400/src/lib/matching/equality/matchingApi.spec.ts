@@ -84,6 +84,15 @@ import recipientSpecifierSubstringElementsMatch from "./recipientSpecifierSubstr
 import circulationMemberMatch from "./circulationMemberMatch.js";
 import circulationMemberElementsMatch from "./circulationMemberElementsMatch.js";
 import circulationMemberSubstringElementsMatch from "./circulationMemberSubstringElementsMatch.js";
+import circulationMemberCheckmarkMatch from "./circulationMemberCheckmarkMatch.js";
+import capabilityMatch from "./capabilityMatch.js";
+import { recursivelyNormalize } from "./orAddressUtilities.js";
+import { extractStrings } from "./oRNameSingleElementMatch.js";
+import {
+    Capability,
+    _encode_Capability,
+} from "@wildboar/x400/MHSDirectoryObjectsAndAttributes";
+import { SecurityLabel } from "@wildboar/x400/MTSAbstractService";
 import redirectionOrDLExpansionMatch from "./redirectionOrDLExpansionMatch.js";
 import redirectionOrDLExpansionElementsMatch from "./redirectionOrDLExpansionElementsMatch.js";
 import redirectionOrDLExpansionSubstringElementsMatch from "./redirectionOrDLExpansionSubstringElementsMatch.js";
@@ -699,5 +708,68 @@ describe("X.400 matchers decode the assertion", () => {
         ]) {
             expect(() => matcher(badCM, stored(goodCM))).toThrow();
         }
+    });
+
+    test("bounds SET element scans, preserves typed arrays, and prepares assertions once across multi-valued attributes (Issue 3.2)", () => {
+        // Typed arrays (e.g. PresentationAddress selectors/nAddresses) are preserved without per-byte expansion
+        const bytes = new Uint8Array([1, 2, 3, 4, 5]);
+        const normalizedObj = recursivelyNormalize({ label: "  hello   world ", raw: bytes });
+        expect(normalizedObj.label).toBe("HELLO WORLD");
+        expect(normalizedObj.raw).toBe(bytes);
+        expect([...extractStrings({ label: "ok", raw: bytes })]).toEqual(["ok"]);
+
+        // Oversized SET payloads (> DoS cap) and bare `{ NULL }` SETs return undefined
+        const validCM = _encode_CirculationMember(
+            new CirculationMember(
+                new RecipientSpecifier(
+                    new ORDescriptor(new ORName(new BuiltInStandardAttributes({ iso_3166_alpha2_code: "US" }))),
+                ),
+            ),
+            DER,
+        );
+        const validRS = _encode_RecipientSpecifier(
+            new RecipientSpecifier(new ORDescriptor(undefined, new Uint8Array([0x41]))),
+            DER,
+        );
+        const dummyElements = Array.from({ length: 120 }, () => $._encodeNull(null, DER));
+        const oversizedSet = DERElement.fromSet(dummyElements);
+        expect(recipientSpecifierMatch(validRS, stored(oversizedSet))).toBeUndefined();
+        expect(circulationMemberMatch(validCM, stored(oversizedSet))).toBeUndefined();
+        expect(circulationMemberCheckmarkMatch(validCM, stored(oversizedSet))).toBeUndefined();
+
+        // `SET { NULL }` missing required `circulation-recipient` returns undefined, not true
+        const bareNullSet = DERElement.fromSet([$._encodeNull(null, DER)]);
+        expect(circulationMemberCheckmarkMatch(validCM, stored(bareNullSet))).toBeUndefined();
+
+        // Sequence tag instead of SET tag returns undefined
+        const wrongTagSeq = DERElement.fromSequence([$._encodeNull(null, DER)]);
+        expect(recipientSpecifierMatch(validRS, stored(wrongTagSeq))).toBeUndefined();
+        expect(circulationMemberMatch(validCM, stored(wrongTagSeq))).toBeUndefined();
+        expect(circulationMemberCheckmarkMatch(validCM, stored(wrongTagSeq))).toBeUndefined();
+
+        // `recipientSpecifier*`, `circulationMember*`, and `capabilityMatch` prepare assertions once and respect MATCH_FLAG_ASSERTION_NORMALIZED
+        const rsLower = _encode_RecipientSpecifier(
+            new RecipientSpecifier(new ORDescriptor(undefined, new Uint8Array([0x61, 0x62]))),
+            DER,
+        );
+        const rsUpper = _encode_RecipientSpecifier(
+            new RecipientSpecifier(new ORDescriptor(undefined, new Uint8Array([0x41, 0x42]))),
+            DER,
+        );
+        expect(recipientSpecifierMatch(rsLower, stored(rsUpper))).toBe(true);
+        expect(recipientSpecifierMatch(rsLower, stored(rsUpper), undefined, MATCH_FLAG_ASSERTION_NORMALIZED)).toBe(false);
+
+        const capLower = _encode_Capability(
+            new Capability(undefined, undefined, undefined, [new SecurityLabel(undefined, undefined, "  secret ")]),
+            DER,
+        );
+        const capUpper = _encode_Capability(
+            new Capability(undefined, undefined, undefined, [new SecurityLabel(undefined, undefined, "SECRET")]),
+            DER,
+        );
+        const multiCapAttr = new Attribute(type_, [capLower, capUpper]);
+        expect(capabilityMatch(capLower, multiCapAttr)).toBe(true);
+        expect(capabilityMatch(capUpper, multiCapAttr, undefined, MATCH_FLAG_ASSERTION_NORMALIZED)).toBe(true);
+        expect(capabilityMatch(capLower, stored(capUpper), undefined, MATCH_FLAG_ASSERTION_NORMALIZED)).toBe(false);
     });
 });

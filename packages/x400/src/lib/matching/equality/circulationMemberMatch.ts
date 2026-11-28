@@ -27,12 +27,20 @@ import {
 } from "./oRDescriptorMatch.js";
 import { findRecipientElement } from "./recipientSpecifierMatch.js";
 
+// Matches `@wildboar/asn1` `_parse_set`'s `components.length + 100` DoS cap
+// (`CirculationMember` has 2 root SET components).
+const MAX_CIRCULATION_MEMBER_ELEMENTS = 102;
+
 export
 function findCirculationRecipientElement (
     value: ASN1Element,
     flags: number = 0,
 ): ASN1Element | undefined {
-    if (value.construction !== ASN1Construction.constructed) {
+    if (
+        (value.tagClass !== ASN1TagClass.universal)
+        || (value.tagNumber !== ASN1UniversalType.set)
+        || (value.construction !== ASN1Construction.constructed)
+    ) {
         return undefined;
     }
     const ct = flags & MATCH_FLAG_CONSTANT_TIME;
@@ -40,7 +48,11 @@ function findCirculationRecipientElement (
     const el = new BERElement();
     let found: ASN1Element | undefined;
     let i = 0;
+    let count = 0;
     while (i < bytes.length) {
+        if (++count > MAX_CIRCULATION_MEMBER_ELEMENTS) {
+            return undefined;
+        }
         i += el.fromBytes(bytes.subarray(i), true);
         if (
             (el.tagClass === ASN1TagClass.universal)

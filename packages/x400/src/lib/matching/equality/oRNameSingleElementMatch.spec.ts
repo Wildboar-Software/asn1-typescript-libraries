@@ -134,4 +134,26 @@ describe("oRNameSingleElementMatch (ITU-T Rec. X.413 §12.4.7)", () => {
         );
         expect(oRNameSingleElementMatch(ms("gb"), stored(psapOrName))).toBe(true);
     });
+
+    test("matches country-name elements by X.121 / ISO 3166 country equivalence rather than literal form", () => {
+        const isoUS = _encode_ORName(
+            new ORName(new BuiltInStandardAttributes({ iso_3166_alpha2_code: "US" })),
+            DER,
+        );
+        const x121US = _encode_ORName(
+            new ORName(new BuiltInStandardAttributes({ x121_dcc_code: "310" })),
+            DER,
+        );
+        const orgUSOnly = _encode_ORName(
+            new ORName(new BuiltInStandardAttributes(undefined, undefined, undefined, undefined, undefined, "US")),
+            DER,
+        );
+
+        expect(oRNameSingleElementMatch(ms("US"), stored(isoUS))).toBe(true);
+        expect(oRNameSingleElementMatch(ms("310"), stored(isoUS))).toBe(true);
+        expect(oRNameSingleElementMatch(ms("US"), stored(x121US))).toBe(true);
+        expect(oRNameSingleElementMatch(ms("310"), stored(x121US))).toBe(true);
+        expect(oRNameSingleElementMatch(ms("0310"), stored(isoUS))).toBe(false);
+        expect(oRNameSingleElementMatch(ms("310"), stored(orgUSOnly))).toBe(false);
+    });
 });

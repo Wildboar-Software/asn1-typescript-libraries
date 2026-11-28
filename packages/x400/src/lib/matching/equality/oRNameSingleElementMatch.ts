@@ -19,6 +19,7 @@ import {
 } from "@wildboar/x400/MTSAbstractService";
 import {
     decodeMSStringElement,
+    normalizeCountryString,
     normalizeMSString,
     orAddressToInfo,
     prepareMSStringValue,
@@ -26,6 +27,14 @@ import {
 } from "./orAddressUtilities.js";
 
 const MAX_DN_STRING_LIST_ITEMS = 16;
+const THREE_DIGIT_DCC = /^[0-9]{3}$/;
+
+function assertedCountryFromMSString (assertion: string): string | null {
+    if (THREE_DIGIT_DCC.test(assertion)) {
+        return normalizeCountryString(assertion);
+    }
+    return assertion.length === 2 ? assertion : null;
+}
 
 export
 function* extractStrings (value: unknown, depth: number = 0): Generator<string> {
@@ -191,15 +200,23 @@ function matchORNameSingleElementFast (
         const {
             extendedNetworkAddress: _ext,
             terminalType: _tt,
+            countryName,
+            physicalDeliveryCountryName,
             ...searchableInfo
         } = vInfo;
-        for (const strInValue of extractStrings(searchableInfo)) {
-            if ((normVal ? normalizeORNameSingleElementAssertion(strInValue) : strInValue) === assertion) {
-                return true;
-            }
+        const assertedCountry = assertedCountryFromMSString(assertion) ?? assertion;
+        if (
+            (countryName !== undefined && (countryName === assertedCountry || countryName === assertion))
+            || (
+                physicalDeliveryCountryName !== undefined
+                && (physicalDeliveryCountryName === assertedCountry || physicalDeliveryCountryName === assertion)
+            )
+        ) {
+            return true;
         }
-        for (const strInValue of extractStrings(v.built_in_standard_attributes.toJSON())) {
-            if ((normVal ? normalizeORNameSingleElementAssertion(strInValue) : strInValue) === assertion) {
+        // `orAddressToInfo(v, normVal)` already normalizes all extracted strings when `normVal` is true.
+        for (const strInValue of extractStrings(searchableInfo)) {
+            if (strInValue === assertion) {
                 return true;
             }
         }
@@ -232,17 +249,27 @@ function matchORNameSingleElementConstantTime (
             const {
                 extendedNetworkAddress: _ext,
                 terminalType: _tt,
+                countryName,
+                physicalDeliveryCountryName,
                 ...searchableInfo
             } = vInfo;
-            for (const strInValue of extractStrings(searchableInfo)) {
-                const candidate = normVal ? normalizeORNameSingleElementAssertion(strInValue) : strInValue;
-                if (ctStringsEqual(assertion, candidate)) {
+            const assertedCountry = assertedCountryFromMSString(assertion) ?? assertion;
+            if (countryName !== undefined) {
+                const eqCountry = ctStringsEqual(assertedCountry, countryName);
+                const eqRaw = ctStringsEqual(assertion, countryName);
+                if (eqCountry || eqRaw) {
                     matched = true;
                 }
             }
-            for (const strInValue of extractStrings(v.built_in_standard_attributes.toJSON())) {
-                const candidate = normVal ? normalizeORNameSingleElementAssertion(strInValue) : strInValue;
-                if (ctStringsEqual(assertion, candidate)) {
+            if (physicalDeliveryCountryName !== undefined) {
+                const eqCountry = ctStringsEqual(assertedCountry, physicalDeliveryCountryName);
+                const eqRaw = ctStringsEqual(assertion, physicalDeliveryCountryName);
+                if (eqCountry || eqRaw) {
+                    matched = true;
+                }
+            }
+            for (const strInValue of extractStrings(searchableInfo)) {
+                if (ctStringsEqual(assertion, strInValue)) {
                     matched = true;
                 }
             }

@@ -814,6 +814,7 @@ function orAddressToInfo (addr: ORAddress, normalize: boolean = true): ORAddress
     return ret;
 }
 
+export
 function normalizeCountryString (raw: string): string | null {
     return DIGITS_AND_SPACES_ONLY.test(raw)
         ? normalizeCountryChoice({ x121_dcc_code: raw })
@@ -1541,42 +1542,53 @@ function decodeMSStringElement (el: ASN1Element): string {
     }
 }
 
-export function recursivelyNormalize (value: string): string;
-export function recursivelyNormalize<T> (value: readonly T[]): T[];
-export function recursivelyNormalize<K, V> (value: ReadonlyMap<K, V>): Map<K, V>;
-export function recursivelyNormalize<T> (value: ReadonlySet<T>): Set<T>;
-export function recursivelyNormalize<T extends Record<string, unknown>> (value: T): T;
-export function recursivelyNormalize<T extends number | bigint | boolean | symbol | null | undefined> (value: T): T;
-export function recursivelyNormalize (value: unknown): unknown {
+function recursivelyNormalizeAtDepth (value: unknown, depth: number): unknown {
+    if (depth > 16) {
+        return value;
+    }
     if (typeof value === "string") {
         return normalizeMSString(value);
+    }
+    if (ArrayBuffer.isView(value)) {
+        return value;
     }
     if (Array.isArray(value)) {
         if (value.length === 0) {
             return value;
         }
-        return value.map((item) => recursivelyNormalize(item));
+        return value.map((item) => recursivelyNormalizeAtDepth(item, depth + 1));
     }
     if (value instanceof Map) {
         const out = new Map<unknown, unknown>();
         for (const [ k, v ] of value) {
-            out.set(recursivelyNormalize(k), recursivelyNormalize(v));
+            out.set(recursivelyNormalizeAtDepth(k, depth + 1), recursivelyNormalizeAtDepth(v, depth + 1));
         }
         return out;
     }
     if (value instanceof Set) {
         const out = new Set<unknown>();
         for (const item of value) {
-            out.add(recursivelyNormalize(item));
+            out.add(recursivelyNormalizeAtDepth(item, depth + 1));
         }
         return out;
     }
     if (typeof value === "object" && value !== null) {
         const out: Record<string, unknown> = {};
         for (const [ key, val ] of Object.entries(value)) {
-            out[key] = recursivelyNormalize(val);
+            out[key] = recursivelyNormalizeAtDepth(val, depth + 1);
         }
         return out;
     }
     return value;
+}
+
+export function recursivelyNormalize (value: string): string;
+export function recursivelyNormalize<T> (value: readonly T[]): T[];
+export function recursivelyNormalize<K, V> (value: ReadonlyMap<K, V>): Map<K, V>;
+export function recursivelyNormalize<T> (value: ReadonlySet<T>): Set<T>;
+export function recursivelyNormalize<T extends ArrayBufferView> (value: T): T;
+export function recursivelyNormalize<T extends Record<string, unknown>> (value: T): T;
+export function recursivelyNormalize<T extends number | bigint | boolean | symbol | null | undefined> (value: T): T;
+export function recursivelyNormalize (value: unknown): unknown {
+    return recursivelyNormalizeAtDepth(value, 0);
 }
