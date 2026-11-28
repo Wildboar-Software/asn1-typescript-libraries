@@ -51,6 +51,9 @@
     },
     "exports": {
         ".": "./src/index.mts",
+        "./matching/equality": "./src/lib/matching/equality/index.mjs",
+        "./matching/ordering": "./src/lib/matching/ordering/index.mjs",
+        "./matching/substring": "./src/lib/matching/substring/index.mjs",
         "./EDIMSAbstractService": "./src/lib/modules/EDIMSAbstractService/index.mjs",
         "./EDIMSAutoActionTypes": "./src/lib/modules/EDIMSAutoActionTypes/index.mjs",
         "./EDIMSFunctionalObjects": "./src/lib/modules/EDIMSFunctionalObjects/index.mjs",

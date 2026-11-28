@@ -4,6 +4,9 @@
   "license": "MIT",
   "exports": {
     ".": "./src/index.mts",
+    "./matching/equality": "./src/lib/matching/equality/index.mts",
+    "./matching/ordering": "./src/lib/matching/ordering/index.mts",
+    "./matching/substring": "./src/lib/matching/substring/index.mts",
     "./EDIMSAbstractService": "./src/lib/modules/EDIMSAbstractService/index.mts",
     "./EDIMSAutoActionTypes": "./src/lib/modules/EDIMSAutoActionTypes/index.mts",
     "./EDIMSFunctionalObjects": "./src/lib/modules/EDIMSFunctionalObjects/index.mts",
@@ -59,6 +62,10 @@
       "LICENSE.txt",
       "README.md",
       "src/**/*.mts"
+    ],
+    "exclude": [
+      "src/**/*.spec.mts",
+      "src/**/*.test.mts"
     ]
   }
 }
