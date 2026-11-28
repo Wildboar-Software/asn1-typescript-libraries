@@ -35,3 +35,6 @@ jobs:
         # --verbose: for some reason, it hangs without this.
         # --allow-dirty: just because of package-lock.json and the commit hash
         run: npx jsr publish --allow-slow-types --verbose --allow-dirty
+      - name: Publish to NPM
+        working-directory: packages/${{ matrix.package }}
+        run: npm publish --provenance
