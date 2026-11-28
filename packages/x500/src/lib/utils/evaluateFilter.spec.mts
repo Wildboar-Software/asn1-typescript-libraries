@@ -1463,4 +1463,63 @@ describe("matchedValues deduplication by reference", () => {
         expect((ataAttrs as Attribute[])[0].values).toEqual([shared]);
         expect((ataAttrs as Attribute[])[0].valuesWithContext).toEqual([vwc]);
     });
+
+    it("rolls back matched values from failed or indeterminate AND branches inside OR without leaking them", () => {
+        const typeA = ObjectIdentifier.fromString("1.2.3.31");
+        const typeB = ObjectIdentifier.fromString("1.2.3.32");
+        const typeC = ObjectIdentifier.fromString("1.2.3.33");
+        const typeD = ObjectIdentifier.fromString("1.2.3.34");
+        const valA = value("true");
+        const valC = value("true");
+        const entry = new EntryInformation({ rdnSequence: [] }, true, [
+            { attribute: new Attribute(typeA, [valA]) },
+            { attribute: new Attribute(typeB, [value("false")]) },
+            { attribute: new Attribute(typeC, [valC]) },
+            { attribute: new Attribute(typeD, [value("unknown")]) },
+        ]);
+        const eq = (t: ObjectIdentifier): Filter => ({ item: { equality: new AttributeValueAssertion(t, value("assertion")) } });
+        const options = settings("equality", true);
+
+        // Failed AND branch: typeA matched before typeB failed, so typeA must not leak.
+        const orWithFailedAnd: Filter = {
+            or: [
+                { and: [eq(typeA), eq(typeB)] },
+                { and: [eq(typeC), eq(typeC)] },
+            ],
+        };
+        const res1 = evaluateFilter(orWithFailedAnd, [entry], options);
+        expect(res1.matched).toBe(true);
+        expect(res1.matchedValues).toHaveLength(1);
+        expect(res1.matchedValues![0].attributes).toHaveLength(1);
+        expect(res1.matchedValues![0].attributes[0].type_).toBe(typeC);
+        expect(res1.matchedValues![0].attributes[0].values).toEqual([valC]);
+
+        // Indeterminate AND branch: typeA matched before typeD was undefined, followed by another match.
+        const orWithUndefAnd: Filter = {
+            or: [
+                { and: [eq(typeA), eq(typeD), eq(typeA)] },
+                eq(typeC),
+            ],
+        };
+        const res2 = evaluateFilter(orWithUndefAnd, [entry], options);
+        expect(res2.matched).toBe(true);
+        expect(res2.matchedValues).toHaveLength(1);
+        expect(res2.matchedValues![0].attributes).toHaveLength(1);
+        expect(res2.matchedValues![0].attributes[0].type_).toBe(typeC);
+        expect(res2.matchedValues![0].attributes[0].values).toEqual([valC]);
+
+        // Negated branch inside OR does not collect matched values.
+        const orWithNot: Filter = {
+            or: [
+                { not: eq(typeA) },
+                eq(typeC),
+            ],
+        };
+        const res3 = evaluateFilter(orWithNot, [entry], options);
+        expect(res3.matched).toBe(true);
+        expect(res3.matchedValues).toHaveLength(1);
+        expect(res3.matchedValues![0].attributes).toHaveLength(1);
+        expect(res3.matchedValues![0].attributes[0].type_).toBe(typeC);
+        expect(res3.matchedValues![0].attributes[0].values).toEqual([valC]);
+    });
 });

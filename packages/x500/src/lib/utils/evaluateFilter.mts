@@ -451,48 +451,118 @@ function takeMatchedAttribute (collected: Attribute): Attribute | undefined {
 
 interface AttributeValuesAccumulator {
     readonly type_: AttributeType;
-    readonly values: Set<ASN1Element>;
-    readonly valuesWithContext: Set<Attribute_valuesWithContext_Item>;
+    values?: Set<ASN1Element>;
+    valuesWithContext?: Set<Attribute_valuesWithContext_Item>;
 }
 
-type EntryMatchAccumulator = Map<number, Map<DotDelimitedOidString, AttributeValuesAccumulator>>;
+type AccumulatedAttribute = Attribute | AttributeValuesAccumulator;
+type AccumulatedEntry = MatchedEntryInfo | Map<DotDelimitedOidString, AccumulatedAttribute>;
+
+function deduplicateSingleAttribute (attr: Attribute): Attribute {
+    const vals = attr.values;
+    const vwcs = attr.valuesWithContext;
+    const hasManyVals = vals.length > 1;
+    const hasManyVwcs = (vwcs?.length ?? 0) > 1;
+    if (!hasManyVals && !hasManyVwcs) {
+        return attr;
+    }
+    let dedupedVals = vals;
+    let changed = false;
+    if (hasManyVals) {
+        const set = new Set(vals);
+        if (set.size !== vals.length) {
+            dedupedVals = Array.from(set);
+            changed = true;
+        }
+    }
+    let dedupedVwcs = vwcs;
+    if (hasManyVwcs) {
+        const set = new Set(vwcs);
+        if (set.size !== vwcs!.length) {
+            dedupedVwcs = Array.from(set);
+            changed = true;
+        }
+    }
+    if (!changed) {
+        return attr;
+    }
+    return dedupedVwcs?.length
+        ? new Attribute(attr.type_, dedupedVals, dedupedVwcs)
+        : new Attribute(attr.type_, dedupedVals);
+}
+
+function addValuesToAccumulator (
+    acc: AttributeValuesAccumulator,
+    attr: Attribute,
+): void {
+    if (attr.values.length > 0) {
+        let values = acc.values;
+        if (!values) {
+            values = new Set();
+            acc.values = values;
+        }
+        for (const v of attr.values) {
+            values.add(v);
+        }
+    }
+    if (attr.valuesWithContext?.length) {
+        let vwcs = acc.valuesWithContext;
+        if (!vwcs) {
+            vwcs = new Set();
+            acc.valuesWithContext = vwcs;
+        }
+        for (const vwc of attr.valuesWithContext) {
+            vwcs.add(vwc);
+        }
+    }
+}
 
 function addAttributeToAccumulator (
-    byType: Map<DotDelimitedOidString, AttributeValuesAccumulator>,
+    byType: Map<DotDelimitedOidString, AccumulatedAttribute>,
     attr: Attribute,
 ): void {
     const key = attr.type_.toString();
-    let acc = byType.get(key);
-    if (!acc) {
-        acc = {
-            type_: attr.type_,
-            values: new Set(),
-            valuesWithContext: new Set(),
+    const existing = byType.get(key);
+    if (!existing) {
+        byType.set(key, attr);
+        return;
+    }
+    if (existing instanceof Attribute) {
+        const acc: AttributeValuesAccumulator = {
+            type_: existing.type_,
+            values: existing.values.length > 0 ? new Set(existing.values) : undefined,
+            valuesWithContext: existing.valuesWithContext?.length
+                ? new Set(existing.valuesWithContext)
+                : undefined,
         };
+        addValuesToAccumulator(acc, attr);
         byType.set(key, acc);
+        return;
     }
-    for (const v of attr.values) {
-        acc.values.add(v);
-    }
-    if (attr.valuesWithContext) {
-        for (const vwc of attr.valuesWithContext) {
-            acc.valuesWithContext.add(vwc);
-        }
-    }
+    addValuesToAccumulator(existing, attr);
 }
 
 function finalizeAccumulatedAttributes (
-    byType: Map<DotDelimitedOidString, AttributeValuesAccumulator>,
+    byType: Map<DotDelimitedOidString, AccumulatedAttribute>,
 ): Attribute[] {
     const result: Attribute[] = [];
-    for (const acc of byType.values()) {
-        if (acc.values.size === 0 && acc.valuesWithContext.size === 0) {
+    for (const entry of byType.values()) {
+        if (entry instanceof Attribute) {
+            if (!entry.isEmpty()) {
+                result.push(deduplicateSingleAttribute(entry));
+            }
             continue;
         }
+        const hasValues = (entry.values?.size ?? 0) > 0;
+        const hasVwcs = (entry.valuesWithContext?.size ?? 0) > 0;
+        if (!hasValues && !hasVwcs) {
+            continue;
+        }
+        const values = hasValues ? Array.from(entry.values!) : [];
         result.push(
-            acc.valuesWithContext.size > 0
-                ? new Attribute(acc.type_, Array.from(acc.values), Array.from(acc.valuesWithContext))
-                : new Attribute(acc.type_, Array.from(acc.values)),
+            hasVwcs
+                ? new Attribute(entry.type_, values, Array.from(entry.valuesWithContext!))
+                : new Attribute(entry.type_, values),
         );
     }
     return result;
@@ -506,43 +576,66 @@ function deduplicateMatchedAttributes (attributes: Attribute[]): Attribute[] {
     if (attributes.length === 0) {
         return attributes;
     }
-    if (
-        attributes.length === 1
-        && attributes[0].values.length <= 1
-        && (attributes[0].valuesWithContext?.length ?? 0) <= 1
-    ) {
-        return attributes;
+    if (attributes.length === 1) {
+        const deduped = deduplicateSingleAttribute(attributes[0]);
+        return deduped === attributes[0] ? attributes : [deduped];
     }
-    const byType = new Map<DotDelimitedOidString, AttributeValuesAccumulator>();
+    const byType = new Map<DotDelimitedOidString, AccumulatedAttribute>();
     for (const attr of attributes) {
         addAttributeToAccumulator(byType, attr);
     }
     return finalizeAccumulatedAttributes(byType);
 }
 
-function mergeMatchedEntryInfos (
-    byEntry: EntryMatchAccumulator,
-    infos: MatchedEntryInfo[] | undefined,
-): void {
-    if (!infos?.length) {
-        return;
+/**
+ * Merge matched entries by `entryIndex` and deduplicate their attributes and
+ * values by object identity in a single pass at the root of `evaluateFilter`.
+ */
+function deduplicateMatchedEntryInfos (infos: MatchedEntryInfo[]): MatchedEntryInfo[] {
+    if (infos.length === 0) {
+        return infos;
     }
+    if (infos.length === 1) {
+        const info = infos[0];
+        const deduped = deduplicateMatchedAttributes(info.attributes);
+        return deduped === info.attributes ? infos : [new MatchedEntryInfo(info.entryIndex, deduped)];
+    }
+    const byEntry = new Map<number, AccumulatedEntry>();
     for (const info of infos) {
-        let byType = byEntry.get(info.entryIndex);
-        if (!byType) {
-            byType = new Map();
+        const existing = byEntry.get(info.entryIndex);
+        if (!existing) {
+            byEntry.set(info.entryIndex, info);
+            continue;
+        }
+        if (existing instanceof MatchedEntryInfo) {
+            const byType = new Map<DotDelimitedOidString, AccumulatedAttribute>();
+            for (const attr of existing.attributes) {
+                addAttributeToAccumulator(byType, attr);
+            }
+            for (const attr of info.attributes) {
+                addAttributeToAccumulator(byType, attr);
+            }
             byEntry.set(info.entryIndex, byType);
+            continue;
         }
         for (const attr of info.attributes) {
-            addAttributeToAccumulator(byType, attr);
+            addAttributeToAccumulator(existing, attr);
         }
     }
-}
-
-function finalizeMatchedEntryInfos (byEntry: EntryMatchAccumulator): MatchedEntryInfo[] {
     const result: MatchedEntryInfo[] = [];
-    for (const [entryIndex, byType] of byEntry.entries()) {
-        const attributes = finalizeAccumulatedAttributes(byType);
+    for (const [entryIndex, entry] of byEntry.entries()) {
+        if (entry instanceof MatchedEntryInfo) {
+            const deduped = deduplicateMatchedAttributes(entry.attributes);
+            if (deduped.length > 0) {
+                result.push(
+                    deduped === entry.attributes
+                        ? entry
+                        : new MatchedEntryInfo(entryIndex, deduped),
+                );
+            }
+            continue;
+        }
+        const attributes = finalizeAccumulatedAttributes(entry);
         if (attributes.length > 0) {
             result.push(new MatchedEntryInfo(entryIndex, attributes));
         }
@@ -766,6 +859,8 @@ function evaluateFilterAssertion (
     flags: number,
     selectedContexts?: ContextAssertion[],
     mode: FilterItemEvalMode = "all",
+    collectMatchedValues: boolean = Boolean(options.matchedValuesOnly),
+    deduplicate: boolean = true,
 ): Attribute[] | boolean | undefined {
     let indeterminate = false;
     const rawMatcher = matcherForItem(type_, assertion, options, flags);
@@ -787,7 +882,7 @@ function evaluateFilterAssertion (
     ];
     const relevantAttributes = attributes
         .filter((attr): boolean => friendTypes.some((f) => options.isAttributeSubtype(attr.type_, f)));
-    const matchedValues: Attribute[] = [];
+    const matchedValues: Attribute[] | undefined = collectMatchedValues ? [] : undefined;
     let matched = false;
     const substrings = Array.isArray(assertion);
     if (mode !== "defaults") {
@@ -802,13 +897,16 @@ function evaluateFilterAssertion (
             indeterminate ||= result === undefined;
             if (result === true) {
                 matched = true;
-                if (!options.matchedValuesOnly) {
-                    return matchedValues.length > 0 ? matchedValues : true;
+                if (!collectMatchedValues) {
+                    return true;
                 }
             }
         }
         if (matched) {
-            return matchedValues.length > 0 ? deduplicateMatchedAttributes(matchedValues) : true;
+            if (!matchedValues?.length) {
+                return true;
+            }
+            return deduplicate ? deduplicateMatchedAttributes(matchedValues) : matchedValues;
         }
     }
     // Determine presence before value permissions and context selection:
@@ -929,6 +1027,24 @@ function evaluateMatchingRuleAssertion (
     options: EvaluateFilterSettings,
     mode: FilterItemEvalMode = "all",
 ): Attribute[] | boolean | undefined {
+    return evaluateMatchingRuleAssertionInternal(
+        mra,
+        entry,
+        options,
+        mode,
+        Boolean(options.matchedValuesOnly),
+        true,
+    );
+}
+
+function evaluateMatchingRuleAssertionInternal (
+    mra: MatchingRuleAssertion,
+    entry: EntryInformation,
+    options: EvaluateFilterSettings,
+    mode: FilterItemEvalMode,
+    collectMatchedValues: boolean,
+    deduplicate: boolean,
+): Attribute[] | boolean | undefined {
     if (mra.type_ && !options.permittedToMatch(mra.type_)) {
         return undefined;
     }
@@ -998,7 +1114,7 @@ function evaluateMatchingRuleAssertion (
     const relevantAttributes = selectedAttributes.filter((attr) => (
         options.permittedToMatch(attr.type_) && isCompatibleCandidate(attr.type_)
     ));
-    const matchedValues: Attribute[] = [];
+    const matchedValues: Attribute[] | undefined = collectMatchedValues ? [] : undefined;
     let matched = false;
     if (mode !== "defaults") {
         for (const attr of relevantAttributes) {
@@ -1006,13 +1122,16 @@ function evaluateMatchingRuleAssertion (
             indeterminate ||= result === undefined;
             if (result === true) {
                 matched = true;
-                if (!options.matchedValuesOnly) {
-                    return matchedValues.length > 0 ? matchedValues : true;
+                if (!collectMatchedValues) {
+                    return true;
                 }
             }
         }
         if (matched) {
-            return matchedValues.length > 0 ? deduplicateMatchedAttributes(matchedValues) : true;
+            if (!matchedValues?.length) {
+                return true;
+            }
+            return deduplicate ? deduplicateMatchedAttributes(matchedValues) : matchedValues;
         }
     }
 
@@ -1106,6 +1225,22 @@ function evaluateAttributeTypeAssertion (
     entry: EntryInformation,
     options: EvaluateFilterSettings,
 ): Attribute[] | boolean | undefined {
+    return evaluateAttributeTypeAssertionInternal(
+        ata,
+        entry,
+        options,
+        Boolean(options.matchedValuesOnly),
+        true,
+    );
+}
+
+function evaluateAttributeTypeAssertionInternal (
+    ata: AttributeTypeAssertion,
+    entry: EntryInformation,
+    options: EvaluateFilterSettings,
+    collectMatchedValues: boolean,
+    deduplicate: boolean,
+): Attribute[] | boolean | undefined {
     if (!options.permittedToMatch(ata.type_)) {
         return undefined;
     }
@@ -1123,13 +1258,13 @@ function evaluateAttributeTypeAssertion (
         return false;
     }
     const noAssertedContexts = !ata.assertedContexts?.length;
-    const matchedValues: Attribute[] = [];
+    const matchedValues: Attribute[] | undefined = collectMatchedValues ? [] : undefined;
     let matched = false;
     let sawIndeterminate = false;
     const directMatchCache: DirectContextMatchCache = new WeakMap();
     for (const attr of relevantAttributes) {
         if (noAssertedContexts && attr.isEmpty()) {
-            if (!options.matchedValuesOnly) {
+            if (!collectMatchedValues) {
                 return true;
             }
             matched = true;
@@ -1144,15 +1279,18 @@ function evaluateAttributeTypeAssertion (
         const taken = takeMatchedAttribute(selected);
         if (taken) {
             matched = true;
-            if (!options.matchedValuesOnly) {
+            if (!collectMatchedValues) {
                 return true;
             }
-            matchedValues.push(taken);
+            matchedValues!.push(taken);
         }
         sawIndeterminate ||= !!indeterminate && !indeterminate.isEmpty();
     }
     if (matched) {
-        return matchedValues.length > 0 ? deduplicateMatchedAttributes(matchedValues) : true;
+        if (!matchedValues?.length) {
+            return true;
+        }
+        return deduplicate ? deduplicateMatchedAttributes(matchedValues) : matchedValues;
     }
     return sawIndeterminate ? undefined : false;
 }
@@ -1164,28 +1302,111 @@ function evaluateFilterItem (
     options: EvaluateFilterSettings,
     mode: FilterItemEvalMode = "all",
 ): Attribute[] | boolean | undefined {
+    return evaluateFilterItemInternal(
+        filterItem,
+        entry,
+        options,
+        mode,
+        Boolean(options.matchedValuesOnly),
+        true,
+    );
+}
+
+function evaluateFilterItemInternal (
+    filterItem: FilterItem,
+    entry: EntryInformation,
+    options: EvaluateFilterSettings,
+    mode: FilterItemEvalMode,
+    collectMatchedValues: boolean,
+    deduplicate: boolean,
+): Attribute[] | boolean | undefined {
     if ("equality" in filterItem) {
-        if (filterItem.equality.type_.isEqualTo(id_mr_approximateStringMatch)) {
-            return evaluateApprox(filterItem.equality, entry, options, mode);
-        }
-        return evaluateEquality(filterItem.equality, entry, options, mode);
+        const flags = filterItem.equality.type_.isEqualTo(id_mr_approximateStringMatch)
+            ? MATCH_FLAG_APPROXIMATE
+            : 0;
+        return evaluateFilterAssertion(
+            filterItem.equality.type_,
+            filterItem.equality.assertion,
+            entry,
+            options,
+            flags,
+            assertedContexts(filterItem.equality),
+            mode,
+            collectMatchedValues,
+            deduplicate,
+        );
     } else if ("substrings" in filterItem) {
-        return evaluateSubstring(filterItem.substrings, entry, options, mode);
+        return evaluateFilterAssertion(
+            filterItem.substrings.type_,
+            filterItem.substrings.strings,
+            entry,
+            options,
+            0,
+            undefined,
+            mode,
+            collectMatchedValues,
+            deduplicate,
+        );
     } else if ("greaterOrEqual" in filterItem) {
-        return evaluateOrdering(true, filterItem.greaterOrEqual, entry, options, mode);
+        return evaluateFilterAssertion(
+            filterItem.greaterOrEqual.type_,
+            filterItem.greaterOrEqual.assertion,
+            entry,
+            options,
+            MATCH_FLAG_ORDERING_OR_EQUAL | MATCH_FLAG_ORDERING_GREATER,
+            assertedContexts(filterItem.greaterOrEqual),
+            mode,
+            collectMatchedValues,
+            deduplicate,
+        );
     } else if ("lessOrEqual" in filterItem) {
-        return evaluateOrdering(false, filterItem.lessOrEqual, entry, options, mode);
+        return evaluateFilterAssertion(
+            filterItem.lessOrEqual.type_,
+            filterItem.lessOrEqual.assertion,
+            entry,
+            options,
+            MATCH_FLAG_ORDERING_OR_EQUAL,
+            assertedContexts(filterItem.lessOrEqual),
+            mode,
+            collectMatchedValues,
+            deduplicate,
+        );
     } else if ("present" in filterItem) {
         return mode === "defaults" ? false : evaluateAttributePresence(filterItem.present, entry, options);
     } else if ("approximateMatch" in filterItem) {
-        return evaluateApprox(filterItem.approximateMatch, entry, options, mode);
+        return evaluateFilterAssertion(
+            filterItem.approximateMatch.type_,
+            filterItem.approximateMatch.assertion,
+            entry,
+            options,
+            MATCH_FLAG_APPROXIMATE,
+            assertedContexts(filterItem.approximateMatch),
+            mode,
+            collectMatchedValues,
+            deduplicate,
+        );
     } else if ("extensibleMatch" in filterItem) {
         if (filterItem.extensibleMatch.matchingRule[0]?.isEqualTo(id_mr_nullMatch)) {
             return mode === "defaults" ? false : true;
         }
-        return evaluateMatchingRuleAssertion(filterItem.extensibleMatch, entry, options, mode);
+        return evaluateMatchingRuleAssertionInternal(
+            filterItem.extensibleMatch,
+            entry,
+            options,
+            mode,
+            collectMatchedValues,
+            deduplicate,
+        );
     } else if ("contextPresent" in filterItem) {
-        return mode === "defaults" ? false : evaluateAttributeTypeAssertion(filterItem.contextPresent, entry, options);
+        return mode === "defaults"
+            ? false
+            : evaluateAttributeTypeAssertionInternal(
+                filterItem.contextPresent,
+                entry,
+                options,
+                collectMatchedValues,
+                deduplicate,
+            );
     } else {
         return undefined;
     }
@@ -1263,7 +1484,23 @@ function evaluateFilter (
     if (!Number.isSafeInteger(recursionTTL)) {
         return { matched: undefined, contributingEntries, matchedValues: [] };
     }
-    return evaluateFilterAtDepth(filter, family, options, contributingEntries, recursionTTL);
+    const matchedValuesSink: MatchedEntryInfo[] | undefined = options.matchedValuesOnly
+        ? []
+        : undefined;
+    const result = evaluateFilterAtDepth(
+        filter,
+        family,
+        options,
+        contributingEntries,
+        recursionTTL,
+        matchedValuesSink,
+    );
+    if (matchedValuesSink && result.matchedValues !== undefined) {
+        result.matchedValues = result.matched === true
+            ? deduplicateMatchedEntryInfos(matchedValuesSink)
+            : [];
+    }
+    return result;
 }
 
 /** Evaluate one node, passing a decreasing depth budget to its children. */
@@ -1273,20 +1510,28 @@ function evaluateFilterAtDepth (
     options: EvaluateFilterSettings,
     contributingEntries: Set<number>,
     remainingDepth: number,
+    matchedValuesSink: MatchedEntryInfo[] | undefined,
 ): EvaluateFilterReturn {
     if (remainingDepth <= 0) {
         return { matched: undefined, contributingEntries, matchedValues: [] };
     }
     let subresult_undefined: boolean = false;
     if ("item" in filter) {
-        const familyResults: MatchedEntryInfo[] = [];
         let undefinedResultFound: boolean = false;
         let matched: boolean = false;
+        const collectMatchedValues = Boolean(matchedValuesSink);
         for (let i = 0; i < family.length; i++) {
             const member = family[i];
             let result: ReturnType<typeof evaluateFilterItem>;
             try {
-                result = evaluateFilterItem(filter.item, member, options, "stored");
+                result = evaluateFilterItemInternal(
+                    filter.item,
+                    member,
+                    options,
+                    "stored",
+                    collectMatchedValues,
+                    false,
+                );
             } catch (error) {
                 if (error instanceof CannotPerformExactly) {
                     throw error;
@@ -1304,8 +1549,8 @@ function evaluateFilterAtDepth (
                 contributingEntries.add(i);
                 matched = true;
             }
-            if (Array.isArray(result) && result.length > 0) {
-                familyResults.push(new MatchedEntryInfo(i, result));
+            if (matchedValuesSink && Array.isArray(result) && result.length > 0) {
+                matchedValuesSink.push(new MatchedEntryInfo(i, result));
             }
         }
         // X.501 §16.10.2.d & X.511 §7.13: evaluate RequestAttribute.defaultValues
@@ -1321,7 +1566,14 @@ function evaluateFilterAtDepth (
                 );
             let defaultResult: ReturnType<typeof evaluateFilterItem>;
             try {
-                defaultResult = evaluateFilterItem(filter.item, pooledFamily, options, "defaults");
+                defaultResult = evaluateFilterItemInternal(
+                    filter.item,
+                    pooledFamily,
+                    options,
+                    "defaults",
+                    false,
+                    false,
+                );
             } catch (error) {
                 if (error instanceof CannotPerformExactly) {
                     throw error;
@@ -1337,14 +1589,24 @@ function evaluateFilterAtDepth (
         return {
             matched: matched || (undefinedResultFound ? undefined : false),
             contributingEntries,
-            matchedValues: familyResults,
+            matchedValues: [],
         };
     } else if ("and" in filter) {
         const newContributingEntries: Set<number> = new Set();
-        const matchedValuesByEntry: EntryMatchAccumulator = new Map();
+        const checkpoint = matchedValuesSink?.length ?? 0;
         for (const subfilter of filter.and) {
-            const result = evaluateFilterAtDepth(subfilter, family, options, new Set(), remainingDepth - 1);
+            const result = evaluateFilterAtDepth(
+                subfilter,
+                family,
+                options,
+                new Set(),
+                remainingDepth - 1,
+                subresult_undefined ? undefined : matchedValuesSink,
+            );
             if (result.matched === false) {
+                if (matchedValuesSink) {
+                    matchedValuesSink.length = checkpoint;
+                }
                 return {
                     matched: false,
                     contributingEntries,
@@ -1353,13 +1615,13 @@ function evaluateFilterAtDepth (
             }
             if (result.matched === undefined) {
                 subresult_undefined = true;
+                if (matchedValuesSink) {
+                    matchedValuesSink.length = checkpoint;
+                }
                 continue;
             }
             for (const ce of result.contributingEntries.values()) {
                 newContributingEntries.add(ce);
-            }
-            if (!subresult_undefined) {
-                mergeMatchedEntryInfos(matchedValuesByEntry, result.matchedValues);
             }
         }
         if (subresult_undefined) {
@@ -1375,17 +1637,24 @@ function evaluateFilterAtDepth (
         return {
             matched: true,
             contributingEntries: newContributingEntries,
-            matchedValues: finalizeMatchedEntryInfos(matchedValuesByEntry),
+            matchedValues: [],
         };
     } else if ("or" in filter) {
         const newContributingEntries: Set<number> = new Set();
-        const matchedValuesByEntry: EntryMatchAccumulator = new Map();
+        const checkpoint = matchedValuesSink?.length ?? 0;
         let matched: boolean = false;
         /* Unlike with and, we still have to iterate over all subfilters so that
         we can determine if other entries contribute to the match or if other
         values match. */
         for (const subfilter of filter.or) {
-            const result = evaluateFilterAtDepth(subfilter, family, options, new Set(), remainingDepth - 1);
+            const result = evaluateFilterAtDepth(
+                subfilter,
+                family,
+                options,
+                new Set(),
+                remainingDepth - 1,
+                matchedValuesSink,
+            );
             if (result.matched === false) {
                 continue;
             }
@@ -1397,7 +1666,6 @@ function evaluateFilterAtDepth (
             for (const ce of result.contributingEntries.values()) {
                 newContributingEntries.add(ce);
             }
-            mergeMatchedEntryInfos(matchedValuesByEntry, result.matchedValues);
         }
         if (matched) {
             for (const ce of contributingEntries.values()) {
@@ -1406,8 +1674,11 @@ function evaluateFilterAtDepth (
             return {
                 matched: true,
                 contributingEntries: newContributingEntries,
-                matchedValues: finalizeMatchedEntryInfos(matchedValuesByEntry),
+                matchedValues: [],
             };
+        }
+        if (matchedValuesSink) {
+            matchedValuesSink.length = checkpoint;
         }
         if (subresult_undefined) {
             return {
@@ -1432,7 +1703,14 @@ function evaluateFilterAtDepth (
                 contributingEntries,
             };
         }
-        const result = evaluateFilterAtDepth(filter.not, family, options, contributingEntries, remainingDepth - 1);
+        const result = evaluateFilterAtDepth(
+            filter.not,
+            family,
+            options,
+            contributingEntries,
+            remainingDepth - 1,
+            undefined,
+        );
         if (result.matched === undefined) {
             return {
                 matched: undefined,
