@@ -198,17 +198,34 @@ describe("getRequiredAttributesFromAttributeCombination", () => {
             expect(Array.from(ret_and).sort()).toEqual([cn_oid, street_oid].sort());
         });
 
-        it("applies width and depth safeguards conservatively on negated combinations", () => {
-            const wide_negated_and: AttributeCombination = {
+        it("handles wide disjunctions accurately and applies depth safeguards conservatively", () => {
+            const wide_disjoint_negated_and: AttributeCombination = {
                 not: {
-                    and: Array.from({ length: 101 }, (_, i) => ({
+                    and: Array.from({ length: 150 }, (_, i) => ({
                         not: { attribute: ObjectIdentifier.fromParts([2, 999, i + 1]) },
                     })),
                 },
             };
-            const ret_wide = new Set<DotDelimitedOidString>();
-            getRequiredAttributesFromAttributeCombination(wide_negated_and, true, ret_wide);
-            expect(ret_wide.size).toBe(0);
+            const ret_wide_disjoint = new Set<DotDelimitedOidString>();
+            getRequiredAttributesFromAttributeCombination(wide_disjoint_negated_and, true, ret_wide_disjoint);
+            expect(ret_wide_disjoint.size).toBe(0);
+
+            const wide_shared_or: AttributeCombination = {
+                or: Array.from({ length: 150 }, (_, i) => ({
+                    and: [
+                        { attribute: commonName["&id"] },
+                        { attribute: ObjectIdentifier.fromParts([2, 999, i + 1]) },
+                    ],
+                })),
+            };
+            const ret_wide_shared = new Set<DotDelimitedOidString>();
+            getRequiredAttributesFromAttributeCombination(wide_shared_or, true, ret_wide_shared);
+            expect(Array.from(ret_wide_shared)).toEqual([cn_oid]);
+
+            const empty_or: AttributeCombination = { or: [] };
+            const ret_empty = new Set<DotDelimitedOidString>();
+            getRequiredAttributesFromAttributeCombination(empty_or, true, ret_empty);
+            expect(ret_empty.size).toBe(0);
 
             let deep: AttributeCombination = { attribute: commonName["&id"] };
             for (let i = 0; i < 120; i++) {

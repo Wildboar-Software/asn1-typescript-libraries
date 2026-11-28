@@ -38,39 +38,41 @@ export
         //   NOT (A OR  B) = (NOT A) AND (NOT B)
         const acts_as_and = ("and" in combo) === non_negated;
         if (acts_as_and) {
-            // Required attributes are any required by any subfilter.
+            // Required contexts are any required by any subfilter.
             for (const sub of subs) {
                 getRequiredContextsFromContextCombination(sub, non_negated, ret, recursionTTL - 1);
             }
             return;
         }
-        if (subs.length > 100) {
-            // This is a heuristic to prevent denial-of-service, because the
-            // algorithm below has bad time complexity, and it sounds like
-            // there is no efficient way to do this.
+        if (subs.length === 0) {
             return;
         }
-        // Required attributes are those that are required by all subfilters.
-        const subrets: Set<DotDelimitedOidString>[] = [];
-        for (const sub of subs) {
-            const subret: Set<DotDelimitedOidString> = new Set();
-            getRequiredContextsFromContextCombination(sub, non_negated, subret, recursionTTL - 1);
-            subrets.push(subret);
-        }
-        if (subrets.length === 0) {
+        if (subs.length === 1) {
+            getRequiredContextsFromContextCombination(subs[0], non_negated, ret, recursionTTL - 1);
             return;
         }
-        subrets.sort((a, b) => a.size - b.size);
-        const [smallest, ...rest] = subrets;
-
-        outer:
-        for (const value of smallest.values()) {
-            for (const set of rest) {
-                if (!set.has(value)) {
-                    continue outer;
+        // Required contexts are those that are required by all subfilters.
+        const common: Set<DotDelimitedOidString> = new Set();
+        getRequiredContextsFromContextCombination(subs[0], non_negated, common, recursionTTL - 1);
+        if (common.size === 0) {
+            return;
+        }
+        const subret: Set<DotDelimitedOidString> = new Set();
+        for (let i = 1; i < subs.length; i++) {
+            subret.clear();
+            getRequiredContextsFromContextCombination(subs[i], non_negated, subret, recursionTTL - 1);
+            for (const ctx of common.values()) {
+                if (!subret.has(ctx)) {
+                    common.delete(ctx);
                 }
             }
-            ret.add(value);
+            if (common.size === 0) {
+                return;
+            }
+        }
+        // These are the contexts that were required by every subfilter.
+        for (const ctx of common.values()) {
+            ret.add(ctx);
         }
     } else if ("not" in combo) {
         getRequiredContextsFromContextCombination(combo.not, !non_negated, ret, recursionTTL - 1);

@@ -45,31 +45,34 @@ export
             }
             return;
         }
-        if (subs.length > 100) {
-            // This is a heuristic to prevent denial-of-service on wide disjunctions.
+        if (subs.length === 0) {
+            return;
+        }
+        if (subs.length === 1) {
+            getRequiredAttributesFromAttributeCombination(subs[0], non_negated, ret, recursionTTL - 1);
             return;
         }
         // Required attributes are those that are required by all subfilters.
-        const subrets: Set<DotDelimitedOidString>[] = [];
-        for (const sub of subs) {
-            const subret: Set<DotDelimitedOidString> = new Set();
-            getRequiredAttributesFromAttributeCombination(sub, non_negated, subret, recursionTTL - 1);
-            subrets.push(subret);
-        }
-        if (subrets.length === 0) {
+        const common: Set<DotDelimitedOidString> = new Set();
+        getRequiredAttributesFromAttributeCombination(subs[0], non_negated, common, recursionTTL - 1);
+        if (common.size === 0) {
             return;
         }
-        const first = subrets[0];
-        for (const attr of first.values()) {
-            for (const subret of subrets.slice(1)) {
+        const subret: Set<DotDelimitedOidString> = new Set();
+        for (let i = 1; i < subs.length; i++) {
+            subret.clear();
+            getRequiredAttributesFromAttributeCombination(subs[i], non_negated, subret, recursionTTL - 1);
+            for (const attr of common.values()) {
                 if (!subret.has(attr)) {
-                    first.delete(attr);
-                    break;
+                    common.delete(attr);
                 }
+            }
+            if (common.size === 0) {
+                return;
             }
         }
         // These are the attributes that were required by every subfilter.
-        for (const attr of first.values()) {
+        for (const attr of common.values()) {
             ret.add(attr);
         }
     } else if ("not" in combo) {
